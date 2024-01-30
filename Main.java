@@ -9,7 +9,7 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		boolean loop= true;
-
+		// 수정
 		
 		
 		//데이터 로드

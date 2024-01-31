@@ -63,7 +63,7 @@ public class MovePage {
 				
 
 				
-			}else if(sel.equals("q!")) {
+			}else if(sel.equals("q!")) { //뒤로가기 만들어야함
 				
 				loop = false;
 				

@@ -6,7 +6,7 @@ import com.java.common.Data;
 
 public class EmployeeUpdate {
 	
-	
+	public String[] rank = {"사원","대리","과장","부장","최고관리자"}; // Data클래스로 이전해야함
 	
 	
 	//근무지 변경
@@ -21,8 +21,8 @@ public class EmployeeUpdate {
 			
 			if(e.getId().equals(id)) {
 				
-				e.setLine(line);
-				e.setStation(station);
+				e.setLine(line); // -> line 1~9입력 or 1~9입력 받으면 +호선해서 입력
+				e.setStation(station); // -> 잠실 or 잠실역 입력 contains "역" 없으면 +"역" 추가
 				
 			}
 			
@@ -36,13 +36,16 @@ public class EmployeeUpdate {
 	
 	public static void changeRank(String id, String rank) {
 		
+		
+		
+		
 		Iterator<EmployeeManagement> iter = Data.employeeList.iterator();
 		while(iter.hasNext()) {
 		
 			EmployeeManagement e = iter.next();
 			
 			if(e.getId().equals(id)) {
-				e.setRank(rank);
+				e.setRank(rank);        //rank가 있는 직급인지 확인 -> 유효성검사
 				
 			}
 			

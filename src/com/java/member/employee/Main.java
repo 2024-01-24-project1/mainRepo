@@ -39,7 +39,7 @@ public class Main {
 		
 		
 		
-		System.out.println("1.직원검색 2.직원수정");
+		System.out.println("1.직원검색 2.직원수정 3.안전요원 관리");
 		String sel = reader.readLine();
 
 		
@@ -90,7 +90,7 @@ public class Main {
 					
 					
 					
-					System.out.print("수정 할 항목: ");
+					System.out.print("수정 할 항목(근무지,직급,삭제):  ");
 					String word = reader.readLine();
 					
 					
@@ -138,6 +138,53 @@ public class Main {
 				System.out.println("Main.main");
 				e2.printStackTrace();
 			}
+			
+		}else if(sel.equals("3")) { //안전요원 관리
+			
+			System.out.print("1. 전체 안전요원보기 2. 안전요원 배치 3. 안전요원 부서 해제");
+			sel = reader.readLine();
+			
+			if(sel.equals("1")) { //전체 안전요원 보기
+				
+				EmployeeInfo.searchEmployee("안전요원");
+				
+				
+			}else if(sel.equals("2")) { //안전요원 배치
+				
+				EmployeeInfo.searchEmployee("안전요원");
+				
+				System.out.print("id 입력: ");
+				String id = reader.readLine();
+				
+				System.out.print("호선 입력: ");
+				String lines = reader.readLine();
+				
+				System.out.print("역 입력: ");
+				String station = reader.readLine();
+						
+				
+				EmployeeUpdate.changeStation(id, lines, station);
+				
+				
+			}else if(sel.equals("3")) { //안전요원 부서 해제
+				
+				EmployeeInfo.searchEmployee("안전요원");
+				
+				System.out.print("id 입력: ");
+				String id = reader.readLine();
+				
+						
+				
+				EmployeeUpdate.changeStation(id, "부서해제", "부서해제");
+				
+				
+				
+				
+			}
+			
+			
+			
+			
 		}
 		
 		

@@ -116,6 +116,8 @@ public class EmployeeManagement {
 			return true;
 		}else if(e.getLine().equals(word)) {
 			return true;
+		}else if(e.getRank().equals(word)) {
+			return true;
 		}
 
 

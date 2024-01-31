@@ -9,9 +9,9 @@ import mainRepo.com.java.member.user.User;
 
 public class Data {
 
-	private final String passPath = "\\data\\pass.csv";					//정기권
-	private final String userPath = "\\data\\user.csv";					//고객정보
-	private final String employeePath = "\\data\\employee.csv";			//직원정보
+	private final String passPath = ".\\src\\mainRepo\\data\\pass.csv";	//정기권
+	private final String userPath = ".\\src\\mainRepo\\data\\user.csv";					//고객정보
+	private final String employeePath = ".\\src\\mainRepo\\data\\employee.csv";			//직원정보
 	private final String calendarPath = "\\data\\calendar.csv";			//일정
 	private final String logPath = "\\data\\log.csv";					//로그
 	private final String lostArticlePath = "\\data\\lostarticle.csv";	//분실물
@@ -35,6 +35,7 @@ public class Data {
 			while((reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
 				User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]);
+				System.out.println(user);
 				userList.add(user);
 				
 			}
@@ -57,6 +58,7 @@ public class Data {
 				String[] lineArr = line.split(",");
 				Employee employee = new Employee(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]
 												, lineArr[6], lineArr[7], lineArr[8]);
+				System.out.println(employee);
 				employeeList.add(employee);
 				
 			}

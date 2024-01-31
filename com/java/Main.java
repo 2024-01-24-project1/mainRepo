@@ -58,7 +58,9 @@ public class Main {
 		
 		Data data = new Data();
 		data.loadUserList();
+		data.loadEmployeeList();
 		System.out.println(data.userList);
+		System.out.println(data.employeeList);
 		
 		
 		//종료시 파일 덮어쓰기할 클래스

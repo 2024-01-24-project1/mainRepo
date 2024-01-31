@@ -1,4 +1,4 @@
-package mainRepo.com.java.member.user;
+package com.java.member.user;
 
 public class UserVoice {
 	private String id;

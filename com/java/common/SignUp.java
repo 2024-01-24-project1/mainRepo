@@ -1,4 +1,4 @@
-package mainRepo.com.java.common;
+package com.java.common;
 
 public class SignUp {
 

@@ -1,15 +1,15 @@
-package mainRepo.com.java.common;
+package com.java.common;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.nio.charset.Charset;
 
-import mainRepo.com.java.calendar.Calendar;
-import mainRepo.com.java.common.log.Log;
-import mainRepo.com.java.common.lostarticle.LostArticle;
-import mainRepo.com.java.member.employee.Employee;
-import mainRepo.com.java.member.user.User;
-import mainRepo.com.java.member.user.UserVoice;
+import com.java.calendar.Calendar;
+import com.java.common.log.Log;
+import com.java.common.lostarticle.LostArticle;
+import com.java.member.employee.Employee;
+import com.java.member.user.User;
+import com.java.member.user.UserVoice;
 
 public class Exit {
 

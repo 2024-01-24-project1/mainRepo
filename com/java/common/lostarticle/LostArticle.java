@@ -1,4 +1,4 @@
-package mainRepo.com.java.common.lostarticle;
+package com.java.common.lostarticle;
 
 // 분실물 클래스
 public class LostArticle {

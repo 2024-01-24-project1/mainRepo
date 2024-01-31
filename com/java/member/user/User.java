@@ -1,6 +1,6 @@
-package mainRepo.com.java.member.user;
+package com.java.member.user;
 
-import mainRepo.com.java.member.Member;
+import com.java.member.Member;
 
 public class User extends Member{
 

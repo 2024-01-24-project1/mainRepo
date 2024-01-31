@@ -1,4 +1,4 @@
-package mainRepo.com.java.calendar;
+package com.java.calendar;
 
 // 일정객체 클래스
 public class Calendar {

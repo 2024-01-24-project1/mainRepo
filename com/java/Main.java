@@ -1,11 +1,11 @@
-package mainRepo.com.java;
+package com.java;
 
 
-import mainRepo.com.java.calendar.Calendar;
-import mainRepo.com.java.common.Data;
-import mainRepo.com.java.common.Exit;
-import mainRepo.com.java.common.Load;
-import mainRepo.com.java.member.user.User;
+import com.java.calendar.Calendar;
+import com.java.common.Data;
+import com.java.common.Exit;
+import com.java.common.Load;
+import com.java.member.user.User;
 
 
 

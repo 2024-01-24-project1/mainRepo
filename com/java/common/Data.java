@@ -13,16 +13,16 @@ import mainRepo.com.java.member.user.UserVoice;
 public class Data {
 	
 	// 경로
-	protected final String passPath = ".\\src\\mainRepo\\data\\pass.csv";				//정기권
-	protected final String userPath = ".\\src\\mainRepo\\data\\user.csv";				//고객정보
-	protected final String employeePath = ".\\src\\mainRepo\\data\\employee.csv";		//직원정보
-	protected final String calendarPath = ".\\src\\mainRepo\\data\\calendar.csv";		//일정
-	protected final String logPath = ".\\src\\mainRepo\\data\\log.csv";					//로그
-	protected final String lostArticlePath = ".\\src\\mainRepo\\data\\lostarticle.csv";	//분실물
-	protected final String stationTimePath = ".\\src\\mainRepo\\data\\stationtime.csv";	//역별 시간표
-	protected final String busyPath = ".\\src\\mainRepo\\data\\busy.csv";				//혼잡도
-	protected final String userVoicePath = ".\\src\\mainRepo\\data\\uservoice.csv";		//민원
-	protected final String stationNamePath = ".\\src\\mainRepo\\data\\stationname.csv"; //역이름
+	protected final String PASSPATH = ".\\src\\mainRepo\\data\\pass.csv";				//정기권
+	protected final String USERPATH = ".\\src\\mainRepo\\data\\user.csv";				//고객정보
+	protected final String EMPLOYEEPATH = ".\\src\\mainRepo\\data\\employee.csv";		//직원정보
+	protected final String CALENDARPATH = ".\\src\\mainRepo\\data\\calendar.csv";		//일정
+	protected final String LOGPATH = ".\\src\\mainRepo\\data\\log.csv";					//로그
+	protected final String LOSTARTICLEPATH = ".\\src\\mainRepo\\data\\lostarticle.csv";	//분실물
+	protected final String STATIONTIMEPATH = ".\\src\\mainRepo\\data\\stationtime.csv";	//역별 시간표
+	protected final String BUSYPATH = ".\\src\\mainRepo\\data\\busy.csv";				//혼잡도
+	protected final String USERVOICEPATH = ".\\src\\mainRepo\\data\\uservoice.csv";		//민원
+	protected final String STATIONNAMEPATH = ".\\src\\mainRepo\\data\\stationname.csv"; //역이름
 	
 	// csv파일 읽어와서 변경되면 종료시 csv파일에 쓰는 리스트
 	public static ArrayList<String> passList = new ArrayList<>();
@@ -34,10 +34,10 @@ public class Data {
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();
 	
 	// 직원 가입 코드
-	public final static String employeeCode = "DAVSGDVASDASDFR35351";
+	public final static String EMPLOYEECODE = "DAVSGDVASDASDFR35351";
 	
 	// 모든 역이름
-	public final String[] stationNameList = { "석계", "신이문", "외대앞", "회기", "청량리", "제기동", "신설동", "동묘앞"
+	public final String[] STATIONNAMELIST = { "석계", "신이문", "외대앞", "회기", "청량리", "제기동", "신설동", "동묘앞"
 			, "동대문", "종로5가", "종로3가", "종각", "시청", "서울역", "남영", "용산", "노량진", "대방", "신길", "영등포"
 			, "신도림", "구로", "가산디지털단지", "독산", "금천구청", "석수", "관악", "안양", "명학", "성수", "뚝섬", "한양대"
 			, "왕십리", "상왕십리", "신당", "동대문역사문화공원", "을지로4가", "을지로3가", "을지로입구", "시청", "충정로", "아현"

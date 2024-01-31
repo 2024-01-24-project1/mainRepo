@@ -31,7 +31,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.lostArticlePath, Charset.forName("UTF-8") ) );
+										(data.LOSTARTICLEPATH, Charset.forName("UTF-8") ) );
 			
 			for(LostArticle article : Data.lostArticleList) {
 				writer.write(article.getArticle() + ",");
@@ -55,7 +55,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.userVoicePath, Charset.forName("UTF-8") ) );
+										(data.USERVOICEPATH, Charset.forName("UTF-8") ) );
 			
 			for(UserVoice voice : Data.userVoiceList) {
 				writer.write(voice.getId() + ",");
@@ -81,7 +81,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.logPath, Charset.forName("UTF-8") ) );
+										(data.LOGPATH, Charset.forName("UTF-8") ) );
 			
 			for(Log log : Data.logList) {
 				writer.write(log.getTime() + ",");
@@ -108,7 +108,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.calendarPath, Charset.forName("UTF-8") ) );
+										(data.CALENDARPATH, Charset.forName("UTF-8") ) );
 			
 			for(Calendar calendar : Data.calendarList) {
 				writer.write(calendar.getTime() + ",");
@@ -131,7 +131,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.passPath, Charset.forName("UTF-8") ) );
+										(data.PASSPATH, Charset.forName("UTF-8") ) );
 		
 			for(String pass : Data.passList) {
 				writer.write(pass + "\r\n");
@@ -151,7 +151,7 @@ public class Exit {
 		try {
 		
 		BufferedWriter writer = new BufferedWriter(new FileWriter
-									(data.employeePath, Charset.forName("UTF-8") ) );
+									(data.EMPLOYEEPATH, Charset.forName("UTF-8") ) );
 		
 		for(Employee employee : Data.employeeList) {
 			writer.write(employee.getName() + ",");
@@ -180,7 +180,7 @@ public class Exit {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.userPath, Charset.forName("UTF-8") ) );
+										(data.USERPATH, Charset.forName("UTF-8") ) );
 			
 			for(User user : Data.userList) {
 				writer.write(user.getName() + ",");

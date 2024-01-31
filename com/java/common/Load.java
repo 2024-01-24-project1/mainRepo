@@ -31,7 +31,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.lostArticlePath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.LOSTARTICLEPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
@@ -56,7 +56,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.userVoicePath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.USERVOICEPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
@@ -81,7 +81,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.logPath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.LOGPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
@@ -112,7 +112,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.userPath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.USERPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
@@ -135,7 +135,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.employeePath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.EMPLOYEEPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
@@ -159,7 +159,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.passPath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.PASSPATH));
 			
 			while((line = reader.readLine()) != null) {
 				Data.passList.add(line);
@@ -180,7 +180,7 @@ public class Load {
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.calendarPath));
+			BufferedReader reader = new BufferedReader(new FileReader(data.CALENDARPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");

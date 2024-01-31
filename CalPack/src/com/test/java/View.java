@@ -7,7 +7,7 @@ public class View {
 
 		public static void calView() {
 			
-			if(Member.auth == null) { //관리자 권한 넣을때만 나오는 부분이기 때문에 
+			if(Member.auth == null) { //관리자 권한 체크 
 				System.out.println("=================================================================");
 				System.out.println("               현재 메뉴:행사 캘린더                              ");
 				System.out.println("                   	이름                                          ");
@@ -75,7 +75,8 @@ public class View {
 			
 		}
 		
-		//일정 삭제 화면 
+ 
+		//일치하는 내용 있으면 삭제 
 		public static void delete() {
 			
 			Scanner scan = new Scanner(System.in);
@@ -92,8 +93,14 @@ public class View {
 			
 			System.out.println("내용");
 			txt = scan.nextLine();
+			CalInput m1 = new CalInput(date, txt);
 			
-			//일치하는 내용 있으면 삭제 
+			if(date.equals(m1.day) && txt.equals(m1.content)){
+				// 해당하는 글자 삭제 (???)
+				System.out.println("성공적으로 삭제가 되었습니다.");
+			}else {
+				System.out.println("올바른 입력이 아닙니다.");
+			}
 			
 
 			

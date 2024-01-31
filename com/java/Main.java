@@ -1,14 +1,20 @@
 package mainRepo.com.java;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Scanner;
 
 import mainRepo.com.java.common.Data;
+import mainRepo.com.java.common.Load;
+import mainRepo.com.java.member.user.User;
 
 
 
 public class Main {
 	
 	public static void main(String[] args) {
-
+		
+		Load load = new Load();
+		load.loadAll();
 		
 		
 //		Scanner sc = new Scanner(System.in);
@@ -56,17 +62,9 @@ public class Main {
 //			
 //		}
 		
-		Data data = new Data();
-		data.loadUserList();
-		data.loadEmployeeList();
-		System.out.println(data.userList);
-		System.out.println(data.employeeList);
-		
 		
 		//종료시 파일 덮어쓰기할 클래스
 		System.exit(0);
-		
-		
 		
 		
 		

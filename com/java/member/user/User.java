@@ -36,9 +36,8 @@ public class User extends Member{
 	@Override
 	public String toString() {
 		return String.format(
-				"User [passCheck=%s, getPassCheck()=%s, getName()=%s, getId()=%s, getPw()=%s, getPhone()=%s, getRegistration()=%s, toString()=%s, getClass()=%s, hashCode()=%s]",
-				passCheck, getPassCheck(), getName(), getId(), getPw(), getPhone(), getRegistration(), super.toString(),
-				getClass(), hashCode());
+				"User [이름: %s, ID: %s, PW: %s, 주민등록번호: %s, 전화번호: %s, 정기권여부: %s]\n"
+				,this.name, this.id, this.pw, this.registration, this.phone, this.passCheck );
 	}
 	
 	

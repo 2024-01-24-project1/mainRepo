@@ -10,8 +10,9 @@ import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.stationtime.StationTime;
 
-public class Load {
+public final class Load {
 	Data data = new Data();
 	
 	// 모든 csv파일 읽어서 
@@ -24,7 +25,113 @@ public class Load {
 		loadLogList();
 		loadUserVoiceList();
 		loadLostArticleList();
+		loadStationName();
+		loadLine1_StationTimeTable();
 	}
+	
+	private void loadLine1_StationTimeTable() {
+		String line = "";
+		
+		try {
+			
+				// 1호선의 역의 이름을 반복
+				for(String name : Data.LINE1_STATION_NAME) {
+					String path = Data.station_TimeTablePath + "1호선_시간표\\" + name + ".csv";
+					BufferedReader reader = new BufferedReader(new FileReader(path));
+					
+					ArrayList<String> upNomal = new ArrayList<>();
+					ArrayList<String> downNomal = new ArrayList<>();
+					ArrayList<String> upHoliday = new ArrayList<>();
+					ArrayList<String> downHoliday = new ArrayList<>();
+					
+					while((line = reader.readLine()) != null) {
+						String[] lineArr = line.split(",");
+						System.out.println(name);
+						System.out.println(lineArr[0]);
+						System.out.println(lineArr[1]);
+						System.out.println(lineArr[2]);
+						System.out.println(lineArr[3]);
+						upNomal.add(lineArr[0]);
+						downNomal.add(lineArr[1]);
+						upHoliday.add(lineArr[2]);
+						downHoliday.add(lineArr[3]);
+				
+				}
+					StationTime time = new StationTime("1호선", name, upNomal, downNomal, upHoliday, downHoliday);
+					Data.stationTimeList.add(time);
+				
+				
+					reader.close();
+				
+			}
+			
+			return;
+			
+		}catch(Exception e){
+			System.out.println("역별시간표 로딩 실패");
+			e.printStackTrace();
+		}
+	}//loadStationTimeTable()
+	
+	private void loadStationName() {
+		String line = "";
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(data.ALL_LINE_NAME_PATH));
+			while((line = reader.readLine()) != null) {
+				Data.ALL_STATION_NAME.add(line);
+			}
+			reader.close();
+			
+			for(int i = 1; i <= 9; i++) {
+				String path = data.line_NamePath;
+				path += i + "호선역이름.csv";
+				BufferedReader stReader = new BufferedReader(new FileReader(path));
+				
+				while ((line = stReader.readLine()) != null) {
+					
+					if(i == 1) {
+						Data.LINE1_STATION_NAME.add(line);
+					}else if (i == 2) {
+						Data.LINE2_STATION_NAME.add(line);
+						
+					}else if (i == 3) {
+						Data.LINE3_STATION_NAME.add(line);
+						
+					}else if (i == 4) {
+						Data.LINE4_STATION_NAME.add(line);
+						
+					}else if (i == 5) {
+						Data.LINE5_STATION_NAME.add(line);
+						
+					}else if (i == 6) {
+						Data.LINE6_STATION_NAME.add(line);
+						
+					}else if (i == 7) {
+						Data.LINE7_STATION_NAME.add(line);
+						
+					}else if (i == 8) {
+						Data.LINE8_STATION_NAME.add(line);
+						
+					}else if (i == 9) {
+						Data.LINE9_STATION_NAME.add(line);
+						
+					}
+					
+				}
+				
+				
+			}
+			
+			return;
+			
+		}catch(Exception e){
+			System.out.println("역 이름 로딩 실패");
+			e.printStackTrace();
+		}
+		
+	}//End of loadStationName()
 	
 	private void loadLostArticleList() {
 		String line = "";

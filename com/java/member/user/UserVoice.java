@@ -1,6 +1,6 @@
 package com.java.member.user;
 
-public class UserVoice {
+public final class UserVoice {
 	private String id;
 	private String title;
 	private String content;

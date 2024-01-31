@@ -11,7 +11,7 @@ import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
 
-public class Exit {
+public final class Exit {
 
 	Data data = new Data();
 	

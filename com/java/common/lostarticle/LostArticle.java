@@ -1,7 +1,7 @@
 package com.java.common.lostarticle;
 
 // 분실물 클래스
-public class LostArticle {
+public final class LostArticle {
 	
 	private String article;
 	private String content;

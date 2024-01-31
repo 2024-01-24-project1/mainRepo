@@ -1,7 +1,7 @@
 package com.java.calendar;
 
 // 일정객체 클래스
-public class Calendar {
+public final class Calendar {
 	
 	private String time;			// 시각
 	private String line;			// 호선

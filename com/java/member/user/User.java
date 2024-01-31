@@ -2,7 +2,7 @@ package com.java.member.user;
 
 import com.java.member.Member;
 
-public class User extends Member{
+public final class User extends Member{
 
 	private String passCheck;	// 정기권유무
 	

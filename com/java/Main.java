@@ -1,6 +1,10 @@
 package com.java;
 
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.stream.Stream;
+
 import com.java.calendar.Calendar;
 import com.java.common.Data;
 import com.java.common.Exit;
@@ -59,24 +63,9 @@ public class Main {
 //			
 //			
 //		}
-		Data.userList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.employeeList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.calendarList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.userVoiceList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.passList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.logList.stream()
-							.forEach(article -> System.out.println(article) );
-		Data.lostArticleList.stream()
-							.forEach(article -> System.out.println(article) );
 		
-		Data.userVoiceList.stream()
-							.forEach(n -> System.out.println(n));
-		
+//		Data.stationTimeList.stream()
+//							.forEach(time -> System.out.println(time));
 		
 		//종료시 파일 덮어쓰기할 클래스
 		exit.writeAll();

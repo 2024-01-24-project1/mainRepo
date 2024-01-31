@@ -1,5 +1,6 @@
 package com.test.java;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,15 +10,24 @@ public class Service {
 	//목록 출력
 	public static void list() throws IOException {
 		//파일 내용 불러오기 
-		File file = new File("C:\\class\\code\\java\\CalPack\\src\\com\\test\\java\\caldata.txt");
-		 FileReader file_reader = new FileReader(file);
-         int cur = 0;
-         while((cur = file_reader.read()) != -1){
-            System.out.printf("%s\r\n",(char)cur);
-         }
-         file_reader.close();
-		
+		 BufferedReader reader 
+		 = new BufferedReader(new FileReader(Data.CALDAT)); //읽기 선언
+		 
+		 
+		 System.out.println("=================================");
+		 System.out.println(" 캘린더 목록");
+		 System.out.println("=================================");
 
+		 try {
+			 String line = "";
+			 while((line = reader.readLine()) != null) {
+				 System.out.println(line);
+				 
+			 }
+		 }catch(IOException e){
+			 System.out.println("ㅇㅅㅇ");
+		 }
+		 
 			
 	}
 		
@@ -32,7 +42,7 @@ public class Service {
 		System.out.println("           추가 할 일정을 작성해주세요          ");
 		System.out.println("===================================");
 		
-		System.out.print("날짜");
+		System.out.print("날짜(XXXX-XX-XX 형식으로 작성해주세요)");
 		
 		 date = scan.nextLine();
 		

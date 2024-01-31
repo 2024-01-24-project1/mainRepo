@@ -15,7 +15,7 @@ public class Data {
 	//ArrayList 선언
 	public static ArrayList<CalInput> list = new ArrayList<CalInput>(); // score.txt 내용을 ArrayList에 저장
 
-	// 불러오기 (???)
+	// 불러오기 
 	public static void load() {
 		
 		try {

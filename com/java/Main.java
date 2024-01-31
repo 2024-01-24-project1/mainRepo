@@ -64,8 +64,8 @@ public class Main {
 //			
 //		}
 		
-//		Data.stationTimeList.stream()
-//							.forEach(time -> System.out.println(time));
+		Data.stationTimeList.stream()
+							.forEach(time -> System.out.println(time));
 		
 		//종료시 파일 덮어쓰기할 클래스
 		exit.writeAll();

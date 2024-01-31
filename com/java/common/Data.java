@@ -9,6 +9,7 @@ import mainRepo.com.java.member.employee.Employee;
 import mainRepo.com.java.member.user.User;
 import mainRepo.com.java.member.user.UserVoice;
 
+// 모든 경로, csv파일, 정적데이터 클래스
 public class Data {
 	
 	// 경로
@@ -23,7 +24,7 @@ public class Data {
 	protected final String userVoicePath = ".\\src\\mainRepo\\data\\uservoice.csv";		//민원
 	protected final String stationNamePath = ".\\src\\mainRepo\\data\\stationname.csv"; //역이름
 	
-	
+	// csv파일 읽어와서 변경되면 종료시 csv파일에 쓰는 리스트
 	public static ArrayList<String> passList = new ArrayList<>();
 	public static ArrayList<User> userList = new ArrayList<>();
 	public static ArrayList<Employee> employeeList = new ArrayList<>();
@@ -31,6 +32,9 @@ public class Data {
 	public static ArrayList<Log> logList = new ArrayList<>();
 	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();
+	
+	// 직원 가입 코드
+	public final static String employeeCode = "DAVSGDVASDASDFR35351";
 	
 	// 모든 역이름
 	public final String[] stationNameList = { "석계", "신이문", "외대앞", "회기", "청량리", "제기동", "신설동", "동묘앞"

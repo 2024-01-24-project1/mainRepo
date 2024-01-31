@@ -2,6 +2,7 @@ package mainRepo.com.java.member.employee;
 
 import mainRepo.com.java.member.Member;
 
+// 직원 클래스
 public class Employee extends Member{
 
 	private String position;	// 직급
@@ -9,6 +10,7 @@ public class Employee extends Member{
 	private String station;		// 역
 	private String level;		// 권한 1 ~ 3
 	
+	// 회원가입할때 Employee객체 생성자
 	public Employee(String name, String id, String pw, String registration, String phone) {
 		this.name = name;
 		this.id = id;
@@ -21,6 +23,7 @@ public class Employee extends Member{
 		this.level = "2";
 	}
 	
+	// csv파일 읽고 쓰기위한 Employee객체 생성자
 	public Employee(String name, String id, String pw, String registration, String phone
 					, String position, String line, String station, String level) {
 		this.name = name;

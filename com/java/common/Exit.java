@@ -15,6 +15,7 @@ public class Exit {
 
 	Data data = new Data();
 	
+	// 모든 csv파일 쓰기
 	public void writeAll() {
 		writeUserList();
 		writeEmployeeList();

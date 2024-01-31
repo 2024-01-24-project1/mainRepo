@@ -1,5 +1,6 @@
 package mainRepo.com.java.common.lostarticle;
 
+// 분실물 클래스
 public class LostArticle {
 	
 	private String article;
@@ -7,6 +8,7 @@ public class LostArticle {
 	private String lostStation;
 	private String findStation;
 	
+	// 내용이 있는 분실물 객체 생성자
 	public LostArticle(String article, String content, String lostStation, String findStation) {
 		this.article = article;
 		this.content = content;
@@ -14,6 +16,7 @@ public class LostArticle {
 		this.findStation = findStation;
 	}
 	
+	// 내용이 없는 분실물 객체 생성자
 	public LostArticle(String article, String lostStation, String findStation) {
 		this.article = article;
 		this.content = "";

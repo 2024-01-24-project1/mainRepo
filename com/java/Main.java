@@ -1,8 +1,11 @@
 package mainRepo.com.java;
 
 
+import mainRepo.com.java.calendar.Calendar;
+import mainRepo.com.java.common.Data;
 import mainRepo.com.java.common.Exit;
 import mainRepo.com.java.common.Load;
+import mainRepo.com.java.member.user.User;
 
 
 
@@ -56,9 +59,23 @@ public class Main {
 //			
 //			
 //		}
+		Data.userList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.employeeList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.calendarList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.userVoiceList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.passList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.logList.stream()
+							.forEach(article -> System.out.println(article) );
+		Data.lostArticleList.stream()
+							.forEach(article -> System.out.println(article) );
 		
-//		Data.lostArticleList.stream()
-//					 .forEach(article -> System.out.println(article));
+		Data.userVoiceList.stream()
+							.forEach(n -> System.out.println(n));
 		
 		
 		//종료시 파일 덮어쓰기할 클래스

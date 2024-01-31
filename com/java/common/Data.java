@@ -20,26 +20,53 @@ public class Data {
 	private final String useVoicePath = "\\data\\uservoice.csv";		//민원
 	private final String stationNamePath = "\\data\\stationname.csv";   //역이름
 	
-	try {
-		BufferedReader reader = new BufferedReader(new FileReader(userPath));
-		
-		
-		
-	}catch(Exception e){
-		System.out.println("에러");
-	}
-	
-	
-	
 	public static ArrayList<String> passStrings;
 	public static ArrayList<User> userList;
 	public static ArrayList<Employee> employeeList;
+
 	
+	public void loadUserList() {
+		String line = "";
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(userPath));
+			
+			while((reader.readLine()) != null) {
+				String[] lineArr = line.split(",");
+				User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]);
+				userList.add(user);
+				
+			}
+			
+			
+			
+		}catch(Exception e){
+			System.out.println("유저리스트 로딩 실패");
+		}
+	}//End of loadUserList()
 	
-	
-	
-	
-	
+	public void loadEmployeeList() {
+		String line = "";
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(employeePath));
+			
+			while((reader.readLine()) != null) {
+				String[] lineArr = line.split(",");
+				Employee employee = new Employee(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]
+												, lineArr[6], lineArr[7], lineArr[8]);
+				employeeList.add(employee);
+				
+			}
+			
+			
+			
+		}catch(Exception e){
+			System.out.println("직원리스트 로딩 실패");
+		}
+	}//End of loadEmployeeList()
 	
 	
 	

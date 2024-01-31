@@ -1,6 +1,9 @@
 package mainRepo.com.java;
 import java.util.Scanner;
 
+import mainRepo.com.java.common.Data;
+
+
 
 public class Main {
 	
@@ -53,8 +56,9 @@ public class Main {
 //			
 //		}
 		
-		
-		
+		Data data = new Data();
+		data.loadUserList();
+		System.out.println(data.userList);
 		
 		
 		//종료시 파일 덮어쓰기할 클래스

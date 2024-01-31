@@ -15,6 +15,22 @@ public class Calendar {
 		this.schedule = schedule;
 		
 	}
+	
+	public String getTime() {
+		return time;
+	}
+
+	public String getLine() {
+		return line;
+	}
+
+	public String getStation() {
+		return station;
+	}
+
+	public String getSchedule() {
+		return schedule;
+	}
 
 	@Override
 	public String toString() {

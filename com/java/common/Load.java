@@ -14,6 +14,8 @@ import mainRepo.com.java.member.user.UserVoice;
 public class Load {
 	Data data = new Data();
 	
+	// 모든 csv파일 읽어서 
+	// Data클래스의 static배열에 로드 
 	public void loadAll() {
 		loadUserList();
 		loadEmployeeList();

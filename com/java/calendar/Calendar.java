@@ -1,11 +1,12 @@
 package mainRepo.com.java.calendar;
 
+// 일정객체 클래스
 public class Calendar {
 	
-	private String time;
-	private String line;
-	private String station;
-	private String schedule;
+	private String time;			// 시각
+	private String line;			// 호선
+	private String station;			// 역
+	private String schedule;		// 일정
 	
 	public Calendar(String time, String line, String station, String schedule) {
 		

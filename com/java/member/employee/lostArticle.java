@@ -45,6 +45,7 @@ public class lostArticle {
 //			System.out.println("올바른 값을 입력하세요.");
 //		}
 	
+	
 	public static void articlALl() {
 		
 		String num;
@@ -55,7 +56,7 @@ public class lostArticle {
 			System.out.println("2. 분실물 제거");
 			System.out.println("3. 분실물 검색");
 			
-			System.out.println("숫자 입력: ");
+			System.out.print("숫자 입력: ");
 			num = scan.nextLine();
 			System.out.println();
 			
@@ -66,7 +67,6 @@ public class lostArticle {
 			} else if(num.equals("3")) {
 				articleSearch();
 			}
-			
 			
 			
 			
@@ -99,10 +99,13 @@ public class lostArticle {
 			
 			for(int i=0; i<list.size(); i++) {
 				if(list.get(i).type.contains(product)) {
-					System.out.printf("%s | %s",list.get(i).type, list.get(i).storeLocation);
+					System.out.printf("%s | %s\n", list.get(i).type, list.get(i).storeLocation);
 					exist = true;
 				} 
 			}
+			
+			System.out.println();
+			
 			if(exist == false) {
 				System.out.println("찾고자 하는 물건이 없습니다.");
 			}
@@ -191,7 +194,6 @@ public class lostArticle {
 				System.out.println("lostArticle.articleremove");
 				e.printStackTrace();
 			}
-			break;
 		}
 	}
 	

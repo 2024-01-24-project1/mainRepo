@@ -1,4 +1,4 @@
-package com.java.stationtime;
+package com.java.station.timetable;
 
 import java.util.ArrayList;
 

@@ -10,7 +10,8 @@ import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
-import com.java.stationtime.StationTime;
+import com.java.station.PassengerCounting;
+import com.java.station.timetable.StationTime;
 
 public final class Load {
 	Data data = new Data();
@@ -27,7 +28,37 @@ public final class Load {
 		loadLostArticleList();
 		loadStationName();
 		loadLine_StationTimeTable();
+		loadPassengerCountingList();
 	}
+	
+	private void loadPassengerCountingList() {
+			String line = "";
+			
+			String path = Data.passengerCountPath;
+			
+			try {
+				for(int i = 1; i <= 12; i++) {
+					
+					BufferedReader reader = new BufferedReader(new FileReader(path + i + "월.csv"));
+					
+					while((line = reader.readLine()) != null) {
+						line = line.replaceAll("\"", "");
+						String[] lineArr = line.split(",");
+						
+						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Integer.parseInt(lineArr[3]));
+						
+						Data.passengerCountingList.add(count);
+						
+					}
+					reader.close();
+				}	
+				return;
+				
+			}catch(Exception e){
+				System.out.println("분실물 리스트 로딩 실패");
+				e.printStackTrace();
+			}
+	}//End of loadPassengerCountingList()
 	
 	private void loadLine_StationTimeTable() {
 		String line = "";

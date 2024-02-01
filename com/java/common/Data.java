@@ -8,7 +8,8 @@ import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
-import com.java.stationtime.StationTime;
+import com.java.station.PassengerCounting;
+import com.java.station.timetable.StationTime;
 
 // 모든 경로, csv파일, 정적데이터 클래스
 public final class Data {
@@ -27,11 +28,15 @@ public final class Data {
 	
 	protected final String ALL_LINE_NAME_PATH = ".\\src\\data\\호선별역이름\\모든역이름.csv";
 	protected static String line_NamePath = ".\\src\\data\\호선별역이름\\";
+	protected static String passengerCountPath = ".\\src\\data\\월간_역별_승하차_인원_정보\\";
 	
 	protected static String station_TimeTablePath = ".\\src\\data\\지하철호선별_역시간표\\";
 	
-	public static ArrayList<StationTime> stationTimeList = new ArrayList<>();
+	//End of 경로
 	
+	//cvs파일을 읽어만 오고 쓰지는 않는 리스트
+	public static ArrayList<StationTime> stationTimeList = new ArrayList<>();
+	public static ArrayList<PassengerCounting> passengerCountingList = new ArrayList<>();
 	
 	// csv파일을 읽어와서 변경되지 않는 역 리스트
 	public static final ArrayList<String> ALL_STATION_NAME = new ArrayList<>();

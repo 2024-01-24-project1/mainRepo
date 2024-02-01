@@ -4,9 +4,10 @@ package com.java.member;
 // 부모 클래스
 public class Member {
 	
-	public static String auth = "";	// 인증 티켓
-	public static String level = ""; // 고객 or 관리자 확인
-	public static String rank = ""; // 로그인 > 관리자 > 직급
+	public static String auth = "";		// 인증 티켓
+	public static String authName = "";	// 로그인중인 이름	
+	public static String level = ""; 	// 고객 or 관리자 확인
+	public static String rank = ""; 	// 로그인 > 관리자 > 직급
 	
 
 	protected String name;			// 이름

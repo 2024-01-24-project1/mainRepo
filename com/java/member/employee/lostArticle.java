@@ -20,6 +20,60 @@ public class lostArticle {
 	static ArrayList<article> list = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
 	
+//	while(true) {
+//	if(num == 1) {
+//			
+//			
+//		System.out.println("1. 분실물 추가");
+//		System.out.println("2. 분실물 제거");
+//		System.out.println("3. 분실물 검색");
+//			
+//		System.out.print("숫자 입력: ");
+//		num = scan.nextInt();
+//		System.out.println();
+//			
+//		if(num == 1) {
+//			lostArticle.articleAdd();
+//		} else if(num == 2) {
+//			View.lostArticlelist();
+//			lostArticle.articleremove();
+//		} else if(num == 3) {
+//			lostArticle.articleSearch();
+//		} else if(num == 9) { // 뒤로가기
+//			 break;
+//		} else {
+//			System.out.println("올바른 값을 입력하세요.");
+//		}
+	
+	public static void articlALl() {
+		
+		String num;
+		
+		while(true) {
+		
+			System.out.println("1. 분실물 추가");
+			System.out.println("2. 분실물 제거");
+			System.out.println("3. 분실물 검색");
+			
+			System.out.println("숫자 입력: ");
+			num = scan.nextLine();
+			System.out.println();
+			
+			if(num.equals("1")) {
+				articleAdd();
+			} else if(num.equals("2")) {
+				articleremove();
+			} else if(num.equals("3")) {
+				articleSearch();
+			}
+			
+			
+			
+			
+			
+		}
+	}
+	
 	/**
 	 * 분실물 검색
 	 */
@@ -67,63 +121,77 @@ public class lostArticle {
 	 */
 	public static void articleremove() {
 		
-		try {
-			String line = null;
-			String tempType = "";
-			String tempSta = "";
+		boolean exist= false;
+		
+		while(true) {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(path));
-			
-			while((line = reader.readLine()) != null){
-				String[] temp = line.split(",");
-				article article = new article(temp[0], temp[1], temp[2], temp[3]);
-				list.add(article);
-			}
-			MovePage mp = new MovePage();
-			
-			mp.showPage(list);
-//			for(int i=0; i<list.size(); i++) {
-//				System.out.printf("%s | %s\n", list.get(i).getType(), list.get(i).getStoreLocation());
-//			}
-			
-			while (true) {
+			try {
+				String line = null;
+				String tempType = "";
+				String tempSta = "";
 				
-				System.out.print("삭제할 물건을 입력하세요. ");
-				tempType = scan.nextLine();
+				BufferedReader reader = new BufferedReader(new FileReader(path));
 				
-				if (invalidatetype(tempType)) { // 유효성검사
-					System.out.println("올바르지 않은 품목입니다.");
-				} else {
+				while((line = reader.readLine()) != null){
+				
+					String[] temp = line.split(",");
+					article article = new article(temp[0], temp[1], temp[2], temp[3]);
+					
+					list.add(article);
+				
+				}
+				
+				
+				
+				while (true) { // 물건 입력
+					
+					for(int i=0; i<list.size(); i++) {
+					System.out.printf("%s | %s\n", list.get(i).getType(), list.get(i).getStoreLocation());
+					}
+//					MovePage mp = new MovePage();
+//					mp.showPage(list);
+					
+					System.out.print("삭제할 물건을 입력하세요. ");
+					tempType = scan.nextLine();
+					
 					break;
+					// 유효성 검사[]
+					
 				}
 				
-			}
-			
-			
-			System.out.print("물건의 보관 위치(역)를 입력하세요. ");
-			tempSta = scan.nextLine();
-			
-			BufferedWriter writer = new BufferedWriter(new FileWriter(path));
-			
-			for(int i=0; i<list.size(); i++) {
-				if(list.get(i).type.equals(tempType) && list.get(i).storeLocation.equals(tempSta)) {
-					list.remove(i);
-				} else {
-					String temp = list.get(i).type + "," + list.get(i).content + "," + 
-								  list.get(i).discoverLocation + "," + list.get(i).storeLocation + "\n";
-					writer.write(temp);
+				while(true) { // 물건 보관위치 입력
+					
+					System.out.print("물건의 보관 위치(역)를 입력하세요. ");
+					tempSta = scan.nextLine();
+					
+					break;
+					// 유효성 검사[]
+				
 				}
+				
+				for(int i=0; i<list.size(); i++) { 
+					
+					if(list.get(i).type.equals(tempType) && list.get(i).storeLocation.equals(tempSta)) { // 입력한 정보와 일치하는 분실물 검색
+						list.remove(i); 																 // 일치하는 분실물 삭제
+						System.out.println("분실물 제거가 완료되었습니다.");
+						exist = true;
+					} 
+				}
+				
+				if(exist == false) {																	 // 존재하지 않을 경우 출력
+					System.out.println("제거할 분실물이 존재하지 않습니다.");
+				}
+				
+				System.out.println();
+				reader.close();
+				break;
+				
+				
+			} catch (Exception e) {
+				System.out.println("lostArticle.articleremove");
+				e.printStackTrace();
 			}
-			
-			System.out.println("분실물 제거가 완료되었습니다.");
-			System.out.println();
-			
-			writer.close();
-			reader.close();
-			
-		} catch (Exception e) {
-			System.out.println("lostArticle.articleremove");
-			e.printStackTrace();
+			break;
 		}
 	}
 	
@@ -132,76 +200,65 @@ public class lostArticle {
 	 */
 	public static void articleAdd() {
 		
-		try {
-			
-			article article = new article();
-			Scanner scan = new Scanner(System.in);
-			
-	
-			while (true) {
+		while(true) { // 전체 반복문
+			try {
 				
-				System.out.print("품목을 입력하세요. ");
-				article.type = scan.nextLine();
+				article article = new article(); // 분실물 객체 생성
+				Scanner scan = new Scanner(System.in); // Scan 객체 생성
 				
-				if (invalidatetype(article.type)) {
-					System.out.println("올바르지 않은 품목입니다.");
-				} else {
-					break;
-				}
-				
-			}
-			
-			while (true) {
-				
-				System.out.print("자세한 설명을 입력하세요. ");
-				article.content = scan.nextLine();
-				
-				if (invalidatetype(article.content)) {
-					System.out.println("한글 숫자 , . ? ! 만 입력가능합니다.");
-				} else {
-					break;
-				}
-				
-			}
-			
-			System.out.print("발견위치를 입력하세요. ");
-			article.discoverLocation = scan.nextLine();
-			
-			System.out.print("보관위치를 입력하세요. ");
-			article.storeLocation = scan.nextLine();
-			
-			
-			
-			article temp = new article(article.type, article.content, article.discoverLocation, article.storeLocation);
-			
-			list.add(temp);
-	
 		
-		} catch (Exception e) {
-			System.out.println("LostArticle.articleAdd");
-			e.printStackTrace();
+				while (true) {
+					
+					System.out.print("품목을 입력하세요. ");
+					article.type = scan.nextLine();
+					
+					break;
+					//유효성 검사[]
+					
+				}
+				
+				while (true) {
+					
+					System.out.print("자세한 설명을 입력하세요. ");
+					article.content = scan.nextLine();
+					
+					break;
+					//유효성 검사[]
+					
+				}
+				
+				while(true) {
+					System.out.print("발견위치를 입력하세요. ");
+					article.discoverLocation = scan.nextLine();
+					
+					break;
+					//유효성 검사[]
+				}
+				
+				while(true) {
+					System.out.print("보관위치를 입력하세요. ");
+					article.storeLocation = scan.nextLine();
+					
+					break;
+					//유효성 검사[]
+				}
+				
+				
+				article temp = new article(article.type, article.content, article.discoverLocation, article.storeLocation); // 추가할 분실물 객체 생성
+				
+				list.add(temp); // 분실물 ArrayList에 추가
+				System.out.println("분실물 추가 완료\n");
+				break;
+		
+			
+			} catch (Exception e) {
+				System.out.println("LostArticle.articleAdd");
+				e.printStackTrace();
+			}
 		}
 	}
-
-	private static boolean invalidatetype(String name) {
-	
-		String regex = "^[가-힣]{1,10}$";
-		Pattern p1 = Pattern.compile(regex);
-		Matcher m1 = p1.matcher(name);
-	
-		return !m1.find();
-	}
-	
-	private static boolean invalidatecontent(String content) {
-		
-		String regex = "A-Za-z0-9가-힣 ";
-		Pattern p1 = Pattern.compile(regex);
-		Matcher m1 = p1.matcher(content);
-	
-		return !m1.find();
-		
-	}
 }
+
 
 
 

@@ -38,21 +38,100 @@ public class SignUp {
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("해당 섹션이 없습니다\r\n다시 입력해주세요.");
+				System.out.println("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
 				View.pause();
 			
 			
 			}
 		}//while문 종료
+		
 	}//End of SignUp
 
 	private static void employeeSignUp() {
+		Scanner scan = new Scanner(System.in);
 		
+		String id = "";
+		String pw = "";
+		String name = "";
+		String registration = "";
+		String phone = "";
+		
+		String code = "";
+
+		// 아이디
+		while (true) {
+			
+			// View클래스 출력
+			View.title("개인회원 가입");
+			
+			// ID, PW, 이름, 주민등록번호, 전화번호 입력받기
+			System.out.print("  아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
+			id = scan.nextLine();
+			System.out.println();
+			
+			System.out.print("  비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
+			pw = scan.nextLine();
+			System.out.println();
+			
+			System.out.print("  이름 (2~5자, 한글만) : ");
+			name = scan.nextLine();
+			System.out.println();
+			
+			System.out.print("  주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
+			registration = scan.nextLine();
+			System.out.println();
+			
+			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
+			phone = scan.nextLine();
+			System.out.println();
+			
+			System.out.println("직원 코드 입력");
+			code = scan.nextLine();
+			System.out.println();
+			
+			if(invalidatedId(id)) {
+				System.out.println("아이디 형식이 틀렸습니다.");
+			}
+			if(invalidatedPw(pw)) {
+				System.out.println("비밀번호 형식이 틀렸습니다.");
+			}
+			if (invalidatedName(name)) {
+				System.out.println("이름 형식이 틀렸습니다.");
+			}
+			if (invalidatedRegistration(registration)) {
+				System.out.println("주민등록번호 형식이 틀렸습니다.");
+			}else if (registrationCheck(registration)) {
+				System.out.println("유효한 주민등록번호가 아닙니다.");
+			}
+			if (invalidatedPhone(phone)) {
+				System.out.println("전화번호 형식이 틀렸습니다.");
+			} 
+			if(is_Code(code)) {
+				System.out.println("회원코드가 틀렸습니다.");
+			}
+			
+			if(!(invalidatedId(id) || invalidatedPw(pw) || invalidatedName(name) || invalidatedRegistration(registration) 
+					|| registrationCheck(registration) || invalidatedPhone(phone) || is_Code(code))) {
+				break;
+			}
+			System.out.println("다시 입력하세요.");
+			System.out.println();
+			View.pause();
+		}// while종료
+
+		Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
+		Data.employeeList.add(employee);
+		
+		System.out.println("회원가입이 완료되었습니다.");
+		System.out.println("직원 " + name + "님 환영합니다.");
+		View.pause();
 	}
 
 	// 개인 회원 가입
 	public static void userSignUp() {
 		Scanner scan = new Scanner(System.in);
+		
 		String id = "";
 		String pw = "";
 		String name = "";
@@ -61,81 +140,63 @@ public class SignUp {
 
 		// 아이디
 		while (true) {
+			
+			// View클래스 출력
 			View.title("개인회원 가입");
-
-			System.out.println();
+			
+			// ID, PW, 이름, 주민등록번호, 전화번호 입력받기
 			System.out.print("  아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
-			System.out.println();
 			id = scan.nextLine();
-
-			if (invalidatedId(id)) { // id 유효성 검사
-				System.out.println("아이디 형식이 틀렸습니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 비밀번호
-		while (true) {
+			System.out.println();
+			
 			System.out.print("  비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
-			System.out.println();
 			pw = scan.nextLine();
-
-			if (invalidatedPw(pw)) { // pw 유효성 검사
-				System.out.println("비밀번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 이름
-		while (true) {
+			System.out.println();
+			
 			System.out.print("  이름 (2~5자, 한글만) : ");
-			System.out.println();
 			name = scan.nextLine();
-
-			if (invalidatedName(name)) {
-				System.out.println("이름 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else {
-				break;
-			}
-		}
-
-		// 주민등록번호
-		while (true) {
+			System.out.println();
+			
 			System.out.print("  주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
-			System.out.println();
 			registration = scan.nextLine();
-
-			if (invalidatedRegistration(registration)) {
-				System.out.println("주민등록번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else if (registrationCheck(registration) == true) {
-				System.out.println("유효한 주민등록번호가 아닙니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 전화번호
-		while (true) {
-			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
 			System.out.println();
+			
+			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
 			phone = scan.nextLine();
-
+			System.out.println();
+			
+			if(invalidatedId(id)) {
+				System.out.println("아이디 형식이 틀렸습니다.");
+			}
+			if(invalidatedPw(pw)) {
+				System.out.println("비밀번호 형식이 틀렸습니다.");
+			}
+			if (invalidatedName(name)) {
+				System.out.println("이름 형식이 틀렸습니다.");
+			}
+			if (invalidatedRegistration(registration)) {
+				System.out.println("주민등록번호 형식이 틀렸습니다.");
+			}else if (registrationCheck(registration)) {
+				System.out.println("유효한 주민등록번호가 아닙니다.");
+			}
 			if (invalidatedPhone(phone)) {
-				System.out.println("전화번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else {
+				System.out.println("전화번호 형식이 틀렸습니다.");
+			} 
+			
+			if(!(invalidatedId(id) || invalidatedPw(pw) || invalidatedName(name) || invalidatedRegistration(registration) 
+					|| registrationCheck(registration) || invalidatedPhone(phone))) {
 				break;
 			}
-		}
+			System.out.println("다시 입력하세요.");
+			System.out.println();
+			View.pause();
+		}// while종료
 
 		User user = new User(name, id, pw, registration, phone); // 입력값 저장
 		Data.userList.add(user);
 		
 		System.out.println("회원가입이 완료되었습니다.");
+		System.out.println("회원 " +name + "님 환영합니다.");
 		View.pause();
 
 	} // end of user
@@ -222,121 +283,15 @@ public class SignUp {
 		return !m1.find();
 	}
 
-	// -----------------------------------
-
-	// 관리자 회원 가입
-	public static void employee() {
-		Scanner scan = new Scanner(System.in);
-		String id = "";
-		String pw = "";
-		String name = "";
-		String registration = "";
-		String phone = "";
-		String code = "";
-
-		// 아이디
-		while (true) {
-			View.title("관리자 가입");
-
-			System.out.println();
-			System.out.print("  아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
-			System.out.println();
-			id = scan.nextLine();
-
-			if (invalidatedId(id)) { // id 유효성 검사
-				System.out.println("아이디 형식이 틀렸습니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 비밀번호
-		while (true) {
-			System.out.print("  비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
-			System.out.println();
-			pw = scan.nextLine();
-
-			if (invalidatedPw(pw)) { // pw 유효성 검사
-				System.out.println("비밀번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 이름
-		while (true) {
-			System.out.print("  이름 (2~5자, 한글만) : ");
-			System.out.println();
-			name = scan.nextLine();
-
-			if (invalidatedName(name)) {
-				System.out.println("이름 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else {
-				break;
-			}
-		}
-
-		// 주민등록번호
-		while (true) {
-			System.out.print("  주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
-			System.out.println();
-			registration = scan.nextLine();
-
-			if (invalidatedRegistration(registration)) {
-				System.out.println("주민등록번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else if (registrationCheck(registration) == true) {
-				System.out.println("유효한 주민등록번호가 아닙니다.\r\n다시 입력하세요.");
-				System.out.println();
-			} else {
-				break;
-			}
-		}
-
-		// 전화번호
-		while (true) {
-			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
-			System.out.println();
-			phone = scan.nextLine();
-
-			if (invalidatedPhone(phone)) {
-				System.out.println("전화번호 형식이 틀렸습니다.\r\n다시 입력하세요.");
-			} else {
-				break;
-			}
-		}
-
-		// 가입 코드
-		while (true) {
-			System.out.print("  가입 코드: ");
-			code = scan.nextLine();
-
-			if (invalidatedCode(code)) {
-				System.out.println("가입코드가 유효하지 않습니다.\r\n다시 입력하세요.");
-			} else {
-				System.out.println("관리자 회원가입이 완료되었습니다.");
-				break;
-			}
-		}
-
-		Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
-		Data.employeeList.add(employee);
-		
-		View.pause();
-		
-	} // end of employee
-	
-
 	// 관리자 가입코드 유효성 검사
-	private static boolean invalidatedCode(String code) {
+	private static boolean is_Code(String code) {
 
-		boolean a = false;
+		boolean check = false;
 
-		if (!code.equals(Data.employeeCode)) {
-			a = true;
+		if (!code.equals(Data.EMPLOYEECODE)) {
+			check = true;
 		} 
-		return a;
+		return check;
 	}
 
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.java.common.Data3;
+import com.java.common.Data;
 
 
 /**
@@ -21,11 +21,11 @@ public class BusyStat {
 	public static ArrayList<Busy> searchBusy(String line, String way, String dayOfWeek) {
 		
 		
-		List<Busy> list =  Data3.busyList.stream()
-							.filter(s -> s.getLines().equals(line))
-							.filter(s -> s.getWay().equals(way) )
-							.filter(s -> s.getDayOfWeek().equals(dayOfWeek))
-							.collect(Collectors.toList());
+		List<Busy> list = Data.busyList.stream()
+							  .filter(s -> s.getLines().equals(line))
+							  .filter(s -> s.getWay().equals(way) )
+							  .filter(s -> s.getDayOfWeek().equals(dayOfWeek))
+							.  collect(Collectors.toList());
 							
 		
 		return new ArrayList<Busy>(list);

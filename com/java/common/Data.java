@@ -12,6 +12,7 @@ import java.util.ArrayList;
 //import java.util.Calendar;
 //import java.util.Calendar;
 
+import com.java.busy.Busy;
 import com.java.common.log.Log;
 import com.java.member.employee.EmployeeManagement;
 import com.java.station.PassengerCounting;
@@ -33,11 +34,11 @@ public final class Data {
 	protected final String STATIONNAMEPATH = ".\\src\\data\\stationname.csv"; //역이름
 	protected final String REQUIREDTIMEPATH = ".\\data\\requiredTime.csv";    //역간 소요시간
 	
-	protected final String ALL_LINE_NAME_PATH = ".\\src\\data\\호선별역이름\\모든역이름.csv";
-	protected static String line_NamePath = ".\\src\\data\\호선별역이름\\";
-	protected static String passengerCountPath = ".\\src\\data\\월간_역별_승하차_인원_정보\\";
+	protected final String ALL_LINE_NAME_PATH = ".\\data\\호선별역이름\\모든역이름.csv";
+	protected static String line_NamePath = ".\\data\\호선별역이름\\";
+	protected static String passengerCountPath = ".\\data\\월간_역별_승하차_인원_정보\\";
 	
-	protected static String station_TimeTablePath = ".\\src\\data\\지하철호선별_역시간표\\";
+	protected static String station_TimeTablePath = ".\\data\\지하철호선별_역시간표\\";
 	
 	//End of 경로
 	
@@ -69,9 +70,12 @@ public final class Data {
 //	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 //	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();
 	
+	//혼잡도 저장하는 리스트
+	public static ArrayList<Busy> busyList = new ArrayList<>();
 	
 	//검색어 저장하는 리스트
 	public static ArrayList<EmployeeManagement> searchList = new ArrayList<>();
+	
 
 	
 	

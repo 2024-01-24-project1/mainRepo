@@ -21,14 +21,14 @@ public final class Load {
 	public void loadAll() {
 //		loadUserList();
 //		loadEmployeeList();
-		loadPassList();
+//		loadPassList();
 //		loadCalendarList();
-		loadLogList();
+//		loadLogList();
 //		loadUserVoiceList();
 //		loadLostArticleList();
 		loadStationName();
 		loadLine_StationTimeTable();
-		loadPassengerCountingList();
+//		loadPassengerCountingList();
 		loadRequiredTime();
 	}
 	
@@ -358,9 +358,17 @@ public final class Load {
 				
 				String[] lineArr = line.split(",");
 				
-				RequiredTime requiredTime = new RequiredTime(lineArr[1],lineArr[2],lineArr[3]);
+				for(String station : Data.ALL_STATION_NAME) {
+					
+					if(station.equals(lineArr[2])) {
+						
+						RequiredTime requiredTime = new RequiredTime(lineArr[1],lineArr[2],lineArr[3]);
+						Data.requiredTimeList.add(requiredTime);
+						
+					}
+				}
 				
-				Data.requiredTimeList.add(requiredTime);
+				
 				
 				
 			}

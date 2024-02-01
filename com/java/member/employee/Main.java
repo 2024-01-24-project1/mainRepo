@@ -8,20 +8,26 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Scanner;
 
 import com.java.busy.BusyReader;
 import com.java.busy.BusyStat;
+import com.java.common.Data;
 import com.java.common.Data3;
+import com.java.common.Load;
 import com.java.member.Member;
+import com.java.member.user.FindWay;
 
 public class Main {
 	
 	public static void main(String[] args)throws IOException {
 		
 		
-		
+		Load load = new Load();
+		load.loadAll();
+		BusyReader.loadBusy();
 		
 		String root = "dat\\직원목록.txt";
 		boolean loop = true;
@@ -38,7 +44,7 @@ public class Main {
 			
 		}
 		
-		System.out.println(Data3.employeeList);
+		System.out.println(Data.employeeList);
 		//데이터 입력
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
@@ -216,7 +222,6 @@ public class Main {
 
 			}else if(sel.equals("4")) { //혼잡도 통계
 				
-				BusyReader.loadBusy();
 				
 				System.out.print("호선: ");
 				String lines = reader.readLine(); 
@@ -234,7 +239,29 @@ public class Main {
 				
 			}else if(sel.equals("5")) { // 길찾기
 				
+				Calendar calendar = Calendar.getInstance();
 				
+				System.out.print("1. 현재시간 보기");
+				sel = reader.readLine();
+				
+				if(sel.equals("1")) { //현재시간 보기
+					
+					System.out.print("호선: ");
+					String lines = reader.readLine();
+					
+					System.out.print("출발역: ");
+					String start = reader.readLine();
+					
+					System.out.print("도착역: ");
+					String end = reader.readLine();
+					
+					FindWay f = new FindWay();
+					
+					calendar.set(Calendar.HOUR_OF_DAY, 8);
+					f.findWay(lines, start, end, calendar);
+					
+					
+				}
 				
 				
 				

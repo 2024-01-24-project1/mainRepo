@@ -4,20 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-import com.java.common.Data3;
+import com.java.common.Data;
 
 public class BusyReader {
 	
 	
 	final static String BUSYPATH = ".\\dat\\20221231.csv";
-	
-	
-	
-		
-	
-	
-	
-	
 	
 	
 	public static void loadBusy() {
@@ -44,7 +36,6 @@ public class BusyReader {
 				list.add(Double.parseDouble(temp[6]));
 				
 				
-// 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 
 				for(int i=7; i<=43; i+=2) {
 					
 					if(temp[i].equals("")) {
@@ -69,7 +60,7 @@ public class BusyReader {
 				
 				
 				Busy busy = new Busy(temp[1],temp[2],temp[4],temp[5],list);
-				Data3.busyList.add(busy); 
+				Data.busyList.add(busy); 
 				
 			}
 			

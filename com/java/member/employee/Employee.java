@@ -10,7 +10,7 @@ public final class Employee extends Member{
 	private String station;		// 역
 	private String level;		// 권한 1 ~ 3
 	
-	// 회원가입할때 Employee객체 생성자
+	// 회원가입할 때 Employee객체 생성자
 	public Employee(String name, String id, String pw, String registration, String phone) {
 		this.name = name;
 		this.id = id;

@@ -15,8 +15,8 @@ public class Main {
 
 		Load load = new Load();
 		Exit exit = new Exit();
-//
-//		load.loadAll();
+
+		load.loadAll();
 
 		Scanner sc = new Scanner(System.in);
 		boolean loop = true;
@@ -25,7 +25,8 @@ public class Main {
 		while (loop) {
 			View.mainmenu(); // 프로그램 초기 화면
 
-			String sel = sc.nextLine();
+			String sel = "";
+			sel = sc.nextLine();
 
 			if (sel.equals("1")) {
 				// 로그인

@@ -39,7 +39,7 @@ public class View {
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println();
-		System.out.println("계속하려면 엔터를 입력하세요.");
+		System.out.println("계속하려면 엔터를 치세요.");
 		scan.nextLine();
 		System.out.println();
 	}

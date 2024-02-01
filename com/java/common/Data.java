@@ -33,6 +33,10 @@ public final class Data {
 	public static ArrayList<StationTime> stationTimeList = new ArrayList<>();
 	
 	
+	// 직원 가입 코드
+	public final static String employeeCode = "DAVSGDVAS35351";
+		
+	
 	// csv파일을 읽어와서 변경되지 않는 역 리스트
 	public static final ArrayList<String> ALL_STATION_NAME = new ArrayList<>();
 	public static final ArrayList<String> LINE1_STATION_NAME = new ArrayList<String>();
@@ -54,9 +58,6 @@ public final class Data {
 	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();
 	
-	
-	// 직원 가입 코드
-	public final static String EMPLOYEECODE = "DAVSGDVASDASDFR35351";	// 예시
 	
 	
 }//End of class

@@ -26,7 +26,6 @@ public final class Load {
 		loadUserVoiceList();
 		loadLostArticleList();
 		loadStationName();
-		loadLine1_StationTimeTable();
 	}
 	
 	private void loadLine1_StationTimeTable() {

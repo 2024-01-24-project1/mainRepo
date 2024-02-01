@@ -1,9 +1,12 @@
 package com.java.member;
 
-// 고객과 직원의 공통된 기능을 가지는
-// 부모 클래스
+// 고객과 직원의 공통된 기능을 가지는 부모 클래스
 public class Member {
 
+	public static String auth = ""; // 인증 티켓: 사용자가 인증을 완료했음을 나타내는 값
+	public static String level; // 고객 or 관리자 확인
+	public static String rank; // 로그인 > 관리자 > 직급
+	
 	protected String name;			// 이름
 	protected String id;			// 아이디
 	protected String pw;			// 비밀번호

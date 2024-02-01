@@ -1,15 +1,14 @@
 package com.java;
 
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.stream.Stream;
+import java.lang.foreign.Linker.Option;
+import java.util.Optional;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
-import com.java.calendar.Calendar;
 import com.java.common.Data;
 import com.java.common.Exit;
 import com.java.common.Load;
-import com.java.member.user.User;
 
 
 
@@ -63,9 +62,25 @@ public class Main {
 //			
 //			
 //		}
+
 		
-		Data.stationTimeList.stream()
-							.forEach(time -> System.out.println(time));
+		
+//		Data.stationTimeList.stream()
+//							.forEach(s -> System.out.println(s));
+		
+//		ArrayList<String> temp = Data.stationTimeList.stream()
+//							.filter(station -> station.getStationName().equals("청량리"))
+//							.filter(s -> s.getUpNomal())
+//							.toArray(String[]::new));
+		
+
+		
+//		Optional<String> name = Data.userList.stream().filter(s -> s.getId().equals(id) && s.getPw().equals(pw))
+//													.filter(s -> s.getName()).findFirst();
+											
+		
+		
+		
 		
 		//종료시 파일 덮어쓰기할 클래스
 		exit.writeAll();

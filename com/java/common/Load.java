@@ -26,46 +26,54 @@ public final class Load {
 		loadUserVoiceList();
 		loadLostArticleList();
 		loadStationName();
-		loadLine1_StationTimeTable();
+		loadLine_StationTimeTable();
 	}
 	
-	private void loadLine1_StationTimeTable() {
+	private void loadLine_StationTimeTable() {
 		String line = "";
+		ArrayList<ArrayList<String>> list = new ArrayList<>();
+		list.add(new ArrayList<String>());
+		list.add(Data.LINE1_STATION_NAME);
+		list.add(Data.LINE2_STATION_NAME);
+		list.add(Data.LINE3_STATION_NAME);
+		list.add(Data.LINE4_STATION_NAME);
+		list.add(Data.LINE5_STATION_NAME);
+		list.add(Data.LINE6_STATION_NAME);
+		list.add(Data.LINE7_STATION_NAME);
+		list.add(Data.LINE8_STATION_NAME);
+		list.add(Data.LINE9_STATION_NAME);
 		
 		try {
 			
-				// 1호선의 역의 이름을 반복
-				for(String name : Data.LINE1_STATION_NAME) {
-					String path = Data.station_TimeTablePath + "1호선_시간표\\" + name + ".csv";
-					BufferedReader reader = new BufferedReader(new FileReader(path));
-					
-					ArrayList<String> upNomal = new ArrayList<>();
-					ArrayList<String> downNomal = new ArrayList<>();
-					ArrayList<String> upHoliday = new ArrayList<>();
-					ArrayList<String> downHoliday = new ArrayList<>();
-					
-					while((line = reader.readLine()) != null) {
-						String[] lineArr = line.split(",");
-						System.out.println(name);
-						System.out.println(lineArr[0]);
-						System.out.println(lineArr[1]);
-						System.out.println(lineArr[2]);
-						System.out.println(lineArr[3]);
-						upNomal.add(lineArr[0]);
-						downNomal.add(lineArr[1]);
-						upHoliday.add(lineArr[2]);
-						downHoliday.add(lineArr[3]);
-				
-				}
-					StationTime time = new StationTime("1호선", name, upNomal, downNomal, upHoliday, downHoliday);
-					Data.stationTimeList.add(time);
-				
-				
-					reader.close();
-				
-			}
+				for(int i = 1; i <= 9; i++) {
 			
-			return;
+					// 1호선의 역의 이름을 반복
+					for(String name : list.get(i)) {
+						String path = Data.station_TimeTablePath + i + "호선_시간표\\" + name + ".csv";
+						BufferedReader reader = new BufferedReader(new FileReader(path));
+						
+						ArrayList<String> upNomal = new ArrayList<>();
+						ArrayList<String> downNomal = new ArrayList<>();
+						ArrayList<String> upHoliday = new ArrayList<>();
+						ArrayList<String> downHoliday = new ArrayList<>();
+						
+						while((line = reader.readLine()) != null) {
+							String[] lineArr = line.split(",");
+							upNomal.add(lineArr[0]);
+							downNomal.add(lineArr[1]);
+							upHoliday.add(lineArr[2]);
+							downHoliday.add(lineArr[3]);
+					
+					}
+						StationTime time = new StationTime(i + "호선", name, upNomal, downNomal, upHoliday, downHoliday);
+						Data.stationTimeList.add(time);
+					
+					
+						reader.close();
+					
+					}
+				}
+				return;
 			
 		}catch(Exception e){
 			System.out.println("역별시간표 로딩 실패");

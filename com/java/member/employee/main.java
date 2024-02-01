@@ -24,8 +24,6 @@ public class main {
 				lostArticle.articlALl();
 			}
 			
-			
-			
 			//추가 제거 검색
 //			while(true) {
 //			if(num == 1) {

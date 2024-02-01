@@ -1,14 +1,15 @@
 package com.java.view;
 
 import java.util.Scanner;
-import com.java.member.Member;
+
+import com.java.common.LoginLogout;
 
 public class View {
 
 	// 로그인 전후 화면 출력
 	public static void mainmenu() {
 
-		if (Member.auth == "") { // 프로그램 초기 화면 (로그인 안한 상태)
+		if (LoginLogout.auth == "") { // 프로그램 초기 화면 (로그인 안한 상태)
 			System.out.println("=======================================");
 			System.out.println();
 			System.out.println("             SEOUL METRO");

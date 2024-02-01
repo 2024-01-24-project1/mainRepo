@@ -3,12 +3,6 @@ package com.java.member;
 // 고객과 직원의 공통된 기능을 가지는
 // 부모 클래스
 public class Member {
-	
-	public static String auth = "";		// 인증 티켓
-	public static String authName = "";	// 로그인중인 이름	
-	public static String level = ""; 	// 고객 or 관리자 확인
-	public static String rank = ""; 	// 로그인 > 관리자 > 직급
-	
 
 	protected String name;			// 이름
 	protected String id;			// 아이디

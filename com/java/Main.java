@@ -7,6 +7,7 @@ import com.java.common.Data;
 import com.java.common.Exit;
 import com.java.common.FindAccount;
 import com.java.common.Load;
+import com.java.common.LoginLogout;
 import com.java.common.SignUp;
 import com.java.member.user.User;
 
@@ -19,8 +20,9 @@ public class Main {
 		Load load = new Load();
 		Exit exit = new Exit();
 		
-		FindAccount find = new FindAccount();
+		LoginLogout loginlogout = new LoginLogout();
 		SignUp signup = new SignUp();
+		FindAccount find = new FindAccount();
 		
 		// 데이터 로드
 		load.loadAll();

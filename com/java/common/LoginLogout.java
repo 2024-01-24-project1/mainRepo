@@ -6,6 +6,10 @@ import com.java.member.Member;
 import com.java.view.View;
 
 public class LoginLogout {
+	
+	public static String auth = "";		// 인증 티켓
+	public static String authName = "";	// 로그인중인 이름	
+	public static String level = ""; 	// 직원 권한 확인
 
 	public static void login() {
 		Scanner scan = new Scanner(System.in);
@@ -23,7 +27,7 @@ public class LoginLogout {
 		
 		// 로그인 성공
 		if (check == true) { // 고객 모드
-			Member.auth = id;
+			LoginLogout.auth = id;
 			System.out.println();
 			System.out.println("로그인이 완료되었습니다.");
 			System.out.println();
@@ -31,7 +35,7 @@ public class LoginLogout {
 			System.out.println("=======================================");
 			System.out.println();
 			System.out.printf("             SEOUL METRO       ");
-			Data.employeeList.stream().filter(s -> s.getId().equals(Member.auth) )
+			Data.employeeList.stream().filter(s -> s.getId().equals(LoginLogout.auth) )
 			.forEach(s -> System.out.println(s.getName() + "님") );
 			System.out.println();
 			System.out.println("=======================================");
@@ -74,28 +78,28 @@ public class LoginLogout {
 			}
 
 			// 관리자 모드
-		} else if (check == true && Member.level.equals("2")) {
-			Member.auth = id;
+		} else if (check == true && LoginLogout.level.equals("2")) {
+			LoginLogout.auth = id;
 			System.out.println();
 			System.out.println("=======================================");
 			System.out.println();
 			System.out.println("         [관리자 모드]");
 			System.out.println();
 			System.out.print("         이름: ");
-			Data.employeeList.stream().filter(s -> s.getId().equals(Member.auth) )
-									.forEach(s -> System.out.println(s.getName() ) );
-			System.out.println("         직급: " + Member.rank); // s 직급 추가하기
-			System.out.println();
-			System.out.println("=======================================");
-			System.out.println();
-			System.out.println("           1. 역 관리");
-			System.out.println("           2. 직원 관리");
-			System.out.println("           3. 민원");
-			System.out.println("           4. 행사 캘린더");
-			System.out.println("           5. 통계 정보");
-			System.out.println("           6. 행동로그 보기");
-			System.out.println("           7. 로그아웃");
-			System.out.println("           0. 종료");
+//			Data.employeeList.stream().filter(s -> s.getId().equals(LoginLogout.auth) )
+//									.forEach(s -> System.out.println(s.getName() ) );
+//			System.out.println("         직급: " + LoginLogout.rank); // s 직급 추가하기
+//			System.out.println();
+//			System.out.println("=======================================");
+//			System.out.println();
+//			System.out.println("           1. 역 관리");
+//			System.out.println("           2. 직원 관리");
+//			System.out.println("           3. 민원");
+//			System.out.println("           4. 행사 캘린더");
+//			System.out.println("           5. 통계 정보");
+//			System.out.println("           6. 행동로그 보기");
+//			System.out.println("           7. 로그아웃");
+//			System.out.println("           0. 종료");
 			System.out.println();
 
 			System.out.println("--------------------------------------");
@@ -136,10 +140,11 @@ public class LoginLogout {
 
 	public static void logout() {
 		// 로그아웃
-		Member.auth = null;
+		LoginLogout.auth = "";
+		LoginLogout.authName = "";
+		LoginLogout.level = "";
 		System.out.println("로그아웃이 완료되었습니다.");
 		
-		View.mainmenu();
 		
 	}
 

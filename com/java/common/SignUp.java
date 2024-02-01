@@ -12,7 +12,7 @@ import com.java.member.employee.Employee;
 // 회원가입
 public class SignUp {
 
-	public static void signUp() { // 회원가입 초기 화면
+	public void signUp() { // 회원가입 초기 화면
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -48,7 +48,7 @@ public class SignUp {
 		
 	}//End of SignUp
 
-	private static void employeeSignUp() {
+	private void employeeSignUp() {
 		Scanner scan = new Scanner(System.in);
 		
 		String id = "";
@@ -129,7 +129,7 @@ public class SignUp {
 	}
 
 	// 개인 회원 가입
-	public static void userSignUp() {
+	private void userSignUp() {
 		Scanner scan = new Scanner(System.in);
 		
 		String id = "";

@@ -4,7 +4,9 @@ public class ViewAll {
 	
 	public static void costTimeTable() { //고객 > 요금표 (추가 운임 미정)
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 길 찾기 (즐겨찾기 노선)");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -25,7 +27,9 @@ public class ViewAll {
 	
 	public static void roadSearchFavoriteList() { //길찾기 > 즐겨 찾기 목록 라벨 (입력 필요)
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 길 찾기 (즐겨찾기 노선)");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		
@@ -33,7 +37,9 @@ public class ViewAll {
 	
 	public static void roadSearchRouteOtherTimeTop() {//길찾기> 경로입력> 다른 날짜 보기 상단
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 다른 날짜 보기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		
@@ -47,7 +53,9 @@ public class ViewAll {
 	
 	public static void roadSearchRouteNowTimeTop() { //길 찾기 >경로 입력> 현재 시간 보기 > 상단 라벨
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 현재 시간 보기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		
@@ -63,7 +71,9 @@ public class ViewAll {
 	}
 	public static void roadSearchRouteTop() { //길 찾기 >경로 입력 상단 라벨
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 경로 입력");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -71,7 +81,9 @@ public class ViewAll {
 	
 	public static void roadSearchMain() { //길찾기 메뉴 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 길 찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -88,7 +100,9 @@ public class ViewAll {
 	
 	public static void seasonPassCodeTop() { //정기권 코드 입력 상단
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 정기권 코드 입력 ");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
@@ -101,14 +115,18 @@ public class ViewAll {
 	
 	public static void seasonPassRegisterTop() { //정기권 등록하기 상단
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.printf("\t\t\t\t\t\t\t \"%s\"님의 정기권 확인하기 ",member.authName());
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
 	
 	public static void seasonPassCheck() {// 나의 정기권 확인하기 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 나의 정기권 확인하기 ");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		//뒤에 입력 받아야 함
@@ -116,7 +134,9 @@ public class ViewAll {
 	
 	public static void seasonPassMain() { //정기권 메인 메뉴 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 정기권");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -137,7 +157,9 @@ public class ViewAll {
 	
 	public static void lostArticleSearchTop() { // 분실물 검색 상단 라벨 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 분실물 검색");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
@@ -151,14 +173,18 @@ public class ViewAll {
 	
 	public static void lostArticleListCheckTop() { // 분실물 목록 확인 라벨 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 분실물 목록 확인");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
 	
 	public static void userVoc() { // 고객의 소리 민원 접수
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 민원 접수");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -170,7 +196,9 @@ public class ViewAll {
 	
 	public static void userVocMain() { //고객의 소리 메뉴 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 고객의 소리");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -182,7 +210,9 @@ public class ViewAll {
 	
 	public static void trainTimeTableSearch() { //열차 시간표 , 검색 후 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 열차 시간표");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 		
@@ -190,7 +220,9 @@ public class ViewAll {
 	
 	public static void trainTimeTable() { // 고객 열차 시간표
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 열차 시간표");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 		
@@ -198,7 +230,9 @@ public class ViewAll {
 	
 	public static void userResign() {//회원 탈퇴
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 회원 탈퇴");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -212,7 +246,9 @@ public class ViewAll {
 	
 	public static void favoriteDelete(){ //즐겨찾기 삭제
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 즐겨찾기 삭제");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -221,7 +257,9 @@ public class ViewAll {
 	
 	public static void favoriteAdd() { // 즐겨찾기 등록
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 즐겨찾기 등록");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
@@ -230,7 +268,9 @@ public class ViewAll {
 	
 	public static void favoriteChange() {//즐겨찾기 편집
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 즐겨찾기 편집");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -246,14 +286,18 @@ public class ViewAll {
 	
 	public static void favoriteList() { //즐겨찾기 목록
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 길 찾기(즐겨찾기 노선)");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
 	
 	public static void lineFavorite() {//노선 즐겨찾기
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 노선 즐겨찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -266,7 +310,9 @@ public class ViewAll {
 	
 	public static void phoneNumChange() {//전화번호 재설정
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 전화번호 재설정");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
@@ -292,14 +338,18 @@ public class ViewAll {
 	
 	public static void pwChange() { //pw재설정 라벨
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t PW 재설정");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 	}
 	
 	public static void userInfoChange() { //회원정보 수정 메뉴 화면 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 회원정보 수정");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -312,7 +362,9 @@ public class ViewAll {
 	
 	public static void userMyInfo() { //고객 > 마이페이지 > 내 정보 보기
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 내 정보");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 		
@@ -320,7 +372,9 @@ public class ViewAll {
 	
 	public static void userMyPage() { //고객 마이 페이지 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 마이 페이지");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -336,7 +390,9 @@ public class ViewAll {
 	
 	public static void userMainView() { //고객 메인 메뉴 화면 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.printf("\t\t\t\t\t\t\t PW 찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.printf("\t\t\t\t\t\t\t\t\t\t\t 0.마이 페이지\n");
@@ -352,7 +408,9 @@ public class ViewAll {
 	
 	public static void signupFindPw() { // PW 찾기
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t PW 찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		
@@ -360,7 +418,9 @@ public class ViewAll {
 	
 	public static void signupFindId() { // ID 찾기
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t ID 찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		
@@ -368,7 +428,9 @@ public class ViewAll {
 	
 	public static void signupFindMain() { //ID/PW 찾기 메인 화면
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t ID/PW 찾기");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -381,7 +443,9 @@ public class ViewAll {
 	
 	public static void signupEmployee() { // 회원가입 관리자용 가입
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 관리자용 가입");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 	
 	}
@@ -392,14 +456,18 @@ public class ViewAll {
 	
 	public static void signupUser() {//회원가입 개인회원
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 개인회원 가입");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 	
 	}
 	
 	public static void signupMain() { //회원가입 메인
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 회원가입");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
@@ -413,7 +481,9 @@ public class ViewAll {
 	
 	public static void loginTop() { //로그인 화면 상단
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println();
 		System.out.println("\t\t\t\t\t\t\t 로그인");
+		System.out.println();
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		
 		//밑에 입력 읽어야 함 
@@ -423,7 +493,7 @@ public class ViewAll {
 	
 	////////////////////////여기부터 관리자 화면 메서드
 	
-//	public void nameRank(String member.authName, String employeeRank) {
+//	public void nameRank(String member.authName, String employeeRank) { //상단에 뜰 이름과 직급
 //		System.out.printf("\t\t  이름:                   %s                          \n",member.authName); //이름 변수 받아서 넣으세요
 //		System.out.printf("\t\t  직급:                   %s                          \n",employeeRank); //직급 변수 받아서 넣으세요
 //		
@@ -445,6 +515,7 @@ public class ViewAll {
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 호선을 입력해주세요");
+		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println();
 		System.out.println("====================================================================================");
 		
@@ -472,7 +543,9 @@ public class ViewAll {
 	
 	public static void statisticsLineTotalUserResult() { // 호선 별 월 전체 이용 인원 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.printf("\t\t\t\t\t %s의 월 전체 이용 인원은 %s명 입니다.\n"); //받을 값 예시:2호선,  전체 이용 인원 계산 값
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
@@ -481,6 +554,7 @@ public class ViewAll {
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 호선을 입력해주세요");
+		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println();
 		System.out.println("====================================================================================");
 		
@@ -488,7 +562,9 @@ public class ViewAll {
 	
 	public void statisticsMonthTotalUserResult(String monthTotalUser) { // 월 전체 이용 인원 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.printf("\t\t\t\t\t 월 전체 이용 인원은 %s명 입니다.\n",monthTotalUser); //그냥 계산 결과 넣으면 됩니다. 
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
@@ -522,7 +598,7 @@ public class ViewAll {
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 요일을 선택해주세요");
-		System.out.println("\t\t\t\t\t (평일 또는 주말)");
+		System.out.println("\t\t\t\t\t (평일 또는 주말을 입력해주세요)");
 		System.out.println();
 		System.out.println("====================================================================================");
 		
@@ -542,6 +618,7 @@ public class ViewAll {
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 호선을 입력해주세요");
+		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println();
 		System.out.println("====================================================================================");
 		
@@ -565,35 +642,45 @@ public class ViewAll {
 	
 	public static void calDeleteResult() { // 캘린더 일정 삭제 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 삭제되었습니다.");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void calDeleteMid() { //캘린더 일정 삭제 중간 라벨
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 제거 할 일정의 내용을 동일하게 작성해주세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void calAddResult() { //캘린더 일정 추가 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 일정이 성공적으로 추가되었습니다.");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void calAdd() {//캘린더 일정 추가
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 추가 할 일정을 작성해주세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void calList() { // 캘린더 전체 일정 보기 , 일정 제거 윗부분
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 전체 일정");
+		System.out.println();
 		System.out.println("====================================================================================");
 		//일정 데이터 밑에 붙여야함
 	}
@@ -614,55 +701,67 @@ public class ViewAll {
 		
 	}
 	
-	public static void vocListResult() { //전체 민원 보기 결과
-			System.out.println("\t\t\t\t\t [출력결과]");
-			//민원 목록 데이터 나와야함 
-	}
+
 	
 	public static void vocListBottom() { //전체 민원 보기 아래부분
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 특정 민원인의 민원 내용을 확인하려면 민원인의 아이디를 입력하세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
 	
 	public static void vocListTop() { //전체 민원 보기 윗 부분
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 민원 목록");
+		System.out.println();
 		System.out.println("====================================================================================");
 		// 민원 데이터 나와야함 
 	}
 	
 	public static void lostarticleSearchTop() { // 분실물 검색 상단 
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 찾고자 하는 분실물의 이름을 적어주세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 	//밑에 입력 받으면 분실물 리스트 불러오기 해야함 
 	}
 	
 	public static void lostarticleDeleteResult() { //분실물 삭제 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t [등록된 분실물 정보를 삭제 하였습니다.]");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
 	
 	public static void lostarticleDelete() { //분실물 삭제 상단 라벨
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 삭제 할 분실물의 분실물,호선 그리고 역을 입력해주세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
 	
 	public static void lostarticleAddResult() { //분실물 추가 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t [분실물이 정상적으로 등록되었습니다.]");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
 	public static void lostarticleAdd() { //분실물 추가 라벨
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 추가 할 분실물의 분실물,호선 그리고 역을 입력해주세요");
+		System.out.println("\t\t\t\t\t (호선 입력 시 숫자만 작성해주세요");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
@@ -671,7 +770,9 @@ public class ViewAll {
 	
 	public static void lostarticleList() { //분실물 추가 , 제거  상단 부분
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 분실물 목록");
+		System.out.println();
 		System.out.println("====================================================================================");
 	}
 	
@@ -706,11 +807,11 @@ public class ViewAll {
 		
 	}
 	
-	public static void safetyEmployeeUnlockResult() { //부서해제 결과 라벨
-		System.out.println("\t\t\t\t\t [출력결과]");
+	public static void safetyEmployeeUnlockResultBottom() { //부서해제 결과 하단 라벨
 
 		System.out.println("\t\t [부서 해제]");
 	}
+	
 	
 	public static void safetyEmployeeSetUnlockBottom() { //안전요원 배치, 해제 아래 부분
 		System.out.println("====================================================================================");
@@ -730,16 +831,17 @@ public class ViewAll {
 		//데이터 추가
 	}
 	
-	public static void safetyEmployeeSetResult() { //안전요원 배치 결과
-		System.out.println("\t\t\t\t\t [출력결과]");
-
+	public static void safetyEmployeeSetResultBottom() { //안전요원 배치 결과 하단
 		System.out.println("\t\t [배치 완료]");
 	}
 	
-	
+	public static void safetyEmployeeSetListMid() { //안전 요원 배치 목록 상단 출력 후 다음 출력
+		System.out.println("\t\t\t\t\t ID,호선 그리고 역을 입력해주세요.");
+		System.out.println("\t\t\t\t\t (호선 입력 시 숫자만 입력해주세요");
+	}
 
 	
-	public static void safetyEmployeeSetList() {//안전 요원 배치 목록 상단  
+	public static void safetyEmployeeSetListTop() {//안전 요원 배치 목록 상단  
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 배치 안 된 안전 요원 목록");
@@ -769,6 +871,10 @@ public class ViewAll {
 		System.out.println();
 		System.out.println("====================================================================================");
 		
+	}
+	
+	public static void safetyEmployeeSearchResult() { //안전 요원 검색 출력 결과 라벨
+		System.out.println("\t\t\t\t\t [이름] \t\t [직급] \t\t [담당역(호선)] \t\t [전화번호]");
 	}
 	
 	public static void safetyEmployeeSee() { //전체 안전 요원 보기 
@@ -804,7 +910,9 @@ public class ViewAll {
 	
 	public static void employeeDeleteResult() { //직원 삭제 (예) 결과 값
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 삭제되었습니다.");
+		System.out.println();
 		System.out.println("====================================================================================");
 
 	}
@@ -815,14 +923,15 @@ public class ViewAll {
 //		System.out.println("\t\t 2. %s의 호선: %s \n"); //id와 호선 넣어주세요
 //		System.out.println("\t\t 3. %s의 역: %s\n"); //id와 역 넣어주세요
 //		System.out.println("\t\t 4. %s의 직급: %s\n"); //id와 직급 넣어주세요
-//		System.out.println("해당 직원을 삭제하시겠습니까?");
+//		System.out.println("해당 직원을 삭제하시겠습니까? (예 또는 아니오를 작성해주세요)");
 	}
 	
 	public static void employeeDeleteOne() { //직원 삭제 1번째 라벨
 		System.out.println("====================================================================================");
-		System.out.println("\t\t\t\t\t 삭제하고자 하는 직원의 ID를 입력해주세요");
 		System.out.println();
+		System.out.println("\t\t\t\t\t 삭제하고자 하는 직원의 ID를 입력해주세요");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 직원 삭제 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
@@ -830,23 +939,25 @@ public class ViewAll {
 	
 	public static void employeerankChangeTwo() { // 직원 직급 변경 2번째 라벨 
 		System.out.println("====================================================================================");
-		System.out.println("\t\t\t\t\t 변경 할 직급을 입력해주세요.");
 		System.out.println();
+		System.out.println("\t\t\t\t\t 변경 할 직급을 입력해주세요.");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 직급 변경 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void employeerankChangeOne() { // 직원 직급 변경 1번째 라벨
 		System.out.println("====================================================================================");
-		System.out.println("\t\t\t\t\t 직급 변경이 필요한 직원의 ID를 입력해주세요.");
 		System.out.println();
+		System.out.println("\t\t\t\t\t 직급 변경이 필요한 직원의 ID를 입력해주세요.");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 직급 변경 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
-	public void employeeChangeResult() { // 직원 근무지 변경 최종 결과
+	public void employeeChangeResult() { // 출력결과 라벨
 		System.out.println("\t\t\t\t\t [출력결과]");
 //		System.out.println("\t\t 1. %s의 이름: %s \n"); //id와 이름 넣어주세요
 //		System.out.println("\t\t 2. %s의 호선: %s \n"); //id와 호선 넣어주세요
@@ -857,26 +968,32 @@ public class ViewAll {
 	
 	public static void employeeOfficeChangeThree() { // 직원 근무지 변경 3번째 라벨
 		System.out.println("====================================================================================");
-		System.out.println("\t\t\t\t\t 변경하고자 하는 근무지의 역을 입력해주세요.");
+		System.out.println();
+		System.out.println("\t\t\t\t\t 변경하고자 하는 근무지의 호선과 역을 입력해주세요.");
+		System.out.println("\t\t\t\t\t (호선은 숫자로 입력해주세요.");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 근무지 변경 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void employeeOfficeChangeTwo() { //직원 근무지 변경 2번째 라벨
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 변경하고자 하는 근무지의 호선을 입력해주세요.");
 		System.out.println("\t\t\t\t\t 숫자로 입력해주세요");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 근무지 변경 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
 	
 	public static void employeeOfficeChangeOne() { // 직원 근무지 변경 1번째 라벨
 		System.out.println("====================================================================================");
-		System.out.println("\t\t\t\t\t 근무지 변경이 필요한 직원의 ID를 입력해주세요.");
 		System.out.println();
+		System.out.println("\t\t\t\t\t 근무지 변경이 필요한 직원의 ID를 입력해주세요.");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 근무지 변경 ");
+		System.out.println();
 		System.out.println("====================================================================================");
 		
 	}
@@ -899,16 +1016,20 @@ public class ViewAll {
 	
 	public static void employeeSearchNameResult() { // 이름으로 직원 검색 결과
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 검색하신 이름을 가진 직원 목록입니다.");
+		System.out.println();
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t[이름]\t[아이디]\t[전화번호]\t[담당하는 역(호선)]");
 	}
 	public static void employeeSearchName() { // 이름으로 직원 검색 
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 확인 할 직원의 이름을 입력해주세요");
 		System.out.println("\t\t\t\t\t (성 포함 이름 입력해주세요)");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 이름으로 직원 검색");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
@@ -916,8 +1037,10 @@ public class ViewAll {
 	
 	public static void employeeSearchStation() { // 역으로 직원 검색 
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 직원 목록을 확인 할 역을 입력해주세요");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 역으로 직원 검색");
+		System.out.println();
 		System.out.println("====================================================================================");
 	
 	}
@@ -925,7 +1048,9 @@ public class ViewAll {
 	
 	public static void employeeSearchLineResult() {//일반직원 검색 결과 라벨 , 안전요원 검색 결과 라벨
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 현재 해당 호선에 근무 중인 직원 목록입니다.");
+		System.out.println();
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t[이름]\t[아이디]\t[직급]\t[전화번호]\t[담당하는 역(호선)]");
@@ -935,9 +1060,11 @@ public class ViewAll {
 	
 	public static void employeeSearchLine() { //전체 직원 정보 보기 > 호선으로 직원 검색 
 		System.out.println("====================================================================================");
+		System.out.println();
 		System.out.println("\t\t\t\t\t 직원 목록을 확인 할 호선을 입력해주세요");
 		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 호선으로 직원 검색");
+		System.out.println();
 		System.out.println("====================================================================================");
 	}
 	public static void employeeTotalInfo() { //전체 직원 정보 보기 
@@ -946,6 +1073,7 @@ public class ViewAll {
 		System.out.println("\t\t\t\t\t 원하는 기능을 선택하세요");
 		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 전체 직원 정보 보기");
+		System.out.println();
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 1. 호선으로 직원 검색");
@@ -997,8 +1125,7 @@ public class ViewAll {
 		System.out.println("\t\t\t\t\t 원하는 기능을 선택하세요");
 		System.out.println("\t\t\t\t\t (숫자로 입력해주세요)");
 		System.out.println("\t\t\t\t\t 현재 메뉴: 역 관리");
-		System.out.printf("\t\t  이름:               %s                              \n"); //이름 변수 받아서 넣으세요
-		System.out.printf("\t\t  직급:               %s                              \n"); //직급 변수 받아서 넣으세요
+		System.out.println();
 		System.out.println("====================================================================================");
 		System.out.println();
 		System.out.println("\t\t\t\t\t 1. 의자 없는 열차 추가");

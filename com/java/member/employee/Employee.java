@@ -1,9 +1,9 @@
-package mainRepo.com.java.member.employee;
+package com.java.member.employee;
 
-import mainRepo.com.java.member.Member;
+import com.java.member.Member;
 
 // 직원 클래스
-public class Employee extends Member{
+public final class Employee extends Member{
 
 	private String position;	// 직급
 	private String line;		// 호선

@@ -1,8 +1,8 @@
-package mainRepo.com.java.common.log;
+package com.java.common.log;
 
 import java.util.ArrayList;
 
-public class Log {
+public final class Log {
 	
 	private String time;
 	private String id;

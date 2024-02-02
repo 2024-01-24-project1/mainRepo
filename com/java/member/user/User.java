@@ -1,8 +1,8 @@
-package mainRepo.com.java.member.user;
+package com.java.member.user;
 
-import mainRepo.com.java.member.Member;
+import com.java.member.Member;
 
-public class User extends Member{
+public final class User extends Member{
 
 	private String passCheck;	// 정기권유무
 	

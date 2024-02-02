@@ -1,4 +1,4 @@
-package mainRepo.com.java.member;
+package com.java.member;
 
 // 고객과 직원의 공통된 기능을 가지는
 // 부모 클래스

@@ -54,10 +54,12 @@ public final class UserMode extends CommonFunction{
 			} else if (sel.equals("2")) { // 2. 민원 접수
 				
 				// 민원 접수
+				UserVoiceTab.userVoice();
 				
 			} else if (sel.equals("3")) {
 				
 				// 정기권 현황
+				seasonTicket.Ticket();
 				
 			} else if (sel.equals("4")) {
 				

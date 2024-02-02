@@ -3,7 +3,7 @@ package com.java.common.lostarticle;
 // 분실물 클래스
 public final class LostArticle {
 	
-	private String article;
+	public String article; // 원래 private
 	private String content;
 	private String lostStation;
 	private String findStation;
@@ -38,10 +38,17 @@ public final class LostArticle {
 	}
 
 	@Override
-	public String toString() {
-		return String.format("[분실물: %s, 내용: %s, 잃어버린역: %s, 보관중인역: %s]"
-							, this.article, this.content , this.lostStation, this.findStation);
+	public String toString() { // 수정
+		return String.format("[%s, 보관 중인 역: %s]"
+							, this.article, this.findStation);
 	}
+	
+//	@Override
+//	public String toString() {
+//		return String.format("[분실물: %s, 내용: %s, 잃어버린역: %s, 보관중인역: %s]"
+//				, this.article, this.content , this.lostStation, this.findStation);
+//	}
+	
 	
 	
 }//End of class

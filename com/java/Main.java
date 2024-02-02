@@ -49,6 +49,7 @@ public class Main {
 			if(sel.equals("1")) {
 				
 				//로그인
+				loginlogout.loginMode();
 				
 			}else if(sel.equals("2")) {
 				

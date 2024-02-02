@@ -274,22 +274,22 @@ public class ViewAll {
 	}
 	
 	public static void bottomReceive() { //아래에 있는 접수
-		System.out.println("접수 되었습니다.");
+		System.out.println("\t\t\t\t\t접수 되었습니다.");
 	}
 	
 	public static void bottomResign() { //아래에 있는 탈퇴
-		System.out.println("탈퇴를 완료했습니다.");
+		System.out.println("\t\t\t\t\t탈퇴를 완료했습니다.");
 	}
 	public static void bottomDelete() { // 아래에 있는 삭제
-		System.out.println("삭제가 완료되었습니다.");
+		System.out.println("\t\t\t\t\t삭제가 완료되었습니다.");
 	}
 	
 	public static void bottomAdd() { // 아래에 있는 등록
-		System.out.println("등록이 완료되었습니다.");
+		System.out.println("\t\t\t\t\t등록이 완료되었습니다.");
 	}
 	
 	public void bottomChange() { //아래에 있는 작은 변경이 완료되었습니다.
-		System.out.println("변경이 완료되었습니다.");
+		System.out.println("\t\t\t\t\t변경이 완료되었습니다.");
 	}
 	
 	public static void pwChange() { //pw재설정 라벨
@@ -732,7 +732,7 @@ public class ViewAll {
 	
 	public static void safetyEmployeeUnlockResultBottom() { //부서해제 결과 하단 라벨
 
-		System.out.println("\t\t [부서 해제]");
+		System.out.println("\t\t\t\t\t [부서 해제]");
 	}
 	
 	

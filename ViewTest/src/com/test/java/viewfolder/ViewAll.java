@@ -20,7 +20,8 @@ public class ViewAll {
 		System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t만 6세 미만 또는 만 65세 이상, 장애인, 국가 유공자, 보훈 보상대상자 무료");
-		
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
 	}
 	
 	public static void roadSearchFavoriteList() { //길찾기 > 즐겨 찾기 목록 라벨 (입력 필요)
@@ -1108,8 +1109,17 @@ public class ViewAll {
 		System.out.println("\t\t\t\t\t ( (시)에 해당하는 숫자만 입력해주세요");
 		System.out.println();
 		System.out.println("====================================================================================");
-
 	}
+		public static void trainAddSix() { //역 관리 > 추가 시간대 >  요일
+			System.out.println("====================================================================================");
+			System.out.println();
+			System.out.println("\t\t\t\t\t 열차를 추가 할 요일을 입력해주세요.");
+			System.out.println("\t\t\t\t\t (평일 또는 주말로 입력해주세요)");
+			System.out.println();
+			System.out.println("====================================================================================");
+
+		}
+	
 	public static void trainAddResult() { // 역 관리 열차 추가의 혼잡도 결과물 
 		System.out.println("====================================================================================");
 		System.out.println();

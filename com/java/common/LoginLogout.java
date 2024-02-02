@@ -3,10 +3,10 @@ package com.java.common;
 import java.util.Scanner;
 
 import com.java.member.Member;
+import com.java.member.user.User;
+import com.java.member.user.UserVoiceTab;
 import com.java.member.user.seasonTicket;
 import com.java.view.View;
-
-/** 로그아웃 시 프로그램 초기화면으로 바뀌어야 함 */
 
 public class LoginLogout {
 
@@ -41,7 +41,8 @@ public class LoginLogout {
 			if (num.equals("1")) { // 1. 열차 시간표
 
 			} else if (num.equals("2")) { // 2. 민원 접수
-
+				UserVoiceTab.userVoice();
+				
 			} else if (num.equals("3")) { // 3. 정기권
 				seasonTicket.Ticket();
 

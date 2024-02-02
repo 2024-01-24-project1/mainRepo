@@ -34,7 +34,7 @@ public final class Data {
 	
 	
 	// 직원 가입 코드
-	public final static String employeeCode = "DAVSGDVAS35351";
+	public final static String EMPLOYEECODE = "DAVSGDVAS35351";
 		
 	
 	// csv파일을 읽어와서 변경되지 않는 역 리스트

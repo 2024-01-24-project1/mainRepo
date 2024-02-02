@@ -1,7 +1,6 @@
 package com.java;
 
 import java.util.Scanner;
-
 import com.java.common.Exit;
 import com.java.common.FindAccount;
 import com.java.common.Load;
@@ -16,6 +15,10 @@ public class Main {
 		Load load = new Load();
 		Exit exit = new Exit();
 
+		LoginLogout loginlogout = new LoginLogout();
+		SignUp signup = new SignUp();
+		FindAccount find = new FindAccount();
+		
 		load.loadAll();
 
 		Scanner sc = new Scanner(System.in);
@@ -34,7 +37,7 @@ public class Main {
 
 			} else if (sel.equals("2")) {
 				// 회원가입
-				SignUp.signup(sel);
+				signup.signUp();
 
 			} else if (sel.equals("3")) {
 				// ID, PW 찾기

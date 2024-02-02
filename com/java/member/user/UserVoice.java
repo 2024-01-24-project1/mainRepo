@@ -6,6 +6,13 @@ public final class UserVoice {
 	private String content;
 	private String isRead;
 	
+	public UserVoice(String id, String title, String content) {
+		this.id = id;
+		this.title = title;
+		this.content = content;
+		this.isRead = "안읽음";
+	}
+	
 	public UserVoice(String id, String title, String content, String isRead) {
 		this.id = id;
 		this.title = title;

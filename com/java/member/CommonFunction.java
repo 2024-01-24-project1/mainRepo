@@ -20,7 +20,7 @@ public class CommonFunction {
 	
 	
 	// 요금표 탭
-	protected void CostsTableTab(){
+	protected void costsTableTab(){
 		
 	}//End of CostsTableTab()
 	

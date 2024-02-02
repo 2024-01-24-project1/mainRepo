@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 import com.java.member.Member;
 import com.java.member.employee.Employee;
+import com.java.member.employee.EmployeeMode;
 import com.java.member.user.User;
+import com.java.member.user.UserMode;
 import com.java.view.View;
 
 public final class LoginLogout {
@@ -12,6 +14,7 @@ public final class LoginLogout {
 	public static String auth = "";		// 인증 티켓
 	public static String authName = "";	// 로그인중인 이름	
 	public static String level = ""; 	// 직원 권한 확인
+	public static String position = "";	// 직급
 	
 	
 	public void loginMode() {
@@ -21,12 +24,17 @@ public final class LoginLogout {
 			if(LoginLogout.level.equals("1")) {
 				
 				//유저모드
+				UserMode userMode = new UserMode();
+				userMode.userTab();
 				
 			}else if (LoginLogout.level.equals("2") || LoginLogout.level.equals("3")) {
 				
 				// 관리자 모드
+				EmployeeMode employeeMode = new EmployeeMode();
+				employeeMode.employeeTab();
 				
 			}
+			
 	}//End of loginMode()
 	
 	
@@ -83,6 +91,7 @@ public final class LoginLogout {
 							LoginLogout.auth = employee.getId();
 							LoginLogout.authName = employee.getName();
 							LoginLogout.level = employee.getLevel();
+							LoginLogout.position = employee.getPosition();
 							
 							// 직원리스트 탐색 종료
 							break;

@@ -75,7 +75,7 @@ public final class EmployeeMode extends CommonFunction{
 			} else if(sel.equals("7")) {
 				
 				// 열차 시간표
-				stationTimetableTab();
+				//stationTimetableTab();
 				
 			} else if (sel.equals("8")) {
 	

@@ -40,15 +40,15 @@ public final class Data {
 	
 	// csv파일을 읽어와서 변경되지 않는 역 리스트
 	public static final ArrayList<String> ALL_STATION_NAME = new ArrayList<>();
-	public static final ArrayList<String> LINE1_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE2_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE3_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE4_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE5_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE6_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE7_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE8_STATION_NAME = new ArrayList<String>();
-	public static final ArrayList<String> LINE9_STATION_NAME = new ArrayList<String>();
+	public static final ArrayList<String> LINE1_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE2_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE3_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE4_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE5_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE6_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE7_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE8_STATION_NAME = new ArrayList<>();
+	public static final ArrayList<String> LINE9_STATION_NAME = new ArrayList<>();
 	
 	// csv파일 읽어와서 변경되면 종료시 csv파일에 쓰는 리스트
 	public static ArrayList<String> passList = new ArrayList<>();

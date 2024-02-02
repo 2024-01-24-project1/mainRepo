@@ -9,7 +9,6 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
-import com.java.member.user.User;
 
 
 
@@ -21,8 +20,6 @@ public class Main {
 		Exit exit = new Exit();
 		
 		LoginLogout loginlogout = new LoginLogout();
-		SignUp signup = new SignUp();
-		FindAccount find = new FindAccount();
 		
 		// 데이터 로드
 		load.loadAll();
@@ -36,6 +33,9 @@ public class Main {
 			
 			
 //			View.page1(sel);
+			
+			Data.stationTimeList.stream().forEach(s -> System.out.println(s));
+			
 			System.out.println("메인");
 			System.out.println("1->로그인");
 			System.out.println("2->회원가입");
@@ -54,12 +54,12 @@ public class Main {
 			}else if(sel.equals("2")) {
 				
 				//회원가입
-				signup.signUp();
+				SignUp.signUp();
 				
 			}else if(sel.equals("3")) {
 				
 				//IDPW 찾기
-				find.findAccount();
+				FindAccount.findAccount();
 				
 			}else if(sel.equals("4")) {
 				
@@ -81,6 +81,8 @@ public class Main {
 		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
+		
+		
 
 	}//main
 

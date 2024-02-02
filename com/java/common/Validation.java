@@ -98,5 +98,34 @@ public final class Validation {
 			} 
 			return check;
 		}
+		
+		// 존재하는 역이름인지 유효성검사
+		// 존재하면 true, 없으면 false
+		public static boolean is_StationName(String stationName) {
+			
+			boolean check = false;
+			check = Data.ALL_STATION_NAME.stream()
+								          .anyMatch(name -> name.equals(stationName));
+			
+			return check;
+			
+		}//End of is_StationName()
+		
+		// 입력된 값이 "N호선"인지 유효성 검사
+		// 존재하면 true, 없으면 false
+		public static boolean is_Line(String line) {
+			
+			boolean check = false;
+			
+			for(int i = 1; i <= 9; i++) {
+				
+				if(line.equals( i + "호선")) {
+					check = true;
+				}
+				
+			}
+			
+			return check;
+		}
 	
 }//End of class

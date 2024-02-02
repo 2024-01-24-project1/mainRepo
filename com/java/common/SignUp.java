@@ -12,7 +12,7 @@ import com.java.member.employee.Employee;
 // 회원가입
 public class SignUp {
 
-	public void signUp() { // 회원가입 초기 화면
+	public static void signUp() { // 회원가입 초기 화면
 		
 		Scanner scan = new Scanner(System.in);
 		

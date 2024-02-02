@@ -63,8 +63,7 @@ public class Main {
 				
 			}else if(sel.equals("4")) {
 				
-				//종료
-				System.out.println("프로그램을 종료합니다.");
+				// Main종료
 				break;
 				
 			}else {
@@ -79,8 +78,8 @@ public class Main {
 		
 		
 		//종료시 파일 덮어쓰기할 클래스
+		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
-		
 		System.exit(0);
 
 	}//main

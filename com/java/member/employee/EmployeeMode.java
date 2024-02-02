@@ -39,6 +39,7 @@ public final class EmployeeMode extends CommonFunction{
 			if(sel.equals("0")) {
 				
 				// 종료
+				System.out.println("프로그램을 종료합니다.");
 				Exit exit = new Exit();
 				exit.writeAll();
 				

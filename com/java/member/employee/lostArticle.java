@@ -12,13 +12,12 @@ import java.util.regex.Pattern;
 //분실물정보 : 품목,내용,발견위치,보관위치
 public class lostArticle {
 
-	private static String path;
-	static {
-		path = "dat\\lostArticle.csv";
-	}
+	private static String path = "dat\\lostArticle.csv";
+	private static String regexPath = "dat\\역명.txt";
 	
 	static ArrayList<article> list = new ArrayList<>();
 	static Scanner scan = new Scanner(System.in);
+	static MovePage mp = new MovePage();
 	
 //	while(true) {
 //	if(num == 1) {
@@ -48,8 +47,25 @@ public class lostArticle {
 	
 	public static void articlALl() {
 		
+		String line = "";
 		String num;
 		
+		try {	// csv파일을 ArrayList로 저장
+			BufferedReader reader = new BufferedReader(new FileReader(path));
+			
+			
+			while((line = reader.readLine()) != null){
+				String[] temp = line.split(",");
+				article article = new article(temp[0], temp[1], temp[2], temp[3]);
+				list.add(article);
+			}
+			
+			reader.close();
+			
+		} catch (Exception e) {
+			System.out.println("lostArticle.articlALl");
+			e.printStackTrace();
+		}
 		while(true) {
 		
 			System.out.println("1. 분실물 추가");
@@ -68,9 +84,6 @@ public class lostArticle {
 				articleSearch();
 			}
 			
-			
-			
-			
 		}
 	}
 	
@@ -86,12 +99,7 @@ public class lostArticle {
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
 			
-			
-			while((line = reader.readLine()) != null){
-				String[] temp = line.split(",");
-				article article = new article(temp[0], temp[1], temp[2], temp[3]);
-				list.add(article);
-			}
+			mp.showPage(list);
 			
 			System.out.print("찾고자 하는 물건을 입력하세요 : ");
 			String product = scan.nextLine();
@@ -125,6 +133,7 @@ public class lostArticle {
 	public static void articleremove() {
 		
 		boolean exist= false;
+		BufferedReader reader;
 		
 		while(true) {
 			
@@ -133,42 +142,43 @@ public class lostArticle {
 				String tempType = "";
 				String tempSta = "";
 				
-				BufferedReader reader = new BufferedReader(new FileReader(path));
-				
-				while((line = reader.readLine()) != null){
-				
-					String[] temp = line.split(",");
-					article article = new article(temp[0], temp[1], temp[2], temp[3]);
-					
-					list.add(article);
-				
-				}
-				
-				
+				mp.showPage(list);
 				
 				while (true) { // 물건 입력
 					
-					for(int i=0; i<list.size(); i++) {
-					System.out.printf("%s | %s\n", list.get(i).getType(), list.get(i).getStoreLocation());
-					}
-//					MovePage mp = new MovePage();
-//					mp.showPage(list);
 					
 					System.out.print("삭제할 물건을 입력하세요. ");
 					tempType = scan.nextLine();
 					
-					break;
-					// 유효성 검사[]
+					
+					if(!invalidateArticleName(tempType)) {
+						
+						// 유효성 검사 실패
+						System.out.println("한글 영어 숫자만 입력 가능합니다.");
+					} else {
+						
+						//유효성 검사 성공
+						break;
+					}
+					
 					
 				}
 				
 				while(true) { // 물건 보관위치 입력
 					
+					int i = 0;
 					System.out.print("물건의 보관 위치(역)를 입력하세요. ");
 					tempSta = scan.nextLine();
 					
+					invalidateStationName(tempSta);
+						
+			
+					
+					
+					
 					break;
-					// 유효성 검사[]
+					
+
 				
 				}
 				
@@ -186,7 +196,6 @@ public class lostArticle {
 				}
 				
 				System.out.println();
-				reader.close();
 				break;
 				
 				
@@ -197,6 +206,10 @@ public class lostArticle {
 		}
 	}
 	
+	
+
+	
+
 	/**
 	 * 분실물 추가
 	 */
@@ -258,6 +271,30 @@ public class lostArticle {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	/**
+	 * 물건 이름 유효성 검사
+	 * @param article
+	 */
+	private static boolean invalidateArticleName(String article) {
+		
+		String regex = "^[A-Za-z가-힣0-9]$";
+		Pattern p1 = Pattern.compile(regex);
+		Matcher m1 = p1.matcher(article);
+		
+		return !m1.find();
+		
+	}
+	
+	/**
+	 * 올바른 지하철 역 이름 검사
+	 * @param stat
+	 */
+	private static void invalidateStationName(String stat) {
+		
+		
+		
 	}
 }
 

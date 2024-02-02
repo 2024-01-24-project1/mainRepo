@@ -45,7 +45,7 @@ public final class Validation {
 		}
 	
 		// 주민등록번호 유효성 검사
-		public static boolean is_Registration(String registration) { // 주민등록번호 형식 검사
+		public static boolean is_RegistrationFormet(String registration) { // 주민등록번호 형식 검사
 			// 주민등록번호: “-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력
 
 			String regex = "([0-9]{6}-?[0-9]{7})";
@@ -55,7 +55,7 @@ public final class Validation {
 			return !m1.find();
 		}
 
-		public static boolean registrationCheck(String registration) { // 주민등록번호 유효성 검사
+		public static boolean is_RegistrationEffect(String registration) { // 주민등록번호 유효성 검사
 
 			int sum = 0;
 			registration = registration.replace("-", "");
@@ -89,14 +89,14 @@ public final class Validation {
 		}
 	
 		// 관리자 가입코드 유효성 검사
-		public static boolean is_Employee(String code) {
+		public static boolean is_Code(String code) {
 
-			boolean a = false;
+			boolean check = false;
 
 			if (!code.equals(Data.EMPLOYEECODE)) {
-				a = true;
+				check = true;
 			} 
-			return a;
+			return check;
 		}
 	
 }//End of class

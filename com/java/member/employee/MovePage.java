@@ -98,30 +98,23 @@ public class MovePage {
 	 */
 	private <T> void saveList(ArrayList<T> list) {
 		
-		int count = 0;
+		int count = 1;
 		int index = 0;
-		String count10 = "";
-		
-		
-		
+		String divideTen = "";
 		
 		itemList = new ArrayList<>();
 		
 		for(int i=0; i<list.size(); i++) {
 			
-			count10 += list.get(i);
-			count++;
+			//divideTen = divideTen + count + ". |" + (list.get(i) + "");
+			divideTen += String.format("%2d. | %s", count, list.get(i));
 			
-			if(count==10 || i == list.size()-1) {
-				
-				itemList.add(count10);
-				count10 = "";
+			if(count % 10 == 0 || i == list.size()-1) {
+				itemList.add(divideTen);
+				divideTen = "";
 				index++;
-				count = 0;
 			}
-			
-			
-			
+			count++;
 		}
 	}
 	

@@ -22,6 +22,8 @@ public class main {
 			
 			if(num == 1) {
 				lostArticle.articlALl();
+			} else if (num == 2) {
+				userVoice.voiceAll();
 			}
 			
 			//추가 제거 검색

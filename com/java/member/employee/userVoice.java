@@ -14,7 +14,28 @@ public class userVoice {
 		path = "dat\\uservoicelist.csv";
 	}
 	
+	static Scanner scan = new Scanner(System.in);
 	private static ArrayList<userVoiceInfo> list = new ArrayList<>();
+	
+	
+	public static void voiceAll(){
+		
+		while(true) {
+			list();	// 민원 리스트
+			
+			
+			System.out.println("1. 민원 내용보기");
+			System.out.println("2. ID로 민원 검색");
+			
+			String num = scan.nextLine();
+			if(num.equals("1")) {
+				read();
+			} else if (num.equals("2")) {
+				searchId();
+			}
+		}
+		
+	}
 	
 	
 	/**
@@ -22,30 +43,31 @@ public class userVoice {
 	 */
 	public static void searchId() {
 		
-		
 		try {
-
-			Scanner scan = new Scanner(System.in);
-			boolean loop = true;
+			
+			boolean exist = false;
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
 
-			//민원인 ID 검색
 			System.out.print("민원인 ID를 입력하세요. ");
 			String name = scan.nextLine();
 			
-			
-			while(loop) {
 				
-			}
-			for(int i=0; i<list.size(); i++) {
-				if(name.equals(list.get(i).getId())) {
+				for(int i=0; i<list.size(); i++) {
+					//System.out.println(i);
+					if(name.equals(list.get(i).getId())) {
 					
-					System.out.printf("%s | %s | %s\n", list.get(i).getId(), list.get(i).getTitle(), list.get(i).getRead());
+						System.out.printf("%s | %s | %s\n", list.get(i).getId(), list.get(i).getTitle(), list.get(i).getRead());
+						exist = true;
+					}
 				}
-			}
+				if(exist == false) {
+					System.out.println("존재하는 ID가 없습니다.");
+				}
 			
+			System.out.println();
 			reader.close();
+			
 		} catch (Exception e) {
 			System.out.println("UserVoice.readAll");
 			e.printStackTrace();
@@ -64,7 +86,6 @@ public class userVoice {
 			String line = "";
 			int count = 1; // 민원 리스트 앞 번호
 			int input = 0; // 민원 리스트 중 읽을 번호입력
-			Scanner scan = new Scanner(System.in);
 			userVoiceInfo info;
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
@@ -80,15 +101,10 @@ public class userVoice {
 			MovePage mp = new MovePage();
 			
 			mp.showPage(list);
-//			for(int i=0; i<list.size(); i++) {
-//				System.out.printf("%2d ", i+1);
-//				System.out.printf("%s | %s | %s\n", list.get(i).getId(), list.get(i).getTitle(), list.get(i).getRead());
-//			
-//			}
+			
 			System.out.println();
-			//공통 끝
-					
 			reader.close();
+			
 		} catch (Exception e) {
 			System.out.println("UserVoice.readAll");
 			e.printStackTrace();
@@ -102,19 +118,18 @@ public class userVoice {
 		
 		
 		try {
-
-			Scanner scan = new Scanner(System.in);
 			
 			BufferedReader reader = new BufferedReader(new FileReader(path));
 
 			
 			//민원 읽기
 			System.out.print("읽은 민원의 번호를 입력하세요.");
-			int num = scan.nextInt() - 1;
+			int num = scan.nextInt();
 			scan.nextLine();
 			
 			list.get(num).setRead("읽음"); // 입력 받은 번호 민원을 읽음 표시
-			System.out.printf("%s | %s\n", list.get(num).getGeneral(), list.get(num).getRead()); // 입력 받은 번호 민원 내용 출력
+			//System.out.printf("%s | %s\n", list.get(num).getGeneral(), list.get(num).getRead()); // 입력 받은 번호 민원 내용 출력 > 찐
+			System.out.printf("%s |%s | %s\n", list.get(num).getId(), list.get(num).getGeneral(), list.get(num).getRead()); // > 가짜
 			
 			reader.close();
 		} catch (Exception e) {

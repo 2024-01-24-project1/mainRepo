@@ -32,15 +32,8 @@ public class Main {
 		
 		while(loop) {
 			
-			
-//			View.page1(sel);
-			
-			System.out.println("메인");
-			System.out.println("1->로그인");
-			System.out.println("2->회원가입");
-			System.out.println("3->IDPW찾기");
-			System.out.println("4->종료");
-			System.out.printf("메인입력: ");
+			View.clear();
+			View.mainmenu();
 			String sel = ""; 
 			sel = sc.nextLine();
 			

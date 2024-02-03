@@ -229,4 +229,14 @@ public final class Validation {
 			return check;
 		}
 		
+		// 입력받은 문자열이 민원의 제목인지 확인
+		// 맞으면 true, 아니면 false
+		public static boolean is_UserVoiceTitle(String input) {
+			boolean check = false;
+			
+			check = Data.userVoiceList.stream().anyMatch(title -> title.getTitle().equals(input));
+			
+			return check;
+		}
+		
 }//End of class

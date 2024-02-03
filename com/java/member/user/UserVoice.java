@@ -32,6 +32,10 @@ public final class UserVoice {
 	public String getIsRead() {
 		return isRead;
 	}
+	
+	public void setIsRead(String isRead) {
+		this.isRead = isRead;
+	}
 
 	@Override
 	public String toString() {

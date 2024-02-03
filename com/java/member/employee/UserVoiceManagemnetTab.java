@@ -9,18 +9,18 @@ public final class UserVoiceManagemnetTab {
 
 	protected static void userVoiceManagementTab() {
 		
-		String sel = ""; // 선택한 번호
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			String sel = ""; // 선택한 번호
 			
 			System.out.println("=======================================");
-			System.out.printf("             직원 관리          ");
+			System.out.printf("             민원           ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
 			System.out.println("=======================================");
 			System.out.println("           1. 전체 분실물 보기");
-			System.out.println("           2. 전체 민원");
+			System.out.println("           2. 전체 민원 보기");
 			System.out.println("           3. 뒤로가기");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
@@ -28,13 +28,11 @@ public final class UserVoiceManagemnetTab {
 			
 			if(sel.equals("1")) {			// 1. 전체 분실물 보기
 				
-					
-			} else if(sel.equals("2")) {	// 2. 직원 정보 수정
-					
-					
+			} else if(sel.equals("2")) {	// 2. 직원 민원 보기
+				UserVoiceSearch.userVoiceAll();
 			} else if (sel.equals("3")) {	// 3. 뒤로가기
 				
-				// 직원관리 종료
+				// 민원 종료
 				break;
 					
 			} else { // 이외의 숫자 입력 시

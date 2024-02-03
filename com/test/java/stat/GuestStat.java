@@ -10,6 +10,19 @@ public class GuestStat {
 		
 		//1 파일 가져오기
 		
+		
+		
+		
+		long[] score=new long[12];
+		
+		for(int i=0; i<score.length;i++) {
+			if(score[i]>=(i+1)*10) {
+				score[i]="■";
+			}else {
+				score[i]="";
+			}
+		}
+		
 	}
 
 }

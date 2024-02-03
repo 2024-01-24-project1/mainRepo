@@ -39,8 +39,6 @@ public class ActionLog2 {
         ArrayList<String> userList = readUserFile("dat\\employee.txt");
 
         actionLog(actionList, userList, 0);
-        
-        actionLog(1);
     }
 
     private static ArrayList<String> readUserFile(String fileName) {
@@ -63,12 +61,12 @@ public class ActionLog2 {
         if (index >= 0 && index < actionList.size() && index < userList.size()) {
             String action = actionList.get(index);
             String userInfo = userList.get(index);
-//            System.out.println("Action: " + action);
-//            System.out.println("User Info: " + userInfo);
+            System.out.println("Action: " + action);
+            System.out.println("User Info: " + userInfo);
             
             System.out.println(userInfo+action);
         } else {
-            return;
+            System.out.println("Invalid index: " + index);
         }
     }
 }

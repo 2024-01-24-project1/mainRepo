@@ -40,13 +40,8 @@ public class ActionLog {
         
         ArrayList<String> employeeList = readUserFile("dat\\employee.txt");
         
+        actionLog(0);
         
-        로그인id.
-        캘린더날짜 2024-00-00 이름 형식
-        행동 로그 형식 만들? 클래스 만들기
-        		
-        로그인할때 유저리스트에 있는지 확인 > 맞으면 stream에 아이디를 넣고
-        동일한 arraylist에 string으로 쭉쭉 드가면 로그 찍힐 때마다 ..흠 ..
         
        
        
@@ -57,7 +52,7 @@ public class ActionLog {
 	private static void actionLog(int index) {
 		if(index>=0&&index<actionList.size()) {
 			String action=actionList.get(index);
-			System.out.println(action);
+			System.out.println("ID 이름 직급 소속"+action);
 		}else {
 			return;
 		}

@@ -99,16 +99,65 @@ public class CongestionStat {
 		
 		long[] sales = asd;
 		long[] sum = new long[12];
+		String[][] people = new String[15][12];
+		
+		graph();
 		
 		
-		
-		for(int i=0; i<sales.length; i++) {
-			
-			sum[i]=sales[i];
-//			System.out.println((i+1)+"월 이용객 합계 : " + sum[i] );
-			System.out.printf("%d월 이용객 합계: %,d명\n",i+1,sum[i]);
-		}
 		month=1;
+		
+		
+	}
+
+
+
+
+
+	public static void graph(long[] asd, int month,int sub,int div) {
+		// 그래프 그리는 메서드
+		
+		long[] sales = asd;
+		long[] sum = new long[12];
+		String[][] people = new String[15][12];
+		
+		for(int i=0;i<sum.length;i++) {
+			sum[i]=(sales[i]-sub)/div; // 나누는 값 변수
+		}
+		
+		for(int i=0; i<people[0].length;i++) {
+			
+			for(int j=0;j<people.length;j++) {
+				if(j>=people.length-sum[i]) {
+					people[j][i]="■";
+				}else {
+					people[j][i]=" ";
+				}
+			}
+		}
+		
+		
+		for(int i = 0; i < people.length; i++) {
+			
+			for(int j = 0; j < people[0].length; j++) {
+				if(j == people[0].length) {
+					System.out.printf("%s", people[i][j]);
+				}else {
+					System.out.printf("%s\t", people[i][j]);
+				}
+				
+			}
+			System.out.println();
+		}
+		
+		for(int i=0;i<sales.length;i++) {
+			System.out.println(sales[i]);
+		}
+		
+		month=1;
+		
+		
+		
+		
 		
 		
 	}

@@ -37,6 +37,8 @@ public class Static {
 			if(sel.equals("1")) { //이용객 통계 > 월 전체
 				long[] asd = CongestionStat.TotalCal("0");
 				CongestionStat.sum(asd, month);
+				CongestionStat.graph(asd, month, 100000000, 10000000);
+				
 				
 			}else if(sel.equals("2")) { //이용객 통계>특정 호선
 				System.out.print("호선을 입력하세요: ");

@@ -42,5 +42,33 @@ public class View {
 		System.out.println("계속하려면 엔터를 입력하세요.");
 		scan.nextLine();
 	}
+	
+	public static void ticketView() {
+		View.title("정기권");
+
+		System.out.println();
+		System.out.println("          1. 나의 정기권 확인하기");
+		System.out.println("          2. 정기권 등록");
+		System.out.println("          3. 뒤로가기");
+		System.out.println();
+
+		System.out.println("--------------------------------------");
+		System.out.print("선택 (번호): ");
+		System.out.println();
+	}
+	
+	public static void userVoiceView() { // 민원 초기 페이지
+		View.title("민원");
+
+		System.out.println();
+		System.out.println("	 1. 일반 민원 접수");
+		System.out.println("	 2. 분실물 목록 확인");
+		System.out.println("	 3. 뒤로 가기");
+		System.out.println();
+		
+		System.out.println("--------------------------------------");
+		System.out.print("선택 (번호): ");
+		System.out.println();
+	}
 
 }//End of class

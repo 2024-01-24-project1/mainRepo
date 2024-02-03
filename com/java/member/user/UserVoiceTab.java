@@ -12,7 +12,7 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			userVoiceView();
+			View.userVoiceView();
 			
 			Scanner scan = new Scanner(System.in);
 			String num = "";
@@ -33,63 +33,42 @@ public class UserVoiceTab {
 			} 
 		}
 	}
-
-	private static void userVoiceView() { // 민원 초기 페이지
-		View.title("민원");
-
-		System.out.println();
-		System.out.println("	 1. 일반 민원 접수");
-		System.out.println("	 2. 분실물 목록 확인");
-		System.out.println("	 3. 뒤로 가기");
-		System.out.println();
-		
-		System.out.println("--------------------------------------");
-		System.out.print("선택 (번호): ");
-		System.out.println();
-	}
-	
 	
 	public static void complain() { // 1. 일반 민원 접수
 		
-		View.title("민원 접수");
 		Scanner scan = new Scanner(System.in);
 		
-		int minLength = 2;
-		int maxLength = 100;
 		String title = "";
 		String content = "";
-
-		while (true) {
-			System.out.println();
-			System.out.print("제목: ");
-			title = scan.nextLine();
-
-			if (title.length() < minLength || title.length() > maxLength) {
-				System.out.println("글자 수는 2~100자로 제한됩니다.");
-			} else {
-				break;
-			}
-		}
-
-		while (true) {
-			System.out.print("내용: ");
-			System.out.println();
-			content = scan.nextLine();
-
-			if (content.length() < minLength || content.length() > maxLength) {
-				System.out.println("글자 수는 2~100자로 제한됩니다.");
-			} else {
-				System.out.println();
-				System.out.println("접수되었습니다.");
-				View.pause();
-				break;
-			}
-		}
-
-		UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
-		Data.userVoiceList.add(userVoice);
+			
+		View.title("민원 접수");
+		System.out.print("제목: ");
+		title = scan.nextLine();
+		System.out.print("내용: ");
+		System.out.println();
+		content = scan.nextLine();
 		
-	}
+		boolean titleCheck = (title.length() > 20 || title.length() < 2);
+		boolean contentCheck = (content.length() > 200 || content.length() < 2); 
+		
+		if (titleCheck) {
+			System.out.println("제목의 글자 수는 2~20자로 제한됩니다.");
+		}
+		if( contentCheck) {
+			System.out.println("내용의 글자수는 2 ~ 200자로 제한됩니다.");
+		} 
+		
+		// 글자수를 둘다 맞춘경우
+		if( !(titleCheck || contentCheck) ) {
+			
+			System.out.println("민원이 접수되었습니다.");
+			UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
+			Data.userVoiceList.add(userVoice);
+			View.pause();
+		}
+
+		
+	}//End of complain()
 	
 
-}
+}//End of class

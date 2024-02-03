@@ -1,8 +1,6 @@
 package com.java.common;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.java.member.user.User;
 import com.java.view.View;
@@ -52,7 +50,7 @@ public class SignUp {
 		
 	}//End of SignUp
 
-	private void commonSignUp(String sel) {
+	private static void commonSignUp(String sel) {
 		
 		Scanner scan = new Scanner(System.in);
 		

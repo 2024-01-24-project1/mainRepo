@@ -262,7 +262,7 @@ public final class Load {
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
-				User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]);
+				User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5], lineArr[6]);
 				Data.userList.add(user);
 				
 			}

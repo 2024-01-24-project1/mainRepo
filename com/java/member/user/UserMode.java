@@ -59,6 +59,7 @@ public final class UserMode extends CommonFunction{
 			} else if (sel.equals("3")) {
 				
 				// 정기권 현황
+				PassTab.passTab();
 				
 			} else if (sel.equals("4")) {
 				

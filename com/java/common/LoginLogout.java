@@ -11,10 +11,12 @@ import com.java.view.View;
 
 public final class LoginLogout {
 	
-	public static String auth = "";		// 인증 티켓
-	public static String authName = "";	// 로그인중인 이름	
-	public static String level = ""; 	// 직원 권한 확인
-	public static String position = "";	// 직급
+	public static String auth = "";		  // 인증 티켓
+	public static String authName = "";	  // 로그인중인 이름	
+	public static String level = ""; 	  // 직원 권한 확인
+	public static String position = "";	  // 직급
+	public static String pass = "";		  // 정기권 유무
+	public static String passExpiry = ""; // 정기권 기간
 	
 	
 	public void loginMode() {
@@ -71,6 +73,8 @@ public final class LoginLogout {
 						LoginLogout.auth = user.getId();
 						LoginLogout.authName = user.getName();
 						LoginLogout.level = "1";
+						LoginLogout.pass = user.getPassCheck();
+						LoginLogout.passExpiry = user.getPassExpiry();
 						
 						// 고객리스트 탐색 종료
 						break;
@@ -128,9 +132,13 @@ public final class LoginLogout {
 
 	// 로그아웃
 	public static void logout() {
+		
+		// 모든 LoginLogout초기화
 		LoginLogout.auth = "";
 		LoginLogout.authName = "";
 		LoginLogout.level = "";
+		LoginLogout.pass = "";
+		LoginLogout.passExpiry = "";
 		System.out.println("로그아웃이 완료되었습니다.");
 		View.pause();
 		

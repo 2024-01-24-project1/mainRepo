@@ -9,6 +9,7 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
+import com.java.view.View;
 
 
 
@@ -33,8 +34,6 @@ public class Main {
 			
 			
 //			View.page1(sel);
-			
-			Data.stationTimeList.stream().forEach(s -> System.out.println(s));
 			
 			System.out.println("메인");
 			System.out.println("1->로그인");
@@ -71,6 +70,7 @@ public class Main {
 				//다시입력
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			
@@ -78,6 +78,7 @@ public class Main {
 		
 		
 		//종료시 파일 덮어쓰기할 클래스
+		// View클래스에서 출력
 		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);

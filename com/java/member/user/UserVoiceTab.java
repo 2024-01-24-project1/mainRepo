@@ -65,6 +65,9 @@ public class UserVoiceTab {
 			UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
 			Data.userVoiceList.add(userVoice);
 			View.pause();
+		}else {
+			System.out.println("다시 민원을 접수해주세요.");
+			View.pause();
 		}
 
 		

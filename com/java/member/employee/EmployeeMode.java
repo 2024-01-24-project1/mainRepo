@@ -53,10 +53,12 @@ public final class EmployeeMode extends CommonFunction{
 			} else if (sel.equals("2")) {
 				
 				// 직원관리
+				EmployeeManagementTab.employeeManagementTab();
 				
 			} else if (sel.equals("3")) {
 				
 				// 민원
+				UserVoiceManagemnetTab.userVoiceManagementTab();
 				
 			} else if (sel.equals("4")) {
 				
@@ -70,7 +72,6 @@ public final class EmployeeMode extends CommonFunction{
 				
 				// 요금표
 				costsTableTab();
-				
 				
 			} else if(sel.equals("7")) {
 				

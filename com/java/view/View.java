@@ -63,7 +63,8 @@ public class View {
 		System.out.println();
 		System.out.println("	 1. 일반 민원 접수");
 		System.out.println("	 2. 분실물 목록 확인");
-		System.out.println("	 3. 뒤로 가기");
+		System.out.println("     3. 분실물 검색하기");
+		System.out.println("	 4. 뒤로 가기");
 		System.out.println();
 		
 		System.out.println("--------------------------------------");

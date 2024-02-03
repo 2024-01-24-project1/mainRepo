@@ -10,12 +10,12 @@ public class EmployeeManagementTab {
 	
 	protected static void employeeManagementTab() {
 		
-		String sel = ""; // 선택한 번호
-		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			String sel = ""; // 선택한 번호
 			
+			// View클래스 출력
 			System.out.println("=======================================");
 			System.out.printf("             직원 관리          ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
@@ -29,14 +29,14 @@ public class EmployeeManagementTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 직원 정보 보기
-				
+				EmployeeSearch.employeeAll();
 					
 			} else if(sel.equals("2")) {	// 2. 직원 정보 수정
 					
 				
 					// 최고 권한만 직원정보수정 가능
-					if(LoginLogout.level.equals("3")) {
-						
+					if(LoginLogout.level.equals("5")) {
+						EmployeeUpdateTab.employeeUpdate();
 					}else {
 						// View클래스 접근권한없는 화면 출력
 						System.out.println("접근 권한이 없습니다.");

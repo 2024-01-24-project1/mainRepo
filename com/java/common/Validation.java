@@ -136,5 +136,74 @@ public final class Validation {
 			
 			return check;
 		}//End of is_Pass()
+		
+		// 문자열이 숫자로만 이루어진 문자열인지 검사 
+		public static boolean is_NumString(String input) {
+			
+			for(int i = 0; i < input.length(); i++) {
+				
+				char ch = input.charAt(i);
+				// 숫자가 아닌 문자열 발견
+				if( ch < '0' || ch > '9') {
+					return false;
+				}
+				
+			}
+			
+			return true;
+		}//End of is_NumString()
+		
+		public static boolean is_UserId(String input) {
+			boolean check = false;
+			
+			check = Data.userList.stream().anyMatch(user -> user.getId().equals(input));
+			
+			return check;
+		}
 	
+		public static boolean is_EmployeeId(String input) {
+			boolean check = false;
+			
+			check = Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input));
+			
+			return check;
+		}
+		
+		// 입력받은 문자가 직급인지 확인
+		// 맞으면 true, 아니면 false
+		public static boolean is_Position(String input) {
+		
+			String[] position = { "사원", "대리", "과장", "부장", "사장" };
+			
+			for(int i = 0; i < position.length; i++) {
+				
+				if(position[i].equals(input)) {
+					return true;
+				}
+				
+			}
+			
+			
+			return false;
+		}
+		
+		public static boolean is_Sudo(String input) {
+			
+			boolean check = false;
+			
+			check = Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input) 
+														 && employee.getLevel().equals("5"));
+			
+			return check;
+		}
+		
+		// 입력받은 값이 2 또는 3의 일반 권한인지
+		public static boolean is_Level(String input) {
+			
+			if(input.equals("2") || input.equals("3")) {
+				return true;
+			}
+			
+			return false;
+		} 
 }//End of class

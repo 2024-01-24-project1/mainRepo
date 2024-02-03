@@ -29,7 +29,7 @@ public final class LoginLogout {
 				UserMode userMode = new UserMode();
 				userMode.userTab();
 				
-			}else if (LoginLogout.level.equals("2") || LoginLogout.level.equals("3")) {
+			}else if (LoginLogout.level.equals("2") || LoginLogout.level.equals("3") || LoginLogout.level.equals("5")) {
 				
 				// 관리자 모드
 				EmployeeMode employeeMode = new EmployeeMode();

@@ -2,6 +2,7 @@ package com.java.member.employee;
 
 import java.util.Scanner;
 
+import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.view.View;
 
@@ -29,10 +30,8 @@ public class EmployeeManagementTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 직원 정보 보기
-				EmployeeSearch.employeeAll();
-					
+				EmployeeSearch.employeeAll(Data.employeeList);
 			} else if(sel.equals("2")) {	// 2. 직원 정보 수정
-					
 				
 					// 최고 권한만 직원정보수정 가능
 					if(LoginLogout.level.equals("5")) {
@@ -43,8 +42,7 @@ public class EmployeeManagementTab {
 					}
 					
 			} else if (sel.equals("3")) {	// 3. 안전요원 관리
-		
-					
+				SafetyManTab.satetyManTab();
 			} else if (sel.equals("4")) {	// 4. 뒤로가기
 				
 				// 직원관리 종료

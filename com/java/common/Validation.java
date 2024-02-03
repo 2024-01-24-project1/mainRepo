@@ -173,7 +173,7 @@ public final class Validation {
 		// 맞으면 true, 아니면 false
 		public static boolean is_Position(String input) {
 		
-			String[] position = { "사원", "대리", "과장", "부장", "사장" };
+			String[] position = { "안전요원", "사원", "대리", "과장", "부장", "사장" };
 			
 			for(int i = 0; i < position.length; i++) {
 				
@@ -206,4 +206,27 @@ public final class Validation {
 			
 			return false;
 		} 
+		
+		// 입력받은 아이디가 안전요원인지
+		// 맞으면 true, 아니면 false
+		public static boolean is_SafetyMan(String input) {
+			
+			boolean check = false;
+			
+			check = Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input) 
+																 && employee.getPosition().equals("안전요원"));
+			
+			return check;
+		}
+		
+		// 배정된 근무지가 없으면 true, 있으면 false
+		public static boolean is_WorkArea(String input) {
+			boolean check = false;
+			
+			check = Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input)
+																 && employee.getLine().equals("미정"));
+			
+			return check;
+		}
+		
 }//End of class

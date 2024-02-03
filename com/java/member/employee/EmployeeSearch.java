@@ -9,13 +9,13 @@ import com.java.view.View;
 
 public class EmployeeSearch {
 	
-	public static void employeeAll() {
+	public static void employeeAll(ArrayList<Employee> list) {
 		
 		String sel = "";
 		
 		Scanner scan = new Scanner(System.in);
 		
-		employeePage(Data.employeeList);
+		employeePage(list);
 		
 		System.out.println("특정 호선, 이름, 직원이름으로 검색하시려면 1");
 		System.out.println("아니면 엔터");
@@ -24,7 +24,7 @@ public class EmployeeSearch {
 		if(sel.equals("1")) {
 			
 			// 특정 단어로 찾는 메서드 호출
-			employeeSearch(Data.employeeList);
+			employeeSearch(list);
 			
 		}
 		
@@ -62,7 +62,6 @@ public class EmployeeSearch {
 					
 				}
 				
-				System.out.println(searchlist);
 				employeePage(searchlist);
 				
 			}else {
@@ -106,8 +105,9 @@ public class EmployeeSearch {
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(employee -> System.out.printf("%-8s|%-2s|%-3s - %-10s|%-13s\r\n"
-							 													, employee.getName() 
+					 							 .forEach(employee -> System.out.printf("%-8s|%-20s|%-2s|%-3s - %-10s|%-13s\r\n"
+							 													, employee.getName()
+							 													, employee.getId()
 							 													, employee.getPosition()
 							 													, employee.getLine() + "호선"
 							 													, employee.getStation() + "역"

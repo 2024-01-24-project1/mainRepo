@@ -131,8 +131,9 @@ public final class Validation {
 		// 정기권 코드 유효성 검사
 		// 정기권코드면 true, 아니면 false반환
 		public static boolean is_Pass(String passCode) {
+			boolean check = false;
 			
-			boolean check = Data.passList.stream().anyMatch(pass -> pass.equals(passCode));
+			check = Data.passList.stream().anyMatch(pass -> pass.equals(passCode));
 			
 			return check;
 		}//End of is_Pass()

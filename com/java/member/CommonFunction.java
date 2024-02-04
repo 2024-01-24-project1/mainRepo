@@ -9,7 +9,7 @@ import com.java.view.View;
 public class CommonFunction {
 	
 	// 역 시간표 탭
-	protected void stationTimetableTab() {
+	protected static void stationTimetableTab() {
 		
 			String line = "";
 			String stationName = "";
@@ -53,11 +53,10 @@ public class CommonFunction {
 	
 	
 	// 요금표 탭
-	public void costsTableTab(){
+	public static void costsTableTab(){
 		
 		View.costTimeTable();
 		View.pause();
-		
 		
 	}//End of CostsTableTab()
 	

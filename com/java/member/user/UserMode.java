@@ -10,7 +10,7 @@ import com.java.view.View;
 public final class UserMode extends CommonFunction{
 	
 		
-	public void userTab() {
+	public static void userTab() {
 		
 		while(true) { 
 			
@@ -37,7 +37,7 @@ public final class UserMode extends CommonFunction{
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("0")) {
+			if(sel.equals("0")) {			// 0. 프로그램 종료
 				
 				// 종료
 				System.out.println("프로그램을 종료합니다.");
@@ -46,35 +46,29 @@ public final class UserMode extends CommonFunction{
 				
 				System.exit(0);
 				
-			} else if (sel.equals("1")) { // 1. 열차 시간표
+			} else if (sel.equals("1")) { 	// 1. 열차 시간표
 				
 				// 열차 시간표
 				stationTimetableTab();
 				
-			} else if (sel.equals("2")) { // 2. 민원 접수
-				
-				// 민원 접수
+			} else if (sel.equals("2")) { 	// 2. 민원 접수
 				UserVoiceTab.userVoice();
-				
-			} else if (sel.equals("3")) {
+			} else if (sel.equals("3")) {	// 3. 정기권 현황
 				
 				// 정기권 현황
 				PassTab.passTab();
 				
-			} else if (sel.equals("4")) {
+			} else if (sel.equals("4")) {	// 4. 길찾기
 				
 				// 길찾기
 				
-			} else if (sel.equals("5")) {
-				
-				// 요금표
+			} else if (sel.equals("5")) {	// 5. 요금표
 				costsTableTab();
-				
-			} else if (sel.equals("6")) {
+			} else if (sel.equals("6")) {	// 6. 마이페이지
 	
 				// 마이페이지
 				
-			} else if (sel.equals("7")) {
+			} else if (sel.equals("7")) {	// 7. 로그아웃
 				LoginLogout.logout();
 				
 				// 고객 모드 종료

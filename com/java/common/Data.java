@@ -2,12 +2,12 @@ package com.java.common;
 
 import java.util.ArrayList;
 
-import com.java.calendar.Calendar;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.schedule.Schedule;
 import com.java.station.PassengerCounting;
 import com.java.station.timetable.StationTime;
 
@@ -18,7 +18,7 @@ public final class Data {
 	protected final String PASSPATH = ".\\src\\data\\pass.csv";				  //정기권
 	protected final String USERPATH = ".\\src\\data\\user.csv";				  //고객정보
 	protected final String EMPLOYEEPATH = ".\\src\\data\\employee.csv";		  //직원정보
-	protected final String CALENDARPATH = ".\\src\\data\\calendar.csv";		  //일정
+	protected final String SCHEDULEPATH = ".\\src\\data\\schedule.csv";		  //일정
 	protected final String LOGPATH = ".\\src\\data\\log.csv";				  //로그
 	protected final String LOSTARTICLEPATH = ".\\src\\data\\lostarticle.csv"; //분실물
 	protected final String STATIONTIMEPATH = ".\\src\\data\\stationtime.csv"; //역별 시간표
@@ -54,7 +54,7 @@ public final class Data {
 	public static ArrayList<String> passList = new ArrayList<>();
 	public static ArrayList<User> userList = new ArrayList<>();
 	public static ArrayList<Employee> employeeList = new ArrayList<>();
-	public static ArrayList<Calendar> calendarList = new ArrayList<>();
+	public static ArrayList<Schedule> scheduleList = new ArrayList<>();
 	public static ArrayList<Log> logList = new ArrayList<>();
 	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();

@@ -18,17 +18,14 @@ public class UserVoiceTab {
 			String num = "";
 			num = scan.nextLine();
 
-			if (num.equals("1")) { // 1. 일반 민원 접수
+			if (num.equals("1")) { 		  // 1. 일반 민원 접수
 				complain();
-				
 			} else if (num.equals("2")) { // 2. 분실물 목록 확인
 				LostArticleTab.lostArticleAll();
-				
 			} else if(num.equals("3")) {  // 3. 분실물 검색 
-				// 분실물 검색
 				LostArticleTab.lostArticleSearch();
 			}
-			else if (num.equals("4")) { // 4. 뒤로가기
+			else if (num.equals("4")) {    // 4. 뒤로가기
 				break;
 				
 			} else { // 이외의 숫자 입력 시
@@ -38,7 +35,7 @@ public class UserVoiceTab {
 		}
 	}
 	
-	public static void complain() { // 1. 일반 민원 접수
+	private static void complain() { // 1. 일반 민원 접수
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -68,11 +65,10 @@ public class UserVoiceTab {
 			System.out.println("민원이 접수되었습니다.");
 			UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
 			Data.userVoiceList.add(userVoice);
-			View.pause();
 		}else {
 			System.out.println("다시 민원을 접수해주세요.");
-			View.pause();
 		}
+		View.pause();
 
 		
 	}//End of complain()

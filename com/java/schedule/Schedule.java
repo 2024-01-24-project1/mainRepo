@@ -1,14 +1,14 @@
-package com.java.calendar;
+package com.java.schedule;
 
 // 일정객체 클래스
-public final class Calendar {
+public final class Schedule {
 	
 	private String time;			// 시각
 	private String line;			// 호선
 	private String station;			// 역
 	private String schedule;		// 일정
 	
-	public Calendar(String time, String line, String station, String schedule) {
+	public Schedule(String time, String line, String station, String schedule) {
 		
 		this.time = time;
 		this.line = line;
@@ -35,12 +35,9 @@ public final class Calendar {
 
 	@Override
 	public String toString() {
-		return String.format("Calendar [시각: %s, 호선: %s, 역: %s, 일정: %s]\r\n"
+		return String.format("Schedule [시각: %s, 호선: %s, 역: %s, 일정: %s]\r\n"
 							, this.time, this.line, this.station, this.schedule);
 	}
-	
-	
-	
 	
 	
 	

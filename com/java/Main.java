@@ -32,7 +32,6 @@ public class Main {
 		
 		while(loop) {
 			
-			View.clear();
 			View.mainmenu();
 			String sel = ""; 
 			sel = sc.nextLine();

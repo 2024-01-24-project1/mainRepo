@@ -9,7 +9,7 @@ import com.java.view.View;
 
 public final class EmployeeMode extends CommonFunction{
 
-	public void employeeTab() {
+	public static void employeeTab() {
 		
 		while(true) {
 			

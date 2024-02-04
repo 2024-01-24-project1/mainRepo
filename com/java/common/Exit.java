@@ -4,12 +4,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.nio.charset.Charset;
 
-import com.java.calendar.Calendar;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.schedule.Schedule;
 
 public final class Exit {
 
@@ -20,7 +20,7 @@ public final class Exit {
 		writeUserList();
 		writeEmployeeList();
 		writePassList();
-		writeCalendarList();
+		writeScheduleList();
 		writeLogList();
 		writeUserVoiceList();
 		writeLostArticleList();
@@ -104,17 +104,17 @@ public final class Exit {
 	}//End of writeCalendarList()
 	
 	
-	private void writeCalendarList() {
+	private void writeScheduleList() {
 		try {
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
-										(data.CALENDARPATH, Charset.forName("UTF-8") ) );
+										(data.SCHEDULEPATH, Charset.forName("UTF-8") ) );
 			
-			for(Calendar calendar : Data.calendarList) {
-				writer.write(calendar.getTime() + ",");
-				writer.write(calendar.getLine() + ",");
-				writer.write(calendar.getStation() + ",");
-				writer.write(calendar.getSchedule() + "\r\n");
+			for(Schedule schedule : Data.scheduleList) {
+				writer.write(schedule.getTime() + ",");
+				writer.write(schedule.getLine() + ",");
+				writer.write(schedule.getStation() + ",");
+				writer.write(schedule.getSchedule() + "\r\n");
 				
 			}
 			
@@ -122,10 +122,10 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
-			System.out.println("정기권 코드 리스트 쓰기 실패");
+			System.out.println("일정 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
-	}//End of writeCalendarList()
+	}//End of writeScheduleList()
 
 	private void writePassList() {
 		try {

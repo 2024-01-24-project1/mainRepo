@@ -65,6 +65,7 @@ public class SignUp {
 		// 아이디
 		while (true) {
 			
+			
 			// View클래스 출력
 			if(sel.equals("1")) {
 				View.title("개인회원 가입");
@@ -105,7 +106,10 @@ public class SignUp {
 			// 회원가입 유효성 검사
 			if( Validation.is_Id(id) ) {
 				System.out.println("아이디 형식이 틀렸습니다.");
+			}else if ( Validation.is_Duplication_Id(id)) {
+				System.out.println("중복된 아이디입니다.");
 			}
+			
 			if( Validation.is_Pw(pw)) {
 				System.out.println("비밀번호 형식이 틀렸습니다.");
 			}
@@ -116,10 +120,14 @@ public class SignUp {
 				System.out.println("주민등록번호 형식이 틀렸습니다.");
 			}else if ( Validation.is_RegistrationEffect(registration)) {
 				System.out.println("유효한 주민등록번호가 아닙니다.");
+			}else if ( Validation.is_Duplication_RRN(registration)) {
+				System.out.println("중복된 주민등록");
 			}
 			if ( Validation.is_Phone(phone) ) {
 				System.out.println("전화번호 형식이 틀렸습니다.");
-			} 
+			}else if ( Validation.is_Duplication_Phone(phone)) {
+				System.out.println("중복된 전화번호입니다.");
+			}
 			if( Validation.is_Code(code) && sel.equals("2")) {
 				System.out.println("회원코드가 틀렸습니다.");
 			}

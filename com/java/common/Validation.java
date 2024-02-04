@@ -302,4 +302,37 @@ public final class Validation {
 	        }
 	    }
 		
+		// 이미 존재하는 아이디인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_Id(String input) {
+			boolean check = false;
+			
+			check = Data.userList.stream().anyMatch(user -> user.getId().equals(input)) 
+					|| Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input));
+			
+			return check;
+		}
+		
+		// 이미 존재하는 주민등록번호인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_RRN(String input) {
+			boolean check = false;
+			
+			check = Data.userList.stream().anyMatch(user -> user.getRegistration().equals(input)) 
+					|| Data.employeeList.stream().anyMatch(employee -> employee.getRegistration().equals(input));
+			
+			return check;
+		}
+		
+		// 이미 존재하는 전화번호인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_Phone(String input) {
+			boolean check = false;
+			
+			check = Data.userList.stream().anyMatch(user -> user.getPhone().equals(input)) 
+					|| Data.employeeList.stream().anyMatch(employee -> employee.getPhone().equals(input));
+			
+			return check;
+		}
+		
 }//End of class

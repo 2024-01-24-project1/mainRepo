@@ -112,7 +112,6 @@ public final class Exit {
 			
 			for(Schedule schedule : Data.scheduleList) {
 				writer.write(schedule.getTime() + ",");
-				writer.write(schedule.getLine() + ",");
 				writer.write(schedule.getStation() + ",");
 				writer.write(schedule.getSchedule() + "\r\n");
 				

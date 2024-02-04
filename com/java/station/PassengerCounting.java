@@ -5,9 +5,9 @@ public final class PassengerCounting {
 	private String date;
 	private String line;
 	private String station;
-	private int counting;
+	private long counting;
 	
-	public PassengerCounting(String data, String line, String station, int counting) {
+	public PassengerCounting(String data, String line, String station, long counting) {
 		this.date = data;
 		this.line = line;
 		this.station = station;
@@ -23,7 +23,7 @@ public final class PassengerCounting {
 	public String getStation() {
 		return station;
 	}
-	public int getCounting() {
+	public long getCounting() {
 		return counting;
 	}
 	

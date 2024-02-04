@@ -1,6 +1,7 @@
 package com.java.common;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
@@ -54,7 +55,7 @@ public final class Data {
 	public static ArrayList<String> passList = new ArrayList<>();
 	public static ArrayList<User> userList = new ArrayList<>();
 	public static ArrayList<Employee> employeeList = new ArrayList<>();
-	public static ArrayList<Schedule> scheduleList = new ArrayList<>();
+	public static List<Schedule> scheduleList = new ArrayList<>();
 	public static ArrayList<Log> logList = new ArrayList<>();
 	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();

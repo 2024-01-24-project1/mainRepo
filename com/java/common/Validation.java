@@ -1,5 +1,7 @@
 package com.java.common;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -250,5 +252,54 @@ public final class Validation {
 			
 			return check;
 		}
+		
+		// 입력받은 날짜와 스케줄이 존재하는지
+		// 맞으면 true, 아니면 false
+		public static boolean is_Schedule(String date, String content) {
+			boolean check = false;
+			
+			check = Data.scheduleList.stream().anyMatch(schedule -> 
+													schedule.getSchedule().equals(content)
+												 && schedule.getTime().equals(date));
+			
+			return check;
+		}
+		
+		// YYYY-MM-DD의 형식을 검사
+		// 맞으면 true, 아니면 false
+		public static boolean is_Date(String date) {
+	        try {
+	            // 날짜를 파싱하여 LocalDate 객체로 변환
+	            LocalDate parsedDate = LocalDate.parse(date);
+
+	            // 날짜의 각 구성 요소를 가져옴
+	            int year = parsedDate.getYear();
+	            int month = parsedDate.getMonthValue();
+	            int day = parsedDate.getDayOfMonth();
+
+	            // 년도가 윤년인지 확인
+	            boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+
+	            // MM은 01부터 12까지 여야함
+	            if (month < 1 || month > 12)
+	                return false;
+
+	            // DD는 MM의 값에 따라 제한
+	            int maxDayOfMonth = parsedDate.lengthOfMonth();
+	            if (day < 1 || day > maxDayOfMonth)
+	                return false;
+
+	            // 윤년에 따른 MM의 범위 제한
+	            if (month == 2 && day == 29 && !isLeapYear)
+	                return false;
+
+	            // 모든 조건을 통과하면 유효한 날짜
+	            return true;
+
+	        } catch (DateTimeParseException e) {
+	            // 날짜가 올바른 형식이 아닌 경우
+	            return false;
+	        }
+	    }
 		
 }//End of class

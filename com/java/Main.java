@@ -9,6 +9,8 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
+import com.java.member.employee.stats.Graph;
+import com.java.member.employee.stats.Stats;
 import com.java.view.View;
 
 
@@ -74,8 +76,7 @@ public class Main {
 		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
-		
-		
+
 
 	}//main
 

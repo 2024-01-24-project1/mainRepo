@@ -85,6 +85,7 @@ public class PassTab {
 			Date date = cal.getTime();
 			String start = expiry.format(date);		// 정기권 시작일
 			cal.add(Calendar.DATE, 30);
+			date = cal.getTime();
 			String end = expiry.format(date);		// 정기권 종료일
 			
 			// 유저의 정기권 여부와 기간 추가

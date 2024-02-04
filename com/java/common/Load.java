@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 
 import com.java.common.log.Log;
@@ -48,8 +49,7 @@ public final class Load {
 						line = line.replaceAll("\"", "");
 						String[] lineArr = line.split(",");
 						
-						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Integer.parseInt(lineArr[3]));
-						
+						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Long.parseLong(lineArr[3]));
 						Data.passengerCountingList.add(count);
 						
 					}
@@ -350,13 +350,17 @@ public final class Load {
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
-				Schedule schedule = new Schedule(lineArr[0], lineArr[1], lineArr[2], lineArr[3]);
+				Schedule schedule = new Schedule(lineArr[0], lineArr[1], lineArr[2]);
 				
 				Data.scheduleList.add(schedule);
 				
 			}
 			
 			reader.close();
+			
+			//일정리스트 정렬
+			Collections.sort(Data.scheduleList, Schedule.timeComparator);
+			
 			return;
 			
 		}catch(Exception e){

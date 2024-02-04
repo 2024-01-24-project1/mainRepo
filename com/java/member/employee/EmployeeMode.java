@@ -5,6 +5,8 @@ import java.util.Scanner;
 import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.member.CommonFunction;
+import com.java.member.employee.stats.StatsTab;
+import com.java.schedule.ScheduleTab;
 import com.java.view.View;
 
 public final class EmployeeMode extends CommonFunction{
@@ -53,18 +55,11 @@ public final class EmployeeMode extends CommonFunction{
 			} else if (sel.equals("2")) {	// 2 직원관리
 				EmployeeManagementTab.employeeManagementTab();
 			} else if (sel.equals("3")) {	// 3. 민원
-				
-				// 민원
 				UserVoiceManagemnetTab.userVoiceManagementTab();
-				
 			} else if (sel.equals("4")) {	// 4. 행사캘린더
-				
-				// 행사캘린더
-				
+				ScheduleTab.scheduleTab();
 			} else if (sel.equals("5")) {	// 5. 통계정보
-				
-				// 통계정보
-				
+				StatsTab.statsTab();
 			} else if(sel.equals("6")) {	// 6. 요금표
 				costsTableTab();
 			} else if(sel.equals("7")) {

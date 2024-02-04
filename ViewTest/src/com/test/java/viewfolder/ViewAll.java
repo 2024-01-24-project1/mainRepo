@@ -2,6 +2,87 @@ package com.test.java.viewfolder;
 
 public class ViewAll {
 	
+	public static void massageWrite() {
+System.out.println("╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮");
+System.out.println("        메세지를 입력해 주세요.");
+System.out.println("╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯");
+System.out.println("O °");
+System.out.println("ᕱ ᕱ");
+System.out.println("( ･ω･)");
+System.out.println("/ つΦ . .. . ﹢ ⃰ ଂ ಇ");
+
+	}
+
+
+	public static void rankUp() {
+System.out.println("	． 　 　 ∧ ∧");
+System.out.println("	　 　　(´･ω･ ∩　레벨 UP！");
+System.out.println("	　　　o.　　 ,ﾉ.");
+System.out.println("	　 　　Ｏ＿ .ﾉ");
+System.out.println("	　 　 　 　(ノ");
+System.out.println("	　 　 　　i｜|");
+System.out.println("	　　　　 	━━");
+
+
+	}
+	
+	
+	public static void errorQuestion() {
+System.out.println("		┏━━━━━┓");
+System.out.println("		┃ 　　　┃");
+System.out.println("		┃　┏━┓　┃");
+System.out.println("		┗━┛　┃　┃");
+System.out.println("		　　┏━┛ ┃");
+System.out.println("		　　┃　┏━┛");
+System.out.println("		　　┗━┛");
+System.out.println("		　　┏━┓");
+System.out.println("		　　┃　┃");
+System.out.println("		　　┗━┛");
+System.out.println("		　　　〇");
+System.out.println("		　　　ｏ");
+System.out.println("		　　　　(・ д ・)");
+
+		
+	}
+	public static void errorFeel() {
+System.out.println("		.⠀⠀⠀⠀➵⠀➵");
+System.out.println("		⠀⠀➶⠀⠀⠀⠀⠀⠀➴⠀");
+System.out.println("		➶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀➴⠀");
+System.out.println("		　　　　　　　 　∧_∧");
+System.out.println("		　　　　　　 　(;・Д・)");
+System.out.println("		　　　　뭔가 불길한 예감이 든다");
+
+	}
+	
+	public static void errorFail() {
+System.out.println("		▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+System.out.println("		████▌▄▌▄▐▐▌█████");
+System.out.println("		████▌▄▌▄▐▐▌▀████");
+System.out.println("		▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+
+	}
+	
+
+
+	public static void errorHmm() {
+System.out.println("		.⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷");
+System.out.println("		⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀");
+System.out.println("		⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⠀⠛⠛⣿⣿⣿⡛⠿⠷");
+System.out.println("		⠀⠀⠀⠀⠀⠘⠿⠿⠋⠀⠀⠀⠀⠀⠀⣿⣿⣿⠇");
+System.out.println("		⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁");
+System.out.println("		⠀⠀⠀⠀⣿⣷⣄⠀⢶⣶⣷⣶⣶⣤⣀");
+System.out.println("		⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠈⠙⠻⠗");
+System.out.println("		⠀⠀⠀⣰⣿⣿⣿⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⡄");
+System.out.println("		⠀⣠⣾⣿⣿⣿⣥⣶⣶⣿⣿⣿⣿⣿⠿⠿⠛⠃");
+System.out.println("		⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄");
+System.out.println("		⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁");
+System.out.println("		⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁");
+System.out.println("		⠀⠀⠛⢿⣿⣿⣿⣿⣿⣿⡿⠟");
+System.out.println("		⠀⠀⠀⠀⠀⠉⠉⠉");
+
+
+	}
+	
 	public static void costTimeTable() { //고객 > 요금표 (추가 운임 미정)
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println("\t\t\t\t\t\t\t 길 찾기 (즐겨찾기 노선)");

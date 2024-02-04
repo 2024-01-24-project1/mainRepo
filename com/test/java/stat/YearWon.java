@@ -16,7 +16,7 @@ public class YearWon {
 		for(int i=0; i<=9; i++) {
 			
 			String temp = String.valueOf(i); 
-			long[] line = CongestionStat.TotalCal(temp);
+			long[] line = CongestionStat.ridingPeople(temp);
 			
 			list.add(i, sum(line));
 		}

@@ -2,9 +2,9 @@ package com.test.java.stat;
 
 public class GuestStat {
 
-	public static int[] cal(String lines) {
+	public static long[] cal(String lines) {
 		
-		return CongestionStat.TotalCal(lines);
+		return CongestionStat.ridingPeople(lines);
 		
 		// 달 별로 파일 가져와서 > 계산 > 출력
 		

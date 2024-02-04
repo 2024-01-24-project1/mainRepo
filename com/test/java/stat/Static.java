@@ -35,17 +35,23 @@ public class Static {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { //이용객 통계 > 월 전체
-				long[] asd = CongestionStat.TotalCal("0");
-				CongestionStat.sum(asd, month);
-				CongestionStat.graph(asd, month, 100000000, 10000000);
+				long[] asd = CongestionStat.ridingPeople("0");
+				for(int i=0;i<asd.length;i++) {
+					System.out.println(asd[i]);
+				}
+//				CongestionStat.sum(asd, month);
+//				CongestionStat.drawGraph(asd, month, 100000000, 10000000);
 				
 				
 			}else if(sel.equals("2")) { //이용객 통계>특정 호선
 				System.out.print("호선을 입력하세요: ");
 				String lines = scan.nextLine();
-				long[] asd = CongestionStat.TotalCal(lines);
+				long[] asd = CongestionStat.ridingPeople(lines);
 				System.out.println(lines+"호선");
-				CongestionStat.sum(asd, month);
+				for(int i=0;i<asd.length;i++) {
+					System.out.println(asd[i]);
+				}
+//				CongestionStat.drawGraph(asd, month, 20000000, 1000000);
 				
 			}else if(sel.equals("3")) { //이용객 통계>호선별 달 이용객 합계
 				ArrayList<Long> list = YearWon.sumYear();
@@ -65,16 +71,25 @@ public class Static {
 			
 			if(sel.equals("1")) { //매출 통계 > 전체 노선 합계
 				
-				long[] asd = CongestionStat.TotalCal("0");
-				CongestionStat.ChooseCal(asd);
-				
+				long[] asd = CongestionStat.ridingPeople("0");
+				CongestionStat.ridingWon(asd);
+//				CongestionStat.drawGraph(asd, month, 100000000, 10000000);
+				for(int i=0;i<asd.length;i++) {
+					System.out.println(asd[i]);
+				}
 				
 			}else if(sel.equals("2")) { //매출 통계 > 선택 노선 통계
 				System.out.print("호선을 입력하세요: ");
 				String lines=scan.nextLine();
 				System.out.println(lines+"호선");
-				long[] asd = CongestionStat.TotalCal(lines);
-				CongestionStat.ChooseCal(asd);
+				long[] asd = CongestionStat.ridingPeople(lines);
+				CongestionStat.ridingWon(asd);
+//				CongestionStat.drawGraph(asd, month, 20000000, 1000000);
+//				for(int i=0;i<asd.length;i++) {
+//					System.out.println(asd[i]);
+//				}
+				
+				
 			}else if(sel.equals("3")) { //매출 통계 > 호선별 연매출
 				ArrayList<Long> list = YearWon.sumYear();
 				

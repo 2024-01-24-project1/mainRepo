@@ -240,4 +240,15 @@ public final class Validation {
 			return check;
 		}
 		
+		
+		//입력받은 문자열이 분실물의 이름인지 확인
+		// 맞으면 true, 아니면 false
+		public static boolean is_LostArticle(String input) {
+			boolean check = false;
+			
+			check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().equals(input));
+			
+			return check;
+		}
+		
 }//End of class

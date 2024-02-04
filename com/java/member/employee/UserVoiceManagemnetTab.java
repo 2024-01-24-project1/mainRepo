@@ -3,6 +3,7 @@ package com.java.member.employee;
 import java.util.Scanner;
 
 import com.java.common.LoginLogout;
+import com.java.common.lostarticle.LostArticleTab;
 import com.java.view.View;
 
 public final class UserVoiceManagemnetTab {
@@ -27,7 +28,7 @@ public final class UserVoiceManagemnetTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 분실물 보기
-				
+				LostArticleTab.lostArticleTab();
 			} else if(sel.equals("2")) {	// 2. 직원 민원 보기
 				UserVoiceSearch.userVoiceAll();
 			} else if (sel.equals("3")) {	// 3. 뒤로가기

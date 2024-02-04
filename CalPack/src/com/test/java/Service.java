@@ -80,7 +80,7 @@ public class Service {
 		
 		if(date.equals(m1.day) && txt.equals(m1.content)){
 			// 해당하는 글자 삭제 (???)
-			Data.list.remove((date.equals(m1.day)) && (txt.equals(m1.content)));
+			Data.list.remove((txt.equals(m1.content)));
 			System.out.println("성공적으로 삭제가 되었습니다.");
 		}else {
 			System.out.println("올바른 입력이 아닙니다.");

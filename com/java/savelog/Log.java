@@ -2,6 +2,7 @@ package com.java.savelog;
 
 public class Log {
 
+	String time;
 	String id;
 	String action;
 	
@@ -17,11 +18,18 @@ public class Log {
 	public void setAction(String action) {
 		this.action = action;
 	}
+	public String getTime() {
+		return time;
+	}
+	public void setTime(String time) {
+		this.time = time;
+	}
 	
 	@Override
 	public String toString() {
-		return "[id=" + id + ", action=" + action + "]";
+		return "[time=" + time + ", id=" + id + ", action=" + action + "]";
 	}
+	
 	
 	
 	

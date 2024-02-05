@@ -22,7 +22,6 @@ public class TestView {
 		ViewAll.roadSearchEmo();
 		System.out.println();
 		ViewAll.seasonPassEmo();
-		ViewAll.seasonPassEmo();
 		ViewAll.errorQuestionEmo();
 		ViewAll.massageWriteEmo();
 		ViewAll.rankUpEmo();

@@ -3,6 +3,10 @@ package com.test.java.viewfolder;
 public class ViewAll {
 	
 	public static void trainFront() {
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 
 
 System.out.println("⠀⠀⠀⠀⠀⢀⢤⣔⢷⡾⣞⣿⣻⣟⣿⢯⣷⡿⣯⣿⣻⣟⣿⣻⣯⡿⣷⣟⣿⣻⣟⣿⢯⣿⣻⣿⣻⣿⣽⣾⣶⣶⣢⣄⡀⠀⠀⠀⠀⠀");
@@ -32,19 +36,34 @@ System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠈⣿⣻⣿⣽⣯⣿⣯⣷
 System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⢺⡗⠛⠓⠋⠓⠛⠋⠛⠛⠛⠙⠛⠙⠋⠛⠙⠛⠚⠛⢯⡗⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
 System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠹⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠝⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
 System.out.println("⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void successTwoEmo() {
+		
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.　　　n Λ＿Λ");
 System.out.println("		　　　(ﾖ(´･ω･｀) 따봉!!");
 System.out.println("		　 　≡　y　 と丿");
 System.out.println("		　 　 ≡（_ﾉ　ノ");
 System.out.println("		　　　　≡(ノ´");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void successOneEmo() { //정상실행 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.     .    °※+•☆                ☆•+※°.");
 System.out.println("		  *.•☆          •°.★  ★.°•          ☆•.*");
 System.out.println("		★*                   ∧_∧                    *★");
@@ -54,18 +73,32 @@ System.out.println("		°*.                   O  |                      .*°");
 System.out.println("		       °.             `  ᒍ                  .°");
 System.out.println("		            *  .                          .  *");
 System.out.println("		                    *    .     .    *");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void lostarticleEmo() { //분실물 이모
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		. ∧_∧");
 System.out.println("		( ´･ω･)∧∧");
 System.out.println("		./⌒ ,つ⌒ヽ) 토닥토닥");
 System.out.println("		(___ (＿＿)");
-		
+System.out.println();
+System.out.println();
+System.out.println();
+
 	}
 	
 	public static void safetyEmployeeSetEmo() { //안전 요원 배치 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.　＿");
 System.out.println("		　 /～ヽ");
 System.out.println("		　(｡･０･) 저기요저기요..");
@@ -79,10 +112,17 @@ System.out.println("		　　＿");
 System.out.println("		　 /～ヽ");
 System.out.println("		　(｡･-･)　어디에 계신거에요♡");
 System.out.println("		　ﾟし-Jﾟ");
-		
+System.out.println();
+System.out.println();
+System.out.println();
+
 	}
 	
 	public static void safetyEmployeeUnlockEmo() { //안전 요원 배치  해제 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		전 먼저 떠납니다!!!");
 System.out.println("　　　　　　　　∧_∧");
 System.out.println("　　　　　　　∩(　　 ) 야호~");
@@ -93,10 +133,17 @@ System.out.println("゛ ゛ T\"~￣Y\" ");
 System.out.println("＼＼｜/／/");
 System.out.println("／｜＼／/");
 System.out.println("｜＼｜／");
-		
+System.out.println();
+System.out.println();
+System.out.println();
+
 	}
 	
 	public static void trainEmo() { //열차 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.　　　*,':");
 System.out.println("		　　,:\"\"\"\"");
 System.out.println("		  // ");
@@ -107,10 +154,17 @@ System.out.println("		　､＼　二_     ∧∞_∧");
 System.out.println("		　　 ｀-_ ￣(｀ ･ω ･)");
 System.out.println("		　　　　 ー(.. O┳O");
 System.out.println("		　　　　　 ◎ ) `J_))");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void timeEmo() { //시간 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("			 	/ ￣￣￣￣￣￣￣￣￣￣￣\\");
 System.out.println("				|　　　몇 시 지 ?	| ");
 System.out.println("				＼　　　　　　　	/");
@@ -122,10 +176,17 @@ System.out.println("				|＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
 System.out.println("				|　＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
 System.out.println("				＼　｜⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒|");
 System.out.println("				　 ＼|＿＿＿＿＿＿＿|");
-		
+System.out.println();
+System.out.println();
+System.out.println();
+
 	}
 	
 	public static void roadSearchEmo() { // 길찾기 이모
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		. 🐭");
 System.out.println("		╔╝╚══╦══════╦══╗");
 System.out.println("		╠═══╗║╠═══╦╗║╚╗║");
@@ -135,34 +196,55 @@ System.out.println("		║║╠╝╔═╩╝║╠╝║╔╝╔╣");
 System.out.println("		║║╚═║╔══╣╔═╝║╚╣║");
 System.out.println("		║╚═╗╚╝║═╝║══╩╚╩╩🧀");
 System.out.println("		╚══╩══╩══╩══════");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void seasonPassEmo() { //정기권 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		＿人人人＿");
-System.out.println("		＞ 표줘요!! ＜");
+System.out.println("	       ＞표줘요!!＜");
 System.out.println("		￣Y^Y^Y￣");
 System.out.println("		　 _n");
 System.out.println("		　( ｜　 ハ_ハ");
 System.out.println("		　 ＼＼ ( ‘-^　)");
 System.out.println("		　　 ＼￣￣　 )");
 System.out.println("		　　　 ７　　/");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void massageWriteEmo() { //메세지 입력 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮");
 System.out.println("        메세지를 입력해 주세요.");
-System.out.println("╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯");
+System.out.println("╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯");
 System.out.println("O °");
 System.out.println("ᕱ ᕱ");
 System.out.println("( ･ω･)");
 System.out.println("/ つΦ . .. . ﹢ ⃰ ଂ ಇ");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 
 
 	public static void rankUpEmo() { //직급 변경 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("	． 　 　 ∧ ∧");
 System.out.println("	　 　　(´･ω･ ∩　레벨 UP！");
 System.out.println("	　　　o.　　 ,ﾉ.");
@@ -170,49 +252,78 @@ System.out.println("	　 　　Ｏ＿ .ﾉ");
 System.out.println("	　 　 　 　(ノ");
 System.out.println("	　 　 　　i｜|");
 System.out.println("	　　　　 	━━");
+System.out.println();
+System.out.println();
+System.out.println();
+
 
 
 	}
 	
 	
 	public static void errorQuestionEmo() { //에러 이모
-System.out.println("		┏━━━━━┓");
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+System.out.println("		┏━━━━━━━┓");
 System.out.println("		┃ 　　　┃");
-System.out.println("		┃　┏━┓　┃");
-System.out.println("		┗━┛　┃　┃");
+System.out.println("		┃ ┏━━━┓ ┃");
+System.out.println("		┗━┛　 ┃ ┃");
 System.out.println("		　　┏━┛ ┃");
-System.out.println("		　　┃　┏━┛");
+System.out.println("		　　┃ ┏━┛");
 System.out.println("		　　┗━┛");
 System.out.println("		　　┏━┓");
-System.out.println("		　　┃　┃");
+System.out.println("		　　┃ ┃");
 System.out.println("		　　┗━┛");
 System.out.println("		　　　〇");
 System.out.println("		　　　ｏ");
 System.out.println("		　　　　(・ д ・)");
+System.out.println();
+System.out.println();
+System.out.println();
 
 		
 	}
 	public static void errorFeelEmo() { //에러 이모
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.⠀⠀⠀⠀➵⠀➵");
 System.out.println("		⠀⠀➶⠀⠀⠀⠀⠀⠀➴⠀");
 System.out.println("		➶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀➴⠀");
-System.out.println("		　　　　　　　 　∧_∧");
-System.out.println("		　　　　　　 　(;・Д・)");
+System.out.println("		　　　　　　　∧_∧");
+System.out.println("		　　　　　　 (;・Д・)");
 System.out.println("		　　　　뭔가 불길한 예감이 든다");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 	public static void errorFailEmo() { //에러 이모
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
 System.out.println("		████▌▄▌▄▐▐▌█████");
 System.out.println("		████▌▄▌▄▐▐▌▀████");
 System.out.println("		▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+System.out.println();
+System.out.println();
+System.out.println();
 
 	}
 	
 
 
 	public static void errorHmmEmo() { //에러 이모 
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
 System.out.println("		.⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷");
 System.out.println("		⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀");
 System.out.println("		⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⠀⠛⠛⣿⣿⣿⡛⠿⠷");
@@ -227,6 +338,9 @@ System.out.println("		⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁");
 System.out.println("		⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁");
 System.out.println("		⠀⠀⠛⢿⣿⣿⣿⣿⣿⣿⡿⠟");
 System.out.println("		⠀⠀⠀⠀⠀⠉⠉⠉");
+System.out.println();
+System.out.println();
+System.out.println();
 
 
 	}

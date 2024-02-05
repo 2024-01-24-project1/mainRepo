@@ -1,8 +1,6 @@
 package com.java.common;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import com.java.member.user.User;
 import com.java.view.View;
@@ -12,7 +10,7 @@ import com.java.member.employee.Employee;
 // 회원가입
 public class SignUp {
 
-	public void signUp() { // 회원가입 초기 화면
+	public static void signUp() { // 회원가입 초기 화면
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -52,7 +50,7 @@ public class SignUp {
 		
 	}//End of SignUp
 
-	private void commonSignUp(String sel) {
+	private static void commonSignUp(String sel) {
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -66,6 +64,7 @@ public class SignUp {
 
 		// 아이디
 		while (true) {
+			
 			
 			// View클래스 출력
 			if(sel.equals("1")) {
@@ -107,7 +106,10 @@ public class SignUp {
 			// 회원가입 유효성 검사
 			if( Validation.is_Id(id) ) {
 				System.out.println("아이디 형식이 틀렸습니다.");
+			}else if ( Validation.is_Duplication_Id(id)) {
+				System.out.println("중복된 아이디입니다.");
 			}
+			
 			if( Validation.is_Pw(pw)) {
 				System.out.println("비밀번호 형식이 틀렸습니다.");
 			}
@@ -118,10 +120,14 @@ public class SignUp {
 				System.out.println("주민등록번호 형식이 틀렸습니다.");
 			}else if ( Validation.is_RegistrationEffect(registration)) {
 				System.out.println("유효한 주민등록번호가 아닙니다.");
+			}else if ( Validation.is_Duplication_RRN(registration)) {
+				System.out.println("중복된 주민등록");
 			}
 			if ( Validation.is_Phone(phone) ) {
 				System.out.println("전화번호 형식이 틀렸습니다.");
-			} 
+			}else if ( Validation.is_Duplication_Phone(phone)) {
+				System.out.println("중복된 전화번호입니다.");
+			}
 			if( Validation.is_Code(code) && sel.equals("2")) {
 				System.out.println("회원코드가 틀렸습니다.");
 			}

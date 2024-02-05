@@ -2,14 +2,18 @@ package com.java.common;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Date;
 
-import com.java.calendar.Calendar;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.schedule.Schedule;
 import com.java.station.PassengerCounting;
 import com.java.station.timetable.StationTime;
 
@@ -22,7 +26,7 @@ public final class Load {
 		loadUserList();
 		loadEmployeeList();
 		loadPassList();
-		loadCalendarList();
+		loadScheduleList();
 		loadLogList();
 		loadUserVoiceList();
 		loadLostArticleList();
@@ -45,8 +49,7 @@ public final class Load {
 						line = line.replaceAll("\"", "");
 						String[] lineArr = line.split(",");
 						
-						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Integer.parseInt(lineArr[3]));
-						
+						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Long.parseLong(lineArr[3]));
 						Data.passengerCountingList.add(count);
 						
 					}
@@ -255,6 +258,7 @@ public final class Load {
 	
 	private void loadUserList() {
 		String line = "";
+		Calendar now = Calendar.getInstance();
 		
 		try {
 			
@@ -262,9 +266,25 @@ public final class Load {
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
-				User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5]);
-				Data.userList.add(user);
 				
+				if(lineArr[5].equals("있음")) {
+					// 유저의 정기권 기간 확인
+					SimpleDateFormat expiry = new SimpleDateFormat("yyyyMMdd");
+					Date temp = expiry.parse(lineArr[6].substring(10));		// 정기권 종료일 확인
+					
+					Calendar end = Calendar.getInstance();
+					end.setTime(temp);										// 정기권 종료일 캘린더
+				
+					if(end.compareTo(now) == -1) {
+						// 정기권 기간이 지났으면 없음으로 바꿈
+						lineArr[5] = "없음";
+						lineArr[6] = "없음";
+					}
+				
+				}
+					
+					User user = new User(lineArr[0], lineArr[1], lineArr[2], lineArr[3], lineArr[4], lineArr[5], lineArr[6]);
+					Data.userList.add(user);
 			}
 			
 			reader.close();
@@ -321,28 +341,32 @@ public final class Load {
 		}
 	}//End of loadPass()
 	
-	private void loadCalendarList() {
+	private void loadScheduleList() {
 		String line = "";
 		
 		try {
 			
-			BufferedReader reader = new BufferedReader(new FileReader(data.CALENDARPATH));
+			BufferedReader reader = new BufferedReader(new FileReader(data.SCHEDULEPATH));
 			
 			while((line = reader.readLine()) != null) {
 				String[] lineArr = line.split(",");
-				Calendar calendar = new Calendar(lineArr[0], lineArr[1], lineArr[2], lineArr[3]);
+				Schedule schedule = new Schedule(lineArr[0], lineArr[1], lineArr[2]);
 				
-				Data.calendarList.add(calendar);
+				Data.scheduleList.add(schedule);
 				
 			}
 			
 			reader.close();
+			
+			//일정리스트 정렬
+			Collections.sort(Data.scheduleList, Schedule.timeComparator);
+			
 			return;
 			
 		}catch(Exception e){
-			System.out.println("캘린더 일정 로드 실패");
+			System.out.println("일정 로드 실패");
 			e.printStackTrace();
 		}
-	}//End of loadCalendarList()
+	}//End of loadScheduleList()
 	
 }//End of Load

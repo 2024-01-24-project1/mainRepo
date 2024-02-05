@@ -9,7 +9,9 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
-import com.java.member.user.User;
+import com.java.member.employee.stats.Graph;
+import com.java.member.employee.stats.Stats;
+import com.java.view.View;
 
 
 
@@ -21,8 +23,6 @@ public class Main {
 		Exit exit = new Exit();
 		
 		LoginLogout loginlogout = new LoginLogout();
-		SignUp signup = new SignUp();
-		FindAccount find = new FindAccount();
 		
 		// 데이터 로드
 		load.loadAll();
@@ -34,14 +34,7 @@ public class Main {
 		
 		while(loop) {
 			
-			
-//			View.page1(sel);
-			System.out.println("메인");
-			System.out.println("1->로그인");
-			System.out.println("2->회원가입");
-			System.out.println("3->IDPW찾기");
-			System.out.println("4->종료");
-			System.out.printf("메인입력: ");
+			View.mainmenu();
 			String sel = ""; 
 			sel = sc.nextLine();
 			
@@ -54,12 +47,12 @@ public class Main {
 			}else if(sel.equals("2")) {
 				
 				//회원가입
-				signup.signUp();
+				SignUp.signUp();
 				
 			}else if(sel.equals("3")) {
 				
 				//IDPW 찾기
-				find.findAccount();
+				FindAccount.findAccount();
 				
 			}else if(sel.equals("4")) {
 				
@@ -71,6 +64,7 @@ public class Main {
 				//다시입력
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			
@@ -78,9 +72,11 @@ public class Main {
 		
 		
 		//종료시 파일 덮어쓰기할 클래스
+		// View클래스에서 출력
 		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
+
 
 	}//main
 

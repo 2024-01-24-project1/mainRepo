@@ -64,6 +64,8 @@ public final class Employee extends Member{
 		this.level = level;
 	}
 	
+	
+	
 	@Override
 	public String toString() {
 		return String.format("[이름: %s, ID: %s, PW: %s, 주민등록번호: %s, 전화번호: %s, 직급: %s, 호선: %s, 역: %s, 접근권한: %s]\r\n"

@@ -7,7 +7,7 @@ import com.java.view.View;
 // 아이디, 비밀번호 찾기
 public class FindAccount {
 	
-	public void findAccount() {
+	public static void findAccount() {
 		
 		Scanner scan = new Scanner(System.in);
 		

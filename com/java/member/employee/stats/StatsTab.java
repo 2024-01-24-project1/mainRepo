@@ -2,6 +2,7 @@ package com.java.member.employee.stats;
 
 import java.util.Scanner;
 
+import com.java.busy.BusyStat;
 import com.java.common.Validation;
 import com.java.view.View;
 
@@ -31,7 +32,8 @@ public class StatsTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
-				
+				BusyStat busyStat =new BusyStat();
+				busyStat.busyStat();
 			}else if (sel.equals("2")) {	// 2. 이용객 통계
 				userStatsTab();
 			}else if (sel.equals("3")) {	// 3. 매출 통계

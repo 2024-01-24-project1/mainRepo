@@ -3,8 +3,10 @@ package com.test.java.viewfolder;
 public class TestView {
 
 	public static void main(String[] args) {
-		
-		ViewAll.trainFront();
+//		ViewAll.userMainView();
+//		ViewAll.trainAddFour();
+		//메인
+//		ViewAll.trainFront();
 		// 이모티콘 모음 
 		ViewAll.successThumbUpEmo();
 		System.out.println();
@@ -29,7 +31,7 @@ public class TestView {
 		ViewAll.errorFailEmo();
 		ViewAll.errorHmmEmo();
 		//
-		/* 라벨 모음
+		//라벨 모음
 		ViewAll.adminMainView();
 		System.out.println();
 		ViewAll.back();
@@ -184,7 +186,7 @@ public class TestView {
 		System.out.println();
 		ViewAll.seasonPassRegisterBottom();
 		System.out.println();
-		ViewAll.seasonPassRegisterTop();
+		//ViewAll.seasonPassRegisterTop();
 		System.out.println();
 		ViewAll.signupEmployee();
 		System.out.println();
@@ -256,7 +258,6 @@ public class TestView {
 		System.out.println();
 		ViewAll.vocMain();
 		System.out.println();
-		*/
 		
 		
 	}//main

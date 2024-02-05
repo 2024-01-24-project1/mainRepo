@@ -17,6 +17,7 @@ public final class LoginLogout {
 	public static String position = "";	  // 직급
 	public static String pass = "";		  // 정기권 유무
 	public static String passExpiry = ""; // 정기권 기간
+	public static String phone = ""; 	  // 전화번호
 	
 	
 	public void loginMode() {
@@ -73,6 +74,7 @@ public final class LoginLogout {
 						LoginLogout.level = "1";
 						LoginLogout.pass = user.getPassCheck();
 						LoginLogout.passExpiry = user.getPassExpiry();
+						LoginLogout.phone = user.getPhone();
 						
 						// 고객리스트 탐색 종료
 						break;
@@ -94,6 +96,7 @@ public final class LoginLogout {
 							LoginLogout.authName = employee.getName();
 							LoginLogout.level = employee.getLevel();
 							LoginLogout.position = employee.getPosition();
+							LoginLogout.phone = employee.getPhone();
 							
 							// 직원리스트 탐색 종료
 							break;
@@ -137,6 +140,7 @@ public final class LoginLogout {
 		LoginLogout.level = "";
 		LoginLogout.pass = "";
 		LoginLogout.passExpiry = "";
+		LoginLogout.phone = "";
 		System.out.println("로그아웃이 완료되었습니다.");
 		View.pause();
 		

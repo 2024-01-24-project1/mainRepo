@@ -184,16 +184,19 @@ public class LostArticleTab {
 			
 			LostArticleSearch.lostArticlePage(Data.lostArticleList);
 			String sel = "";
+			String sts = "";
 			
 			System.out.println("삭제할 분실물의 이름");
 			System.out.printf("분실물: ");
 			sel = scan.nextLine();
+			System.out.println("보관 된 위치: ");
+			sts = scan.nextLine();
 			
 			if( Validation.is_LostArticle(sel)) {
 				
 				for(LostArticle article : Data.lostArticleList) {
 					
-					if(article.getArticle().equals(sel)) {
+					if(article.getArticle().equals(sel) && article.getFindStation().equals(sts)) {
 						Data.lostArticleList.remove(article);
 						
 						break;	// article객체 탐색 종료

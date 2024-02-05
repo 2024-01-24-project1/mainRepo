@@ -9,7 +9,6 @@ public class CongestionStat {
 	
 	
 	
-
 	public static long[] ridingPeople(String lines) { //이용객 수
 		
 		int count=1;

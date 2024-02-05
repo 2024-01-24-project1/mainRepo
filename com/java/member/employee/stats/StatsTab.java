@@ -2,6 +2,8 @@ package com.java.member.employee.stats;
 
 import java.util.Scanner;
 
+import com.java.busy.BusyStat;
+import com.java.common.Validation;
 import com.java.view.View;
 
 public class StatsTab {
@@ -30,7 +32,8 @@ public class StatsTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
-				
+				BusyStat busyStat =new BusyStat();
+				busyStat.busyStat();
 			}else if (sel.equals("2")) {	// 2. 이용객 통계
 				userStatsTab();
 			}else if (sel.equals("3")) {	// 3. 매출 통계
@@ -61,9 +64,32 @@ public class StatsTab {
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allPassenger(), ALLPASSENGER);
-		}else if (sel.equals("2")) {
+		}else if (sel.equals("2")) {	// 2. 특정 호선 통계
 			
-		}
+			while(true) {
+				System.out.println("보고싶은 호선을 입력해주세요");
+				System.out.println("입력(N호선): ");
+				sel = scan.nextLine();
+				
+				if(Validation.is_Line(sel)) {
+					Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+				}else {
+					System.out.println("잘못된 입력");
+				}
+				
+				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("뒤로가려면 엔터");
+				
+				if(sel.equals("")) {
+					
+					// 특정호선 통계 종료
+					break;
+				}
+				
+			}//while루프 종료
+			
+			
+		}// 특정호선 통계 종료
 		
 		System.out.println("이용객 통계 종료");
 	}//End of userStatsTab()
@@ -80,7 +106,27 @@ public class StatsTab {
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);
 		}else if (sel.equals("2")) {
-			
+			while(true) {
+				System.out.println("보고싶은 호선을 입력해주세요");
+				System.out.println("입력(N호선): ");
+				sel = scan.nextLine();
+				
+				if(Validation.is_Line(sel)) {
+					Graph.drawGraph(Stats.lineSales(sel), ALLPASSENGER);
+				}else {
+					System.out.println("잘못된 입력");
+				}
+				
+				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("뒤로가려면 엔터");
+				
+				if(sel.equals("")) {
+					
+					// 특정호선 통계 종료
+					break;
+				}
+				
+			}//while루프 종료
 		}
 		
 		System.out.println("이용객 통계 종료");

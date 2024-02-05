@@ -25,7 +25,7 @@ public class LostArticleTab {
 			System.out.println(" 1. 분실물 검색");
 			System.out.println(" 2. 분실물 추가");
 			System.out.println(" 3. 분실물 제거");
-			System.out.println(" 4. 뒤로가기");
+			System.out.println("엔터 입력시 뒤로가기");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -36,7 +36,7 @@ public class LostArticleTab {
 				addLostArticle();
 			} else if(sel.equals("3")) {	// 3. 분실물 제거
 				removeLostArticle();
-			} else if (sel.equals("4")) {	// 3. 뒤로가기
+			} else if (sel.equals("")) {	// 3. 뒤로가기
 				
 				// 분실물탭 종료
 				break;

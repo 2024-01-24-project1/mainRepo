@@ -21,13 +21,13 @@ public class SignUp {
 			System.out.println("회원가입");
 			System.out.println("1-> 고객가입");
 			System.out.println("2-> 직원가입");
-			System.out.println("3-> 뒤로가기");
+			System.out.println("엔터입력시 뒤로가기");
 			System.out.print("선택 (번호): ");
 			
 			String sel = ""; // 선택한 번호
 			sel = scan.nextLine();
 			
-			if (sel.equals("1")) { // 1. 개인 회원가입
+			if (sel.equals("1")) { 		  // 1. 개인 회원가입
 				
 				commonSignUp(sel);
 				
@@ -35,7 +35,7 @@ public class SignUp {
 				
 				commonSignUp(sel);
 				
-			} else if (sel.equals("3")) { // 3. 뒤로가기
+			} else if (sel.equals("")) { // 3. 뒤로가기
 				
 				break;
 				
@@ -64,6 +64,7 @@ public class SignUp {
 
 		// 아이디
 		while (true) {
+			String back = "";
 			
 			
 			// View클래스 출력
@@ -135,39 +136,45 @@ public class SignUp {
 			// 회원이 모든 조건을 만족한 입력을 받은경우
 			if(sel.equals("1") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
 					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone))) {
+				
+				User user = new User(name, id, pw, registration, phone); // 입력값 저장
+				Data.userList.add(user);
+				
+				System.out.println("회원가입이 완료되었습니다.");
+				System.out.println("회원 " +name + "님 환영합니다.");
+				View.pause();
+				
 				break;
 			}
 			
 			// 직원이 모든 조건을 만족한 입력을 받은경우
 			if(sel.equals("2") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
 					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone) || Validation.is_Code(code))) {
+				
+				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
+				Data.employeeList.add(employee);
+				
+				System.out.println("회원가입이 완료되었습니다.");
+				System.out.println("직원 " + name + "님 환영합니다.");
+				View.pause();
+				
 				break;
 			}
 			
 			
-			System.out.println("다시 입력하세요.");
-			System.out.println();
-			View.pause();
+			System.out.println("다시 입력하시려면 아무키나 입력하세요.");
+			System.out.println("뒤로가시려면 엔터를 입력하세요.");
+			System.out.printf("입력: ");
+			back = scan.nextLine();
+			
+			if(back.equals("")) {
+				
+				// 회원가입 종료
+				break;
+			}
+			
+			
 		}// while종료
-		
-		if(sel.equals("1")) {
-			
-			User user = new User(name, id, pw, registration, phone); // 입력값 저장
-			Data.userList.add(user);
-			
-			System.out.println("회원가입이 완료되었습니다.");
-			System.out.println("회원 " +name + "님 환영합니다.");
-			
-		}else if (sel.equals("2")) {
-			
-			Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
-			Data.employeeList.add(employee);
-			
-			System.out.println("회원가입이 완료되었습니다.");
-			System.out.println("직원 " + name + "님 환영합니다.");
-		}
-
-		View.pause();
 		
 	}//End of commonSignUp()
 

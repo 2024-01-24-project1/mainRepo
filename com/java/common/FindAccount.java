@@ -16,7 +16,7 @@ public class FindAccount {
 			// View에서 출력
 			System.out.println("1-> ID찾기");
 			System.out.println("2-> PW찾기");
-			System.out.println("3-> ID찾기");
+			System.out.println("엔터입력시 뒤로가기");
 			System.out.println("입력: ");
 			/*
 			  	1. ID 찾기
@@ -31,28 +31,25 @@ public class FindAccount {
 			String sel = "";
 			sel = scan.nextLine();
 			
-			if (sel.equals("1")) { // 1. ID 찾기
+			if (sel.equals("1")) { 		  // 1. ID 찾기
 				FindAccount.findId();
 			} else if (sel.equals("2")) { // 2. PW 찾기
 				FindAccount.findPw();
-			} else if (sel.equals("3")) { // 3. 뒤로가기
+			} else if (sel.equals("")) {  // 3. 뒤로가기
 				
 				break;
 				
 			} else { // 이외의 숫자 입력 시
 				
-				// View에서 출력
-				/*
-				 	해당 섹션이 없습니다
-				 	다시 입력해주세요.
-				 */
-				System.out.println("잘못입력");
+				//다시입력
+				System.out.println();
+				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			
 		}// while문 종료
 		
-		return;
 		
 	}//End of findAccount()
 	
@@ -85,18 +82,18 @@ public class FindAccount {
 			Data.userList.stream().filter(user -> user.getName().equals(name) && user.getRegistration().equals(registration))
 				.forEach(s -> System.out.println(name + "님의 ID는 " + s.getId() + " 입니다."));
 			
-			View.pause();
 			
 		}else if (checkEmployee) {
 			System.out.println("입력받은 이름과 주민번호의 직원계정 존재");
 			
 			Data.employeeList.stream().filter(employee -> employee.getName().equals(name) && employee.getRegistration().equals(registration))
 									  .forEach(employee -> System.out.println(name + "님의 ID는 " + employee.getId() + " 입니다."));
-			View.pause();
 			
 		}else {
 			System.out.println("입력받은 이름과 주민번호의 아이디가 없음");
 		}
+		
+		View.pause();
 
 	}//End of findId()
 	
@@ -138,7 +135,6 @@ public class FindAccount {
 											   && user.getId().equals(id))
 								  .forEach(user -> System.out.println(name + "님의 PW는 " + user.getPw() + " 입니다."));
 			
-			View.pause();
 			
 		}else if (checkEmployee) {
 			System.out.println("입력받은 이름과 아이디와 주민번호의 직원계정 존재");
@@ -147,12 +143,12 @@ public class FindAccount {
 										   && employee.getRegistration().equals(registration)
 										   && employee.getPw().equals(id))
 									  .forEach(employee -> System.out.println(name + "님의 PW는 " + employee.getPw() + " 입니다."));
-			View.pause();
 			
 		}else {
 			System.out.println("입력받은 이름과 아이디, 주민번호의 아이디가 없음");
-			View.pause();
 		}
+		
+		View.pause();
 		
 	}//End of findPw()
 

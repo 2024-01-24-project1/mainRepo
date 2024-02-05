@@ -36,7 +36,7 @@ public final class EmployeeMode extends CommonFunction{
 			System.out.println("           7. 열차 시간표");
 			System.out.println("           8. 행동로그 보기");
 			System.out.println("           9. 로그아웃");
-			System.out.println("		  10. 마아페이지");
+			System.out.println("          10. 마아페이지");
 			System.out.println("           0. 종료");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");

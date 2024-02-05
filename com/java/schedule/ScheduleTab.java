@@ -70,7 +70,7 @@ public class ScheduleTab {
 			content = scan.nextLine();
 			
 			
-			if( !Validation.is_Schedule(date, content) && Validation.is_StationName(station) && Validation.is_Date(date)) {
+			if( !Validation.is_ScheduleSame(date, content, station) && Validation.is_StationName(station) && Validation.is_Date(date)) {
 						
 				Schedule sch = new Schedule(date, station, content);
 				Data.scheduleList.add(sch);
@@ -111,6 +111,7 @@ public class ScheduleTab {
 			String sel = "";
 			String date = "";
 			String content = "";
+			String station = "";
 		
 			ScheduleSearch.schedulePage(Data.scheduleList);
 			
@@ -118,13 +119,16 @@ public class ScheduleTab {
 			date = scan.nextLine();
 			System.out.println("삭제할 일정(정확하게): ");
 			content = scan.nextLine();
+			System.out.println("삭제할 일정의 역: ");
+			station = scan.nextLine();
 			
 			// 삭제할 날짜와 일정이 스케줄에 있는지
-			if( Validation.is_Schedule(date, content) ) {
+			if( Validation.is_ScheduleSame(date, content, station) ) {
 				
 				for(Schedule schedule : Data.scheduleList) {
 					
-					if(schedule.getSchedule().equals(content) && schedule.getTime().equals(date)) {
+					if(schedule.getSchedule().equals(content) && schedule.getTime().equals(date)
+							&& schedule.getStation().equals(station)) {
 						
 						Data.scheduleList.remove(schedule);
 						System.out.println("스케줄이 삭제되었습니다.");

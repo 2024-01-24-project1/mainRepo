@@ -255,12 +255,13 @@ public final class Validation {
 		
 		// 입력받은 날짜와 스케줄이 존재하는지
 		// 맞으면 true, 아니면 false
-		public static boolean is_Schedule(String date, String content) {
+		public static boolean is_ScheduleSame(String date, String content, String station) {
 			boolean check = false;
 			
 			check = Data.scheduleList.stream().anyMatch(schedule -> 
 													schedule.getSchedule().equals(content)
-												 && schedule.getTime().equals(date));
+												 && schedule.getTime().equals(date)
+												 && schedule.getStation().equals(station));
 			
 			return check;
 		}

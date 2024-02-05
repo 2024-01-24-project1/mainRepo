@@ -19,6 +19,8 @@ public final class LoginLogout {
 	public static String passExpiry = ""; // 정기권 기간
 	public static String phone = ""; 	  // 전화번호
 	
+	public static boolean getOut = false; // 계정 탈퇴시 메인화면으로 쫒아냄
+	
 	
 	public void loginMode() {
 			
@@ -114,12 +116,12 @@ public final class LoginLogout {
 				
 				System.out.println("존재하지 않는 계정");
 				System.out.println();
-				System.out.println("메인화면으로 돌아가시려면 back을 입력하세요.");
-				System.out.println("엔터를 누르면 다시 ID와 PW를 입력합니다.");
+				System.out.println("뒤로가시려면 엔터");
+				System.out.println("아무키나 입력시 다시 ID와 PW를 입력합니다.");
 				System.out.print("             ");
 				back = scan.nextLine();
 				
-				if(back.equals("back")) {
+				if(back.equals("")) {
 					
 					// 로그인 while문 종료 메인으로 돌아감
 					break;

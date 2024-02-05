@@ -75,8 +75,8 @@ public final class UserMode extends CommonFunction{
 			} else if (sel.equals("5")) {	// 5. 요금표
 				costsTableTab();
 			} else if (sel.equals("6")) {	// 6. 마이페이지
-				MyPage.myPageList();
 				// 마이페이지
+				MyPage.myPageList("1");
 				
 			} else if (sel.equals("7")) {	// 7. 로그아웃
 				LoginLogout.logout();
@@ -89,6 +89,15 @@ public final class UserMode extends CommonFunction{
 				System.out.println("다시 입력해주세요.");
 				View.pause();
 			}
+			
+			if(LoginLogout.getOut) {
+				// 회원 탈퇴시 메인으로 보내기
+				LoginLogout.getOut = false;
+				System.out.println("지금까지 이용해주셔서 감사합니다.");
+				LoginLogout.logout();
+				break;
+			}
+			
 		
 			}//while루프 종료
 	

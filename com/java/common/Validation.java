@@ -83,12 +83,22 @@ public final class Validation {
 		// 전화번호 유효성 검사
 		public static boolean is_Phone(String phone) {
 
-			String regex = "([0-9]{3})-?([0-9]{3,4})-?([0-9]{4})";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(phone);
+	        // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
+	        String regex = "010-[0-9]{4}-[0-9]{4}";
+	        if (!phone.matches(regex)) {
+	            return false;
+	        }
 
-			return !m1.find();
-		}
+	        // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
+	        for (int i = 0; i < phone.length(); i++) {
+	            char ch = phone.charAt(i);
+	            if (i != 3 && i != 8 && !Character.isDigit(ch)) {
+	                return false;
+	            }
+	        }
+
+	        return true;
+		 }
 	
 		// 관리자 가입코드 유효성 검사
 		public static boolean is_Code(String code) {

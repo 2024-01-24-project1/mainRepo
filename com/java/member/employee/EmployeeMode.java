@@ -93,8 +93,7 @@ public final class EmployeeMode extends CommonFunction{
 				break;
 				
 			} else if (sel.equals("10")) {
-				MyPage.myPageList();
-				break;
+				MyPage.myPageList("2");
 				
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");
@@ -102,6 +101,14 @@ public final class EmployeeMode extends CommonFunction{
 				View.pause();
 			}
 		
+			if(LoginLogout.getOut) {
+				// 회원 탈퇴시 메인으로 보내기
+				LoginLogout.getOut = false;
+				System.out.println("지금까지 이용해주셔서 감사합니다.");
+				LoginLogout.logout();
+				break;
+			}
+			
 		}//while루프 종료
 
 		

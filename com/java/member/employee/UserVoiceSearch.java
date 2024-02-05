@@ -20,10 +20,10 @@ public class UserVoiceSearch {
 			
 			userVoicePage(Data.userVoiceList);
 			System.out.println("내용을 확인할 민원의 제목을 입력하세요");
-			System.out.println("그만 확인하려면 back을 입력하세요");
+			System.out.println("그만 확인하려면 엔터를 입력하세요");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				break;
 			}
 			
@@ -83,11 +83,11 @@ public class UserVoiceSearch {
 					 													, uservoice.getIsRead()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
 			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.print("back입력시 뒤로갑니다.");
+			System.out.print("엔터입력시 페이지모드 종료.");
 			System.out.print("원하는 페이지: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				break;
 			}else if (Validation.is_NumString(sel)) {
 				index = Integer.parseInt(sel) - 1;

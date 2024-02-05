@@ -6,9 +6,9 @@ public class TestView {
 		
 		ViewAll.trainFront();
 		// 이모티콘 모음 
-		ViewAll.successTwoEmo();
+		ViewAll.successThumbUpEmo();
 		System.out.println();
-		ViewAll.successOneEmo();
+		ViewAll.successVEmo();
 		System.out.println();
 		ViewAll.lostarticleEmo();
 		ViewAll.safetyEmployeeSetEmo();

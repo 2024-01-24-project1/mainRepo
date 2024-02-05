@@ -2,7 +2,7 @@ package com.test.java.viewfolder;
 
 public class ViewAll {
 	
-	public static void trainFront() {
+	public static void trainFront() {//메인 이모 (아마)
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -42,7 +42,7 @@ System.out.println();
 
 	}
 	
-	public static void successTwoEmo() {
+	public static void successThumbUpEmo() { //정상실행 이모 
 		
 		System.out.println();
 		System.out.println();
@@ -59,7 +59,7 @@ System.out.println();
 
 	}
 	
-	public static void successOneEmo() { //정상실행 이모 
+	public static void successVEmo() { //정상실행 이모 
 		System.out.println();
 		System.out.println();
 		System.out.println();
@@ -124,7 +124,7 @@ System.out.println();
 		System.out.println();
 		
 System.out.println("		전 먼저 떠납니다!!!");
-System.out.println("　　　　　　　　∧_∧");
+System.out.println("　　　　　　　　 ∧_∧");
 System.out.println("　　　　　　　∩(　　 ) 야호~");
 System.out.println("　　　　　　　 〉　　つ");
 System.out.println("　　　　   ∴ ‥⊂ 、 ノ");
@@ -170,7 +170,7 @@ System.out.println("				|　　　몇 시 지 ?	| ");
 System.out.println("				＼　　　　　　　	/");
 System.out.println("				　￣￣￣￣∨￣￣￣￣￣￣");
 System.out.println("				　　　　　　。");
-System.out.println("				　　　∧ ∧　.?　");
+System.out.println("				　　　 ∧ ∧　.?　");
 System.out.println("				|￣￣( ´Д｀)￣|");
 System.out.println("				|＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
 System.out.println("				|　＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");

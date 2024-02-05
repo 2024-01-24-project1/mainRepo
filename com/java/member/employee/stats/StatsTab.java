@@ -26,7 +26,7 @@ public class StatsTab {
 			System.out.println(" 1. 혼잡도 통계");
 			System.out.println(" 2. 이용객 통계");
 			System.out.println(" 3. 매출 통계");
-			System.out.println(" 4. 뒤로가기");
+			System.out.println(" 뒤로가기 엔터");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -38,7 +38,7 @@ public class StatsTab {
 				userStatsTab();
 			}else if (sel.equals("3")) {	// 3. 매출 통계
 				salesStatsTab();
-			}else if (sel.equals("4")) {	// 4. 뒤로가기
+			}else if (sel.equals("")) {	// 4. 뒤로가기
 				
 				// 혼잡도 통계 종료
 				break;
@@ -50,7 +50,6 @@ public class StatsTab {
 			
 		}//while루프 종료
 		
-		System.out.println("통계탭 종료");
 	}//End of statsTab()
 	
 	public static void userStatsTab() {
@@ -88,10 +87,8 @@ public class StatsTab {
 				
 			}//while루프 종료
 			
-			
 		}// 특정호선 통계 종료
 		
-		System.out.println("이용객 통계 종료");
 	}//End of userStatsTab()
 	
 	public static void salesStatsTab() {
@@ -128,11 +125,6 @@ public class StatsTab {
 				
 			}//while루프 종료
 		}
-		
-		System.out.println("이용객 통계 종료");
-		
-		
-		
 
 	}//End of salesStatsTab()
 	

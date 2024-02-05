@@ -25,7 +25,7 @@ public class PassTab {
 			System.out.println("정기권 페이지");
 			System.out.println("1 -> 나의 정기권 확인하기");
 			System.out.println("2 -> 정기권 코드 입력");
-			System.out.println("3 -> 뒤로가기");
+			System.out.println("뒤로가기 엔터");
 			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
@@ -33,7 +33,7 @@ public class PassTab {
 				myTicket();
 			}else if (sel.equals("2")) {	// 2. 정기권 코드 입력 
 				signPass();
-			}else if (sel.equals("3")) {	// 3. 뒤로가기
+			}else if (sel.equals("")) {	// 3. 뒤로가기
 				
 				// 정기권 탭 종료
 				break;
@@ -57,9 +57,9 @@ public class PassTab {
 		if ( LoginLogout.pass.equals("있음") ) {
 			
 			System.out.println(LoginLogout.authName + "님의 정기권");
-			System.out.print("사용 기간: ");
-			System.out.print(LoginLogout.passExpiry);
-
+			System.out.println("     <사용 기간> ");
+			System.out.println(LoginLogout.passExpiry);
+			
 		} else {
 			System.out.println("정기권 미보유 상태입니다.");
 		}
@@ -150,7 +150,6 @@ public class PassTab {
 					// 리스트에 반영
 					user.setPassExpiry(LoginLogout.passExpiry);
 					
-					
 					break;	// User객체 탐색 종료
 				}
 				
@@ -176,6 +175,5 @@ public class PassTab {
 		}
 		View.pause();
 	}//End of registramtionTicket
-	
 	
 }//End of class

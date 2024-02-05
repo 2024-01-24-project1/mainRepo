@@ -9,10 +9,6 @@ import com.java.common.Validation;
 import com.java.view.View;
 
 public class SafetyManTab {
-
-		
-			
-	
 	
 	protected static void satetyManTab() {
 		
@@ -46,7 +42,7 @@ public class SafetyManTab {
 			System.out.println("           1. 전체 안전요원 보기");
 			System.out.println("           2. 안전요원 배치");
 			System.out.println("           3. 안전요원 부서 해제");
-			System.out.println("           4. 뒤로가기");
+			System.out.println("           뒤로가기 엔터");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -57,7 +53,7 @@ public class SafetyManTab {
 				arrangeSafetyMan(noAreaSafetyList);
 			} else if (sel.equals("3")) {	// 3. 안전요원 부서 해제
 				safetyManWorkAreaClear(safetyList);
-			} else if (sel.equals("4")) {	// 4. 뒤로가기
+			} else if (sel.equals("")) {	//    뒤로가기
 				
 				// 직원관리 종료
 				break;
@@ -65,6 +61,7 @@ public class SafetyManTab {
 			} else { // 이외의 숫자 입력 시
 					System.out.println("해당 섹션이 없습니다.");
 					System.out.println("다시 입력해주세요.");
+					View.pause();
 			}
 			
 		}//while루프 종료
@@ -106,7 +103,6 @@ public class SafetyManTab {
 			System.out.println("입력한 아이디의 안전요원이 없습니다.");
 		}
 		
-		System.out.println("안전요원 부서해제 종료");
 		View.pause();
 		
 	}//End of safetyManWorkAreaClear()
@@ -135,7 +131,6 @@ public class SafetyManTab {
 			System.out.println("입력한 아이디의 안전요원이 없습니다.");
 		}
 		
-		System.out.println("안전요원 배치 종료");
 		View.pause();
 		
 	}//End of arrangeSafetyMan()

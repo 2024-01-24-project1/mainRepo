@@ -21,7 +21,7 @@ public class ScheduleTab {
 			System.out.println(" 1. 전체일정 보기");
 			System.out.println(" 2. 일정 추가");
 			System.out.println(" 3. 일정제거");
-			System.out.println(" 4. 뒤로가기");
+			System.out.println(" 뒤로가기 엔터");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -32,7 +32,7 @@ public class ScheduleTab {
 				addSchedule();
 			} else if(sel.equals("3")) {	// 3. 일정 제거
 				removeSchedule();
-			} else if (sel.equals("4")) {	// 3. 뒤로가기
+			} else if (sel.equals("")) {	// 3. 뒤로가기
 				
 				// 분실물탭 종료
 				break;
@@ -44,8 +44,6 @@ public class ScheduleTab {
 			}
 			
 		}//while루프 종료
-	
-		System.out.println("스케줄탭 종료");
 		
 	}//End of scheduleTab()
 	
@@ -86,20 +84,18 @@ public class ScheduleTab {
 			}
 			
 			System.out.println("잘못된 입력입니다");
-			System.out.println("다시입력하시려면 엔터 뒤로가시려면 back입력");
+			System.out.println("다시 입력하시려면 아무키나 입려하세요");
+			System.out.println("뒤로가시려면 엔터입력");
 			System.out.printf("입력: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				
 				// 일정 추가 종료
 				break;
 			}
 		
 		}//while루프 종료
-		
-		System.out.println("스케줄 추가 종료");
-		
 		
 	}//End of addSchedule
 	
@@ -137,27 +133,24 @@ public class ScheduleTab {
 					
 				}
 				
-				
 				// 스케줄 삭제 종료
 				break;
 			}
 		
 			
 			System.out.println("잘못된 입력입니다.");
-			System.out.println("다시 입력하시려면 엔터 뒤로가려면 back입력");
+			System.out.println("다시 입력하시려면 아무키나 입려하세요");
+			System.out.println("뒤로가시려면 엔터입력");
 			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				
 				// 스케줄 삭제 종료
 				break;
 			}
-			
 		
 		}//while루프 종료
-		
-		System.out.println("스케줄 삭제 종료");
 		
 	}//End of removeSchedule()
 	

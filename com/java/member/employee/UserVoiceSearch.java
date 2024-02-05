@@ -17,10 +17,13 @@ public class UserVoiceSearch {
 		while(true) {
 			
 			String sel = "";
+			String id = "";
+			String title = "";
 			
 			userVoicePage(Data.userVoiceList);
-			System.out.println("내용을 확인할 민원의 제목을 입력하세요");
-			System.out.println("그만 확인하려면 엔터를 입력하세요");
+			System.out.println("뒤로가기 엔터");
+			System.out.println("민원의 내용을 보시려면 아무키나 입력");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -29,13 +32,23 @@ public class UserVoiceSearch {
 				break;
 			}
 			
-			if( Validation.is_UserVoiceTitle(sel)) {
-				System.out.println("올바른 제목");
+			System.out.println("아이디와 제목을 정확히 입력하시면");
+			System.out.println("민원의 내용을 확인합니다.");
+			System.out.print("아이디: ");
+			id = scan.nextLine();
+			System.out.print("제목: ");
+			title = scan.nextLine();
+			
+			if( Validation.is_Duplication_UserVoice(id, title)) {
 				
 				for(UserVoice voice : Data.userVoiceList) {
 					
 					if(voice.getTitle().equals(sel)) {
+						
+						// 읽음으로 변경
 						voice.setIsRead("읽음");
+						
+						// 민원의 내용 출력
 						System.out.println(voice.getContent());
 						View.pause();
 						
@@ -54,7 +67,6 @@ public class UserVoiceSearch {
 		}//while루프 종료
 		
 	}//End of userVoiceAll()
-	
 	
 	public static void userVoicePage(ArrayList<UserVoice> list) {
 		// 리스트의 페이지수 계산

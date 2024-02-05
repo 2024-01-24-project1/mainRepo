@@ -358,4 +358,16 @@ public final class Validation {
 			return check;
 		}
 		
+		// 분실물의 이름과 보관역을 받아서 
+		// 존재하는 분실물인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_UserVoice(String id, String title) {
+			boolean check = false;
+			
+			check = Data.userVoiceList.stream().anyMatch(voice -> voice.getId().equals(id) 
+															   && voice.getTitle().equals(title)); 
+			
+			return check;
+		}
+		
 }//End of class

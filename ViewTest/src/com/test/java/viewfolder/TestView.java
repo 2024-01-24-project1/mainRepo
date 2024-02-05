@@ -4,11 +4,11 @@ public class TestView {
 
 	public static void main(String[] args) {
 		ViewAll.errorQuestion();
-		//ViewAll.massageWrite();
-		//ViewAll.rankUp();
-		//ViewAll.errorFeel();
-		//ViewAll.errorFail();
-		//ViewAll.errorHmm();
+		ViewAll.massageWrite();
+		ViewAll.rankUp();
+		ViewAll.errorFeel();
+		ViewAll.errorFail();
+		ViewAll.errorHmm();
 		/* 라벨 모음
 		ViewAll.adminMainView();
 		System.out.println();

@@ -3,12 +3,33 @@ package com.test.java.viewfolder;
 public class TestView {
 
 	public static void main(String[] args) {
-		ViewAll.errorQuestion();
-		ViewAll.massageWrite();
-		ViewAll.rankUp();
-		ViewAll.errorFeel();
-		ViewAll.errorFail();
-		ViewAll.errorHmm();
+		
+		ViewAll.trainFront();
+		// 이모티콘 모음 
+		ViewAll.successTwoEmo();
+		System.out.println();
+		ViewAll.successOneEmo();
+		System.out.println();
+		ViewAll.lostarticleEmo();
+		ViewAll.safetyEmployeeSetEmo();
+		System.out.println();
+		ViewAll.safetyEmployeeUnlockEmo();
+		System.out.println();
+		ViewAll.trainEmo();
+		System.out.println();
+		ViewAll.timeEmo();
+		System.out.println();
+		ViewAll.roadSearchEmo();
+		System.out.println();
+		ViewAll.seasonPassEmo();
+		ViewAll.seasonPassEmo();
+		ViewAll.errorQuestionEmo();
+		ViewAll.massageWriteEmo();
+		ViewAll.rankUpEmo();
+		ViewAll.errorFeelEmo();
+		ViewAll.errorFailEmo();
+		ViewAll.errorHmmEmo();
+		//
 		/* 라벨 모음
 		ViewAll.adminMainView();
 		System.out.println();

@@ -1,6 +1,7 @@
 package com.java;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.Data;
@@ -11,6 +12,7 @@ import com.java.common.LoginLogout;
 import com.java.common.SignUp;
 import com.java.member.employee.stats.Graph;
 import com.java.member.employee.stats.Stats;
+import com.java.station.timetable.StationTime;
 import com.java.view.View;
 
 
@@ -76,7 +78,7 @@ public class Main {
 		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
-
+		
 
 	}//main
 

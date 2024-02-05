@@ -3,11 +3,14 @@ package com.java.common;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.java.busy.Busy;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
+import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.requiredtime.RequiredTime;
 import com.java.schedule.Schedule;
 import com.java.station.PassengerCounting;
 import com.java.station.timetable.StationTime;
@@ -26,6 +29,8 @@ public final class Data {
 	protected final String BUSYPATH = ".\\src\\data\\busy.csv";				  //혼잡도
 	protected final String USERVOICEPATH = ".\\src\\data\\uservoice.csv";	  //민원
 	protected final String STATIONNAMEPATH = ".\\src\\data\\stationname.csv"; //역이름
+	protected final String REQUIREDTIMEPATH = ".\\src\\data\\requiredTime.csv";//역간 소요시간
+	protected final String BOOKMARKPATH = ".\\src\\data\\bookmark.csv";        //즐겨찾기목록
 	
 	protected final String ALL_LINE_NAME_PATH = ".\\src\\data\\호선별역이름\\모든역이름.csv";
 	protected static String line_NamePath = ".\\src\\data\\호선별역이름\\";
@@ -51,6 +56,9 @@ public final class Data {
 	public static final ArrayList<String> LINE8_STATION_NAME = new ArrayList<>();
 	public static final ArrayList<String> LINE9_STATION_NAME = new ArrayList<>();
 	
+	//역간 걸리는 시간 저장하는 리스트
+	public static final ArrayList<RequiredTime> requiredTimeList = new ArrayList<>();
+	
 	// csv파일 읽어와서 변경되면 종료시 csv파일에 쓰는 리스트
 	public static ArrayList<String> passList = new ArrayList<>();
 	public static ArrayList<User> userList = new ArrayList<>();
@@ -59,7 +67,10 @@ public final class Data {
 	public static ArrayList<Log> logList = new ArrayList<>();
 	public static ArrayList<UserVoice> userVoiceList = new ArrayList<>();
 	public static ArrayList<LostArticle> lostArticleList = new ArrayList<>();
+	public static ArrayList<BookMark> bookMarkList = new ArrayList<>();
 	
+	//혼잡도 저장하는 리스트
+	public static ArrayList<Busy> busyList = new ArrayList<>();
 	
 	// 직원 가입 코드
 	public final static String EMPLOYEECODE = "DAVSGDVASDASDFR35351";	// 예시

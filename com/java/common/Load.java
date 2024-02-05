@@ -8,11 +8,14 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 
+import com.java.busy.Busy;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
+import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
+import com.java.requiredtime.RequiredTime;
 import com.java.schedule.Schedule;
 import com.java.station.PassengerCounting;
 import com.java.station.timetable.StationTime;
@@ -33,6 +36,9 @@ public final class Load {
 		loadStationName();
 		loadLine_StationTimeTable();
 		loadPassengerCountingList();
+		loadBookMark();
+		loadBusy();
+		loadRequiredTime();
 	}
 	
 	private void loadPassengerCountingList() {
@@ -368,5 +374,145 @@ public final class Load {
 			e.printStackTrace();
 		}
 	}//End of loadScheduleList()
+	
+private void loadRequiredTime() {
+		
+		String line ="";
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(data.REQUIREDTIMEPATH));
+			
+			while((line = reader.readLine())!= null) {
+				
+				String[] lineArr = line.split(",");
+				
+				for(String station : Data.ALL_STATION_NAME) {
+					
+					if(station.equals(lineArr[2])) {
+						
+						RequiredTime requiredTime = new RequiredTime(lineArr[1],lineArr[2],lineArr[3]);
+						Data.requiredTimeList.add(requiredTime);
+						
+					}
+				}
+				
+				
+				
+				
+			}
+			reader.close();
+			return;
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("역간 소요시간 로드 실패");
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+	private void loadBusy() {
+		
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(data.BUSYPATH));
+			
+			String line = "";
+			
+			while((line=reader.readLine())!=null ) {
+				
+				String[] temp = line.split(",");
+				
+				ArrayList<Double> list = new ArrayList<>();
+				
+				double avg = 0;
+				double sum = 0;
+				
+				if(temp[6].contains("분")) temp[6] = "0";
+				if(temp[6].equals("")) temp[6] = "0";
+				
+				list.add(Double.parseDouble(temp[6]));
+				
+				
+				for(int i=7; i<=43; i+=2) {
+					
+					if(temp[i].equals("")) {
+						temp[i]="0";
+					}
+					if(temp[i+1].equals("")) {
+						temp[i+1]="0";
+					}
+					
+					if(temp[i].contains("분") || temp[i+1].contains("분")) {
+						temp[i]=temp[i+1]="0";
+					}
+					
+					double n1 = Double.parseDouble(temp[i]);
+					double n2 = Double.parseDouble(temp[i+1]);
+					
+					sum = n1 + n2;
+					avg = sum/2;
+					list.add(avg);
+					
+				}
+				
+				
+				Busy busy = new Busy(temp[1],temp[2],temp[4],temp[5],list);
+				Data.busyList.add(busy); 
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("혼잡도 로드 실패");
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	private void loadBookMark() {
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new FileReader(data.BOOKMARKPATH));
+			String line = "";
+			
+			while((line=reader.readLine())!= null) {
+				
+				String[] temp = line.split(",");
+				
+				BookMark bookMark = new BookMark(temp[0]);
+				for(int i=1; i<temp.length; i++) {
+					
+					bookMark.setBookMarkList(temp[i]);
+					
+				}
+				Data.bookMarkList.add(bookMark);
+				
+				
+			}
+			
+			
+		} catch (Exception e) {
+			System.out.println("Load.loadBookMark");
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
 	
 }//End of Load

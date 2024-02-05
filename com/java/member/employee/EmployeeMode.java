@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.Exit;
 import com.java.common.LoginLogout;
+import com.java.common.MyPage;
 import com.java.member.CommonFunction;
 import com.java.member.employee.stats.StatsTab;
 import com.java.schedule.ScheduleTab;
@@ -35,6 +36,7 @@ public final class EmployeeMode extends CommonFunction{
 			System.out.println("           7. 열차 시간표");
 			System.out.println("           8. 행동로그 보기");
 			System.out.println("           9. 로그아웃");
+			System.out.println("		  10. 마아페이지");
 			System.out.println("           0. 종료");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
@@ -65,7 +67,8 @@ public final class EmployeeMode extends CommonFunction{
 				}
 				
 			} else if (sel.equals("2")) {	// 2 직원관리
-				EmployeeManagementTab.employeeManagementTab();
+				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
+				else System.out.println("접근 권한이 없습니다.");
 			} else if (sel.equals("3")) {	// 3. 민원
 				UserVoiceManagemnetTab.userVoiceManagementTab();
 			} else if (sel.equals("4")) {	// 4. 행사캘린더
@@ -87,6 +90,10 @@ public final class EmployeeMode extends CommonFunction{
 				LoginLogout.logout();
 				
 				// 고객 모드 종료
+				break;
+				
+			} else if (sel.equals("10")) {
+				MyPage.myPageList();
 				break;
 				
 			} else { // 이외의 숫자 입력 시

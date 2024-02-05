@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.Exit;
 import com.java.common.LoginLogout;
+import com.java.common.MyPage;
 import com.java.member.CommonFunction;
 import com.java.station.management.FindWay;
 import com.java.view.View;
@@ -74,7 +75,7 @@ public final class UserMode extends CommonFunction{
 			} else if (sel.equals("5")) {	// 5. 요금표
 				costsTableTab();
 			} else if (sel.equals("6")) {	// 6. 마이페이지
-	
+				MyPage.myPageList();
 				// 마이페이지
 				
 			} else if (sel.equals("7")) {	// 7. 로그아웃

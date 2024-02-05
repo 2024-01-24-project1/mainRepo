@@ -175,8 +175,6 @@ public class SignUp {
 			
 			
 		}// while종료
-
-		View.pause();
 		
 	}//End of commonSignUp()
 

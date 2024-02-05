@@ -2,6 +2,17 @@ package com.test.java.viewfolder;
 
 public class ViewAll {
 	
+	public static void trainSide() {
+System.out.println("\t\t\t\t\t		___________   _______________________________________^__");
+System.out.println("\t\t\t\t\t		 ___   ___ |||  ___   ___   ___    ___ ___  |   __  ,----\\");
+System.out.println("\t\t\t\t\t		|   | |   |||| |   | |   | |   |  |   |   | |  |  | |_____\\");
+System.out.println("\t\t\t\t\t		|___| |___|||| |___| |___| |___|  | O | O | |  |  |        \\");
+System.out.println("\t\t\t\t\t		           |||                    |___|___| |  |__|         )");
+System.out.println("\t\t\t\t\t		___________|||______________________________|______________/");
+System.out.println("\t\t\t\t\t		           |||                                        /--------");
+System.out.println("\t\t\t\t\t		-----------'''---------------------------------------'");
+	}
+	
 	public static void trainFront() {//메인 이모 (아마)
 		System.out.println();
 		System.out.println();
@@ -48,11 +59,11 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.　　　n Λ＿Λ");
-System.out.println("		　　　(ﾖ(´･ω･｀) 따봉!!");
-System.out.println("		　 　≡　y　 と丿");
-System.out.println("		　 　 ≡（_ﾉ　ノ");
-System.out.println("		　　　　≡(ノ´");
+System.out.println("\t\t\t\t\t\t		.　　　n Λ＿Λ");
+System.out.println("\t\t\t\t\t\t		　　　(ﾖ(´･ω･｀) 따봉!!");
+System.out.println("\t\t\t\t\t\t		　 　≡　y　 と丿");
+System.out.println("\t\t\t\t\t\t		　 　 ≡（_ﾉ　ノ");
+System.out.println("\t\t\t\t\t\t		　　　　≡(ノ´");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -64,15 +75,15 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.     .    °※+•☆                ☆•+※°.");
-System.out.println("		  *.•☆          •°.★  ★.°•          ☆•.*");
-System.out.println("		★*                   ∧_∧                    *★");
-System.out.println("		☆                  v •∀< )                     ☆");
-System.out.println("		※                   \\    o                     ※");
-System.out.println("		°*.                   O  |                      .*°");
-System.out.println("		       °.             `  ᒍ                  .°");
-System.out.println("		            *  .                          .  *");
-System.out.println("		                    *    .     .    *");
+System.out.println("\t\t\t\t\t		.     .    °※+•☆            ☆•+※°   .");
+System.out.println("\t\t\t\t\t		  *.•☆          •°.★   ★.°•           ☆•.*");
+System.out.println("\t\t\t\t\t		★*                   ∧_∧                   *★");
+System.out.println("\t\t\t\t\t		☆                  v •∀< )                   ☆");
+System.out.println("\t\t\t\t\t		※                   \\    o                   ※");
+System.out.println("\t\t\t\t\t		°*.                   O  |                 .*°");
+System.out.println("\t\t\t\t\t		       °.             `  ᒍ                  .°");
+System.out.println("\t\t\t\t\t		            *  .                     .  *");
+System.out.println("\t\t\t\t\t		                    *    .     .    *");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -84,10 +95,10 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		. ∧_∧");
-System.out.println("		( ´･ω･)∧∧");
-System.out.println("		./⌒ ,つ⌒ヽ) 토닥토닥");
-System.out.println("		(___ (＿＿)");
+System.out.println("\t\t\t\t\t\t\t		. ∧_∧");
+System.out.println("\t\t\t\t\t\t\t		( ´･ω･)∧∧");
+System.out.println("\t\t\t\t\t\t\t		./⌒ ,つ⌒ヽ) 토닥토닥");
+System.out.println("\t\t\t\t\t\t\t		(___ (＿＿)");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -99,19 +110,20 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.　＿");
-System.out.println("		　 /～ヽ");
-System.out.println("		　(｡･０･) 저기요저기요..");
-System.out.println("		　ﾟし-Jﾟ");
+System.out.println("\t\t\t\t\t\t\t		.　＿");
+System.out.println("\t\t\t\t\t\t\t		　 /～ヽ");
+System.out.println("\t\t\t\t\t\t\t		　(｡･０･) 저기요저기요..");
+System.out.println("\t\t\t\t\t\t\t		　ﾟし-Jﾟ");
 System.out.println();
-System.out.println("		　　＿");
-System.out.println("		　 /～ヽ");
-System.out.println("		　(｡･o･)　보고싶어요");
-System.out.println("		　ﾟし-Jﾟ");
-System.out.println("		　　＿");
-System.out.println("		　 /～ヽ");
-System.out.println("		　(｡･-･)　어디에 계신거에요♡");
-System.out.println("		　ﾟし-Jﾟ");
+System.out.println("\t\t\t\t\t\t\t		　　＿");
+System.out.println("\t\t\t\t\t\t\t		　 /～ヽ");
+System.out.println("\t\t\t\t\t\t\t		　(｡･o･)　보고싶어요");
+System.out.println("\t\t\t\t\t\t\t		　ﾟし-Jﾟ");
+System.out.println("\t\t\t\t\t\t\t		　　＿");
+System.out.println();
+System.out.println("\t\t\t\t\t\t\t		　 /～ヽ");
+System.out.println("\t\t\t\t\t\t\t		　(｡･-･)　어디에 계신거에요♡");
+System.out.println("\t\t\t\t\t\t\t		　ﾟし-Jﾟ");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -123,16 +135,16 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		전 먼저 떠납니다!!!");
-System.out.println("　　　　　　　　 ∧_∧");
-System.out.println("　　　　　　　∩(　　 ) 야호~");
-System.out.println("　　　　　　　 〉　　つ");
-System.out.println("　　　　   ∴ ‥⊂ 、 ノ");
-System.out.println("￣\"~⌒゛   \"'ゞ　　 し'");
-System.out.println("゛ ゛ T\"~￣Y\" ");
-System.out.println("＼＼｜/／/");
-System.out.println("／｜＼／/");
-System.out.println("｜＼｜／");
+System.out.println("\t\t\t\t\t\t\t\t\t		전 먼저 떠납니다!!!");
+System.out.println("\t\t\t\t\t\t\t\t\t　　　　　　　　 ∧_∧");
+System.out.println("\t\t\t\t\t\t\t\t\t　　　　　　　∩(　　 ) 야호~");
+System.out.println("\t\t\t\t\t\t\t\t\t　　　　　　　 〉　　つ");
+System.out.println("\t\t\t\t\t\t\t\t\t　　　　   ∴ ‥⊂ 、 ノ");
+System.out.println("\t\t\t\t\t\t\t\t\t￣\"~⌒゛   \"'ゞ　　 し'");
+System.out.println("\t\t\t\t\t\t\t\t\t゛ ゛ T\"~￣Y\" ");
+System.out.println("\t\t\t\t\t\t\t\t\t＼＼｜/／/");
+System.out.println("\t\t\t\t\t\t\t\t\t／｜＼／/");
+System.out.println("\t\t\t\t\t\t\t\t\t｜＼｜／");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -144,16 +156,16 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.　　　*,':");
-System.out.println("		　　,:\"\"\"\"");
-System.out.println("		  // ");
-System.out.println("		`i｜");
-System.out.println("		｜ ､");
-System.out.println("		､＼ ヽ_");
-System.out.println("		　､＼　二_     ∧∞_∧");
-System.out.println("		　　 ｀-_ ￣(｀ ･ω ･)");
-System.out.println("		　　　　 ー(.. O┳O");
-System.out.println("		　　　　　 ◎ ) `J_))");
+System.out.println("\t\t\t\t\t\t\t		.　　　*,':");
+System.out.println("\t\t\t\t\t\t\t		　　,:\"\"\"\"");
+System.out.println("\t\t\t\t\t\t\t		  // ");
+System.out.println("\t\t\t\t\t\t\t		`i｜");
+System.out.println("\t\t\t\t\t\t\t		｜ ､");
+System.out.println("\t\t\t\t\t\t\t		､＼ ヽ_");
+System.out.println("\t\t\t\t\t\t\t		　､＼　二_     ∧∞_∧");
+System.out.println("\t\t\t\t\t\t\t		　　 ｀-_ ￣(｀ ･ω ･)");
+System.out.println("\t\t\t\t\t\t\t		　　　　 ー(.. O┳O");
+System.out.println("\t\t\t\t\t\t\t		　　　　　 ◎ ) `J_))");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -165,17 +177,17 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("			 	/ ￣￣￣￣￣￣￣￣￣￣￣\\");
-System.out.println("				|　　　몇 시 지 ?	| ");
-System.out.println("				＼　　　　　　　	/");
-System.out.println("				　￣￣￣￣∨￣￣￣￣￣￣");
-System.out.println("				　　　　　　。");
-System.out.println("				　　　 ∧ ∧　.?　");
-System.out.println("				|￣￣( ´Д｀)￣|");
-System.out.println("				|＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
-System.out.println("				|　＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
-System.out.println("				＼　｜⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒|");
-System.out.println("				　 ＼|＿＿＿＿＿＿＿|");
+System.out.println("\t\t\t\t\t			 	/ ￣￣￣￣￣￣￣￣￣￣￣\\");
+System.out.println("\t\t\t\t\t				|　　　몇 시 지 ?	| ");
+System.out.println("\t\t\t\t\t				＼　　　　　　　	/");
+System.out.println("\t\t\t\t\t				　￣￣￣￣∨￣￣￣￣￣￣");
+System.out.println("\t\t\t\t\t				　　　　　　。");
+System.out.println("\t\t\t\t\t				　　　 ∧ ∧　.?　");
+System.out.println("\t\t\t\t\t				|￣￣( ´Д｀)￣|");
+System.out.println("\t\t\t\t\t				|＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
+System.out.println("\t\t\t\t\t				|　＼⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒＼");
+System.out.println("\t\t\t\t\t				＼　｜⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒⌒|");
+System.out.println("\t\t\t\t\t				　 ＼|＿＿＿＿＿＿＿|");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -187,15 +199,15 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		. 🐭");
-System.out.println("		╔╝╚══╦══════╦══╗");
-System.out.println("		╠═══╗║╠═══╦╗║╚╗║");
-System.out.println("		║╔═╗║╠═╦═╣║║╚═║║");
-System.out.println("		║╚╗╠╩╗║║╔═╣╚═╦╝║");
-System.out.println("		║║╠╝╔═╩╝║╠╝║╔╝╔╣");
-System.out.println("		║║╚═║╔══╣╔═╝║╚╣║");
-System.out.println("		║╚═╗╚╝║═╝║══╩╚╩╩🧀");
-System.out.println("		╚══╩══╩══╩══════");
+System.out.println("\t\t\t\t\t\t\t		. 🐭");
+System.out.println("\t\t\t\t\t\t\t		╔╝╚══╦══════╦══╗");
+System.out.println("\t\t\t\t\t\t\t		╠═══╗║╠═══╦╗║╚╗║");
+System.out.println("\t\t\t\t\t\t\t		║╔═╗║╠═╦═╣║║╚═║║");
+System.out.println("\t\t\t\t\t\t\t		║╚╗╠╩╗║║╔═╣╚═╦╝║");
+System.out.println("\t\t\t\t\t\t\t		║║╠╝╔═╩╝║╠╝║╔╝╔╣");
+System.out.println("\t\t\t\t\t\t\t		║║╚═║╔══╣╔═╝║╚╣║");
+System.out.println("\t\t\t\t\t\t\t		║╚═╗╚╝║═╝║══╩╚╩╩🧀");
+System.out.println("\t\t\t\t\t\t\t		╚══╩══╩══╩══════");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -207,14 +219,14 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		＿人人人＿");
-System.out.println("	       ＞표줘요!!＜");
-System.out.println("		￣Y^Y^Y￣");
-System.out.println("		　 _n");
-System.out.println("		　( ｜　 ハ_ハ");
-System.out.println("		　 ＼＼ ( ‘-^　)");
-System.out.println("		　　 ＼￣￣　 )");
-System.out.println("		　　　 ７　　/");
+System.out.println("\t\t\t\t\t\t\t		＿人人人＿");
+System.out.println("\t\t\t\t\t\t\t	       ＞표줘요!!＜");
+System.out.println("\t\t\t\t\t\t\t		￣Y^Y^Y￣");
+System.out.println("\t\t\t\t\t\t\t		　 _n");
+System.out.println("\t\t\t\t\t\t\t		　( ｜　 ハ_ハ");
+System.out.println("\t\t\t\t\t\t\t		　 ＼＼ ( ‘-^　)");
+System.out.println("\t\t\t\t\t\t\t		　　 ＼￣￣　 )");
+System.out.println("\t\t\t\t\t\t\t		　　　 ７　　/");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -226,13 +238,13 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮");
-System.out.println("        메세지를 입력해 주세요.");
-System.out.println("╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯");
-System.out.println("O °");
-System.out.println("ᕱ ᕱ");
-System.out.println("( ･ω･)");
-System.out.println("/ つΦ . .. . ﹢ ⃰ ଂ ಇ");
+System.out.println("\t\t\t\t\t\t\t\t╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮");
+System.out.println("\t\t\t\t\t\t\t\t        메세지를 입력해 주세요.");
+System.out.println("\t\t\t\t\t\t\t\t╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯");
+System.out.println("\t\t\t\t\t\t\t\tO °");
+System.out.println("\t\t\t\t\t\t\t\tᕱ ᕱ");
+System.out.println("\t\t\t\t\t\t\t\t( ･ω･)");
+System.out.println("\t\t\t\t\t\t\t\t/ つΦ . .. . ﹢ ⃰ ଂ ಇ");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -245,13 +257,13 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("	． 　 　 ∧ ∧");
-System.out.println("	　 　　(´･ω･ ∩　레벨 UP！");
-System.out.println("	　　　o.　　 ,ﾉ.");
-System.out.println("	　 　　Ｏ＿ .ﾉ");
-System.out.println("	　 　 　 　(ノ");
-System.out.println("	　 　 　　i｜|");
-System.out.println("	　　　　 	━━");
+System.out.println("\t\t\t\t\t\t	． 　 　 ∧ ∧");
+System.out.println("\t\t\t\t\t\t	　 　　(´･ω･ ∩　레벨 UP！");
+System.out.println("\t\t\t\t\t\t	　　　o.　　 ,ﾉ.");
+System.out.println("\t\t\t\t\t\t	　 　　Ｏ＿ .ﾉ");
+System.out.println("\t\t\t\t\t\t	　 　 　 　(ノ");
+System.out.println("\t\t\t\t\t\t	　 　 　　i｜|");
+System.out.println("\t\t\t\t\t\t	　　　　 	━━");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -266,19 +278,19 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		┏━━━━━━━┓");
-System.out.println("		┃ 　　　┃");
-System.out.println("		┃ ┏━━━┓ ┃");
-System.out.println("		┗━┛　 ┃ ┃");
-System.out.println("		　　┏━┛ ┃");
-System.out.println("		　　┃ ┏━┛");
-System.out.println("		　　┗━┛");
-System.out.println("		　　┏━┓");
-System.out.println("		　　┃ ┃");
-System.out.println("		　　┗━┛");
-System.out.println("		　　　〇");
-System.out.println("		　　　ｏ");
-System.out.println("		　　　　(・ д ・)");
+System.out.println("\t\t\t\t\t\t\t		┏━━━━━━━┓");
+System.out.println("\t\t\t\t\t\t\t		┃ 　　　┃");
+System.out.println("\t\t\t\t\t\t\t		┃ ┏━━━┓ ┃");
+System.out.println("\t\t\t\t\t\t\t		┗━┛　 ┃ ┃");
+System.out.println("\t\t\t\t\t\t\t		　　┏━┛ ┃");
+System.out.println("\t\t\t\t\t\t\t		　　┃ ┏━┛");
+System.out.println("\t\t\t\t\t\t\t		　　┗━┛");
+System.out.println("\t\t\t\t\t\t\t		　　┏━┓");
+System.out.println("\t\t\t\t\t\t\t		　　┃ ┃");
+System.out.println("\t\t\t\t\t\t\t		　　┗━┛");
+System.out.println("\t\t\t\t\t\t\t		　　　〇");
+System.out.println("\t\t\t\t\t\t\t		　　　ｏ");
+System.out.println("\t\t\t\t\t\t\t		　　　　(・ д ・)");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -290,12 +302,12 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.⠀⠀⠀⠀➵⠀➵");
-System.out.println("		⠀⠀➶⠀⠀⠀⠀⠀⠀➴⠀");
-System.out.println("		➶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀➴⠀");
-System.out.println("		　　　　　　　∧_∧");
-System.out.println("		　　　　　　 (;・Д・)");
-System.out.println("		　　　　뭔가 불길한 예감이 든다");
+System.out.println("\t\t\t\t\t\t		.⠀⠀⠀⠀➵⠀➵");
+System.out.println("\t\t\t\t\t\t		⠀⠀➶⠀⠀⠀⠀⠀⠀➴⠀");
+System.out.println("\t\t\t\t\t\t		➶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀➴⠀");
+System.out.println("\t\t\t\t\t\t		　　　　　　　∧_∧");
+System.out.println("\t\t\t\t\t\t		　　　　　　 (;・Д・)");
+System.out.println("\t\t\t\t\t\t		　　　　뭔가 불길한 예감이 든다");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -307,10 +319,10 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
-System.out.println("		████▌▄▌▄▐▐▌█████");
-System.out.println("		████▌▄▌▄▐▐▌▀████");
-System.out.println("		▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+System.out.println("\t\t\t\t\t\t\t		▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+System.out.println("\t\t\t\t\t\t\t		████▌▄▌▄▐▐▌█████");
+System.out.println("\t\t\t\t\t\t\t		████▌▄▌▄▐▐▌▀████");
+System.out.println("\t\t\t\t\t\t\t		▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -324,20 +336,20 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		
-System.out.println("		.⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷");
-System.out.println("		⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀");
-System.out.println("		⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⠀⠛⠛⣿⣿⣿⡛⠿⠷");
-System.out.println("		⠀⠀⠀⠀⠀⠘⠿⠿⠋⠀⠀⠀⠀⠀⠀⣿⣿⣿⠇");
-System.out.println("		⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁");
-System.out.println("		⠀⠀⠀⠀⣿⣷⣄⠀⢶⣶⣷⣶⣶⣤⣀");
-System.out.println("		⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠈⠙⠻⠗");
-System.out.println("		⠀⠀⠀⣰⣿⣿⣿⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⡄");
-System.out.println("		⠀⣠⣾⣿⣿⣿⣥⣶⣶⣿⣿⣿⣿⣿⠿⠿⠛⠃");
-System.out.println("		⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄");
-System.out.println("		⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁");
-System.out.println("		⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁");
-System.out.println("		⠀⠀⠛⢿⣿⣿⣿⣿⣿⣿⡿⠟");
-System.out.println("		⠀⠀⠀⠀⠀⠉⠉⠉");
+System.out.println("\t\t\t\t\t\t\t		.⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⠀⢸⣿⣿⣷⠀⠀⠀⠀⠛⠛⣿⣿⣿⡛⠿⠷");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⠀⠘⠿⠿⠋⠀⠀⠀⠀⠀⠀⣿⣿⣿⠇");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⣿⣷⣄⠀⢶⣶⣷⣶⣶⣤⣀");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠈⠙⠻⠗");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⣰⣿⣿⣿⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⡄");
+System.out.println("\t\t\t\t\t\t\t		⠀⣠⣾⣿⣿⣿⣥⣶⣶⣿⣿⣿⣿⣿⠿⠿⠛⠃");
+System.out.println("\t\t\t\t\t\t\t		⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄");
+System.out.println("\t\t\t\t\t\t\t		⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁");
+System.out.println("\t\t\t\t\t\t\t		⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠛⢿⣿⣿⣿⣿⣿⣿⡿⠟");
+System.out.println("\t\t\t\t\t\t\t		⠀⠀⠀⠀⠀⠉⠉⠉");
 System.out.println();
 System.out.println();
 System.out.println();
@@ -347,22 +359,22 @@ System.out.println();
 	
 	public static void costTimeTable() { //고객 > 요금표 
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-		System.out.println("\t\t\t\t\t\t\t 요금표");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 요금표");
 		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t\t\t\t\t [운임]\t\t[연령]\t\t[이용방법]\t[수도권 가격]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[일반]\t\t[교통카드]\t[1400원]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[일반]\t\t[1회권]\t\t[1500원]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[청소년]\t[교통카드]\t[800원]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[청소년]\t[1회권]\t\t[1500원]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[어린이]\t[교통카드]\t[500원]");
-		System.out.println("\t\t\t\t\t\t\t [기본운임]\t[어린이]\t[1회권]\t\t[500원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [운임]\t\t[연령]\t\t[이용방법]\t[수도권 가격]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[일반]\t\t[교통카드]\t[1400원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[일반]\t\t[1회권]\t\t[1500원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[청소년]\t[교통카드]\t[800원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[청소년]\t[1회권]\t\t[1500원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[어린이]\t[교통카드]\t[500원]");
+		System.out.println("\t\t\t\t\t\t\t\t\t [기본운임]\t[어린이]\t[1회권]\t\t[500원]");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t만 6세 미만 또는 만 65세 이상, 장애인, 국가 유공자, 보훈 보상대상자 무료");
+		System.out.println("\t\t\t\t\t\t만 6세 미만 또는 만 65세 이상, 장애인, 국가 유공자, 보훈 보상대상자 무료");
 		
 	}
 	
@@ -1305,10 +1317,10 @@ System.out.println();
 		System.out.println();
 		System.out.println("========================================================================================================================================================================================");
 		System.out.println();
-		System.out.println("\t\t\t\t\t 1. 근무지 변경");
-		System.out.println("\t\t\t\t\t 2. 직급 변경");
-		System.out.println("\t\t\t\t\t 3. 직원 삭제");
-		System.out.println("\t\t\t\t\t 4. 뒤로 가기");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 1. 근무지 변경");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 2. 직급 변경");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 3. 직원 삭제");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 4. 뒤로 가기");
 	
 	}
 	
@@ -1521,7 +1533,7 @@ System.out.println();
 		System.out.println("\t\t\t\t\t\t\t (정기권은 영어 대문자로만 이뤄져있습니다.)");
 		System.out.println("========================================================================================================================================================================================");
 	}
-	public static void idError() { //존재하지 않는 아이디를 입력할 시 에러
+	public static void noIdError() { //존재하지 않는 아이디를 입력할 시 에러
 		System.out.println("========================================================================================================================================================================================");
 		System.out.println("\t\t\t\t\t\t\t\t\t\t 존재하지 않는 아이디입니다. ");
 		System.out.println("========================================================================================================================================================================================");
@@ -1532,6 +1544,13 @@ System.out.println();
 		System.out.println("\t\t\t\t\t\t\t\t\t\t 존재하지 않는 역입니다. ");
 		System.out.println("========================================================================================================================================================================================");
 
+	}
+	
+	public static void twiceIdError() {
+		System.out.println("========================================================================================================================================================================================");
+		System.out.println("\t\t\t\t\t\t\t\t\t\t 이미 존재하는 아이디입니다.");
+		System.out.println("========================================================================================================================================================================================");
+		
 	}
 	
 	public static void lineError() { //잘못된 호선을 집어넣을 경우
@@ -1564,14 +1583,14 @@ System.out.println();
 	}
 	
 	public static void page() { // 페이지 넘기기 라벨
-		System.out.println("_________________________________________________________________________________________________________");
-		System.out.println("\t\t\t\t\t\t\t\t\t\t (이전 페이지를 보고 싶으면 q, 다음 페이지를 보고 싶으면 e를 입력해주세요.)");
-		System.out.println("---------------------------------------------------------------------------------------------------------");
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+		System.out.println("\t\t\t\t\t\t (이전 페이지를 보고 싶으면 q, 다음 페이지를 보고 싶으면 e를 입력해주세요.)");
+		System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
 		
 	}
 	public static void back() { // 메인메뉴 돌아가기 라벨 
-		System.out.println("\t\t\t\t\t\t\t\t\t\t (메인메뉴로 돌아가기를 희망하면 q,e 이외의 글자를 입력해주세요.)");
+		System.out.println("\t\t\t\t\t\t (메인메뉴로 돌아가기를 희망하면 q,e 이외의 글자를 입력해주세요.)");
 		
 	}
 	

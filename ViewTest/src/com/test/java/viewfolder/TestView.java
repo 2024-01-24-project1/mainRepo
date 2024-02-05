@@ -8,6 +8,7 @@ public class TestView {
 		//메인
 //		ViewAll.trainFront();
 		// 이모티콘 모음 
+		ViewAll.trainSide();
 		ViewAll.successThumbUpEmo();
 		System.out.println();
 		ViewAll.successVEmo();
@@ -96,7 +97,8 @@ public class TestView {
 		System.out.println();
 		ViewAll.favoriteList();
 		System.out.println();
-		ViewAll.idError();
+		ViewAll.twiceIdError();
+		ViewAll.noIdError();
 		System.out.println();
 		ViewAll.lineError();
 		System.out.println();

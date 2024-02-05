@@ -24,6 +24,8 @@ public class UserVoiceSearch {
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
+				
+				// 모든민원보기 종료
 				break;
 			}
 			
@@ -42,7 +44,6 @@ public class UserVoiceSearch {
 					
 				}
 				
-				
 			}else {
 				System.out.println("잘못된 제목");
 				System.out.println("다시 입력하세요.");
@@ -51,9 +52,6 @@ public class UserVoiceSearch {
 			
 			
 		}//while루프 종료
-		
-		
-		
 		
 	}//End of userVoiceAll()
 	
@@ -107,7 +105,5 @@ public class UserVoiceSearch {
 		}//while루프 종료
 		
 	}//End of lostArticlePage()
-	
-	
 	
 }//End of class

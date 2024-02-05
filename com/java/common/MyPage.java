@@ -160,11 +160,14 @@ public class MyPage {
 				}
 				
 				
-			}else {
+			}else if (employeeCheck && Validation.is_Sudo(DELETE)) {
+				System.out.println("최고권한 계정은 회원탈퇴가 불가능합니다.");
+			}
+			else {
 				System.out.println("계정삭제 취소");
 			}
 			
-			
+			View.pause();
 		}
 		
 	}//End of myPageRemoveID()

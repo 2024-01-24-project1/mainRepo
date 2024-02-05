@@ -94,13 +94,13 @@ public class EmployeeUpdateTab {
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
+			View.pause();
 		}
 	}//End of searchEmployeeId()
 	
 	
 	// 직급 변경
 	public static void updatePosition(String id) {
-		
 			
 			Scanner scan = new Scanner(System.in);
 			
@@ -130,9 +130,6 @@ public class EmployeeUpdateTab {
 					View.pause();
 				}
 			}
-				
-		
-		System.out.println("직급 변경 종료");
 		
 	}//End of updatePosition()
 	
@@ -167,9 +164,6 @@ public class EmployeeUpdateTab {
 				View.pause();
 			}
 		}
-			
-	
-	System.out.println("권한 변경 종료");
 		
 	}//End of updateLevel()
 
@@ -256,10 +250,10 @@ public class EmployeeUpdateTab {
 							employee.setLine(LINE);			// 호선 변경
 							employee.setStation(STATION);	// 역 변경
 							System.out.println("근무지 변경 완료");
+							View.pause();
 							break;	// 직원객체 탐색 종료
 							
 						}
-						
 						
 					}
 					
@@ -277,9 +271,6 @@ public class EmployeeUpdateTab {
 			}
 			
 		}//while루프 종료
-			
-	
-	System.out.println("근무지 변경 종료");
 		
 	}//End of updateWorkArea()
 	
@@ -287,7 +278,6 @@ public class EmployeeUpdateTab {
 		
 		boolean userCheck = false;
 		boolean employeeCheck = false;
-		
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -355,6 +345,7 @@ public class EmployeeUpdateTab {
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
 						System.out.println(DELETE + "계정 삭제완료");
+						View.pause();
 						break;	// employee객체 탐색 중지
 					}
 					
@@ -366,15 +357,15 @@ public class EmployeeUpdateTab {
 			}
 			
 			
-		}else {
+		}else if (employeeCheck && (!Validation.is_Sudo(DELETE))) {
+			System.out.println("최고권한 계정은 삭제할수없습니다.");
+		}
+		else {
 			System.out.println("입력하신 계정은 존재하지 않습니다.");
 		}
 		
-		System.out.println("계정 삭제 종료.");
+		View.pause();
 		
 	}//End of deleteAccount()
-	
-	
-	
 	
 }//End of class

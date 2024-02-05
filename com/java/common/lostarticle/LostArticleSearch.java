@@ -33,11 +33,11 @@ public class LostArticleSearch {
 							 													, article.getFindStation() + "역"));
 					
 					System.out.printf("Page| %s / %s\r\n", index + 1, page);
-					System.out.print("back입력시 뒤로갑니다.");
+					System.out.print("엔터입력시 리스트보기를 종료합니다.");
 					System.out.print("원하는 페이지: ");
 					sel = scan.nextLine();
 					
-					if(sel.equals("back")) {
+					if(sel.equals("")) {
 						break;
 					}else if (Validation.is_NumString(sel)) {
 						index = Integer.parseInt(sel) - 1;

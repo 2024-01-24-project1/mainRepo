@@ -346,4 +346,16 @@ public final class Validation {
 			return check;
 		}
 		
+		// 분실물의 이름과 보관역을 받아서 
+		// 존재하는 분실물인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_LostArticle(String lostArticle, String station) {
+			boolean check = false;
+			
+			check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().equals(lostArticle) 
+																   && article.getFindStation().equals(station)); 
+			
+			return check;
+		}
+		
 }//End of class

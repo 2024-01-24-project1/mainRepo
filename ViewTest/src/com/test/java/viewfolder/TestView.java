@@ -4,20 +4,34 @@ public class TestView {
 
 	public static void main(String[] args) {
 		ViewAll.lostarticleListCheckTop();
+		System.out.println();
 		ViewAll.userVocWrite();
+		System.out.println();
 		ViewAll.trainTimeTable();
+		System.out.println();
 		ViewAll.userResign();
+		System.out.println();
 		ViewAll.lineFavorite();
+		System.out.println();
 		ViewAll.userMyInfo();
+		System.out.println();
 		ViewAll.signupFindMain();
-		
+
+		System.out.println();
 		ViewAll.loginTop();
+
+		System.out.println();
 		ViewAll.statisticsUserMain();
+		System.out.println();
 		
 		ViewAll.lostarticleAddResult();
+		System.out.println();
 		ViewAll.safetyEmployeeSearchStation();
+		System.out.println();
 		ViewAll.employeeDeleteResult();
+		System.out.println();
 		ViewAll.employeerankChangeOne();
+		System.out.println();
 		ViewAll.employeeOfficeChangeOne();
 		System.out.println();
 		ViewAll.employeeInfoChangeMain();

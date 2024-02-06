@@ -18,6 +18,7 @@ public final class PassengerCounting {
 		return date;
 	}
 	public String getLine() {
+	
 		return line;
 	}
 	public String getStation() {

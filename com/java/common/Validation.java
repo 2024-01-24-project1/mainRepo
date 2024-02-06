@@ -2,8 +2,12 @@ package com.java.common;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.java.station.management.StationManagement;
+import com.java.view.View;
 
 // 유효성 검사 클래스 
 // true false만 반환
@@ -370,29 +374,271 @@ public final class Validation {
 			return check;
 		}
 		
-		// 입력받은 문자열이 평일,주말인지 확인하는 메서드
-		// 평일,주말 입력이면 true, 아니면 false
-		public static boolean is_WeekOf(String input) {
+		public static boolean is_ExistBookMark(List<String> userBookMark) {
 			
-			if(input.equals("평일") || input.equals("주말")) {
-				return true;
-			}else {
+			if(userBookMark.size()==0) {
+				
+				System.out.println("즐겨찾기한 목록이 없습니다.");
+				View.pause();
+				return false;
+			}
+			return true;
+		}
+		
+		public static boolean is_busyStat(String line,  String way, String dayOfWeek, String timeStr) {
+			
+			try {
+				
+				int time = Integer.parseInt(timeStr);
+				
+				if(time<5 && time > 25) {
+					return false;
+				}
+				
+				
+			} catch (Exception e) {
+				
+				return false;
+				
+			}
+			
+			
+			
+			if(line.contains("호선")){
+				line = line.replace("호선", "");
+			}
+				
+			//호선 입력 확인 (1~9호선)
+			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
+					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
+					&& !line.equals("8") && !line.equals("9")) {
+				
+				return false;
+				
+			}
+			
+			if(!way.equals("상행") && !way.equals("하행") && !way.equals("내선") && !way.equals("외선")) {
+				
+				return false;
+				
+			}
+			
+
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+				
+				return false;
+				
+			}
+			
+			
+			if(dayOfWeek.equals("주말")) {
+				dayOfWeek = "토요일";
+			}
+			
+			
+			return true;
+			
+		}
+		public static boolean is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
+				String dayOfWeek) {
+			
+			if(line.contains("호선")){
+				line = line.replace("호선", "");
+			}
+				
+			//호선 입력 확인 (1~9호선)
+			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
+					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
+					&& !line.equals("8") && !line.equals("9")) {
 				return false;
 			}
 			
+			
+			
+			//추가 열차수가 예비열차수를 넘기거나 이미 예비열차수가 0인경우
+			
+			try {
+				if(StationManagement.spareTrain==0 && (Integer.parseInt(trainNums)-StationManagement.spareTrain)<=0) {
+					return false;
+				}
+				
+			} catch (Exception e) {
+				
+				return false;
+				
+			}
+
+			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
+				
+				return false;
+
+			}
+			if(startStation.equals(endStation)) {
+				return false;
+			}
+			
+
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+				
+				return false;
+				
+			}
+			
+			
+			if(dayOfWeek.equals("주말")) {
+				dayOfWeek = "토요일";
+			}
+			
+			return true;
+			
 		}
 		
-		// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
-		// 맞으면 true, 아니면 false
-		public static boolean is_OperationTime(String input) {
+		public static boolean is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
+				String dayOfWeek) {
 			
-	        try {
-	            int number = Integer.parseInt(input);
-	            return number >= 5 && number <= 24;
+			if(line.contains("호선")){
+				line = line.replace("호선", "");
+			}
+				
+			//호선 입력 확인 (1~9호선)
+			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
+					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
+					&& !line.equals("8") && !line.equals("9")) {
+				return false;
+			}
+			
+			
+
+			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
+				
+				return false;
+
+			}
+
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+				
+				return false;
+				
+			}
+			
+			
+			if(dayOfWeek.equals("주말")) {
+				dayOfWeek = "토요일";
+			}
+			
+			return true;
+			
+		}
+		
+		public static boolean is_currentTime(String line, String startStation, String endStation) {
+			
+			
+			startStation = startStation.endsWith("역") ? startStation.substring(0,startStation.length()-1) : startStation;
+			endStation = endStation.endsWith("역") ? endStation.substring(0,endStation.length()-1) : endStation;
+			
+			if(line.contains("호선")){
+				line = line.replace("호선", "");
+			}
+				
+			//호선 입력 확인 (1~9호선)
+			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
+					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
+					&& !line.equals("8") && !line.equals("9")) {
+				return false;
+			}
+			
+			
+
+			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
+				
+				return false;
+
+			}
+
+			
+			
+			return true;
+			
+		}
+		
+		public static boolean is_anotherDate(String yearStr, String monthStr, String dateStr, String hourStr, String minuteStr) {
+			
+			try {
+	            int year = Integer.parseInt(yearStr);
+	            int month = Integer.parseInt(monthStr);
+	            int day = Integer.parseInt(dateStr);
+	            int hour = Integer.parseInt(hourStr);
+	            int minute = Integer.parseInt(minuteStr);
+	            		
+
+	            if (year < 1 || month < 1 || month > 12 || day < 1) {
+	                return false; // 년, 월, 일이 유효하지 않음
+	            }
+	            
+	            if (hour < 5 || hour > 24 || minute < 0 || minute > 59) {
+	                return false; // 시간 또는 분이 유효하지 않음
+	            }
+
+	            int daysInMonth = getDaysInMonth(year, month);
+	            return day <= daysInMonth;
+	            
 	        } catch (NumberFormatException e) {
-	            // 입력이 숫자가 아닌 경우에 대한 예외 처리
-	            return false;
+	            return false; // 정수로 변환할 수 없는 문자열이 입력됨
 	        }
+			
+
+			
+			
+			
+		}
+		
+	    public static int getDaysInMonth(int year, int month) {
+	        switch (month) {
+	            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+	                return 31;
+	            case 4: case 6: case 9: case 11:
+	                return 30;
+	            case 2:
+	                return isLeapYear(year) ? 29 : 28;
+	            default:
+	                return -1; // 잘못된 월 입력
+	        }
+			
+
+			
+			
+			
+		}
+		
+
+	    public static boolean isLeapYear(int year) {
+	        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 	    }
+
+	    
+	 // 입력받은 문자열이 평일,주말인지 확인하는 메서드
+	 		// 평일,주말 입력이면 true, 아니면 false
+	 		public static boolean is_WeekOf(String input) {
+	 			
+	 			if(input.equals("평일") || input.equals("주말")) {
+	 				return true;
+	 			}else {
+	 				return false;
+	 			}
+	 			
+	 		}
+	 		
+	 		// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
+	 		// 맞으면 true, 아니면 false
+	 		public static boolean is_OperationTime(String input) {
+	 			
+	 	        try {
+	 	            int number = Integer.parseInt(input);
+	 	            return number >= 5 && number <= 24;
+	 	        } catch (NumberFormatException e) {
+	 	            // 입력이 숫자가 아닌 경우에 대한 예외 처리
+	 	            return false;
+	 	        }
+	 	    }
 		
 }//End of class

@@ -11,9 +11,10 @@ import com.java.busy.Busy;
 import com.java.busy.BusyManagement;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
-import com.java.requiredtime.RequiredTime;
-import com.java.member.Member;
+import com.java.common.Validation;
 import com.java.member.user.BookMark;
+import com.java.requiredtime.RequiredTime;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class FindWay extends StationManagement {
@@ -63,11 +64,11 @@ public class FindWay extends StationManagement {
 					System.out.print("도착역: ");
 					end = reader.readLine();
 					
-					check = currentTimeVaildation(lines, start, end);
+					check = Validation.is_currentTime(lines, start, end);
 					
 					if(check) {
 						loop = false;
-					}else {
+					}else { //뒤로가기 추가
 						
 						System.out.println("잘못된 입력입니다. 다시 입력하세요.");
 						
@@ -78,6 +79,8 @@ public class FindWay extends StationManagement {
 				calendar.set(Calendar.HOUR_OF_DAY, 8);
 				calendar.set(Calendar.MINUTE, 30);
 				findWay(lines, start, end, calendar);
+				
+				View.pause();
 				
 				ViewAll.roadSearchRouteTimeBottom();
 				System.out.print("입력: ");
@@ -122,7 +125,7 @@ public class FindWay extends StationManagement {
 					System.out.print("분: ");
 					minute = reader.readLine();
 					
-					check = anotherDateVaildation(year,month,date,hour,minute);
+					check = Validation.is_anotherDate(year,month,date,hour,minute);
 					
 					if(check) {
 						
@@ -154,7 +157,7 @@ public class FindWay extends StationManagement {
 					System.out.print("도착역: ");
 					end = reader.readLine();
 					
-					check = currentTimeVaildation(lines, start, end);
+					check = Validation.is_currentTime(lines, start, end);
 					
 					if(check) {
 						
@@ -169,7 +172,7 @@ public class FindWay extends StationManagement {
 				}
 				
 				findWay(lines, start, end, calendar);
-				
+				View.pause();
 				
 				ViewAll.roadSearchRouteTimeBottom();
 				System.out.print("입력: ");
@@ -222,8 +225,8 @@ public class FindWay extends StationManagement {
 		String dayOfWeek ="";                 						//요일(평일/주말)
 		
 		
-		startStation = startStation.replace("역", "");
-		endStation   = endStation.replace("역", "");
+		startStation = startStation.endsWith("역") ? startStation.substring(0,startStation.length()-1) : startStation;
+		endStation = endStation.endsWith("역") ? endStation.substring(0,endStation.length()-1) : endStation;
 		
 	
 		
@@ -242,7 +245,7 @@ public class FindWay extends StationManagement {
 		
 		//현재 시간과 가장 가까운 열차 시간
 		departureTime = departureTrainTime(line, startStation, dayOfWeek ,calendar);
-
+ 
 		//true면 상행선
 		if(stationManagement.way) {
 
@@ -509,82 +512,7 @@ public class FindWay extends StationManagement {
 		
 	}//printWay
 	
-	private boolean currentTimeVaildation(String line, String startStation, String endStation) {
-		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
-			
-		//호선 입력 확인 (1~9호선)
-		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
-				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
-				&& !line.equals("8") && !line.equals("9")) {
-			return false;
-		}
-		
-		
-
-		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
-			
-			return false;
-
-		}
-
-		
-		
-		return true;
-		
-		//addTrainVaildation
-	}
 	
-	private boolean anotherDateVaildation(String yearStr, String monthStr, String dateStr, String hourStr, String minuteStr) {
-		
-		try {
-            int year = Integer.parseInt(yearStr);
-            int month = Integer.parseInt(monthStr);
-            int day = Integer.parseInt(dateStr);
-            int hour = Integer.parseInt(hourStr);
-            int minute = Integer.parseInt(minuteStr);
-            		
-
-            if (year < 1 || month < 1 || month > 12 || day < 1) {
-                return false; // 년, 월, 일이 유효하지 않음
-            }
-            
-            if (hour < 5 || hour > 24 || minute < 0 || minute > 59) {
-                return false; // 시간 또는 분이 유효하지 않음
-            }
-
-            int daysInMonth = getDaysInMonth(year, month);
-            return day <= daysInMonth;
-            
-        } catch (NumberFormatException e) {
-            return false; // 정수로 변환할 수 없는 문자열이 입력됨
-        }
-		
-
-		
-		
-		
-	}
-	
-    private int getDaysInMonth(int year, int month) {
-        switch (month) {
-            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                return 31;
-            case 4: case 6: case 9: case 11:
-                return 30;
-            case 2:
-                return isLeapYear(year) ? 29 : 28;
-            default:
-                return -1; // 잘못된 월 입력
-        }
-    }
-
-    private boolean isLeapYear(int year) {
-        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-    }
-
 
 
 }

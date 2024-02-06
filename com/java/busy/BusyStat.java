@@ -1,12 +1,12 @@
 package com.java.busy;
 
 import java.io.BufferedReader;
-
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Scanner;
 
+import com.java.common.Validation;
 import com.java.station.management.StationManagement;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 
@@ -38,12 +38,10 @@ public class BusyStat extends StationManagement{
 			String time = "";
 			
 			
-			Scanner scan = new Scanner(System.in);
+			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
 			while(true) {
-				
-				String sel = "";
 				
 				ViewAll.statisticsChaosOne();
 				System.out.print("호선: ");
@@ -69,7 +67,7 @@ public class BusyStat extends StationManagement{
 				System.out.print("시간: ");
 				time = reader.readLine();
 				
-				check = busyStatVaildation(lines,way,dayOfWeek,time);
+				check = Validation.is_busyStat(lines,way,dayOfWeek,time);
 				
 				if(check) {
 					
@@ -77,22 +75,17 @@ public class BusyStat extends StationManagement{
 					
 				}else {
 					
-					System.out.println("잘못된 입력입니다.");
-					System.out.println("뒤로가려면 엔터 다시입력하려면 아무키나 입력하세요.");
-					System.out.print("입력: ");
-					sel = scan.nextLine();
-					
-					if(sel.equals("")) {
-						
-						return;
-					}
+					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+
 				}
 				
-			}//while루프 종료
+			}
 			
 			
 			this.route = lineRoute(lines);
 			printBusy(BusyManagement.searchBusy(lines, way, dayOfWeek,this.route),lines,way,dayOfWeek,time);
+			
+			View.pause();
 			
 			
 		} catch (Exception e) {
@@ -121,61 +114,6 @@ public class BusyStat extends StationManagement{
 		
 	}
 	
-	private boolean busyStatVaildation(String line,  String way, String dayOfWeek, String timeStr) {
-		
-		try {
-			
-			int time = Integer.parseInt(timeStr);
-			
-			if(time<5 && time > 25) {
-				return false;
-			}
-			
-			
-		} catch (Exception e) {
-			
-			return false;
-			
-		}
-		
-		
-		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
-			
-		//호선 입력 확인 (1~9호선)
-		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
-				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
-				&& !line.equals("8") && !line.equals("9")) {
-			
-			return false;
-			
-		}
-		
-		if(!way.equals("상행") && !way.equals("하행") && !way.equals("내선") && !way.equals("외선")) {
-			
-			return false;
-			
-		}
-		
-
-		if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
-			
-			return false;
-			
-		}
-		
-		
-		if(dayOfWeek.equals("주말")) {
-			dayOfWeek = "토요일";
-		}
-		
-		
-		return true;
-		
-		//addTrainVaildation
-	}
 	
 	
 

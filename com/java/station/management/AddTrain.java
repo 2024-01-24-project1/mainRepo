@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import com.java.busy.BusyManagement;
+import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 
@@ -43,6 +45,10 @@ public class AddTrain extends StationManagement {
 				System.out.print("호선: ");
 				line = reader.readLine();
 				
+				if(line.contains("호선")){
+					line = line.replace("호선", "");
+				}
+
 				ViewAll.trainAddTwo();
 				System.out.print("추가 열차수: ");        
 				trainNums = reader.readLine();
@@ -64,13 +70,14 @@ public class AddTrain extends StationManagement {
 				dayOfWeek = reader.readLine();
 				
 				
-				check = addTrainVaildation(line, trainNums, startStation, endStation, time, dayOfWeek);
+				check = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
 				
 				if(check) {
 					loop = false;
 				}else {
 					
 					ViewAll.trainAddError();
+					System.out.println("뒤로 가려면 엔터를 입력하세요.");
 					
 				}
 				
@@ -93,7 +100,7 @@ public class AddTrain extends StationManagement {
 			stationManagement.way = findLineWay(line, startStation, endStation);
 			
 			//호선 전체경로 가져오기
-			stationManagement.route = stationManagement.lineRoute(line); 
+			stationManagement.route = StationManagement.lineRoute(line); 
 			
 			
 			for(String s : stationManagement.route) {
@@ -132,6 +139,16 @@ public class AddTrain extends StationManagement {
 			ViewAll.trainAddResult();
 			printBusy(startStation, endStation, time,stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
 			
+			//혼잡도 수치 수정
+			BusyManagement.modifyBusyValue(line,stationManagement.way,time,dayOfWeek,stationManagement.modifyBusy, stationManagement.route);
+			
+			//추가된 열차수 빼기
+			StationManagement.spareTrain -= Integer.parseInt(trainNums);
+			
+			
+			LogSave.logSave(LogSave.ADDTRAIN);
+			System.out.print("계속 하려면 엔터를 입력하세요.");
+			reader.readLine();
 			
 			
 		} catch (Exception e) {
@@ -143,56 +160,6 @@ public class AddTrain extends StationManagement {
 
 	}
 
-	private boolean addTrainVaildation(String line, String trainNums, String startStation, String endStation, String time,
-			String dayOfWeek) {
-		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
-			
-		//호선 입력 확인 (1~9호선)
-		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
-				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
-				&& !line.equals("8") && !line.equals("9")) {
-			return false;
-		}
-		
-		
-		
-		//추가 열차수가 예비열차수를 넘기거나 이미 예비열차수가 0인경우
-		
-		try {
-			if(StationManagement.spareTrain==0 && (Integer.parseInt(trainNums)-StationManagement.spareTrain)<=0) {
-				return false;
-			}
-			
-		} catch (Exception e) {
-			
-			return false;
-			
-		}
-
-		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
-			
-			return false;
-
-		}
-
-		if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
-			
-			return false;
-			
-		}
-		
-		
-		if(dayOfWeek.equals("주말")) {
-			dayOfWeek = "토요일";
-		}
-		
-		return true;
-		
-		//addTrainVaildation
-	}
 
 	/**
 	 * 해당 시간(time)의 혼잡도를 열차를 추가할 경우 바뀐 혼잡도를 반환하는 메서드

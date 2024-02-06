@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import com.java.busy.BusyManagement;
+import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 public class ChangeNoChairTrain extends StationManagement{
@@ -56,7 +58,7 @@ public class ChangeNoChairTrain extends StationManagement{
 				System.out.print("요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
-				check = changeNoChiarTrainVaildation(line, startStation, endStation, time, dayOfWeek);
+				check = Validation.is_changeNoChiarTrain(line, startStation, endStation, time, dayOfWeek);
 				
 				if(check) {
 					
@@ -93,6 +95,12 @@ public class ChangeNoChairTrain extends StationManagement{
 			ViewAll.changeNoChairTrainResult();
 			printBusy(startStation, endStation, time, stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
 			
+			//혼잡도 수치 조정
+			BusyManagement.modifyBusyValue(line,stationManagement.way,time,dayOfWeek,stationManagement.modifyBusy, stationManagement.route);
+			
+			LogSave.logSave(LogSave.NOCHAIRTRAIN);
+			System.out.println("계속하려면 엔터를 입력하세요.");
+			reader.readLine();
 			
 		} catch (Exception e) {
 			System.out.println("ChangeNoChairTrain.changeNoChairTrain");
@@ -103,45 +111,6 @@ public class ChangeNoChairTrain extends StationManagement{
 		
 	}
 	
-	private boolean changeNoChiarTrainVaildation(String line, String startStation, String endStation, String time,
-			String dayOfWeek) {
-		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
-			
-		//호선 입력 확인 (1~9호선)
-		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
-				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
-				&& !line.equals("8") && !line.equals("9")) {
-			return false;
-		}
-		
-		
-
-		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
-			
-			return false;
-
-		}
-
-		if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
-			
-			return false;
-			
-		}
-		
-		
-		if(dayOfWeek.equals("주말")) {
-			dayOfWeek = "토요일";
-		}
-		
-		return true;
-		
-		//addTrainVaildation
-	}
-	
-	
 	
 	public ArrayList<Double> calcBusy(String time) {
 		
@@ -149,7 +118,7 @@ public class ChangeNoChairTrain extends StationManagement{
 		
 //		열차한칸인원(160) * 혼잡도 / 변경후 인원수(202명) = 변경 혼잡도
 		//202명 : 혼잡도 = 160명 : 변경혼잡도
-		for(int i=0; i<stationManagement.busyList.get(i).getCrowded().size(); i++) {
+		for(int i=0; i<stationManagement.busyList.size(); i++) {
 			
 			double avg = 0;
 			

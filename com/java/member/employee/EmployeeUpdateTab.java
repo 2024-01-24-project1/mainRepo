@@ -128,6 +128,14 @@ public class EmployeeUpdateTab {
 					break;
 				}else {
 					System.out.println("잘못된 직급");
+					System.out.println("직급변경을 그만두시려면 엔터");
+					System.out.println("다시 입력하시려면 아무키나 입력하세요");
+					System.out.println("입력: ");
+					input = scan.nextLine();
+					
+					if(input.equals("")) {
+						break;
+					}
 					View.pause();
 				}
 			}
@@ -268,12 +276,28 @@ public class EmployeeUpdateTab {
 					
 				}else {	   // 역이름이 호선과 틀릴경우
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-					View.pause();
+					System.out.println("근무지 배치를 그만두시려면 엔터");
+					System.out.println("다시 입력하시려면 아무키나 입력하세요");
+					System.out.println("입력: ");
+					input = scan.nextLine();
+					
+					if(input.equals("")) {
+						return;
+					}
+					
 				}
 				
 			}else {
 				System.out.println("잘못된 호선");
-				View.pause();
+				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
+				System.out.println("근무지 배치를 그만두시려면 엔터");
+				System.out.println("다시 입력하시려면 아무키나 입력하세요");
+				System.out.println("입력: ");
+				input = scan.nextLine();
+				
+				if(input.equals("")) {
+					return;
+				}
 			}
 			
 		}//while루프 종료

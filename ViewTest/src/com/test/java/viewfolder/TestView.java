@@ -3,81 +3,91 @@ package com.test.java.viewfolder;
 public class TestView {
 
 	public static void main(String[] args) {
-		ViewAll.lostarticleListCheckTop();
-		System.out.println();
-		ViewAll.userVocWrite();
-		System.out.println();
-		ViewAll.trainTimeTable();
-		System.out.println();
-		ViewAll.userResign();
-		System.out.println();
-		ViewAll.lineFavorite();
-		System.out.println();
-		ViewAll.userMyInfo();
-		System.out.println();
-		ViewAll.signupFindMain();
-
-		System.out.println();
-		ViewAll.loginTop();
-
-		System.out.println();
-		ViewAll.statisticsUserMain();
-		System.out.println();
+//		ViewAll.roadSearchEmo();
 		
-		ViewAll.lostarticleAddResult();
-		System.out.println();
-		ViewAll.safetyEmployeeSearchStation();
-		System.out.println();
-		ViewAll.employeeDeleteResult();
-		System.out.println();
-		ViewAll.employeerankChangeOne();
-		System.out.println();
-		ViewAll.employeeOfficeChangeOne();
-		System.out.println();
-		ViewAll.employeeInfoChangeMain();
-		System.out.println();
-		ViewAll.employeeSearchLineResult();
-		System.out.println();
-		ViewAll.employeeSearchLine();
-		System.out.println();
-		ViewAll.employeeTotalInfo();
-		System.out.println();
-		ViewAll.stationMain();
-		System.out.println();
-		ViewAll.trainAddResult();
-		System.out.println();
-		ViewAll.trainAddOne();
-		System.out.println();
-		ViewAll.adminMainView();
-		System.out.println();
-		ViewAll.seasonPassError();
-		System.out.println();
-		ViewAll.rankNameError();
-		System.out.println();
-		ViewAll.nameError();
-		System.out.println();
-		ViewAll.rankError();
-		System.out.println();
-		ViewAll.lineError();
-		System.out.println();
-		ViewAll.noIdError();
-		System.out.println();
-		ViewAll.stationError();
-		System.out.println();
-		ViewAll.calError();
-		System.out.println();
-		ViewAll.trainAddTwo();
-		System.out.println();
-		ViewAll.trainAddOne();
-		System.out.println();
-		ViewAll.stationMain();
-		System.out.println();
-		System.out.println();
-		ViewAll.twiceIdError();
-		System.out.println();
-		System.out.println();
-		ViewAll.userMainView();		
-		ViewAll.trainAddFour();
+//		ViewAll.seasonPassEmo(); //정기권 이모
+//		ViewAll.lostarticleEmo(); //분실물 이모
+//		System.out.println();
+		
+//		ViewAll.successThumbUpEmo(); //성공 이모
+//		System.out.println();
+//		ViewAll.safetyEmployeeUnlockEmo(); //해제 이모
+//		System.out.println();
+//		ViewAll.lostarticleListCheckTop(); //
+//		System.out.println();
+//		ViewAll.userVocWrite();
+//		System.out.println();
+//		ViewAll.trainTimeTable();
+//		System.out.println();
+//		ViewAll.userResign();
+//		System.out.println();
+//		ViewAll.lineFavorite();
+//		System.out.println();
+//		ViewAll.userMyInfo();
+//		System.out.println();
+//		ViewAll.signupFindMain();
+//
+//		System.out.println();
+//		ViewAll.loginTop();
+//
+//		System.out.println();
+//		ViewAll.statisticsUserMain();
+//		System.out.println();
+//		
+//		ViewAll.lostarticleAddResult();
+//		System.out.println();
+//		ViewAll.safetyEmployeeSearchStation();
+//		System.out.println();
+//		ViewAll.employeeDeleteResult();
+//		System.out.println();
+//		ViewAll.employeerankChangeOne();
+//		System.out.println();
+//		ViewAll.employeeOfficeChangeOne();
+//		System.out.println();
+//		ViewAll.employeeInfoChangeMain();
+//		System.out.println();
+//		ViewAll.employeeSearchLineResult();
+//		System.out.println();
+//		ViewAll.employeeSearchLine();
+//		System.out.println();
+//		ViewAll.employeeTotalInfo();
+//		System.out.println();
+//		ViewAll.stationMain();
+//		System.out.println();
+//		ViewAll.trainAddResult();
+//		System.out.println();
+//		ViewAll.trainAddOne();
+//		System.out.println();
+//		ViewAll.adminMainView();
+//		System.out.println();
+//		ViewAll.seasonPassError();
+//		System.out.println();
+//		ViewAll.rankNameError();
+//		System.out.println();
+//		ViewAll.nameError();
+//		System.out.println();
+//		ViewAll.rankError();
+//		System.out.println();
+//		ViewAll.lineError();
+//		System.out.println();
+//		ViewAll.noIdError();
+//		System.out.println();
+//		ViewAll.stationError();
+//		System.out.println();
+//		ViewAll.calError();
+//		System.out.println();
+//		ViewAll.trainAddTwo();
+//		System.out.println();
+//		ViewAll.trainAddOne();
+//		System.out.println();
+//		ViewAll.stationMain();
+//		System.out.println();
+//		System.out.println();
+//		ViewAll.twiceIdError();
+//		System.out.println();
+//		System.out.println();
+//		ViewAll.userMainView();		
+//		ViewAll.trainAddFour();
 		//메인
 //		ViewAll.trainFront();
 		// 이모티콘 모음 

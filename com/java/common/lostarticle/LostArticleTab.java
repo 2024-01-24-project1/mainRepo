@@ -67,8 +67,12 @@ public class LostArticleTab {
 				System.out.print("분실물: ");
 				search = scan.nextLine();
 				
+				if (search.equals("")) {					// 엔터 입력시 문구 출력후 쫒아내기
+					System.out.println("잘못된 입력입니다.");
+					break;
+				}
+					
 				final String SEARCH = search;
-				System.out.println("");
 				
 				boolean check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().contains(SEARCH));
 				
@@ -85,7 +89,7 @@ public class LostArticleTab {
 					
 					LostArticleSearch.lostArticlePage(list);
 					
-				}else {			// 1개도 없으면
+				} else {			// 1개도 없으면
 					System.out.println(search + "를 포함하는 분실물이 없습니다.");
 				}
 				
@@ -97,7 +101,6 @@ public class LostArticleTab {
 				if(search.equals("")) {
 					break;
 				}
-				
 				
 			}//while루프 종료
 			

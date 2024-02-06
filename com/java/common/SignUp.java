@@ -116,20 +116,20 @@ public class SignUp {
 				System.out.println("이름 형식이 틀렸습니다.");
 			}
 			
-			if ( !Validation.is_Registration(registration) ) {
-				System.out.println("주민등록번호 형식이 틀렸습니다.");
+			if ( Validation.is_Registration(registration) ) {
+				addHyphenToRRN(registration);
 			}else if ( Validation.is_Duplication_RRN(registration)) {
 				System.out.println("중복된 주민등록");
 			}else {
-				addHyphenToRRN(registration);
+				System.out.println("주민등록번호 형식이 틀렸습니다.");
 			}
 			
-			if ( !Validation.is_Phone(phone) ) {
-				System.out.println("전화번호 형식이 틀렸습니다.");
+			if ( Validation.is_Phone(phone) ) {
+				formatPhoneNumber(phone);
 			}else if ( Validation.is_Duplication_Phone(phone)) {
 				System.out.println("중복된 전화번호입니다.");
 			}else {
-				formatPhoneNumber(phone);
+				System.out.println("전화번호 형식이 틀렸습니다.");
 			}
 			
 			if( !Validation.is_Code(code) && sel.equals("2")) {

@@ -4,18 +4,17 @@ public class TestView {
 
 	public static void main(String[] args) {
 //		ViewAll.roadSearchEmo();
+		ViewAll.seasonPassEmo(); //정기권 이모
+		ViewAll.lostarticleEmo(); //분실물 이모
+		System.out.println();
 		
-//		ViewAll.seasonPassEmo(); //정기권 이모
-//		ViewAll.lostarticleEmo(); //분실물 이모
-//		System.out.println();
-		
-//		ViewAll.successThumbUpEmo(); //성공 이모
+		ViewAll.successThumbUpEmo(); //성공 이모
 //		System.out.println();
 //		ViewAll.safetyEmployeeUnlockEmo(); //해제 이모
 //		System.out.println();
 //		ViewAll.lostarticleListCheckTop(); //
 //		System.out.println();
-//		ViewAll.userVocWrite();
+		ViewAll.userVocWrite();
 //		System.out.println();
 //		ViewAll.trainTimeTable();
 //		System.out.println();

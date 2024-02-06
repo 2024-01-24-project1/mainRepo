@@ -35,8 +35,8 @@ public final class EmployeeMode extends CommonFunction{
 			System.out.println("           6. 요금표");
 			System.out.println("           7. 열차 시간표");
 			System.out.println("           8. 행동로그 보기");
-			System.out.println("           9. 로그아웃");
-			System.out.println("          10. 마이페이지");
+			System.out.println("           9. 마이페이지");
+			System.out.println("          10. 로그아웃");
 			System.out.println("           0. 종료");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
@@ -84,13 +84,13 @@ public final class EmployeeMode extends CommonFunction{
 				// 행동로그 보기
 				
 			} else if (sel.equals("9")) {
+				MyPage.myPageList("2");
+				
+			} else if (sel.equals("10")) {
 				LoginLogout.logout();
 				
 				// 고객 모드 종료
 				break;
-				
-			} else if (sel.equals("10")) {
-				MyPage.myPageList("2");
 				
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");

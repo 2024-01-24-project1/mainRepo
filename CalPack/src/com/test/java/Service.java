@@ -39,10 +39,10 @@ public class Service {
 		String txt ; //내용 받을 변수
 		
 		System.out.println("===================================");
-		System.out.println("           추가 할 일정을 작성해주세요          ");
+		System.out.println("           추가 할 일정을 작성해주세요");
 		System.out.println("===================================");
 		
-		System.out.print("날짜(XXXX-XX-XX 형식으로 작성해주세요)");
+		System.out.print("날짜(XXXX-XX-XX) 형식으로 작성해주세요)");
 		
 		 date = scan.nextLine();
 		

@@ -533,7 +533,7 @@ public final class Validation {
 				
 			}
 
-			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
+			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
 				return false;
 
@@ -573,7 +573,7 @@ public final class Validation {
 			
 			
 
-			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
+			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
 				return false;
 

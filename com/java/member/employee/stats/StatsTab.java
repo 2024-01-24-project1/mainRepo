@@ -8,9 +8,9 @@ import com.java.view.View;
 
 public class StatsTab {
 	
-	final static long ALLSALES = 20000000000L;
+	final static long ALLSALES = 11300000000L;
 	
-	final static long ALLPASSENGER = 20000000L;
+	final static long ALLPASSENGER = 10000000L;
 	
 	
 	
@@ -71,7 +71,31 @@ public class StatsTab {
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
-					Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+					
+					int line = Integer.parseInt(sel.charAt(0) + "");
+					
+					switch (line) {
+					case 1: Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+							break;
+					case 2: Graph.drawGraph(Stats.linePassneger(sel), 2800000L);
+						    break;
+					case 3: Graph.drawGraph(Stats.linePassneger(sel), 1050000L);
+							break;
+					case 4: Graph.drawGraph(Stats.linePassneger(sel), 1030000L);
+							break;
+					case 5: Graph.drawGraph(Stats.linePassneger(sel), 1300000L);
+							break;
+					case 6: Graph.drawGraph(Stats.linePassneger(sel), 700000L);
+							break;
+					case 7: Graph.drawGraph(Stats.linePassneger(sel), 1200000L);
+							break;
+					case 8: Graph.drawGraph(Stats.linePassneger(sel), 390000L);
+							break;
+					case 9: Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+							break;
+						
+					}
+					
 				}else {
 					System.out.println("잘못된 입력");
 				}
@@ -109,7 +133,31 @@ public class StatsTab {
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
-					Graph.drawGraph(Stats.lineSales(sel), ALLPASSENGER);
+					
+					int line = Integer.parseInt(sel.charAt(0) + "");
+					
+					switch (line) {
+					case 1: Graph.drawGraph(Stats.lineSales(sel), ALLSALES);
+							break;
+					case 2: Graph.drawGraph(Stats.lineSales(sel), 3200000000L);
+						    break;
+					case 3: Graph.drawGraph(Stats.lineSales(sel), 1200000000L);
+							break;
+					case 4: Graph.drawGraph(Stats.lineSales(sel), 1150000000L);
+							break;
+					case 5: Graph.drawGraph(Stats.lineSales(sel), 1480000000L);
+							break;
+					case 6: Graph.drawGraph(Stats.lineSales(sel), 790000000L);
+							break;
+					case 7: Graph.drawGraph(Stats.lineSales(sel), 1380000000L);
+							break;
+					case 8: Graph.drawGraph(Stats.lineSales(sel), 440000000L);
+							break;
+					case 9: Graph.drawGraph(Stats.lineSales(sel), ALLPASSENGER);
+							break;
+						
+					}
+					
 				}else {
 					System.out.println("잘못된 입력");
 				}

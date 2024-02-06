@@ -55,8 +55,15 @@ public final class Load {
 						line = line.replaceAll("\"", "");
 						String[] lineArr = line.split(",");
 						
-						PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Long.parseLong(lineArr[3]));
-						Data.passengerCountingList.add(count);
+						if(lineArr[1].contains("공항철도")) {
+							
+						}else {
+							
+							PassengerCounting count = new PassengerCounting(lineArr[0], lineArr[1], lineArr[2], Long.parseLong(lineArr[3]));
+							Data.passengerCountingList.add(count);
+							
+						}
+						
 						
 					}
 					reader.close();

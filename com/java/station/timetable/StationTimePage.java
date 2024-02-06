@@ -130,10 +130,9 @@ public class StationTimePage {
 
 			// View클래스 출력
 			System.out.println("==============================================================================================");
-			System.out.printf("               %s %s역 %s 시간표\r\n", line, stationName, weekOf);
-			System.out.println("==============================================================================================");
-			System.out.println("                시간적기");
-			System.out.printf("\t\t\t%-10s\t\t\t%-10s\r\n", up.get(0), down.get(0));
+			//System.out.printf("              %-3s %-15s역 %-2s %-13s\r\n", line, stationName, weekOf);
+			System.out.printf("                %-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
+			System.out.printf("             %-10s\t\t\t%-10s\r\n", up.get(0), down.get(0));
 			System.out.println("==============================================================================================");
 			
 			for(int i = 0; i < 4; i++) {
@@ -144,11 +143,11 @@ public class StationTimePage {
 				for(int j = startIndexLeft; j < startIndexLeft + 5; j++) {
 					
 					if(leftSide[j] == null) {
-						System.out.print("       ");
+						System.out.print("    ");
 					}else {
-						System.out.printf("%-7s", leftSide[j]);
+						System.out.printf("%-4s", leftSide[j]);
 					}
-					System.out.print("    ");
+					System.out.print(" ");
 				}
 				
 				System.out.print("|");
@@ -156,19 +155,19 @@ public class StationTimePage {
 				for(int k = startIndexRight; k < startIndexRight + 5; k++) {
 				
 					if(rightSide[k] == null) {
-						System.out.print("       ");
+						System.out.print("    ");
 					}else {
-						System.out.printf("%-7s", rightSide[k]);
+						System.out.printf("%-4s", rightSide[k]);
 					}
-					System.out.print("    ");
+					System.out.print(" ");
 				}
 				
 				System.out.println();
 			}
 			
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
+			System.out.println("입력한 시간으로부터 1시간 사이의 시간표가 출력됩니다.");
 			System.out.print("엔터입력시 시간표 보기 종료");
-			System.out.println("7입력시 07:00 ~ 08:00");
 			System.out.print("원하는 시간: ");
 			sel = scan.nextLine();
 			

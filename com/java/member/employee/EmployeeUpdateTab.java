@@ -6,6 +6,7 @@ import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.member.user.User;
+import com.java.member.user.UserSearch;
 import com.java.view.View;
 
 public class EmployeeUpdateTab {
@@ -127,6 +128,14 @@ public class EmployeeUpdateTab {
 					break;
 				}else {
 					System.out.println("잘못된 직급");
+					System.out.println("직급변경을 그만두시려면 엔터");
+					System.out.println("다시 입력하시려면 아무키나 입력하세요");
+					System.out.println("입력: ");
+					input = scan.nextLine();
+					
+					if(input.equals("")) {
+						break;
+					}
 					View.pause();
 				}
 			}
@@ -267,12 +276,28 @@ public class EmployeeUpdateTab {
 					
 				}else {	   // 역이름이 호선과 틀릴경우
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-					View.pause();
+					System.out.println("근무지 배치를 그만두시려면 엔터");
+					System.out.println("다시 입력하시려면 아무키나 입력하세요");
+					System.out.println("입력: ");
+					input = scan.nextLine();
+					
+					if(input.equals("")) {
+						return;
+					}
+					
 				}
 				
 			}else {
 				System.out.println("잘못된 호선");
-				View.pause();
+				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
+				System.out.println("근무지 배치를 그만두시려면 엔터");
+				System.out.println("다시 입력하시려면 아무키나 입력하세요");
+				System.out.println("입력: ");
+				input = scan.nextLine();
+				
+				if(input.equals("")) {
+					return;
+				}
 			}
 			
 		}//while루프 종료
@@ -281,10 +306,34 @@ public class EmployeeUpdateTab {
 	
 	public static void deleteAccount() {
 		
+		String member = "";			// 직원인지 고객인지 입력받고 리스트 보여주기
+		
 		boolean userCheck = false;
 		boolean employeeCheck = false;
 		
 		Scanner scan = new Scanner(System.in);
+		
+		// 고객인지 직원인지 삭제할 계정 물어보기
+		System.out.println("삭제할 계정이 직원인지 고객인지 고르세요");
+		System.out.print("입력: ");
+		member = scan.nextLine();
+		
+		if(member.equals("직원")) {
+			
+			// 직원리스트 보여주기
+			EmployeeSearch.employeePage(Data.employeeList);
+			
+		}else if (member.equals("고객")) {
+			
+			// 고객리스트 보여주기
+			UserSearch.userPage(Data.userList);
+			
+		}else {
+			System.out.println("잘못된 입력입니다.");
+			
+			return;
+		}
+		
 		
 		System.out.println("삭제할 계정의 아이디를 입력해주세요.");
 		System.out.printf("아이디: ");

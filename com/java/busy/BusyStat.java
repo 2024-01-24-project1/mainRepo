@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
@@ -37,10 +38,12 @@ public class BusyStat extends StationManagement{
 			String time = "";
 			
 			
-			
+			Scanner scan = new Scanner(System.in);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
 			while(true) {
+				
+				String sel = "";
 				
 				ViewAll.statisticsChaosOne();
 				System.out.print("호선: ");
@@ -74,11 +77,18 @@ public class BusyStat extends StationManagement{
 					
 				}else {
 					
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-
+					System.out.println("잘못된 입력입니다.");
+					System.out.println("뒤로가려면 엔터 다시입력하려면 아무키나 입력하세요.");
+					System.out.print("입력: ");
+					sel = scan.nextLine();
+					
+					if(sel.equals("")) {
+						
+						return;
+					}
 				}
 				
-			}
+			}//while루프 종료
 			
 			
 			this.route = lineRoute(lines);

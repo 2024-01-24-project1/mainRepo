@@ -19,18 +19,16 @@ public class Stats {
 			final int index = i;
 			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-											   		   		.filter(count -> count.getLine().equals("호선"))
+											   		   		.filter(count -> count.getLine().contains("호선"))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
 			
-			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
-														.filter(count -> !(count.getLine().equals("공항철도 1호선")))
+			Long monthEx = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선"))
 														.mapToLong(count -> count.getCounting())
 														.sum();
-			
-			
-			stats[i] = month;
+
+			stats[i] = month + monthEx;
 		}
 				
 		
@@ -50,22 +48,34 @@ public class Stats {
 		for(int i = 0; i < 12; i++) {
 			final int index = i;
 			
+			long monthAdd = 0;
+			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
 											   		   		.filter(count -> count.getLine().equals(line))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
-	
+			
+			System.out.println("if문 전" + month);
 			
 			if(line.equals("1호선")) {
-				month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-															.filter(count -> count.getLine().equals("경인선") || count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
+				monthAdd = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("경인선") || count.getLine().equals("경부선"))
 															.mapToLong(count -> count.getCounting())
 															.sum();
 			}
 			
+			if(line.equals("9호선")) {
+
+				monthAdd = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("9호선2~3단계"))
+															.mapToLong(count -> count.getCounting())
+															.sum();
+
+			}
+			
+			
 			
 			stats[i] = month;
-
 			
 		}
 				
@@ -81,19 +91,17 @@ public class Stats {
 			final int index = i;
 			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-											   		   		.filter(count -> count.getLine().equals("호선"))
+											   		   		.filter(count -> count.getLine().contains("호선"))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
 			
-			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
-														.filter(count -> !(count.getLine().equals("공항철도 1호선")))
+			long monthAdd = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선"))
 														.mapToLong(count -> count.getCounting())
 														.sum();
-												
+			
 			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
-			stats[i] = month;
-	
+			stats[i] = month + monthAdd;
 		}
 				
 		
@@ -110,21 +118,31 @@ public class Stats {
 		for(int i = 0; i < 12; i++) {
 			final int index = i;
 			
+			long monthAdd = 0;
+			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
 											   		   		.filter(count -> count.getLine().equals(line))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
 			
 			if(line.equals("1호선")) {
-				month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-															.filter(count -> count.getLine().equals("경인선") || count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
+				monthAdd = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("경인선") || count.getLine().equals("경부선"))
 															.mapToLong(count -> count.getCounting())
 															.sum();
 			}
 			
-			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
-			stats[i] = month;
+			if(line.equals("9호선")) {
+
+				monthAdd = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("9호선2~3단계"))
+															.mapToLong(count -> count.getCounting())
+															.sum();
+
+			}
 			
+			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
+			stats[i] = month = monthAdd;
 		}
 				
 		

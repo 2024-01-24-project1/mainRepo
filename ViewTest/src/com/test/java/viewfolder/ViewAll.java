@@ -130,7 +130,7 @@ System.out.println();
 
 	}
 	
-	public static void safetyEmployeeUnlockEmo() { //안전 요원 배치  해제 
+	public static void safetyEmployeeUnlockEmo() { //안전 요원 배치  해제 이모
 		System.out.println();
 		System.out.println();
 		System.out.println();

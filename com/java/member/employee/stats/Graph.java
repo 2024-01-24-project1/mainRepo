@@ -33,7 +33,7 @@ public class Graph {
 		
 		// 그래프 출력
 		System.out.println("---------------------");
-		for(int i = 0; i < graph.length; i++) {
+		for(int i = 0; i < graph.length-5; i++) {
 			
 			for(int j = 0; j < graph[0].length; j++) {
 				if(j == graph[0].length) {

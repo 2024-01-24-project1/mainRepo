@@ -43,7 +43,7 @@ public class UserVoiceSearch {
 				
 				for(UserVoice voice : Data.userVoiceList) {
 					
-					if(voice.getTitle().equals(sel)) {
+					if(voice.getTitle().equals(title)) {
 						
 						// 읽음으로 변경
 						voice.setIsRead("읽음");

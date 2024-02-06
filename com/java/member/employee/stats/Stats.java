@@ -24,6 +24,7 @@ public class Stats {
 											   		   		.sum();
 			
 			stats[i] = month;
+			System.out.println(month);
 		}
 				
 		
@@ -44,14 +45,30 @@ public class Stats {
 			final int index = i;
 			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-											   		   		.filter(count -> count.getLine().equals(line))
+											   		   		.filter(count -> count.getLine().contains(line))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
 			
+			// 1호선 경인선 추가
+			if(line.equals("1호선")) {
+				month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("경인선"))
+															.mapToLong(count -> count.getCounting())
+															.sum();
+			}
+						
+			// 1호선에 경부선 추가
+			if(line.equals("1호선")) {
+				month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
+															.filter(count -> count.getLine().equals("경부선"))
+															.mapToLong(count -> count.getCounting())
+															.sum();
+			}
+			
 			stats[i] = month;
+			System.out.println(month);
 		}
 				
-		
 		return stats;
 	}
 	
@@ -70,6 +87,7 @@ public class Stats {
 			
 			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
 			stats[i] = month;
+			System.out.println(month);
 		}
 				
 		
@@ -87,12 +105,13 @@ public class Stats {
 			final int index = i;
 			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-											   		   		.filter(count -> count.getLine().equals(line))
+											   		   		.filter(count -> count.getLine().contains(line))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
 			
 			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
 			stats[i] = month;
+			System.out.println(month);
 		}
 				
 		

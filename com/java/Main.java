@@ -15,6 +15,7 @@ import com.java.member.employee.stats.Graph;
 import com.java.member.employee.stats.Stats;
 import com.java.station.timetable.StationTime;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 
 
@@ -42,7 +43,7 @@ public class Main {
 		
 		while(loop) {
 			
-			View.mainmenu();
+			ViewAll.realMain();
 			String sel = ""; 
 			sel = sc.nextLine();
 			
@@ -72,7 +73,7 @@ public class Main {
 				//다시입력
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			

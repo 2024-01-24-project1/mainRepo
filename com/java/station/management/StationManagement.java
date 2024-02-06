@@ -31,6 +31,8 @@ public class StationManagement {
 	
 
 	
+	
+	
 	/** 
 	 *  해당 호선의 열차 대수가 저장된 ArrayList<String> train 에서
 	 *  매개변수로 받은 time 시간대의 열차 대수를 저장하는 메서드

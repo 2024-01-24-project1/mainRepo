@@ -12,7 +12,9 @@ import com.java.busy.BusyManagement;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
+import com.java.member.user.AnotherDateFindWay;
 import com.java.member.user.BookMark;
+import com.java.member.user.CurrentTimeFindWay;
 import com.java.requiredtime.RequiredTime;
 import com.java.view.View;
 import com.java.view.ViewAll;
@@ -37,169 +39,28 @@ public class FindWay extends StationManagement {
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
-			ViewAll.roadSearchRouteBottom();
-			System.out.print("1. 현재시간 보기 2.다른 날짜 보기 3.뒤로가기");
-			String sel = reader.readLine();
-			
-			
-			if(sel.equals("1")) { //현재시간
+			while(true) {
+				ViewAll.roadSearchRouteBottom();
 				
-				boolean loop = true;
-				boolean check = true;
-				String lines = "";
-				String start = "";
-				String end = "";
-				Calendar calendar = Calendar.getInstance();
-				
-				while(loop) {
-					
-					//ViewAll 선택노선 추가하기
-					System.out.print("호선: ");
-					lines = reader.readLine();
-					
-					ViewAll.roadSearchRouteTop();
-					System.out.print("출발역: ");
-					start = reader.readLine();
-					
-					System.out.print("도착역: ");
-					end = reader.readLine();
-					
-					check = Validation.is_currentTime(lines, start, end);
-					
-					if(check) {
-						loop = false;
-					}else { //뒤로가기 추가
-						
-						System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-						
-					}
-					
-				}
-				
-				calendar.set(Calendar.HOUR_OF_DAY, 8);
-				calendar.set(Calendar.MINUTE, 30);
-				findWay(lines, start, end, calendar);
-				
-				View.pause();
-				
-				ViewAll.roadSearchRouteTimeBottom();
 				System.out.print("입력: ");
-				sel = reader.readLine();
-				
-				if(sel.equals("1")) {
+				String sel = reader.readLine();
+
+				if(sel.equals("1")) { //현재시간
+
+					CurrentTimeFindWay currentTimeFindWay = new CurrentTimeFindWay();
+					currentTimeFindWay.currentTimeFindWay();
+
+				}else if(sel.equals("2")) { //다른날짜
 					
-					registerBookMark(lines, start, end, calendar);
-					
-				}
-				else if(sel.equals("2")) {
-					return; //뒤로가기
-				}
-				
-			}else if(sel.equals("2")) { //다른날짜
-				
-				boolean check = true;
-				String year = "";
-				String month = "";
-				String date = "";
-				String hour = "";
-				String minute = "";
-				String lines = "";
-				String start = "";
-				String end = "";
-				Calendar calendar = Calendar.getInstance();
-				
-				while(true) {
-					
-					System.out.print("년도 입력: ");
-					year = reader.readLine();
-					
-					System.out.print("월 입력: ");
-					month = reader.readLine();
-					
-					System.out.print("일 입력: ");
-					date = reader.readLine();
-					
-					System.out.print("시간: ");
-					hour = reader.readLine();
-					
-					System.out.print("분: ");
-					minute = reader.readLine();
-					
-					check = Validation.is_anotherDate(year,month,date,hour,minute);
-					
-					if(check) {
-						
-						break;
-						
-					}else {
-						
-						System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-						
-					}
-				}
-				
-				
-				
-				calendar.set(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(date));
-				calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
-				calendar.set(Calendar.MINUTE, Integer.parseInt(minute));
-				
-				
-				
-				while(true) {
-					
-					System.out.print("호선: ");
-					lines = reader.readLine();
-					
-					System.out.print("출발역: ");
-					start = reader.readLine();
-					
-					System.out.print("도착역: ");
-					end = reader.readLine();
-					
-					check = Validation.is_currentTime(lines, start, end);
-					
-					if(check) {
-						
-						break;
-						
-					}else {
-						
-						System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-						
-					}
+					AnotherDateFindWay anotherDateFindWay = new AnotherDateFindWay();
+					anotherDateFindWay.anotherDateFindWay();
+
+				}else if(sel.equals("")) {//뒤로가기
+					break;
 					
 				}
-				
-				findWay(lines, start, end, calendar);
-				View.pause();
-				
-				ViewAll.roadSearchRouteTimeBottom();
-				System.out.print("입력: ");
-				sel = reader.readLine();
-				
-				if(sel.equals("1")) {
-					
-					registerBookMark(lines, start, end, calendar);
-					
-				}
-				else if(sel.equals("2")) {
-					
-					return; //뒤로가기
-					
-				}
-				
-				
-				
-			}else {//잘못된 입력
-				
 			}
-			
-			
-			
-			
-			
-			
+
 			
 		} catch (Exception e) {
 			System.out.println("FindWay.findWay()");
@@ -274,7 +135,9 @@ public class FindWay extends StationManagement {
 
 			if(stationManagement.route.contains(b.getStation())) {
 				
-				stationManagement.specificHourBusy.add(b.getCrowded().get((calendar.get(Calendar.HOUR_OF_DAY))-5));
+				System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
+				System.out.println(calendar.get(Calendar.HOUR_OF_DAY)-5);
+				stationManagement.specificHourBusy.add(b.getCrowded().get((calendar.get(Calendar.HOUR_OF_DAY)-5)));
 
 			}
 
@@ -399,7 +262,7 @@ public class FindWay extends StationManagement {
 
 			}//while
 			
-			if(requiredTime.get(i).getStation().equals(startStation)) { //시작역 이후 시간
+			if(i<requiredTime.size() && requiredTime.get(i).getStation().equals(startStation)) { //시작역 이후 시간
 				loop = true;
 				stationManagement.route.add(requiredTime.get(i).getStation()); //시작역 이름 저장
 			}
@@ -436,19 +299,25 @@ public class FindWay extends StationManagement {
 
 				String temp[] =requiredTime.get(i).getTime().split(":");
 				localTime = localTime.plusMinutes(Integer.parseInt(temp[0]));
-				localTime = localTime.plusSeconds(Integer.parseInt(temp[1]));
+				localTime = localTime.plusSeconds(Integer.parseInt(temp[1])+30); //30초 정차시간
 				stationManagement.route.add(requiredTime.get(i).getStation());
 				
 				if(requiredTime.get(i).getStation().equals(endStation)) {
+				
 					loop = false;
+					localTime = localTime.minusSeconds(30); //마지막역은 정차시간 포함 x
+					
+				}else {
+					
+					i--;
+					
 				}
 				
-				i--;
 
 
 			}//while
 			
-			if(requiredTime.get(i).getStation().equals(startStation)) { //시작역 이후 시간
+			if(i>0 && requiredTime.get(i).getStation().equals(startStation)) { //시작역 이후 시간
 				loop = true;
 				stationManagement.route.add(requiredTime.get(i).getStation()); //시작역 이름 저장
 			}
@@ -491,6 +360,8 @@ public class FindWay extends StationManagement {
 		int departureHour = Integer.parseInt(temp[0]);
 		int departureMinute = Integer.parseInt(temp[1]);
 		
+		System.out.printf("%s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);
+		
 		if((departureMinute+minute)>=60) {
 			minute = (departureMinute+minute) % 60;
 			departureHour+=1;
@@ -501,11 +372,10 @@ public class FindWay extends StationManagement {
 			
 		}
 		
-		if(departureHour==24) {
-			departureHour =0;
+		if(departureHour>=24) {
+			departureHour = departureHour % 24;
 		}
-		
-		System.out.printf("도착 예정 시간: %d시 %d분\n", departureHour,minute);
+		System.out.printf("도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
 		
 		
 		

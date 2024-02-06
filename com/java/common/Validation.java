@@ -379,7 +379,6 @@ public final class Validation {
 			if(userBookMark.size()==0) {
 				
 				System.out.println("즐겨찾기한 목록이 없습니다.");
-				View.pause();
 				return false;
 			}
 			return true;
@@ -442,9 +441,7 @@ public final class Validation {
 		public static boolean is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
-			if(line.contains("호선")){
-				line = line.replace("호선", "");
-			}
+			
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
@@ -485,9 +482,11 @@ public final class Validation {
 			}
 			
 			
-			if(dayOfWeek.equals("주말")) {
-				dayOfWeek = "토요일";
+			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+				return false;
 			}
+			
+			
 			
 			return true;
 			
@@ -496,9 +495,6 @@ public final class Validation {
 		public static boolean is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
-			if(line.contains("호선")){
-				line = line.replace("호선", "");
-			}
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
@@ -522,9 +518,11 @@ public final class Validation {
 			}
 			
 			
-			if(dayOfWeek.equals("주말")) {
-				dayOfWeek = "토요일";
+			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+				return false;
 			}
+			
+			
 			
 			return true;
 			
@@ -533,12 +531,7 @@ public final class Validation {
 		public static boolean is_currentTime(String line, String startStation, String endStation) {
 			
 			
-			startStation = startStation.endsWith("역") ? startStation.substring(0,startStation.length()-1) : startStation;
-			endStation = endStation.endsWith("역") ? endStation.substring(0,endStation.length()-1) : endStation;
 			
-			if(line.contains("호선")){
-				line = line.replace("호선", "");
-			}
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
@@ -603,42 +596,65 @@ public final class Validation {
 	            default:
 	                return -1; // 잘못된 월 입력
 	        }
-			
-
-			
-			
-			
-		}
-		
+	    }
 
 	    public static boolean isLeapYear(int year) {
 	        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 	    }
 
+	    // 입력받은 문자열이 평일,주말인지 확인하는 메서드
+	    // 평일,주말 입력이면 true, 아니면 false
+	    public static boolean is_WeekOf(String input) {
+
+	    	if(input.equals("평일") || input.equals("주말")) {
+	    		return true;
+	    	}else {
+	    		return false;
+	    	}
+
+	    }
+
+	    // 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
+	    // 맞으면 true, 아니면 false
+	    public static boolean is_OperationTime(String input) {
+
+	    	try {
+	    		int number = Integer.parseInt(input);
+	    		return number >= 5 && number <= 24;
+	    	} catch (NumberFormatException e) {
+	    		// 입력이 숫자가 아닌 경우에 대한 예외 처리
+	    		return false;
+	    	}
+	    }
 	    
-	 // 입력받은 문자열이 평일,주말인지 확인하는 메서드
-	 		// 평일,주말 입력이면 true, 아니면 false
-	 		public static boolean is_WeekOf(String input) {
-	 			
-	 			if(input.equals("평일") || input.equals("주말")) {
-	 				return true;
-	 			}else {
-	 				return false;
-	 			}
-	 			
-	 		}
-	 		
-	 		// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
-	 		// 맞으면 true, 아니면 false
-	 		public static boolean is_OperationTime(String input) {
-	 			
-	 	        try {
-	 	            int number = Integer.parseInt(input);
-	 	            return number >= 5 && number <= 24;
-	 	        } catch (NumberFormatException e) {
-	 	            // 입력이 숫자가 아닌 경우에 대한 예외 처리
-	 	            return false;
-	 	        }
-	 	    }
+	    public static boolean is_bookMark(String line, String startStation, String endStation, String time) {
+			
+			
+				
+			//호선 입력 확인 (1~9호선)
+			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
+					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
+					&& !line.equals("8") && !line.equals("9")) {
+				return false;
+			}
+			
+			
+
+			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
+				
+				return false;
+
+			}
+			
+			int selTime = Integer.parseInt(time);
+			
+			if(selTime>24 || selTime<5) {
+				return false;
+			}
+
+			
+			return true;
+			
+		}
 		
 }//End of class

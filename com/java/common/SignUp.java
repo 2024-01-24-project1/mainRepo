@@ -122,7 +122,7 @@ public class SignUp {
 			if(Validation.is_RegistrationFormat(registration)) {
 				
 				// 주민등록번호 XXXXXX-XXXXXXX형태로 변환
-				addHyphenToRRN(registration);
+				registration = formatRRN(registration);
 				
 				if(Validation.is_Duplication_Id(registration)) {
 					System.out.println("중복된 주민등록번호입니다.");
@@ -142,7 +142,7 @@ public class SignUp {
 			if ( Validation.is_PhoneFormat(phone) ) {
 				
 				// 전화번호 XXX-XXXX-XXXX형태로 변환
-				formatPhoneNumber(phone);
+				phone = formatPhoneNumber(phone);
 				
 				if(Validation.is_Duplication_Phone(phone)) {
 					System.out.println("중복된 전화번호입니다.");
@@ -222,17 +222,29 @@ public class SignUp {
 	}//End of commonSignUp()
 	
 	public static String formatPhoneNumber(String phoneNumber) {
-        String formattedNumber = phoneNumber.replaceAll("(\\d{3})(\\d{4})(\\d{4})", "$1-$2-$3");
-        return formattedNumber;
-    }
+		String cleanedNumber = phoneNumber.replaceAll("[^0-9-]", "");
+
+	    // 숫자와 "-"가 12자리인 경우에만 변환 수행 (첫 번째 "-" 제외)
+	    if (cleanedNumber.length() == 11) {
+	        // 전화번호 형식에 맞게 "-" 삽입
+	        return cleanedNumber.substring(0, 3) + "-" + cleanedNumber.substring(3, 7) + "-" + cleanedNumber.substring(7);
+	    } else {
+	        // 그 외의 경우는 입력된 전화번호를 그대로 반환
+	        return phoneNumber;
+	    }
+	}
 	
-	public static String addHyphenToRRN(String rrn) {
-        // '-'가 없는 주민등록번호에 '-'를 추가합니다.
-        if (!rrn.contains("-")) {
-            // 6번째 자리 뒤에 '-'를 추가합니다.
-            return rrn.substring(0, 6) + "-" + rrn.substring(6);
+	public static String formatRRN(String rrn) {
+		 // 입력된 주민등록번호에서 "-"를 모두 제거하고 숫자만 남김
+        String cleanedNumber = rrn.replaceAll("[^0-9]", "");
+        
+        // 문자열의 길이가 13인 경우에만 "-"를 삽입하여 리턴
+        if (cleanedNumber.length() == 13) {
+            return cleanedNumber.substring(0, 6) + "-" + cleanedNumber.substring(6);
+        } else {
+            // 그 외의 경우는 입력된 전화번호를 그대로 리턴
+            return rrn;
         }
-        return rrn;
     }
 	
 }//End of class

@@ -49,10 +49,7 @@ public final class UserMode extends CommonFunction{
 				System.exit(0);
 				
 			} else if (sel.equals("1")) { 	// 1. 열차 시간표
-				
-				// 열차 시간표
 				stationTimetableTab();
-				
 			} else if (sel.equals("2")) { 	// 2. 민원 접수
 				UserVoiceTab.userVoice();
 			} else if (sel.equals("3")) {	// 3. 정기권 현황
@@ -70,7 +67,6 @@ public final class UserMode extends CommonFunction{
 					BookMarkRoute bookMarkRoute = new BookMarkRoute();
 					bookMarkRoute.bookMarkRouteSelMenu();
 				}
-			
 				
 			} else if (sel.equals("5")) {	// 5. 요금표
 				costsTableTab();

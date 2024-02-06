@@ -77,11 +77,8 @@ public final class EmployeeMode extends CommonFunction{
 				StatsTab.statsTab();
 			} else if(sel.equals("6")) {	// 6. 요금표
 				costsTableTab();
-			} else if(sel.equals("7")) {
-				
-				// 열차 시간표
-				//stationTimetableTab();
-				
+			} else if(sel.equals("7")) {	// 7. 열차 시간표
+				stationTimetableTab();
 			} else if (sel.equals("8")) {
 	
 				// 행동로그 보기

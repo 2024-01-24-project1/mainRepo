@@ -212,6 +212,11 @@ public class EmployeeUpdateTab {
 				System.out.println("역 이름: ");
 				input = scan.nextLine();
 				
+				if (input.endsWith("역")) {
+		            // '역'을 제거한 문자열을 반환합니다.
+		            input = input.substring(0, input.length() - 1);
+		        } 
+				
 				final String STATION = input;
 				
 				switch (Integer.parseInt(LINE)) {

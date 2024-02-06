@@ -126,6 +126,8 @@ public class LostArticleTab {
 			find = scan.nextLine();
 			System.out.printf("보관역: ");
 			keep = scan.nextLine();
+			
+			
 				
 			if(article.length() > 20 || article.length() < 1) {
 				System.out.println("분실물의 이름은 20글자 이하 1글자 이상입니다");

@@ -29,7 +29,6 @@ public class Main {
 		// 데이터 로드
 		load.loadAll();
 		
-		
 		Scanner sc = new Scanner(System.in);
 		boolean loop= true;
 		// 수정

@@ -15,18 +15,10 @@ public class EmployeeSearch {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		// 전체 직원을 보여주고 검색 화면으로 이동
 		employeePage(list);
-		
-		System.out.println("특정 호선, 이름, 직원이름으로 검색하시려면 1");
-		System.out.println("뒤로가기 엔터");
-		sel = scan.nextLine();
-		
-		if(sel.equals("1")) {
 			
-			// 특정 단어로 찾는 메서드 호출
-			employeeSearch(list);
-			
-		}
+		employeeSearch(list);
 		
 	}//End of employeeAll()
 	

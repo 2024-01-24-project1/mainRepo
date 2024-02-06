@@ -2,7 +2,6 @@ package com.java.common;
 
 import java.util.Scanner;
 
-import com.java.member.Member;
 import com.java.member.employee.Employee;
 import com.java.member.employee.EmployeeMode;
 import com.java.member.user.User;

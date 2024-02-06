@@ -16,6 +16,7 @@ import com.java.view.View;
 public final class Validation {
 	
 		// id 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Id(String id) {
 			// 아이디 길이가 4자 이상 12자 이하여야 합니다.
 	        if (id.length() < 4 || id.length() > 12) {
@@ -35,6 +36,7 @@ public final class Validation {
 	    }
 		
 		// pw 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Pw(String pw) {
 			// 비밀번호 길이가 8자 이상 15자 이하여야 합니다.
 	        if (pw.length() < 8 || pw.length() > 15) {
@@ -49,6 +51,7 @@ public final class Validation {
 	    }
 	
 		// 이름 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Name(String name) {
 			// 이름: 2~5자, 한글만
 
@@ -60,6 +63,7 @@ public final class Validation {
 		}
 	
 		// 주민등록번호 유효성 검사 메서드
+		// 형식이 맞으면 true, 아니면 false
 	    public static boolean is_Registration(String registration) {
 	        // 형식 검사
 	        if (!isValidFormat(registration)) {
@@ -80,6 +84,7 @@ public final class Validation {
 	    }
 
 	    // 주민등록번호 형식 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
 	    private static boolean isValidFormat(String registration) {
 	        // 정규표현식을 사용하여 형식을 검사합니다.
 	        String regex = "\\d{6}-[1-4]\\d{6}|\\d{13}";
@@ -87,6 +92,7 @@ public final class Validation {
 	    }
 
 	    // 생년월일 유효성 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
 	    private static boolean isValidDate(String birthDate) {
 	        SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 	        dateFormat.setLenient(false); // 엄격한 날짜 포맷 설정
@@ -100,6 +106,7 @@ public final class Validation {
 	    }
 
 	    // 주민등록번호 유효성 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
 	    private static boolean isValidCheckDigit(String registration) {
 	        // 주민등록번호 가중치
 	        int[] weights = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
@@ -118,6 +125,7 @@ public final class Validation {
 	    }
 		
 		// 전화번호 유효성 검사
+	    // 형식이 맞으면 true, 아니면 false
 		public static boolean is_Phone(String phone) {
 
 		    // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
@@ -140,11 +148,12 @@ public final class Validation {
 		}
 	
 		// 관리자 가입코드 유효성 검사
+		// 코드가 맞으면 true, 아니면 false
 		public static boolean is_Code(String code) {
 
 			boolean check = false;
 
-			if (!code.equals(Data.EMPLOYEECODE)) {
+			if (code.equals(Data.EMPLOYEECODE)) {
 				check = true;
 			} 
 			return check;

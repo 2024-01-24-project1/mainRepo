@@ -21,9 +21,17 @@ public class StationTimeTab {
 			String sel = "";		// 입력받을 호선
 			String weekOf = "";		// 평일,주말 입력받기
 			
+			System.out.println("시간표를 그만보시려면 엔터입력");
 			System.out.println("호선을 입력해주세요");
 			System.out.println("입력(N호선): ");
 			sel = scan.nextLine();
+			
+			if(sel.equals("")) {
+				
+				// 시간표탭 종료
+				break;
+				
+			}
 			
 			
 			// 제대로된 호선을 입력받으면 해당 호선의 역 이름들을 출력
@@ -98,6 +106,7 @@ public class StationTimeTab {
 					
 				}else if ( !Validation.is_WeekOf(weekOf)) {	// 주말,평일 잘못 입력한 경우
 					System.out.println("주말,평일을 잘못 입력하셨습니다.");
+					View.pause();
 				}
 				else {	  									// 역이름이 호선과 틀릴경우
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
@@ -108,7 +117,6 @@ public class StationTimeTab {
 				System.out.println("잘못된 호선");
 				View.pause();
 			}
-			
 			
 		}//while루프 종료
 		

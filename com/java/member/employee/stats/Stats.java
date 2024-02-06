@@ -1,5 +1,7 @@
 package com.java.member.employee.stats;
 
+import java.util.function.Predicate;
+
 import com.java.common.Data;
 
 public class Stats {
@@ -19,21 +21,17 @@ public class Stats {
 			final int index = i;
 			
 			long month = Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-											   		   		.filter(count -> count.getLine().equals("호선"))
+											   		   		.filter(count -> count.getLine().contains("호선"))
+											   		   		.filter(count -> count.getLine().equals("공항철도 1호선"))
 											   		   		.mapToLong(count -> count.getCounting())
 											   		   		.sum();
+			System.out.println("전" + month);
 			
 			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선"))
+														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
 														.mapToLong(count -> count.getCounting())
 														.sum();
-			
-
-			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("9호선2~3단계"))
-														.mapToLong(count -> count.getCounting())
-														.sum();
-
+			System.out.println("후" + month);
 			
 			stats[i] = month;
 		}
@@ -102,15 +100,10 @@ public class Stats {
 											   		   		.sum();
 			
 			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선"))
+														.filter(count -> count.getLine().equals("경인선") ||  count.getLine().equals("경부선") || count.getLine().equals("9호선2~3단계"))
 														.mapToLong(count -> count.getCounting())
 														.sum();
 
-
-			month += Data.passengerCountingList.stream().filter(count -> count.getDate().contains(date[index]))
-														.filter(count -> count.getLine().equals("9호선2~3단계"))
-														.mapToLong(count -> count.getCounting())
-														.sum();
 			
 			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
 			stats[i] = month;

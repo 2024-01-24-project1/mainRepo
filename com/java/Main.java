@@ -10,6 +10,7 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
+import com.java.common.Validation;
 import com.java.member.employee.stats.Graph;
 import com.java.member.employee.stats.Stats;
 import com.java.station.timetable.StationTime;
@@ -31,7 +32,6 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		boolean loop= true;
-		// 수정
 		
 		while(loop) {
 			

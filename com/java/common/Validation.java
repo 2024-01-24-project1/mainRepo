@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.java.station.management.StationManagement;
-import com.java.view.View;
 
 // 유효성 검사 클래스 
 // true false만 반환
@@ -39,16 +38,28 @@ public final class Validation {
 		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Pw(String pw) {
 			// 비밀번호 길이가 8자 이상 15자 이하여야 합니다.
-	        if (pw.length() < 8 || pw.length() > 15) {
-	            return false;
-	        }
-	        
-	        // 대문자, 소문자, 숫자, 특수문자를 포함하는지 확인하는 정규표현식을 사용합니다.
-	        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!~*?]).+$";
-	        
-	        // 정규표현식을 사용하여 비밀번호의 형식을 검사합니다.
-	        return pw.matches(regex);
-	    }
+		    if (pw.length() < 8 || pw.length() > 15) {
+		        return false;
+		    }
+		    
+		    // 비밀번호는 !, ~, *, ?, @ 중 하나 이상을 포함해야 합니다.
+		    if (!pw.matches(".*[!~*?@].*")) {
+		        return false;
+		    }
+		    
+		    // 비밀번호는 숫자를 하나 이상 포함해야 합니다.
+		    if (!pw.matches(".*\\d.*")) {
+		        return false;
+		    }
+		    
+		    // 비밀번호는 대문자나 소문자 중 하나 이상을 포함해야 합니다.
+		    if (!pw.matches(".*[A-Z].*") && !pw.matches(".*[a-z].*")) {
+		        return false;
+		    }
+
+		    // 모든 조건을 만족하면 true를 반환합니다.
+		    return true;
+		}
 	
 		// 이름 유효성 검사
 		// 형식이 맞으면 true, 아니면 false
@@ -81,6 +92,16 @@ public final class Validation {
 	        }
 
 	        return true;
+	    }
+	    
+	    public static boolean is_RegistrationFormat(String registration) {
+	        // 숫자와 "-"만을 포함하는지 확인
+	        if (!registration.matches("\\d{13}|\\d{6}-\\d{7}")) {
+	            return false;
+	        }
+	        // '-'를 제거하고 나머지 문자열이 전부 숫자로만 이루어져 있는지 확인
+	        String digitsOnly = registration.replaceAll("[^0-9]", "");
+	        return digitsOnly.length() == 13;
 	    }
 
 	    // 주민등록번호 형식 검사 메서드
@@ -126,26 +147,25 @@ public final class Validation {
 		
 		// 전화번호 유효성 검사
 	    // 형식이 맞으면 true, 아니면 false
-		public static boolean is_Phone(String phone) {
-
-		    // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
-		    String regex = "(010-\\d{4}-\\d{4})|(010\\d{4}\\d{4})";
-		    if (!phone.matches(regex)) {
-		        return false;
-		    }
-
-		    // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
-		    for (int i = 0; i < phone.length(); i++) {
-		        char ch = phone.charAt(i);
-		        if ((i == 3 || i == 8) && ch != '-') {
-		            return false;
-		        } else if (i != 3 && i != 8 && !Character.isDigit(ch)) {
-		            return false;
-		        }
-		    }
-
-		    return true;
-		}
+	    
+	    public static boolean is_PhoneFormat(String phoneNumber) {
+	        // "-"를 포함한 형식인지 확인
+	        if (phoneNumber.matches("\\d{3}-\\d{4}-\\d{4}")) {
+	            return true;
+	        }
+	        // "-"를 포함하지 않은 형식인지 확인
+	        if (phoneNumber.matches("\\d{10}")) {
+	            return true;
+	        }
+	        return false;
+	    }
+	    
+	    public static boolean is_Phone(String phoneNumber) {
+	        String pattern = "^010-\\d{4}-\\d{4}$"; // 010으로 시작하는 000-0000-0000 형태의 정규 표현식
+	        
+	        // 정규 표현식을 이용하여 패턴 매칭 여부 확인
+	        return phoneNumber.matches(pattern);
+	    }
 	
 		// 관리자 가입코드 유효성 검사
 		// 코드가 맞으면 true, 아니면 false

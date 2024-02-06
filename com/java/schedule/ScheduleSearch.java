@@ -34,7 +34,7 @@ public class ScheduleSearch {
 				
 				list.stream().skip(index * 10)
 				 							 .limit(10)
-				 							 .forEach(schedule -> System.out.printf("%-10s||%-15s|%-20s\r\n"
+				 							 .forEach(schedule -> System.out.printf("%-10s||%-15s\t|%-20s\r\n"
 						 													, schedule.getTime()
 						 													, schedule.getStation() + "역"
 						 													, schedule.getSchedule()));

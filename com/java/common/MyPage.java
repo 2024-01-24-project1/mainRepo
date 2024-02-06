@@ -206,13 +206,13 @@ public class MyPage {
 		String chPhone = scan.nextLine(); //변경할 전화번호 입력
 		
 		// 전화번호 형식이면 010-XXXX-XXXX형식으로 변환
-		if(Validation.is_Phone(chPhone)) {
+		if(Validation.is_PhoneFormat(chPhone)) {
 			SignUp.formatPhoneNumber(chPhone);
 		}
 		
 		// 유효성 검사
 		// 이미 있는 전화번호인지, 전화번호 형식에 맞는지
-		if( Validation.is_Phone(chPhone) && !Validation.is_Duplication_Phone(chPhone)) {
+		if(  Validation.is_PhoneFormat(chPhone) && Validation.is_Phone(chPhone) && !Validation.is_Duplication_Phone(chPhone)) {
 	
 			//고객의 전화번호 변경
 			if(checkUser) {

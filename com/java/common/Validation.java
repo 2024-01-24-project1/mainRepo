@@ -1,5 +1,7 @@
 package com.java.common;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
@@ -50,59 +52,85 @@ public final class Validation {
 			return !m1.find();
 		}
 	
-		// 주민등록번호 유효성 검사
-		public static boolean is_RegistrationFormet(String registration) { // 주민등록번호 형식 검사
-			// 주민등록번호: “-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력
+		// 주민등록번호 유효성 검사 메서드
+	    public static boolean is_Registration(String registration) {
+	        // 형식 검사
+	        if (!isValidFormat(registration)) {
+	            return false;
+	        }
 
-			String regex = "([0-9]{6}-?[0-9]{7})";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(registration);
+	        // 생년월일 유효성 검사
+	        if (!isValidDate(registration.substring(0, 6))) {
+	            return false;
+	        }
 
-			return !m1.find();
-		}
+	        // 유효성 검사
+	        if (!isValidCheckDigit(registration)) {
+	            return false;
+	        }
 
-		public static boolean is_RegistrationEffect(String registration) { // 주민등록번호 유효성 검사
+	        return true;
+	    }
 
-			int sum = 0;
-			registration = registration.replace("-", "");
-			boolean a = false;
+	    // 주민등록번호 형식 검사 메서드
+	    private static boolean isValidFormat(String registration) {
+	        // 정규표현식을 사용하여 형식을 검사합니다.
+	        String regex = "\\d{6}-[1-4]\\d{6}|\\d{13}";
+	        return registration.matches(regex);
+	    }
 
-			for (int i = 0; i < 12; i++) {
-				sum += Integer.parseInt(registration.substring(i, i + 1)) * (i % 8 + 2);
-			}
+	    // 생년월일 유효성 검사 메서드
+	    private static boolean isValidDate(String birthDate) {
+	        SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+	        dateFormat.setLenient(false); // 엄격한 날짜 포맷 설정
 
-			sum %= 11;
-			sum = 11 - (sum % 10);
+	        try {
+	            dateFormat.parse(birthDate);
+	            return true;
+	        } catch (ParseException e) {
+	            return false;
+	        }
+	    }
 
-			if (sum == Integer.parseInt(registration.substring(registration.length() - 1, registration.length()))) {
-				System.out.println("올바른 주민등록번호입니다.");
-			} else {
-				a = true;
-			}
+	    // 주민등록번호 유효성 검사 메서드
+	    private static boolean isValidCheckDigit(String registration) {
+	        // 주민등록번호 가중치
+	        int[] weights = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
 
-			return a;
+	        // 유효성 검사
+	        int sum = 0;
+	        for (int i = 0; i < 12; i++) {
+	            int digit = Character.getNumericValue(registration.charAt(i));
+	            sum += digit * weights[i];
+	        }
 
-		}
+	        int checkDigit = Character.getNumericValue(registration.charAt(12));
+	        int remainder = (11 - (sum % 11)) % 10;
+
+	        return checkDigit == remainder;
+	    }
 		
 		// 전화번호 유효성 검사
 		public static boolean is_Phone(String phone) {
 
-	        // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
-	        String regex = "010-[0-9]{4}-[0-9]{4}";
-	        if (!phone.matches(regex)) {
-	            return false;
-	        }
+		    // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
+		    String regex = "(010-\\d{4}-\\d{4})|(010\\d{4}\\d{4})";
+		    if (!phone.matches(regex)) {
+		        return false;
+		    }
 
-	        // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
-	        for (int i = 0; i < phone.length(); i++) {
-	            char ch = phone.charAt(i);
-	            if (i != 3 && i != 8 && !Character.isDigit(ch)) {
-	                return false;
-	            }
-	        }
+		    // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
+		    for (int i = 0; i < phone.length(); i++) {
+		        char ch = phone.charAt(i);
+		        if ((i == 3 || i == 8) && ch != '-') {
+		            return false;
+		        } else if (i != 3 && i != 8 && !Character.isDigit(ch)) {
+		            return false;
+		        }
+		    }
 
-	        return true;
-		 }
+		    return true;
+		}
 	
 		// 관리자 가입코드 유효성 검사
 		public static boolean is_Code(String code) {

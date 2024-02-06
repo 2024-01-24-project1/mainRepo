@@ -54,25 +54,49 @@ public final class EmployeeMode extends CommonFunction{
 				
 			} else if (sel.equals("1")) {	// 1. 역관리
 				
-				// 역관리
-				System.out.println("1. 열차 추가, 2.의자없는 열차 배치");
-				sel = scan.nextLine();
+				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 				
-				if(sel.equals("1")) {
-					AddTrain addTrain = new AddTrain();
-					addTrain.addTrain();
-				}else if (sel.equals("2")) {
-					ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
-					changeNoChairTrain.changeNoChairTrain();
+					// 역관리
+					System.out.println("1. 열차 추가, 2.의자없는 열차 배치");
+					sel = scan.nextLine();
+					
+					if(sel.equals("1")) {
+						AddTrain addTrain = new AddTrain();
+						addTrain.addTrain();
+					}else if (sel.equals("2")) {
+						ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
+						changeNoChairTrain.changeNoChairTrain();
+					}
+					
+				}else {
+					System.out.println("접근 권한이 없습니다.");
 				}
+
 				
 			} else if (sel.equals("2")) {	// 2 직원관리
 				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
 				else System.out.println("접근 권한이 없습니다.");
 			} else if (sel.equals("3")) {	// 3. 민원
-				UserVoiceManagemnetTab.userVoiceManagementTab();
+				
+				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
+					
+					UserVoiceManagemnetTab.userVoiceManagementTab();
+					
+				}else {
+					System.out.println("접근 권한이 없습니다.");
+				}
+				
+				
 			} else if (sel.equals("4")) {	// 4. 행사캘린더
-				ScheduleTab.scheduleTab();
+				
+				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
+				
+					ScheduleTab.scheduleTab();
+				
+				}else {
+					System.out.println("접근 권한이 없습니다.");
+				}
+				
 			} else if (sel.equals("5")) {	// 5. 통계정보
 				StatsTab.statsTab();
 			} else if(sel.equals("6")) {	// 6. 요금표
@@ -80,8 +104,14 @@ public final class EmployeeMode extends CommonFunction{
 			} else if(sel.equals("7")) {	// 7. 열차 시간표
 				stationTimetableTab();
 			} else if (sel.equals("8")) {
-	
-				// 행동로그 보기
+				
+				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
+					
+					// 행동로그 보기
+				
+				}else {
+					System.out.println("접근 권한이 없습니다.");
+				}
 				
 			} else if (sel.equals("9")) {
 				MyPage.myPageList("2");

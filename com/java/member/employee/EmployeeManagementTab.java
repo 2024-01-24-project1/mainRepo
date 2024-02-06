@@ -30,13 +30,8 @@ public class EmployeeManagementTab {
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 직원 정보 보기
-				if(LoginLogout.level.equals("2")) {
-					System.out.println("접근 권한이 없습니다.");
-					View.pause();
-				}else {
-					EmployeeSearch.employeeAll(Data.employeeList);
-				}
 				
+				EmployeeSearch.employeeAll(Data.employeeList);
 				
 			} else if(sel.equals("2")) {	// 2. 직원 정보 수정
 				

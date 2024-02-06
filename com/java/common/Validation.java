@@ -17,29 +17,36 @@ public final class Validation {
 	
 		// id 유효성 검사
 		public static boolean is_Id(String id) {
-			// 아이디: 필수값 4~12자 이내, 영소문자+숫자, 숫자 시작 X
-
-			String regex = "^[a-z]{1}[a-z0-9+]{3,11}$";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(id);
-
-			return !m1.find();
-		}
+			// 아이디 길이가 4자 이상 12자 이하여야 합니다.
+	        if (id.length() < 4 || id.length() > 12) {
+	            return false;
+	        }
+	        
+	        // 아이디가 숫자로 시작하는지 확인합니다.
+	        if (Character.isDigit(id.charAt(0))) {
+	            return false;
+	        }
+	        
+	        // 영어 소문자와 숫자를 포함하는지 확인하는 정규표현식을 사용합니다.
+	        String regex = "^(?=.*[a-z])(?=.*\\d)[a-zA-Z\\d]{4,12}$";
+	        
+	        // 정규표현식을 사용하여 아이디의 형식을 검사합니다.
+	        return id.matches(regex);
+	    }
 		
 		// pw 유효성 검사
 		public static boolean is_Pw(String pw) {
-			// 비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)
-
-			if (pw.equals("") || pw == null) {
-				return true;
-			}
-
-			if (pw.length() < 8 || pw.length() > 15) {
-				return true;
-			}
-
-			return false;
-		}
+			// 비밀번호 길이가 8자 이상 15자 이하여야 합니다.
+	        if (pw.length() < 8 || pw.length() > 15) {
+	            return false;
+	        }
+	        
+	        // 대문자, 소문자, 숫자, 특수문자를 포함하는지 확인하는 정규표현식을 사용합니다.
+	        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!~*?]).+$";
+	        
+	        // 정규표현식을 사용하여 비밀번호의 형식을 검사합니다.
+	        return pw.matches(regex);
+	    }
 	
 		// 이름 유효성 검사
 		public static boolean is_Name(String name) {

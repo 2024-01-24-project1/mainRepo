@@ -117,10 +117,8 @@ public class SignUp {
 			if ( Validation.is_Name(name)) {
 				System.out.println("이름 형식이 틀렸습니다.");
 			}
-			if ( Validation.is_RegistrationFormet(registration) ) {
+			if ( Validation.is_Registration(registration) ) {
 				System.out.println("주민등록번호 형식이 틀렸습니다.");
-			}else if ( Validation.is_RegistrationEffect(registration)) {
-				System.out.println("유효한 주민등록번호가 아닙니다.");
 			}else if ( Validation.is_Duplication_RRN(registration)) {
 				System.out.println("중복된 주민등록");
 			}
@@ -134,22 +132,24 @@ public class SignUp {
 			}
 			
 			// 회원이 모든 조건을 만족한 입력을 받은경우
-			if(sel.equals("1") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
-					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone))) {
+			if(sel.equals("1") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) 
+					|| Validation.is_Registration(registration) || Validation.is_Phone(phone)) 
+					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration)) {
 				
 				User user = new User(name, id, pw, registration, phone); // 입력값 저장
 				Data.userList.add(user);
 				
 				System.out.println("회원가입이 완료되었습니다.");
-				System.out.println("회원 " +name + "님 환영합니다.");
+				System.out.println("회원 " + name + "님 환영합니다.");
 				View.pause();
 				
 				break;
 			}
 			
 			// 직원이 모든 조건을 만족한 입력을 받은경우
-			if(sel.equals("2") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
-					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone) || Validation.is_Code(code))) {
+			if(sel.equals("2") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) 
+					|| Validation.is_Registration(registration) || Validation.is_Phone(phone) || Validation.is_Code(code))
+					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration)) {
 				
 				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
 				Data.employeeList.add(employee);

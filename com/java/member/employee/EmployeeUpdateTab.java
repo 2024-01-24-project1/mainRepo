@@ -6,6 +6,7 @@ import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.member.user.User;
+import com.java.member.user.UserSearch;
 import com.java.view.View;
 
 public class EmployeeUpdateTab {
@@ -281,10 +282,34 @@ public class EmployeeUpdateTab {
 	
 	public static void deleteAccount() {
 		
+		String member = "";			// 직원인지 고객인지 입력받고 리스트 보여주기
+		
 		boolean userCheck = false;
 		boolean employeeCheck = false;
 		
 		Scanner scan = new Scanner(System.in);
+		
+		// 고객인지 직원인지 삭제할 계정 물어보기
+		System.out.println("삭제할 계정이 직원인지 고객인지 고르세요");
+		System.out.print("입력: ");
+		member = scan.nextLine();
+		
+		if(member.equals("직원")) {
+			
+			// 직원리스트 보여주기
+			EmployeeSearch.employeePage(Data.employeeList);
+			
+		}else if (member.equals("고객")) {
+			
+			// 고객리스트 보여주기
+			UserSearch.userPage(Data.userList);
+			
+		}else {
+			System.out.println("잘못된 입력입니다.");
+			
+			return;
+		}
+		
 		
 		System.out.println("삭제할 계정의 아이디를 입력해주세요.");
 		System.out.printf("아이디: ");

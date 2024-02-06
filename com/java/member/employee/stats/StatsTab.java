@@ -69,7 +69,7 @@ public class StatsTab {
 				System.out.println("보고싶은 호선을 입력해주세요");
 				System.out.println("입력(N호선): ");
 				sel = scan.nextLine();
-				
+
 				if(Validation.is_Line(sel)) {
 					
 					int line = Integer.parseInt(sel.charAt(0) + "");
@@ -91,7 +91,7 @@ public class StatsTab {
 							break;
 					case 8: Graph.drawGraph(Stats.linePassneger(sel), 390000L);
 							break;
-					case 9: Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+					case 9: Graph.drawGraph(Stats.linePassneger(sel), 770000L);
 							break;
 						
 					}
@@ -136,6 +136,8 @@ public class StatsTab {
 					
 					int line = Integer.parseInt(sel.charAt(0) + "");
 					
+			
+					
 					switch (line) {
 					case 1: Graph.drawGraph(Stats.lineSales(sel), ALLSALES);
 							break;
@@ -153,7 +155,7 @@ public class StatsTab {
 							break;
 					case 8: Graph.drawGraph(Stats.lineSales(sel), 440000000L);
 							break;
-					case 9: Graph.drawGraph(Stats.lineSales(sel), ALLPASSENGER);
+					case 9: Graph.drawGraph(Stats.lineSales(sel), 870000000L);
 							break;
 						
 					}

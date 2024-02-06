@@ -3,6 +3,15 @@ package com.test.java.viewfolder;
 public class TestView {
 
 	public static void main(String[] args) {
+		ViewAll.lostarticleListCheckTop();
+		ViewAll.userVocWrite();
+		ViewAll.trainTimeTable();
+		ViewAll.userResign();
+		ViewAll.lineFavorite();
+		ViewAll.userMyInfo();
+		ViewAll.signupFindMain();
+		
+		ViewAll.loginTop();
 		ViewAll.statisticsUserMain();
 		
 		ViewAll.lostarticleAddResult();
@@ -19,41 +28,42 @@ public class TestView {
 		System.out.println();
 		ViewAll.employeeTotalInfo();
 		System.out.println();
-//		ViewAll.stationMain();
-//		System.out.println();
-//		ViewAll.trainAddResult();
-//		System.out.println();
-//		ViewAll.trainAddOne();
-//		System.out.println();
+		ViewAll.stationMain();
+		System.out.println();
+		ViewAll.trainAddResult();
+		System.out.println();
+		ViewAll.trainAddOne();
+		System.out.println();
 		ViewAll.adminMainView();
 		System.out.println();
-//		ViewAll.seasonPassError();
-//		System.out.println();
-//		ViewAll.rankNameError();
-//		System.out.println();
+		ViewAll.seasonPassError();
+		System.out.println();
+		ViewAll.rankNameError();
+		System.out.println();
 		ViewAll.nameError();
 		System.out.println();
-//		ViewAll.rankError();
-//		System.out.println();
-//		ViewAll.lineError();
-//		System.out.println();
-//		ViewAll.noIdError();
-//		System.out.println();
-//		ViewAll.stationError();
-//		System.out.println();
-//		ViewAll.calError();
-//		System.out.println();
-//		ViewAll.trainAddTwo();
-//		System.out.println();
+		ViewAll.rankError();
+		System.out.println();
+		ViewAll.lineError();
+		System.out.println();
+		ViewAll.noIdError();
+		System.out.println();
+		ViewAll.stationError();
+		System.out.println();
+		ViewAll.calError();
+		System.out.println();
+		ViewAll.trainAddTwo();
+		System.out.println();
 		ViewAll.trainAddOne();
 		System.out.println();
 		ViewAll.stationMain();
 		System.out.println();
-//		System.out.println();
-//		ViewAll.twiceIdError();
-//		System.out.println();
-//		System.out.println();
-//		ViewAll.userMainView();		ViewAll.trainAddFour();
+		System.out.println();
+		ViewAll.twiceIdError();
+		System.out.println();
+		System.out.println();
+		ViewAll.userMainView();		
+		ViewAll.trainAddFour();
 		//메인
 //		ViewAll.trainFront();
 		// 이모티콘 모음 

@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 import com.java.common.Data;
 import com.java.common.LoginLogout;
-import com.java.member.Member;
+import com.java.common.Validation;
 import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
@@ -22,10 +22,15 @@ public class BookMarkRoute extends FindWay{
 		
 		try {
 			
+			boolean check = true;
 			
 			ViewAll.roadSearchFavoriteList();
-			
 			userBookMark = searchMyBookMark();
+			
+			check = Validation.is_ExistBookMark(userBookMark);
+			
+			if(!check) return;
+			
 			
 			//즐겨 찾기 목록 출력
 			printMyBookMark(userBookMark);
@@ -70,11 +75,24 @@ public class BookMarkRoute extends FindWay{
 			int hour = 0;
 			int minute = 0;
 			
-			System.out.print("선택 할 노선: ");
-			sel = reader.readLine();
+			while(true) {
+				
+				System.out.print("선택 할 노선: ");
+				sel = reader.readLine();
+				index = Integer.parseInt(sel)-1;
+				if(index>=userBookMark.size()) {
+					
+					System.out.println("범위 내의 숫자만 입력하세요.");
+					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
+					
+				}else if(sel.equals("")) {
+					return;
+				}else {
+					break;
+				}
+				
+			}
 			
-			
-			index = Integer.parseInt(sel)-1;
 			String[] temp = userBookMark.get(index).split("-");
 			year = Integer.parseInt(temp[3]);
 			month = Integer.parseInt(temp[4])-1;
@@ -82,6 +100,7 @@ public class BookMarkRoute extends FindWay{
 			hour = Integer.parseInt(temp[6]);
 			minute = Integer.parseInt(temp[7]);
 			calendar.set(year, month, date, hour, minute);
+			
 			
 			
 			ViewAll.roadSearchFavoriteList();
@@ -97,6 +116,7 @@ public class BookMarkRoute extends FindWay{
 	protected void printMyBookMark(List<String> userBookMark) {
 		int index = 1;
 		
+		
 		for(String route : userBookMark) {
 			
 			String[] temp = route.split("-");
@@ -105,6 +125,7 @@ public class BookMarkRoute extends FindWay{
 			
 		}
 	}
+	
 	
 	
 

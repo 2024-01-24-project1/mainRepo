@@ -83,14 +83,14 @@ public class StationManagement {
 					
 					if(route.get(i).equals(endStation)) {
 						
-						System.out.printf("%6s역\t\t(%.1f %5s) -> (%.1f %5s)\n",route.get(i),specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+						System.out.printf("%-15s\t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 						System.out.printf("도착역(%s)\n", endStation);
 						loop = false;
 						return;
 						
 					}
 					
-					System.out.printf("%6s역\t\t(%.1f %5s) -> (%.1f %5s)\n",route.get(i),specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					System.out.printf("%-15s\t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 					i--;
 				}
 				
@@ -110,14 +110,16 @@ public class StationManagement {
 					
 					if(route.get(i).equals(endStation)) {
 						
-						System.out.printf("%6s역\t\t(%.1f %5s) -> (%.1f %5s)\n",route.get(i),specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+						System.out.printf("%-15s\t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 						System.out.printf("도착역(%s)\n", endStation);
+						
+						
 						loop = false;
 						return;
 						
 					}
 					
-					System.out.printf("%6s역\t\t(%.1f %5s) -> (%.1f %5s)\n",route.get(i),specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					System.out.printf("%-15s\t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 					i++;
 				}
 				
@@ -138,7 +140,7 @@ public class StationManagement {
 	 * @param line
 	 * @return 선택한 호선의 전체 경로 ArrayList<String> route
 	 */
-	protected ArrayList<String> lineRoute(String line) {
+	public static ArrayList<String> lineRoute(String line) {
 		
 		ArrayList<String> route = new ArrayList<>();
 		
@@ -270,7 +272,7 @@ public class StationManagement {
 		
 		
 		Pattern pattern = Pattern.compile("[0-9]{1,2}:\\d{2}");
-		
+		 
 		
 		
 		for(String time : stationTimeTable) {

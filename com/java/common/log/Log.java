@@ -23,6 +23,12 @@ public final class Log {
 	public ArrayList<String> getAction() {
 		return action;
 	}
+	
+	
+	public void setAction(String action) {
+		this.action.add(action);
+	}
+
 	@Override
 	public String toString() {
 		return String.format("Log [시간: %s, 아이디: %s, 행동: %s]"

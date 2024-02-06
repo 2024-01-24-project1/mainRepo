@@ -34,6 +34,38 @@ public final class BusyManagement {
 		
 	}
 	
+	public static void modifyBusyValue(String line, boolean way, String time, String dayOfWeek, ArrayList<Double> modifyBusy, ArrayList<String> route) {
+		
+		String temp ="";
+		
+		if(line.equals("2")){
+			temp = way ? "외선" : "내선";
+		}else {
+			temp = way ? "상행" : "하행";
+		}
+		
+		for(Busy b : Data.busyList) {
+			
+			if(b.getLines().equals(line) && b.getWay().equals(temp) && b.getDayOfWeek().equals(dayOfWeek) && route.contains(b.getStation())) {
+				
+				for(int i=0; i<route.size(); i++) {
+					
+					if(b.getStation().equals(route.get(i))) {
+						b.getCrowded().set((Integer.parseInt(time)-5), modifyBusy.get(i));
+					}
+					
+					
+				}
+				
+				
+			}
+			
+			
+		}
+		
+		
+		
+	}
 	
 	/**
 	 * 혼잡도 수치인 숫자를 한글로 변환해주는 메서드

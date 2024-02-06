@@ -67,10 +67,11 @@ public final class Validation {
 			// 이름: 2~5자, 한글만
 
 			String regex = "[가-힣]{2,5}$";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(name);
+			// 정규표현식을 이용하여 이름 유효성 검사
+	        Pattern pattern = Pattern.compile(regex);
+	        Matcher matcher = pattern.matcher(name);
 
-			return !m1.find();
+			return matcher.matches();
 		}
 	
 		// 주민등록번호 유효성 검사 메서드
@@ -107,8 +108,8 @@ public final class Validation {
 	    // 주민등록번호 형식 검사 메서드
 	    // 형식이 맞으면 true, 아니면 false
 	    private static boolean isValidFormat(String registration) {
-	        // 정규표현식을 사용하여 형식을 검사합니다.
-	        String regex = "\\d{6}-[1-4]\\d{6}|\\d{13}";
+	    	// 정규표현식을 사용하여 형식을 검사합니다.
+	        String regex = "\\d{6}-\\d{7}";
 	        return registration.matches(regex);
 	    }
 
@@ -129,6 +130,9 @@ public final class Validation {
 	    // 주민등록번호 유효성 검사 메서드
 	    // 형식이 맞으면 true, 아니면 false
 	    private static boolean isValidCheckDigit(String registration) {
+	    	
+	    	registration = registration.replaceAll("-", "");
+	    	
 	        // 주민등록번호 가중치
 	        int[] weights = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
 
@@ -154,7 +158,7 @@ public final class Validation {
 	            return true;
 	        }
 	        // "-"를 포함하지 않은 형식인지 확인
-	        if (phoneNumber.matches("\\d{10}")) {
+	        if (phoneNumber.matches("\\d{11}")) {
 	            return true;
 	        }
 	        return false;

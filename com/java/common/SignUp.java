@@ -105,51 +105,53 @@ public class SignUp {
 			}
 			
 			// 회원가입 유효성 검사
-			if( Validation.is_Id(id) ) {
+			if( !Validation.is_Id(id) ) {
 				System.out.println("아이디 형식이 틀렸습니다.");
 			}else if ( Validation.is_Duplication_Id(id)) {
 				System.out.println("중복된 아이디입니다.");
 			}
 			
-			if( Validation.is_Pw(pw)) {
+			if( !Validation.is_Pw(pw)) {
 				System.out.println("비밀번호 형식이 틀렸습니다.");
 			}
-			if ( Validation.is_Name(name)) {
+			if ( !Validation.is_Name(name)) {
 				System.out.println("이름 형식이 틀렸습니다.");
 			}
-			if ( Validation.is_RegistrationFormet(registration) ) {
+			if ( !Validation.is_Registration(registration) ) {
 				System.out.println("주민등록번호 형식이 틀렸습니다.");
-			}else if ( Validation.is_RegistrationEffect(registration)) {
-				System.out.println("유효한 주민등록번호가 아닙니다.");
 			}else if ( Validation.is_Duplication_RRN(registration)) {
 				System.out.println("중복된 주민등록");
 			}
-			if ( Validation.is_Phone(phone) ) {
+			if ( !Validation.is_Phone(phone) ) {
 				System.out.println("전화번호 형식이 틀렸습니다.");
 			}else if ( Validation.is_Duplication_Phone(phone)) {
 				System.out.println("중복된 전화번호입니다.");
 			}
-			if( Validation.is_Code(code) && sel.equals("2")) {
+			if( !Validation.is_Code(code) && sel.equals("2")) {
 				System.out.println("회원코드가 틀렸습니다.");
 			}
 			
+			
+			
 			// 회원이 모든 조건을 만족한 입력을 받은경우
-			if(sel.equals("1") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
-					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone))) {
+			if(sel.equals("1") && Validation.is_Id(id) || (Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) 
+					|| Validation.is_Registration(registration) || Validation.is_Phone(phone)) 
+					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration)) {
 				
 				User user = new User(name, id, pw, registration, phone); // 입력값 저장
 				Data.userList.add(user);
 				
 				System.out.println("회원가입이 완료되었습니다.");
-				System.out.println("회원 " +name + "님 환영합니다.");
+				System.out.println("회원 " + name + "님 환영합니다.");
 				View.pause();
 				
 				break;
 			}
 			
 			// 직원이 모든 조건을 만족한 입력을 받은경우
-			if(sel.equals("2") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) || Validation.is_RegistrationEffect(registration) 
-					|| Validation.is_RegistrationFormet(registration) || Validation.is_Phone(phone) || Validation.is_Code(code))) {
+			if(sel.equals("2") && !(Validation.is_Id(id) || Validation.is_Pw(pw) || Validation.is_Name(name) 
+					|| Validation.is_Registration(registration) || Validation.is_Phone(phone) || Validation.is_Code(code))
+					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration)) {
 				
 				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
 				Data.employeeList.add(employee);
@@ -177,6 +179,23 @@ public class SignUp {
 		}// while종료
 		
 	}//End of commonSignUp()
-
+	
+	public static String formatPhoneNumber(String phoneNumber) {
+        // 입력된 전화번호에서 숫자만 추출합니다.
+        String digitsOnly = phoneNumber.replaceAll("[^0-9]", "");
+        
+        // 추출된 숫자가 11자리인 경우, 010-XXXX-XXXX 형식으로 변경합니다.
+        if (digitsOnly.length() == 11) {
+            return digitsOnly.replaceFirst("(\\d{3})(\\d{4})(\\d{4})", "010-$1-$2");
+        }
+        
+        // 추출된 숫자가 10자리인 경우, 01X-XXXX-XXXX 형식으로 변경합니다.
+        if (digitsOnly.length() == 10) {
+            return digitsOnly.replaceFirst("(\\d{3})(\\d{3})(\\d{4})", "0$1-$2-$3");
+        }
+        
+        // 그 외의 경우는 입력된 전화번호를 그대로 반환합니다.
+        return phoneNumber;
+    }
 	
 }//End of class

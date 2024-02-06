@@ -1,5 +1,7 @@
 package com.java.common;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.List;
@@ -14,32 +16,42 @@ import com.java.view.View;
 public final class Validation {
 	
 		// id 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Id(String id) {
-			// 아이디: 필수값 4~12자 이내, 영소문자+숫자, 숫자 시작 X
-
-			String regex = "^[a-z]{1}[a-z0-9+]{3,11}$";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(id);
-
-			return !m1.find();
-		}
+			// 아이디 길이가 4자 이상 12자 이하여야 합니다.
+	        if (id.length() < 4 || id.length() > 12) {
+	            return false;
+	        }
+	        
+	        // 아이디가 숫자로 시작하는지 확인합니다.
+	        if (Character.isDigit(id.charAt(0))) {
+	            return false;
+	        }
+	        
+	        // 영어 소문자와 숫자를 포함하는지 확인하는 정규표현식을 사용합니다.
+	        String regex = "^(?=.*[a-z])(?=.*\\d)[a-zA-Z\\d]{4,12}$";
+	        
+	        // 정규표현식을 사용하여 아이디의 형식을 검사합니다.
+	        return id.matches(regex);
+	    }
 		
 		// pw 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Pw(String pw) {
-			// 비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)
-
-			if (pw.equals("") || pw == null) {
-				return true;
-			}
-
-			if (pw.length() < 8 || pw.length() > 15) {
-				return true;
-			}
-
-			return false;
-		}
+			// 비밀번호 길이가 8자 이상 15자 이하여야 합니다.
+	        if (pw.length() < 8 || pw.length() > 15) {
+	            return false;
+	        }
+	        
+	        // 대문자, 소문자, 숫자, 특수문자를 포함하는지 확인하는 정규표현식을 사용합니다.
+	        String regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!~*?]).+$";
+	        
+	        // 정규표현식을 사용하여 비밀번호의 형식을 검사합니다.
+	        return pw.matches(regex);
+	    }
 	
 		// 이름 유효성 검사
+		// 형식이 맞으면 true, 아니면 false
 		public static boolean is_Name(String name) {
 			// 이름: 2~5자, 한글만
 
@@ -50,66 +62,98 @@ public final class Validation {
 			return !m1.find();
 		}
 	
-		// 주민등록번호 유효성 검사
-		public static boolean is_RegistrationFormet(String registration) { // 주민등록번호 형식 검사
-			// 주민등록번호: “-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력
-
-			String regex = "([0-9]{6}-?[0-9]{7})";
-			Pattern p1 = Pattern.compile(regex);
-			Matcher m1 = p1.matcher(registration);
-
-			return !m1.find();
-		}
-
-		public static boolean is_RegistrationEffect(String registration) { // 주민등록번호 유효성 검사
-
-			int sum = 0;
-			registration = registration.replace("-", "");
-			boolean a = false;
-
-			for (int i = 0; i < 12; i++) {
-				sum += Integer.parseInt(registration.substring(i, i + 1)) * (i % 8 + 2);
-			}
-
-			sum %= 11;
-			sum = 11 - (sum % 10);
-
-			if (sum == Integer.parseInt(registration.substring(registration.length() - 1, registration.length()))) {
-				System.out.println("올바른 주민등록번호입니다.");
-			} else {
-				a = true;
-			}
-
-			return a;
-
-		}
-		
-		// 전화번호 유효성 검사
-		public static boolean is_Phone(String phone) {
-
-	        // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
-	        String regex = "010-[0-9]{4}-[0-9]{4}";
-	        if (!phone.matches(regex)) {
+		// 주민등록번호 유효성 검사 메서드
+		// 형식이 맞으면 true, 아니면 false
+	    public static boolean is_Registration(String registration) {
+	        // 형식 검사
+	        if (!isValidFormat(registration)) {
 	            return false;
 	        }
 
-	        // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
-	        for (int i = 0; i < phone.length(); i++) {
-	            char ch = phone.charAt(i);
-	            if (i != 3 && i != 8 && !Character.isDigit(ch)) {
-	                return false;
-	            }
+	        // 생년월일 유효성 검사
+	        if (!isValidDate(registration.substring(0, 6))) {
+	            return false;
+	        }
+
+	        // 유효성 검사
+	        if (!isValidCheckDigit(registration)) {
+	            return false;
 	        }
 
 	        return true;
-		 }
+	    }
+
+	    // 주민등록번호 형식 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
+	    private static boolean isValidFormat(String registration) {
+	        // 정규표현식을 사용하여 형식을 검사합니다.
+	        String regex = "\\d{6}-[1-4]\\d{6}|\\d{13}";
+	        return registration.matches(regex);
+	    }
+
+	    // 생년월일 유효성 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
+	    private static boolean isValidDate(String birthDate) {
+	        SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+	        dateFormat.setLenient(false); // 엄격한 날짜 포맷 설정
+
+	        try {
+	            dateFormat.parse(birthDate);
+	            return true;
+	        } catch (ParseException e) {
+	            return false;
+	        }
+	    }
+
+	    // 주민등록번호 유효성 검사 메서드
+	    // 형식이 맞으면 true, 아니면 false
+	    private static boolean isValidCheckDigit(String registration) {
+	        // 주민등록번호 가중치
+	        int[] weights = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
+
+	        // 유효성 검사
+	        int sum = 0;
+	        for (int i = 0; i < 12; i++) {
+	            int digit = Character.getNumericValue(registration.charAt(i));
+	            sum += digit * weights[i];
+	        }
+
+	        int checkDigit = Character.getNumericValue(registration.charAt(12));
+	        int remainder = (11 - (sum % 11)) % 10;
+
+	        return checkDigit == remainder;
+	    }
+		
+		// 전화번호 유효성 검사
+	    // 형식이 맞으면 true, 아니면 false
+		public static boolean is_Phone(String phone) {
+
+		    // 정규표현식을 사용하여 전화번호 형식을 검사합니다.
+		    String regex = "(010-\\d{4}-\\d{4})|(010\\d{4}\\d{4})";
+		    if (!phone.matches(regex)) {
+		        return false;
+		    }
+
+		    // '-'를 제외한 문자들이 모두 숫자인지 확인합니다.
+		    for (int i = 0; i < phone.length(); i++) {
+		        char ch = phone.charAt(i);
+		        if ((i == 3 || i == 8) && ch != '-') {
+		            return false;
+		        } else if (i != 3 && i != 8 && !Character.isDigit(ch)) {
+		            return false;
+		        }
+		    }
+
+		    return true;
+		}
 	
 		// 관리자 가입코드 유효성 검사
+		// 코드가 맞으면 true, 아니면 false
 		public static boolean is_Code(String code) {
 
 			boolean check = false;
 
-			if (!code.equals(Data.EMPLOYEECODE)) {
+			if (code.equals(Data.EMPLOYEECODE)) {
 				check = true;
 			} 
 			return check;

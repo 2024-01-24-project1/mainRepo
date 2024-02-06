@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.common.MyPage;
+import com.java.common.log.LogTab;
 import com.java.member.CommonFunction;
 import com.java.member.employee.stats.StatsTab;
 import com.java.schedule.ScheduleTab;
@@ -107,7 +108,7 @@ public final class EmployeeMode extends CommonFunction{
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 					
-					// 행동로그 보기
+					LogTab.printLog();
 				
 				}else {
 					System.out.println("접근 권한이 없습니다.");

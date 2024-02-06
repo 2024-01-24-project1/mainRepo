@@ -3,6 +3,7 @@ package com.java.common;
 import java.util.Scanner;
 
 import com.java.member.employee.Employee;
+import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
 import com.java.view.View;
 
@@ -43,6 +44,9 @@ public class MyPage {
 			System.out.println("1. 비밀번호 변경");
 			System.out.println("2. 전화번호 변경");
 			System.out.println("3. 회원탈퇴");
+			if(mode.equals("1")) {
+				System.out.println("4. 즐겨찾기 목록");
+			}
 			System.out.println("엔터입력시 뒤로가기");
 			System.out.print("입력: ");
 			sel = scan.nextLine();
@@ -53,6 +57,9 @@ public class MyPage {
 				myPageChangePhone();
 			} else if(sel.equals("3")) {
 				myPageRemoveID();
+			} else if(sel.equals("4") && mode.equals("1")) {
+				MyPageBookMark myPageBookMark = new MyPageBookMark();
+				myPageBookMark.myPageBookMarkSelMenu();
 			} else if(sel.equals("")) {
 				
 				//마이 페이지 종료

@@ -8,7 +8,7 @@ import com.java.view.View;
 
 public class StatsTab {
 	
-	final static long ALLSALES = 11300000000L;
+	final static long ALLSALES = 13000000000L;
 	
 	final static long ALLPASSENGER = 10000000L;
 	
@@ -75,7 +75,7 @@ public class StatsTab {
 					int line = Integer.parseInt(sel.charAt(0) + "");
 					
 					switch (line) {
-					case 1: Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+					case 1: Graph.drawGraph(Stats.linePassneger(sel), 2250000L);
 							break;
 					case 2: Graph.drawGraph(Stats.linePassneger(sel), 2800000L);
 						    break;
@@ -139,7 +139,7 @@ public class StatsTab {
 			
 					
 					switch (line) {
-					case 1: Graph.drawGraph(Stats.lineSales(sel), ALLSALES);
+					case 1: Graph.drawGraph(Stats.lineSales(sel), 2550000000L);
 							break;
 					case 2: Graph.drawGraph(Stats.lineSales(sel), 3200000000L);
 						    break;

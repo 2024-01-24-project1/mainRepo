@@ -3,6 +3,7 @@ package com.test.java.viewfolder;
 public class TestView {
 
 	public static void main(String[] args) {
+		ViewAll.errorHmmEmo();
 //		ViewAll.roadSearchEmo();
 		ViewAll.seasonPassEmo(); //정기권 이모
 		ViewAll.lostarticleEmo(); //분실물 이모

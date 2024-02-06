@@ -123,6 +123,11 @@ public class ScheduleTab {
 			System.out.println("삭제할 일정의 역: ");
 			station = scan.nextLine();
 			
+			if (station.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				station = station.substring(0, station.length() - 1);
+	        } 
+			
 			// 삭제할 날짜와 일정이 스케줄에 있는지
 			if( Validation.is_ScheduleSame(date, content, station) ) {
 				

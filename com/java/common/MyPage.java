@@ -266,7 +266,7 @@ public class MyPage {
 		
 		// 비밀번호가 다음의 조건을 만족하면
 		// 비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)
-		if( Validation.is_Pw(chPw)) {
+		if( !Validation.is_Pw(chPw)) {
 			
 			// 고객 비밀번호 변경
 			if(checkUser) {

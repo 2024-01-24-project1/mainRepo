@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.Data;
-import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.member.employee.UserVoiceSearch;
 import com.java.view.View;
 
 public class LostArticleTab {
@@ -19,6 +17,7 @@ public class LostArticleTab {
 		while(true) {
 			String sel = ""; // 선택한 번호
 			
+			// 모든 분실물 먼저 보여주기
 			lostArticleAll();
 			
 			System.out.println("=======================================");
@@ -36,7 +35,7 @@ public class LostArticleTab {
 				addLostArticle();
 			} else if(sel.equals("3")) {	// 3. 분실물 제거
 				removeLostArticle();
-			} else if (sel.equals("")) {	// 3. 뒤로가기
+			} else if (sel.equals("")) {	//    뒤로가기
 				
 				// 분실물탭 종료
 				break;
@@ -49,7 +48,6 @@ public class LostArticleTab {
 			
 		}//while루프 종료
 		
-		System.out.println("분실물탭 종료");
 	}//End of lostArticleTab()
 	
 	public static void lostArticleSearch() {
@@ -69,8 +67,12 @@ public class LostArticleTab {
 				System.out.print("분실물: ");
 				search = scan.nextLine();
 				
+				if (search.equals("")) {					// 엔터 입력시 문구 출력후 쫒아내기
+					System.out.println("잘못된 입력입니다.");
+					break;
+				}
+					
 				final String SEARCH = search;
-				System.out.println("");
 				
 				boolean check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().contains(SEARCH));
 				
@@ -87,19 +89,18 @@ public class LostArticleTab {
 					
 					LostArticleSearch.lostArticlePage(list);
 					
-				}else {			// 1개도 없으면
+				} else {			// 1개도 없으면
 					System.out.println(search + "를 포함하는 분실물이 없습니다.");
 				}
 				
-				System.out.println("검색을 그만두시려면 back입력");
-				System.out.println("다시 검색하시려면 엔터");
+				System.out.println("검색을 그만두시려면 엔터");
+				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
 				System.out.printf("입력: ");
 				search = scan.nextLine();
 				
-				if(search.equals("back")) {
+				if(search.equals("")) {
 					break;
 				}
-				
 				
 			}//while루프 종료
 			
@@ -128,6 +129,17 @@ public class LostArticleTab {
 			find = scan.nextLine();
 			System.out.printf("보관역: ");
 			keep = scan.nextLine();
+			
+			if (find.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				find = find.substring(0, find.length() - 1);
+	        } 
+			
+			if (keep.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				keep = keep.substring(0, keep.length() - 1);
+	        } 
+			
 				
 			if(article.length() > 20 || article.length() < 1) {
 				System.out.println("분실물의 이름은 20글자 이하 1글자 이상입니다");
@@ -153,16 +165,18 @@ public class LostArticleTab {
 				Data.lostArticleList.add(lostArticle);
 				
 				System.out.println("분실물 추가 완료");
+				View.pause();
 				
 				// 분실물 추가 종료
 				break;
 			}
 			
-			System.out.println("다시 입력하시려면 엔터 뒤로가려면 back입력");
+			System.out.println("다시 입력하시려면 아무키나 입력하세요.");
+			System.out.println("뒤로가려면 엔터를 입력하세요.");
 			System.out.printf("입력: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				
 				// 분실물 추가 종료
 				break;
@@ -171,7 +185,6 @@ public class LostArticleTab {
 			
 		}//while루프 종료
 		
-		View.pause();
 		
 	}//End of addLostArticle()
 	
@@ -192,7 +205,14 @@ public class LostArticleTab {
 			System.out.println("보관 된 위치: ");
 			sts = scan.nextLine();
 			
-			if( Validation.is_LostArticle(sel)) {
+			if (sts.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+	            sts = sts.substring(0, sts.length() - 1);
+	        }
+			
+			
+			// 해당역에 보관중인 분실물이 존재하는지 확인
+			if( Validation.is_Duplication_LostArticle(sel, sts)) {
 				
 				for(LostArticle article : Data.lostArticleList) {
 					
@@ -205,28 +225,28 @@ public class LostArticleTab {
 				}
 				
 				System.out.println("분실물이 삭제되었습니다");
+				View.pause();
 				
 				// 분실물 삭제 종료
 				break;
 				
 			}else {
 				System.out.println("존재하지 않는 분실물 입니다.");
+				View.pause();
 			}
 			
-			System.out.println("다시 삭제하려면 엔터");
-			System.out.println("뒤로 가시려면 back입력");
+			System.out.println("다시 삭제하려면 아무키나 입력");
+			System.out.println("뒤로 가시려면 엔터");
 			System.out.printf("입력: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("back")) {
+			if(sel.equals("")) {
 				// 분실물 삭제 종료
 				break;
 			}
 			
 			
 		}//while루프 종료
-		
-		View.pause();
 		
 	}//End of removeLostArticle()
 	

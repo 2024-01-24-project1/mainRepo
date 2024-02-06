@@ -346,4 +346,53 @@ public final class Validation {
 			return check;
 		}
 		
+		// 분실물의 이름과 보관역을 받아서 
+		// 존재하는 분실물인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_LostArticle(String lostArticle, String station) {
+			boolean check = false;
+			
+			check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().equals(lostArticle) 
+																   && article.getFindStation().equals(station)); 
+			
+			return check;
+		}
+		
+		// 분실물의 이름과 보관역을 받아서 
+		// 존재하는 분실물인지 체크하는 메서드
+		// 있으면 true, 없으면 false
+		public static boolean is_Duplication_UserVoice(String id, String title) {
+			boolean check = false;
+			
+			check = Data.userVoiceList.stream().anyMatch(voice -> voice.getId().equals(id) 
+															   && voice.getTitle().equals(title)); 
+			
+			return check;
+		}
+		
+		// 입력받은 문자열이 평일,주말인지 확인하는 메서드
+		// 평일,주말 입력이면 true, 아니면 false
+		public static boolean is_WeekOf(String input) {
+			
+			if(input.equals("평일") || input.equals("주말")) {
+				return true;
+			}else {
+				return false;
+			}
+			
+		}
+		
+		// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
+		// 맞으면 true, 아니면 false
+		public static boolean is_OperationTime(String input) {
+			
+	        try {
+	            int number = Integer.parseInt(input);
+	            return number >= 5 && number <= 24;
+	        } catch (NumberFormatException e) {
+	            // 입력이 숫자가 아닌 경우에 대한 예외 처리
+	            return false;
+	        }
+	    }
+		
 }//End of class

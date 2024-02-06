@@ -25,15 +25,16 @@ public class UserVoiceTab {
 			} else if(num.equals("3")) {  // 3. 분실물 검색 
 				LostArticleTab.lostArticleSearch();
 			}
-			else if (num.equals("4")) {    // 4. 뒤로가기
+			else if (num.equals("")) {    // 4. 뒤로가기
 				break;
 				
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다\r\n다시 입력해주세요.");
 				System.out.println();
+				View.pause();
 			} 
 		}
-	}
+	}//End of userVoice()
 	
 	private static void complain() { // 1. 일반 민원 접수
 		
@@ -69,9 +70,7 @@ public class UserVoiceTab {
 			System.out.println("다시 민원을 접수해주세요.");
 		}
 		View.pause();
-
 		
 	}//End of complain()
-	
 
 }//End of class

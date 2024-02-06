@@ -8,9 +8,9 @@ import com.java.view.View;
 
 public class StatsTab {
 	
-	final static long ALLSALES = 20000000000L;
+	final static long ALLSALES = 13000000000L;
 	
-	final static long ALLPASSENGER = 20000000L;
+	final static long ALLPASSENGER = 10000000L;
 	
 	
 	
@@ -26,7 +26,7 @@ public class StatsTab {
 			System.out.println(" 1. 혼잡도 통계");
 			System.out.println(" 2. 이용객 통계");
 			System.out.println(" 3. 매출 통계");
-			System.out.println(" 4. 뒤로가기");
+			System.out.println(" 뒤로가기 엔터");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -38,7 +38,7 @@ public class StatsTab {
 				userStatsTab();
 			}else if (sel.equals("3")) {	// 3. 매출 통계
 				salesStatsTab();
-			}else if (sel.equals("4")) {	// 4. 뒤로가기
+			}else if (sel.equals("")) {	// 4. 뒤로가기
 				
 				// 혼잡도 통계 종료
 				break;
@@ -50,7 +50,6 @@ public class StatsTab {
 			
 		}//while루프 종료
 		
-		System.out.println("통계탭 종료");
 	}//End of statsTab()
 	
 	public static void userStatsTab() {
@@ -70,9 +69,33 @@ public class StatsTab {
 				System.out.println("보고싶은 호선을 입력해주세요");
 				System.out.println("입력(N호선): ");
 				sel = scan.nextLine();
-				
+
 				if(Validation.is_Line(sel)) {
-					Graph.drawGraph(Stats.linePassneger(sel), ALLPASSENGER);
+					
+					int line = Integer.parseInt(sel.charAt(0) + "");
+					
+					switch (line) {
+					case 1: Graph.drawGraph(Stats.linePassneger(sel), 2250000L);
+							break;
+					case 2: Graph.drawGraph(Stats.linePassneger(sel), 2800000L);
+						    break;
+					case 3: Graph.drawGraph(Stats.linePassneger(sel), 1050000L);
+							break;
+					case 4: Graph.drawGraph(Stats.linePassneger(sel), 1030000L);
+							break;
+					case 5: Graph.drawGraph(Stats.linePassneger(sel), 1300000L);
+							break;
+					case 6: Graph.drawGraph(Stats.linePassneger(sel), 700000L);
+							break;
+					case 7: Graph.drawGraph(Stats.linePassneger(sel), 1200000L);
+							break;
+					case 8: Graph.drawGraph(Stats.linePassneger(sel), 390000L);
+							break;
+					case 9: Graph.drawGraph(Stats.linePassneger(sel), 770000L);
+							break;
+						
+					}
+					
 				}else {
 					System.out.println("잘못된 입력");
 				}
@@ -88,10 +111,8 @@ public class StatsTab {
 				
 			}//while루프 종료
 			
-			
 		}// 특정호선 통계 종료
 		
-		System.out.println("이용객 통계 종료");
 	}//End of userStatsTab()
 	
 	public static void salesStatsTab() {
@@ -112,7 +133,33 @@ public class StatsTab {
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
-					Graph.drawGraph(Stats.lineSales(sel), ALLPASSENGER);
+					
+					int line = Integer.parseInt(sel.charAt(0) + "");
+					
+			
+					
+					switch (line) {
+					case 1: Graph.drawGraph(Stats.lineSales(sel), 2550000000L);
+							break;
+					case 2: Graph.drawGraph(Stats.lineSales(sel), 3200000000L);
+						    break;
+					case 3: Graph.drawGraph(Stats.lineSales(sel), 1200000000L);
+							break;
+					case 4: Graph.drawGraph(Stats.lineSales(sel), 1150000000L);
+							break;
+					case 5: Graph.drawGraph(Stats.lineSales(sel), 1480000000L);
+							break;
+					case 6: Graph.drawGraph(Stats.lineSales(sel), 790000000L);
+							break;
+					case 7: Graph.drawGraph(Stats.lineSales(sel), 1380000000L);
+							break;
+					case 8: Graph.drawGraph(Stats.lineSales(sel), 440000000L);
+							break;
+					case 9: Graph.drawGraph(Stats.lineSales(sel), 870000000L);
+							break;
+						
+					}
+					
 				}else {
 					System.out.println("잘못된 입력");
 				}
@@ -128,11 +175,6 @@ public class StatsTab {
 				
 			}//while루프 종료
 		}
-		
-		System.out.println("이용객 통계 종료");
-		
-		
-		
 
 	}//End of salesStatsTab()
 	

@@ -18,7 +18,7 @@ public class EmployeeSearch {
 		employeePage(list);
 		
 		System.out.println("특정 호선, 이름, 직원이름으로 검색하시려면 1");
-		System.out.println("아니면 엔터");
+		System.out.println("뒤로가기 엔터");
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
@@ -27,9 +27,6 @@ public class EmployeeSearch {
 			employeeSearch(list);
 			
 		}
-		
-		System.out.println("직원검색 종료");
-		View.pause();
 		
 	}//End of employeeAll()
 	
@@ -68,12 +65,12 @@ public class EmployeeSearch {
 				System.out.println("조건에 해당하는 직원이 존재하지 않습니다.");
 			}
 			
-			System.out.println("다른 조건을 검색하시려면 엔터");
-			System.out.println("직원검색을 종료하시면 back입력");
+			System.out.println("다른 조건을 검색하시려면 아무키나 입력");
+			System.out.println("직원검색을 종료하시면 엔터");
 			System.out.printf("입력: ");
 			search = scan.nextLine();
 			
-			if(search.equals("back")) {
+			if(search.equals("")) {
 				
 				// 특정 조건 직원검색 종료
 				break;
@@ -114,11 +111,11 @@ public class EmployeeSearch {
 							 													, employee.getPhone()));
 					// 이름, ID, 전화번호, 직급, 호선, 역이름
 					System.out.printf("Page| %s / %s\r\n", index + 1, page);
-					System.out.print("back입력시 뒤로갑니다.");
+					System.out.print("엔터입력시 뒤로갑니다.");
 					System.out.print("원하는 페이지: ");
 					sel = scan.nextLine();
 					
-					if(sel.equals("back")) {
+					if(sel.equals("")) {
 						break;
 					}else if (Validation.is_NumString(sel)) {
 						index = Integer.parseInt(sel) - 1;
@@ -138,6 +135,5 @@ public class EmployeeSearch {
 				}//while루프 종료
 		
 	}//End of lostArticlePage()
-	
 	
 }//End of class

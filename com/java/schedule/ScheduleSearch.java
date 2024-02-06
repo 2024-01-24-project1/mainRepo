@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.java.common.Validation;
+import com.java.view.View;
 
 public class ScheduleSearch {
 
@@ -39,11 +40,11 @@ public class ScheduleSearch {
 						 													, schedule.getSchedule()));
 				// 이름, ID, 전화번호, 직급, 호선, 역이름
 				System.out.printf("Page| %s / %s\r\n", index + 1, page);
-				System.out.print("back입력시 뒤로갑니다.");
+				System.out.print("페이지모드를 종료하시려면 엔터입력");
 				System.out.print("원하는 페이지: ");
 				sel = scan.nextLine();
 				
-				if(sel.equals("back")) {
+				if(sel.equals("")) {
 					break;
 				}else if (Validation.is_NumString(sel)) {
 					index = Integer.parseInt(sel) - 1;
@@ -52,17 +53,18 @@ public class ScheduleSearch {
 						System.out.println("페이지 범위를 벗어났습니다.");
 						System.out.println("다시 입력해주세요.");
 						index = 0;
+						View.pause();
 						
 					}
 					
 				}else {
 					System.out.println("잘못된 입력입니다.");
 					System.out.println("다시 입력해주세요.");
+					View.pause();
 				}
 				
 			}//while루프 종료
 			
 	}//End of schedulePage()
-	
 	
 }//End of class

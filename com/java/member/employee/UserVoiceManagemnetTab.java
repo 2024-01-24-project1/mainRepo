@@ -22,7 +22,7 @@ public final class UserVoiceManagemnetTab {
 			System.out.println("=======================================");
 			System.out.println("           1. 전체 분실물 보기");
 			System.out.println("           2. 전체 민원 보기");
-			System.out.println("           3. 뒤로가기");
+			System.out.println("              뒤로가기 엔터");
 			System.out.println("--------------------------------------");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -31,7 +31,7 @@ public final class UserVoiceManagemnetTab {
 				LostArticleTab.lostArticleTab();
 			} else if(sel.equals("2")) {	// 2. 직원 민원 보기
 				UserVoiceSearch.userVoiceAll();
-			} else if (sel.equals("3")) {	// 3. 뒤로가기
+			} else if (sel.equals("")) {	//    뒤로가기
 				
 				// 민원 종료
 				break;
@@ -44,8 +44,6 @@ public final class UserVoiceManagemnetTab {
 			
 			
 		}// while루프 종료
-		
-		
 		
 	}//End of userVoiceManagementTab()
 	

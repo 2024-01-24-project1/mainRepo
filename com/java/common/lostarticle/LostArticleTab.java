@@ -127,6 +127,15 @@ public class LostArticleTab {
 			System.out.printf("보관역: ");
 			keep = scan.nextLine();
 			
+			if (find.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				find = find.substring(0, find.length() - 1);
+	        } 
+			
+			if (keep.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				keep = keep.substring(0, keep.length() - 1);
+	        } 
 			
 				
 			if(article.length() > 20 || article.length() < 1) {

@@ -67,6 +67,11 @@ public class ScheduleTab {
 			System.out.printf("스케줄내용: ");
 			content = scan.nextLine();
 			
+			if (station.endsWith("역")) {
+	            // '역'을 제거한 문자열을 반환합니다.
+				station = station.substring(0, station.length() - 1);
+	        } 
+			
 			
 			if( !Validation.is_ScheduleSame(date, content, station) && Validation.is_StationName(station) && Validation.is_Date(date)) {
 						

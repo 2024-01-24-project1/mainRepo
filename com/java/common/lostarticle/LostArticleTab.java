@@ -89,12 +89,12 @@ public class LostArticleTab {
 					System.out.println(search + "를 포함하는 분실물이 없습니다.");
 				}
 				
-				System.out.println("검색을 그만두시려면 back입력");
-				System.out.println("다시 검색하시려면 엔터");
+				System.out.println("검색을 그만두시려면 엔터");
+				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
 				System.out.printf("입력: ");
 				search = scan.nextLine();
 				
-				if(search.equals("back")) {
+				if(search.equals("")) {
 					break;
 				}
 				

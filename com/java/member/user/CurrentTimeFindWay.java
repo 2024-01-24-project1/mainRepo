@@ -69,7 +69,11 @@ public class CurrentTimeFindWay extends FindWay {
 				}
 
 			}
-
+			if(calendar.get(Calendar.HOUR_OF_DAY)< 5 || calendar.get(Calendar.HOUR_OF_DAY) > 24 ) {
+				System.out.println("현재 시간에는 열차가 운행하지 않습니다. 다른 날짜보기를 이용해주세요.");
+				View.pause();
+				return;
+			}
 
 			findWay(line, start, end, calendar);
 

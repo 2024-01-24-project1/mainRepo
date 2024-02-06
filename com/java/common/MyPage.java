@@ -198,6 +198,11 @@ public class MyPage {
 		
 		String chPhone = scan.nextLine(); //변경할 전화번호 입력
 		
+		// 전화번호 형식이면 010-XXXX-XXXX형식으로 변환
+		if(Validation.is_Phone(chPhone)) {
+			SignUp.formatPhoneNumber(chPhone);
+		}
+		
 		// 유효성 검사
 		// 이미 있는 전화번호인지, 전화번호 형식에 맞는지
 		if( Validation.is_Phone(chPhone) && !Validation.is_Duplication_Phone(chPhone)) {
@@ -266,7 +271,7 @@ public class MyPage {
 		
 		// 비밀번호가 다음의 조건을 만족하면
 		// 비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)
-		if( !Validation.is_Pw(chPw)) {
+		if( Validation.is_Pw(chPw)) {
 			
 			// 고객 비밀번호 변경
 			if(checkUser) {

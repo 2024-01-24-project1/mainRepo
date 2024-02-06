@@ -7,6 +7,7 @@ import java.nio.charset.Charset;
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
+import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
 import com.java.schedule.Schedule;
@@ -24,9 +25,38 @@ public final class Exit {
 		writeLogList();
 		writeUserVoiceList();
 		writeLostArticleList();
+		writeBookMarkList();
 		
 	}
 	
+	private void writeBookMarkList() {
+		
+		try {
+			
+			BufferedWriter writer = new BufferedWriter(new FileWriter
+										(data.BOOKMARKPATH, Charset.forName("UTF-8") ) );
+			
+			for(BookMark bookMark : Data.bookMarkList) {
+				writer.write(bookMark.getId());
+				for(String route : bookMark.getBookMarkList()) {
+					writer.write(","+route);
+				}
+				writer.newLine();
+				
+			}
+			writer.close();
+			return;
+			
+			
+		} catch (Exception e) {
+			System.out.println("Exit.writeBookMarkList()");
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+
 	private void writeLostArticleList() {
 		try {
 			
@@ -187,7 +217,8 @@ public final class Exit {
 				writer.write(user.getPw() + ",");
 				writer.write(user.getRegistration() + ",");
 				writer.write(user.getPhone() + ",");
-				writer.write(user.getPassCheck() + "\r\n");
+				writer.write(user.getPassCheck() + ",");
+				writer.write(user.getPassExpiry()+"\r\n");
 				
 			}
 			

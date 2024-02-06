@@ -74,23 +74,18 @@ public class SignUp {
 			// ID, PW, 이름, 주민등록번호, 전화번호 입력받기
 			System.out.print("  아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
 			id = scan.nextLine();
-			System.out.println();
 			
 			System.out.print("  비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
 			pw = scan.nextLine();
-			System.out.println();
 			
 			System.out.print("  이름 (2~5자, 한글만) : ");
 			name = scan.nextLine();
-			System.out.println();
 			
 			System.out.print("  주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
 			registration = scan.nextLine();
-			System.out.println();
 			
 			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
 			phone = scan.nextLine();
-			System.out.println();
 			
 			if(sel.equals("2")) {
 				
@@ -101,44 +96,82 @@ public class SignUp {
 			
 			}
 			
+			
 			// 회원가입 유효성 검사
-			if( !Validation.is_Id(id) ) {
-				System.out.println("아이디 형식이 틀렸습니다.");
-			}else if ( Validation.is_Duplication_Id(id)) {
+			
+			// 아이디 형식 검사
+			if( Validation.is_Duplication_Id(id) ) {
 				System.out.println("중복된 아이디입니다.");
+			}else if ( !Validation.is_Id(id) ) {
+				System.out.println("아이디 형식이 틀렸습니다.");
 			}
 			
+			// 비밀번호 형식 검사
 			if( !Validation.is_Pw(pw)) {
 				System.out.println("비밀번호 형식이 틀렸습니다.");
+				
 			}
 			
+			// 이름 형식 검사
 			if ( !Validation.is_Name(name)) {
 				System.out.println("이름 형식이 틀렸습니다.");
+				
 			}
 			
-			if ( Validation.is_Registration(registration) ) {
+			// 주민등록번호 형식 검사
+			if(Validation.is_RegistrationFormat(registration)) {
+				
+				// 주민등록번호 XXXXXX-XXXXXXX형태로 변환
 				addHyphenToRRN(registration);
-			}else if ( Validation.is_Duplication_RRN(registration)) {
-				System.out.println("중복된 주민등록");
+				
+				if(Validation.is_Duplication_Id(registration)) {
+					System.out.println("중복된 주민등록번호입니다.");
+				}else {
+					
+					if(!Validation.is_Registration(registration)) {
+						System.out.println("유효하지 않은 주민등록번호입니다.");
+					}
+					
+				}
+				
 			}else {
 				System.out.println("주민등록번호 형식이 틀렸습니다.");
 			}
 			
-			if ( Validation.is_Phone(phone) ) {
+			// 휴대폰번호 형식 검사
+			if ( Validation.is_PhoneFormat(phone) ) {
+				
+				// 전화번호 XXX-XXXX-XXXX형태로 변환
 				formatPhoneNumber(phone);
-			}else if ( Validation.is_Duplication_Phone(phone)) {
-				System.out.println("중복된 전화번호입니다.");
+				
+				if(Validation.is_Duplication_Phone(phone)) {
+					System.out.println("중복된 전화번호입니다.");
+				}else {
+					
+					if(!Validation.is_Phone(phone)) {
+						//010으로 시작하는지
+						System.out.println("유효하지 않은 전화번호입니다.");
+					}
+					
+				}
+				
+				
 			}else {
 				System.out.println("전화번호 형식이 틀렸습니다.");
 			}
 			
+
+			
+			// 회원코드 검사
 			if( !Validation.is_Code(code) && sel.equals("2")) {
 				System.out.println("회원코드가 틀렸습니다.");
 			}
 			
 			
 			// 회원이 모든 조건을 만족한 입력을 받은경우
-			if( sel.equals("1") && Validation.is_Id(id) && Validation.is_Pw(pw) && Validation.is_Name(name) && Validation.is_Registration(registration) 
+			if( sel.equals("1") && Validation.is_Id(id) && Validation.is_Pw(pw) && Validation.is_Name(name) 
+					&& Validation.is_Registration(registration) && Validation.is_RegistrationFormat(registration)
+					&& Validation.is_Phone(phone) && Validation.is_PhoneFormat(phone)
 					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration) ) {
 				
 				User user = new User(name, id, pw, registration, phone); // 입력값 저장
@@ -152,8 +185,10 @@ public class SignUp {
 				
 				
 				// 회원이 모든 조건을 만족한 입력을 받은경우
-			}else if(sel.equals("2") && Validation.is_Id(id) && Validation.is_Pw(pw) && Validation.is_Name(name) && Validation.is_Registration(registration) 
-					&& Validation.is_Phone(phone) && Validation.is_Code(code)
+			}else if(sel.equals("2") && Validation.is_Id(id) && Validation.is_Pw(pw) && Validation.is_Name(name) 
+					&& Validation.is_Registration(registration) && Validation.is_RegistrationFormat(registration)
+					&& Validation.is_Phone(phone) && Validation.is_PhoneFormat(phone)
+					&& Validation.is_Code(code)
 					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration) ) {
 				
 				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
@@ -187,21 +222,8 @@ public class SignUp {
 	}//End of commonSignUp()
 	
 	public static String formatPhoneNumber(String phoneNumber) {
-        // 입력된 전화번호에서 숫자만 추출합니다.
-        String digitsOnly = phoneNumber.replaceAll("[^0-9]", "");
-        
-        // 추출된 숫자가 11자리인 경우, 010-XXXX-XXXX 형식으로 변경합니다.
-        if (digitsOnly.length() == 11) {
-            return digitsOnly.replaceFirst("(\\d{3})(\\d{4})(\\d{4})", "010-$1-$2");
-        }
-        
-        // 추출된 숫자가 10자리인 경우, 01X-XXXX-XXXX 형식으로 변경합니다.
-        if (digitsOnly.length() == 10) {
-            return digitsOnly.replaceFirst("(\\d{3})(\\d{3})(\\d{4})", "0$1-$2-$3");
-        }
-        
-        // 그 외의 경우는 입력된 전화번호를 그대로 반환합니다.
-        return phoneNumber;
+        String formattedNumber = phoneNumber.replaceAll("(\\d{3})(\\d{4})(\\d{4})", "$1-$2-$3");
+        return formattedNumber;
     }
 	
 	public static String addHyphenToRRN(String rrn) {

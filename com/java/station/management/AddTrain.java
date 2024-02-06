@@ -45,6 +45,12 @@ public class AddTrain extends StationManagement {
 				System.out.print("호선: ");
 				line = reader.readLine();
 				
+<<<<<<< Updated upstream
+=======
+				if(line.contains("호선")){
+					line = line.replace("호선", "");
+				}
+>>>>>>> Stashed changes
 
 				ViewAll.trainAddTwo();
 				System.out.print("추가 열차수: ");        
@@ -74,6 +80,7 @@ public class AddTrain extends StationManagement {
 				}else {
 					
 					ViewAll.trainAddError();
+					System.out.println("뒤로 가려면 엔터를 입력하세요.");
 					
 				}
 				

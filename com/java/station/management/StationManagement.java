@@ -272,7 +272,7 @@ public class StationManagement {
 		
 		
 		Pattern pattern = Pattern.compile("[0-9]{1,2}:\\d{2}");
-		
+		 
 		
 		
 		for(String time : stationTimeTable) {

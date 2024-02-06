@@ -3,9 +3,8 @@ package com.java.member.employee;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.java.common.Data;
 import com.java.common.Validation;
-import com.java.view.View;
+import com.java.common.log.LogSave;
 
 public class EmployeeSearch {
 	
@@ -72,6 +71,7 @@ public class EmployeeSearch {
 			
 			if(search.equals("")) {
 				
+				LogSave.employeeSearchLog(SEARCH, searchlist);
 				// 특정 조건 직원검색 종료
 				break;
 			}

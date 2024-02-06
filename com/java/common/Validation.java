@@ -442,9 +442,13 @@ public final class Validation {
 		public static boolean is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
+<<<<<<< Updated upstream
 			if(line.contains("호선")){
 				line = line.replace("호선", "");
 			}
+=======
+			
+>>>>>>> Stashed changes
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
@@ -584,6 +588,27 @@ public final class Validation {
 	            
 	        } catch (NumberFormatException e) {
 	            return false; // 정수로 변환할 수 없는 문자열이 입력됨
+<<<<<<< Updated upstream
+=======
+	        }
+			
+
+			
+			
+			
+		}
+		
+	    public static int getDaysInMonth(int year, int month) {
+	        switch (month) {
+	            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+	                return 31;
+	            case 4: case 6: case 9: case 11:
+	                return 30;
+	            case 2:
+	                return isLeapYear(year) ? 29 : 28;
+	            default:
+	                return -1; // 잘못된 월 입력
+>>>>>>> Stashed changes
 	        }
 			
 
@@ -608,5 +633,34 @@ public final class Validation {
 	    public static boolean isLeapYear(int year) {
 	        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 	    }
+
+	    public static boolean isLeapYear(int year) {
+	        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+	    }
+	    
+	 // 입력받은 문자열이 평일,주말인지 확인하는 메서드
+	 		// 평일,주말 입력이면 true, 아니면 false
+	 		public static boolean is_WeekOf(String input) {
+	 			
+	 			if(input.equals("평일") || input.equals("주말")) {
+	 				return true;
+	 			}else {
+	 				return false;
+	 			}
+	 			
+	 		}
+	 		
+	 		// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
+	 		// 맞으면 true, 아니면 false
+	 		public static boolean is_OperationTime(String input) {
+	 			
+	 	        try {
+	 	            int number = Integer.parseInt(input);
+	 	            return number >= 5 && number <= 24;
+	 	        } catch (NumberFormatException e) {
+	 	            // 입력이 숫자가 아닌 경우에 대한 예외 처리
+	 	            return false;
+	 	        }
+	 	    }
 		
 }//End of class

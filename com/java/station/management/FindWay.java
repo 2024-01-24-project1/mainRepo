@@ -68,7 +68,7 @@ public class FindWay extends StationManagement {
 					
 					if(check) {
 						loop = false;
-					}else {
+					}else { //뒤로가기 추가
 						
 						System.out.println("잘못된 입력입니다. 다시 입력하세요.");
 						
@@ -245,7 +245,7 @@ public class FindWay extends StationManagement {
 		
 		//현재 시간과 가장 가까운 열차 시간
 		departureTime = departureTrainTime(line, startStation, dayOfWeek ,calendar);
-
+ 
 		//true면 상행선
 		if(stationManagement.way) {
 

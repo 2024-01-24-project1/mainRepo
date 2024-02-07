@@ -153,6 +153,7 @@ public class StationManagement {
 		int page = (int)(Math.ceil((double)list.size() / 5));
 
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
+		
 
 		Scanner scan = new Scanner(System.in);
 
@@ -168,10 +169,11 @@ public class StationManagement {
 			.limit(5)
 			.forEach(busy -> System.out.println(busy));
 			System.out.println(end);
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.println("엔터입력시 리스트보기를 종료합니다.");
-			System.out.print("원하는 페이지: ");
+			System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);
+			System.out.println("\t\t\t엔터입력시 리스트보기를 종료합니다.");
+			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 
 			if(sel.equals("")) {
@@ -180,15 +182,15 @@ public class StationManagement {
 				index = Integer.parseInt(sel) - 1;
 
 				if(index < 0 || index >= page) {
-					System.out.println("페이지 범위를 벗어났습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					index = 0;
 
 				}
 
 			}else {
-				System.out.println("잘못된 입력입니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t잘못된 입력입니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 			}
 
 		}//while루프 종료

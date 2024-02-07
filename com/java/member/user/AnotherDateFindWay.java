@@ -76,7 +76,7 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 				ViewAll.roadSearchRouteTop();
-				System.out.print("\t\t\t호선: ");
+				System.out.print("\t\t\t호선          : ");
 				line = reader.readLine();
 
 				if(line.contains("\t\t\t호선")) {

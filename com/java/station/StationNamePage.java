@@ -11,7 +11,7 @@ public class StationNamePage {
 		
 		
 		try { 
-			if(Integer.parseInt(line)<1 && Integer.parseInt(line)>9) {
+			if(Integer.parseInt(line)<1 || Integer.parseInt(line)>9) {
 				return;
 			}
 			

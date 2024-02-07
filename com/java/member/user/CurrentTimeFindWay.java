@@ -31,7 +31,7 @@ public class CurrentTimeFindWay extends FindWay {
 			while(true) {
 
 				//ViewAll 선택노선 추가하기
-				System.out.print("\t\t\t호선: ");
+				System.out.print("\t\t\t호선          : ");
 				line = reader.readLine();
 				
 				

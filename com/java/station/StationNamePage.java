@@ -26,7 +26,7 @@ public class StationNamePage {
             int startIndex = currentPage * pageSize;
             int endIndex = Math.min(startIndex + pageSize, list.size());
             list.subList(startIndex, endIndex).stream().forEach(station -> {
-                System.out.printf("%-15s", station);
+                System.out.printf("%-20s  \t", station);
                 if (list.indexOf(station) % 3 == 2 || list.indexOf(station) == endIndex - 1) // 한 줄에 역 이름을 3개씩 출력
                     System.out.println();
             });

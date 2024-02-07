@@ -44,23 +44,28 @@ public class MyPage {
 			}
 			
 			System.out.println();
+			System.out.println("\t\t\t         0. 회원탈퇴");
 			System.out.println("\t\t\t         1. 비밀번호 변경");
 			System.out.println("\t\t\t         2. 전화번호 변경");
-			System.out.println("\t\t\t         3. 회원탈퇴");
-			System.out.println("\t\t\t         4. 북마크");
 			
+			if(mode.equals("1")) {
+			
+			System.out.println("\t\t\t         3. 북마크");
+			
+			}
 
 			System.out.println("\t\t\t\t엔터입력시 뒤로가기");
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
-			if(sel.equals("1")) { // 1. 비밀번호 변경
+			
+			if(sel.equals("0")) { // 3. 회원탈퇴
+				myPageRemoveID();
+			} else if(sel.equals("1")) { // 1. 비밀번호 변경
 				myPageChangePW();
 			} else if(sel.equals("2")) { // 2. 전화번호 변경 
 				myPageChangePhone();
-			} else if(sel.equals("3")) { // 3. 회원탈퇴
-				myPageRemoveID();
-			} else if(sel.equals("4") && mode.equals("1")) { // 북마크
+			} else if(sel.equals("3") && mode.equals("1")) { // 북마크
 				MyPageBookMark myPageBookMark = new MyPageBookMark();
 				myPageBookMark.myPageBookMarkSelMenu();
 			} else if(sel.equals("")) {

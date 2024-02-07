@@ -26,7 +26,7 @@ public class MyPage {
 			if(mode.equals("1")) {
 				
 				// 유저만 가지는 정보 출력
-				System.out.printf("\t\t\t정기권: %s  ", LoginLogout.pass);
+				System.out.printf("\t\t정기권: %s  ", LoginLogout.pass);
 				
 				// 정기권이 있으면 유효기간 출력 없으면 출력하지않음
 				if(LoginLogout.pass.equals("있음")) {
@@ -50,9 +50,6 @@ public class MyPage {
 			System.out.println("\t\t\t         4. 북마크");
 			
 
-			if(mode.equals("1")) {
-				System.out.println("\t\t\t 4. 즐겨찾기 목록");
-			}
 			System.out.println("\t\t\t\t엔터입력시 뒤로가기");
 			ViewAll.chooseNum();
 			sel = scan.nextLine();

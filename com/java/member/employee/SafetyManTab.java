@@ -61,8 +61,8 @@ public class SafetyManTab {
 				break;
 					
 			} else { // 이외의 숫자 입력 시
-					System.out.println("해당 섹션이 없습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					ViewAll.pause();
 			}
 			
@@ -78,8 +78,8 @@ public class SafetyManTab {
 		
 		EmployeeSearch.employeePage(safetyList);
 		
-		System.out.println("해제시킬 안전요원의 아이디를 입력하세요");
-		System.out.print("아이디: ");
+		System.out.println("\t\t\t해제시킬 안전요원의 아이디를 입력하세요");
+		System.out.print("\t\t\t아이디: ");
 		input = scan.nextLine();
 		
 		if( Validation.is_SafetyMan(input) && (!Validation.is_WorkArea(input)) ) {
@@ -98,12 +98,12 @@ public class SafetyManTab {
 			}
 			
 			LogSave.logSave(LogSave.SAFYTYMANWORKAREACLEAR);
-			System.out.println("안전요원 부서 해제 완료");
+			System.out.println("\t\t\t안전요원 부서 해제 완료");
 			
 		} else if ( Validation.is_SafetyMan(input) && Validation.is_WorkArea(input) ) {
-			System.out.println("입력한 안전요원은 아직 배치되지 않았습니다.");
+			System.out.println("\t\t\t입력한 안전요원은 아직 배치되지 않았습니다.");
 		} else {
-			System.out.println("입력한 아이디의 안전요원이 없습니다.");
+			System.out.println("\t\t\t입력한 아이디의 안전요원이 없습니다.");
 		}
 		
 		ViewAll.pause();
@@ -118,8 +118,8 @@ public class SafetyManTab {
 		
 		EmployeeSearch.employeePage(list);
 		
-		System.out.println("배치할 안전요원의 아이디를 입력하세요");
-		System.out.print("아이디: ");
+		System.out.println("\t\t\t배치할 안전요원의 아이디를 입력하세요");
+		System.out.print("\t\t\t아이디: ");
 		input = scan.nextLine();
 		
 		if( Validation.is_SafetyMan(input) && Validation.is_WorkArea(input) ) {

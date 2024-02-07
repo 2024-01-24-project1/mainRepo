@@ -6,7 +6,7 @@ import com.java.common.LoginLogout;
 
 public class ViewAll {
 	
-	public static void clear() {
+	public static void clear() { //화면 넘기기 명령어
 		
 		for(int i = 0; i < 20; i++) {
 			System.out.println();
@@ -1880,6 +1880,13 @@ System.out.println("╬╬═════════════╬╬═══
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t\t선택 (번호): ");
 
+	}
+	
+	public  static void insertRabel() {
+
+		
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.print("\t\t\t\t      입력: ");
 	}
 	public static void chooseline() {
 		clear();

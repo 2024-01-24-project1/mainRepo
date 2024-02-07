@@ -23,6 +23,7 @@ public class StationManagementTab {
 				
 				// 역관리
 				ViewAll.stationMain();
+				ViewAll.chooseNum();
 				String sel = reader.readLine();
 				
 				if(sel.equals("1")) {
@@ -34,7 +35,8 @@ public class StationManagementTab {
 				}
 				
 			}else {
-				System.out.println("접근 권한이 없습니다.");
+				System.out.println("\t\t\t접근 권한이 없습니다.");
+				ViewAll.pause();
 			}
 			
 		} catch (Exception e) {

@@ -1,4 +1,4 @@
-package com.test.java.viewfolder;
+package com.java.view;
 
 import java.util.Scanner;
 
@@ -797,7 +797,7 @@ System.out.println();
 	System.out.println();
 
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-	System.out.print("\t선택 (번호): ");
+	System.out.print("\t\t\t선택 (번호): ");
 	}
 	public static void signupMain() { //회원가입 메인 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1495,27 +1495,23 @@ System.out.println();
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 1. 의자 없는 열차 변경");
-		System.out.println("\t\t\t 2. 일반 열차 추가");
+		System.out.println("\t\t\t 1. 일반 열차 추가");
+		System.out.println("\t\t\t 2. 의자 없는 열차 변경");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	}
 	 
-	public static void trainAddOne() { // 역관리 >  열차 추가 > 추가 할 호선 0
+	public static void trainAddOne() { // 역관리 >  열차 추가 > 추가 할 호선 0 수정했음222222222222222222222222  
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
-		System.out.println("\t\t\t      열차 추가 할 호선을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println("\t\t\t     일반 열차 추가");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
 	}
-	public static void changeNoChairTrain() { // 역관리 >  열차 추가 > 추가 할 호선 0
+	public static void changeNoChairTrain() { // 역관리 >  열차 추가 > 추가 할 호선 수정했음 22222222222222222
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
-		System.out.println("\t\t\t      열차 변경 할 호선을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println("\t\t\t     의자 없는 열차 변경");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
@@ -1535,7 +1531,6 @@ System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
 		System.out.println("\t\t\t      확인 할 구간의 시작역을 입력해주세요");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
@@ -1544,7 +1539,6 @@ System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
 		System.out.println("\t\t\t      확인 할 구간의 종료역을 입력해주세요");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
@@ -1731,7 +1725,7 @@ System.out.println();
 	public static void pause() { // 일시 정지 2
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("\t\t\t   계속하려면 엔터를 입력하세요.");
+		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
 		scan.nextLine();
 	}
 	public static void noIDDataError() { //2
@@ -1741,5 +1735,31 @@ System.out.println();
 
 	}
 	
+	public static void chooseNum() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t선택 (번호): ");
+	}
+	public static void chooseline() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t      호선: ");
+	}
+	public static void choosestartStation() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t    시작역: ");
+	}
+	public static void chooseentStation() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t    도착역: ");
+	}
+	
+	public static void stationNamePageTable(String line) { // 
+		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+		System.out.println();
+		System.out.printf("\t\t\t         %s 역리스트\n", line);
+		System.out.println();
+		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+		
+
+	}
 
 }

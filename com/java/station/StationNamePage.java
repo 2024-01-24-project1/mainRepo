@@ -20,16 +20,20 @@ public class StationNamePage {
         }
 
         while (true) {
+            System.out.println("=======================================================================");
+            System.out.printf("\t\t\t\t%s 역리스트\r\n", line);
+            System.out.println("=======================================================================");
         	ViewAll.stationNamePageTable(line);
 
             // 현재 페이지에 해당하는 역 목록 출력
             int startIndex = currentPage * pageSize;
             int endIndex = Math.min(startIndex + pageSize, list.size());
             list.subList(startIndex, endIndex).stream().forEach(station -> {
-                System.out.printf("\t    %-15s", station);
+                System.out.printf("%-20s  \t", station);
                 if (list.indexOf(station) % 3 == 2 || list.indexOf(station) == endIndex - 1) // 한 줄에 역 이름을 3개씩 출력
                     System.out.println();
             });
+            System.out.println();
             System.out.printf("\n\t\t\tPage | %d / %d\n", currentPage + 1, totalPages);
             System.out.println();
             System.out.println("\t\t\t엔터를 누르면 페이지모드 종료.");

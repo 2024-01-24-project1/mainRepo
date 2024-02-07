@@ -40,8 +40,8 @@ public class ChangeNoChairTrain extends StationManagement{
 			
 			while(loop) {
 				
-				//ViewAll.changeNoChairTrain();
-				System.out.print("호선: ");
+				ViewAll.changeNoChairTrain();
+				System.out.print("\t\t\t호선         : ");
 				line = reader.readLine();
 				
 				if(line.contains("호선")) {
@@ -50,28 +50,26 @@ public class ChangeNoChairTrain extends StationManagement{
 				
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
-				ViewAll.trainAddThree();
-				System.out.print("시작역: ");
+				ViewAll.changeNoChairTrain();
+
+				System.out.print("\t\t\t시작역       : ");
 				startStation = reader.readLine();
 				
 				if(startStation.endsWith("역")) {
 					startStation = startStation.substring(0,startStation.length()-1);
 				}
 				
-				ViewAll.trainAddFour();
-				System.out.print("종료역: ");
+				System.out.print("\t\t\t종료역       : ");
 				endStation = reader.readLine();
 				
 				if(endStation.endsWith("역")) {
 					endStation = endStation.substring(0,endStation.length()-1);
 				}
 				
-				ViewAll.trainAddFive();
-				System.out.print("시간대: ");
+				System.out.print("\t\t\t시간대       : ");
 				time = reader.readLine();
 				
-				ViewAll.trainAddSix();
-				System.out.print("요일(평일/주말): ");
+				System.out.print("\t\t\t일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {
@@ -86,9 +84,9 @@ public class ChangeNoChairTrain extends StationManagement{
 					
 				}else {
 					
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
 					
 					String input = reader.readLine();
 					if(input.equals("")) {
@@ -126,8 +124,7 @@ public class ChangeNoChairTrain extends StationManagement{
 			BusyManagement.modifyBusyValue(line,stationManagement.way,time,dayOfWeek,stationManagement.modifyBusy, stationManagement.route);
 			
 			LogSave.logSave(LogSave.NOCHAIRTRAIN);
-			System.out.println("계속하려면 엔터를 입력하세요.");
-			reader.readLine();
+			ViewAll.pause();
 			
 		} catch (Exception e) {
 			System.out.println("ChangeNoChairTrain.changeNoChairTrain");

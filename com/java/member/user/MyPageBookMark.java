@@ -7,7 +7,7 @@ import java.util.Calendar;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.view.View;
+import com.java.view.ViewAll;
 import com.java.view.ViewAll;
 
 public class MyPageBookMark extends BookMarkRoute{
@@ -44,7 +44,7 @@ public class MyPageBookMark extends BookMarkRoute{
 
 						this.printMyBookMark(this.userBookMark);
 						this.selectBookMark(this.userBookMark);
-						View.pause();
+						ViewAll.pause();
 					}
 
 				}else if(sel.equals("2")) {// 즐겨찾기 편집
@@ -95,7 +95,7 @@ public class MyPageBookMark extends BookMarkRoute{
 						registerBookMark(line, start, end, calendar);
 						System.out.println("즐겨찾기 등록을 완료했습니다.");
 
-						View.pause();
+						ViewAll.pause();
 
 					}else if(sel.equals("2")) { //즐겨찾기 삭제
 
@@ -108,7 +108,7 @@ public class MyPageBookMark extends BookMarkRoute{
 							deleteBookMark();
 							
 						}else {
-							View.pause();
+							ViewAll.pause();
 						}
 						
 
@@ -169,7 +169,7 @@ public class MyPageBookMark extends BookMarkRoute{
 					
 					b.getBookMarkList().remove(index);
 					System.out.println("즐겨찾기 삭제를 완료했습니다.");
-					View.pause();
+					ViewAll.pause();
 					
 				}
 				

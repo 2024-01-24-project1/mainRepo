@@ -4,7 +4,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class UserVoiceTab {
 	
@@ -12,7 +12,7 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			View.userVoiceView();
+			ViewAll.userVoiceView();
 			
 			Scanner scan = new Scanner(System.in);
 			String num = "";
@@ -31,7 +31,7 @@ public class UserVoiceTab {
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다\r\n다시 입력해주세요.");
 				System.out.println();
-				View.pause();
+				ViewAll.pause();
 			} 
 		}
 	}//End of userVoice()
@@ -43,7 +43,7 @@ public class UserVoiceTab {
 		String title = "";
 		String content = "";
 			
-		View.title("민원 접수");
+		ViewAll.title("민원 접수");
 		System.out.print("제목: ");
 		title = scan.nextLine();
 		System.out.print("내용: ");
@@ -69,7 +69,7 @@ public class UserVoiceTab {
 		}else {
 			System.out.println("다시 민원을 접수해주세요.");
 		}
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of complain()
 

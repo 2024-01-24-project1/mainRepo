@@ -6,7 +6,7 @@ import java.util.Calendar;
 
 import com.java.common.Validation;
 import com.java.station.management.FindWay;
-import com.java.view.View;
+import com.java.view.ViewAll;
 import com.java.view.ViewAll;
 
 public class CurrentTimeFindWay extends FindWay {
@@ -71,13 +71,13 @@ public class CurrentTimeFindWay extends FindWay {
 			}
 			if(calendar.get(Calendar.HOUR_OF_DAY)< 5 || calendar.get(Calendar.HOUR_OF_DAY) > 24 ) {
 				System.out.println("현재 시간에는 열차가 운행하지 않습니다. 다른 날짜보기를 이용해주세요.");
-				View.pause();
+				ViewAll.pause();
 				return;
 			}
 
 			findWay(line, start, end, calendar);
 
-			View.pause();
+			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
 			System.out.print("입력: ");
@@ -87,7 +87,7 @@ public class CurrentTimeFindWay extends FindWay {
 
 				registerBookMark(line, start, end, calendar);
 				System.out.println("즐겨찾기 등록을 완료했습니다.");
-				View.pause();
+				ViewAll.pause();
 				return;
 
 			}

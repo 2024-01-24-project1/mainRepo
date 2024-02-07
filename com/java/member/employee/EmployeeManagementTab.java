@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.LoginLogout;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class EmployeeManagementTab {
 
@@ -41,7 +41,7 @@ public class EmployeeManagementTab {
 					}else {
 						// View클래스 접근권한없는 화면 출력
 						System.out.println("접근 권한이 없습니다.");
-						View.pause();
+						ViewAll.pause();
 					}
 					
 			} else if (sel.equals("3")) {	// 3. 안전요원 관리
@@ -54,7 +54,7 @@ public class EmployeeManagementTab {
 			} else { // 이외의 숫자 입력 시
 					System.out.println("해당 섹션이 없습니다.");
 					System.out.println("다시 입력해주세요.");
-					View.pause();
+					ViewAll.pause();
 			}
 			
 			

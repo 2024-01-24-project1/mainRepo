@@ -16,7 +16,7 @@ import com.java.member.user.AnotherDateFindWay;
 import com.java.member.user.BookMark;
 import com.java.member.user.CurrentTimeFindWay;
 import com.java.requiredtime.RequiredTime;
-import com.java.view.View;
+import com.java.view.ViewAll;
 import com.java.view.ViewAll;
 
 public class FindWay extends StationManagement {

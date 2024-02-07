@@ -1,6 +1,6 @@
 package com.java.member.employee.stats;
 
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class Graph {
 	
@@ -94,7 +94,7 @@ public class Graph {
 			
 				
 		
-		View.pause();
+		ViewAll.pause();
 	}//End of drawGraph()
 	
 	

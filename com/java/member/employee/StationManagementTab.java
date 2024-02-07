@@ -23,6 +23,7 @@ public class StationManagementTab {
 				
 				// 역관리
 				ViewAll.stationMain();
+				ViewAll.chooseNum();
 				String sel = reader.readLine();
 				
 				if(sel.equals("1")) {

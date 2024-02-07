@@ -43,21 +43,21 @@ public class AddTrain extends StationManagement {
 			while(loop) {
 				
 				ViewAll.trainAddOne();
-				System.out.print("호선: ");
+				System.out.print("\t\t\t호선           : ");
 				line = reader.readLine();
 				
 				if(line.contains("호선")){
 					line = line.replace("호선", "");
 				}
-
-				ViewAll.trainAddTwo();
-				System.out.print("추가 열차수: ");        
-				trainNums = reader.readLine();
 				
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
+
+				System.out.print("\t\t\t추가 열차수    : ");        
+				trainNums = reader.readLine();
+				
 				
 				ViewAll.trainAddThree();
-				System.out.print("시작역: ");
+				System.out.print("\t\t\t시작역         : ");
 				startStation = reader.readLine();
 				
 				if(startStation.endsWith("역")) {
@@ -65,7 +65,7 @@ public class AddTrain extends StationManagement {
 				}
 				
 				ViewAll.trainAddFour();
-				System.out.print("종료역: ");
+				System.out.print("\t\t\t종료역         : ");
 				endStation = reader.readLine();
 				
 				if(endStation.endsWith("역")) {
@@ -73,11 +73,11 @@ public class AddTrain extends StationManagement {
 				}
 				
 				ViewAll.trainAddFive();
-				System.out.print("시간대: ");
+				System.out.print("\t\t\t시간대         : ");
 				time = reader.readLine();
 				
 				ViewAll.trainAddSix();
-				System.out.print("요일(평일/주말): ");
+				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {

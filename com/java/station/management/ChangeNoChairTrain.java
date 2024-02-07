@@ -69,6 +69,10 @@ public class ChangeNoChairTrain extends StationManagement{
 				System.out.print("\t\t\t시간대       : ");
 				time = reader.readLine();
 				
+				if(time.endsWith("시")) {
+					time = time.substring(0,time.length()-1);
+				}
+				
 				System.out.print("\t\t\t일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				

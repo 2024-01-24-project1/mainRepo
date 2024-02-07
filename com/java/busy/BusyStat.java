@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
 
 import com.java.view.ViewAll;
@@ -46,35 +47,37 @@ public class BusyStat extends StationManagement{
 			while(true) {
 				
 				ViewAll.statisticsChaosOne();
-				System.out.print("호선: ");
+				System.out.print("\t\t\t\t호선: ");
 				line = reader.readLine(); 
 				
 				if(line.contains("호선")) {
 					line = line.replace("호선", "" );
 				}
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
 				if(line.equals("2")) {
-					ViewAll.statisticsChaosTwoLine2();
-					System.out.print("방향: ");
+					System.out.print("\t\t\t방향           : ");
 					
 				}else {
 					ViewAll.statisticsChaosTwo();
-					System.out.print("방향: ");
+					System.out.print("\t\t\t방향           : ");
 				}
 				way = reader.readLine();
 				
 				
-				ViewAll.statisticsChaosThree();
-				System.out.print("요일: ");
+				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {
 					dayOfWeek = "토요일";
 				}
 				
-				ViewAll.statisticsChaosFour();
-				System.out.print("시간: ");
+				System.out.print("\t\t\t시간           : ");
 				time = reader.readLine();
+				
+				if(time.endsWith("시")) {
+					time = time.substring(0,time.length()-1);
+				}
 				
 				check = Validation.is_busyStat(line,way,dayOfWeek,time);
 				
@@ -143,10 +146,11 @@ public class BusyStat extends StationManagement{
 			list.stream().skip(index * 5)
 			.limit(5)
 			.forEach(busy -> System.out.println(busy));
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.println("엔터입력시 리스트보기를 종료합니다.");
-			System.out.print("원하는 페이지: ");
+			System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);
+			System.out.println("\t\t\t엔터입력시 리스트보기를 종료합니다.");
+			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 
 			if(sel.equals("")) {
@@ -155,15 +159,15 @@ public class BusyStat extends StationManagement{
 				index = Integer.parseInt(sel) - 1;
 
 				if(index < 0 || index >= page) {
-					System.out.println("페이지 범위를 벗어났습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					index = 0;
 
 				}
 
 			}else {
-				System.out.println("잘못된 입력입니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t잘못된 입력입니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 			}
 
 		}//while루프 종료

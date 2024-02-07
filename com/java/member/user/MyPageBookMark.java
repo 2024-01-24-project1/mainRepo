@@ -83,6 +83,10 @@ public class MyPageBookMark extends BookMarkRoute{
 
 							System.out.print("\t\t\t시간(5~24): ");
 							time = reader.readLine();
+							
+							if(time.endsWith("시")) {
+								time = time.substring(0,time.length()-1);
+							}
 
 							check = is_bookMark(line, start, end, time);
 

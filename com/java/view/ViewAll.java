@@ -1,4 +1,4 @@
-package com.java.view;
+package com.test.java.viewfolder;
 
 import java.util.Scanner;
 
@@ -531,10 +531,13 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userVocMain() { //고객의 소리 메뉴  2
+	public static void userVocMain() { //고객의 소리 메뉴  0
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println("\t\t\t         고객의 소리");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
+		System.out.println();
+		System.out.println();
+		System.out.println();
 		System.out.println("\t\t\t 1. 일반 민원 접수");
 		System.out.println("\t\t\t 2. 분실물 목록 확인");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
@@ -551,16 +554,6 @@ System.out.println();
 		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
 		System.out.println();
 		System.out.println("\t\t\t           열차 시간표");
-		System.out.println();
-		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
-		
-
-	}
-	
-	public static void stationNamePageTable(String line) { // 
-		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
-		System.out.println();
-		System.out.printf("\t\t\t         %s 역리스트\n", line);
 		System.out.println();
 		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
 		
@@ -804,7 +797,7 @@ System.out.println();
 	System.out.println();
 
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-	System.out.print("\t\t\t선택 (번호): ");
+	System.out.print("\t선택 (번호): ");
 	}
 	public static void signupMain() { //회원가입 메인 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1132,9 +1125,9 @@ System.out.println();
 	public static void vocMain() { //고객의 소리 메인화면  01
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
-		System.out.println("\t\t\t 현재 메뉴: 고객의 소리");
+		System.out.println("\t\t\t     원하는 기능을 선택하세요");
+		System.out.println("\t\t\t     (숫자로 입력해주세요)");
+		System.out.println("\t\t\t     현재 메뉴: 고객의 소리");
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
@@ -1144,18 +1137,18 @@ System.out.println();
 		
 	}
 	
-	public static void safetyEmployeeUnlockResultBottom() { //부서해제 결과 하단 라벨 0 
+	public static void safetyEmployeeUnlockResultBottom() { //부서해제 결과 하단 라벨 0  2
 
-		System.out.println("\t\t\t [부서 해제]");
+		System.out.println("\t\t\t\t  [부서 해제]");
 	}
 	
 	
-	public static void safetyEmployeeSetUnlockBottom() { //안전요원 배치, 해제 아래 부분 0
+	public static void safetyEmployeeSetUnlockBottom() { //안전요원 배치, 해제 아래 부분 0 2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t    ID,호선 그리고 역을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println("\t\t\t ID,호선 그리고 역을 입력해주세요");
+		System.out.println("\t\t         (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
+		System.out.println("\t\t\t           (예시: 2호선)");
 		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");		
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
@@ -1165,20 +1158,20 @@ System.out.println();
 	public static void safetyEmployeeUnlockList() { //안전요원 해제 상단 라벨 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t 배치된 안전 요원 목록");
+		System.out.println("\t\t\t       배치된 안전 요원 목록");
 		System.out.println();
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
 		//데이터 추가
 	}
 	
 	public static void safetyEmployeeSetResultBottom() { //안전요원 배치 결과 하단 0
-		System.out.println("\t\t\t [배치 완료]");
+		System.out.println("\t\t\t\t     [배치 완료]");
 	}
 	
 	public static void safetyEmployeeSetListMid() { //안전 요원 배치 목록 상단 출력 후 다음 출력 0
 		System.out.println("\t\t\t ID,호선 그리고 역을 입력해주세요.");
 		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println("\t\t\t             (예시: 2호선)");
 		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
 	}
 
@@ -1186,7 +1179,7 @@ System.out.println();
 	public static void safetyEmployeeSetListTop() {//안전 요원 배치 목록 상단  0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t 배치 안 된 안전 요원 목록");
+		System.out.println("\t\t\t      배치 안 된 안전 요원 목록");
 		System.out.println();
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
 		//데이터 추가
@@ -1195,9 +1188,9 @@ System.out.println();
 	public static void safetyEmployeeSearchStation() { // 안전 요원 역으로 검색 라벨 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t 안전 요원 목록을 확인 할 역을 입력해주세요");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
-		System.out.println("\t\t\t 현재 메뉴: 역 이름으로 안전 요원 검색");
+		System.out.println("\t\t    안전 요원 목록을 확인 할 역을 입력해주세요");
+		System.out.println("\t\t    (역 입력 시 (역)을 제외하고 작성해주세요.)");
+		System.out.println("\t\t    현재 메뉴: 역 이름으로 안전 요원 검색");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ጿ ኈ ቼ ዽ ጿ ኈ ቼ ዽ ጿ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		
@@ -1208,10 +1201,10 @@ System.out.println();
 	public static void safetyEmployeeSearchLine() { //호선으로 안전 요원 검색 라벨 0
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t 안전 요원 목록을 확인 할 호선을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
-		System.out.println("\t\t\t 현재 메뉴: 호선으로 안전 요원 검색");
+		System.out.println("\t\t   안전 요원 목록을 확인 할 호선을 입력해주세요");
+		System.out.println("\t\t   (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
+		System.out.println("\t\t   (예시: 2호선)");
+		System.out.println("\t\t   현재 메뉴: 호선으로 안전 요원 검색");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
@@ -1219,14 +1212,15 @@ System.out.println();
 	
 	public static void safetyEmployeeSearchResult() { //안전 요원 검색 출력 결과 라벨 0 1
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
-		System.out.println("\t\t [이름] \t\t [아이디] \t\t [직급] \t\t [전화번호] \t\t [담당하는 역(호선)]");
+		System.out.println();
+		System.out.println("  [이름]     [아이디]     [직급]     [전화번호]     [담당하는 역(호선)]");
 	}
 	
 	public static void safetyEmployeeSee() { //전체 안전 요원 보기 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
+		System.out.println("\t\t\t      (숫자로 입력해주세요)");
 		System.out.println("\t\t\t      현재 메뉴: 전체 안전 요원 보기");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1240,9 +1234,9 @@ System.out.println();
 	public static void safetyEmployeeMain() { //안전 요원 관리 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
-		System.out.println("\t\t\t      현재 메뉴: 안전 요원 관리");
+		System.out.println("\t\t\t       원하는 기능을 선택하세요");
+		System.out.println("\t\t\t       (숫자로 입력해주세요)");
+		System.out.println("\t\t\t       현재 메뉴: 안전 요원 관리");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
@@ -1262,8 +1256,8 @@ System.out.println();
 
 	}
 	
-	public  void employeeDeleteTwo() { //직원 삭제 2번째 라벨 0
-		System.out.println("\t\t\t [해당 직원 정보]");
+	public static void employeeDeleteTwo() { //직원 삭제 2번째 라벨 0
+		System.out.println("\t\t\t\t     [해당 직원 정보]");
 //		System.out.println("\t\t 1. %s의 이름: %s \n"); //id와 이름 넣어주세요
 //		System.out.println("\t\t 2. %s의 호선: %s \n"); //id와 호선 넣어주세요
 //		System.out.println("\t\t 3. %s의 역: %s\n"); //id와 역 넣어주세요
@@ -1274,63 +1268,63 @@ System.out.println();
 	public static void employeeDeleteOne() { //직원 삭제 1번째 라벨 0
 		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
 		System.out.println();
-		System.out.println("\t\t\t      삭제하고자 하는 직원의 ID를 입력해주세요");
-		System.out.println("\t\t\t 현재 메뉴: 직원 삭제 ");
+		System.out.println("\t\t         삭제하고자 하는 직원의 ID를 입력해주세요");
+		System.out.println("\t\t\t\t   현재 메뉴: 직원 삭제 ");
 		System.out.println();
 		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
 		
 	}
 	
 	
-	public static void employeerankChangeTwo() { // 직원 직급 변경 2번째 라벨  0
+	public static void employeerankChangeTwo() { // 직원 직급 변경 2번째 라벨  02
 		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
 		System.out.println();
-		System.out.println("\t\t\t      변경 할 직급을 입력해주세요.");
-		System.out.println(" (직급은 [안전요원], [사원], [대리], [과장], [부장], [사장]이 존재합니다.)");
-		System.out.println("\t\t\t      현재 메뉴: 직급 변경 ");
-		System.out.println();
-		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
-		
-	}
-	
-	public static void employeerankChangeOne() { // 직원 직급 변경 1번째 라벨 0
-		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
-		System.out.println();
-		System.out.println("\t\t\t      직급 변경이 필요한 직원의 ID를 입력해주세요.");
-		System.out.println("\t\t\t      현재 메뉴: 직급 변경 ");
+		System.out.println("\t\t\t          변경 할 직급을 입력해주세요.");
+		System.out.println("       (직급은 [안전요원], [사원], [대리], [과장], [부장], [사장]이 존재합니다.)");
+		System.out.println("\t\t\t            현재 메뉴: 직급 변경 ");
 		System.out.println();
 		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
 		
 	}
 	
-	public void employeeChangeResult() { // 출력결과 라벨 0 1
-		System.out.println("\t\t\t [출력결과]");
+	public static void employeerankChangeOne() { // 직원 직급 변경 1번째 라벨 02
+		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
+		System.out.println();
+		System.out.println("\t\t\t 직급 변경이 필요한 직원의 ID를 입력해주세요.");
+		System.out.println("\t\t\t           현재 메뉴: 직급 변경 ");
+		System.out.println();
+		System.out.println("•────────────────────────────────────────•°•❀•°•────────────────────────────────────•");
+		
+	}
+	
+	public static void employeeChangeResult() { // 출력결과 라벨 0 1
+		System.out.println("\t\t\t\t       [출력결과]");
 		//데이터 따로 추가
 	}
 	
-	public static void employeeOfficeChangeThree() { // 직원 근무지 변경 3번째 라벨 0
+	public static void employeeOfficeChangeThree() { // 직원 근무지 변경 3번째 라벨 0 2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t      변경하고자 하는 근무지의 역을 입력해주세요.");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
+		System.out.println("\t\t      변경하고자 하는 근무지의 역을 입력해주세요.");
+		System.out.println("\t\t      (역 입력 시 (역)을 제외하고 작성해주세요.)");
 		System.out.println("\t\t\t      현재 메뉴: 근무지 변경 ");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
 	
-	public static void employeeOfficeChangeTwo() { //직원 근무지 변경 2번째 라벨 0
+	public static void employeeOfficeChangeTwo() { //직원 근무지 변경 2번째 라벨 0 2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t      변경하고자 하는 근무지의 호선을 입력해주세요.");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println("\t\t    변경하고자 하는 근무지의 호선을 입력해주세요.");
+		System.out.println("\t\t    (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
+		System.out.println("\t\t\t          (예시: 2호선)");
 		System.out.println("\t\t\t      현재 메뉴: 근무지 변경 ");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
-	public static void employeeSearch() { // 
+	public static void employeeSearch() { //  2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
 		System.out.println("\t\t\t      직원 리스트");
@@ -1338,29 +1332,29 @@ System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
-	public static void userSearch() { // 
+	public static void userSearch() { // 2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t      고객 리스트");
+		System.out.println("\t\t\t          고객 리스트");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
-	public static void employeeOfficeChangeOne() { // 직원 근무지 변경 1번째 라벨 0
+	public static void employeeOfficeChangeOne() { // 직원 근무지 변경 1번째 라벨 0 2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t      근무지 변경이 필요한 직원의 ID를 입력해주세요.");
-		System.out.println("\t\t\t 현재 메뉴: 근무지 변경 ");
+		System.out.println("\t\t      근무지 변경이 필요한 직원의 ID를 입력해주세요.");
+		System.out.println("\t\t\t      현재 메뉴: 근무지 변경 ");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
 	
-	public static void employeeInfoChangeMain() { //직원 정보 수정 0
+	public static void employeeInfoChangeMain() { //직원 정보 수정 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
+		System.out.println("\t\t\t      (숫자로 입력해주세요)");
 		System.out.println("\t\t\t      현재 메뉴: 직원 정보 수정");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1373,121 +1367,122 @@ System.out.println();
 	
 	}
 	
-	public static void employeeHan() {
+	public static void employeeHan() { //2
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
-		System.out.println("\t\t\t      권한 부여가 필요한 직원의 ID를 입력해주세요.");
-		System.out.println("\t\t\t 현재 메뉴: 권한 부여 ");
+		System.out.println("\t\t    권한 부여가 필요한 직원의 ID를 입력해주세요.");
+		System.out.println("\t\t\t    현재 메뉴: 권한 부여 ");
 		System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 	}
 	
-	public static void employeeSearchNameResult() { // 이름으로 직원 검색 결과0
-		System.out.println("▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰");
-		System.out.println();
-		System.out.println("\t\t\t      검색하고자 하는 호선,이름 또는 직원이름을 입력해주세요");
-		System.out.println();
-		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
-		System.out.println();
-		System.out.println("\t\t [이름] \t\t [아이디] \t\t [직급] \t\t [전화번호] \t\t [담당하는 역(호선)]");
-	}
-	public static void employeeSearchName() { // 이름으로 직원 검색 0
-		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");		
-		System.out.println();
-		System.out.println("\t\t\t      확인 할 직원의 이름을 입력해주세요");
-		System.out.println("\t\t\t (성 포함 이름 입력해주세요)");
-		System.out.println("\t\t\t      현재 메뉴: 이름으로 직원 검색");
-		System.out.println();
-		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");	
-	}
-	
-	
-	public static void employeeSearchStation() { // 역으로 직원 검색 0
-		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");		
-		System.out.println();
-		System.out.println("\t\t\t      직원 목록을 확인 할 역을 입력해주세요");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");		
-		System.out.println("\t\t\t      현재 메뉴: 역으로 직원 검색");
-		System.out.println();
-		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");	
-	}
-	
-	
-	public static void employeeSearchLineResult() {//일반직원 검색 결과 라벨 , 안전요원 검색 결과 라벨0 1
+	public static void employeeSearchNameResult() { // 이름으로 직원 검색 결과0 2
 		System.out.println("▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱");
 		System.out.println();
-		System.out.println("\t\t\t 현재 해당 호선에 근무 중인 직원 목록입니다.");
+		System.out.println("\t\t 검색하고자 하는 호선,이름 또는 직원이름을 입력해주세요");
 		System.out.println();
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
 		System.out.println();
-		System.out.println("\t\t [이름] \t\t [아이디] \t\t [직급] \t\t [전화번호] \t\t [담당하는 역(호선)]");
+		System.out.println("[이름]     [아이디]     [직급]     [전화번호]     [담당하는 역(호선)]");
+	}
+	public static void employeeSearchName() { // 이름으로 직원 검색 0 2
+		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ");		
+		System.out.println();
+		System.out.println("\t\t\t    확인 할 직원의 이름을 입력해주세요");
+		System.out.println("\t\t\t    (성 포함 이름 입력해주세요)");
+		System.out.println("\t\t\t    현재 메뉴: 이름으로 직원 검색");
+		System.out.println();
+		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ");	
+	}
+	
+	
+	public static void employeeSearchStation() { // 역으로 직원 검색 0 2
+		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");		
+		System.out.println();
+		System.out.println("\t\t\t    직원 목록을 확인 할 역을 입력해주세요");
+		System.out.println("\t\t\t    (역 입력 시 (역)을 제외하고 작성해주세요.)");		
+		System.out.println("\t\t\t    현재 메뉴: 역으로 직원 검색");
+		System.out.println();
+		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");	
+	}
+	
+	
+	public static void employeeSearchLineResult() {//일반직원 검색 결과 라벨 , 안전요원 검색 결과 라벨0 1 2
+		System.out.println("▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱");
+		System.out.println();
+		System.out.println("\t\t      현재 해당 호선에 근무 중인 직원 목록입니다.");
+		System.out.println();
+		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
+		System.out.println();
+		System.out.println("[이름]     [아이디]     [직급]     [전화번호]     [담당하는 역(호선)]");
 		//밑에는 따로 데이터 추가 
 	}
 	
 	
-	public static void employeeSearchLine() { //전체 직원 정보 보기 > 호선으로 직원 검색 0 1
+	public static void employeeSearchLine() { //전체 직원 정보 보기 > 호선으로 직원 검색 0 1 2
 		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");
 		System.out.println();
-		System.out.println("\t\t\t      직원 목록을 확인 할 호선을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");		
-		System.out.println("\t\t\t      현재 메뉴: 호선으로 직원 검색");
+		System.out.println("\t\t\t  직원 목록을 확인 할 호선을 입력해주세요");
+		System.out.println("\t\t\t  (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
+		System.out.println("\t\t\t  (예시: 2호선)");		
+		System.out.println("\t\t\t  현재 메뉴: 호선으로 직원 검색");
 		System.out.println();
 		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. + ");	}
 	
-	public static void employeeTotalInfo() { //전체 직원 정보 보기 0
+	public static void employeeTotalInfo() { //전체 직원 정보 보기 0 2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
+		System.out.println("\t\t\t      (숫자로 입력해주세요)");
 		System.out.println("\t\t\t      현재 메뉴: 전체 직원 정보 보기");
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 1. 호선으로 직원 검색");
-		System.out.println("\t\t\t 2. 역 이름으로 직원 검색");
-		System.out.println("\t\t\t 3. 이름으로 직원 검색");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t   1. 호선으로 직원 검색");
+		System.out.println("\t\t\t   2. 역 이름으로 직원 검색");
+		System.out.println("\t\t\t   3. 이름으로 직원 검색");
+		System.out.println("\t\t\t   뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	}
 	
 	
 	
-	public static void employeeMain() { //직원 관리 메뉴 0 1
+	public static void employeeMain() { //직원 관리 메뉴 0 1 2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
+		System.out.println("\t\t\t      (숫자로 입력해주세요)");
 		System.out.println("\t\t\t      현재 메뉴: 직원 관리");
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 1. 전체 직원 정보 보기");
-		System.out.println("\t\t\t 2. 직원 정보 수정");
-		System.out.println("\t\t\t 3. 안전 요원 관리");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t   1. 전체 직원 정보 보기");
+		System.out.println("\t\t\t   2. 직원 정보 수정");
+		System.out.println("\t\t\t   3. 안전 요원 관리");
+		System.out.println("\t\t\t   뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	}
-	public static void adminMainView() { //관리자 메인 화면 0
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬════");
+	public static void adminMainView() { //관리자 메인 화면 0 2
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t              SEOUL METRO");
+		System.out.println("\t\t\t         SEOUL METRO");
 		System.out.println();
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬════");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t      선택하고자 하는 메뉴의 번호를 입력해주세요. ");
+		System.out.println("\t\t    선택하고자 하는 메뉴의 번호를 입력해주세요. ");
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 1. 역 관리");
-		System.out.println("\t\t\t 2. 직원 관리");
-		System.out.println("\t\t\t 3. 민원");
-		System.out.println("\t\t\t 4. 행사 캘린더");
-		System.out.println("\t\t\t 5. 통계 정보");
-		System.out.println("\t\t\t 6. 요금표");
-		System.out.println("\t\t\t 7. 열차 시간표");		
-		System.out.println("\t\t\t 8. 행동 로그 보기");
-		System.out.println("\t\t\t 9. 마이페이지");
-		System.out.println("\t\t\t 10. 로그아웃");
-		System.out.println("\t\t\t 0. 종료");
+		System.out.println("\t\t\t\t 1. 역 관리");
+		System.out.println("\t\t\t\t 2. 직원 관리");
+		System.out.println("\t\t\t\t 3. 민원");
+		System.out.println("\t\t\t\t 4. 행사 캘린더");
+		System.out.println("\t\t\t\t 5. 통계 정보");
+		System.out.println("\t\t\t\t 6. 요금표");
+		System.out.println("\t\t\t\t 7. 열차 시간표");		
+		System.out.println("\t\t\t\t 8. 행동 로그 보기");
+		System.out.println("\t\t\t\t 9. 마이페이지");
+		System.out.println("\t\t\t\t 10. 로그아웃");
+		System.out.println("\t\t\t\t 0. 종료");
+		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 
 	
@@ -1746,11 +1741,6 @@ System.out.println();
 		System.out.println("\t\t    해당 데이터를 통해 가입한 회원이 없습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
-	}
-	
-	public static void chooseNum() {
-		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-		System.out.print("\t\t\t선택 (번호): ");
 	}
 	
 

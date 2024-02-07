@@ -7,6 +7,8 @@ import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
+import com.java.station.StationNamePage;
+import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
@@ -20,17 +22,9 @@ public class EmployeeUpdateTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             직원 정보 수정          ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 근무지 변경");
-			System.out.println("           2. 직급 변경");
-			System.out.println("           3. 권한 부여");
-			System.out.println("           4. 계정 삭제");
-			System.out.println("           5. 뒤로가기");
-			System.out.println("--------------------------------------");
-			System.out.print("선택 (번호): ");
+			ViewAll.employeeInfoChangeMain();
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			//1. 근무지 변경
@@ -46,7 +40,8 @@ public class EmployeeUpdateTab {
 			}else {
 				//다시입력
 				System.out.println();
-				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 			
@@ -59,9 +54,9 @@ public class EmployeeUpdateTab {
 	public static void update(String sel) {
 		
 		// View클래스에서 출력
-		if(sel.equals("1")) 		System.out.println("근무지 변경");
-		else if (sel.equals("2"))   System.out.println("직급 변경");
-		else if (sel.equals("3"))	System.out.println("권한 부여");
+		if(sel.equals("1")) 		ViewAll.employeeOfficeChangeOne();
+		else if (sel.equals("2"))   ViewAll.employeerankChangeOne();
+		else if (sel.equals("3"))	ViewAll.employeeHan();
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -69,8 +64,7 @@ public class EmployeeUpdateTab {
 		EmployeeSearch.employeePage(Data.employeeList);
 		
 		// 아이디 입력받기
-		System.out.println("직원의 아이디를 입력해주세요.");
-		System.out.printf("아이디: ");
+		System.out.printf("\t\t\t아이디: ");
 		String input = scan.nextLine();
 		final String ID = input;
 		
@@ -79,8 +73,8 @@ public class EmployeeUpdateTab {
 			
 			// 직원계정의 정보를 출력
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(ID))
-							      .forEach(employee -> 
-							System.out.printf("이름: %10s|아이디: %20s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
+							          .forEach(employee -> 
+							System.out.printf("이름: %10s|아이디: %15s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
 												, employee.getName()
 												, employee.getId()
 												, employee.getRegistration().substring(0, 6)
@@ -91,10 +85,10 @@ public class EmployeeUpdateTab {
 			
 			if(sel.equals("1")) 		updateWorkArea(ID);	// 근무지 변경
 			else if (sel.equals("2"))   updatePosition(ID);	// 직급 변경
-			else if (sel.equals("3"))	updateLevel(ID);	// 
+			else if (sel.equals("3"))	updateLevel(ID);	// 권한 변경
 			
 		} else {
-			System.out.println("없는 아이디입니다.");
+			System.out.println("\t\t\t없는 아이디입니다.");
 			ViewAll.pause();
 		}
 	}//End of searchEmployeeId()
@@ -107,8 +101,8 @@ public class EmployeeUpdateTab {
 			
 			while(true) {
 				String input = "";
-				System.out.println("안전요원|사원|대리|과장|부장|사장");
-				System.out.println("변경할 직급: ");
+				System.out.println("\t\t\t안전요원 사원 대리 과장 부장 사장");
+				System.out.println("\t\t\t변경할 직급: ");
 				input = scan.nextLine();
 				
 				if( Validation.is_Position(input)) {
@@ -118,7 +112,7 @@ public class EmployeeUpdateTab {
 						if(employee.getId().equals(id)) {
 							employee.setPosition(input);
 							
-							System.out.println("직급변경이 완료되었습니다.");
+							System.out.println("\t\t\t직급변경이 완료되었습니다.");
 							
 							break;	// 직원 객체 탐색 종료
 						}
@@ -127,10 +121,9 @@ public class EmployeeUpdateTab {
 					
 					break;
 				}else {
-					System.out.println("잘못된 직급");
-					System.out.println("직급변경을 그만두시려면 엔터");
-					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.println("입력: ");
+					System.out.println("\t\t\t잘못된 직급");
+					System.out.println("\t\t\t직급변경을 그만두시려면 엔터");
+					System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -149,8 +142,8 @@ public class EmployeeUpdateTab {
 		
 		while(true) {
 			String input = "";
-			System.out.println("권한없음 -> 2 | 권한있음 -> 3 ");
-			System.out.println("변경할 권한: ");
+			System.out.println("\t\t\t권한없음 -> 2 | 권한있음 -> 3 ");
+			System.out.println("\t\t\t변경할 권한: ");
 			input = scan.nextLine();
 			
 			if( Validation.is_Level(input)) {
@@ -160,7 +153,7 @@ public class EmployeeUpdateTab {
 					if(employee.getId().equals(id)) {
 						employee.setLevel(input);;
 						
-						System.out.println("권한변경이 완료되었습니다.");
+						System.out.println("\t\t\t권한변경이 완료되었습니다.");
 						
 						break;	// 직원 객체 탐색 종료
 					}
@@ -169,7 +162,7 @@ public class EmployeeUpdateTab {
 				
 				break;
 			}else {
-				System.out.println("잘못된 권한");
+				System.out.println("\t\t\t잘못된 권한");
 				ViewAll.pause();
 			}
 		}
@@ -184,8 +177,8 @@ public class EmployeeUpdateTab {
 		while(true) {
 			boolean check = false;
 			String input = "";
-			System.out.println("1호선 ~ 9호선");
-			System.out.println("정확히 'N호선'입력: ");
+			System.out.println("\t\t\t1호선 ~ 9호선");
+			System.out.println("\t\t\t정확히 'N호선'입력: ");
 			input = scan.nextLine();
 			
 			if( Validation.is_Line(input)) {
@@ -195,30 +188,9 @@ public class EmployeeUpdateTab {
 				final String LINE = input;
 				
 				// 선택한 호선의 역이름들 보여주기
-				switch (Integer.parseInt(input)) {
-					
-					case 1: Data.LINE1_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 2: Data.LINE2_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 3: Data.LINE3_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 4: Data.LINE4_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 5: Data.LINE5_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 6: Data.LINE6_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 7: Data.LINE7_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 8: Data.LINE8_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-					case 9: Data.LINE9_STATION_NAME.stream().forEach(name -> System.out.println(name));
-							break;
-						
-				}
+				StationNamePage.stationNamePage(StationManagement.lineRoute(LINE), LINE);
 				
-				System.out.println("역 이름: ");
+				System.out.println("\t\t\t역 이름: ");
 				input = scan.nextLine();
 				
 				if (input.endsWith("역")) {
@@ -263,7 +235,7 @@ public class EmployeeUpdateTab {
 							
 							employee.setLine(LINE);			// 호선 변경
 							employee.setStation(STATION);	// 역 변경
-							System.out.println("근무지 변경 완료");
+							System.out.println("\t\t\t근무지 변경 완료");
 							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
 							
@@ -275,10 +247,9 @@ public class EmployeeUpdateTab {
 					break;
 					
 				}else {	   // 역이름이 호선과 틀릴경우
-					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-					System.out.println("근무지 배치를 그만두시려면 엔터");
-					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.println("입력: ");
+					System.out.println("\t\t\t잘못된 역이름 또는 호선에 맞지않는 역이름");
+					System.out.println("\t\t\t근무지 배치를 그만두시려면 엔터");
+					System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -288,11 +259,10 @@ public class EmployeeUpdateTab {
 				}
 				
 			}else {
-				System.out.println("잘못된 호선");
-				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-				System.out.println("근무지 배치를 그만두시려면 엔터");
-				System.out.println("다시 입력하시려면 아무키나 입력하세요");
-				System.out.println("입력: ");
+				System.out.println("\t\t\t잘못된 호선");
+				System.out.println("\t\t\t잘못된 역이름 또는 호선에 맞지않는 역이름");
+				System.out.println("\t\t\t근무지 배치를 그만두시려면 엔터");
+				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 				input = scan.nextLine();
 				
 				if(input.equals("")) {
@@ -314,7 +284,7 @@ public class EmployeeUpdateTab {
 		Scanner scan = new Scanner(System.in);
 		
 		// 고객인지 직원인지 삭제할 계정 물어보기
-		System.out.println("삭제할 계정이 직원인지 고객인지 고르세요");
+		System.out.println("\t\t\t삭제할 계정이 직원인지 고객인지 고르세요");
 		System.out.print("입력: ");
 		member = scan.nextLine();
 		
@@ -329,7 +299,7 @@ public class EmployeeUpdateTab {
 			UserSearch.userPage(Data.userList);
 			
 		}else {
-			System.out.println("잘못된 입력입니다.");
+			System.out.println("\t\t\t잘못된 입력입니다.");
 			
 			return;
 		}

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 public class EmployeeSearch {
@@ -32,11 +33,13 @@ public class EmployeeSearch {
 			
 			ArrayList<Employee> searchlist = new ArrayList<>();
 			
-			System.out.println("특정 호선(숫자만), 이름, 직원이름");
-			System.out.print("찾기: ");
+			ViewAll.employeeSearchNameResult();
+			System.out.print("\t\t\t\t찾기: ");
 			search = scan.nextLine();
 			
 			final String SEARCH = search;
+			
+			LogSave.employeeSearchLog(SEARCH,searchlist);
 			
 			boolean check = employeeList.stream().anyMatch(employee -> employee.getName().equals(SEARCH)
 																	|| employee.getLine().contains(SEARCH)
@@ -54,12 +57,11 @@ public class EmployeeSearch {
 				employeePage(searchlist);
 				
 			}else {
-				System.out.println("조건에 해당하는 직원이 존재하지 않습니다.");
+				System.out.println("\t\t\t조건에 해당하는 직원이 존재하지 않습니다.");
 			}
 			
-			System.out.println("다른 조건을 검색하시려면 아무키나 입력");
-			System.out.println("직원검색을 종료하시면 엔터");
-			System.out.printf("입력: ");
+			System.out.println("\t\t\t다른 조건을 검색하시려면 아무키나 입력");
+			System.out.println("\t\t\t직원검색을 종료하시면 엔터");
 			search = scan.nextLine();
 			
 			if(search.equals("")) {
@@ -88,13 +90,11 @@ public class EmployeeSearch {
 				String sel = "";	// 입력받는 문자열
 				
 				// View클래스 출력
-				System.out.println("======================================================");
-				System.out.println("                  직원 리스트");
-				System.out.println("======================================================");
+				ViewAll.employeeSearch();
 				
 				list.stream().skip(index * 10)
 				 			 .limit(10)
-				 			 .forEach(employee -> System.out.printf("%-8s|%-20s|%-2s|%-3s - %-10s|%-13s\r\n"
+				 			 .forEach(employee -> System.out.printf("%-5s|%-12s|%-2s|%-3s - %-15s  %-13s\r\n"
 						 											, employee.getName()
 						 											, employee.getId()
 						 											, employee.getPosition()
@@ -102,9 +102,9 @@ public class EmployeeSearch {
 						 											, employee.getStation() + "역"
 						 											, employee.getPhone()));
 				// 이름, ID, 전화번호, 직급, 호선, 역이름
-				System.out.printf("Page| %s / %s\r\n", index + 1, page);
-				System.out.print("엔터입력시 뒤로갑니다.");
-				System.out.print("원하는 페이지: ");
+				System.out.printf("\t\t\t  Page| %s / %s\r\n", index + 1, page);
+				System.out.print("\t\t\t  엔터입력시 뒤로갑니다.");
+				System.out.print("\t\t\t  원하는 페이지: ");
 				sel = scan.nextLine();
 				
 				if(sel.equals("")) {
@@ -113,15 +113,15 @@ public class EmployeeSearch {
 					index = Integer.parseInt(sel) - 1;
 					
 					if(index < 0 || index >= page) {
-						System.out.println("페이지 범위를 벗어났습니다.");
-						System.out.println("다시 입력해주세요.");
+						System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+						System.out.println("\t\t\t다시 입력해주세요.");
 						index = 0;
 						
 					}
 					
 				}else {
-					System.out.println("잘못된 입력입니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t잘못된 입력입니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 				}
 				
 			}//while루프 종료

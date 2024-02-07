@@ -133,8 +133,6 @@ public class FindWay extends StationManagement {
 
 			if(stationManagement.route.contains(b.getStation())) {
 				
-				System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
-				System.out.println(calendar.get(Calendar.HOUR_OF_DAY)-5);
 				stationManagement.specificHourBusy.add(b.getCrowded().get((calendar.get(Calendar.HOUR_OF_DAY)-5)));
 
 			}
@@ -335,6 +333,7 @@ public class FindWay extends StationManagement {
 	
 	//현재 시간 길찾기 출력 > 출력메서드 
 	private void printWay(int minute, String departureTime) {
+		System.out.println();
 		
 		for(int i=0; i<stationManagement.route.size(); i++) {
 			
@@ -374,6 +373,7 @@ public class FindWay extends StationManagement {
 			departureHour = departureHour % 24;
 		}
 		System.out.printf("도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
+		System.out.println();
 		
 		
 		

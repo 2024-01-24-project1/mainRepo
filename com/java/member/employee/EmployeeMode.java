@@ -44,7 +44,7 @@ public final class EmployeeMode extends CommonFunction{
 			} else if (sel.equals("2")) {	// 2 직원관리
 				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
 				else ViewAll.rankError();
-			} else if (sel.equals("3")) {	// 3. 민원
+			} else if (sel.equals("3")) {	// 3. 고객의 소리
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 					

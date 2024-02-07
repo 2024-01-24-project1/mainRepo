@@ -49,13 +49,13 @@ public class MyPage {
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
-			if(sel.equals("1")) {
+			if(sel.equals("1")) { // 1. 비밀번호 변경
 				myPageChangePW();
-			} else if(sel.equals("2")) {
+			} else if(sel.equals("2")) { // 2. 전화번호 변경 
 				myPageChangePhone();
-			} else if(sel.equals("3")) {
+			} else if(sel.equals("3")) { // 3. 회원탈퇴
 				myPageRemoveID();
-			} else if(sel.equals("4") && mode.equals("1")) {
+			} else if(sel.equals("4") && mode.equals("1")) { // 북마크
 				MyPageBookMark myPageBookMark = new MyPageBookMark();
 				myPageBookMark.myPageBookMarkSelMenu();
 			} else if(sel.equals("")) {
@@ -311,7 +311,6 @@ public class MyPage {
 				
 			}
 			ViewAll.successVEmo();
-			System.out.println("\t\t\t변경이 완료되었습니다.");
 			
 		}else {
 			ViewAll.pwFormatError();

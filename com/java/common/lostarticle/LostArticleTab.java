@@ -225,7 +225,6 @@ public class LostArticleTab {
 					
 				}
 				LogSave.logSave(LogSave.LOSTARTICLEREMOVE);
-				System.out.println("\t\t\t분실물이 삭제되었습니다");
 				ViewAll.lostarticleDeleteResult();
 				ViewAll.pause();
 				

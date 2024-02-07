@@ -520,7 +520,7 @@ System.out.println();
 	public static void lostarticleSearchTop() { // 분실물 검색 상단 라벨  1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t 분실물 검색");
+		System.out.println("\t\t\t       분실물 검색");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}
@@ -1204,10 +1204,10 @@ System.out.println();
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 1. 분실물 검색");
-		System.out.println("\t\t\t 2. 분실물 추가");
-		System.out.println("\t\t\t 3. 분실물 제거");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t     1. 분실물 검색");
+		System.out.println("\t\t\t     2. 분실물 추가");
+		System.out.println("\t\t\t     3. 분실물 제거");
+		System.out.println("\t\t\t     뒤로 가기를 원할 시 엔터키를 눌러주세요");
 		
 	}
 	

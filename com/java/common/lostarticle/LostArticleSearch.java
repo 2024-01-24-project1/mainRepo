@@ -32,7 +32,7 @@ public class LostArticleSearch {
 							 													, article.getContent()
 							 													, article.getFindStation() + "역"));
 					
-					System.out.printf("Page| %s / %s\r\n", index + 1, page);
+					System.out.printf("\t\t\tPage: %s / %s\r\n", index + 1, page);
 					System.out.println("\t\t\t엔터입력시 리스트보기를 종료합니다.");
 					System.out.print("\t\t\t원하는 페이지: ");
 					sel = scan.nextLine();

@@ -16,9 +16,9 @@ public final class UserVoiceManagemnetTab {
 		while(true) {
 			String sel = ""; // 선택한 번호
 			
-			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
+			//System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
 			ViewAll.vocMain();
-			System.out.print("선택 (번호): ");
+			System.out.print("\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 분실물 보기

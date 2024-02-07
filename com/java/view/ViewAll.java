@@ -1,4 +1,4 @@
-package com.test.java.viewfolder;
+package com.java.view;
 
 import java.util.Scanner;
 
@@ -1738,11 +1738,7 @@ System.out.println();
 	public static void pause() { // 일시 정지 2
 		Scanner scan = new Scanner(System.in);
 
-<<<<<<< HEAD
 		System.out.println("\t\t\t   계속하려면 엔터를 입력하세요.");
-=======
-		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
->>>>>>> 95c3bfa8c24cf5d0c5c230d708a34a1fbf0b17f4
 		scan.nextLine();
 	}
 	public static void noIDDataError() { //2

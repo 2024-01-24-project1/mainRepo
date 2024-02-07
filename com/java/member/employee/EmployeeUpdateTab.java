@@ -25,7 +25,7 @@ public class EmployeeUpdateTab {
 			// View클래스 출력
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
 			ViewAll.employeeInfoChangeMain();
-			System.out.print("선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			//1. 근무지 변경
@@ -41,8 +41,8 @@ public class EmployeeUpdateTab {
 			}else {
 				//다시입력
 				System.out.println();
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 			
@@ -181,8 +181,8 @@ public class EmployeeUpdateTab {
 		while(true) {
 			boolean check = false;
 			String input = "";
-			System.out.println("1호선 ~ 9호선");
-			System.out.print("정확히 'N호선'입력: ");
+			System.out.println("\t\t\t1호선 ~ 9호선");
+			System.out.print("\t\t\\t정확히 'N호선'입력: ");
 			input = scan.nextLine();
 
 
@@ -196,7 +196,7 @@ public class EmployeeUpdateTab {
 				// 선택한 호선의 역이름들 보여주기
 				StationNamePage.stationNamePage(StationManagement.lineRoute(LINE), LINE);
 				
-				System.out.print("역 이름: ");
+				System.out.print("\t\t\t역 이름: ");
 				input = scan.nextLine();
 				
 				if (input.endsWith("역")) {
@@ -266,10 +266,10 @@ public class EmployeeUpdateTab {
 				}
 				
 			}else {
-				System.out.println("잘못된 호선");
-				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-				System.out.println("근무지 배치를 그만두시려면 엔터");
-				System.out.println("다시 입력하시려면 아무키나 입력하세요");
+				System.out.println("\t\t\t잘못된 호선");
+				System.out.println("\t\t\t잘못된 역이름 또는 호선에 맞지않는 역이름");
+				System.out.println("\t\t\t근무지 배치를 그만두시려면 엔터");
+				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 				input = scan.nextLine();
 				
 				if(input.equals("")) {
@@ -291,7 +291,7 @@ public class EmployeeUpdateTab {
 		Scanner scan = new Scanner(System.in);
 		
 		// 고객인지 직원인지 삭제할 계정 물어보기
-		System.out.println("삭제할 계정이 직원인지 고객인지 고르세요");
+		System.out.println("\t\t\t삭제할 계정이 직원인지 고객인지 고르세요");
 		System.out.print("\t\t\t입력: ");
 		member = scan.nextLine();
 		
@@ -333,7 +333,7 @@ public class EmployeeUpdateTab {
 												, user.getPassCheck()
 												, user.getPassExpiry()));
 			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
-			System.out.print("yes만 삭제: ");
+			System.out.print("\t\t\tyes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {
@@ -367,7 +367,7 @@ public class EmployeeUpdateTab {
 												, employee.getStation()
 												, employee.getLevel()));
 			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
-			System.out.print("yes만 삭제: ");
+			System.out.print("\t\t\tyes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {

@@ -20,20 +20,24 @@ public class StationManagementTab {
 			
 			
 			if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
-				
+
 				// 역관리
-				ViewAll.stationMain();
-				ViewAll.chooseNum();
-				String sel = reader.readLine();
-				
-				if(sel.equals("1")) {
-					AddTrain addTrain = new AddTrain();
-					addTrain.addTrain();
-				}else if (sel.equals("2")) {
-					ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
-					changeNoChairTrain.changeNoChairTrain();
+
+				while(true) {
+
+					ViewAll.stationMain();
+					ViewAll.chooseNum();
+					String sel = reader.readLine();
+					if(sel.equals("1")) {
+						AddTrain addTrain = new AddTrain();
+						addTrain.addTrain();
+					}else if (sel.equals("2")) {
+						ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
+						changeNoChairTrain.changeNoChairTrain();
+					}else if(sel.equals("")) {
+						break;
+					}
 				}
-				
 			}else {
 				System.out.println("\t\t\t접근 권한이 없습니다.");
 				ViewAll.pause();

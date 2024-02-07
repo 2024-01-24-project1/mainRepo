@@ -32,7 +32,7 @@ public class EmployeeSearch {
 
 			ArrayList<Employee> searchlist = new ArrayList<>();
 			ViewAll.employeeSearchNameResult();
-			System.out.print("\t\t\t찾기: ");
+			System.out.print("\t\t\t\t찾기: ");
 			search = scan.nextLine();
 			
 
@@ -79,6 +79,9 @@ public class EmployeeSearch {
 
 	public static void employeePage(ArrayList<Employee> list) {
 		// 리스트의 페이지수 계산
+		
+		if(list.size()==0) return;
+		
 		int page = (int)(Math.ceil((double)list.size() / 10));
 
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
@@ -94,7 +97,7 @@ public class EmployeeSearch {
 
 			list.stream().skip(index * 10)
 			.limit(10)
-			.forEach(employee -> System.out.printf("%-8s|%-15s|%-2s|%-3s - %-10s\t|%-13s\r\n"
+			.forEach(employee -> System.out.printf("%-5s|%-12s|%-2s|%-3s - %-15s  %-13s\r\n"
 					, employee.getName()
 					, employee.getId()
 					, employee.getPosition()

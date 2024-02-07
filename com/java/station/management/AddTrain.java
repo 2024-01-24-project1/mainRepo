@@ -44,7 +44,7 @@ public class AddTrain extends StationManagement {
 			while(loop) {
 				
 				ViewAll.trainAddOne();
-				System.out.print("\t\t\t\t호선: ");
+				System.out.print("\t\t\t호선          : ");
 				line = reader.readLine();
 				
 				if(line.contains("호선")){

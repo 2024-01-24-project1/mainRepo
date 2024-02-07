@@ -462,13 +462,13 @@ public final class Validation {
 				int time = Integer.parseInt(timeStr);
 				
 				if(time<5 && time > 25) {
-					error.add("시간 범위 초과");
+					error.add("시간은 5~24사이값만 입력하세요.");
 				}
 				
 				
 			} catch (Exception e) {
 				
-				error.add("시간 형식 불일치");
+				error.add("시간 형식이 올바르지 않습니다");
 				
 			}
 			
@@ -478,20 +478,20 @@ public final class Validation {
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
 				
-				error.add("호선 불일치 1~9호선");
+				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
 				
 			}
 			
 			if(!way.equals("상행") && !way.equals("하행") && !way.equals("내선") && !way.equals("외선")) {
 				
-				error.add("방향 입력 불일치");
+				error.add("방향 입력이 올바르지 않습니다.");
 				
 			}
 			
 
 			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
-				error.add("요일(평일/주말)입력 불일치");
+				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				
 			}
 			error.add("오류없음");
@@ -544,15 +544,25 @@ public final class Validation {
 			}
 			
 
-			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
 				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				
 			}
 			
 			
-			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
-				error.add("시간은 5~24사이값만 입력하세요.");
+			try {
+				
+				if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+					
+					error.add("시간은 5~24사이값만 입력하세요.");
+				}
+				
+			} catch (Exception e) {
+				
+				error.add("시간 형식이 올바르지 않습니다");
+
+				
 			}
 			
 			
@@ -574,32 +584,39 @@ public final class Validation {
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
 				
-				error.add("호선 불일치 1~9호선");
+				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
 			}
 			
 			
 
 			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				error.add("해당 호선에 해당 역이 존재하지 않음");
-				
+				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));				
 			}
 
-			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
-				error.add("요일(평일/주말)입력 불일치");
+				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				
 			}
 			if(startStation.equals(endStation)) {
 				
-				error.add("시작역과 도착역이 같음");
+				error.add("시작역과 도착역이 같습니다.");
 				
 			}
 			
-			
-			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+			try {
 				
-				error.add("시간 범위 초과");
+				if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+					
+					error.add("시간은 5~24사이값만 입력하세요.");
+				}
+				
+			} catch (Exception e) {
+				
+				error.add("시간 형식이 올바르지 않습니다");
+
+				
 			}
 			
 			
@@ -617,7 +634,7 @@ public final class Validation {
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
-				error.add("호선 불일치 1~9호선");
+				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
 
 			}
 			
@@ -625,7 +642,7 @@ public final class Validation {
 
 			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				error.add("해당 호선에 해당 역이 존재하지 않음");
+				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));
 
 			}
 			

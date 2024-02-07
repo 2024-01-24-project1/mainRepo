@@ -531,13 +531,10 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userVocMain() { //고객의 소리 메뉴  0
+	public static void userVocMain() { //고객의 소리 메뉴  2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println("\t\t\t         고객의 소리");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println();
-		System.out.println();
-		System.out.println();
 		System.out.println("\t\t\t 1. 일반 민원 접수");
 		System.out.println("\t\t\t 2. 분실물 목록 확인");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}

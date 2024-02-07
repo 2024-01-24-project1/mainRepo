@@ -12,7 +12,8 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			ViewAll.userVoiceView();
+			ViewAll.userVocMain();
+			ViewAll.chooseNum();
 			
 			Scanner scan = new Scanner(System.in);
 			String num = "";
@@ -42,12 +43,11 @@ public class UserVoiceTab {
 		
 		String title = "";
 		String content = "";
-			
-		ViewAll.title("민원 접수");
-		System.out.print("제목: ");
+		
+		ViewAll.userVoc();
+		System.out.print("\t\t\t제목: ");
 		title = scan.nextLine();
-		System.out.print("내용: ");
-		System.out.println();
+		System.out.print("\t\t\t내용: ");
 		content = scan.nextLine();
 		
 		boolean titleCheck = (title.length() > 20 || title.length() < 2);

@@ -19,7 +19,7 @@ public class PassTab {
 		
 		while(true) {
 			
-			ViewAll.ticketView();
+			//ViewAll.ticketView();
 			String sel = "";
 			
 			System.out.println("정기권 페이지");
@@ -52,7 +52,7 @@ public class PassTab {
 	
 	public static void myTicket() { // 1. 내 정기권 확인
 		
-		ViewAll.title("나의 정기권 확인하기");
+		//ViewAll.title("나의 정기권 확인하기");
 		
 		if ( LoginLogout.pass.equals("있음") ) {
 			
@@ -69,7 +69,7 @@ public class PassTab {
 	
 	public static void signPass() { // 2. 정기권 등록
 		
-		ViewAll.title("정기권 등록");
+		//ViewAll.title("정기권 등록");
 		
 		Scanner scan = new Scanner(System.in);
 		

@@ -10,7 +10,7 @@ public class StatsTab {
 	
 	final static long ALLSALES = 13000000000L;
 	
-	final static long ALLPASSENGER = 10000000L;
+	final static long ALLPASSENGER = 12000000L;
 	
 	
 	

@@ -199,7 +199,7 @@ public class LostArticleTab {
 			String sts = "";
 			
 			System.out.println("\t\t\t삭제할 분실물의 이름");
-			System.out.printf("\t\t\t분실물       : ");
+			System.out.printf("\t\t\t분실물 : ");
 			sel = scan.nextLine();
 			System.out.println("\t\t\t보관 된 위치: ");
 			sts = scan.nextLine();

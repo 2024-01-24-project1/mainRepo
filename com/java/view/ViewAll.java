@@ -520,7 +520,7 @@ System.out.println();
 	public static void lostarticleSearchTop() { // 분실물 검색 상단 라벨  1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t 분실물 검색");
+		System.out.println("\t\t\t       분실물 검색");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}
@@ -1205,10 +1205,10 @@ System.out.println();
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 1. 분실물 검색");
-		System.out.println("\t\t\t 2. 분실물 추가");
-		System.out.println("\t\t\t 3. 분실물 제거");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t     1. 분실물 검색");
+		System.out.println("\t\t\t     2. 분실물 추가");
+		System.out.println("\t\t\t     3. 분실물 제거");
+		System.out.println("\t\t\t     뒤로 가기를 원할 시 엔터키를 눌러주세요");
 		
 	}
 	
@@ -1896,7 +1896,7 @@ System.out.println("╬╬═════════════╬╬═══
 	public static void chooseNum() {
 
 		
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t\t선택 (번호): ");
 
 	}
@@ -1904,22 +1904,22 @@ System.out.println("╬╬═════════════╬╬═══
 	public  static void insertRabel() {
 
 		
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t\t      입력: ");
 	}
 	public static void chooseline() {
-		clear();
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t      호선: ");
 	}
 	public static void choosestartStation() {
-		clear();
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t    시작역: ");
 	}
 	public static void chooseentStation() {
-		clear();
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t    도착역: ");
 	}
 	

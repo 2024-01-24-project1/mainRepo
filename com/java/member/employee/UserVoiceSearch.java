@@ -31,7 +31,7 @@ public class UserVoiceSearch {
 				// 모든민원보기 종료
 				break;
 			}
-			
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			System.out.println("\t\t\t아이디와 제목을 정확히 입력하시면");
 			System.out.println("\t\t\t민원의 내용을 확인합니다.");
 			System.out.print("\t\t\t아이디: ");
@@ -85,17 +85,18 @@ public class UserVoiceSearch {
 			
 			list.stream().skip(index * 10)
 			 							 .limit(10)
-			 							 .forEach(uservoice -> System.out.printf("%-10s|%-20s|%-3s|\r\n"
+			 							 .forEach(uservoice -> System.out.printf("\t\t\t%-10s\t%-20s\t%-3s\r\n"
 					 													, uservoice.getId()
 					 													, uservoice.getTitle()
 					 													, uservoice.getIsRead()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
 			System.out.printf("\t\tPage| %s / %s\r\n", index + 1, page);
-			System.out.print("\t\t\t엔터입력시 페이지모드 종료.");
+			System.out.println("\t\t\t엔터입력시 페이지모드 종료.");
 			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
+				System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 				break;
 			}else if (Validation.is_NumString(sel)) {
 				index = Integer.parseInt(sel) - 1;

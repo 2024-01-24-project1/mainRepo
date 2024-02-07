@@ -20,13 +20,9 @@ public class LostArticleTab {
 			// 모든 분실물 먼저 보여주기
 			lostArticleAll();
 			
-			System.out.println("=======================================");
-			System.out.println(" 1. 분실물 검색");
-			System.out.println(" 2. 분실물 추가");
-			System.out.println(" 3. 분실물 제거");
-			System.out.println("엔터 입력시 뒤로가기");
-			System.out.println("--------------------------------------");
-			System.out.print("선택 (번호): ");
+			ViewAll.lostarticleMain();
+			ViewAll.chooseNum();
+
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 분실물 검색
@@ -41,8 +37,8 @@ public class LostArticleTab {
 				break;
 					
 			} else { // 이외의 숫자 입력 시
-					System.out.println("해당 섹션이 없습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					ViewAll.pause();
 			}
 			
@@ -54,7 +50,7 @@ public class LostArticleTab {
 			
 			Scanner scan = new Scanner(System.in);
 			
-			ViewAll.title(" 분실물 검색");
+			ViewAll.lostarticleSearchTop();
 			System.out.println();
 			
 			ArrayList<LostArticle> list = new ArrayList<LostArticle>();
@@ -63,12 +59,12 @@ public class LostArticleTab {
 			while(true) {
 				String search ="";
 				
-				System.out.println("찾으실 분실물을 검색해주세요.");
-				System.out.print("분실물: ");
+				System.out.println("\t\t\t찾으실 분실물을 검색해주세요.");
+				System.out.print("\t\t\t분실물: ");
 				search = scan.nextLine();
 				
 				if (search.equals("")) {					// 엔터 입력시 문구 출력후 쫒아내기
-					System.out.println("잘못된 입력입니다.");
+					System.out.println("\t\t\t잘못된 입력입니다.");
 					break;
 				}
 					
@@ -90,12 +86,11 @@ public class LostArticleTab {
 					LostArticleSearch.lostArticlePage(list);
 					
 				} else {			// 1개도 없으면
-					System.out.println(search + "를 포함하는 분실물이 없습니다.");
+					System.out.println("\t\t\t" + search + "를 포함하는 분실물이 없습니다.");
 				}
 				
-				System.out.println("검색을 그만두시려면 엔터");
-				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
-				System.out.printf("입력: ");
+				System.out.println("\t\t\t검색을 그만두시려면 엔터");
+				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
 				search = scan.nextLine();
 				
 				if(search.equals("")) {
@@ -120,14 +115,16 @@ public class LostArticleTab {
 			String find = "";
 			String keep = "";
 			
-			System.out.println("추가할 분실물의 이름");
-			System.out.printf("분실물: ");
+			ViewAll.lostarticleAdd();
+			
+			System.out.println("\t\t\t추가할 분실물의 이름");
+			System.out.printf("\t\t\t분실물: ");
 			article = scan.nextLine();
-			System.out.printf("내용: ");
+			System.out.print("\t\t\t내용  : ");
 			content = scan.nextLine();
-			System.out.printf("발견역: ");
+			System.out.print("\t\t\t발견역: ");
 			find = scan.nextLine();
-			System.out.printf("보관역: ");
+			System.out.print("\t\t\t보관역: ");
 			keep = scan.nextLine();
 			
 			if (find.endsWith("역")) {
@@ -142,19 +139,19 @@ public class LostArticleTab {
 			
 				
 			if(article.length() > 20 || article.length() < 1) {
-				System.out.println("분실물의 이름은 20글자 이하 1글자 이상입니다");
+				System.out.println("\t\t\t분실물의 이름은 20글자 이하 1글자 이상입니다");
 			}
 			
 			if(content.length() > 20) {
-				System.out.println("상세내용은 20글자 이하입니다.");
+				System.out.println("\t\t\t상세내용은 20글자 이하입니다.");
 			}
 			
 			if( Validation.is_StationName(find)) {
-				System.out.println("발견역이 올바른 역이름이 아닙니다.");
+				System.out.println("\t\t\t발견역이 올바른 역이름이 아닙니다.");
 			}
 			
 			if( Validation.is_StationName(find)) {
-				System.out.println("보관중인 역이름이 올바른 역이름이 아닙니다.");
+				System.out.println("\t\t\t보관중인 역이름이 올바른 역이름이 아닙니다.");
 			}
 			
 			// 모든 조건에 걸리지 않을경우
@@ -164,15 +161,16 @@ public class LostArticleTab {
 				LostArticle lostArticle = new LostArticle(article, content, find, keep);
 				Data.lostArticleList.add(lostArticle);
 				
-				System.out.println("분실물 추가 완료");
+				System.out.println("\t\t\t분실물 추가 완료");
+				ViewAll.lostarticleAddResult();
 				ViewAll.pause();
 				
 				// 분실물 추가 종료
 				break;
 			}
 			
-			System.out.println("다시 입력하시려면 아무키나 입력하세요.");
-			System.out.println("뒤로가려면 엔터를 입력하세요.");
+			System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
+			System.out.println("\t\t\t뒤로가려면 엔터를 입력하세요.");
 			System.out.printf("입력: ");
 			sel = scan.nextLine();
 			

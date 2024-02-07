@@ -739,33 +739,45 @@ public final class Validation {
 	    	}
 	    }
 	    
-	    public static boolean is_bookMark(String line, String startStation, String endStation, String time) {
+	    public static ArrayList<String> is_bookMark(String line, String startStation, String endStation, String time) {
 			
-			
+			ArrayList<String> error = new ArrayList<>();
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
-				return false;
+
+				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
+				
 			}
 			
 			
 
 			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				return false;
-
+				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));	
 			}
 			
 			int selTime = Integer.parseInt(time);
 			
-			if(selTime>24 || selTime<5) {
-				return false;
-			}
+			try {
+				
+				if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+					
+					error.add("시간은 5~24사이값만 입력하세요.");
+				}
+				
+			} catch (Exception e) {
+				
+				error.add("시간 형식이 올바르지 않습니다");
 
+			}
 			
-			return true;
+			error.add("오류없음");
+			
+			return error;
+			
 			
 		}
 		

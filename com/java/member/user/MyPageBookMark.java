@@ -1,13 +1,16 @@
 package com.java.member.user;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.view.ViewAll;
+import com.java.station.StationNamePage;
+import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
 public class MyPageBookMark extends BookMarkRoute{
@@ -28,11 +31,10 @@ public class MyPageBookMark extends BookMarkRoute{
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
 
-
 			while(true) {
 				ViewAll.lineFavorite();
+				ViewAll.pause();
 
-				System.out.print("입력: ");
 				String sel = reader.readLine();
 
 
@@ -50,52 +52,13 @@ public class MyPageBookMark extends BookMarkRoute{
 				}else if(sel.equals("2")) {// 즐겨찾기 편집
 
 					ViewAll.favoriteChange();
+					ViewAll.chooseNum();
 
-					System.out.print("입력: ");
 					sel = reader.readLine();
 
 					if(sel.equals("1")) { // 즐겨찾기 등록
 
-						Calendar calendar = Calendar.getInstance();
-						boolean check = false;
-						String line = "";
-						String start = "";
-						String end = "";
-						String time = "";
-
-
-						while(true) {
-
-							ViewAll.favoriteAdd();
-
-							System.out.print("호선: ");
-							line = reader.readLine();
-
-							System.out.print("시작역: ");
-							start = reader.readLine(); 
-
-							System.out.print("도착역: ");
-							end = reader.readLine();
-
-							System.out.print("시간(5~24): ");
-							time = reader.readLine();
-
-							check = is_bookMark(line, start, end, time);
-
-							if(check) {
-								break;
-							}
-							else {
-								System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-							}
-						}
-
-						calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(time));
-
-						registerBookMark(line, start, end, calendar);
-						System.out.println("즐겨찾기 등록을 완료했습니다.");
-
-						ViewAll.pause();
+						addBookMark();
 
 					}else if(sel.equals("2")) { //즐겨찾기 삭제
 
@@ -112,11 +75,27 @@ public class MyPageBookMark extends BookMarkRoute{
 						}
 						
 
+					}else if(sel.equals("3")) {
+						break;
+					}else {
+						
+						System.out.println("\t\t\t해당 섹션이 없습니다.");
+						System.out.println("\t\t\t다시 입력해주세요.");
+						ViewAll.pause();
+						
 					}
 
 
-				}else if(sel.equals("3")) {
+				}else if(sel.equals("")) {
 					break;
+					
+				}else {
+					
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
+					ViewAll.pause();
+					
+					
 				}
 			}
 
@@ -130,6 +109,82 @@ public class MyPageBookMark extends BookMarkRoute{
 		
 		
 		
+	}
+
+
+	private void addBookMark()  {
+		
+		
+		
+		try {
+			
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			ArrayList<String> error = new ArrayList<>();
+			Calendar calendar = Calendar.getInstance();
+			String line = "";
+			String start = "";
+			String end = "";
+			String time = "";
+
+			
+			while(true) {
+
+				ViewAll.favoriteAdd();
+
+				System.out.print("\t\t\t호선     : ");
+				line = reader.readLine();
+
+				if(line.contains("호선")) {
+					line = line.replace("호선", "");
+				}
+
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
+
+				System.out.print("\t\t\t시작역   : ");
+				start = reader.readLine(); 
+
+				if(start.endsWith("역")) {
+					start = start.substring(0,start.length()-1);
+				}
+
+				System.out.print("\t\t\t도착역   : ");
+				end = reader.readLine();
+
+				if(end.endsWith("역")) {
+					end = end.substring(0,end.length()-1);
+				}
+
+				System.out.print("\t\t\t시간(5~24): ");
+				time = reader.readLine();
+
+				error = Validation.is_bookMark(line, start, end, time);
+
+				if(error.get(0).equals("오류없음")) {
+					break;
+				}
+				else {
+
+					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
+						return;                      //false 일 경우 뒤로가기
+					}
+
+
+				}
+			}
+
+			calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(time));
+
+			registerBookMark(line, start, end, calendar);
+			System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
+
+			ViewAll.pause();
+			
+		} catch (Exception e) {
+			System.out.println("MyPageBookMark.addBookMark()");
+			e.printStackTrace();
+		}
+
+
 	}
 	
 	
@@ -150,8 +205,8 @@ public class MyPageBookMark extends BookMarkRoute{
 				index = Integer.parseInt(sel)-1;
 				if(index>=userBookMark.size()) {
 					
-					System.out.println("범위 내의 숫자만 입력하세요.");
-					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
+					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
 					
 				}else if(sel.equals("")) {
 					return;
@@ -182,32 +237,6 @@ public class MyPageBookMark extends BookMarkRoute{
 			e.printStackTrace();
 		}
 		
-		
-	}
-	
-	public boolean is_bookMark(String line, String startStation, String endStation, String time) {
-		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
-			
-		//호선 입력 확인 (1~9호선)
-		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
-				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
-				&& !line.equals("8") && !line.equals("9")) {
-			return false;
-		}
-		
-		
-
-		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
-			
-			return false;
-
-		}
-
-		
-		return true;
 		
 	}
 	

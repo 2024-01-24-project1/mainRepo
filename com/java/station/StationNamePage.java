@@ -18,9 +18,9 @@ public class StationNamePage {
         }
 
         while (true) {
-            System.out.println("======================================================");
-            System.out.printf("             %s 역리스트\r\n", line);
-            System.out.println("======================================================");
+            System.out.println("=======================================================================");
+            System.out.printf("\t\t\t\t%s 역리스트\r\n", line);
+            System.out.println("=======================================================================");
 
             // 현재 페이지에 해당하는 역 목록 출력
             int startIndex = currentPage * pageSize;
@@ -31,9 +31,9 @@ public class StationNamePage {
                     System.out.println();
             });
 
-            System.out.printf("\nPage | %d / %d\n", currentPage + 1, totalPages);
-            System.out.println("엔터를 누르면 페이지모드 종료.");
-            System.out.print("페이지 번호 입력: ");
+            System.out.printf("\t\t\t\nPage | %d / %d\n", currentPage + 1, totalPages);
+            System.out.println("\t\t\t엔터를 누르면 페이지모드 종료.");
+            System.out.print("\t\t\t페이지 번호 입력: ");
             String input = scanner.nextLine();
 			
             if (input.equals("")) { // 엔터 입력 시 페이지모드 종료
@@ -43,10 +43,10 @@ public class StationNamePage {
                 if (pageNumber > 0 && pageNumber <= totalPages) {
                     currentPage = pageNumber - 1;
                 } else {
-                    System.out.println("페이지 범위를 벗어났습니다. 다시 입력해주세요.");
+                    System.out.println("\t\t\t페이지 범위를 벗어났습니다. 다시 입력해주세요.");
                 }
             } else {
-                System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+                System.out.println("\t\t\t잘못된 입력입니다. 다시 입력해주세요.");
             }
 			
 		}//while루프 종료

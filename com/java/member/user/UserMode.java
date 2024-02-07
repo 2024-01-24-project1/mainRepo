@@ -24,13 +24,13 @@ public final class UserMode extends CommonFunction{
 			ViewAll.userNameHello();
 			ViewAll.userMainView();
 			
-			System.out.print("선택 (번호): ");
+			System.out.printf("\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("0")) {			// 0. 프로그램 종료
 				
 				// 종료
-				System.out.println("프로그램을 종료합니다.");
+				System.out.println("\t\t\t프로그램을 종료합니다.");
 				Exit exit = new Exit();
 				exit.writeAll();
 				
@@ -60,15 +60,15 @@ public final class UserMode extends CommonFunction{
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 			
 			if(LoginLogout.getOut) {
 				// 회원 탈퇴시 메인으로 보내기
 				LoginLogout.getOut = false;
-				System.out.println("지금까지 이용해주셔서 감사합니다.");
+				System.out.println("\t\t\t지금까지 이용해주셔서 감사합니다.");
 				LoginLogout.logout();
 				break;
 			}

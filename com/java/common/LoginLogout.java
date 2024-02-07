@@ -54,9 +54,9 @@ public final class LoginLogout {
 			
 			ViewAll.loginTop();
 			
-			System.out.print("아이디: ");
+			System.out.print("\t\t\t아이디  : ");
 			String id = scan.nextLine();
-			System.out.print("비밀번호: ");
+			System.out.print("\t\t\t비밀번호: ");
 			String pw = scan.nextLine();
 			
 			// 고객인지 직원인지 검사
@@ -66,7 +66,6 @@ public final class LoginLogout {
 			
 			
 			if(checkUser) {				// 고객계정으로 로그인 완료
-				System.out.println("고객계정 존재");
 				
 				for(User user : Data.userList) {
 					
@@ -83,13 +82,12 @@ public final class LoginLogout {
 					}
 				}
 				
-				System.out.println("로그인이 완료되었습니다.");
-				System.out.println(LoginLogout.authName + "님 환영합니다.");
+				System.out.println("\t\t\t로그인이 완료되었습니다.");
+				System.out.println("\t\t\t" + LoginLogout.authName + "님 환영합니다.");
 				ViewAll.pause();
 				break;	// 아이디, 비밀번호 입력받기 종료
 				
 			}else if(checkEmployee){	// 직원계정으로 로그인 완료
-				System.out.println("직원계정 존재");
 				
 					for(Employee employee : Data.employeeList) {
 					
@@ -106,8 +104,8 @@ public final class LoginLogout {
 					
 					}
 				
-					System.out.println("로그인이 완료되었습니다.");
-					System.out.println(LoginLogout.authName + "님 환영합니다.");
+					System.out.println("\t\t\t로그인이 완료되었습니다.");
+					System.out.println("\t\t\t" + LoginLogout.authName + "님 환영합니다.");
 					ViewAll.pause();
 					break;	// 아이디, 비밀번호 입력받기 종료
 					
@@ -116,9 +114,9 @@ public final class LoginLogout {
 				ViewAll.errorQuestionEmo();
 				ViewAll.noIdError();
 				System.out.println();
-				System.out.println("뒤로가시려면 엔터");
-				System.out.println("아무키나 입력시 다시 ID와 PW를 입력합니다.");
-				System.out.print("입력: ");
+				System.out.println("\t\t\t뒤로가시려면 엔터");
+				System.out.println("\t\t\t아무키나 입력시 다시 ID와 PW를 입력합니다.");
+				System.out.print("\t\t\t입력: ");
 				back = scan.nextLine();
 				
 				if(back.equals("")) {
@@ -143,7 +141,7 @@ public final class LoginLogout {
 		LoginLogout.pass = "";
 		LoginLogout.passExpiry = "";
 		LoginLogout.phone = "";
-		System.out.println("로그아웃이 완료되었습니다.");
+		System.out.println("\t\t\t로그아웃이 완료되었습니다.");
 		ViewAll.pause();
 		
 		

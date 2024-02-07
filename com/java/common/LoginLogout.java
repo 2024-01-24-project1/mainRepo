@@ -118,7 +118,7 @@ public final class LoginLogout {
 				System.out.println();
 				System.out.println("뒤로가시려면 엔터");
 				System.out.println("아무키나 입력시 다시 ID와 PW를 입력합니다.");
-				System.out.print("             ");
+				System.out.print("입력: ");
 				back = scan.nextLine();
 				
 				if(back.equals("")) {

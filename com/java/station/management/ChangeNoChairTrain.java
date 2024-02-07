@@ -1,6 +1,7 @@
 package com.java.station.management;
 
 import java.io.BufferedReader;
+
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class ChangeNoChairTrain extends StationManagement{
 			
 			while(loop) {
 				
-				ViewAll.changeNoChairTrain();
+				//ViewAll.changeNoChairTrain();
 				System.out.print("호선: ");
 				line = reader.readLine();
 				
@@ -118,7 +119,7 @@ public class ChangeNoChairTrain extends StationManagement{
 			
 			
 			
-			ViewAll.changeNoChairTrainResult();
+			//ViewAll.changeNoChairTrainResult();
 			printBusy(startStation, endStation, time, stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
 			
 			//혼잡도 수치 조정

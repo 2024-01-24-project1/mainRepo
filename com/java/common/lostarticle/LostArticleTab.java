@@ -95,7 +95,7 @@ public class LostArticleTab {
 				
 				System.out.println("검색을 그만두시려면 엔터");
 				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
-				System.out.printf("입력: ");
+				System.out.print("입력: ");
 				search = scan.nextLine();
 				
 				if(search.equals("")) {
@@ -123,11 +123,11 @@ public class LostArticleTab {
 			System.out.println("추가할 분실물의 이름");
 			System.out.printf("분실물: ");
 			article = scan.nextLine();
-			System.out.printf("내용: ");
+			System.out.print("내용: ");
 			content = scan.nextLine();
-			System.out.printf("발견역: ");
+			System.out.print("발견역: ");
 			find = scan.nextLine();
-			System.out.printf("보관역: ");
+			System.out.print("보관역: ");
 			keep = scan.nextLine();
 			
 			if (find.endsWith("역")) {
@@ -173,7 +173,7 @@ public class LostArticleTab {
 			
 			System.out.println("다시 입력하시려면 아무키나 입력하세요.");
 			System.out.println("뒤로가려면 엔터를 입력하세요.");
-			System.out.printf("입력: ");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -200,9 +200,9 @@ public class LostArticleTab {
 			String sts = "";
 			
 			System.out.println("삭제할 분실물의 이름");
-			System.out.printf("분실물: ");
+			System.out.print("분실물: ");
 			sel = scan.nextLine();
-			System.out.println("보관 된 위치: ");
+			System.out.print("보관 된 위치: ");
 			sts = scan.nextLine();
 			
 			if (sts.endsWith("역")) {
@@ -237,7 +237,7 @@ public class LostArticleTab {
 			
 			System.out.println("다시 삭제하려면 아무키나 입력");
 			System.out.println("뒤로 가시려면 엔터");
-			System.out.printf("입력: ");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

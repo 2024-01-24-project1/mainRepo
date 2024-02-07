@@ -80,7 +80,7 @@ public class MyPageBookMark extends BookMarkRoute{
 							}
 
 
-						}else if(sel.equals("3")) {
+						}else if(sel.equals("")) {
 							break;
 						}else {
 

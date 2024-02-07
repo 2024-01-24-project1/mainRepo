@@ -649,8 +649,8 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t    1.PW 재설정하기");
-		System.out.println("\t\t\t    2.전화번호 재설정하기");
+		System.out.println("\t\t\t    1. 즐겨찾기 편집");
+		System.out.println("\t\t\t    2. 즐겨찾기 등록");
 		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
@@ -723,15 +723,15 @@ System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println("\t\t\t            마이 페이지");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println("\t\t\t         1. 비밀번호 변경");
-		System.out.println("\t\t\t         2. 전화번호 변경");
-		System.out.println("\t\t\t         3. 회원탈퇴");
-		System.out.println("\t\t\t         4. 북마크");
-		System.out.println("\t\t\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+//		System.out.println();
+//		System.out.println("\t\t\t         1. 비밀번호 변경");
+//		System.out.println("\t\t\t         2. 전화번호 변경");
+//		System.out.println("\t\t\t         3. 회원탈퇴");
+//		System.out.println("\t\t\t         4. 북마크");
+//		System.out.println("\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
 	public static void userMainView() { //고객 메인 메뉴 화면 0 2

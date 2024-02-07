@@ -24,7 +24,7 @@ public final class UserMode extends CommonFunction{
 			ViewAll.userNameHello();
 			ViewAll.userMainView();
 			
-			System.out.printf("\t\t\t선택 (번호): ");
+			System.out.printf("\t\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("0")) {			// 0. 프로그램 종료

@@ -17,13 +17,16 @@ public class MyPage {
 			String sel = "";
 			
 			Scanner scan = new Scanner(System.in);
-		
-			System.out.printf("\t\t\t이름: %s\n아이디: %s\n전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
+			
+			
+			ViewAll.userMyPage();
+			System.out.printf("\t\t이름: %s 아이디: %s 전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
+			
 			
 			if(mode.equals("1")) {
 				
 				// 유저만 가지는 정보 출력
-				System.out.printf("\t\t\t정기권: %s\n", LoginLogout.pass);
+				System.out.printf("\t\t\t정기권: %s  ", LoginLogout.pass);
 				
 				// 정기권이 있으면 유효기간 출력 없으면 출력하지않음
 				if(LoginLogout.pass.equals("있음")) {
@@ -33,19 +36,24 @@ public class MyPage {
 			}else if (mode.equals("2")) {
 				
 				// 직원만 가지는 정보 출력
-				System.out.printf("\t\t\t직급: %s\n", LoginLogout.position);
-				System.out.printf("\t\t\t권한: LEVEL%s\n", LoginLogout.level);
+				System.out.printf("\t\t\t직급: %s  ", LoginLogout.position);
+				System.out.printf("\t\t권한: LEVEL%s\n", LoginLogout.level);
 				Data.employeeList.stream().filter(employee -> employee.getId().equals(LoginLogout.auth))
 																	  .forEach(employee -> System.out.printf("",
-																			  employee.getLine() + "호선"
-																			 ,employee.getStation() + "역"));
+																			 employee.getStation() + "역"));
 			}
-			ViewAll.userMyPage();
+			
+			System.out.println();
+			System.out.println("\t\t\t         1. 비밀번호 변경");
+			System.out.println("\t\t\t         2. 전화번호 변경");
+			System.out.println("\t\t\t         3. 회원탈퇴");
+			System.out.println("\t\t\t         4. 북마크");
+			
 
 			if(mode.equals("1")) {
 				System.out.println("\t\t\t 4. 즐겨찾기 목록");
 			}
-			System.out.println("\t\t\t엔터입력시 뒤로가기");
+			System.out.println("\t\t\t\t엔터입력시 뒤로가기");
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
@@ -65,8 +73,6 @@ public class MyPage {
 			}else {
 				//다시입력
 				ViewAll.errorFailEmo();
-				System.out.println();
-				System.out.printf("\t\t\t해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
 				ViewAll.pause();
 			}
 			
@@ -247,7 +253,6 @@ public class MyPage {
 		System.out.println("\t\t\t변경이 완료되었습니다.");
 		
 		}else {
-			ViewAll.errorQuestionEmo();
 			ViewAll.phoneNumberFormatError();
 		}
 		ViewAll.pause();

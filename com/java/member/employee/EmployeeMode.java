@@ -24,29 +24,14 @@ public final class EmployeeMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 		
 			//View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             SEOUL METRO          ");
-			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 역 관리");
-			System.out.println("           2. 직원 관리");
-			System.out.println("           3. 민원");
-			System.out.println("           4. 행사 캘린더");
-			System.out.println("           5. 통계 정보");
-			System.out.println("           6. 요금표");
-			System.out.println("           7. 열차 시간표");
-			System.out.println("           8. 행동로그 보기");
-			System.out.println("           9. 마이페이지");
-			System.out.println("          10. 로그아웃");
-			System.out.println("           0. 종료");
-			System.out.println("--------------------------------------");
-			System.out.print("선택 (번호): ");
+			ViewAll.adminMainView();
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("0")) {
 				
 				// 종료
-				System.out.println("프로그램을 종료합니다.");
+				System.out.println("\t\t\t프로그램을 종료합니다.");
 				Exit exit = new Exit();
 				exit.writeAll();
 				

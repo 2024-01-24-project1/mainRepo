@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 public class LostArticleTab {
@@ -197,10 +198,10 @@ public class LostArticleTab {
 			String sel = "";
 			String sts = "";
 			
-			System.out.println("삭제할 분실물의 이름");
-			System.out.printf("분실물: ");
+			System.out.println("\t\t\t삭제할 분실물의 이름");
+			System.out.printf("\t\t\t분실물       : ");
 			sel = scan.nextLine();
-			System.out.println("보관 된 위치: ");
+			System.out.println("\t\t\t보관 된 위치: ");
 			sts = scan.nextLine();
 			
 			if (sts.endsWith("역")) {
@@ -222,20 +223,20 @@ public class LostArticleTab {
 					
 				}
 				
-				System.out.println("분실물이 삭제되었습니다");
+				LogSave.logSave(LogSave.LOSTARTICLEREMOVE);
+				ViewAll.lostarticleDeleteResult();
 				ViewAll.pause();
 				
 				// 분실물 삭제 종료
 				break;
 				
 			}else {
-				System.out.println("존재하지 않는 분실물 입니다.");
+				System.out.println("\t\t\t존재하지 않는 분실물 입니다.");
 				ViewAll.pause();
 			}
 			
-			System.out.println("다시 삭제하려면 아무키나 입력");
-			System.out.println("뒤로 가시려면 엔터");
-			System.out.printf("입력: ");
+			System.out.println("\t\t\t다시 삭제하려면 아무키나 입력");
+			System.out.println("\t\t\t뒤로 가시려면 엔터");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

@@ -17,16 +17,9 @@ public class EmployeeManagementTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             직원 관리          ");
-			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 전체 직원 정보보기");
-			System.out.println("           2. 직원 정보 수정");
-			System.out.println("           3. 안전요원관리");
-			System.out.println("           뒤로가기 엔터");
-			System.out.println("--------------------------------------");
-			System.out.print("선택 (번호): ");
+			System.out.println("\t\t\t" + LoginLogout.position + " " + LoginLogout.auth + "님");
+			ViewAll.employeeMain();
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 직원 정보 보기
@@ -40,7 +33,7 @@ public class EmployeeManagementTab {
 						EmployeeUpdateTab.employeeUpdate();
 					}else {
 						// View클래스 접근권한없는 화면 출력
-						System.out.println("접근 권한이 없습니다.");
+						System.out.println("\t\t\t접근 권한이 없습니다.");
 						ViewAll.pause();
 					}
 					
@@ -52,8 +45,8 @@ public class EmployeeManagementTab {
 				break;
 					
 			} else { // 이외의 숫자 입력 시
-					System.out.println("해당 섹션이 없습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					ViewAll.pause();
 			}
 			

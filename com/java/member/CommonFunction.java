@@ -1,9 +1,5 @@
 package com.java.member;
 
-import java.util.Scanner;
-
-import com.java.common.Data;
-import com.java.common.Validation;
 import com.java.station.timetable.StationTimeTab;
 import com.java.view.ViewAll;
 

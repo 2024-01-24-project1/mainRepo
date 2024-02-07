@@ -27,14 +27,14 @@ public class LogTab {
 				
 			}
 			
-			System.out.printf("날짜    : %s\n"
-					        + "아이디  : %s\n"
-					        + "행동로그: %s\n",log.getTime(),log.getId(),temp);
+			System.out.printf("\t\t\t날짜    : %s\n"
+					        + "\t\t\t아이디  : %s\n"
+					        + "\t\t\t행동로그: %s\n",log.getTime(),log.getId(),temp);
 			System.out.println();
 		}
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("계속하려면 엔터를 입력하세요.");
+		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
 		scan.nextLine();
 		
 		

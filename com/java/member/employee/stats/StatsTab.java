@@ -28,10 +28,10 @@ public class StatsTab {
 			System.out.println("\t\t\t 1. 혼잡도 통계");
 			System.out.println("\t\t\t 2. 이용객 통계");
 			System.out.println("\t\t\t 3. 매출 통계");
-			System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+			System.out.println("\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 			System.out.println();
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-			System.out.print("선택 (번호): ");
+			System.out.print("\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
@@ -61,7 +61,7 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("\t\t전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
+		System.out.println("\t전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
@@ -70,7 +70,7 @@ public class StatsTab {
 			
 			while(true) {
 				System.out.println("\t\t\t보고싶은 호선을 입력해주세요");
-				System.out.println("\t\t\t입력(N호선): ");
+				System.out.print("\t\t\t  입력(N호선): ");
 				sel = scan.nextLine();
 
 				if(Validation.is_Line(sel)) {
@@ -124,7 +124,7 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("\t\t전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
+		System.out.println("\t\t  전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
@@ -132,7 +132,7 @@ public class StatsTab {
 		}else if (sel.equals("2")) {
 			while(true) {
 				System.out.println("\t\t\t보고싶은 호선을 입력해주세요");
-				System.out.println("\t\t\t입력(N호선): ");
+				System.out.print("\t\t\t입력(N호선): ");
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {

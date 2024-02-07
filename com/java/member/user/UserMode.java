@@ -6,7 +6,6 @@ import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.common.MyPage;
 import com.java.member.CommonFunction;
-import com.java.station.management.FindWayTab;
 import com.java.view.View;
 
 public final class UserMode extends CommonFunction{

@@ -7,6 +7,8 @@ import java.util.Calendar;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
+import com.java.station.StationNamePage;
+import com.java.station.management.StationManagement;
 import com.java.view.View;
 import com.java.view.ViewAll;
 
@@ -70,6 +72,8 @@ public class MyPageBookMark extends BookMarkRoute{
 
 							System.out.print("호선: ");
 							line = reader.readLine();
+							
+							StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
 							System.out.print("시작역: ");
 							start = reader.readLine(); 

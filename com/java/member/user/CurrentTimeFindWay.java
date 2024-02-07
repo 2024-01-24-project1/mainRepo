@@ -5,7 +5,9 @@ import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import com.java.common.Validation;
+import com.java.station.StationNamePage;
 import com.java.station.management.FindWay;
+import com.java.station.management.StationManagement;
 import com.java.view.View;
 import com.java.view.ViewAll;
 
@@ -37,6 +39,9 @@ public class CurrentTimeFindWay extends FindWay {
 				}
 
 				ViewAll.roadSearchRouteTop();
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
+				
+				
 				System.out.print("출발역: ");
 				start = reader.readLine();
 				

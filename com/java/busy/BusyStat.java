@@ -32,7 +32,7 @@ public class BusyStat extends StationManagement{
 		try {
 			
 			boolean check = false;
-			String lines = "";
+			String line = "";
 			String way = "";
 			String dayOfWeek = "";
 			String time = "";
@@ -45,16 +45,19 @@ public class BusyStat extends StationManagement{
 				
 				ViewAll.statisticsChaosOne();
 				System.out.print("호선: ");
-				lines = reader.readLine(); 
+				line = reader.readLine(); 
 				
-				ViewAll.statisticsChaosTwo();
-				if(lines.equals("2") || lines.equals("2호선")) {
-					
-					System.out.print("방향(내선/외선): ");
+				if(line.contains("호선")) {
+					line = line.replace("호선", "" );
+				}
+				
+				if(line.equals("2")) {
+					ViewAll.statisticsChaosTwoLine2();
+					System.out.print("방향: ");
 					
 				}else {
-					
-					System.out.print("방향(상행/하행): ");
+					ViewAll.statisticsChaosTwo();
+					System.out.print("방향: ");
 				}
 				way = reader.readLine();
 				
@@ -67,7 +70,7 @@ public class BusyStat extends StationManagement{
 				System.out.print("시간: ");
 				time = reader.readLine();
 				
-				check = Validation.is_busyStat(lines,way,dayOfWeek,time);
+				check = Validation.is_busyStat(line,way,dayOfWeek,time);
 				
 				if(check) {
 					
@@ -82,8 +85,8 @@ public class BusyStat extends StationManagement{
 			}
 			
 			
-			this.route = lineRoute(lines);
-			printBusy(BusyManagement.searchBusy(lines, way, dayOfWeek,this.route),lines,way,dayOfWeek,time);
+			this.route = lineRoute(line);
+			printBusy(BusyManagement.searchBusy(line, way, dayOfWeek,this.route),line,way,dayOfWeek,time);
 			
 			View.pause();
 			

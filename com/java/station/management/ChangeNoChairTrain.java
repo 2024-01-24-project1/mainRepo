@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import com.java.busy.BusyManagement;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.station.StationNamePage;
 import com.java.view.ViewAll;
 
 public class ChangeNoChairTrain extends StationManagement{
@@ -46,6 +47,8 @@ public class ChangeNoChairTrain extends StationManagement{
 				if(line.contains("호선")) {
 					line = line.replace("호선", "");
 				}
+				
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
 				ViewAll.trainAddThree();
 				System.out.print("시작역: ");

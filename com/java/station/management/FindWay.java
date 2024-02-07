@@ -337,13 +337,12 @@ public class FindWay extends StationManagement {
 		
 		for(int i=0; i<stationManagement.route.size(); i++) {
 			
-			if(i==stationManagement.route.size()-1) {
-				
-				System.out.print(stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]");
-				break;
+			System.out.print("->"+stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]");
+			
+			if((i+2)%5==0) {
+				System.out.println();
 			}
 			
-			System.out.print(stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]"+"-");
 			
 			
 		}

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class ScheduleSearch {
@@ -45,6 +46,7 @@ public class ScheduleSearch {
 				sel = scan.nextLine();
 				
 				if(sel.equals("")) {
+					LogSave.logSave(LogSave.SCHEDULEPAGE);
 					break;
 				}else if (Validation.is_NumString(sel)) {
 					index = Integer.parseInt(sel) - 1;

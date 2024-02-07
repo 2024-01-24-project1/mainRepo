@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class ScheduleTab {
@@ -81,6 +82,7 @@ public class ScheduleTab {
 				//일정리스트 정렬
 				Collections.sort(Data.scheduleList, Schedule.timeComparator);
 				
+				LogSave.logSave(LogSave.ADDSCHEDULE);
 				System.out.println("스케줄이 추가되었습니다.");
 				
 				// 일정추가 종료
@@ -137,6 +139,7 @@ public class ScheduleTab {
 							&& schedule.getStation().equals(station)) {
 						
 						Data.scheduleList.remove(schedule);
+						LogSave.logSave(LogSave.REMOVESCHEDULE);
 						System.out.println("스케줄이 삭제되었습니다.");
 						break;	// schedule객체 탐색 종료
 					}

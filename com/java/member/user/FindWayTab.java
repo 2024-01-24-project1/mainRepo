@@ -1,9 +1,9 @@
-package com.java.station.management;
+package com.java.member.user;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import com.java.member.user.BookMarkRoute;
+import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
 public class FindWayTab {

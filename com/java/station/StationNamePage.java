@@ -12,6 +12,10 @@ public class StationNamePage {
 
         int currentPage = 0; // 현재 페이지 번호
         Scanner scanner = new Scanner(System.in);
+        
+        if(!line.endsWith("선")) {
+        	line+="호선";
+        }
 
         while (true) {
             System.out.println("======================================================");

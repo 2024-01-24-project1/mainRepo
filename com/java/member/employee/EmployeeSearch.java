@@ -32,7 +32,7 @@ public class EmployeeSearch {
 
 			ArrayList<Employee> searchlist = new ArrayList<>();
 			ViewAll.employeeSearchNameResult();
-			System.out.println("(특정 호선(숫자만), 이름, 직원이름)");
+			System.out.println("(특정 호선(숫자만), ID, 직원이름)");
 			System.out.print("찾기: ");
 			search = scan.nextLine();
 

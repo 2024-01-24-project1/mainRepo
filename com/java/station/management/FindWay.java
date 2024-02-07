@@ -11,10 +11,12 @@ import com.java.busy.Busy;
 import com.java.busy.BusyManagement;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
+import com.java.common.Validation;
 import com.java.member.user.AnotherDateFindWay;
 import com.java.member.user.BookMark;
 import com.java.member.user.CurrentTimeFindWay;
 import com.java.requiredtime.RequiredTime;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class FindWay extends StationManagement {
@@ -40,7 +42,7 @@ public class FindWay extends StationManagement {
 			while(true) {
 				ViewAll.roadSearchRouteBottom();
 				
-				System.out.print("\t\t\t입력: ");
+				System.out.print("입력: ");
 				String sel = reader.readLine();
 
 				if(sel.equals("1")) { //현재시간
@@ -133,6 +135,8 @@ public class FindWay extends StationManagement {
 
 			if(stationManagement.route.contains(b.getStation())) {
 				
+				System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
+				System.out.println(calendar.get(Calendar.HOUR_OF_DAY)-5);
 				stationManagement.specificHourBusy.add(b.getCrowded().get((calendar.get(Calendar.HOUR_OF_DAY)-5)));
 
 			}
@@ -333,30 +337,30 @@ public class FindWay extends StationManagement {
 	
 	//현재 시간 길찾기 출력 > 출력메서드 
 	private void printWay(int minute, String departureTime) {
-		System.out.println();
 		
 		for(int i=0; i<stationManagement.route.size(); i++) {
 			
-			System.out.print("->"+stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]");
-			
-			if((i+2)%5==0) {
-				System.out.println();
+			if(i==stationManagement.route.size()-1) {
+				
+				System.out.print(stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]");
+				break;
 			}
 			
+			System.out.print(stationManagement.route.get(i)+"["+stationManagement.convertBusy.get(i)+"]"+"-");
 			
 			
 		}
 		System.out.println();
 		
 		
-		System.out.printf("\t\t\t총 소요시간: %d분\n",minute);
+		System.out.printf("총 소요시간: %d분\n",minute);
 		
 		String[] temp = departureTime.split(":");
 		
 		int departureHour = Integer.parseInt(temp[0]);
 		int departureMinute = Integer.parseInt(temp[1]);
 		
-		System.out.printf("\t\t\t%s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);
+		System.out.printf("%s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);
 		
 		if((departureMinute+minute)>=60) {
 			minute = (departureMinute+minute) % 60;
@@ -371,8 +375,7 @@ public class FindWay extends StationManagement {
 		if(departureHour>=24) {
 			departureHour = departureHour % 24;
 		}
-		System.out.printf("\t\t\t도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
-		System.out.println();
+		System.out.printf("도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
 		
 		
 		

@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
-import com.java.view.ViewAll;
 
 public class StationTimePage {
 
@@ -130,11 +129,11 @@ public class StationTimePage {
 			}
 
 			// View클래스 출력
-			ViewAll.trainTimeTable();
-	System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-			System.out.printf("                 \t\t%-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
-			System.out.printf("     \t\t%-10s\t\t%-10s\r\n", up.get(0), down.get(0));
-	System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+			System.out.println("==============================================================================================");
+			//System.out.printf("              %-3s %-15s역 %-2s %-13s\r\n", line, stationName, weekOf);
+			System.out.printf("                %-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
+			System.out.printf("             %-10s\t\t\t%-10s\r\n", up.get(0), down.get(0));
+			System.out.println("==============================================================================================");
 			
 			for(int i = 0; i < 4; i++) {
 				
@@ -144,21 +143,21 @@ public class StationTimePage {
 				for(int j = startIndexLeft; j < startIndexLeft + 5; j++) {
 					
 					if(leftSide[j] == null) {
-						System.out.print("      ");
+						System.out.print("    ");
 					}else {
-						System.out.printf("%-6s", leftSide[j]);
+						System.out.printf("%-4s", leftSide[j]);
 					}
 					System.out.print(" ");
 				}
 				
-				System.out.print("|  ");
+				System.out.print("|");
 				
 				for(int k = startIndexRight; k < startIndexRight + 5; k++) {
 				
 					if(rightSide[k] == null) {
 						System.out.print("    ");
 					}else {
-						System.out.printf("%-6s ", rightSide[k]);
+						System.out.printf("%-4s", rightSide[k]);
 					}
 					System.out.print(" ");
 				}
@@ -167,9 +166,9 @@ public class StationTimePage {
 			}
 			
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.println("\t\t입력한 시간으로부터 1시간 사이의 시간표가 출력됩니다.");
-			System.out.print("\t\t엔터입력시 시간표 보기 종료");
-			System.out.print(" 원하는 시간: ");
+			System.out.println("입력한 시간으로부터 1시간 사이의 시간표가 출력됩니다.");
+			System.out.print("엔터입력시 시간표 보기 종료");
+			System.out.print("원하는 시간: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -177,13 +176,11 @@ public class StationTimePage {
 			}else if ( Validation.is_OperationTime(sel)) {
 				set = sel;
 			}else if ( Validation.is_NumString(sel) && !Validation.is_OperationTime(sel)) {
-				ViewAll.errorFailEmo();
-				System.out.println("\t\t\t입력하신 시간은 열차가 운행하지 않는 시간입니다.");
+				System.out.println("입력하신 시간은 열차가 운행하지 않는 시간입니다.");
 			}
 			else {
-				ViewAll.errorFailEmo();
-				System.out.println("\t\t\t잘못된 입력입니다.");
-				System.out.println("\t\t\t다시 입력해주세요.");
+				System.out.println("잘못된 입력입니다.");
+				System.out.println("다시 입력해주세요.");
 			}
 			
 		}//while루프 종료

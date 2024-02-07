@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.java.common.Validation;
-import com.java.member.employee.log.LogSave;
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public class ScheduleSearch {
 
@@ -29,7 +28,9 @@ public class ScheduleSearch {
 				String sel = "";	// 입력받는 문자열
 				
 				// View클래스 출력
-				ViewAll.calList();
+				System.out.println("======================================================");
+				System.out.println("                  스케줄");
+				System.out.println("======================================================");
 				
 				list.stream().skip(index * 10)
 				 							 .limit(10)
@@ -38,29 +39,28 @@ public class ScheduleSearch {
 						 													, schedule.getStation() + "역"
 						 													, schedule.getSchedule()));
 				// 이름, ID, 전화번호, 직급, 호선, 역이름
-				System.out.printf("\t\tPage| %s / %s\r\n", index + 1, page);
-				System.out.print("\t\t\t페이지모드를 종료하시려면 엔터입력");
-				System.out.print("\t\t\t원하는 페이지: ");
+				System.out.printf("Page| %s / %s\r\n", index + 1, page);
+				System.out.print("페이지모드를 종료하시려면 엔터입력");
+				System.out.print("원하는 페이지: ");
 				sel = scan.nextLine();
 				
-				if(sel.equals("")) { //페이지 종료
-					LogSave.logSave(LogSave.SCHEDULEPAGE);
+				if(sel.equals("")) {
 					break;
 				}else if (Validation.is_NumString(sel)) {
 					index = Integer.parseInt(sel) - 1;
 					
 					if(index < 0 || index >= page) {
-						System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
-						System.out.println("\t\t\t다시 입력해주세요.");
+						System.out.println("페이지 범위를 벗어났습니다.");
+						System.out.println("다시 입력해주세요.");
 						index = 0;
-						ViewAll.pause();
+						View.pause();
 						
 					}
 					
 				}else {
-					System.out.println("\t\t\t잘못된 입력입니다.");
-					System.out.println("\t\t\t다시 입력해주세요.");
-					ViewAll.pause();
+					System.out.println("잘못된 입력입니다.");
+					System.out.println("다시 입력해주세요.");
+					View.pause();
 				}
 				
 			}//while루프 종료

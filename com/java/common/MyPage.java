@@ -5,8 +5,7 @@ import java.util.Scanner;
 import com.java.member.employee.Employee;
 import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
-
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public class MyPage {
 	
@@ -17,55 +16,48 @@ public class MyPage {
 			String sel = "";
 			
 			Scanner scan = new Scanner(System.in);
-			
-			
-			ViewAll.userMyPage();
-			System.out.printf("\t\t이름: %s 아이디: %s 전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
-			
+		
+			System.out.printf("이름: %s\n아이디: %s\n전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
 			
 			if(mode.equals("1")) {
 				
 				// 유저만 가지는 정보 출력
-				System.out.printf("\t\t정기권: %s  ", LoginLogout.pass);
+				System.out.printf("정기권: %s\n", LoginLogout.pass);
 				
 				// 정기권이 있으면 유효기간 출력 없으면 출력하지않음
 				if(LoginLogout.pass.equals("있음")) {
-					System.out.printf("\t\t\t정기권 유효기간: %s\n", LoginLogout.passExpiry);
+					System.out.printf("정기권 유효기간: %s\n", LoginLogout.passExpiry);
 				}
 				
 			}else if (mode.equals("2")) {
 				
 				// 직원만 가지는 정보 출력
-				System.out.printf("\t\t\t직급: %s  ", LoginLogout.position);
-				System.out.printf("\t\t권한: LEVEL%s\n", LoginLogout.level);
+				System.out.printf("직급: %s\n", LoginLogout.position);
+				System.out.printf("권한: LEVEL%s\n", LoginLogout.level);
 				Data.employeeList.stream().filter(employee -> employee.getId().equals(LoginLogout.auth))
 																	  .forEach(employee -> System.out.printf("",
-																			 employee.getStation() + "역"));
+																			  employee.getLine() + "호선"
+																			 ,employee.getStation() + "역"));
 			}
 			
 			System.out.println();
-			System.out.println("\t\t\t         0. 회원탈퇴");
-			System.out.println("\t\t\t         1. 비밀번호 변경");
-			System.out.println("\t\t\t         2. 전화번호 변경");
-			
+			System.out.println("1. 비밀번호 변경");
+			System.out.println("2. 전화번호 변경");
+			System.out.println("3. 회원탈퇴");
 			if(mode.equals("1")) {
-			
-			System.out.println("\t\t\t         3. 북마크");
-			
+				System.out.println("4. 즐겨찾기 목록");
 			}
-
-			System.out.println("\t\t\t\t엔터입력시 뒤로가기");
-			ViewAll.chooseNum();
+			System.out.println("엔터입력시 뒤로가기");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
-			
-			if(sel.equals("0")) { // 3. 회원탈퇴
-				myPageRemoveID();
-			} else if(sel.equals("1")) { // 1. 비밀번호 변경
+			if(sel.equals("1")) {
 				myPageChangePW();
-			} else if(sel.equals("2")) { // 2. 전화번호 변경 
+			} else if(sel.equals("2")) {
 				myPageChangePhone();
-			} else if(sel.equals("3") && mode.equals("1")) { // 북마크
+			} else if(sel.equals("3")) {
+				myPageRemoveID();
+			} else if(sel.equals("4") && mode.equals("1")) {
 				MyPageBookMark myPageBookMark = new MyPageBookMark();
 				myPageBookMark.myPageBookMarkSelMenu();
 			} else if(sel.equals("")) {
@@ -74,8 +66,9 @@ public class MyPage {
 				break;
 			}else {
 				//다시입력
-				ViewAll.errorFailEmo();
-				ViewAll.pause();
+				System.out.println();
+				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			if(LoginLogout.getOut) {
@@ -115,8 +108,8 @@ public class MyPage {
 												, user.getPhone()
 												, user.getPassCheck()
 												, user.getPassExpiry()));
-			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
-			System.out.print("\t\t\tyes만 삭제: ");
+			System.out.println("해당 계정을 삭제하시겠습니까?");
+			System.out.println("yes만 삭제: ");
 			
 			String input = scan.nextLine();
 			
@@ -127,7 +120,7 @@ public class MyPage {
 					if(user.getId().equals(DELETE)) {
 						Data.userList.remove(user);
 						
-						System.out.println("\t\t\t" + DELETE + "계정 삭제완료");
+						System.out.println(DELETE + "계정 삭제완료");
 						
 						LoginLogout.getOut = true;	// 메인화면으로 쫒아내기
 						break;
@@ -136,7 +129,7 @@ public class MyPage {
 				}
 				
 			}else {
-				System.out.println("\t\t\t계정삭제 취소");
+				System.out.println("계정삭제 취소");
 			}
 			
 			
@@ -154,8 +147,8 @@ public class MyPage {
 												, employee.getStation()
 												, employee.getLevel()));
 			
-			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
-			System.out.println("\t\t\tyes만 삭제: ");
+			System.out.println("해당 계정을 삭제하시겠습니까?");
+			System.out.println("yes만 삭제: ");
 			String input = scan.nextLine();
 			
 			if(input.equals("yes")) {
@@ -164,7 +157,7 @@ public class MyPage {
 					
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
-						System.out.println("\t\t\t" + DELETE + "계정 삭제완료");
+						System.out.println(DELETE + "계정 삭제완료");
 						
 						LoginLogout.getOut = true;	// 메인화면으로 쫒아내기
 						
@@ -175,13 +168,13 @@ public class MyPage {
 				
 				
 			}else if (employeeCheck && Validation.is_Sudo(DELETE)) {
-				System.out.println("\t\t\t최고권한 계정은 회원탈퇴가 불가능합니다.");
+				System.out.println("최고권한 계정은 회원탈퇴가 불가능합니다.");
 			}
 			else {
-				System.out.println("\t\t\t계정삭제 취소");
+				System.out.println("계정삭제 취소");
 			}
 			
-			ViewAll.pause();
+			View.pause();
 		}
 		
 	}//End of myPageRemoveID()
@@ -194,7 +187,7 @@ public class MyPage {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		ViewAll.phoneNumChange();
+		View.title("전화번호 변경");
 		
 		String id = LoginLogout.auth;
 		String name = LoginLogout.authName;
@@ -208,13 +201,13 @@ public class MyPage {
 		checkEmployee = Data.employeeList.stream().anyMatch(employee -> employee.getName().equals(name) 
 																	&& employee.getId().equals(id));
 		
-		System.out.print("\t\t\t변경할 전화번호: ");
+		System.out.print("변경할 전화번호: ");
 		
 		String chPhone = scan.nextLine(); //변경할 전화번호 입력
 		
 		// 전화번호 형식이면 010-XXXX-XXXX형식으로 변환
 		if(Validation.is_PhoneFormat(chPhone)) {
-			chPhone = SignUp.formatPhoneNumber(chPhone);
+			SignUp.formatPhoneNumber(chPhone);
 		}
 		
 		// 유효성 검사
@@ -252,12 +245,13 @@ public class MyPage {
 				
 			}
 		
-		System.out.println("\t\t\t변경이 완료되었습니다.");
+		System.out.println("변경이 완료되었습니다.");
 		
 		}else {
-			ViewAll.phoneNumberFormatError();
+			
+			System.out.println("형식에 맞지않거나 이미 존재하는 전화번호입니다.");
 		}
-		ViewAll.pause();
+		View.pause();
 		
 	}// end of myPageChangeNum
 
@@ -267,7 +261,7 @@ public class MyPage {
 		boolean checkUser = false;		// 고객
 		boolean checkEmployee = false;	// 직원
 			
-		ViewAll.pwChange();
+		View.title("PW 변경");
 
 
 		// 고객 계정인지 직원계정인지 검사
@@ -277,7 +271,7 @@ public class MyPage {
 		checkEmployee = Data.employeeList.stream().anyMatch(employee -> employee.getName().equals(LoginLogout.authName) 
 																	 && employee.getId().equals(LoginLogout.auth));
 									  
-		System.out.print("\t\t\t변경할 비밀번호: ");
+		System.out.println("변경할 비밀번호: ");
 		
 		Scanner scan = new Scanner(System.in);
 		String chPw = scan.nextLine(); //변경할 PW 입력
@@ -317,13 +311,15 @@ public class MyPage {
 				}
 				
 			}
-			ViewAll.successVEmo();
+			
+			System.out.println("변경이 완료되었습니다.");
 			
 		}else {
-			ViewAll.pwFormatError();
+			System.out.println("비밀번호의 형식이 올바르지 않습니다");
+			System.out.println("비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)");
 		}
 		
-		ViewAll.pause();
+		View.pause();
 		
 	} // end of myPageFindPW()
 

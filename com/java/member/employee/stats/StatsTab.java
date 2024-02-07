@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 import com.java.busy.BusyStat;
 import com.java.common.Validation;
-import com.java.member.employee.log.LogSave;
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public class StatsTab {
 	
 	final static long ALLSALES = 13000000000L;
 	
-	final static long ALLPASSENGER = 12000000L;
+	final static long ALLPASSENGER = 10000000L;
 	
 	
 	
@@ -23,8 +22,13 @@ public class StatsTab {
 			String sel = ""; // 선택한 번호
 			
 			
-			ViewAll.statisticsMain();
-			ViewAll.chooseNum();
+			System.out.println("=======================================");
+			System.out.println(" 1. 혼잡도 통계");
+			System.out.println(" 2. 이용객 통계");
+			System.out.println(" 3. 매출 통계");
+			System.out.println(" 뒤로가기 엔터");
+			System.out.println("--------------------------------------");
+			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
@@ -39,10 +43,9 @@ public class StatsTab {
 				// 혼잡도 통계 종료
 				break;
 			}else { // 이외의 숫자 입력 시
-				 ViewAll.errorFailEmo();
-				System.out.println("\t\t\t해당 섹션이 없습니다.");
-				System.out.println("\t\t\t다시 입력해주세요.");
-				ViewAll.pause();
+				System.out.println("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
+				View.pause();
 			}
 			
 		}//while루프 종료
@@ -55,23 +58,17 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		ViewAll.statisticsUserMain();
-		ViewAll.chooseNum();
-		
+		System.out.println("전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
-		
-		if(sel.equals("1") || sel.equals("2")) LogSave.logSave(LogSave.USERSTATSTAB);
-		
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allPassenger(), ALLPASSENGER);
 		}else if (sel.equals("2")) {	// 2. 특정 호선 통계
 			
 			while(true) {
-				ViewAll.statisticsLineTotalUser();
-				System.out.print("\t\t\t\t호선: ");
+				System.out.println("보고싶은 호선을 입력해주세요");
+				System.out.println("입력(N호선): ");
 				sel = scan.nextLine();
-				
 
 				if(Validation.is_Line(sel)) {
 					
@@ -100,11 +97,11 @@ public class StatsTab {
 					}
 					
 				}else {
-					System.out.println("\t\t\t잘못된 입력");
+					System.out.println("잘못된 입력");
 				}
 				
-				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("\t\t\t뒤로가려면 엔터");
+				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("뒤로가려면 엔터");
 				
 				if(sel.equals("")) {
 					
@@ -124,18 +121,15 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		ViewAll.statisticsMoneyMain();
-		ViewAll.chooseNum();
+		System.out.println("전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
-		
-		if(sel.equals("1") || (sel.equals("2"))) LogSave.logSave(LogSave.SALESSTATSTAB);
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);
 		}else if (sel.equals("2")) {
 			while(true) {
-				ViewAll.statisticsLineTotalUser();
-				System.out.print("\t\t\t\t호선: ");
+				System.out.println("보고싶은 호선을 입력해주세요");
+				System.out.println("입력(N호선): ");
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
@@ -145,7 +139,7 @@ public class StatsTab {
 			
 					
 					switch (line) {
-					case 1: Graph.drawGraph(Stats.lineSales(sel), 600000000L);
+					case 1: Graph.drawGraph(Stats.lineSales(sel), 2550000000L);
 							break;
 					case 2: Graph.drawGraph(Stats.lineSales(sel), 3200000000L);
 						    break;
@@ -161,18 +155,17 @@ public class StatsTab {
 							break;
 					case 8: Graph.drawGraph(Stats.lineSales(sel), 440000000L);
 							break;
-					case 9: Graph.drawGraph(Stats.lineSales(sel), 600000000L);
+					case 9: Graph.drawGraph(Stats.lineSales(sel), 870000000L);
 							break;
 						
 					}
 					
 				}else {
-					System.out.println("\t\t\t잘못된 입력");
+					System.out.println("잘못된 입력");
 				}
 				
-				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("\t\t\t뒤로가려면 엔터");
-				sel = scan.nextLine();
+				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("뒤로가려면 엔터");
 				
 				if(sel.equals("")) {
 					

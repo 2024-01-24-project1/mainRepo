@@ -5,8 +5,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.station.timetable.StationTimeTab;
-
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public class CommonFunction {
 	
@@ -20,8 +19,8 @@ public class CommonFunction {
 	// 요금표 탭
 	public static void costsTableTab(){
 		
-		ViewAll.costTimeTable();
-		ViewAll.pause();
+		View.costTimeTable();
+		View.pause();
 		
 	}//End of CostsTableTab()
 	

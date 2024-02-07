@@ -11,7 +11,6 @@ import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.station.management.FindWay;
-
 import com.java.view.ViewAll;
 
 public class BookMarkRoute extends FindWay{
@@ -78,13 +77,13 @@ public class BookMarkRoute extends FindWay{
 			
 			while(true) {
 				
-				System.out.print("\t\t\t선택 할 노선: ");
+				System.out.print("선택 할 노선: ");
 				sel = reader.readLine();
 				index = Integer.parseInt(sel)-1;
 				if(index>=userBookMark.size()) {
 					
-					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
-					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
+					System.out.println("범위 내의 숫자만 입력하세요.");
+					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
 					
 				}else if(sel.equals("")) {
 					return;
@@ -106,7 +105,6 @@ public class BookMarkRoute extends FindWay{
 			
 			ViewAll.roadSearchFavoriteList();
 			this.findWay(temp[0],temp[1],temp[2],calendar);
-			ViewAll.pause();
 			
 		} catch (Exception e) {
 			System.out.println("BookMarkRoute.selectBookMark");
@@ -123,7 +121,7 @@ public class BookMarkRoute extends FindWay{
 			
 			String[] temp = route.split("-");
 			
-			System.out.printf("\t\t\t%d. %s -> %s\n", index++, temp[1],temp[2]);
+			System.out.printf("%d. %s -> %s\n", index++, temp[1],temp[2]);
 			
 		}
 	}

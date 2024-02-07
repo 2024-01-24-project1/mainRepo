@@ -1,15 +1,20 @@
 package com.java;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.java.common.Data;
 import com.java.common.Exit;
 import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
-
-import com.java.view.ViewAll;
+import com.java.common.Validation;
+import com.java.member.employee.stats.Graph;
+import com.java.member.employee.stats.Stats;
+import com.java.station.timetable.StationTime;
+import com.java.view.View;
 
 
 
@@ -28,9 +33,16 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		boolean loop= true;
 		
+		String t = "01029053433";
+		System.out.println(t);
+		
+		t = SignUp.formatPhoneNumber(t);
+		System.out.println(t.length());
+		System.out.println(t);
+		
 		while(loop) {
 			
-			ViewAll.realMain();
+			View.mainmenu();
 			String sel = ""; 
 			sel = sc.nextLine();
 			
@@ -59,8 +71,8 @@ public class Main {
 				
 				//다시입력
 				System.out.println();
-				System.out.printf("\t\t\t해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
-				ViewAll.pause();
+				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			
@@ -69,7 +81,7 @@ public class Main {
 		
 		//종료시 파일 덮어쓰기할 클래스
 		// View클래스에서 출력
-		System.out.println("\t\t\t프로그램을 종료합니다.");
+		System.out.println("프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
 		

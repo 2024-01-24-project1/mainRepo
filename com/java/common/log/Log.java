@@ -1,4 +1,4 @@
-package com.java.member.employee.log;
+package com.java.common.log;
 
 import java.util.ArrayList;
 

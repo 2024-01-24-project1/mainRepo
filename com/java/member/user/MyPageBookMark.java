@@ -2,14 +2,12 @@ package com.java.member.user;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.station.StationNamePage;
-import com.java.station.management.StationManagement;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class MyPageBookMark extends BookMarkRoute{
@@ -34,7 +32,7 @@ public class MyPageBookMark extends BookMarkRoute{
 			while(true) {
 				ViewAll.lineFavorite();
 
-				System.out.print("\t\t\t입력: ");
+				System.out.print("입력: ");
 				String sel = reader.readLine();
 
 
@@ -46,14 +44,14 @@ public class MyPageBookMark extends BookMarkRoute{
 
 						this.printMyBookMark(this.userBookMark);
 						this.selectBookMark(this.userBookMark);
-						ViewAll.pause();
+						View.pause();
 					}
 
 				}else if(sel.equals("2")) {// 즐겨찾기 편집
 
 					ViewAll.favoriteChange();
 
-					System.out.print("\t\t\t입력: ");
+					System.out.print("입력: ");
 					sel = reader.readLine();
 
 					if(sel.equals("1")) { // 즐겨찾기 등록
@@ -64,51 +62,40 @@ public class MyPageBookMark extends BookMarkRoute{
 						String start = "";
 						String end = "";
 						String time = "";
-						ArrayList<String> error = new ArrayList<>();
 
 
 						while(true) {
 
 							ViewAll.favoriteAdd();
 
-							System.out.print("\t\t\t호선: ");
+							System.out.print("호선: ");
 							line = reader.readLine();
-							
-							StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-							System.out.print("\t\t\t시작역: ");
+							System.out.print("시작역: ");
 							start = reader.readLine(); 
 
-							System.out.print("\t\t\t도착역: ");
+							System.out.print("도착역: ");
 							end = reader.readLine();
 
-							System.out.print("\t\t\t시간(5~24): ");
+							System.out.print("시간(5~24): ");
 							time = reader.readLine();
-							
-							if(time.endsWith("시")) {
-								time = time.substring(0,time.length()-1);
-							}
 
-							error = is_bookMark(line, start, end, time);
+							check = is_bookMark(line, start, end, time);
 
-							if(error.get(0).equals("오류없음")) {
+							if(check) {
 								break;
 							}
 							else {
-								
-								if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
-									return;                      //false 일 경우 뒤로가기
-								}
-								
+								System.out.println("잘못된 입력입니다. 다시 입력하세요.");
 							}
 						}
 
 						calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(time));
 
 						registerBookMark(line, start, end, calendar);
-						System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
+						System.out.println("즐겨찾기 등록을 완료했습니다.");
 
-						ViewAll.pause();
+						View.pause();
 
 					}else if(sel.equals("2")) { //즐겨찾기 삭제
 
@@ -121,7 +108,7 @@ public class MyPageBookMark extends BookMarkRoute{
 							deleteBookMark();
 							
 						}else {
-							ViewAll.pause();
+							View.pause();
 						}
 						
 
@@ -158,13 +145,13 @@ public class MyPageBookMark extends BookMarkRoute{
 			
 			while(true) {
 				
-				System.out.print("\t\t\t선택 할 노선: ");
+				System.out.print("선택 할 노선: ");
 				sel = reader.readLine();
 				index = Integer.parseInt(sel)-1;
 				if(index>=userBookMark.size()) {
 					
-					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
-					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
+					System.out.println("범위 내의 숫자만 입력하세요.");
+					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
 					
 				}else if(sel.equals("")) {
 					return;
@@ -181,8 +168,8 @@ public class MyPageBookMark extends BookMarkRoute{
 				if(b.getId().equals(LoginLogout.auth)) {
 					
 					b.getBookMarkList().remove(index);
-					System.out.println("\t\t\t즐겨찾기 삭제를 완료했습니다.");
-					ViewAll.pause();
+					System.out.println("즐겨찾기 삭제를 완료했습니다.");
+					View.pause();
 					
 				}
 				
@@ -198,48 +185,29 @@ public class MyPageBookMark extends BookMarkRoute{
 		
 	}
 	
-	public ArrayList<String> is_bookMark(String line, String startStation, String endStation, String time) {
+	public boolean is_bookMark(String line, String startStation, String endStation, String time) {
 		
-		ArrayList<String> error = new ArrayList<>();
-		
+		if(line.contains("호선")){
+			line = line.replace("호선", "");
+		}
 			
 		//호선 입력 확인 (1~9호선)
 		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 				&& !line.equals("8") && !line.equals("9")) {
-			error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
+			return false;
 		}
 		
 		
 
-		if(!lineRoute(line).contains(startStation) || !lineRoute(line).contains(endStation)) {
+		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
 			
-			error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));
+			return false;
 
 		}
-		
-		if(startStation.equals(endStation)) {
-			
-			error.add("시작역과 도착역이 같습니다.");
-			
-		}
-		try {
-			
-			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
-				
-				error.add("시간은 5~24사이값만 입력하세요.");
-			}
-			
-		} catch (Exception e) {
-			
-			error.add("시간 형식이 올바르지 않습니다");
 
-			
-		}
 		
-		error.add("오류없음");
-		
-		return error;
+		return true;
 		
 	}
 	

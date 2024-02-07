@@ -1,9 +1,9 @@
-package com.java.member.user;
+package com.java.station.management;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import com.java.station.management.FindWay;
+import com.java.member.user.BookMarkRoute;
 import com.java.view.ViewAll;
 
 public class FindWayTab {
@@ -19,7 +19,7 @@ public class FindWayTab {
 			while(true) {
 				
 				ViewAll.roadSearchMain();
-				System.out.print("\t\t\t입력:");
+				System.out.print("입력:");
 				String sel = reader.readLine();
 				
 				

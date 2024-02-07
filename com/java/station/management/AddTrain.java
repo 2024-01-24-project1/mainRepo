@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 import com.java.busy.BusyManagement;
 import com.java.common.Validation;
-import com.java.member.employee.log.LogSave;
-import com.java.station.StationNamePage;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 
@@ -36,7 +35,6 @@ public class AddTrain extends StationManagement {
 			String endStation = "";
 			String time = "";
 			String dayOfWeek = "";
-			ArrayList<String> error = new ArrayList<>();
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
@@ -44,54 +42,58 @@ public class AddTrain extends StationManagement {
 			while(loop) {
 				
 				ViewAll.trainAddOne();
-				System.out.print("\t\t\t호선          : ");
+				System.out.print("호선: ");
 				line = reader.readLine();
 				
 				if(line.contains("호선")){
 					line = line.replace("호선", "");
 				}
-				
-				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-			
-				ViewAll.trainAddOne();
-				System.out.print("\t\t\t시작역         : ");
+				ViewAll.trainAddTwo();
+				System.out.print("추가 열차수: ");        
+				trainNums = reader.readLine();
+				
+				ViewAll.trainAddThree();
+				System.out.print("시작역: ");
 				startStation = reader.readLine();
 				
 				if(startStation.endsWith("역")) {
 					startStation = startStation.substring(0,startStation.length()-1);
 				}
 				
-				System.out.print("\t\t\t종료역         : ");
+				ViewAll.trainAddFour();
+				System.out.print("종료역: ");
 				endStation = reader.readLine();
 				
 				if(endStation.endsWith("역")) {
 					endStation = endStation.substring(0,endStation.length()-1);
 				}
 				
-				System.out.print("\t\t\t추가 열차수    : ");        
-				trainNums = reader.readLine();
-				
-				System.out.print("\t\t\t시간대         : ");
+				ViewAll.trainAddFive();
+				System.out.print("시간대: ");
 				time = reader.readLine();
-				if(time.endsWith("시")) {
-					time = time.substring(0,time.length()-1);
-				}
-				System.out.print("\t\t\t요일(평일/주말): ");
+				
+				ViewAll.trainAddSix();
+				System.out.print("요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {
 					dayOfWeek = "토요일";
 				}
 				
-				error = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
+				check = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
 				
-				if(error.get(0).equals("오류없음")) {
+				if(check) {
 					loop = false;
 				}else {
 					
-					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
-						return;                      //false 일 경우 뒤로가기
+					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					
+					String input = reader.readLine();
+					if(input.equals("")) {
+						return;
 					}
 					
 				}
@@ -162,7 +164,8 @@ public class AddTrain extends StationManagement {
 			
 			
 			LogSave.logSave(LogSave.ADDTRAIN);
-			ViewAll.pause();
+			System.out.print("계속 하려면 엔터를 입력하세요.");
+			reader.readLine();
 			
 			
 		} catch (Exception e) {

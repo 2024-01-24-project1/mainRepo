@@ -6,8 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.member.user.UserVoice;
-
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public class UserVoiceSearch {
 	
@@ -21,11 +20,10 @@ public class UserVoiceSearch {
 			String id = "";
 			String title = "";
 			
-			ViewAll.vocListTop();
 			userVoicePage(Data.userVoiceList);
-			System.out.println("\t\t\t뒤로가기 엔터");
-			System.out.println("\t\t민원의 내용을 보시려면 아무키나 입력");
-			System.out.print("\t\t\t입력: ");
+			System.out.println("뒤로가기 엔터");
+			System.out.println("민원의 내용을 보시려면 아무키나 입력");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -33,7 +31,9 @@ public class UserVoiceSearch {
 				// 모든민원보기 종료
 				break;
 			}
-			ViewAll.vocListBottom();
+			
+			System.out.println("아이디와 제목을 정확히 입력하시면");
+			System.out.println("민원의 내용을 확인합니다.");
 			System.out.print("아이디: ");
 			id = scan.nextLine();
 			System.out.print("제목: ");
@@ -50,7 +50,7 @@ public class UserVoiceSearch {
 						
 						// 민원의 내용 출력
 						System.out.println(voice.getContent());
-						ViewAll.pause();
+						View.pause();
 						
 						break; // 민원객체 탐색 종료
 					}
@@ -60,7 +60,7 @@ public class UserVoiceSearch {
 			}else {
 				System.out.println("잘못된 제목");
 				System.out.println("다시 입력하세요.");
-				ViewAll.pause();
+				View.pause();
 			}
 			
 			
@@ -81,7 +81,9 @@ public class UserVoiceSearch {
 			String sel = "";	// 입력받는 문자열
 			
 			// View클래스 출력
-			ViewAll.vocListTop();
+			System.out.println("======================================================");
+			System.out.println("                  민원 리스트");
+			System.out.println("======================================================");
 			
 			list.stream().skip(index * 10)
 			 							 .limit(10)

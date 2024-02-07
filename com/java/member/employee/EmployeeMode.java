@@ -5,14 +5,13 @@ import java.util.Scanner;
 import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.common.MyPage;
+import com.java.common.log.LogTab;
 import com.java.member.CommonFunction;
-import com.java.member.employee.log.LogTab;
 import com.java.member.employee.stats.StatsTab;
 import com.java.schedule.ScheduleTab;
 import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
-
-import com.java.view.ViewAll;
+import com.java.view.View;
 
 public final class EmployeeMode extends CommonFunction{
 
@@ -25,14 +24,29 @@ public final class EmployeeMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 		
 			//View클래스 출력
-			ViewAll.adminMainView();
-			ViewAll.chooseNum();
+			System.out.println("=======================================");
+			System.out.printf("             SEOUL METRO          ");
+			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
+			System.out.println("=======================================");
+			System.out.println("           1. 역 관리");
+			System.out.println("           2. 직원 관리");
+			System.out.println("           3. 민원");
+			System.out.println("           4. 행사 캘린더");
+			System.out.println("           5. 통계 정보");
+			System.out.println("           6. 요금표");
+			System.out.println("           7. 열차 시간표");
+			System.out.println("           8. 행동로그 보기");
+			System.out.println("           9. 마이페이지");
+			System.out.println("          10. 로그아웃");
+			System.out.println("           0. 종료");
+			System.out.println("--------------------------------------");
+			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("0")) {
 				
 				// 종료
-				System.out.println("\t\t\t프로그램을 종료합니다.");
+				System.out.println("프로그램을 종료합니다.");
 				Exit exit = new Exit();
 				exit.writeAll();
 				
@@ -40,18 +54,37 @@ public final class EmployeeMode extends CommonFunction{
 				
 				
 			} else if (sel.equals("1")) {	// 1. 역관리
-				StationManagementTab.stationManagementTab();
+				
+				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
+				
+					// 역관리
+					System.out.println("1. 열차 추가, 2.의자없는 열차 배치");
+					sel = scan.nextLine();
+					
+					if(sel.equals("1")) {
+						AddTrain addTrain = new AddTrain();
+						addTrain.addTrain();
+					}else if (sel.equals("2")) {
+						ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
+						changeNoChairTrain.changeNoChairTrain();
+					}
+					
+				}else {
+					System.out.println("접근 권한이 없습니다.");
+				}
+
+				
 			} else if (sel.equals("2")) {	// 2 직원관리
 				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
-				else ViewAll.rankError();
-			} else if (sel.equals("3")) {	// 3. 고객의 소리
+				else System.out.println("접근 권한이 없습니다.");
+			} else if (sel.equals("3")) {	// 3. 민원
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 					
 					UserVoiceManagemnetTab.userVoiceManagementTab();
 					
 				}else {
-					ViewAll.rankError();
+					System.out.println("접근 권한이 없습니다.");
 				}
 				
 				
@@ -62,7 +95,7 @@ public final class EmployeeMode extends CommonFunction{
 					ScheduleTab.scheduleTab();
 				
 				}else {
-					ViewAll.rankError();
+					System.out.println("접근 권한이 없습니다.");
 				}
 				
 			} else if (sel.equals("5")) {	// 5. 통계정보
@@ -78,7 +111,7 @@ public final class EmployeeMode extends CommonFunction{
 					LogTab.printLog();
 				
 				}else {
-					ViewAll.rankError();
+					System.out.println("접근 권한이 없습니다.");
 				}
 				
 			} else if (sel.equals("9")) {
@@ -91,15 +124,15 @@ public final class EmployeeMode extends CommonFunction{
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("\t\t\t해당 섹션이 없습니다.");
-				System.out.println("\t\t\t다시 입력해주세요.");
-				ViewAll.pause();
+				System.out.println("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
+				View.pause();
 			}
 		
 			if(LoginLogout.getOut) {
 				// 회원 탈퇴시 메인으로 보내기
 				LoginLogout.getOut = false;
-				System.out.println("\t\t\t지금까지 이용해주셔서 감사합니다.");
+				System.out.println("지금까지 이용해주셔서 감사합니다.");
 				LoginLogout.logout();
 				break;
 			}

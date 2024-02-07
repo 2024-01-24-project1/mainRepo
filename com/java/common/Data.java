@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.java.busy.Busy;
+import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
-import com.java.member.employee.log.Log;
 import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
@@ -73,7 +73,7 @@ public final class Data {
 	public static ArrayList<Busy> busyList = new ArrayList<>();
 	
 	// 직원 가입 코드
-	public final static String EMPLOYEECODE = "SEOULMETRO";	// 예시
+	public final static String EMPLOYEECODE = "DAVSGDVASDASDFR35351";	// 예시
 	
 	
 }//End of class

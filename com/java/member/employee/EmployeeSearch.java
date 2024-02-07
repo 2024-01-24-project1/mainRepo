@@ -80,7 +80,7 @@ public class EmployeeSearch {
 	public static void employeePage(ArrayList<Employee> list) {
 		// 리스트의 페이지수 계산
 		
-		if(list.size()==0) return;
+//		if(list.size()==0) return;
 		
 		int page = (int)(Math.ceil((double)list.size() / 10));
 

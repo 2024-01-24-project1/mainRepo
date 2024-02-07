@@ -54,7 +54,7 @@ public class AddTrain extends StationManagement {
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
 			
-				
+				ViewAll.trainAddOne();
 				System.out.print("\t\t\t시작역         : ");
 				startStation = reader.readLine();
 				

@@ -74,7 +74,7 @@ public class StationManagement {
 		String start = "";
 		String end = "";
 		
-		System.out.printf("시작역(%s)\n", startStation);
+		start = String.format("시작역(%s)\n", startStation);
 		
 		if(way) { //true 상행선 or 외선
 			
@@ -123,7 +123,7 @@ public class StationManagement {
 					
 					if(route.get(i).equals(endStation)) {
 						
-						page = String.format("%-34s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+						page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 						end = String.format("도착역(%s)\n", endStation);
 						busyPage.add(page);
 						loop = false;
@@ -133,7 +133,7 @@ public class StationManagement {
 						
 					}
 					
-					page = String.format("%-34s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
 					busyPage.add(page);
 					i++;
 					
@@ -163,12 +163,15 @@ public class StationManagement {
 
 			// View클래스 출력
 			ViewAll.trainAddResult();
+			System.out.println();
 			
 			System.out.println(start);
 			list.stream().skip(index * 5)
 			.limit(5)
 			.forEach(busy -> System.out.println(busy));
 			System.out.println(end);
+			
+			
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
 			System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);

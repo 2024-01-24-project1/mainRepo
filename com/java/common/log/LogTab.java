@@ -3,6 +3,7 @@ package com.java.common.log;
 import java.util.Scanner;
 
 import com.java.common.Data;
+import com.java.view.ViewAll;
 
 public class LogTab {
 	
@@ -41,11 +42,7 @@ public class LogTab {
 		}
 		
 		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("계속하려면 엔터를 입력하세요.");
-		scan.nextLine();
-		
+		ViewAll.pause();
 		
 	}
 	

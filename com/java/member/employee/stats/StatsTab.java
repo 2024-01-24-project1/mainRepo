@@ -162,12 +162,11 @@ public class StatsTab {
 					}
 					
 				}else {
-					System.out.println("잘못된 입력");
+					System.out.println("\t\t\t잘못된 입력");
 				}
 				
-				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("뒤로가려면 엔터");
-				System.out.print("입력: ");
+				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("\t\t\t뒤로가려면 엔터");
 				sel = scan.nextLine();
 				
 				if(sel.equals("")) {

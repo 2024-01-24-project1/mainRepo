@@ -28,7 +28,7 @@ public class CurrentTimeFindWay extends FindWay {
 			while(true) {
 
 				//ViewAll 선택노선 추가하기
-				System.out.print("호선: ");
+				System.out.print("\t\t\t호선: ");
 				line = reader.readLine();
 				
 				
@@ -37,14 +37,14 @@ public class CurrentTimeFindWay extends FindWay {
 				}
 
 				ViewAll.roadSearchRouteTop();
-				System.out.print("출발역: ");
+				System.out.print("\t\t\t출발역: ");
 				start = reader.readLine();
 				
 				if(start.endsWith("역")) {
 					start = start.substring(0,start.length()-1);
 				}
 
-				System.out.print("도착역: ");
+				System.out.print("\t\t\t도착역: ");
 				end = reader.readLine();
 				
 				if(end.endsWith("역")) {
@@ -57,9 +57,9 @@ public class CurrentTimeFindWay extends FindWay {
 					break;
 				}else { 
 
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
 					
 					String input = reader.readLine();
 					if(input.equals("")) {
@@ -70,7 +70,7 @@ public class CurrentTimeFindWay extends FindWay {
 
 			}
 			if(calendar.get(Calendar.HOUR_OF_DAY)< 5 || calendar.get(Calendar.HOUR_OF_DAY) > 24 ) {
-				System.out.println("현재 시간에는 열차가 운행하지 않습니다. 다른 날짜보기를 이용해주세요.");
+				System.out.println("\t\t현재 시간에는 열차가 운행하지 않습니다. 다른 날짜보기를 이용해주세요.");
 				ViewAll.pause();
 				return;
 			}
@@ -80,7 +80,7 @@ public class CurrentTimeFindWay extends FindWay {
 			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
-			System.out.print("입력: ");
+			System.out.print("\t\t\t입력: ");
 			sel = reader.readLine();
 
 			if(sel.equals("1")) {

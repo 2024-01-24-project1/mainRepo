@@ -32,8 +32,8 @@ public class EmployeeSearch {
 
 			ArrayList<Employee> searchlist = new ArrayList<>();
 			ViewAll.employeeSearchNameResult();
-			System.out.println("(특정 호선(숫자만), 이름, 직원이름)");
-			System.out.print("찾기: ");
+			System.out.println("\t\t\t(특정 호선(숫자만), 이름, 직원이름)");
+			System.out.print("\t\t\t찾기: ");
 			search = scan.nextLine();
 
 			final String SEARCH = search;
@@ -57,12 +57,11 @@ public class EmployeeSearch {
 
 			}else {
 				ViewAll.trainAddError();
-				System.out.println("조건에 해당하는 직원이 존재하지 않습니다.");
+				System.out.println("\t\t\t조건에 해당하는 직원이 존재하지 않습니다.");
 			}
 
-			System.out.println("다른 조건을 검색하시려면 아무키나 입력");
-			System.out.println("직원검색을 종료하시면 엔터");
-			System.out.printf("입력: ");
+			System.out.println("\t\t\t다른 조건을 검색하시려면 아무키나 입력");
+			System.out.println("\t\t\t직원검색을 종료하시면 엔터");
 			search = scan.nextLine();
 
 			if(search.equals("")) {

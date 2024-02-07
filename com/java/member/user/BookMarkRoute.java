@@ -78,13 +78,13 @@ public class BookMarkRoute extends FindWay{
 			
 			while(true) {
 				
-				System.out.print("선택 할 노선: ");
+				System.out.print("\t\t\t선택 할 노선: ");
 				sel = reader.readLine();
 				index = Integer.parseInt(sel)-1;
 				if(index>=userBookMark.size()) {
 					
-					System.out.println("범위 내의 숫자만 입력하세요.");
-					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
+					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
 					
 				}else if(sel.equals("")) {
 					return;
@@ -123,7 +123,7 @@ public class BookMarkRoute extends FindWay{
 			
 			String[] temp = route.split("-");
 			
-			System.out.printf("%d. %s -> %s\n", index++, temp[1],temp[2]);
+			System.out.printf("\t\t\t%d. %s -> %s\n", index++, temp[1],temp[2]);
 			
 		}
 	}

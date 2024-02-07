@@ -34,10 +34,11 @@ public class EmployeeSearch {
 			ViewAll.employeeSearchNameResult();
 			System.out.print("\t\t\t찾기: ");
 			search = scan.nextLine();
+			
 
 			final String SEARCH = search;
 
-			LogSave.employeeSearchLog(SEARCH, searchlist);
+			LogSave.employeeSearchLog(SEARCH,searchlist);
 
 			boolean check = employeeList.stream().anyMatch(employee -> employee.getName().equals(SEARCH)
 					|| employee.getLine().contains(SEARCH)
@@ -61,7 +62,7 @@ public class EmployeeSearch {
 
 			System.out.println("\t\t\t다른 조건을 검색하시려면 아무키나 입력");
 			System.out.println("\t\t\t직원검색을 종료하시면 엔터");
-			search = scan.nextLine();
+ 			search = scan.nextLine();
 
 			if(search.equals("")) {
 

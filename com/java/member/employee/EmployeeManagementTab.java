@@ -18,7 +18,7 @@ public class EmployeeManagementTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
+			System.out.println("\t\t\t" + LoginLogout.position + " " + LoginLogout.auth + "님");
 			ViewAll.employeeMain();
 			ViewAll.chooseNum();
 			sel = scan.nextLine();

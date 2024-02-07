@@ -491,16 +491,12 @@ public final class Validation {
 			}
 			
 
-			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
 				return false;
 				
 			}
 			
-			
-			if(dayOfWeek.equals("주말")) {
-				dayOfWeek = "토요일";
-			}
 			
 			
 			return true;

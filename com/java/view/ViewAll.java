@@ -949,8 +949,6 @@ System.out.println();
 		System.out.println("╓═══════════════════════════════════════☆══════════════════════════════════════╖");
 		System.out.println();
 		System.out.println("\t\t\t      호선을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
 		System.out.println();
 		System.out.println("╙═══════════════════════════════════════☆══════════════════════════════════════╜");
 		
@@ -1075,9 +1073,6 @@ System.out.println();
 		System.out.println("╓••••••••••••••••••••••••••••••••••••••✎•••••••••••••••••••••••••••••••••••••••╖");
 		System.out.println();
 		System.out.println("\t\t\t 삭제 할 분실물의 분실물,호선 그리고 역을 입력해주세요");
-		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
-		System.out.println("\t\t\t (예시: 2호선)");
-		System.out.println("\t\t\t (역 입력 시 (역)을 제외하고 작성해주세요.)");
 		System.out.println();
 		System.out.println("╙••••••••••••••••••••••••••••••••••••••✎•••••••••••••••••••••••••••••••••••••••╜");
 	

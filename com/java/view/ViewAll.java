@@ -390,7 +390,7 @@ System.out.println();
 	
 	public static void roadSearchFavoriteList() { //길찾기 > 즐겨 찾기 목록 라벨 (입력 필요) 1
 		System.out.println("╓═══════════════════════════════════════☆══════════════════════════════════════╖");
-		System.out.println("\t\t\t 길 찾기 (즐겨찾기 노선)");
+		System.out.println("\t\t\t     길 찾기 (즐겨찾기 노선)");
 		System.out.println("╙═══════════════════════════════════════☆══════════════════════════════════════╜");
 		System.out.println();
 		
@@ -411,20 +411,20 @@ System.out.println();
 	
 	public static void roadSearchRouteNowTimeTop() { //길 찾기 >경로 입력> 현재 시간 보기 > 상단 라벨 1
 		System.out.println("╓═══════════════════════════════════════☆══════════════════════════════════════╖");
-		System.out.println("\t\t\t        현재 시간 보기");
+		System.out.println("\t\t\t          현재 시간 보기");
 		System.out.println("╙═══════════════════════════════════════☆══════════════════════════════════════╜");
 		System.out.println();
 		
 		
 	}
 
-	public static void roadSearchRouteBottom() { //길 찾기> 경로 입력 하단 라벨  1
-		System.out.println("\t\t\t 1. 현재 시간 보기");
-		System.out.println("\t\t\t 2. 다른 날짜 보기");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+	public static void roadSearchRouteBottom() { //길 찾기> 경로 입력 하단 라벨  1 2
+		System.out.println("\t\t\t      1. 현재 시간 보기");
+		System.out.println("\t\t\t      2. 다른 날짜 보기");
+		System.out.println("\t\t\t      뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 
 	}
-	public static void roadSearchRouteTop() { //길 찾기 >경로 입력 상단 라벨 1
+	public static void roadSearchRouteTop() { //길 찾기 >경로 입력 상단 라벨 1 2
 		System.out.println("╭──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╮");
 		System.out.println("\t\t\t           경로 입력");
 		System.out.println("╰──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╯");
@@ -432,31 +432,31 @@ System.out.println();
 		System.out.println();
 	}
 	
-	public static void roadSearchMain() { //길찾기 메뉴 1
+	public static void roadSearchMain() { //길찾기 메뉴 1 2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println("\t\t\t           길 찾기");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1. 경로 입력");
-		System.out.println("\t\t\t 2. 즐겨 찾기 노선");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t    1. 경로 입력");
+		System.out.println("\t\t\t    2. 즐겨 찾기 노선");
+		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
 	public static void seasonPassCodeBottom() { //정기권 코드 입력 하단 (if문으로 해야 할 거 같습니다.)
 		
 	}
 	
-	public static void seasonPassCodeTop() { //정기권 코드 입력 상단
+	public static void seasonPassCodeTop() { //정기권 코드 입력 상단 2
 		System.out.println("╭──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╮");
-		System.out.println("\t\t\t      정기권 코드 입력 ");
-		System.out.println("\t\t\t      (정기권은 영어 대문자로만 이뤄져있습니다.)");
+		System.out.println("\t\t\t         정기권 코드 입력 ");
+		System.out.println("\t\t       (정기권은 영어 대문자로만 이뤄져있습니다.)");
 		System.out.println("╰──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╯");
 		
 	}
 	
-	public static void seasonPassRegisterBottom() { // 정기권 등록하기 하단
+	public static void seasonPassRegisterBottom() { // 정기권 등록하기 하단 2
 		System.out.println("\t\t\t 1. 코드 입력하기 ");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
@@ -468,7 +468,7 @@ System.out.println();
 		
 	}
 	
-	public static void seasonPassCheck() {// 나의 정기권 확인하기 1
+	public static void seasonPassCheck() {// 나의 정기권 확인하기 1 2 
 		System.out.println("╭──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╮");
 		System.out.println("\t\t\t      나의 정기권 확인하기 ");
 		System.out.println("╰──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╯");
@@ -476,104 +476,104 @@ System.out.println();
 		//뒤에 입력 받아야 함
 			}
 	
-	public static void seasonPassMain() { //정기권 메인 메뉴  1
+	public static void seasonPassMain() { //정기권 메인 메뉴  1 2 
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println("\t\t\t          정기권");
+		System.out.println("\t\t\t            정기권");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1. 나의 정기권 확인하기");
-		System.out.println("\t\t\t 2. 정기권 등록");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t    1. 나의 정기권 확인하기");
+		System.out.println("\t\t\t    2. 정기권 등록");
+		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 		
 	}
 	
-	public static void lostarticleSearchBottom() { // 분실물 검색 하단 라벨1
+	public static void lostarticleSearchBottom() { // 분실물 검색 하단 라벨1  안쓸듯 
 		System.out.println("\t\t\t 1. 다음 페이지");
 		System.out.println("\t\t\t 2. 이전 페이지");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	
 	}
 	
-	public static void lostarticleSearchTop() { // 분실물 검색 상단 라벨  1
+	public static void lostarticleSearchTop() { // 분실물 검색 상단 라벨  1 2
 		System.out.println("╓════════════════════════════════ ( l|l⚆ᗝ⚆) ════════════════════════════════════╖");
 		System.out.println("\t\t\t 분실물 검색");
 		System.out.println("╙════════════════════════════════ ( l|l⚆ᗝ⚆) ════════════════════════════════════╜");
 		
 	}
 	
-	public static void lostarticleListCheckBottom() {//분실물 목록 확인 아래 라벨 1
+	public static void lostarticleListCheckBottom() {//분실물 목록 확인 아래 라벨 1 2
 		System.out.println("\t\t\t 1. 검색하기");
 		System.out.println("\t\t\t 2. 다음 페이지");
 		System.out.println("\t\t\t 3. 이전 페이지");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 	
-	public static void lostarticleListCheckTop() { // 분실물 목록 확인 라벨 1
+	public static void lostarticleListCheckTop() { // 분실물 목록 확인 라벨 1 2
 		System.out.println("╓════════════════════════════════ ( l|l⚆ᗝ⚆) ════════════════════════════════════╖");
-		System.out.println("\t\t\t      분실물 목록 확인");
+		System.out.println("\t\t\t       분실물 목록 확인");
 		System.out.println("╙════════════════════════════════ ( l|l⚆ᗝ⚆) ════════════════════════════════════╜");
 		
 	}
 	
-	public static void userVocWrite() { //민원 내용 입력하기 (쓰기) 이거 기준으로 맞춰서 감1
+	public static void userVocWrite() { //민원 내용 입력하기 (쓰기) 이거 기준으로 맞춰서 감1 2
 		System.out.println("╓══════════════════════════════ ꒰(ꐦ •᷅ ‎(ｪ)•᷄ )꒱ ═════════════════════════════════╖");
-		System.out.println("\t\t\t     민원 내용 입력하기");
+		System.out.println("\t\t\t      민원 내용 입력하기");
 		System.out.println("╙══════════════════════════════ ꒰(ꐦ •᷅ ‎(ｪ)•᷄ )꒱ ═════════════════════════════════╜");
 		
 	}
 	
-	public static void userVoc() { // 고객의 소리 민원 접수 0 1
+	public static void userVoc() { // 고객의 소리 민원 접수 0 1 2
 		System.out.println("╓══════════════════════════════ ꒰(ꐦ •᷅ ‎(ｪ)•᷄ )꒱ ═════════════════════════════════╖");
-		System.out.println("\t\t\t         민원 접수");
+		System.out.println("\t\t\t           민원 접수");
 		System.out.println("╙══════════════════════════════ ꒰(ꐦ •᷅ ‎(ｪ)•᷄ )꒱ ═════════════════════════════════╜");
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userVocMain() { //고객의 소리 메뉴  0
+	public static void userVocMain() { //고객의 소리 메뉴  0 2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println("\t\t\t         고객의 소리");
+		System.out.println("\t\t\t           고객의 소리");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1. 일반 민원 접수");
-		System.out.println("\t\t\t 2. 분실물 목록 확인");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
+		System.out.println("\t\t\t    1. 일반 민원 접수");
+		System.out.println("\t\t\t    2. 분실물 목록 확인");
+		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 	
-	public static void trainTimeTableSearch() { //열차 시간표 , 검색 후  0 1
-		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+	public static void trainTimeTableSearch() { //열차 시간표 , 검색 후  0 1 2
+		System.out.println("╓══════════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ═════════════════════════════╖");
 		System.out.println("\t\t\t           열차 시간표");
-		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+		System.out.println("╙══════════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ═════════════════════════════╜");
 		
 		
 	}
 	
-	public static void trainTimeTable() { // 고객 열차 시간표 0 1
-		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+	public static void trainTimeTable() { // 고객 열차 시간표 0 1 2
+		System.out.println("╓══════════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ═════════════════════════════╖");
 		System.out.println();
 		System.out.println("\t\t\t           열차 시간표");
 		System.out.println();
-		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+		System.out.println("╙══════════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ═════════════════════════════╜");
 		
 
 	}
 	
-	public static void userResign() {//회원 탈퇴 0 1
+	public static void userResign() {//회원 탈퇴 0 1 2
 		System.out.println("╓════════════════════════════════ ｡･ﾟﾟ･(>д<)･ﾟﾟ･｡ ═══════════════════════════════╖");
 		System.out.println("\t\t\t           회원 탈퇴");
 		System.out.println("╙════════════════════════════════ ｡･ﾟﾟ･(>д<)･ﾟﾟ･｡ ═══════════════════════════════╜");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.print("\t\t 회원 탈퇴 시 등록된 정보는 모두 삭제되며\n\t\t 등록된 정기권은 소모되며 환불되지 않습니다.\n\t\t 정말 탈퇴하시겠습니까?\n");
+		System.out.print("\t\t\t 회원 탈퇴 시 등록된 정보는 모두 삭제되며\n\t\t\t 등록된 정기권은 소모되며 환불되지 않습니다.\n\t\t\t 정말 탈퇴하시겠습니까?\n");
 		System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t 1. 탈퇴 하기");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 
-	public static void favoriteDelete(){ //즐겨찾기 삭제 0
+	public static void favoriteDelete(){ //즐겨찾기 삭제 0 2
 		System.out.println("╓══════════════════════════════════ ฅ(ﾐ⚈ ﻌ ⚈ﾐ)ฅ ════════════════════════════════╖");
 		System.out.println("\t\t\t          즐겨찾기 삭제");
 		System.out.println("╙══════════════════════════════════ ฅ(ﾐ⚈ ﻌ ⚈ﾐ)ฅ ════════════════════════════════╜");
@@ -582,98 +582,98 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 
 
-	public static void favoriteAdd() { // 즐겨찾기 등록 0 1
+	public static void favoriteAdd() { // 즐겨찾기 등록 0 1 2
 		System.out.println("╓════════════════════════════════ ٩( ͡◉ ̯ ͡◉)۶ ═══════════════════════════════╖");
-		System.out.println("\t\t\t         즐겨찾기 등록");
+		System.out.println("\t\t\t          즐겨찾기 등록");
 		System.out.println("╙════════════════════════════════ ٩( ͡◉ ̯ ͡◉)۶ ═══════════════════════════════╜");
 		
 	}
 	
 	
-	public static void favoriteChange() {//즐겨찾기 편집 0 1
+	public static void favoriteChange() {//즐겨찾기 편집 0 1 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ヽ⚈₃⚈ノ ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-		System.out.println("\t\t\t         즐겨찾기 편집");
+		System.out.println("\t\t\t          즐겨찾기 편집");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ヽ⚈₃⚈ノ ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1.즐겨찾기 등록");
-		System.out.println("\t\t\t 2.즐겨찾기 삭제");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t         1.즐겨찾기 등록");
+		System.out.println("\t\t\t         2.즐겨찾기 삭제");
+		System.out.println("\t\t\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 		
 	}
 	
 
 	
 	
-	public static void favoriteList() { //즐겨찾기 목록01
+	public static void favoriteList() { //즐겨찾기 목록01 2
 		System.out.println("╓════════════════════════════ ︵‿︵‿︵‿ヽ(゜□゜ )ノ︵‿︵ ═══════════════════════════╖");
-		System.out.println("\t\t\t    길 찾기(즐겨찾기 노선)");
+		System.out.println("\t\t\t      길 찾기(즐겨찾기 노선)");
 		System.out.println("╙════════════════════════════ ︵‿︵‿︵‿ヽ(゜□゜ )ノ︵‿︵ ═══════════════════════════╜");
 
 	}
 	
-	public static void lineFavorite() {//노선 즐겨찾기01
+	public static void lineFavorite() {//노선 즐겨찾기01 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ︵‿︵‿︵‿ヽ(゜□゜ )ノ︵‿︵ ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t          노선 즐겨찾기");
+		System.out.println("\t\t\t           노선 즐겨찾기");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1.PW 재설정하기");
-		System.out.println("\t\t\t 2.전화번호 재설정하기");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t    1.PW 재설정하기");
+		System.out.println("\t\t\t    2.전화번호 재설정하기");
+		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void phoneNumChange() {//전화번호 재설정0
+	public static void phoneNumChange() {//전화번호 재설정0 2
 		System.out.println("╓══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╖");
-		System.out.println("\t\t\t        전화번호 재설정");
+		System.out.println("\t\t\t          전화번호 재설정");
 		System.out.println("╙══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╜");
 	}  
 	
-	public static void bottomReceive() { //아래에 있는 접수
-		System.out.println("\t\t\t 접수 되었습니다.");
+	public static void bottomReceive() { //아래에 있는 접수 2 
+		System.out.println("\t\t\t        접수 되었습니다.");
 	}
 	
-	public static void bottomResign() { //아래에 있는 탈퇴
-		System.out.println("\t\t\t 탈퇴를 완료했습니다.");
+	public static void bottomResign() { //아래에 있는 탈퇴 2 
+		System.out.println("\t\t\t        탈퇴를 완료했습니다.");
 	}
-	public static void bottomDelete() { // 아래에 있는 삭제
-		System.out.println("\t\t\t 삭제가 완료되었습니다.");
-	}
-	
-	public static void bottomAdd() { // 아래에 있는 등록
-		System.out.println("\t\t\t 등록이 완료되었습니다.");
+	public static void bottomDelete() { // 아래에 있는 삭제 2 
+		System.out.println("\t\t\t        삭제가 완료되었습니다.");
 	}
 	
-	public void bottomChange() { //아래에 있는 작은 변경이 완료되었습니다.
-		System.out.println("\t\t\t 변경이 완료되었습니다.");
+	public static void bottomAdd() { // 아래에 있는 등록2
+		System.out.println("\t\t\t        등록이 완료되었습니다.");
 	}
 	
-	public static void pwChange() { //pw 재설정 라벨 0
+	public static void bottomChange() { //아래에 있는 작은 변경이 완료되었습니다.2
+		System.out.println("\t\t\t        변경이 완료되었습니다.");
+	}
+	
+	public static void pwChange() { //pw 재설정 라벨 02
 		System.out.println("╓══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╖");
-		System.out.println("\t\t\t        PW 재설정");
+		System.out.println("\t\t\t            PW 재설정");
 		System.out.println("╙══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╜");
 		
 	}
 	
-	public static void userInfoChange() { //회원정보 수정 메뉴 화면  01
+	public static void userInfoChange() { //회원정보 수정 메뉴 화면  01 2
 		System.out.println("╓══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╖");
-		System.out.println("\t\t\t         회원정보 수정");
+		System.out.println("\t\t\t           회원정보 수정");
 		System.out.println("╙══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╜");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1.PW 재설정하기");
-		System.out.println("\t\t\t 2.전화번호 재설정하기");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t     1.PW 재설정하기");
+		System.out.println("\t\t\t     2.전화번호 재설정하기");
+		System.out.println("\t\t\t     뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userMyInfo() { //고객 > 마이페이지 > 내 정보 보기 01
+	public static void userMyInfo() { //고객 > 마이페이지 > 내 정보 보기 01 2
 		System.out.println("╓══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╖");
-		System.out.println("\t\t\t           내 정보");
+		System.out.println("\t\t\t              내 정보");
 		System.out.println("╙══════════════════════════════ ＼＼٩( 'ω' )و //／ ════════════════════════════╜");
 		
 		
@@ -682,49 +682,49 @@ System.out.println();
 		
 	}
 	
-	public static void userMyPage() { //고객 마이 페이지  0
+	public static void userMyPage() { //고객 마이 페이지  0 2 
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println("\t\t\t         마이 페이지");
+		System.out.println("\t\t\t            마이 페이지");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1.내 정보 보기");
-		System.out.println("\t\t\t 2.회원정보 수정");
-		System.out.println("\t\t\t 3.노선 즐겨찾기");
-		System.out.println("\t\t\t 4.회원 탈퇴");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t         1.내 정보 보기");
+		System.out.println("\t\t\t         2.회원정보 수정");
+		System.out.println("\t\t\t         3.노선 즐겨찾기");
+		System.out.println("\t\t\t         4.회원 탈퇴");
+		System.out.println("\t\t\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userMainView() { //고객 메인 메뉴 화면 0
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬════");
-		System.out.printf("\t\t\t          SEOUL METRO\n");
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬════");
+	public static void userMainView() { //고객 메인 메뉴 화면 0 2
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.printf("\t\t\t         SEOUL METRO\n");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.printf("\t\t\t 0.마이 페이지\n");
+		System.out.printf("\t\t\t\t 1.마이 페이지\n");
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 1.열차 시간표");
-		System.out.println("\t\t\t 2.민원 접수");
-		System.out.println("\t\t\t 3.정기권");
-		System.out.println("\t\t\t 4.길 찾기");
-		System.out.println("\t\t\t 5.요금표");
-		System.out.println("\t\t\t 6.마이 페이지");
-		System.out.println("\t\t\t 7.로그 아웃");
-		System.out.println("\t\t\t 0.종료");
+		System.out.println("\t\t\t\t 2.열차 시간표");
+		System.out.println("\t\t\t\t 3.민원 접수");
+		System.out.println("\t\t\t\t 4.정기권");
+		System.out.println("\t\t\t\t 5.길 찾기");
+		System.out.println("\t\t\t\t 6.요금표");
+		System.out.println("\t\t\t\t 7.마이 페이지");
+		System.out.println("\t\t\t\t 8.로그 아웃");
+		System.out.println("\t\t\t\t 0.종료");
 	}
 	
-	public static void signupFindPw() { // PW 찾기 01
+	public static void signupFindPw() { // PW 찾기 01 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ง ˙罒˙)ว )д*)!! 으이구 증말!! ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println("\t\t\t              PW 찾기");
-		System.out.println(" (본인의 아이디,이름 그리고 주민등록번호를 차례대로 입력해주세요)");
+		System.out.println("\t (본인의 아이디,이름 그리고 주민등록번호를 차례대로 입력해주세요)");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		
 	}
 	
-	public static void signupFindId() { // ID 찾기 0
+	public static void signupFindId() { // ID 찾기 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ง ˙罒˙)ว )д*)!! 으이구 증말!! ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println("\t\t\t           ID 찾기");
 		System.out.println("(본인의 이름과 주민등록번호를 차례대로 입력해주세요)");
@@ -733,10 +733,10 @@ System.out.println();
 		
 	}
 	
-	public static void signupFindMain() { //ID/PW 찾기 메인 화면 01
+	public static void signupFindMain() { //ID/PW 찾기 메인 화면 01 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ง ˙罒˙)ว )д*)!! 으이구 증말!! ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
-		System.out.println("\t\t\t           ID/PW 찾기");
+		System.out.println("\t\t\t            ID/PW 찾기");
 		System.out.println();
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
@@ -744,9 +744,9 @@ System.out.println();
 		System.out.println("\t\t\t 2. PW 찾기");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 	
-	public static void signupEmployee() { // 회원가입 관리자용 가입 01
+	public static void signupEmployee() { // 회원가입 관리자용 가입 01 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-		System.out.println("\t\t\t         관리자용 가입");
+		System.out.println("\t\t\t          관리자용 가입");
 		System.out.println(" (관리자는 관리자 가입코드를 정확하게 입력하여야 합니다.");
 		System.out.println(" (아이디는 4~12자 이내, 영어 소문자와 숫자만 입력 가능하며 숫자로 시작할 수 없습니다.)");
 		System.out.println(" (비밀번호는 8~15자, 영어 대소문자,숫자 그리고 특수문자(!~*)만 입력 가능합니다.");
@@ -769,23 +769,23 @@ System.out.println();
 	
 		
 	
-	public static void signupUser() {//회원가입 개인회원 0
+	public static void signupUser() {//회원가입 개인회원 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-		System.out.println("\t\t\t         개인회원 가입");
+		System.out.println("\t\t\t           개인회원 가입");
 		System.out.println(" (아이디는 4~12자 이내, 영어 소문자와 숫자만 입력 가능하며 숫자로 시작할 수 없습니다.)");
 		System.out.println(" (비밀번호는 8~15자, 영어 대소문자,숫자 그리고 특수문자(!~*)만 입력 가능합니다.");
 		System.out.println(" (이름은 2~5글자 , 한글만 입력 가능합니다.)");
 		System.out.println(" (주민등록번호는 6자리, 7자리 총 13개의 숫자가 입력되어야 합니다.)");
 		System.out.println(" (주민등록번호 유효성 검사가 존재하므로 정확한 주민등록번호를 입력하여야 합니다.)");
 		System.out.println(" (전화번호는 3자리,  4자리 그리고 4자리 총 11개의 숫자가 입력되어야 합니다.)");
-		System.out.println("( \"-\" 의 경우 포함 또는 미포함하여도 됩니다.)");
+		System.out.println(" (\"-\"의 경우 포함 또는 미포함하여도 됩니다.)");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 	
 	}
-	public static void 	realMain() {
+	public static void 	realMain() { // 2
 	System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 	System.out.println();
-	System.out.println("\t\t\t      SEOUL METRO");
+	System.out.println("\t\t\t         SEOUL METRO");
 	System.out.println();
 	System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 
@@ -799,9 +799,9 @@ System.out.println();
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 	System.out.print("\t선택 (번호): ");
 	}
-	public static void signupMain() { //회원가입 메인 0
+	public static void signupMain() { //회원가입 메인 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-		System.out.println("\t\t\t           회원가입");
+		System.out.println("\t\t\t             회원가입");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		System.out.println();
@@ -812,7 +812,7 @@ System.out.println();
 	
 	
 	 
-	public static void loginTop() { //로그인 화면 상단 0
+	public static void loginTop() { //로그인 화면 상단 0 2
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println("\t\t\t              로그인");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");

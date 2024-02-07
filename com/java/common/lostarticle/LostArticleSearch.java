@@ -23,16 +23,16 @@ public class LostArticleSearch {
 					// View클래스 출력
 					ViewAll.lostarticleList();
 					
+					System.out.println("분실물\t\t\t상세내용\t\t\t잃어버린 역");
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(article -> System.out.printf("\t\t%-10s|%-20s|%-10s|%-10s\r\n"
+					 							 .forEach(article -> System.out.printf("%-8s %-20s %-15s\r\n"
 							 													, article.getArticle()
 							 													, article.getContent()
-							 													, article.getLostStation() + "역"
-							 													, article.getFindStation() + "역"));
+							 													, article.getLostStation() + "역" ));
 					
 					System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);
-					System.out.print("\t\t\t엔터입력시 리스트보기를 종료합니다.");
+					System.out.println("\t\t\t엔터입력시 리스트보기를 종료합니다.");
 					System.out.print("\t\t\t원하는 페이지: ");
 					sel = scan.nextLine();
 					

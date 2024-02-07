@@ -74,21 +74,21 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 
-				System.out.print("호선: ");
+				System.out.print("\t\t\t호선: ");
 				line = reader.readLine();
 
-				if(line.contains("호선")) {
+				if(line.contains("\t\t\t호선")) {
 					line = line.replace("호선", "");
 				}
 
-				System.out.print("출발역: ");
+				System.out.print("\t\t\t출발역: ");
 				start = reader.readLine();
 
 				if(start.endsWith("역")) {
 					start = start.substring(0,start.length()-1);
 				}
 
-				System.out.print("도착역: ");
+				System.out.print("\t\t\t도착역: ");
 				end = reader.readLine();
 
 				if(end.endsWith("역")) {
@@ -106,6 +106,7 @@ public class AnotherDateFindWay extends FindWay {
 					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
 						return;                      //false 일 경우 뒤로가기
 					}
+					
 
 				}
 

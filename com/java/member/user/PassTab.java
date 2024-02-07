@@ -22,11 +22,11 @@ public class PassTab {
 			//ViewAll.ticketView();
 			String sel = "";
 			
-			System.out.println("정기권 페이지");
-			System.out.println("1 -> 나의 정기권 확인하기");
-			System.out.println("2 -> 정기권 코드 입력");
-			System.out.println("뒤로가기 엔터");
-			System.out.print("입력: ");
+			ViewAll.print("정기권 페이지");
+			System.out.println("\t\t\t   1. 나의 정기권 확인하기");
+			System.out.println("\t\t\t   2.  정기권 코드 입력");
+			System.out.println("\t\t\t  뒤로가기 엔터");
+			System.out.print("\t\t\t   입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 나의 정기권 확인하기
@@ -41,7 +41,7 @@ public class PassTab {
 				
 				//다시입력
 				System.out.println();
-				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				System.out.printf("\t\t\t해당 섹션이 없습니다\r\n\t\t\t다시입력해주세요.\r\n");
 				ViewAll.pause();
 			}
 			
@@ -56,12 +56,12 @@ public class PassTab {
 		
 		if ( LoginLogout.pass.equals("있음") ) {
 			
-			System.out.println(LoginLogout.authName + "님의 정기권");
-			System.out.println("     <사용 기간> ");
-			System.out.println(LoginLogout.passExpiry);
+			System.out.println("\t\t\t"+LoginLogout.authName + "님의 정기권");
+			System.out.println("\t\t\t     <사용 기간> ");
+			System.out.println("\t\t\t" + LoginLogout.passExpiry);
 			
 		} else {
-			System.out.println("정기권 미보유 상태입니다.");
+			System.out.println("\t\t\t정기권 미보유 상태입니다.");
 		}
 		
 		ViewAll.pause();
@@ -74,7 +74,7 @@ public class PassTab {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println();
-		System.out.print("         코드: ");
+		System.out.print("\t\t\t코드: ");
 		String ticketCode = scan.nextLine();
 		System.out.println();
 		
@@ -113,7 +113,7 @@ public class PassTab {
 				
 			}
 			
-			System.out.println("정상적으로 등록되었습니다.");
+			System.out.println("\t\t\t정상적으로 등록되었습니다.");
 			
 		} else if ( Validation.is_Pass(ticketCode) && LoginLogout.pass.equals("있음")) {	// 정기권 한달 추가
 			
@@ -134,7 +134,7 @@ public class PassTab {
 				
 				
 			} catch (Exception e) {
-				System.out.println("PassTab클래스에서 정기권 날짜 연장 오류");
+				System.out.println("\t\t\tPassTab클래스에서 정기권 날짜 연장 오류");
 				e.printStackTrace();
 			}
 			
@@ -167,10 +167,10 @@ public class PassTab {
 			}
 			
 			
-			System.out.println("정기권 기간이 연장되었습니다");
+			System.out.println("\t\t\t정기권 기간이 연장되었습니다");
 			
 		} else {
-			System.out.println("유효하지 않은 정기권입니다.");
+			System.out.println("\t\t\t유효하지 않은 정기권입니다.");
 	
 		}
 		ViewAll.pause();

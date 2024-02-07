@@ -40,16 +40,16 @@ public class Graph {
 			
 			for(int j = 0; j < graph[0].length; j++) {
 				if(j == graph[0].length) {
-					System.out.printf("%s", graph[i][j]);
+					System.out.printf("%s\t", graph[i][j]);
 				}else {
-					System.out.printf("%s  ", graph[i][j]);
+					System.out.printf("%s\t", graph[i][j]);
 				}
 				
 			}
 			System.out.println();
 		}
-		System.out.println("-----------------------------------------------------------------------------------");
-		System.out.printf("1월\t2월\t3월\t4월\t5월\t6월\t7월\t8월\t9월\t10월\t11월\t12월\t");
+		System.out.println("-----------------------------------------------------------------------------------------");
+		System.out.printf("1월\t2월\t3월\t4월\t5월\t6월\t7월\t8월\t9월\t10월\t11월\t12월");
 		System.out.println();
 		System.out.println();
 		
@@ -57,7 +57,7 @@ public class Graph {
 
 		
 		
-		for(int i=0;i<list.length/2-1;i++) {
+		for(int i=0;i<=list.length/2-1;i++) {
 			String front1 = "";
 			String front2 = "";
 			String back1 = "";
@@ -66,27 +66,27 @@ public class Graph {
 			
 			if(list[i]>100000000000L) { 
 				front1 = (list[i]/100000000)+ "억 ";
-				front1 = (list[i+7]/100000000)+ "억 ";
-				back1 =	(list[i]%10000) + "만원";
-				back1 =	(list[i+7]%10000) + "만원";
+				front1 = (list[i+6]/100000000)+ "억 ";
+				back1 =	(list[i]%10000) + "만";
+				back1 =	(list[i+6]%10000) + "만";
 			}else if(list[i]>10000000000L) {
 				front1 = (list[i]/100000000) + "억 ";
-				front2 = (list[i+7]/100000000) + "억 ";
-				back1 = (list[i]%10000) + "만원";
-				back2 = (list[i+7]%10000) + "만원";
+				front2 = (list[i+6]/100000000) + "억 ";
+				back1 = (list[i]%10000) + "만";
+				back2 = (list[i+6]%10000) + "만";
 			}else if(list[i]>100000000) {
 				front1 = (list[i]/100000000) + "억 ";
-				front2 = (list[i+7]/100000000) + "억 ";
-				back1 = (list[i]%10000) + "만원";
-				back2 = (list[i+7]%10000) + "만원";
+				front2 = (list[i+6]/100000000) + "억 ";
+				back1 = (list[i]%10000) + "만";
+				back2 = (list[i+6]%10000) + "만";
 			}else {
 				front1 = " ";
 				front2 = " ";
-				back1 = (list[i]/10000) + "만원";
-				back2 = (list[i+7]/10000) + "만원";
+				back1 = (list[i]/10000) + "만";
+				back2 = (list[i+6]/10000) + "만";
 			}
 			
-			System.out.printf("/t/t%d월: %-3s%-7s\t\t\t%d월: %-3s%-7s", i+1, front1, back1, i+7, front2, back2);
+			System.out.printf("\t\t%-2d월: %-3s%-7s\t\t%-2d월: %-3s%-7s\n", i+1, front1, back1, i+7, front2, back2);
 		}
 			
 			

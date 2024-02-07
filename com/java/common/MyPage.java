@@ -209,7 +209,7 @@ public class MyPage {
 		
 		// 전화번호 형식이면 010-XXXX-XXXX형식으로 변환
 		if(Validation.is_PhoneFormat(chPhone)) {
-			SignUp.formatPhoneNumber(chPhone);
+			chPhone = SignUp.formatPhoneNumber(chPhone);
 		}
 		
 		// 유효성 검사

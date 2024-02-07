@@ -1,5 +1,8 @@
 package com.java.view;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.LoginLogout;
@@ -1913,6 +1916,44 @@ System.out.println("╬╬═════════════╬╬═══
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 
+	}
+	
+	public static boolean errorPrint(ArrayList<String> error) {
+		
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			
+			int index = 1;
+			error.remove(error.size()-1);
+			ViewAll.trainAddError();
+			System.out.println();
+			for(String log : error) {
+				System.out.printf("\t\t\t%d. %s\n\n",index++,log);
+			}
+			System.out.println();
+
+			System.out.println("\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+			System.out.println("\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+			System.out.println();
+			System.out.print("\t\t\t입력: ");
+			
+			String input = reader.readLine();
+			if(input.equals("")) {
+				return false; //뒤로가기 false
+			} 
+			 
+			
+		} catch (Exception e) {
+			System.out.println("ViewAll.errorPrint");
+			e.printStackTrace();
+		}
+		
+		return true;      //다시 진행 true
+		
+		
+		
+		
 	}
 }
 	

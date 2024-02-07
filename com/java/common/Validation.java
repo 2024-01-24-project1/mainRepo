@@ -501,16 +501,22 @@ public final class Validation {
 			return error;
 			
 		}
-		public static boolean is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
+		public static ArrayList<String> is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
-			
+			ArrayList<String> error = new ArrayList<>();
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
-				return false;
+				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
+			}
+			
+			if(startStation.equals(endStation)) {
+				
+				error.add("시작역과 도착역이 같습니다.");
+				
 			}
 			
 			
@@ -519,43 +525,45 @@ public final class Validation {
 			
 			try {
 				if(StationManagement.spareTrain==0 && (Integer.parseInt(trainNums)-StationManagement.spareTrain)<=0) {
-					return false;
+					error.add("예비 열차가 없습니다");
 				}
 				
 			} catch (Exception e) {
 				
-				return false;
+				error.add("열차 추가시 숫자로만 입력하세요.");
 				
 			}
 
 			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				return false;
+				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));
 
 			}
 			if(startStation.equals(endStation)) {
-				return false;
+				error.add("시작역과 도착역이 같습니다.");
 			}
 			
 
 			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
 				
-				return false;
+				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				
 			}
 			
 			
 			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
-				return false;
+				error.add("시간은 5~24사이값만 입력하세요.");
 			}
 			
 			
 			
-			return true;
+			error.add("오류없음");
 			
+			return error;
+					
 		}
 		
-		public static boolean is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
+		public static ArrayList<String> is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
 			ArrayList<String> error = new ArrayList<>();
@@ -565,63 +573,79 @@ public final class Validation {
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
-				return false;
+				
+				error.add("호선 불일치 1~9호선");
 			}
 			
 			
 
 			if(!StationManagement.lineRoute(line).contains(startStation) || !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				return false;
-
+				error.add("해당 호선에 해당 역이 존재하지 않음");
+				
 			}
 
 			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
 				
-				return false;
+				error.add("요일(평일/주말)입력 불일치");
+				
+			}
+			if(startStation.equals(endStation)) {
+				
+				error.add("시작역과 도착역이 같음");
 				
 			}
 			
 			
 			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
-				return false;
+				
+				error.add("시간 범위 초과");
 			}
 			
 			
-			
-			return true;
+			error.add("오류없음");
+			return error;
 			
 		}
 		
-		public static boolean is_currentTime(String line, String startStation, String endStation) {
+		public static ArrayList<String> is_currentTime(String line, String startStation, String endStation) {
 			
-			
+			ArrayList<String> error = new ArrayList<>();
 			
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
-				return false;
+				error.add("호선 불일치 1~9호선");
+
 			}
 			
 			
 
 			if(!StationManagement.lineRoute(line).contains(startStation) && !StationManagement.lineRoute(line).contains(endStation)) {
 				
-				return false;
+				error.add("해당 호선에 해당 역이 존재하지 않음");
 
 			}
+			
+			if(startStation.equals(endStation)) {
+				
+				error.add("시작역과 도착역이 같음");
+				
+			}
 
-			
-			
-			return true;
+			error.add("오류없음");
+
+			return error;
 			
 		}
 		
-		public static boolean is_anotherDate(String yearStr, String monthStr, String dateStr, String hourStr, String minuteStr) {
+		public static ArrayList<String> is_anotherDate(String yearStr, String monthStr, String dateStr, String hourStr, String minuteStr) {
 			
+			ArrayList<String> error = new ArrayList<>();
 			try {
+				
 	            int year = Integer.parseInt(yearStr);
 	            int month = Integer.parseInt(monthStr);
 	            int day = Integer.parseInt(dateStr);
@@ -630,21 +654,26 @@ public final class Validation {
 	            		
 
 	            if (year < 1 || month < 1 || month > 12 || day < 1) {
-	                return false; // 년, 월, 일이 유효하지 않음
+	                error.add("년, 월, 일 형식이 올바르지 않음"); // 년, 월, 일이 유효하지 않음
 	            }
 	            
 	            if (hour < 5 || hour > 24 || minute < 0 || minute > 59) {
-	                return false; // 시간 또는 분이 유효하지 않음
+	                error.add("시간 또는 분 형식이 올바르지 않음"); // 시간 또는 분이 유효하지 않음
 	            }
 
 	            int daysInMonth = getDaysInMonth(year, month);
-	            return day <= daysInMonth;
+	            if(day > daysInMonth) {
+	            	error.add(String.format("입력하신 %d월에는 %d일이 없습니다.",month, day));
+	            }
 	            
 	        } catch (NumberFormatException e) {
-	            return false; // 정수로 변환할 수 없는 문자열이 입력됨
+	            error.add("날짜 형식이 올바르지 않습니다.");
+	            
 	        }
 			
-
+			error.add("오류없음");
+			
+			return error;
 			
 			
 			

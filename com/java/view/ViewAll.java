@@ -787,15 +787,15 @@ System.out.println();
 	public static void 	realMain() {
 	System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 	System.out.println();
-	System.out.println("\t\t\t       SEOUL METRO");
+	System.out.println("\t\t\t      SEOUL METRO");
 	System.out.println();
 	System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 
 	System.out.println();
-	System.out.println("\t\t\t 1. 로그인");
-	System.out.println("\t\t\t 2. 회원가입");
-	System.out.println("\t\t\t 3. ID/PW 찾기");
-	System.out.println("\t\t\t 4. 종료");
+	System.out.println("\t\t\t\t 1. 로그인");
+	System.out.println("\t\t\t\t 2. 회원가입");
+	System.out.println("\t\t\t\t 3. ID/PW 찾기");
+	System.out.println("\t\t\t\t 4. 종료");
 	System.out.println();
 
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");

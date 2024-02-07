@@ -1875,9 +1875,11 @@ System.out.println("╬╬═════════════╬╬═══
 	}
 	
 	public static void chooseNum() {
+
 		clear();
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.print("\t\t\t선택 (번호): ");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.print("\t\t\t\t선택 (번호): ");
+
 	}
 	public static void chooseline() {
 		clear();

@@ -20,7 +20,7 @@ public class ScheduleTab {
 			
 			
 			ViewAll.calMain();
-			System.out.print("선택 (번호): ");
+			System.out.print("\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 일정 보기
@@ -35,8 +35,8 @@ public class ScheduleTab {
 				break;
 					
 			} else { // 이외의 숫자 입력 시
-					System.out.println("해당 섹션이 없습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					ViewAll.pause();
 			}
 			
@@ -55,13 +55,13 @@ public class ScheduleTab {
 			String date = "";
 			String station = "";
 			String content = "";
-			System.out.println("추가할 스케줄을 입력해주세요.");
-			System.out.print("날짜(YYYY-MM-DD): ");
+			System.out.println("\t\t\t추가할 스케줄을 입력해주세요.");
+			System.out.print("\t\t\t날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
-			System.out.print("역: ");
+			System.out.print("\t\t\t역: ");
 			station = scan.nextLine();
 			ViewAll.calAdd();
-			System.out.print("스케줄내용: ");
+			System.out.print("\t\t\t스케줄내용: ");
 			content = scan.nextLine();
 			
 			if (station.endsWith("역")) {
@@ -79,17 +79,17 @@ public class ScheduleTab {
 				Collections.sort(Data.scheduleList, Schedule.timeComparator);
 				
 				LogSave.logSave(LogSave.ADDSCHEDULE);
-				System.out.println("스케줄이 추가되었습니다.");
+				System.out.println("\t\t\t스케줄이 추가되었습니다.");
 				
 				// 일정추가 종료
 				break;
 				
 			}
 			ViewAll.errorQuestionEmo();
-			System.out.println("잘못된 입력입니다");
-			System.out.println("다시 입력하시려면 아무키나 입력하세요");
-			System.out.println("뒤로가시려면 엔터입력");
-			System.out.print("입력: ");
+			System.out.println("\t\t\t잘못된 입력입니다");
+			System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
+			System.out.println("\t\t\t뒤로가시려면 엔터입력");
+			System.out.print("\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -114,11 +114,11 @@ public class ScheduleTab {
 		
 			ScheduleSearch.schedulePage(Data.scheduleList);
 			ViewAll.calDeleteMid();
-			System.out.print("삭제할 날짜(YYYY-MM-DD): ");
+			System.out.print("\t\t\t삭제할 날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
-			System.out.print("삭제할 일정(정확하게): ");
+			System.out.print("\t\t\t삭제할 일정(정확하게): ");
 			content = scan.nextLine();
-			System.out.print("삭제할 일정의 역: ");
+			System.out.print("\t\t\t삭제할 일정의 역: ");
 			station = scan.nextLine();
 			
 			if (station.endsWith("역")) {
@@ -147,10 +147,10 @@ public class ScheduleTab {
 			}
 		
 			
-			System.out.println("잘못된 입력입니다.");
-			System.out.println("다시 입력하시려면 아무키나 입려하세요");
-			System.out.println("뒤로가시려면 엔터입력");
-			System.out.print("입력: ");
+			System.out.println("\t\t\t잘못된 입력입니다.");
+			System.out.println("\t\t\t다시 입력하시려면 아무키나 입려하세요");
+			System.out.println("\t\t\t뒤로가시려면 엔터입력");
+			System.out.print("\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

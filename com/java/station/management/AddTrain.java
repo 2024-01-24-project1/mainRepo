@@ -43,7 +43,7 @@ public class AddTrain extends StationManagement {
 			while(loop) {
 				
 				ViewAll.trainAddOne();
-				System.out.print("\t\t\t호선           : ");
+				System.out.print("\t\t\t\t호선: ");
 				line = reader.readLine();
 				
 				if(line.contains("호선")){
@@ -55,8 +55,7 @@ public class AddTrain extends StationManagement {
 				System.out.print("\t\t\t추가 열차수    : ");        
 				trainNums = reader.readLine();
 				
-				
-				ViewAll.trainAddThree();
+				ViewAll.trainAddOne();
 				System.out.print("\t\t\t시작역         : ");
 				startStation = reader.readLine();
 				
@@ -64,7 +63,6 @@ public class AddTrain extends StationManagement {
 					startStation = startStation.substring(0,startStation.length()-1);
 				}
 				
-				ViewAll.trainAddFour();
 				System.out.print("\t\t\t종료역         : ");
 				endStation = reader.readLine();
 				
@@ -72,11 +70,9 @@ public class AddTrain extends StationManagement {
 					endStation = endStation.substring(0,endStation.length()-1);
 				}
 				
-				ViewAll.trainAddFive();
 				System.out.print("\t\t\t시간대         : ");
 				time = reader.readLine();
 				
-				ViewAll.trainAddSix();
 				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
@@ -90,9 +86,9 @@ public class AddTrain extends StationManagement {
 					loop = false;
 				}else {
 					
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
 					
 					String input = reader.readLine();
 					if(input.equals("")) {
@@ -167,8 +163,7 @@ public class AddTrain extends StationManagement {
 			
 			
 			LogSave.logSave(LogSave.ADDTRAIN);
-			System.out.print("계속 하려면 엔터를 입력하세요.");
-			reader.readLine();
+			ViewAll.pause();
 			
 			
 		} catch (Exception e) {

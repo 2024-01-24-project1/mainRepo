@@ -1500,18 +1500,18 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	}
 	 
-	public static void trainAddOne() { // 역관리 >  열차 추가 > 추가 할 호선 0
+	public static void trainAddOne() { // 역관리 >  열차 추가 > 추가 할 호선 0 수정했음222222222222222222222222  
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
-		System.out.println("\t\t\t    일반 열차 추가");
+		System.out.println("\t\t\t     일반 열차 추가");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
 	}
-	public static void changeNoChairTrain() { // 역관리 >  열차 추가 > 추가 할 호선 0
+	public static void changeNoChairTrain() { // 역관리 >  열차 추가 > 추가 할 호선 수정했음 22222222222222222
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
-		System.out.println("\t\t\t 열차 변경 할 호선을 입력해주세요");
+		System.out.println("\t\t\t     의자 없는 열차 변경");
 		System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 
@@ -1725,7 +1725,7 @@ System.out.println();
 	public static void pause() { // 일시 정지
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("계속하려면 엔터를 입력하세요.");
+		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
 		scan.nextLine();
 	}
 	public static void noIDDataError() {

@@ -17,6 +17,7 @@ public class SignUp {
 			
 			// View에서 출력
 			ViewAll.signupMain();
+			ViewAll.chooseNum();
 			String sel = ""; // 선택한 번호
 			sel = scan.nextLine();
 			
@@ -34,8 +35,8 @@ public class SignUp {
 				
 			} else { // 이외의 숫자 입력 시
 				ViewAll.errorQuestionEmo();
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			
 			
@@ -171,7 +172,7 @@ public class SignUp {
 				User user = new User(name, id, pw, registration, phone); // 입력값 저장
 				Data.userList.add(user);
 				
-				System.out.println("회원가입이 완료되었습니다.");
+				System.out.println("\t\t\t회원가입이 완료되었습니다.");
 				System.out.println("\t\t\t회원 " + name + "님 환영합니다.");
 				ViewAll.pause();
 				
@@ -188,8 +189,8 @@ public class SignUp {
 				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
 				Data.employeeList.add(employee);
 				
-				System.out.println("회원가입이 완료되었습니다.");
-				System.out.println("직원 " + name + "님 환영합니다.");
+				System.out.println("\t\t\t회원가입이 완료되었습니다.");
+				System.out.println("\t\t\t직원 " + name + "님 환영합니다.");
 				ViewAll.pause();
 				
 				break;
@@ -198,9 +199,9 @@ public class SignUp {
 				
 				String back = "";
 				
-				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
-				System.out.println("뒤로가시려면 엔터를 입력하세요.");
-				System.out.print("입력: ");
+				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
+				System.out.println("\t\t\t뒤로가시려면 엔터를 입력하세요.");
+				System.out.print("\t\t\t입력: ");
 				back = scan.nextLine();
 				
 				if(back.equals("")) {

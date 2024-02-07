@@ -31,7 +31,6 @@ public class Main {
 		while(loop) {
 			
 			ViewAll.realMain();
-			ViewAll.chooseNum();
 			String sel = ""; 
 			sel = sc.nextLine();
 			

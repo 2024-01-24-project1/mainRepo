@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.member.user.UserVoice;
 import com.java.view.ViewAll;
 
@@ -29,6 +30,7 @@ public class UserVoiceSearch {
 			if(sel.equals("")) {
 				
 				// 모든민원보기 종료
+				LogSave.logSave(LogSave.USERVOICESEARCH);
 				break;
 			}
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
@@ -112,6 +113,7 @@ public class EmployeeUpdateTab {
 						if(employee.getId().equals(id)) {
 							employee.setPosition(input);
 							
+							LogSave.logSave(LogSave.CHANGEPOSITION);
 							System.out.println("\t\t\t직급변경이 완료되었습니다.");
 							
 							break;	// 직원 객체 탐색 종료
@@ -153,6 +155,7 @@ public class EmployeeUpdateTab {
 					if(employee.getId().equals(id)) {
 						employee.setLevel(input);;
 						
+						LogSave.logSave(LogSave.CHANGELEVEL);
 						System.out.println("\t\t\t권한변경이 완료되었습니다.");
 						
 						break;	// 직원 객체 탐색 종료
@@ -235,6 +238,7 @@ public class EmployeeUpdateTab {
 							
 							employee.setLine(LINE);			// 호선 변경
 							employee.setStation(STATION);	// 역 변경
+							LogSave.logSave(LogSave.CHANGEWORKSPACE);
 							System.out.println("\t\t\t근무지 변경 완료");
 							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
@@ -335,6 +339,7 @@ public class EmployeeUpdateTab {
 					
 					if(user.getId().equals(DELETE)) {
 						Data.userList.remove(user);
+						LogSave.logSave(LogSave.DELETEEMPLOYEE);
 						break;
 					}
 					

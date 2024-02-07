@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
 public class LostArticleSearch {
@@ -38,6 +39,7 @@ public class LostArticleSearch {
 					sel = scan.nextLine();
 					
 					if(sel.equals("")) {
+						LogSave.logSave(LogSave.LOSTARTICLESEARCH);
 						break;
 					}else if (Validation.is_NumString(sel)) {
 						index = Integer.parseInt(sel) - 1;

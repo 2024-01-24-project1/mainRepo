@@ -85,7 +85,7 @@ public final class EmployeeMode extends CommonFunction{
 				costsTableTab();
 			} else if(sel.equals("7")) {	// 7. 열차 시간표
 				stationTimetableTab();
-			} else if (sel.equals("8")) {
+			} else if (sel.equals("8")) {   // 8. 행동로그 보기
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 					
@@ -95,10 +95,10 @@ public final class EmployeeMode extends CommonFunction{
 					ViewAll.rankError();
 				}
 				
-			} else if (sel.equals("9")) {
+			} else if (sel.equals("9")) { // 9. 마이페이지
 				MyPage.myPageList("2");
 				
-			} else if (sel.equals("10")) {
+			} else if (sel.equals("10")) {// 10. 로그아웃
 				LoginLogout.logout();
 				
 				// 고객 모드 종료

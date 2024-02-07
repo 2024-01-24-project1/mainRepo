@@ -96,7 +96,7 @@ public class BusyStat extends StationManagement{
 			
 			this.route = lineRoute(line);
 			printBusy(BusyManagement.searchBusy(line, way, dayOfWeek,this.route),line,way,dayOfWeek,time);
-			
+			LogSave.logSave(LogSave.BUSYSTAT);
 			ViewAll.pause();
 			
 			

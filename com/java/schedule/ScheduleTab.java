@@ -135,6 +135,7 @@ public class ScheduleTab {
 							&& schedule.getStation().equals(station)) {
 						
 						Data.scheduleList.remove(schedule);
+						LogSave.logSave(LogSave.REMOVESCHEDULE);
 						System.out.println("스케줄이 삭제되었습니다.");
 						break;	// schedule객체 탐색 종료
 					}

@@ -2,6 +2,7 @@ package com.java.common;
 
 import java.util.Scanner;
 
+import com.java.common.log.LogSave;
 import com.java.member.employee.Employee;
 import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
@@ -68,6 +69,7 @@ public class MyPage {
 			} else if(sel.equals("")) {
 				
 				//마이 페이지 종료
+				if(mode.equals("2")) LogSave.logSave(LogSave.MYPAGE);
 				break;
 				
 			}else {
@@ -242,6 +244,7 @@ public class MyPage {
 					if(employee.getId().equals(LoginLogout.auth)) {
 						employee.setPhone(chPhone);
 						
+						LogSave.logSave(LogSave.MODIFYMYPAGE);
 						// user객체 탐색 종료
 						break;
 					}
@@ -308,7 +311,7 @@ public class MyPage {
 					
 					if(employee.getId().equals(LoginLogout.auth)) {
 						employee.setPw(chPw);
-						
+						LogSave.logSave(LogSave.MODIFYMYPAGE);
 						// employee객체 탐색 종료
 						break;
 					}
@@ -316,6 +319,7 @@ public class MyPage {
 				}
 				
 			}
+			
 			
 			System.out.println("변경이 완료되었습니다.");
 			

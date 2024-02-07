@@ -1,13 +1,15 @@
 package com.java.common.log;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 import com.java.common.Data;
+import com.java.view.ViewAll;
 
 public class LogTab {
 	
 	public static void printLog() {
 		
+		ArrayList<String> logPage = new ArrayList<>();
 		
 		for(Log log : Data.logList) {
 			
@@ -27,15 +29,14 @@ public class LogTab {
 				
 			}
 			
-			System.out.printf("\t\t\t날짜    : %s\n"
-					        + "\t\t\t아이디  : %s\n"
-					        + "\t\t\t행동로그: %s\n",log.getTime(),log.getId(),temp);
+			System.out.printf("\t날짜    : %s\n"
+					        + "\t아이디  : %s\n"
+					        + "\t행동로그: %s\n",log.getTime(),log.getId(),temp);
 			System.out.println();
 		}
-		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
-		scan.nextLine();
+		LogSave.logSave(LogSave.VIEWLOG);
+		ViewAll.pause();
 		
 		
 	}

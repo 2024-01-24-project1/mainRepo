@@ -1381,7 +1381,6 @@ System.out.println();
 		System.out.println();
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
 		System.out.println();
-		System.out.println("[이름]     [아이디]     [직급]     [전화번호]     [담당하는 역(호선)]");
 	}
 	public static void employeeSearchName() { // 이름으로 직원 검색 0 2
 		System.out.println("(∩,ව౩ව,)⊃━☆+ ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ﾟ ｡. +ﾟ ｡ﾟ.ﾟ｡☆ﾟ .+ .ﾟ.ﾟ｡ ");		

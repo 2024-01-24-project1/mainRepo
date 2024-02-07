@@ -727,10 +727,10 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t         1.내 정보 보기");
-		System.out.println("\t\t\t         2.회원정보 수정");
-		System.out.println("\t\t\t         3.노선 즐겨찾기");
-		System.out.println("\t\t\t         4.회원 탈퇴");
+		System.out.println("\t\t\t         1. 비밀번호 변경");
+		System.out.println("\t\t\t         2. 전화번호 변경");
+		System.out.println("\t\t\t         3. 회원탈퇴");
+		System.out.println("\t\t\t         4. 북마크");
 		System.out.println("\t\t\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
@@ -1862,7 +1862,6 @@ System.out.println("╬╬═════════════╬╬═══
 		
 	}
 	public static void pause() { // 일시 정지 2
-		clear();
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");

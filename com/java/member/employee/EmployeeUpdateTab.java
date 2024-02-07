@@ -103,8 +103,8 @@ public class EmployeeUpdateTab {
 			while(true) {
 				String input = "";
 				ViewAll.employeerankChangeTwo();
-				System.out.println("안전요원|사원|대리|과장|부장|사장");
-				System.out.print("변경할 직급: ");
+				System.out.println("\t\t\t안전요원|사원|대리|과장|부장|사장");
+				System.out.print("\t\t\t변경할 직급: ");
 				input = scan.nextLine();
 				
 				if( Validation.is_Position(input)) {
@@ -115,7 +115,7 @@ public class EmployeeUpdateTab {
 							employee.setPosition(input);
 							
 							LogSave.logSave(LogSave.CHANGEPOSITION);
-							System.out.println("직급변경이 완료되었습니다.");
+							System.out.println("\t\t\t직급변경이 완료되었습니다.");
 							
 							break;	// 직원 객체 탐색 종료
 						}
@@ -124,9 +124,9 @@ public class EmployeeUpdateTab {
 					
 					break;
 				}else {
-					System.out.println("잘못된 직급");
-					System.out.println("직급변경을 그만두시려면 엔터");
-					System.out.println("다시 입력하시려면 아무키나 입력하세요");
+					System.out.println("\t\t\t잘못된 직급");
+					System.out.println("\t\t\t직급변경을 그만두시려면 엔터");
+					System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {

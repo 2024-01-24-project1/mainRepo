@@ -52,10 +52,8 @@ public class AddTrain extends StationManagement {
 				
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-				System.out.print("\t\t\t추가 열차수    : ");        
-				trainNums = reader.readLine();
+			
 				
-				ViewAll.trainAddOne();
 				System.out.print("\t\t\t시작역         : ");
 				startStation = reader.readLine();
 				
@@ -69,6 +67,9 @@ public class AddTrain extends StationManagement {
 				if(endStation.endsWith("역")) {
 					endStation = endStation.substring(0,endStation.length()-1);
 				}
+				
+				System.out.print("\t\t\t추가 열차수    : ");        
+				trainNums = reader.readLine();
 				
 				System.out.print("\t\t\t시간대         : ");
 				time = reader.readLine();

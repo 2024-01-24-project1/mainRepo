@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.Validation;
-import com.java.common.log.LogSave;
+import com.java.member.employee.log.LogSave;
 import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
 

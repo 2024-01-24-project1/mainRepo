@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.common.log.LogSave;
+import com.java.member.employee.log.LogSave;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;

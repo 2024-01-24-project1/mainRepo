@@ -209,6 +209,8 @@ public class MyPageBookMark extends BookMarkRoute{
 					System.out.print("\t\t\t삭제 할 노선(숫자): ");
 					sel = reader.readLine();
 					
+					if(sel.equals("")) return;
+					
 					index = Integer.parseInt(sel)-1;
 					
 				} catch (Exception e) {
@@ -221,9 +223,6 @@ public class MyPageBookMark extends BookMarkRoute{
 					
 					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
 					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
-					
-				}else if(sel.equals("")) {
-					return;
 					
 				}else {
 					break;
@@ -238,7 +237,7 @@ public class MyPageBookMark extends BookMarkRoute{
 				if(b.getId().equals(LoginLogout.auth)) {
 					
 					b.getBookMarkList().remove(index);
-					System.out.println("즐겨찾기 삭제를 완료했습니다.");
+					System.out.println("\t\t\t즐겨찾기 삭제를 완료했습니다.");
 					ViewAll.pause();
 					
 				}

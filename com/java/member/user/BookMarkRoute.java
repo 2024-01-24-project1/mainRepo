@@ -81,7 +81,11 @@ public class BookMarkRoute extends FindWay{
 					
 					System.out.print("\t\t\t선택 할 노선(숫자): ");
 					sel = reader.readLine();
+					
+					if(sel.equals("")) return;
+					
 					index = Integer.parseInt(sel)-1;
+					
 					
 				} catch (Exception e) {
 					
@@ -94,8 +98,6 @@ public class BookMarkRoute extends FindWay{
 					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
 					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
 					
-				}else if(sel.equals("")) {
-					return;
 				}else {
 					break;
 				}

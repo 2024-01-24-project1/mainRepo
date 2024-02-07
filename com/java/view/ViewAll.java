@@ -601,22 +601,22 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t 1. 탈퇴 하기");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 
 	public static void favoriteDelete(){ //즐겨찾기 삭제 0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t          즐겨찾기 삭제");
+		System.out.println("\t\t\t        즐겨찾기 삭제");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 
 
 	public static void favoriteAdd() { // 즐겨찾기 등록 0 1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t          즐겨찾기 등록");
+		System.out.println("\t\t\t        즐겨찾기 등록");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}

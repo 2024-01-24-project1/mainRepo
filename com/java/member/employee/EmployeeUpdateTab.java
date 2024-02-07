@@ -47,7 +47,8 @@ public class EmployeeUpdateTab {
 			}else {
 				//다시입력
 				System.out.println();
-				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				System.out.println("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
 				View.pause();
 			}
 			
@@ -71,7 +72,7 @@ public class EmployeeUpdateTab {
 		
 		// 아이디 입력받기
 		System.out.println("직원의 아이디를 입력해주세요.");
-		System.out.printf("아이디: ");
+		System.out.print("아이디: ");
 		String input = scan.nextLine();
 		final String ID = input;
 		
@@ -80,7 +81,7 @@ public class EmployeeUpdateTab {
 			
 			// 직원계정의 정보를 출력
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(ID))
-							      .forEach(employee -> 
+							          .forEach(employee -> 
 							System.out.printf("이름: %10s|아이디: %20s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
 												, employee.getName()
 												, employee.getId()
@@ -109,7 +110,7 @@ public class EmployeeUpdateTab {
 			while(true) {
 				String input = "";
 				System.out.println("안전요원|사원|대리|과장|부장|사장");
-				System.out.println("변경할 직급: ");
+				System.out.print("변경할 직급: ");
 				input = scan.nextLine();
 				
 				if( Validation.is_Position(input)) {
@@ -131,7 +132,7 @@ public class EmployeeUpdateTab {
 					System.out.println("잘못된 직급");
 					System.out.println("직급변경을 그만두시려면 엔터");
 					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.println("입력: ");
+					System.out.print("입력: ");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -151,7 +152,7 @@ public class EmployeeUpdateTab {
 		while(true) {
 			String input = "";
 			System.out.println("권한없음 -> 2 | 권한있음 -> 3 ");
-			System.out.println("변경할 권한: ");
+			System.out.print("변경할 권한: ");
 			input = scan.nextLine();
 			
 			if( Validation.is_Level(input)) {
@@ -186,7 +187,7 @@ public class EmployeeUpdateTab {
 			boolean check = false;
 			String input = "";
 			System.out.println("1호선 ~ 9호선");
-			System.out.println("정확히 'N호선'입력: ");
+			System.out.print("정확히 'N호선'입력: ");
 			input = scan.nextLine();
 			
 			if( Validation.is_Line(input)) {
@@ -337,7 +338,7 @@ public class EmployeeUpdateTab {
 		
 		
 		System.out.println("삭제할 계정의 아이디를 입력해주세요.");
-		System.out.printf("아이디: ");
+		System.out.print("아이디: ");
 		String input = scan.nextLine();
 		final String DELETE = input;
 		
@@ -357,7 +358,7 @@ public class EmployeeUpdateTab {
 												, user.getPassCheck()
 												, user.getPassExpiry()));
 			System.out.println("해당 계정을 삭제하시겠습니까?");
-			System.out.println("yes만 삭제: ");
+			System.out.print("yes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {
@@ -390,7 +391,7 @@ public class EmployeeUpdateTab {
 												, employee.getStation()
 												, employee.getLevel()));
 			System.out.println("해당 계정을 삭제하시겠습니까?");
-			System.out.println("yes만 삭제: ");
+			System.out.print("yes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {

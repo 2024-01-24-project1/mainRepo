@@ -67,7 +67,7 @@ public class StatsTab {
 			
 			while(true) {
 				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.println("입력(N호선): ");
+				System.out.print("입력(N호선): ");
 				sel = scan.nextLine();
 
 				if(Validation.is_Line(sel)) {
@@ -129,7 +129,7 @@ public class StatsTab {
 		}else if (sel.equals("2")) {
 			while(true) {
 				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.println("입력(N호선): ");
+				System.out.print("입력(N호선): ");
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
@@ -166,6 +166,8 @@ public class StatsTab {
 				
 				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
 				System.out.println("뒤로가려면 엔터");
+				System.out.print("입력: ");
+				sel = scan.nextLine();
 				
 				if(sel.equals("")) {
 					

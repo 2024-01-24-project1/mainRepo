@@ -23,7 +23,7 @@ public class StationTimeTab {
 			
 			System.out.println("시간표를 그만보시려면 엔터입력");
 			System.out.println("호선을 입력해주세요");
-			System.out.println("입력(N호선): ");
+			System.out.print("입력(N호선): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

@@ -29,7 +29,8 @@ public class UserVoiceTab {
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("해당 섹션이 없습니다\r\n다시 입력해주세요.");
+				System.out.println("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
 				System.out.println();
 				View.pause();
 			} 
@@ -47,7 +48,6 @@ public class UserVoiceTab {
 		System.out.print("제목: ");
 		title = scan.nextLine();
 		System.out.print("내용: ");
-		System.out.println();
 		content = scan.nextLine();
 		
 		boolean titleCheck = (title.length() > 20 || title.length() < 2);

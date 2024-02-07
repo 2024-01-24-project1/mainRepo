@@ -131,10 +131,10 @@ public class StationTimePage {
 
 			// View클래스 출력
 			ViewAll.trainTimeTable();
-			System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+	System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			System.out.printf("                \t\t%-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
 			System.out.printf("             \t\t%-10s\t\t%-10s\r\n", up.get(0), down.get(0));
-			System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+	System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			
 			for(int i = 0; i < 4; i++) {
 				

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.station.management.StationManagement;
-import com.java.view.View;
 import com.java.view.ViewAll;
 
 
@@ -93,7 +92,7 @@ public class BusyStat extends StationManagement{
 			this.route = lineRoute(line);
 			printBusy(BusyManagement.searchBusy(line, way, dayOfWeek,this.route),line,way,dayOfWeek,time);
 			
-			View.pause();
+			ViewAll.pause();
 			
 			
 		} catch (Exception e) {

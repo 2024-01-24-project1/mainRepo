@@ -11,7 +11,6 @@ import com.java.member.employee.stats.StatsTab;
 import com.java.schedule.ScheduleTab;
 import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
-import com.java.view.View;
 import com.java.view.ViewAll;
 
 public final class EmployeeMode extends CommonFunction{
@@ -108,7 +107,7 @@ public final class EmployeeMode extends CommonFunction{
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 		
 			if(LoginLogout.getOut) {

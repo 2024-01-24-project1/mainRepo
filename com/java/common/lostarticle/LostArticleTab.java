@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class LostArticleTab {
 	
@@ -44,7 +44,7 @@ public class LostArticleTab {
 			} else { // 이외의 숫자 입력 시
 					System.out.println("해당 섹션이 없습니다.");
 					System.out.println("다시 입력해주세요.");
-					View.pause();
+					ViewAll.pause();
 			}
 			
 		}//while루프 종료
@@ -55,7 +55,7 @@ public class LostArticleTab {
 			
 			Scanner scan = new Scanner(System.in);
 			
-			View.title(" 분실물 검색");
+			//View.title(" 분실물 검색");
 			System.out.println();
 			
 			ArrayList<LostArticle> list = new ArrayList<LostArticle>();
@@ -168,7 +168,7 @@ public class LostArticleTab {
 				
 				LogSave.logSave(LogSave.LOSTARTICLEADD);
 				System.out.println("분실물 추가 완료");
-				View.pause();
+				ViewAll.pause();
 				
 				// 분실물 추가 종료
 				break;
@@ -228,14 +228,14 @@ public class LostArticleTab {
 				}
 				LogSave.logSave(LogSave.LOSTARTICLEREMOVE);
 				System.out.println("분실물이 삭제되었습니다");
-				View.pause();
+				ViewAll.pause();
 				
 				// 분실물 삭제 종료
 				break;
 				
 			}else {
 				System.out.println("존재하지 않는 분실물 입니다.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			System.out.println("다시 삭제하려면 아무키나 입력");

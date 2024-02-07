@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.member.user.UserVoice;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class UserVoiceSearch {
 	
@@ -50,7 +50,7 @@ public class UserVoiceSearch {
 						
 						// 민원의 내용 출력
 						System.out.println(voice.getContent());
-						View.pause();
+						ViewAll.pause();
 						
 						break; // 민원객체 탐색 종료
 					}
@@ -60,7 +60,7 @@ public class UserVoiceSearch {
 			}else {
 				System.out.println("잘못된 제목");
 				System.out.println("다시 입력하세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			

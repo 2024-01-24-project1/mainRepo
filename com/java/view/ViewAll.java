@@ -731,7 +731,7 @@ System.out.println();
 	public static void signupFindId() { // ID 찾기 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃ ง ˙罒˙)ว )д*)!! 으이구 증말!! ▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println("\t\t\t           ID 찾기");
-		System.out.println("(본인의 이름과 주민등록번호를 차례대로 입력해주세요)");
+		System.out.println("\t\t(본인의 이름과 주민등록번호를 차례대로 입력해주세요)");
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
 		System.out.println();
 		
@@ -746,7 +746,9 @@ System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t 1. ID 찾기");
 		System.out.println("\t\t\t 2. PW 찾기");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
+		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.print("\t\t\t입력: ");
+		}
 	
 	public static void signupEmployee() { // 회원가입 관리자용 가입 01
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -763,12 +765,8 @@ System.out.println();
 	
 	}
 
-	public static void userName() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
-	}
-	
 	public static void userNameHello() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
+		System.out.printf("\t\t\t%s님 환영합니다.\r\n",LoginLogout.authName);
 	}
 	
 		
@@ -1700,7 +1698,7 @@ System.out.println();
 	public static void pause() { // 일시 정지
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("계속하려면 엔터를 입력하세요.");
+		System.out.printf("\t\t\t계속하려면 엔터를 입력하세요.\r\n");
 		scan.nextLine();
 	}
 	public static void noIDDataError() {

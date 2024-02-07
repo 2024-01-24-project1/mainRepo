@@ -8,7 +8,7 @@ import com.java.common.Validation;
 import com.java.station.StationNamePage;
 import com.java.station.management.FindWay;
 import com.java.station.management.StationManagement;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class AnotherDateFindWay extends FindWay {
@@ -125,7 +125,7 @@ public class AnotherDateFindWay extends FindWay {
 			}
 
 			findWay(line, start, end, calendar);
-			View.pause();
+			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
 			System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
@@ -136,7 +136,7 @@ public class AnotherDateFindWay extends FindWay {
 
 				registerBookMark(line, start, end, calendar);
 				System.out.println("즐겨찾기 등록을 완료했습니다.");
-				View.pause();
+				ViewAll.pause();
 				return;
 
 			}

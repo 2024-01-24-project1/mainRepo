@@ -5,7 +5,8 @@ import java.util.Scanner;
 import com.java.busy.BusyStat;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
-import com.java.view.View;
+import com.java.view.ViewAll;
+
 
 public class StatsTab {
 	
@@ -46,7 +47,7 @@ public class StatsTab {
 			}else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 		}//while루프 종료
@@ -83,20 +84,22 @@ public class StatsTab {
 							break;
 					case 2: Graph.drawGraph(Stats.linePassneger(sel), 2800000L);
 						    break;
-					case 3: Graph.drawGraph(Stats.linePassneger(sel), 1050000L);
+					case 3: Graph.drawGraph(Stats.linePassneger(sel), 1300000L);
 							break;
-					case 4: Graph.drawGraph(Stats.linePassneger(sel), 1030000L);
+					case 4: Graph.drawGraph(Stats.linePassneger(sel), 1150000L);
 							break;
-					case 5: Graph.drawGraph(Stats.linePassneger(sel), 1300000L);
+					case 5: Graph.drawGraph(Stats.linePassneger(sel), 1450000L);
 							break;
-					case 6: Graph.drawGraph(Stats.linePassneger(sel), 700000L);
+					case 6: Graph.drawGraph(Stats.linePassneger(sel), 800000L);
 							break;
-					case 7: Graph.drawGraph(Stats.linePassneger(sel), 1200000L);
+					case 7: Graph.drawGraph(Stats.linePassneger(sel), 1350000L);
 							break;
-					case 8: Graph.drawGraph(Stats.linePassneger(sel), 390000L);
+					case 8: Graph.drawGraph(Stats.linePassneger(sel), 450000L);
 							break;
-					case 9: Graph.drawGraph(Stats.linePassneger(sel), 770000L);
+					case 9: Graph.drawGraph(Stats.linePassneger(sel), 900000L);
 							break;
+							
+								
 						
 					}
 					

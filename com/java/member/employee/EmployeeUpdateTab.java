@@ -9,7 +9,8 @@ import com.java.common.log.LogSave;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
-import com.java.view.View;
+import com.java.station.management.StationManagement;
+import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
 	
@@ -50,7 +51,7 @@ public class EmployeeUpdateTab {
 				System.out.println();
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			
@@ -98,7 +99,7 @@ public class EmployeeUpdateTab {
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
-			View.pause();
+			ViewAll.pause();
 		}
 	}//End of searchEmployeeId()
 	
@@ -140,7 +141,7 @@ public class EmployeeUpdateTab {
 					if(input.equals("")) {
 						break;
 					}
-					View.pause();
+					ViewAll.pause();
 				}
 			}
 		
@@ -175,7 +176,7 @@ public class EmployeeUpdateTab {
 				break;
 			}else {
 				System.out.println("잘못된 권한");
-				View.pause();
+				ViewAll.pause();
 			}
 		}
 		
@@ -200,28 +201,7 @@ public class EmployeeUpdateTab {
 				final String LINE = input;
 				
 				// 선택한 호선의 역이름들 보여주기
-				switch (Integer.parseInt(input)) {
-					
-					case 1: StationNamePage.stationNamePage(Data.LINE1_STATION_NAME, LINE);
-							break;
-					case 2: StationNamePage.stationNamePage(Data.LINE2_STATION_NAME, LINE);
-							break;
-					case 3: StationNamePage.stationNamePage(Data.LINE3_STATION_NAME, LINE);
-							break;
-					case 4: StationNamePage.stationNamePage(Data.LINE4_STATION_NAME, LINE);
-							break;
-					case 5: StationNamePage.stationNamePage(Data.LINE5_STATION_NAME, LINE);
-							break;
-					case 6: StationNamePage.stationNamePage(Data.LINE6_STATION_NAME, LINE);
-							break;
-					case 7: StationNamePage.stationNamePage(Data.LINE7_STATION_NAME, LINE);
-							break;
-					case 8: StationNamePage.stationNamePage(Data.LINE8_STATION_NAME, LINE);
-							break;
-					case 9: StationNamePage.stationNamePage(Data.LINE9_STATION_NAME, LINE);
-							break;
-						
-				}
+				StationNamePage.stationNamePage(StationManagement.lineRoute(LINE), LINE);
 				
 				System.out.print("역 이름: ");
 				input = scan.nextLine();
@@ -270,7 +250,7 @@ public class EmployeeUpdateTab {
 							employee.setStation(STATION);	// 역 변경
 							System.out.println("근무지 변경 완료");
 							LogSave.logSave(LogSave.CHANGEWORKSPACE);
-							View.pause();
+							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
 							
 						}
@@ -405,7 +385,7 @@ public class EmployeeUpdateTab {
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
 						System.out.println(DELETE + "계정 삭제완료");
-						View.pause();
+						ViewAll.pause();
 						break;	// employee객체 탐색 중지
 					}
 					
@@ -424,7 +404,7 @@ public class EmployeeUpdateTab {
 			System.out.println("입력하신 계정은 존재하지 않습니다.");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of deleteAccount()
 	

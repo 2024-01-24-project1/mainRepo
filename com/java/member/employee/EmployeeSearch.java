@@ -94,7 +94,7 @@ public class EmployeeSearch {
 
 			list.stream().skip(index * 10)
 			.limit(10)
-			.forEach(employee -> System.out.printf("%-8s|%-20s|%-2s|%-3s - %-10s\t|%-13s\r\n"
+			.forEach(employee -> System.out.printf("%-8s|%-15s|%-2s|%-3s - %-10s\t|%-13s\r\n"
 					, employee.getName()
 					, employee.getId()
 					, employee.getPosition()
@@ -102,9 +102,9 @@ public class EmployeeSearch {
 					, employee.getStation() + "역"
 					, employee.getPhone()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.print("\t\t\t엔터입력시 리스트보기를 종료합니다.");
-			System.out.print("\t\t\t원하는 페이지: ");
+			System.out.printf("\t\t\t  Page: %s / %s\r\n", index + 1, page);
+			System.out.print("\t\t\t  엔터입력시 리스트보기를 종료합니다.\n");
+			System.out.print("\t\t\t  원하는 페이지: ");
 			sel = scan.nextLine();
 
 			if(sel.equals("")) {

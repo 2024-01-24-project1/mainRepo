@@ -9,9 +9,9 @@ import java.util.Collections;
 import java.util.Date;
 
 import com.java.busy.Busy;
-import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
 import com.java.member.employee.Employee;
+import com.java.member.employee.log.Log;
 import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;

@@ -1,4 +1,4 @@
-package com.java.common.log;
+package com.java.member.employee.log;
 
 import java.util.Scanner;
 

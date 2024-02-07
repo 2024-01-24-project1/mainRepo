@@ -341,6 +341,7 @@ public class FindWay extends StationManagement {
 	//현재 시간 길찾기 출력 > 출력메서드 
 	private void printWay(int minute, String departureTime) {
 			
+		ViewAll.findWay(stationManagement.route.get(0), stationManagement.route.get(stationManagement.route.size()-1));
 		System.out.print("\t");
 		for(int i=0; i<stationManagement.route.size(); i++) {
 			

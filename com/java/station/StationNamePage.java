@@ -45,7 +45,7 @@ public class StationNamePage {
                     System.out.println();
             });
             System.out.println();
-            System.out.printf("\n\t\t\tPage | %d / %d\n", currentPage + 1, totalPages);
+            System.out.printf("\n\t\t\t\tPage | %d / %d\n", currentPage + 1, totalPages);
             System.out.println();
             System.out.println("\t\t\t엔터를 누르면 페이지모드 종료.");
             System.out.print("\t\t\t페이지 번호 입력: ");

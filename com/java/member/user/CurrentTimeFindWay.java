@@ -30,7 +30,7 @@ public class CurrentTimeFindWay extends FindWay {
 			while(true) {
 
 				//ViewAll 선택노선 추가하기
-				System.out.print("\t\t\t호선: ");
+				System.out.print("\t\t\t\t호선: ");
 				line = reader.readLine();
 
 
@@ -41,14 +41,14 @@ public class CurrentTimeFindWay extends FindWay {
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
 				ViewAll.roadSearchRouteTop();
-				System.out.print("\t\t\t출발역: ");
+				System.out.print("\t\t\t\t출발역: ");
 				start = reader.readLine();
 
 				if(start.endsWith("역")) {
 					start = start.substring(0,start.length()-1);
 				}
 
-				System.out.print("\t\t\t도착역: ");
+				System.out.print("\t\t\t\t도착역: ");
 				end = reader.readLine();
 
 				if(end.endsWith("역")) {
@@ -80,7 +80,7 @@ public class CurrentTimeFindWay extends FindWay {
 
 			ViewAll.roadSearchRouteTimeBottom();
 			ViewAll.pause();
-			System.out.print("\t\t\t입력: ");
+			System.out.print("\t\t\t\t입력: ");
 			sel = reader.readLine();
 
 			while(true) {

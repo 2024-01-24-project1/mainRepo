@@ -35,19 +35,19 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 
-				System.out.print("년도 입력: ");
+				System.out.print("\t\t\t\t년도 입력: ");
 				year = reader.readLine();
 
-				System.out.print("월 입력: ");
+				System.out.print("\t\t\t\t월 입력  : ");
 				month = reader.readLine();
 
-				System.out.print("일 입력: ");
+				System.out.print("\t\t\t\t일 입력  : ");
 				date = reader.readLine();
 
-				System.out.print("시간: ");
+				System.out.print("\t\t\t\t시간     : ");
 				hour = reader.readLine();
 
-				System.out.print("분: ");
+				System.out.print("\t\t\t\t분       : ");
 				minute = reader.readLine();
 
 				error = Validation.is_anotherDate(year,month,date,hour,minute);
@@ -74,27 +74,23 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 
-				System.out.print("\t\t\t호선: ");
+				System.out.print("\t\t\t\t호선: ");
 				line = reader.readLine();
 
-				if(line.contains("\t\t\t호선")) {
-					line = line.replace("호선", "");
-				}
-				
 				if(line.contains("호선")) {
 					line = line.replace("호선", "");
 				}
 
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-				System.out.print("\t\t\t출발역: ");
+				System.out.print("\t\t\t\t출발역: ");
 				start = reader.readLine();
 
 				if(start.endsWith("역")) {
 					start = start.substring(0,start.length()-1);
 				}
 
-				System.out.print("\t\t\t도착역: ");
+				System.out.print("\t\t\t\t도착역: ");
 				end = reader.readLine();
 
 				if(end.endsWith("역")) {

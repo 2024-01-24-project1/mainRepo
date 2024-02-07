@@ -35,7 +35,7 @@ public class BookMarkRoute extends FindWay{
 			//즐겨 찾기 목록 출력
 			printMyBookMark(userBookMark);
 			selectBookMark(userBookMark);
-			
+			ViewAll.pause();
 			
 			
 			

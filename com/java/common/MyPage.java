@@ -18,7 +18,7 @@ public class MyPage {
 			Scanner scan = new Scanner(System.in);
 			ViewAll.userMyPage();
 			System.out.printf("\t\t이름: %s 아이디: %s 전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
-			
+			System.out.print("\t\t");
 			if(mode.equals("1")) {
 				
 				// 유저만 가지는 정보 출력
@@ -39,6 +39,8 @@ public class MyPage {
 			}
 			
 			System.out.println();
+			System.out.println();
+			System.out.println();
 			System.out.println("\t\t\t         0. 회원탈퇴");
 			System.out.println("\t\t\t         1. 비밀번호 변경");
 			System.out.println("\t\t\t         2. 전화번호 변경");
@@ -50,6 +52,7 @@ public class MyPage {
 			
 			
 			System.out.println("\t\t\t\t엔터입력시 뒤로가기");
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			

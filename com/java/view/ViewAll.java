@@ -435,9 +435,18 @@ System.out.println();
 	}
 
 	public static void roadSearchRouteBottom() { //길 찾기> 경로 입력 하단 라벨  1 2
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println("\t\t\t           길 찾기");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println();
+		System.out.println();
 		System.out.println("\t\t\t      1. 현재 시간 보기");
+		System.out.println();
 		System.out.println("\t\t\t      2. 다른 날짜 보기");
-		System.out.println("\t\t\t      뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println();
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 
 	}
 	public static void roadSearchRouteTop() { //길 찾기 >경로 입력 상단 라벨 1 2
@@ -449,6 +458,14 @@ System.out.println();
 		System.out.println();
 	}
 	
+	public static void findWay(String start, String end) { //길 찾기 >경로 입력 상단 라벨 1 2
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.printf("\t\t\t   길 찾기 (%s역 -> %s역)\n",start,end);
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println();
+		System.out.println();
+	}
 	public static void roadSearchMain() { //길찾기 메뉴 1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
@@ -456,10 +473,12 @@ System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println();
+		System.out.println("\t\t\t       1. 경로 입력");
 		System.out.println();
-		System.out.println("\t\t\t    1. 경로 입력");
-		System.out.println("\t\t\t    2. 즐겨 찾기 노선");
-		System.out.println("\t\t\t    뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t       2. 즐겨 찾기 노선");
+		System.out.println();
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");	
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 	}
 	
 	public static void seasonPassCodeBottom() { //정기권 코드 입력 하단 (if문으로 해야 할 거 같습니다.)

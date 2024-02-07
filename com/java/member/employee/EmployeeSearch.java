@@ -95,7 +95,7 @@ public class EmployeeSearch {
 
 			list.stream().skip(index * 10)
 			.limit(10)
-			.forEach(employee -> System.out.printf("%-8s|%-20s|%-2s|%-3s - %-10s|%-13s\r\n"
+			.forEach(employee -> System.out.printf("%-8s|%-20s|%-2s|%-3s - %-10s\t|%-13s\r\n"
 					, employee.getName()
 					, employee.getId()
 					, employee.getPosition()

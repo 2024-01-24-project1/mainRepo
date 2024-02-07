@@ -1,14 +1,11 @@
 package com.java.member.user;
 
 import java.util.Scanner;
-
-import javax.swing.text.View;
-
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
+import com.java.view.View;
 import com.java.view.ViewAll;
-
 
 public class UserVoiceTab {
 	
@@ -16,12 +13,12 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			//View.userVoiceView();
+			View.userVoiceView();
 			
 			Scanner scan = new Scanner(System.in);
 			String num = "";
 			num = scan.nextLine();
-
+			ViewAll.userVocMain();
 			if (num.equals("1")) { 		  // 1. 일반 민원 접수
 				complain();
 			} else if (num.equals("2")) { // 2. 분실물 목록 확인
@@ -47,8 +44,7 @@ public class UserVoiceTab {
 		
 		String title = "";
 		String content = "";
-			
-		//View.title("민원 접수");
+		ViewAll.userVoc();
 		System.out.print("제목: ");
 		title = scan.nextLine();
 		System.out.print("내용: ");
@@ -58,9 +54,11 @@ public class UserVoiceTab {
 		boolean contentCheck = (content.length() > 200 || content.length() < 2); 
 		
 		if (titleCheck) {
+			ViewAll.errorQuestionEmo();
 			System.out.println("제목의 글자 수는 2~20자로 제한됩니다.");
 		}
 		if( contentCheck) {
+			ViewAll.errorQuestionEmo();
 			System.out.println("내용의 글자수는 2 ~ 200자로 제한됩니다.");
 		} 
 		
@@ -71,6 +69,7 @@ public class UserVoiceTab {
 			UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
 			Data.userVoiceList.add(userVoice);
 		}else {
+			ViewAll.errorQuestionEmo();
 			System.out.println("다시 민원을 접수해주세요.");
 		}
 		ViewAll.pause();

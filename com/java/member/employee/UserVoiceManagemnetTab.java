@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public final class UserVoiceManagemnetTab {
@@ -16,14 +17,8 @@ public final class UserVoiceManagemnetTab {
 		while(true) {
 			String sel = ""; // 선택한 번호
 			
-			System.out.println("=======================================");
-			System.out.printf("             민원           ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 전체 분실물 보기");
-			System.out.println("           2. 전체 민원 보기");
-			System.out.println("              뒤로가기 엔터");
-			System.out.println("--------------------------------------");
+			ViewAll.vocMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			

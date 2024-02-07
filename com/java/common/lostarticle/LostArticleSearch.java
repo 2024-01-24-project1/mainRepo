@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.Validation;
+import com.java.view.ViewAll;
 
 public class LostArticleSearch {
 	
@@ -20,9 +21,7 @@ public class LostArticleSearch {
 					String sel = "";	// 입력받는 문자열
 					
 					// View클래스 출력
-					System.out.println("======================================================");
-					System.out.println("                  분실물 리스트");
-					System.out.println("======================================================");
+					ViewAll.lostarticleList();
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)

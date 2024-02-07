@@ -5,13 +5,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-import javax.swing.text.View;
-
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
+import com.java.view.View;
 import com.java.view.ViewAll;
-
 
 public class PassTab {
 
@@ -22,13 +20,10 @@ public class PassTab {
 		
 		while(true) {
 			
-			//ViewAll.ticketView();
+			View.ticketView();
 			String sel = "";
-			
-			System.out.println("정기권 페이지");
-			System.out.println("1 -> 나의 정기권 확인하기");
-			System.out.println("2 -> 정기권 코드 입력");
-			System.out.println("뒤로가기 엔터");
+			ViewAll.seasonPassEmo();
+			ViewAll.seasonPassMain();
 			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
@@ -44,6 +39,7 @@ public class PassTab {
 				
 				//다시입력
 				System.out.println();
+				ViewAll.errorQuestionEmo();
 				System.out.printf("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
 				ViewAll.pause();
@@ -56,11 +52,11 @@ public class PassTab {
 	
 	public static void myTicket() { // 1. 내 정기권 확인
 		
-		//View.title("나의 정기권 확인하기");
 		
 		if ( LoginLogout.pass.equals("있음") ) {
 			
-			System.out.println(LoginLogout.authName + "님의 정기권");
+
+			ViewAll.seasonPassRegisterTop();
 			System.out.println("     <사용 기간> ");
 			System.out.println(LoginLogout.passExpiry);
 			
@@ -73,7 +69,7 @@ public class PassTab {
 	
 	public static void signPass() { // 2. 정기권 등록
 		
-		//View.title("정기권 등록");
+		ViewAll.seasonPassCodeTop();
 		
 		Scanner scan = new Scanner(System.in);
 		

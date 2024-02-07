@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.java.common.Validation;
-import com.java.common.log.LogSave;
-
+import com.java.member.employee.log.LogSave;
 import com.java.view.ViewAll;
 
 public class ScheduleSearch {

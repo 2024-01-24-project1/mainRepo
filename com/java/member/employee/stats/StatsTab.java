@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 import com.java.busy.BusyStat;
 import com.java.common.Validation;
-import com.java.common.log.LogSave;
-
+import com.java.member.employee.log.LogSave;
 import com.java.view.ViewAll;
 
 public class StatsTab {

@@ -1928,7 +1928,7 @@ System.out.println("╬╬═════════════╬╬═══
 			ViewAll.trainAddError();
 			System.out.println();
 			for(String log : error) {
-				System.out.printf("\t\t\t%d. %s\n\n",index++,log);
+				System.out.printf("\t\t%d. %s\n\n",index++,log);
 			}
 			System.out.println();
 

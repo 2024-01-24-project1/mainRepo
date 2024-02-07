@@ -2,6 +2,7 @@ package com.java.member.user;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.java.common.Data;
@@ -9,7 +10,6 @@ import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
-
 import com.java.view.ViewAll;
 
 public class MyPageBookMark extends BookMarkRoute{
@@ -64,6 +64,7 @@ public class MyPageBookMark extends BookMarkRoute{
 						String start = "";
 						String end = "";
 						String time = "";
+						ArrayList<String> error = new ArrayList<>();
 
 
 						while(true) {
@@ -88,13 +89,17 @@ public class MyPageBookMark extends BookMarkRoute{
 								time = time.substring(0,time.length()-1);
 							}
 
-							check = is_bookMark(line, start, end, time);
+							error = is_bookMark(line, start, end, time);
 
-							if(check) {
+							if(error.get(0).equals("오류없음")) {
 								break;
 							}
 							else {
-								System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+								
+								if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
+									return;                      //false 일 경우 뒤로가기
+								}
+								
 							}
 						}
 
@@ -193,29 +198,48 @@ public class MyPageBookMark extends BookMarkRoute{
 		
 	}
 	
-	public boolean is_bookMark(String line, String startStation, String endStation, String time) {
+	public ArrayList<String> is_bookMark(String line, String startStation, String endStation, String time) {
 		
-		if(line.contains("호선")){
-			line = line.replace("호선", "");
-		}
+		ArrayList<String> error = new ArrayList<>();
+		
 			
 		//호선 입력 확인 (1~9호선)
 		if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 				&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 				&& !line.equals("8") && !line.equals("9")) {
-			return false;
+			error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
 		}
 		
 		
 
-		if(!lineRoute(line).contains(startStation) && !lineRoute(line).contains(endStation)) {
+		if(!lineRoute(line).contains(startStation) || !lineRoute(line).contains(endStation)) {
 			
-			return false;
+			error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));
 
 		}
-
 		
-		return true;
+		if(startStation.equals(endStation)) {
+			
+			error.add("시작역과 도착역이 같습니다.");
+			
+		}
+		try {
+			
+			if(Integer.parseInt(time)<5 || Integer.parseInt(time)>24) {
+				
+				error.add("시간은 5~24사이값만 입력하세요.");
+			}
+			
+		} catch (Exception e) {
+			
+			error.add("시간 형식이 올바르지 않습니다");
+
+			
+		}
+		
+		error.add("오류없음");
+		
+		return error;
 		
 	}
 	

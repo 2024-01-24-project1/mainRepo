@@ -6,7 +6,7 @@ import com.java.common.LoginLogout;
 
 public class ViewAll {
 	
-	public static void clear() {
+	public static void clear() { //화면 넘기기 명령어
 		
 		for(int i = 0; i < 20; i++) {
 			System.out.println();

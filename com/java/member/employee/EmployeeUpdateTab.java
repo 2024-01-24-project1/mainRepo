@@ -75,7 +75,7 @@ public class EmployeeUpdateTab {
 			// 직원계정의 정보를 출력
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(ID))
 							          .forEach(employee -> 
-							System.out.printf("이름: %10s|아이디: %20s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
+							System.out.printf("이름: %10s|아이디: %15s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
 												, employee.getName()
 												, employee.getId()
 												, employee.getRegistration().substring(0, 6)

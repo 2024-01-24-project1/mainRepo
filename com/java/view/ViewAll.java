@@ -1893,7 +1893,7 @@ System.out.println("╬╬═════════════╬╬═══
 	}
 	public static void chooseentStation() {
 		clear();
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t    도착역: ");
 	}
 	
@@ -1903,7 +1903,7 @@ System.out.println("╬╬═════════════╬╬═══
 		System.out.println();
 		System.out.printf("\t\t\t         %s 역리스트\n", line);
 		System.out.println();
-System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 
 	}

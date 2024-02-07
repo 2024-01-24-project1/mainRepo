@@ -7,6 +7,7 @@ import com.java.member.employee.EmployeeMode;
 import com.java.member.user.User;
 import com.java.member.user.UserMode;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public final class LoginLogout {
 	
@@ -51,7 +52,7 @@ public final class LoginLogout {
 			boolean checkUser = false;
 			boolean checkEmployee = false;
 			
-			View.title("로그인");
+			ViewAll.loginTop();
 			
 			System.out.print("아이디: ");
 			String id = scan.nextLine();
@@ -84,7 +85,7 @@ public final class LoginLogout {
 				
 				System.out.println("로그인이 완료되었습니다.");
 				System.out.println(LoginLogout.authName + "님 환영합니다.");
-				View.pause();
+				ViewAll.pause();
 				break;	// 아이디, 비밀번호 입력받기 종료
 				
 			}else if(checkEmployee){	// 직원계정으로 로그인 완료
@@ -112,8 +113,8 @@ public final class LoginLogout {
 					
 			}else {
 				String back = "";
-				
-				System.out.println("존재하지 않는 계정");
+				ViewAll.errorQuestionEmo();
+				ViewAll.noIdError();
 				System.out.println();
 				System.out.println("뒤로가시려면 엔터");
 				System.out.println("아무키나 입력시 다시 ID와 PW를 입력합니다.");
@@ -143,7 +144,7 @@ public final class LoginLogout {
 		LoginLogout.passExpiry = "";
 		LoginLogout.phone = "";
 		System.out.println("로그아웃이 완료되었습니다.");
-		View.pause();
+		ViewAll.pause();
 		
 		
 	}//End of logout()

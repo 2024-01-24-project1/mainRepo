@@ -19,6 +19,7 @@ import com.java.requiredtime.RequiredTime;
 import com.java.schedule.Schedule;
 import com.java.station.PassengerCounting;
 import com.java.station.timetable.StationTime;
+import com.java.view.ViewAll;
 
 public final class Load {
 	Data data = new Data();
@@ -71,6 +72,7 @@ public final class Load {
 				return;
 				
 			}catch(Exception e){
+				ViewAll.errorFeelEmo();
 				System.out.println("분실물 리스트 로딩 실패");
 				e.printStackTrace();
 			}
@@ -123,6 +125,7 @@ public final class Load {
 				return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("역별시간표 로딩 실패");
 			e.printStackTrace();
 		}
@@ -182,6 +185,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("역 이름 로딩 실패");
 			e.printStackTrace();
 		}
@@ -208,6 +212,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("분실물 리스트 로딩 실패");
 			e.printStackTrace();
 		}
@@ -233,6 +238,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("민원 리스트 로딩 실패");
 			e.printStackTrace();
 		}
@@ -263,6 +269,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("로그리스트 로딩 실패");
 			e.printStackTrace();
 		}
@@ -304,6 +311,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("유저리스트 로딩 실패");
 			e.printStackTrace();
 		}
@@ -328,6 +336,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("직원리스트 로딩 실패");
 			e.printStackTrace();
 		}
@@ -349,6 +358,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("정기권 코드 로드 실패");
 			e.printStackTrace();
 		}
@@ -377,6 +387,7 @@ public final class Load {
 			return;
 			
 		}catch(Exception e){
+			ViewAll.errorFeelEmo();
 			System.out.println("일정 로드 실패");
 			e.printStackTrace();
 		}
@@ -414,6 +425,7 @@ private void loadRequiredTime() {
 			
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("역간 소요시간 로드 실패");
 			e.printStackTrace();
 		}
@@ -482,6 +494,7 @@ private void loadRequiredTime() {
 			
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("혼잡도 로드 실패");
 			e.printStackTrace();
 		}
@@ -513,6 +526,7 @@ private void loadRequiredTime() {
 			
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("Load.loadBookMark");
 			e.printStackTrace();
 		}

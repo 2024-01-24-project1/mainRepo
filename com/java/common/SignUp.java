@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.java.member.user.User;
 import com.java.view.View;
-
+import com.java.view.ViewAll;
 import com.java.member.employee.Employee;
 
 // 회원가입
@@ -17,12 +17,7 @@ public class SignUp {
 		while(true) {
 			
 			// View에서 출력
-			View.title("회원가입");
-			System.out.println("회원가입");
-			System.out.println("1-> 고객가입");
-			System.out.println("2-> 직원가입");
-			System.out.println("엔터입력시 뒤로가기");
-			System.out.print("선택 (번호): ");
+			ViewAll.signupMain();
 			
 			String sel = ""; // 선택한 번호
 			sel = scan.nextLine();
@@ -40,9 +35,10 @@ public class SignUp {
 				break;
 				
 			} else { // 이외의 숫자 입력 시
+				ViewAll.errorQuestionEmo();
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			
 			
 			}

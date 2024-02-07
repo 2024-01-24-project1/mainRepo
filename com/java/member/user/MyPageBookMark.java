@@ -50,42 +50,44 @@ public class MyPageBookMark extends BookMarkRoute{
 					}
 
 				}else if(sel.equals("2")) {// 즐겨찾기 편집
+					
+					
+					while(true) {
+						ViewAll.favoriteChange();
+						ViewAll.chooseNum();
 
-					ViewAll.favoriteChange();
-					ViewAll.chooseNum();
+						sel = reader.readLine();
 
-					sel = reader.readLine();
+						if(sel.equals("1")) { // 즐겨찾기 등록
 
-					if(sel.equals("1")) { // 즐겨찾기 등록
+							addBookMark();
 
-						addBookMark();
+						}else if(sel.equals("2")) { //즐겨찾기 삭제
 
-					}else if(sel.equals("2")) { //즐겨찾기 삭제
+							ViewAll.favoriteDelete();
+							this.userBookMark = searchMyBookMark();
+							this.printMyBookMark(this.userBookMark);
 
-						ViewAll.favoriteDelete();
-						this.userBookMark = searchMyBookMark();
-						this.printMyBookMark(this.userBookMark);
-						
-						if(Validation.is_ExistBookMark(this.userBookMark)) {
-							
-							deleteBookMark();
-							
+							if(Validation.is_ExistBookMark(this.userBookMark)) {
+								
+								deleteBookMark();
+
+							}else {
+								ViewAll.pause();
+							}
+
+
+						}else if(sel.equals("3")) {
+							break;
 						}else {
+
+							System.out.println("\t\t\t해당 섹션이 없습니다.");
+							System.out.println("\t\t\t다시 입력해주세요.");
 							ViewAll.pause();
+
 						}
-						
 
-					}else if(sel.equals("3")) {
-						break;
-					}else {
-						
-						System.out.println("\t\t\t해당 섹션이 없습니다.");
-						System.out.println("\t\t\t다시 입력해주세요.");
-						ViewAll.pause();
-						
 					}
-
-
 				}else if(sel.equals("")) {
 					break;
 					
@@ -200,9 +202,18 @@ public class MyPageBookMark extends BookMarkRoute{
 			
 			while(true) {
 				
-				System.out.print("선택 할 노선: ");
-				sel = reader.readLine();
-				index = Integer.parseInt(sel)-1;
+				try {
+					System.out.print("\t\t\t삭제 할 노선(숫자): ");
+					sel = reader.readLine();
+					
+					index = Integer.parseInt(sel)-1;
+					
+				} catch (Exception e) {
+					
+					System.out.println("\t\t\t숫자만 입력하세요.");
+					continue;
+					
+				}
 				if(index>=userBookMark.size()) {
 					
 					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
@@ -210,6 +221,7 @@ public class MyPageBookMark extends BookMarkRoute{
 					
 				}else if(sel.equals("")) {
 					return;
+					
 				}else {
 					break;
 				}

@@ -140,8 +140,6 @@ public class FindWay extends StationManagement {
 
 			if(stationManagement.route.contains(b.getStation())) {
 				
-				System.out.println(calendar.get(Calendar.HOUR_OF_DAY));
-				System.out.println(calendar.get(Calendar.HOUR_OF_DAY)-5);
 				stationManagement.specificHourBusy.add(b.getCrowded().get((calendar.get(Calendar.HOUR_OF_DAY)-5)));
 
 			}

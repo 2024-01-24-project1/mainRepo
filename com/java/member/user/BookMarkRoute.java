@@ -77,9 +77,18 @@ public class BookMarkRoute extends FindWay{
 			
 			while(true) {
 				
-				System.out.print("\t\t\t선택 할 노선: ");
-				sel = reader.readLine();
-				index = Integer.parseInt(sel)-1;
+				try {
+					
+					System.out.print("\t\t\t선택 할 노선: ");
+					sel = reader.readLine();
+					index = Integer.parseInt(sel)-1;
+					
+				} catch (Exception e) {
+					
+					System.out.println("\t\t\t숫자만 입력하세요.");
+					continue;
+					
+				}
 				if(index>=userBookMark.size()) {
 					
 					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
@@ -101,11 +110,15 @@ public class BookMarkRoute extends FindWay{
 			minute = Integer.parseInt(temp[7]);
 			calendar.set(year, month, date, hour, minute);
 			
-			
+			if(calendar.get(Calendar.HOUR_OF_DAY)< 5 || calendar.get(Calendar.HOUR_OF_DAY) > 24 ) {
+				System.out.println("\t현재 시간에는 열차가 운행하지 않습니다. 다른 날짜보기를 이용해주세요.");
+				ViewAll.pause();
+				return;
+			}
 			
 			ViewAll.roadSearchFavoriteList();
 			this.findWay(temp[0],temp[1],temp[2],calendar);
-			
+			ViewAll.pause();
 		} catch (Exception e) {
 			System.out.println("BookMarkRoute.selectBookMark");
 			e.printStackTrace();
@@ -114,6 +127,7 @@ public class BookMarkRoute extends FindWay{
 	}
 
 	protected void printMyBookMark(List<String> userBookMark) {
+		
 		int index = 1;
 		
 		
@@ -121,7 +135,7 @@ public class BookMarkRoute extends FindWay{
 			
 			String[] temp = route.split("-");
 			
-			System.out.printf("%d. %s -> %s\n", index++, temp[1],temp[2]);
+			System.out.printf("\t\t\t\t%d. %s -> %s\n", index++, temp[1],temp[2]);
 			
 		}
 	}

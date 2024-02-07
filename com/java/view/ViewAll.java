@@ -620,6 +620,13 @@ System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}
+	public static void favoriteView() { // 즐겨찾기 등록 0 1 2
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println("\t\t\t          즐겨찾기 목록");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+	}
 	
 	
 	public static void favoriteChange() {//즐겨찾기 편집 0 1 2

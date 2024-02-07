@@ -57,16 +57,17 @@ public class BusyStat extends StationManagement{
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
 				if(line.equals("2")) {
+					
 					System.out.print("\t\t\t방향           : ");
 					
 				}else {
-					ViewAll.statisticsChaosTwo();
+					
 					System.out.print("\t\t\t방향           : ");
 				}
 				way = reader.readLine();
 				
+			
 				
-				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {

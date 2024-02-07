@@ -21,9 +21,9 @@ public class UserVoiceSearch {
 			String title = "";
 			
 			userVoicePage(Data.userVoiceList);
-			System.out.println("뒤로가기 엔터");
-			System.out.println("민원의 내용을 보시려면 아무키나 입력");
-			System.out.print("입력: ");
+			System.out.println("\t\t\t뒤로가기 엔터");
+			System.out.println("\t\t\t민원의 내용을 보시려면 아무키나 입력");
+			System.out.print("\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -32,11 +32,11 @@ public class UserVoiceSearch {
 				break;
 			}
 			
-			System.out.println("아이디와 제목을 정확히 입력하시면");
-			System.out.println("민원의 내용을 확인합니다.");
-			System.out.print("아이디: ");
+			System.out.println("\t\t\t아이디와 제목을 정확히 입력하시면");
+			System.out.println("\t\t\t민원의 내용을 확인합니다.");
+			System.out.print("\t\t\t아이디: ");
 			id = scan.nextLine();
-			System.out.print("제목: ");
+			System.out.print("\t\t\t제목: ");
 			title = scan.nextLine();
 			
 			if( Validation.is_Duplication_UserVoice(id, title)) {
@@ -58,8 +58,8 @@ public class UserVoiceSearch {
 				}
 				
 			}else {
-				System.out.println("잘못된 제목");
-				System.out.println("다시 입력하세요.");
+				System.out.println("\t\t\t잘못된 제목");
+				System.out.println("\t\t\t다시 입력하세요.");
 				ViewAll.pause();
 			}
 			
@@ -81,9 +81,7 @@ public class UserVoiceSearch {
 			String sel = "";	// 입력받는 문자열
 			
 			// View클래스 출력
-			System.out.println("======================================================");
-			System.out.println("                  민원 리스트");
-			System.out.println("======================================================");
+			ViewAll.vocListTop();
 			
 			list.stream().skip(index * 10)
 			 							 .limit(10)
@@ -92,9 +90,9 @@ public class UserVoiceSearch {
 					 													, uservoice.getTitle()
 					 													, uservoice.getIsRead()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.print("엔터입력시 페이지모드 종료.");
-			System.out.print("원하는 페이지: ");
+			System.out.printf("\t\tPage| %s / %s\r\n", index + 1, page);
+			System.out.print("\t\t\t엔터입력시 페이지모드 종료.");
+			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -103,15 +101,15 @@ public class UserVoiceSearch {
 				index = Integer.parseInt(sel) - 1;
 				
 				if(index < 0 || index >= page) {
-					System.out.println("페이지 범위를 벗어났습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					index = 0;
 					
 				}
 				
 			}else {
-				System.out.println("잘못된 입력입니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t잘못된 입력입니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 			}
 			
 		}//while루프 종료

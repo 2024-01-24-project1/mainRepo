@@ -2,7 +2,6 @@ package com.java.common;
 
 import java.util.Scanner;
 
-import com.java.view.View;
 import com.java.view.ViewAll;
 
 // 아이디, 비밀번호 찾기
@@ -13,22 +12,10 @@ public class FindAccount {
 		Scanner scan = new Scanner(System.in);
 		
 		while (true) {
-			
-			// View에서 출력
-			ViewAll.signupFindMain();
-			/*
-			  	1. ID 찾기
-			  	2. PW찾기
-			  	3. 뒤로가기
-			  	------------
-			  	선택(번호): 
-			 
-			 */
-			
-			// 사용자 입력 받기
+
 			String sel = "";
 			
-			System.out.print("입력: ");
+			ViewAll.signupFindMain();
 			sel = scan.nextLine();
 			
 			if (sel.equals("1")) { 		  // 1. ID 찾기
@@ -67,9 +54,9 @@ public class FindAccount {
 		Scanner scan = new Scanner(System.in);
 		
 		// 이름, 주민번호 입력받기
-		System.out.println("이름: ");
+		System.out.print("\t\t\t이름        : ");
 		String name = scan.nextLine();
-		System.out.println("주민등록번호: ");
+		System.out.print("\t\t\t주민등록번호: ");
 		String registration = scan.nextLine();
 		System.out.println();
 		
@@ -79,25 +66,25 @@ public class FindAccount {
 		
 		if(checkUser) {
 			
-			System.out.println("입력받은 이름과 주민번호의 고객 계정 존재");
+			System.out.println("\t\t\t입력받은 이름과 주민번호의 고객 계정 존재");
 			
 			Data.userList.stream().filter(user -> user.getName().equals(name) && user.getRegistration().equals(registration))
-				.forEach(s -> System.out.println(name + "님의 ID는 " + s.getId() + " 입니다."));
+				.forEach(user -> System.out.printf("\t\t\t%s님의 ID는 %s입니다.\r\n", name, user.getId()));
 			
 			
 		}else if (checkEmployee) {
-			System.out.println("입력받은 이름과 주민번호의 직원계정 존재");
+			System.out.println("\t\t\t입력받은 이름과 주민번호의 직원계정 존재");
 			
 			Data.employeeList.stream().filter(employee -> employee.getName().equals(name) && employee.getRegistration().equals(registration))
-									  .forEach(employee -> System.out.println(name + "님의 ID는 " + employee.getId() + " 입니다."));
+									  .forEach(employee -> System.out.printf("\t\t\t%s님의 ID는 %s입니다.\r\n", name, employee.getId()));
 			
 		}else {
 			ViewAll.errorHmmEmo();
 			ViewAll.noIDDataError();
-			System.out.println("입력받은 이름과 주민번호의 아이디가 없음");
+			System.out.println("\t\t\t입력받은 이름과 주민번호의 아이디가 없음");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 
 	}//End of findId()
 	
@@ -114,11 +101,11 @@ public class FindAccount {
 		Scanner scan = new Scanner(System.in);
 
 		// 아이디, 이름, 주민번호 입력받기
-		System.out.println("아이디: ");
+		System.out.print("\t\t\t아이디      : ");
 		String id = scan.nextLine();
-		System.out.println("이름: ");
+		System.out.print("\t\t\t이름        : ");
 		String name = scan.nextLine();
-		System.out.println("주민등록번호: ");
+		System.out.print("\t\t\t주민등록번호: ");
 		String registration = scan.nextLine();
 		System.out.println();
 		
@@ -132,29 +119,29 @@ public class FindAccount {
 							  
 		
 		if(checkUser) {
-			System.out.println("입력받은 이름과 아이디와 주민번호의 고객 계정 존재");
+			System.out.println("\t\t\t입력받은 이름과 아이디와 주민번호의 고객 계정 존재");
 			
 			Data.userList.stream().filter(user -> user.getName().equals(name) 
 											   && user.getRegistration().equals(registration)
 											   && user.getId().equals(id))
-								  .forEach(user -> System.out.println(name + "님의 PW는 " + user.getPw() + " 입니다."));
+								  .forEach(user -> System.out.printf("\t\t\t%s님의 PW는 %s입니다.\r\n", name, user.getPw()));
 			
 			
 		}else if (checkEmployee) {
-			System.out.println("입력받은 이름과 아이디와 주민번호의 직원계정 존재");
+			System.out.println("\t\t\t입력받은 이름과 아이디와 주민번호의 직원계정 존재");
 			
 			Data.employeeList.stream().filter(employee -> employee.getName().equals(name)
 										   && employee.getRegistration().equals(registration)
 										   && employee.getPw().equals(id))
-									  .forEach(employee -> System.out.println(name + "님의 PW는 " + employee.getPw() + " 입니다."));
+									  .forEach(employee -> System.out.printf("\t\t\t%s님의 PW는 %s입니다.\r\n", name, employee.getPw()));
 			
 		}else {
 			
 			ViewAll.errorHmmEmo();
 			ViewAll.noIDDataError();
-			System.out.println("입력받은 이름과 아이디, 주민번호의 아이디가 없음");
+			System.out.println("\t\t\t입력받은 이름과 아이디, 주민번호의 아이디가 없음");
 		}
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of findPw()
 

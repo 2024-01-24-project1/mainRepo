@@ -11,7 +11,7 @@ import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.station.management.FindWay;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class BookMarkRoute extends FindWay{
@@ -106,7 +106,7 @@ public class BookMarkRoute extends FindWay{
 			
 			ViewAll.roadSearchFavoriteList();
 			this.findWay(temp[0],temp[1],temp[2],calendar);
-			View.pause();
+			ViewAll.pause();
 			
 		} catch (Exception e) {
 			System.out.println("BookMarkRoute.selectBookMark");

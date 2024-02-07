@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class LostArticleTab {
@@ -87,6 +88,7 @@ public class LostArticleTab {
 						
 					}
 					
+					LogSave.logSave(LogSave.LOSTARTICLESEARCH);
 					LostArticleSearch.lostArticlePage(list);
 					
 				} else {			// 1개도 없으면
@@ -164,6 +166,7 @@ public class LostArticleTab {
 				LostArticle lostArticle = new LostArticle(article, content, find, keep);
 				Data.lostArticleList.add(lostArticle);
 				
+				LogSave.logSave(LogSave.LOSTARTICLEADD);
 				System.out.println("분실물 추가 완료");
 				View.pause();
 				
@@ -223,7 +226,7 @@ public class LostArticleTab {
 					}
 					
 				}
-				
+				LogSave.logSave(LogSave.LOSTARTICLEREMOVE);
 				System.out.println("분실물이 삭제되었습니다");
 				View.pause();
 				

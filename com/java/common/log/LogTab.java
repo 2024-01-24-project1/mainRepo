@@ -8,6 +8,10 @@ public class LogTab {
 	
 	public static void printLog() {
 		
+		if(Data.logList.size()==0) {
+			System.out.println("행동로그가 존재하지 않습니다.");
+		
+		}
 		
 		for(Log log : Data.logList) {
 			
@@ -31,7 +35,12 @@ public class LogTab {
 					        + "아이디  : %s\n"
 					        + "행동로그: %s\n",log.getTime(),log.getId(),temp);
 			System.out.println();
+			
+			LogSave.logSave(LogSave.VIEWLOG);
+			
 		}
+		
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("계속하려면 엔터를 입력하세요.");

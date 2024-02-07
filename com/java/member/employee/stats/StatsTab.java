@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.java.busy.BusyStat;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class StatsTab {
@@ -60,6 +61,9 @@ public class StatsTab {
 		
 		System.out.println("전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
+		
+		if(sel.equals("1") || sel.equals("2")) LogSave.logSave(LogSave.USERSTATSTAB);
+		
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allPassenger(), ALLPASSENGER);
@@ -123,6 +127,8 @@ public class StatsTab {
 		
 		System.out.println("전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
+		
+		if(sel.equals("1") || (sel.equals("2"))) LogSave.logSave(LogSave.SALESSTATSTAB);
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);

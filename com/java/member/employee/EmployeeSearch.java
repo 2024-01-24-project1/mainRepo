@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class EmployeeSearch {
@@ -37,6 +38,8 @@ public class EmployeeSearch {
 			search = scan.nextLine();
 			
 			final String SEARCH = search;
+			
+			LogSave.employeeSearchLog(SEARCH, searchlist);
 			
 			boolean check = employeeList.stream().anyMatch(employee -> employee.getName().equals(SEARCH)
 																	|| employee.getLine().contains(SEARCH)

@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.station.management.StationManagement;
 import com.java.view.View;
 import com.java.view.ViewAll;
@@ -119,7 +120,7 @@ public class BusyStat extends StationManagement{
 			
 		}
 		
-		
+		LogSave.logSave(LogSave.BUSYSTAT);
 		
 	}	
 	

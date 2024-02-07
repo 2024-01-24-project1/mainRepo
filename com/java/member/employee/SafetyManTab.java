@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
+import com.java.common.log.LogSave;
 import com.java.view.View;
 
 public class SafetyManTab {
@@ -95,6 +96,7 @@ public class SafetyManTab {
 				
 			}
 			
+			LogSave.logSave(LogSave.SAFYTYMANWORKAREACLEAR);
 			System.out.println("안전요원 부서 해제 완료");
 			
 		} else if ( Validation.is_SafetyMan(input) && Validation.is_WorkArea(input) ) {
@@ -123,6 +125,7 @@ public class SafetyManTab {
 			
 			EmployeeUpdateTab.updateWorkArea(input);
 			
+			LogSave.logSave(LogSave.ARRANGESAFYTYMAN);
 			System.out.println("안전요원 배치 완료");
 			
 		} else if ( Validation.is_SafetyMan(input) && !(Validation.is_WorkArea(input)) ) {

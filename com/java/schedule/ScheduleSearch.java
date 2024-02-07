@@ -45,7 +45,7 @@ public class ScheduleSearch {
 				System.out.print("원하는 페이지: ");
 				sel = scan.nextLine();
 				
-				if(sel.equals("")) {
+				if(sel.equals("")) { //페이지 종료
 					LogSave.logSave(LogSave.SCHEDULEPAGE);
 					break;
 				}else if (Validation.is_NumString(sel)) {

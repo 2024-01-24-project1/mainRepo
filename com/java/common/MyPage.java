@@ -156,7 +156,7 @@ public class MyPage {
 					
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
-						System.out.println(DELETE + "계정 삭제완료");
+						System.out.println("\t\t\t" + DELETE + "계정 삭제완료");
 						
 						LoginLogout.getOut = true;	// 메인화면으로 쫒아내기
 						

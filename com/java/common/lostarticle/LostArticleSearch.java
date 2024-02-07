@@ -25,15 +25,15 @@ public class LostArticleSearch {
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(article -> System.out.printf("%-10s|%-20s|%-10s|%-10s\r\n"
+					 							 .forEach(article -> System.out.printf("\t\t%-10s|%-20s|%-10s|%-10s\r\n"
 							 													, article.getArticle()
 							 													, article.getContent()
 							 													, article.getLostStation() + "역"
 							 													, article.getFindStation() + "역"));
 					
-					System.out.printf("Page| %s / %s\r\n", index + 1, page);
-					System.out.print("엔터입력시 리스트보기를 종료합니다.");
-					System.out.print("원하는 페이지: ");
+					System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);
+					System.out.print("\t\t\t엔터입력시 리스트보기를 종료합니다.");
+					System.out.print("\t\t\t원하는 페이지: ");
 					sel = scan.nextLine();
 					
 					if(sel.equals("")) {
@@ -42,15 +42,15 @@ public class LostArticleSearch {
 						index = Integer.parseInt(sel) - 1;
 						
 						if(index < 0 || index >= page) {
-							System.out.println("페이지 범위를 벗어났습니다.");
-							System.out.println("다시 입력해주세요.");
+							System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+							System.out.println("\t\t\t다시 입력해주세요.");
 							index = 0;
 							
 						}
 						
 					}else {
-						System.out.println("잘못된 입력입니다.");
-						System.out.println("다시 입력해주세요.");
+						System.out.println("\t\t\t잘못된 입력입니다.");
+						System.out.println("\t\t\t다시 입력해주세요.");
 					}
 					
 				}//while루프 종료

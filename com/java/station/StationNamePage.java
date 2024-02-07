@@ -9,6 +9,17 @@ public class StationNamePage {
 
 	public static void stationNamePage(ArrayList<String> list, String line) {
 		
+		
+		try { 
+			if(Integer.parseInt(line)<1 && Integer.parseInt(line)>9) {
+				return;
+			}
+			
+		} catch (Exception e) {
+			return;
+		}
+		
+		
 		int pageSize = 6; // 한 페이지에 보여줄 역의 개수
         int totalPages = (int) Math.ceil((double) list.size() / pageSize); // 전체 페이지 수
 

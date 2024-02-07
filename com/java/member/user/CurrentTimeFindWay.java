@@ -2,13 +2,13 @@ package com.java.member.user;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.java.common.Validation;
 import com.java.station.StationNamePage;
 import com.java.station.management.FindWay;
 import com.java.station.management.StationManagement;
-
 import com.java.view.ViewAll;
 
 public class CurrentTimeFindWay extends FindWay {
@@ -21,6 +21,7 @@ public class CurrentTimeFindWay extends FindWay {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
 			boolean check = true;
+			ArrayList<String> error = new ArrayList<>();
 			String sel = "";
 			String line = "";
 			String start = "";
@@ -56,19 +57,14 @@ public class CurrentTimeFindWay extends FindWay {
 					end = end.substring(0,end.length()-1);
 				}
 
-				check = Validation.is_currentTime(line, start, end);
+				error = Validation.is_currentTime(line, start, end);
 
-				if(check) {
+				if(error.get(0).equals("오류없음")) {
 					break;
 				}else { 
 
-					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
-					
-					String input = reader.readLine();
-					if(input.equals("")) {
-						return;
+					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
+						return;                      //false 일 경우 뒤로가기
 					}
 					
 				}

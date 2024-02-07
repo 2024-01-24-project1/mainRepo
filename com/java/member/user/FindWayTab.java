@@ -19,7 +19,7 @@ public class FindWayTab {
 			while(true) {
 				
 				ViewAll.roadSearchMain();
-				System.out.print("입력:");
+				System.out.print("\t\t\t입력:");
 				String sel = reader.readLine();
 				
 				

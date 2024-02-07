@@ -23,7 +23,7 @@ public class LostArticleTab {
 			lostArticleAll();
 			
 			ViewAll.lostarticleMain();
-			System.out.print("선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 분실물 검색
@@ -38,8 +38,8 @@ public class LostArticleTab {
 				break;
 					
 			} else { // 이외의 숫자 입력 시
-					System.out.println("해당 섹션이 없습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					ViewAll.pause();
 			}
 			
@@ -203,10 +203,10 @@ public class LostArticleTab {
 			String sel = "";
 			String sts = "";
 			ViewAll.lostarticleDelete();
-			System.out.println("삭제할 분실물의 이름");
-			System.out.print("분실물: ");
+			System.out.println("\t\t\t삭제할 분실물의 이름");
+			System.out.print("\t\t\t분실물      : ");
 			sel = scan.nextLine();
-			System.out.print("보관 된 위치: ");
+			System.out.print("\t\t\t보관 된 위치: ");
 			sts = scan.nextLine();
 			
 			if (sts.endsWith("역")) {
@@ -228,7 +228,7 @@ public class LostArticleTab {
 					
 				}
 				LogSave.logSave(LogSave.LOSTARTICLEREMOVE);
-				System.out.println("분실물이 삭제되었습니다");
+				System.out.println("\t\t\t분실물이 삭제되었습니다");
 				ViewAll.lostarticleDeleteResult();
 				ViewAll.pause();
 				
@@ -236,13 +236,12 @@ public class LostArticleTab {
 				break;
 				
 			}else {
-				System.out.println("존재하지 않는 분실물 입니다.");
+				System.out.println("\t\t\t존재하지 않는 분실물 입니다.");
 				ViewAll.pause();
 			}
 			
-			System.out.println("다시 삭제하려면 아무키나 입력");
-			System.out.println("뒤로 가시려면 엔터");
-			System.out.print("입력: ");
+			System.out.println("\t\t\t다시 삭제하려면 아무키나 입력");
+			System.out.println("\t\t\t뒤로 가시려면 엔터");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

@@ -34,19 +34,19 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 				ViewAll.roadSearchRouteOtherTimeTop();
-				System.out.print("년도 입력: ");
+				System.out.print("\t\t\t년도 입력: ");
 				year = reader.readLine();
 
-				System.out.print("월 입력: ");
+				System.out.print("\t\t\t월 입력: ");
 				month = reader.readLine();
 
-				System.out.print("일 입력: ");
+				System.out.print("\t\t\t일 입력: ");
 				date = reader.readLine();
 
-				System.out.print("시간: ");
+				System.out.print("\t\t\t시간: ");
 				hour = reader.readLine();
 
-				System.out.print("분: ");
+				System.out.print("\t\t\t분: ");
 				minute = reader.readLine();
 
 				check = Validation.is_anotherDate(year,month,date,hour,minute);
@@ -57,9 +57,9 @@ public class AnotherDateFindWay extends FindWay {
 
 				}else {
 					ViewAll.errorQuestionEmo();	
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
 					
 					String input = reader.readLine();
 					if(input.equals("")) {
@@ -80,23 +80,23 @@ public class AnotherDateFindWay extends FindWay {
 
 			while(true) {
 				ViewAll.roadSearchRouteTop();
-				System.out.print("호선: ");
+				System.out.print("\t\t\t호선: ");
 				line = reader.readLine();
 
-				if(line.contains("호선")) {
-					line = line.replace("호선", "");
+				if(line.contains("\t\t\t호선")) {
+					line = line.replace("\t\t\t호선", "");
 				}
 				
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-				System.out.print("출발역: ");
+				System.out.print("\t\t\t출발역: ");
 				start = reader.readLine();
 
-				if(start.endsWith("역")) {
+				if(start.endsWith("\t\t\t역")) {
 					start = start.substring(0,start.length()-1);
 				}
 
-				System.out.print("도착역: ");
+				System.out.print("\t\t\t도착역: ");
 				end = reader.readLine();
 
 				if(end.endsWith("역")) {
@@ -111,9 +111,9 @@ public class AnotherDateFindWay extends FindWay {
 
 				}else {
 
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
 
 					String input = reader.readLine();
 					if(input.equals("")) {
@@ -128,13 +128,13 @@ public class AnotherDateFindWay extends FindWay {
 			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
-			System.out.print("입력: ");
+			System.out.print("\t\t\t입력: ");
 			String sel = reader.readLine();
 
 			if(sel.equals("1")) {
 
 				registerBookMark(line, start, end, calendar);
-				System.out.println("즐겨찾기 등록을 완료했습니다.");
+				System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
 				ViewAll.pause();
 				return;
 

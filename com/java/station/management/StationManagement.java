@@ -2,14 +2,18 @@ package com.java.station.management;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import com.java.busy.Busy;
 import com.java.common.Data;
+import com.java.common.Validation;
+import com.java.member.employee.Employee;
 import com.java.requiredtime.RequiredTime;
 import com.java.station.timetable.StationTime;
+import com.java.view.ViewAll;
 
 /**
  * 길찾기, 혼잡도 관련 기능을 공유하는 클래스를 상속하기위한 추상클래스
@@ -64,7 +68,11 @@ public class StationManagement {
 	protected void printBusy(String startStation, String endStation, String time, ArrayList<Double> specificHourBusy,
 			ArrayList<Double> modifyBusy, ArrayList<String> convertBusy, ArrayList<String> convertModifyBusy ,boolean way, ArrayList<String> route) {
 		
+		ArrayList<String> busyPage = new ArrayList<>();
 		
+		String page = "";
+		String start = "";
+		String end = "";
 		
 		System.out.printf("시작역(%s)\n", startStation);
 		
@@ -85,14 +93,17 @@ public class StationManagement {
 					
 					if(route.get(i).equals(endStation)) {
 						
-						System.out.printf("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
-						System.out.printf("도착역(%s)\n", endStation);
+						page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+						end = String.format("도착역(%s)\n", endStation);
+						busyPage.add(page);
 						loop = false;
+						busyPage(busyPage, start, end);
 						return;
 						
 					}
 					
-					System.out.printf("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					busyPage.add(page);
 					i--;
 				}
 				
@@ -112,17 +123,20 @@ public class StationManagement {
 					
 					if(route.get(i).equals(endStation)) {
 						
-						System.out.printf("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
-						System.out.printf("도착역(%s)\n", endStation);
-						
-						
+						page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+						end = String.format("도착역(%s)\n", endStation);
+						busyPage.add(page);
 						loop = false;
+						busyPage(busyPage, start, end);
+						
 						return;
 						
 					}
 					
-					System.out.printf("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					page = String.format("%-35s  \t(%-5.1f %-5s) -> (%-5.1f %-5s)\n",route.get(i)+"역",specificHourBusy.get(i),convertBusy.get(i),modifyBusy.get(i),convertModifyBusy.get(i)); // 역이름, 변경전 혼잡도, 변경전 혼잡도 한글, 변경후 혼잡도, 변경후 혼잡도 한글
+					busyPage.add(page);
 					i++;
+					
 				}
 				
 			}
@@ -134,6 +148,51 @@ public class StationManagement {
 		
 	}
 	
+	public static void busyPage(ArrayList<String> list, String start, String end) {
+		// 리스트의 페이지수 계산
+		int page = (int)(Math.ceil((double)list.size() / 5));
+
+		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
+
+		Scanner scan = new Scanner(System.in);
+
+		while(true) {
+
+			String sel = "";	// 입력받는 문자열
+
+			// View클래스 출력
+			ViewAll.employeeSearch();
+
+			System.out.println(start);
+			list.stream().skip(index * 5)
+			.limit(5)
+			.forEach(busy -> System.out.println(busy));
+			System.out.println(end);
+			// 이름, ID, 전화번호, 직급, 호선, 역이름
+			System.out.printf("Page| %s / %s\r\n", index + 1, page);
+			System.out.println("엔터입력시 리스트보기를 종료합니다.");
+			System.out.print("원하는 페이지: ");
+			sel = scan.nextLine();
+
+			if(sel.equals("")) {
+				break;
+			}else if (Validation.is_NumString(sel)) {
+				index = Integer.parseInt(sel) - 1;
+
+				if(index < 0 || index >= page) {
+					System.out.println("페이지 범위를 벗어났습니다.");
+					System.out.println("다시 입력해주세요.");
+					index = 0;
+
+				}
+
+			}else {
+				System.out.println("잘못된 입력입니다.");
+				System.out.println("다시 입력해주세요.");
+			}
+
+		}//while루프 종료
+	}
 
 	/**
 	 * 입력받은 호선의 전체 경로를 리턴해주는 메서드

@@ -42,26 +42,22 @@ public final class EmployeeMode extends CommonFunction{
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
 				
-					// 역관리
-					System.out.println("1. 열차 추가, 2.의자없는 열차 배치");
-					sel = scan.nextLine();
-					
-					if(sel.equals("1")) {
-						AddTrain addTrain = new AddTrain();
-						addTrain.addTrain();
-					}else if (sel.equals("2")) {
-						ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
-						changeNoChairTrain.changeNoChairTrain();
-					}
+					StationManagementTab.stationManagementTab();
 					
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 
 				
 			} else if (sel.equals("2")) {	// 2 직원관리
-				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
-				else System.out.println("접근 권한이 없습니다.");
+				
+				if(LoginLogout.level.equals("5")) {
+					
+					EmployeeManagementTab.employeeManagementTab();
+					
+				} else {
+					ViewAll.rankError();
+				}
 			} else if (sel.equals("3")) {	// 3. 민원
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
@@ -69,7 +65,7 @@ public final class EmployeeMode extends CommonFunction{
 					UserVoiceManagemnetTab.userVoiceManagementTab();
 					
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 				
@@ -80,7 +76,7 @@ public final class EmployeeMode extends CommonFunction{
 					ScheduleTab.scheduleTab();
 				
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 			} else if (sel.equals("5")) {	// 5. 통계정보
@@ -96,7 +92,7 @@ public final class EmployeeMode extends CommonFunction{
 					LogTab.printLog();
 				
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 			} else if (sel.equals("9")) {
@@ -109,15 +105,15 @@ public final class EmployeeMode extends CommonFunction{
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 		
 			if(LoginLogout.getOut) {
 				// 회원 탈퇴시 메인으로 보내기
 				LoginLogout.getOut = false;
-				System.out.println("지금까지 이용해주셔서 감사합니다.");
+				System.out.println("\t\t\t지금까지 이용해주셔서 감사합니다.");
 				LoginLogout.logout();
 				break;
 			}

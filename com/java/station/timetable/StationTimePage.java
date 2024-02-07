@@ -146,7 +146,11 @@ public class StationTimePage {
 					if(leftSide[j] == null) {
 						System.out.print("       ");
 					}else {
+<<<<<<< Updated upstream
 						System.out.printf("%-7s", leftSide[j]);
+=======
+						System.out.printf("%-4s", leftSide[j]);
+>>>>>>> Stashed changes
 					}
 					System.out.print("    ");
 				}
@@ -158,7 +162,11 @@ public class StationTimePage {
 					if(rightSide[k] == null) {
 						System.out.print("       ");
 					}else {
+<<<<<<< Updated upstream
 						System.out.printf("%-7s", rightSide[k]);
+=======
+						System.out.printf("%-4s", rightSide[k]);
+>>>>>>> Stashed changes
 					}
 					System.out.print("    ");
 				}

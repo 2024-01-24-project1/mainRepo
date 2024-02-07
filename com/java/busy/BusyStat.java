@@ -81,13 +81,32 @@ public class BusyStat extends StationManagement{
 				
 				error = Validation.is_busyStat(line,way,dayOfWeek,time);
 				
-				if(error.size()==0) {
+				if(error.get(0).equals("오류없음")) {
 					
 					break;
 					
 				}else {
 					
+					
+					int index = 1;
+					error.remove(error.size()-1);
 					ViewAll.trainAddError();
+					System.out.println();
+					for(String log : error) {
+						System.out.printf("\t\t\t%d. %s\n\n",index++,log);
+					}
+					System.out.println();
+
+					System.out.println("\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
+					System.out.println("\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
+					System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+					System.out.println();
+					System.out.print("\t\t\t입력: ");
+					
+					String input = reader.readLine();
+					if(input.equals("")) {
+						return;
+					}
 
 				}
 				

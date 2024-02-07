@@ -36,7 +36,7 @@ public class EmployeeUpdateTab {
 				update("3");
 			}else if (sel.equals("4")) {	// 4. 계정삭제
 				deleteAccount();
-			}else if (sel.equals("5")) {	// 5. 뒤로가기
+			}else if (sel.equals("")) {	// 엔터. 뒤로가기
 				break;
 			}else {
 				//다시입력

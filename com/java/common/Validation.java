@@ -558,7 +558,9 @@ public final class Validation {
 		public static boolean is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
 				String dayOfWeek) {
 			
-				
+			ArrayList<String> error = new ArrayList<>();
+			
+			
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 

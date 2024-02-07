@@ -7,6 +7,7 @@ import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
+import com.java.station.StationNamePage;
 import com.java.view.View;
 
 public class EmployeeUpdateTab {
@@ -91,7 +92,7 @@ public class EmployeeUpdateTab {
 			
 			if(sel.equals("1")) 		updateWorkArea(ID);	// 근무지 변경
 			else if (sel.equals("2"))   updatePosition(ID);	// 직급 변경
-			else if (sel.equals("3"))	updateLevel(ID);	// 
+			else if (sel.equals("3"))	updateLevel(ID);	// 권한 변경
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
@@ -197,28 +198,28 @@ public class EmployeeUpdateTab {
 				// 선택한 호선의 역이름들 보여주기
 				switch (Integer.parseInt(input)) {
 					
-					case 1: Data.LINE1_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 1: StationNamePage.stationNamePage(Data.LINE1_STATION_NAME, LINE);
 							break;
-					case 2: Data.LINE2_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 2: StationNamePage.stationNamePage(Data.LINE2_STATION_NAME, LINE);
 							break;
-					case 3: Data.LINE3_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 3: StationNamePage.stationNamePage(Data.LINE3_STATION_NAME, LINE);
 							break;
-					case 4: Data.LINE4_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 4: StationNamePage.stationNamePage(Data.LINE4_STATION_NAME, LINE);
 							break;
-					case 5: Data.LINE5_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 5: StationNamePage.stationNamePage(Data.LINE5_STATION_NAME, LINE);
 							break;
-					case 6: Data.LINE6_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 6: StationNamePage.stationNamePage(Data.LINE6_STATION_NAME, LINE);
 							break;
-					case 7: Data.LINE7_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 7: StationNamePage.stationNamePage(Data.LINE7_STATION_NAME, LINE);
 							break;
-					case 8: Data.LINE8_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 8: StationNamePage.stationNamePage(Data.LINE8_STATION_NAME, LINE);
 							break;
-					case 9: Data.LINE9_STATION_NAME.stream().forEach(name -> System.out.println(name));
+					case 9: StationNamePage.stationNamePage(Data.LINE9_STATION_NAME, LINE);
 							break;
 						
 				}
 				
-				System.out.println("역 이름: ");
+				System.out.print("역 이름: ");
 				input = scan.nextLine();
 				
 				if (input.endsWith("역")) {
@@ -278,7 +279,7 @@ public class EmployeeUpdateTab {
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
 					System.out.println("근무지 배치를 그만두시려면 엔터");
 					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.println("입력: ");
+					System.out.print("입력: ");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -292,7 +293,7 @@ public class EmployeeUpdateTab {
 				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
 				System.out.println("근무지 배치를 그만두시려면 엔터");
 				System.out.println("다시 입력하시려면 아무키나 입력하세요");
-				System.out.println("입력: ");
+				System.out.print("입력: ");
 				input = scan.nextLine();
 				
 				if(input.equals("")) {

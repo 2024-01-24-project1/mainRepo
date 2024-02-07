@@ -41,10 +41,7 @@ public class MyPage {
 																			 ,employee.getStation() + "역"));
 			}
 			ViewAll.userMyPage();
-//			System.out.println();
-//			System.out.println("1. 비밀번호 변경");
-//			System.out.println("2. 전화번호 변경");
-//			System.out.println("3. 회원탈퇴");
+
 			if(mode.equals("1")) {
 				System.out.println("4. 즐겨찾기 목록");
 			}
@@ -111,7 +108,7 @@ public class MyPage {
 												, user.getPassCheck()
 												, user.getPassExpiry()));
 			System.out.println("해당 계정을 삭제하시겠습니까?");
-			System.out.println("yes만 삭제: ");
+			System.out.print("yes만 삭제: ");
 			
 			String input = scan.nextLine();
 			
@@ -273,7 +270,7 @@ public class MyPage {
 		checkEmployee = Data.employeeList.stream().anyMatch(employee -> employee.getName().equals(LoginLogout.authName) 
 																	 && employee.getId().equals(LoginLogout.auth));
 									  
-		System.out.println("변경할 비밀번호: ");
+		System.out.print("변경할 비밀번호: ");
 		
 		Scanner scan = new Scanner(System.in);
 		String chPw = scan.nextLine(); //변경할 PW 입력

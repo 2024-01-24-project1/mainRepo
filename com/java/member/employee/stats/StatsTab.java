@@ -139,7 +139,7 @@ public class StatsTab {
 			
 					
 					switch (line) {
-					case 1: Graph.drawGraph(Stats.lineSales(sel), 2550000000L);
+					case 1: Graph.drawGraph(Stats.lineSales(sel), 600000000L);
 							break;
 					case 2: Graph.drawGraph(Stats.lineSales(sel), 3200000000L);
 						    break;
@@ -155,7 +155,7 @@ public class StatsTab {
 							break;
 					case 8: Graph.drawGraph(Stats.lineSales(sel), 440000000L);
 							break;
-					case 9: Graph.drawGraph(Stats.lineSales(sel), 870000000L);
+					case 9: Graph.drawGraph(Stats.lineSales(sel), 600000000L);
 							break;
 						
 					}

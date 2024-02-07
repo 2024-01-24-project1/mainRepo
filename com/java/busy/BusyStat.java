@@ -66,6 +66,10 @@ public class BusyStat extends StationManagement{
 				System.out.print("요일: ");
 				dayOfWeek = reader.readLine();
 				
+				if(dayOfWeek.equals("주말")) {
+					dayOfWeek = "토요일";
+				}
+				
 				ViewAll.statisticsChaosFour();
 				System.out.print("시간: ");
 				time = reader.readLine();

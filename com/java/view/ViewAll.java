@@ -1683,7 +1683,7 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 열차 추가 시에 개선된 혼잡도의 결과입니다.");
+		System.out.println("\t\t\t    개선된 혼잡도의 결과입니다.");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 
@@ -1693,7 +1693,7 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 열차 변경 시에 개선된 혼잡도의 결과입니다.");
+		System.out.println("\t\t\t열차 변경 시에 개선된 혼잡도의 결과입니다.");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 

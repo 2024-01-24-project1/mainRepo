@@ -544,7 +544,7 @@ public final class Validation {
 			}
 			
 
-			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
 				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				
@@ -594,7 +594,7 @@ public final class Validation {
 				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));				
 			}
 
-			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("주말")) {
+			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
 				error.add("요일(평일/주말)입력이 올바르지 않습니다.");
 				

@@ -34,7 +34,7 @@ public class BusyStat extends StationManagement{
 		
 		try {
 			
-			boolean check = false;
+			ArrayList<String> error = new ArrayList<>();
 			String line = "";
 			String way = "";
 			String dayOfWeek = "";
@@ -79,9 +79,9 @@ public class BusyStat extends StationManagement{
 					time = time.substring(0,time.length()-1);
 				}
 				
-				check = Validation.is_busyStat(line,way,dayOfWeek,time);
+				error = Validation.is_busyStat(line,way,dayOfWeek,time);
 				
-				if(check) {
+				if(error.size()==0) {
 					
 					break;
 					

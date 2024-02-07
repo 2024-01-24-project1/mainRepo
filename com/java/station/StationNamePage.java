@@ -26,12 +26,12 @@ public class StationNamePage {
             int startIndex = currentPage * pageSize;
             int endIndex = Math.min(startIndex + pageSize, list.size());
             list.subList(startIndex, endIndex).stream().forEach(station -> {
-                System.out.printf("\t%-15s", station);
+                System.out.printf("\t    %-15s", station);
                 if (list.indexOf(station) % 3 == 2 || list.indexOf(station) == endIndex - 1) // 한 줄에 역 이름을 3개씩 출력
                     System.out.println();
             });
-
-            System.out.printf("\t\t\t\nPage | %d / %d\n", currentPage + 1, totalPages);
+            System.out.printf("\n\t\t\tPage | %d / %d\n", currentPage + 1, totalPages);
+            System.out.println();
             System.out.println("\t\t\t엔터를 누르면 페이지모드 종료.");
             System.out.print("\t\t\t페이지 번호 입력: ");
             String input = scanner.nextLine();

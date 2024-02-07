@@ -1576,7 +1576,7 @@ System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t\t 1. 역 관리");
 		System.out.println("\t\t\t\t 2. 직원 관리");
-		System.out.println("\t\t\t\t 3. 민원");
+		System.out.println("\t\t\t\t 3. 고객의 소리");
 		System.out.println("\t\t\t\t 4. 행사 캘린더");
 		System.out.println("\t\t\t\t 5. 통계 정보");
 		System.out.println("\t\t\t\t 6. 요금표");

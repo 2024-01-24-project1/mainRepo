@@ -30,7 +30,8 @@ public class UserVoiceTab {
 				break;
 				
 			} else { // 이외의 숫자 입력 시
-				System.out.println("\t\t\t해당 섹션이 없습니다\r\n다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				System.out.println();
 				ViewAll.pause();
 			} 

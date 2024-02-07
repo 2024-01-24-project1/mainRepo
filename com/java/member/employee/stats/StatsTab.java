@@ -22,12 +22,15 @@ public class StatsTab {
 			String sel = ""; // 선택한 번호
 			
 			
-			System.out.println("=======================================");
-			System.out.println(" 1. 혼잡도 통계");
-			System.out.println(" 2. 이용객 통계");
-			System.out.println(" 3. 매출 통계");
-			System.out.println(" 뒤로가기 엔터");
-			System.out.println("--------------------------------------");
+			
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+			System.out.println();
+			System.out.println("\t\t\t 1. 혼잡도 통계");
+			System.out.println("\t\t\t 2. 이용객 통계");
+			System.out.println("\t\t\t 3. 매출 통계");
+			System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+			System.out.println();
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -43,8 +46,8 @@ public class StatsTab {
 				// 혼잡도 통계 종료
 				break;
 			}else { // 이외의 숫자 입력 시
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 			
@@ -58,7 +61,7 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
+		System.out.println("\t\t전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
@@ -66,8 +69,8 @@ public class StatsTab {
 		}else if (sel.equals("2")) {	// 2. 특정 호선 통계
 			
 			while(true) {
-				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.println("입력(N호선): ");
+				System.out.println("\t\t\t보고싶은 호선을 입력해주세요");
+				System.out.println("\t\t\t입력(N호선): ");
 				sel = scan.nextLine();
 
 				if(Validation.is_Line(sel)) {
@@ -97,11 +100,11 @@ public class StatsTab {
 					}
 					
 				}else {
-					System.out.println("잘못된 입력");
+					System.out.println("\t\t\t잘못된 입력");
 				}
 				
-				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("뒤로가려면 엔터");
+				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("\t\t\t뒤로가려면 엔터");
 				
 				if(sel.equals("")) {
 					
@@ -121,15 +124,15 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
+		System.out.println("\t\t전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);
 		}else if (sel.equals("2")) {
 			while(true) {
-				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.println("입력(N호선): ");
+				System.out.println("\t\t\t보고싶은 호선을 입력해주세요");
+				System.out.println("\t\t\t입력(N호선): ");
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {
@@ -161,11 +164,11 @@ public class StatsTab {
 					}
 					
 				}else {
-					System.out.println("잘못된 입력");
+					System.out.println("\t\t\t잘못된 입력");
 				}
 				
-				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("뒤로가려면 엔터");
+				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("\t\t\t뒤로가려면 엔터");
 				
 				if(sel.equals("")) {
 					

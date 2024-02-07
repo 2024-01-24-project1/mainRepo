@@ -32,11 +32,11 @@ public class UserVoiceSearch {
 				break;
 			}
 			
-			ViewAll.vocListBottom();
-			System.out.println("민원의 내용을 확인합니다.");
+			System.out.println("\t\t\t아이디와 제목을 정확히 입력하시면");
+			System.out.println("\t\t\t민원의 내용을 확인합니다.");
 			System.out.print("\t\t\t아이디: ");
 			id = scan.nextLine();
-			System.out.print("\t\t제목: ");
+			System.out.print("\t\t\t제목: ");
 			title = scan.nextLine();
 			
 			if( Validation.is_Duplication_UserVoice(id, title)) {
@@ -90,8 +90,8 @@ public class UserVoiceSearch {
 					 													, uservoice.getTitle()
 					 													, uservoice.getIsRead()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.printf("\t\t\tPage| %s / %s\r\n", index + 1, page);
-			System.out.println("\t\t\t엔터입력시 페이지모드 종료.");
+			System.out.printf("\t\tPage| %s / %s\r\n", index + 1, page);
+			System.out.print("\t\t\t엔터입력시 페이지모드 종료.");
 			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 			
@@ -110,7 +110,6 @@ public class UserVoiceSearch {
 			}else {
 				System.out.println("\t\t\t잘못된 입력입니다.");
 				System.out.println("\t\t\t다시 입력해주세요.");
-				ViewAll.pause();
 			}
 			
 		}//while루프 종료

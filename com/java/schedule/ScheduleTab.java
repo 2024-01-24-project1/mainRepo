@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class ScheduleTab {
@@ -18,12 +19,7 @@ public class ScheduleTab {
 			String sel = ""; // 선택한 번호
 			
 			
-			System.out.println("=======================================");
-			System.out.println(" 1. 전체일정 보기");
-			System.out.println(" 2. 일정 추가");
-			System.out.println(" 3. 일정제거");
-			System.out.println(" 뒤로가기 엔터");
-			System.out.println("--------------------------------------");
+			ViewAll.calMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -59,12 +55,12 @@ public class ScheduleTab {
 			String date = "";
 			String station = "";
 			String content = "";
-		
 			System.out.println("추가할 스케줄을 입력해주세요.");
 			System.out.print("날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
 			System.out.print("역: ");
 			station = scan.nextLine();
+			ViewAll.calAdd();
 			System.out.print("스케줄내용: ");
 			content = scan.nextLine();
 			
@@ -89,9 +85,9 @@ public class ScheduleTab {
 				break;
 				
 			}
-			
+			ViewAll.errorQuestionEmo();
 			System.out.println("잘못된 입력입니다");
-			System.out.println("다시 입력하시려면 아무키나 입려하세요");
+			System.out.println("다시 입력하시려면 아무키나 입력하세요");
 			System.out.println("뒤로가시려면 엔터입력");
 			System.out.print("입력: ");
 			sel = scan.nextLine();
@@ -117,7 +113,7 @@ public class ScheduleTab {
 			String station = "";
 		
 			ScheduleSearch.schedulePage(Data.scheduleList);
-			
+			ViewAll.calDeleteMid();
 			System.out.print("삭제할 날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
 			System.out.print("삭제할 일정(정확하게): ");
@@ -140,7 +136,7 @@ public class ScheduleTab {
 						
 						Data.scheduleList.remove(schedule);
 						LogSave.logSave(LogSave.REMOVESCHEDULE);
-						System.out.println("스케줄이 삭제되었습니다.");
+						ViewAll.calDeleteResult();
 						break;	// schedule객체 탐색 종료
 					}
 					

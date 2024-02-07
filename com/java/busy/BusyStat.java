@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import com.java.common.Validation;
 import com.java.station.management.StationManagement;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 
@@ -91,7 +92,7 @@ public class BusyStat extends StationManagement{
 			this.route = lineRoute(line);
 			printBusy(BusyManagement.searchBusy(line, way, dayOfWeek,this.route),line,way,dayOfWeek,time);
 			
-			ViewAll.pause();
+			View.pause();
 			
 			
 		} catch (Exception e) {
@@ -113,14 +114,13 @@ public class BusyStat extends StationManagement{
 		
 		for(Busy b : list) {
 			
-			System.out.printf("%-35s  \t: %-3.1f",b.getStation()+"역",b.getCrowded().get(Integer.parseInt(time)-5));
+			System.out.printf("%s : %.1f",b.getStation(),b.getCrowded().get(Integer.parseInt(time)-5));
 			System.out.println();
 			
 		}
 		
-		
-		
-	}	
+	}
+	
 	
 	
 

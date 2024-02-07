@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class LostArticleTab {
@@ -20,12 +21,7 @@ public class LostArticleTab {
 			// 모든 분실물 먼저 보여주기
 			lostArticleAll();
 			
-			System.out.println("=======================================");
-			System.out.println(" 1. 분실물 검색");
-			System.out.println(" 2. 분실물 추가");
-			System.out.println(" 3. 분실물 제거");
-			System.out.println("엔터 입력시 뒤로가기");
-			System.out.println("--------------------------------------");
+			ViewAll.lostarticleMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -54,7 +50,7 @@ public class LostArticleTab {
 			
 			Scanner scan = new Scanner(System.in);
 			
-			//View.title(" 분실물 검색");
+			ViewAll.lostarticleSearchTop();
 			System.out.println();
 			
 			ArrayList<LostArticle> list = new ArrayList<LostArticle>();
@@ -119,7 +115,7 @@ public class LostArticleTab {
 			String content = "";
 			String find = "";
 			String keep = "";
-			
+			ViewAll.lostarticleAdd();
 			System.out.println("추가할 분실물의 이름");
 			System.out.printf("분실물: ");
 			article = scan.nextLine();
@@ -142,18 +138,22 @@ public class LostArticleTab {
 			
 				
 			if(article.length() > 20 || article.length() < 1) {
+				ViewAll.errorFailEmo();
 				System.out.println("분실물의 이름은 20글자 이하 1글자 이상입니다");
 			}
 			
 			if(content.length() > 20) {
+				ViewAll.errorFailEmo();
 				System.out.println("상세내용은 20글자 이하입니다.");
 			}
 			
 			if( Validation.is_StationName(find)) {
+				ViewAll.errorFailEmo();
 				System.out.println("발견역이 올바른 역이름이 아닙니다.");
 			}
 			
 			if( Validation.is_StationName(find)) {
+				ViewAll.errorFailEmo();
 				System.out.println("보관중인 역이름이 올바른 역이름이 아닙니다.");
 			}
 			
@@ -164,7 +164,7 @@ public class LostArticleTab {
 				LostArticle lostArticle = new LostArticle(article, content, find, keep);
 				Data.lostArticleList.add(lostArticle);
 				
-				System.out.println("분실물 추가 완료");
+				ViewAll.lostarticleAddResult();
 				ViewAll.pause();
 				
 				// 분실물 추가 종료
@@ -198,7 +198,7 @@ public class LostArticleTab {
 			LostArticleSearch.lostArticlePage(Data.lostArticleList);
 			String sel = "";
 			String sts = "";
-			
+			ViewAll.lostarticleDelete();
 			System.out.println("삭제할 분실물의 이름");
 			System.out.print("분실물: ");
 			sel = scan.nextLine();
@@ -223,8 +223,7 @@ public class LostArticleTab {
 					}
 					
 				}
-				
-				System.out.println("분실물이 삭제되었습니다");
+				ViewAll.lostarticleDeleteResult();
 				ViewAll.pause();
 				
 				// 분실물 삭제 종료

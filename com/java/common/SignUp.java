@@ -3,6 +3,7 @@ package com.java.common;
 import java.util.Scanner;
 
 import com.java.member.user.User;
+import com.java.view.View;
 import com.java.view.ViewAll;
 import com.java.member.employee.Employee;
 
@@ -61,9 +62,9 @@ public class SignUp {
 			
 			// View클래스 출력
 			if(sel.equals("1")) {
-				//ViewAll.title("개인회원 가입");
+				View.title("개인회원 가입");
 			}else if (sel.equals("2")) {
-				//ViewAll.title("직원회원 가입");
+				View.title("직원회원 가입");
 			}
 			
 			// ID, PW, 이름, 주민등록번호, 전화번호 입력받기
@@ -174,7 +175,7 @@ public class SignUp {
 				
 				System.out.println("회원가입이 완료되었습니다.");
 				System.out.println("회원 " + name + "님 환영합니다.");
-				ViewAll.pause();
+				View.pause();
 				
 				break;
 				
@@ -191,7 +192,7 @@ public class SignUp {
 				
 				System.out.println("회원가입이 완료되었습니다.");
 				System.out.println("직원 " + name + "님 환영합니다.");
-				ViewAll.pause();
+				View.pause();
 				
 				break;
 				

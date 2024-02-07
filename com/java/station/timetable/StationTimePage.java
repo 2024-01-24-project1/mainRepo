@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
+import com.java.view.ViewAll;
 
 public class StationTimePage {
 
@@ -129,6 +130,7 @@ public class StationTimePage {
 			}
 
 			// View클래스 출력
+			ViewAll.trainTimeTable();
 			System.out.println("==============================================================================================");
 			//System.out.printf("              %-3s %-15s역 %-2s %-13s\r\n", line, stationName, weekOf);
 			System.out.printf("                %-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
@@ -176,9 +178,11 @@ public class StationTimePage {
 			}else if ( Validation.is_OperationTime(sel)) {
 				set = sel;
 			}else if ( Validation.is_NumString(sel) && !Validation.is_OperationTime(sel)) {
+				ViewAll.errorFailEmo();
 				System.out.println("입력하신 시간은 열차가 운행하지 않는 시간입니다.");
 			}
 			else {
+				ViewAll.errorFailEmo();
 				System.out.println("잘못된 입력입니다.");
 				System.out.println("다시 입력해주세요.");
 			}

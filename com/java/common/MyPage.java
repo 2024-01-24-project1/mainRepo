@@ -46,7 +46,7 @@ public class MyPage {
 				System.out.println("\t\t\t 4. 즐겨찾기 목록");
 			}
 			System.out.println("\t\t\t엔터입력시 뒤로가기");
-			System.out.print("\t\t\t입력: ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {

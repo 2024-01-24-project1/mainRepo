@@ -127,7 +127,6 @@ public class EmployeeUpdateTab {
 					System.out.println("잘못된 직급");
 					System.out.println("직급변경을 그만두시려면 엔터");
 					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.print("입력: ");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -258,7 +257,6 @@ public class EmployeeUpdateTab {
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
 					System.out.println("근무지 배치를 그만두시려면 엔터");
 					System.out.println("다시 입력하시려면 아무키나 입력하세요");
-					System.out.print("입력: ");
 					input = scan.nextLine();
 					
 					if(input.equals("")) {
@@ -272,7 +270,6 @@ public class EmployeeUpdateTab {
 				System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
 				System.out.println("근무지 배치를 그만두시려면 엔터");
 				System.out.println("다시 입력하시려면 아무키나 입력하세요");
-				System.out.print("입력: ");
 				input = scan.nextLine();
 				
 				if(input.equals("")) {
@@ -295,7 +292,7 @@ public class EmployeeUpdateTab {
 		
 		// 고객인지 직원인지 삭제할 계정 물어보기
 		System.out.println("삭제할 계정이 직원인지 고객인지 고르세요");
-		System.out.print("입력: ");
+		System.out.print("\t\t\t입력: ");
 		member = scan.nextLine();
 		
 		if(member.equals("직원")) {
@@ -309,14 +306,14 @@ public class EmployeeUpdateTab {
 			UserSearch.userPage(Data.userList);
 			
 		}else {
-			System.out.println("잘못된 입력입니다.");
+			System.out.println("\t\t\t잘못된 입력입니다.");
 			
 			return;
 		}
 		
 		
-		System.out.println("삭제할 계정의 아이디를 입력해주세요.");
-		System.out.print("아이디: ");
+		System.out.println("\t\t\t삭제할 계정의 아이디를 입력해주세요.");
+		System.out.print("\t\t\t아이디: ");
 		String input = scan.nextLine();
 		final String DELETE = input;
 		
@@ -325,7 +322,7 @@ public class EmployeeUpdateTab {
 		
 		
 		if(userCheck) {
-			System.out.println("선택된 아이디는 고객 계정입니다");
+			System.out.println("\t\t\t선택된 아이디는 고객 계정입니다");
 			Data.userList.stream().filter(user -> user.getId().equals(DELETE))
 							      .forEach(user -> 
 							System.out.printf("이름: %s\r\n아이디: %s\r\n생년월일: %s\r\n전화번호: %s\r\n정기권유무: %s\r\n정기권기간: %s\r\n"
@@ -335,7 +332,7 @@ public class EmployeeUpdateTab {
 												, user.getPhone()
 												, user.getPassCheck()
 												, user.getPassExpiry()));
-			System.out.println("해당 계정을 삭제하시겠습니까?");
+			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
 			System.out.print("yes만 삭제: ");
 			input = scan.nextLine();
 			
@@ -352,12 +349,12 @@ public class EmployeeUpdateTab {
 				}
 				
 			}else {
-				System.out.println("계정삭제 취소");
+				System.out.println("\t\t\t계정삭제 취소");
 			}
 			
 			
 		}else if (employeeCheck && (!Validation.is_Sudo(DELETE)) ) {
-			System.out.println("선택된 아이디는 직원 계정입니다");
+			System.out.println("\t\t\t선택된 아이디는 직원 계정입니다");
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(DELETE))
 									  .forEach(employee -> 
 							System.out.printf("이름: %s\r\n아이디: %s\r\n생년월일: %s\r\n전화번호: %s\r\n직급: %s\r\n근무지: %s호선 %s역\r\n권한: %s\r\n"
@@ -369,7 +366,7 @@ public class EmployeeUpdateTab {
 												, employee.getLine()
 												, employee.getStation()
 												, employee.getLevel()));
-			System.out.println("해당 계정을 삭제하시겠습니까?");
+			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
 			System.out.print("yes만 삭제: ");
 			input = scan.nextLine();
 			
@@ -389,15 +386,15 @@ public class EmployeeUpdateTab {
 				
 				
 			}else {
-				System.out.println("계정삭제 취소");
+				System.out.println("\t\t\t계정삭제 취소");
 			}
 			
 			
 		}else if (employeeCheck && (!Validation.is_Sudo(DELETE))) {
-			System.out.println("최고권한 계정은 삭제할수없습니다.");
+			System.out.println("\t\t\t최고권한 계정은 삭제할수없습니다.");
 		}
 		else {
-			System.out.println("입력하신 계정은 존재하지 않습니다.");
+			System.out.println("\t\t\t입력하신 계정은 존재하지 않습니다.");
 		}
 		
 		ViewAll.pause();

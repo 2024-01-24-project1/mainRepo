@@ -77,7 +77,7 @@ public class SafetyManTab {
 		EmployeeSearch.employeePage(safetyList);
 		
 		System.out.println("해제시킬 안전요원의 아이디를 입력하세요");
-		System.out.printf("아이디: ");
+		System.out.print("아이디: ");
 		input = scan.nextLine();
 		
 		if( Validation.is_SafetyMan(input) && (!Validation.is_WorkArea(input)) ) {
@@ -116,7 +116,7 @@ public class SafetyManTab {
 		EmployeeSearch.employeePage(list);
 		
 		System.out.println("배치할 안전요원의 아이디를 입력하세요");
-		System.out.printf("아이디: ");
+		System.out.print("아이디: ");
 		input = scan.nextLine();
 		
 		if( Validation.is_SafetyMan(input) && Validation.is_WorkArea(input) ) {

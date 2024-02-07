@@ -35,7 +35,7 @@ public class UserSearch {
 					 										, user.getPassCheck()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
 			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.print("엔터입력시 뒤로갑니다.");
+			System.out.println("엔터입력시 뒤로갑니다.");
 			System.out.print("원하는 페이지: ");
 			sel = scan.nextLine();
 			

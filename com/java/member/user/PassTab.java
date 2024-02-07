@@ -41,7 +41,8 @@ public class PassTab {
 				
 				//다시입력
 				System.out.println();
-				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				System.out.printf("해당 섹션이 없습니다.");
+				System.out.println("다시 입력해주세요.");
 				View.pause();
 			}
 			

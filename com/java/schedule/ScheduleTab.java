@@ -61,11 +61,11 @@ public class ScheduleTab {
 			String content = "";
 		
 			System.out.println("추가할 스케줄을 입력해주세요.");
-			System.out.printf("날짜(YYYY-MM-DD): ");
+			System.out.print("날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
-			System.out.printf("역: ");
+			System.out.print("역: ");
 			station = scan.nextLine();
-			System.out.printf("스케줄내용: ");
+			System.out.print("스케줄내용: ");
 			content = scan.nextLine();
 			
 			if (station.endsWith("역")) {
@@ -93,7 +93,7 @@ public class ScheduleTab {
 			System.out.println("잘못된 입력입니다");
 			System.out.println("다시 입력하시려면 아무키나 입려하세요");
 			System.out.println("뒤로가시려면 엔터입력");
-			System.out.printf("입력: ");
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -118,11 +118,11 @@ public class ScheduleTab {
 		
 			ScheduleSearch.schedulePage(Data.scheduleList);
 			
-			System.out.println("삭제할 날짜(YYYY-MM-DD): ");
+			System.out.print("삭제할 날짜(YYYY-MM-DD): ");
 			date = scan.nextLine();
-			System.out.println("삭제할 일정(정확하게): ");
+			System.out.print("삭제할 일정(정확하게): ");
 			content = scan.nextLine();
-			System.out.println("삭제할 일정의 역: ");
+			System.out.print("삭제할 일정의 역: ");
 			station = scan.nextLine();
 			
 			if (station.endsWith("역")) {

@@ -33,7 +33,7 @@ public class StationNamePage {
 
             System.out.printf("\nPage | %d / %d\n", currentPage + 1, totalPages);
             System.out.println("엔터를 누르면 페이지모드 종료.");
-            System.out.printf("페이지 번호 입력: ");
+            System.out.print("페이지 번호 입력: ");
             String input = scanner.nextLine();
 			
             if (input.equals("")) { // 엔터 입력 시 페이지모드 종료

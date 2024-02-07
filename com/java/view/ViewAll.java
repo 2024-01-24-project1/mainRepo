@@ -1881,6 +1881,13 @@ System.out.println("╬╬═════════════╬╬═══
 		System.out.print("\t\t\t\t선택 (번호): ");
 
 	}
+	
+	public  static void insertRabel() {
+
+		
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.print("\t\t\t\t      입력: ");
+	}
 	public static void chooseline() {
 		clear();
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

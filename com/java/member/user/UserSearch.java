@@ -34,8 +34,8 @@ public class UserSearch {
 					 										, user.getPassCheck()));
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
 			System.out.printf("Page| %s / %s\r\n", index + 1, page);
-			System.out.println("엔터입력시 뒤로갑니다.");
-			System.out.print("원하는 페이지: ");
+			System.out.println("\t\t\t엔터입력시 뒤로갑니다.");
+			System.out.print("\t\t\t원하는 페이지: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -44,15 +44,15 @@ public class UserSearch {
 				index = Integer.parseInt(sel) - 1;
 				
 				if(index < 0 || index >= page) {
-					System.out.println("페이지 범위를 벗어났습니다.");
-					System.out.println("다시 입력해주세요.");
+					System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
 					index = 0;
 					
 				}
 				
 			}else {
-				System.out.println("잘못된 입력입니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t잘못된 입력입니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 			}
 			
 		}//while루프 종료

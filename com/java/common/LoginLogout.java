@@ -87,7 +87,6 @@ public final class LoginLogout {
 				break;	// 아이디, 비밀번호 입력받기 종료
 				
 			}else if(checkEmployee){	// 직원계정으로 로그인 완료
-				System.out.println("직원계정 존재");
 				
 					for(Employee employee : Data.employeeList) {
 					

@@ -33,7 +33,7 @@ public class AnotherDateFindWay extends FindWay {
 			Calendar calendar = Calendar.getInstance();
 
 			while(true) {
-
+				ViewAll.roadSearchRouteOtherTimeTop();
 				System.out.print("년도 입력: ");
 				year = reader.readLine();
 
@@ -56,7 +56,7 @@ public class AnotherDateFindWay extends FindWay {
 					break;
 
 				}else {
-
+					ViewAll.errorQuestionEmo();	
 					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
 					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
 					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
@@ -79,7 +79,7 @@ public class AnotherDateFindWay extends FindWay {
 
 
 			while(true) {
-
+				ViewAll.roadSearchRouteTop();
 				System.out.print("호선: ");
 				line = reader.readLine();
 
@@ -125,10 +125,9 @@ public class AnotherDateFindWay extends FindWay {
 			}
 
 			findWay(line, start, end, calendar);
-			View.pause();
+			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
-			System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
 			System.out.print("입력: ");
 			String sel = reader.readLine();
 
@@ -147,6 +146,7 @@ public class AnotherDateFindWay extends FindWay {
 
 
 		} catch (Exception e) {
+			ViewAll.successThumbUpEmo();
 			System.out.println("AnotherDateFindWay.anotherDateFindWay()");
 			e.printStackTrace();
 		}

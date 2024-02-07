@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.java.busy.BusyStat;
 import com.java.common.Validation;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class StatsTab {
 	
@@ -22,12 +23,7 @@ public class StatsTab {
 			String sel = ""; // 선택한 번호
 			
 			
-			System.out.println("=======================================");
-			System.out.println(" 1. 혼잡도 통계");
-			System.out.println(" 2. 이용객 통계");
-			System.out.println(" 3. 매출 통계");
-			System.out.println(" 뒤로가기 엔터");
-			System.out.println("--------------------------------------");
+			ViewAll.statisticsMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -43,9 +39,10 @@ public class StatsTab {
 				// 혼잡도 통계 종료
 				break;
 			}else { // 이외의 숫자 입력 시
+				 ViewAll.errorFailEmo();
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 		}//while루프 종료
@@ -58,7 +55,7 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("전체 통계 1, 특정호선 통계 2, 아무키나 누르면 뒤로가기");
+		ViewAll.statisticsUserMain();
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
@@ -66,8 +63,7 @@ public class StatsTab {
 		}else if (sel.equals("2")) {	// 2. 특정 호선 통계
 			
 			while(true) {
-				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.print("입력(N호선): ");
+				ViewAll.statisticsLineTotalUser();
 				sel = scan.nextLine();
 
 				if(Validation.is_Line(sel)) {
@@ -121,15 +117,14 @@ public class StatsTab {
 		Scanner scan = new Scanner(System.in);
 			
 		
-		System.out.println("전체 매출 통계 1, 특정호선 매출 통계 2, 아무키나 누르면 뒤로가기");
+		ViewAll.statisticsMoneyMain();
 		sel = scan.nextLine();
 		
 		if(sel.equals("1")) {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);
 		}else if (sel.equals("2")) {
 			while(true) {
-				System.out.println("보고싶은 호선을 입력해주세요");
-				System.out.print("입력(N호선): ");
+				ViewAll.statisticsLineTotalUser();
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {

@@ -6,6 +6,7 @@ import java.util.Scanner;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class ScheduleSearch {
 
@@ -29,9 +30,7 @@ public class ScheduleSearch {
 				String sel = "";	// 입력받는 문자열
 				
 				// View클래스 출력
-				System.out.println("======================================================");
-				System.out.println("                  스케줄");
-				System.out.println("======================================================");
+				ViewAll.calList();
 				
 				list.stream().skip(index * 10)
 				 							 .limit(10)

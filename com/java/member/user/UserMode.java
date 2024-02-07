@@ -7,6 +7,7 @@ import com.java.common.LoginLogout;
 import com.java.common.MyPage;
 import com.java.member.CommonFunction;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public final class UserMode extends CommonFunction{
 	
@@ -20,20 +21,8 @@ public final class UserMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 			
 			// View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             SEOUL METRO       ");
-			System.out.println(LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println();
-			System.out.println("           1. 열차 시간표");
-			System.out.println("           2. 민원 접수");
-			System.out.println("           3. 정기권 현황");
-			System.out.println("           4. 길 찾기");
-			System.out.println("           5. 요금표");
-			System.out.println("           6. 마이 페이지");
-			System.out.println("           7. 로그아웃");
-			System.out.println("           0. 종료");
-			System.out.println("--------------------------------------");
+			ViewAll.userName();
+			ViewAll.userMainView();
 			
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
@@ -73,7 +62,7 @@ public final class UserMode extends CommonFunction{
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			if(LoginLogout.getOut) {

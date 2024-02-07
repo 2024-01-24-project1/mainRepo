@@ -97,7 +97,7 @@ public class FindAccount {
 			System.out.println("입력받은 이름과 주민번호의 아이디가 없음");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 
 	}//End of findId()
 	
@@ -154,7 +154,7 @@ public class FindAccount {
 			ViewAll.noIDDataError();
 			System.out.println("입력받은 이름과 아이디, 주민번호의 아이디가 없음");
 		}
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of findPw()
 

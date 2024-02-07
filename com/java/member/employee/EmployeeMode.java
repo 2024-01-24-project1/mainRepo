@@ -25,22 +25,8 @@ public final class EmployeeMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 		
 			//View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             SEOUL METRO          ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 역 관리");
-			System.out.println("           2. 직원 관리");
-			System.out.println("           3. 민원");
-			System.out.println("           4. 행사 캘린더");
-			System.out.println("           5. 통계 정보");
-			System.out.println("           6. 요금표");
-			System.out.println("           7. 열차 시간표");
-			System.out.println("           8. 행동로그 보기");
-			System.out.println("           9. 마이페이지");
-			System.out.println("          10. 로그아웃");
-			System.out.println("           0. 종료");
-			System.out.println("--------------------------------------");
+			ViewAll.adminMainView();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -58,7 +44,7 @@ public final class EmployeeMode extends CommonFunction{
 				StationManagementTab.stationManagementTab();
 			} else if (sel.equals("2")) {	// 2 직원관리
 				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
-				else System.out.println("접근 권한이 없습니다.");
+				else ViewAll.rankError();
 			} else if (sel.equals("3")) {	// 3. 민원
 				
 				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
@@ -66,7 +52,7 @@ public final class EmployeeMode extends CommonFunction{
 					UserVoiceManagemnetTab.userVoiceManagementTab();
 					
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 				
@@ -77,7 +63,7 @@ public final class EmployeeMode extends CommonFunction{
 					ScheduleTab.scheduleTab();
 				
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 			} else if (sel.equals("5")) {	// 5. 통계정보
@@ -93,7 +79,7 @@ public final class EmployeeMode extends CommonFunction{
 					LogTab.printLog();
 				
 				}else {
-					System.out.println("접근 권한이 없습니다.");
+					ViewAll.rankError();
 				}
 				
 			} else if (sel.equals("9")) {
@@ -108,7 +94,7 @@ public final class EmployeeMode extends CommonFunction{
 			} else { // 이외의 숫자 입력 시
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 		
 			if(LoginLogout.getOut) {

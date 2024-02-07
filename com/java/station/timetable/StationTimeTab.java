@@ -6,6 +6,7 @@ import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.station.StationNamePage;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class StationTimeTab {
 	
@@ -13,7 +14,7 @@ public class StationTimeTab {
 	
 	public static void stationTimeTab() {
 		Scanner scan = new Scanner(System.in);
-		
+		ViewAll.trainTimeTable();
 		while(true) {
 			
 			boolean check = false;	// 호선을 제대로 입력했는지
@@ -98,27 +99,28 @@ public class StationTimeTab {
 				}	
 				
 				// 평일인지 주말인지 입력받기
-				System.out.print("평일과 주말중에 어느 시간표를 보시겠습니까?");
+				ViewAll.statisticsChaosThree();
 				weekOf =scan.nextLine();
 				
 				// 맞으면 해당 호선의 역 시간표 출력
 				
 				if(check && Validation.is_WeekOf(weekOf)) { // 호선과 역이름이 맞을경우
-					
+					ViewAll.trainTimeTableSearch();
 					StationTimePage.stationTimePage(sel, STATION, weekOf);
 					
 				}else if ( !Validation.is_WeekOf(weekOf)) {	// 주말,평일 잘못 입력한 경우
-					System.out.println("주말,평일을 잘못 입력하셨습니다.");
-					View.pause();
+					ViewAll.dayError();
+					ViewAll.pause();
 				}
 				else {	  									// 역이름이 호선과 틀릴경우
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-					View.pause();
+					ViewAll.hoLineError();
+					ViewAll.pause();
 				}
 				
 			}else {
-				System.out.println("잘못된 호선");
-				View.pause();
+				ViewAll.lineError();
+				ViewAll.pause();
 			}
 			
 		}//while루프 종료

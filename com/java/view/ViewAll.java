@@ -528,8 +528,6 @@ System.out.println();
 		System.out.println("╙══════════════════════════════ ꒰(ꐦ •᷅ ‎(ｪ)•᷄ )꒱ ═════════════════════════════════╜");
 		System.out.println();
 		System.out.println();
-		System.out.println();
-		System.out.println("\t\t\t 1. 민원 내용 입력하기");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
@@ -762,7 +760,7 @@ System.out.println();
 	}
 
 	public static void userName() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
+		System.out.printf("%s님 ",LoginLogout.authName);
 	}
 	
 	public static void userNameHello() { // 사용자 로그인 이름 띄우는 거 
@@ -1036,7 +1034,7 @@ System.out.println();
 	public static void vocListBottom() { //전체 민원 보기 아래부분 0
 		System.out.println("╓••••••••••••••••••••••••••••••••••••••✎•••••••••••••••••••••••••••••••••••••••╖");
 		System.out.println();
-		System.out.println("\t\t\t 특정 민원인의 민원 내용을 확인하려면 민원인의 아이디를 입력하세요");
+		System.out.println("\t 특정 민원인의 민원 내용을 확인하려면 민원인의 아이디와 제목을 입력하세요");
 		System.out.println();
 		System.out.println("╙••••••••••••••••••••••••••••••••••••••✎•••••••••••••••••••••••••••••••••••••••╜");
 	
@@ -1325,7 +1323,22 @@ System.out.println();
 		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 		
 	}
-	
+	public static void employeeSearch() { // 
+		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
+		System.out.println();
+		System.out.println("\t\t\t      직원 리스트");
+		System.out.println();
+		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
+		
+	}
+	public static void userSearch() { // 
+		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
+		System.out.println();
+		System.out.println("\t\t\t      고객 리스트");
+		System.out.println();
+		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
+		
+	}
 	public static void employeeOfficeChangeOne() { // 직원 근무지 변경 1번째 라벨 0
 		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
 		System.out.println();
@@ -1347,15 +1360,25 @@ System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t 1. 근무지 변경");
 		System.out.println("\t\t\t 2. 직급 변경");
-		System.out.println("\t\t\t 3. 직원 삭제");
+		System.out.println("\t\t\t 3. 권한 부여");
+		System.out.println("\t\t\t 4. 계정 삭제");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	
+	}
+	
+	public static void employeeHan() {
+		System.out.println("╭───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╮");
+		System.out.println();
+		System.out.println("\t\t\t      권한 부여가 필요한 직원의 ID를 입력해주세요.");
+		System.out.println("\t\t\t 현재 메뉴: 권한 부여 ");
+		System.out.println();
+		System.out.println("╰───────────────────────────────── · · ୨୧ · · ──────────────────────────────────╯");
 	}
 	
 	public static void employeeSearchNameResult() { // 이름으로 직원 검색 결과0
 		System.out.println("▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰");
 		System.out.println();
-		System.out.println("\t\t\t      검색하신 이름을 가진 직원 목록입니다.");
+		System.out.println("\t\t\t      검색하고자 하는 호선,이름 또는 직원이름을 입력해주세요");
 		System.out.println();
 		System.out.println("❢◥ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◆ ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ ◤❢");
 		System.out.println();
@@ -1574,7 +1597,11 @@ System.out.println();
 
 	}
 	
-	
+	public static void dayError() { // 0
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t   주말,평일을 잘못 입력하셨습니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+	}
 	public static void calError() { // 0
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   존재하지 않는 일정입니다.");
@@ -1620,6 +1647,12 @@ System.out.println();
 	public static void twiceRRNError() { // 0
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   중복된 주민등록번호입니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void hoLineError() { //잘못된 호선을 집어넣을 경우0
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t   존재하지 않는 호선 또는 역입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}

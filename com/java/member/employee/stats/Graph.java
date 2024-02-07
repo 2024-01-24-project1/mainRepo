@@ -36,20 +36,19 @@ public class Graph {
 		}
 		
 		// 그래프 출력
-		System.out.println("---------------------");
 		for(int i = 0; i < graph.length-5; i++) {
 			
 			for(int j = 0; j < graph[0].length; j++) {
 				if(j == graph[0].length) {
 					System.out.printf("%s", graph[i][j]);
 				}else {
-					System.out.printf("%s\t", graph[i][j]);
+					System.out.printf("%s  ", graph[i][j]);
 				}
 				
 			}
 			System.out.println();
 		}
-		System.out.println("---------------------------------------------------------------------------------------------------");
+		System.out.println("-----------------------------------------------------------------------------------");
 		System.out.printf("1월\t2월\t3월\t4월\t5월\t6월\t7월\t8월\t9월\t10월\t11월\t12월\t");
 		System.out.println();
 		System.out.println();

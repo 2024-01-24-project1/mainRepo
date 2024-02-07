@@ -22,13 +22,12 @@ public final class UserMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 			
 			// View클래스 출력
-			ViewAll.userNameHello();
 			ViewAll.userMainView();
 			
 			System.out.printf("\t\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("0")) {			// 0. 프로그램 종료
+			if(sel.equals("")) {			// 0. 프로그램 종료
 				
 				// 종료
 				System.out.println("\t\t\t프로그램을 종료합니다.");

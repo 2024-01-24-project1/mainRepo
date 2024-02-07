@@ -814,6 +814,7 @@ System.out.println();
 	}
 	
 	public static void userNameHello() { // 사용자 로그인 이름 띄우는 거 
+		clear();
 		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
 	}
 	

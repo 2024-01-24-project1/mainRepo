@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.java.common.Validation;
+import com.java.station.StationNamePage;
 import com.java.station.management.FindWay;
+import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
 public class AnotherDateFindWay extends FindWay {
@@ -20,7 +22,7 @@ public class AnotherDateFindWay extends FindWay {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
 			ArrayList<String> error = new ArrayList<>();
-			boolean check = true;
+			
 			String year = "";
 			String month = "";
 			String date = "";
@@ -64,8 +66,6 @@ public class AnotherDateFindWay extends FindWay {
 			}
 
 
-		
-
 			calendar.set(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(date));
 			calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(hour));
 			calendar.set(Calendar.MINUTE, Integer.parseInt(minute));
@@ -80,6 +80,12 @@ public class AnotherDateFindWay extends FindWay {
 				if(line.contains("\t\t\t호선")) {
 					line = line.replace("호선", "");
 				}
+				
+				if(line.contains("호선")) {
+					line = line.replace("호선", "");
+				}
+
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
 				System.out.print("\t\t\t출발역: ");
 				start = reader.readLine();
@@ -116,22 +122,31 @@ public class AnotherDateFindWay extends FindWay {
 			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
-			System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
-			System.out.print("\t\t\t입력: ");
-			String sel = reader.readLine();
+			
+			while(true) {
+				String sel = reader.readLine();
 
-			if(sel.equals("1")) {
+				if(sel.equals("1")) {
 
-				registerBookMark(line, start, end, calendar);
-				System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
-				ViewAll.pause();
-				return;
+					registerBookMark(line, start, end, calendar);
+					System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
+					ViewAll.pause();
+					return;
 
+				} else if(sel.equals("")) {
+					return;
+					
+				} else {
+					
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
+					ViewAll.pause();
+					
+					
+				}
+				
+				
 			}
-			else if(sel.equals("")) {
-				return;
-			}
-
 
 
 		} catch (Exception e) {

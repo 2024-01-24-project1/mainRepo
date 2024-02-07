@@ -2,6 +2,8 @@ package com.java.view;
 
 import java.util.Scanner;
 
+import com.java.common.LoginLogout;
+
 public class ViewAll {
 	
 	public static void clear() {
@@ -461,7 +463,7 @@ System.out.println();
 	
 	public static void seasonPassRegisterTop() { //정기권 등록하기 상단1
 		System.out.println("╭──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╮");
-		System.out.printf("\t\t\t      \"%s\"님의 정기권 확인하기 \n",member.authName());
+		System.out.printf("\t\t\t      \"%s\"님의 정기권 확인하기 \n",LoginLogout.authName);
 		System.out.println("╰──────────────────────────────── · · ୨୧ · · ───────────────────────────────────╯");
 		
 	}
@@ -760,12 +762,12 @@ System.out.println();
 	}
 
 	public static void userName() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%님 환영합니다.",member.authName());
-//	}
+		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
+	}
 	
 	public static void userNameHello() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%님 환영합니다.",member.authName());
-//	}
+		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
+	}
 	
 		
 	
@@ -825,8 +827,8 @@ System.out.println();
 	
 	////////////////////////여기부터 관리자 화면 메서드
 	
-	public void nameRank(String member.authName, String employeeRank) { //상단에 뜰 이름과 직급
-		System.out.printf("\t\t  이름:                   %s                          \n",member.authName); //이름 변수 받아서 넣으세요
+	public void nameRank(String authName, String employeeRank) { //상단에 뜰 이름과 직급
+		System.out.printf("\t\t  이름:                   %s                          \n",LoginLogout.authName); //이름 변수 받아서 넣으세요
 		System.out.printf("\t\t  직급:                   %s                          \n",employeeRank); //직급 변수 받아서 넣으세요
 		
 	}

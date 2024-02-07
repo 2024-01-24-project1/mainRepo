@@ -46,7 +46,7 @@ public class SafetyManTab {
 			System.out.println("\t\t\t  3. 안전요원 부서 해제");
 			System.out.println("\t\t\t     뒤로가기 엔터");
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-			System.out.print("\t\t\t   선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 전체 안전요원 보기

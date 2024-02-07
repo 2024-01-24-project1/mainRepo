@@ -25,7 +25,7 @@ public class EmployeeUpdateTab {
 			// View클래스 출력
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
 			ViewAll.employeeInfoChangeMain();
-			System.out.print("선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			//1. 근무지 변경

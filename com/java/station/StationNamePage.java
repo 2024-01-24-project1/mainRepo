@@ -9,6 +9,7 @@ public class StationNamePage {
 
 	public static void stationNamePage(ArrayList<String> list, String line) {
 		
+		line = line.replace("호선","");
 		
 		try { 
 			if(Integer.parseInt(line)<1 || Integer.parseInt(line)>9) {

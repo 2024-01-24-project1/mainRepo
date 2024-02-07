@@ -202,7 +202,7 @@ public class SignUp {
 				
 				System.out.println("다시 입력하시려면 아무키나 입력하세요.");
 				System.out.println("뒤로가시려면 엔터를 입력하세요.");
-				System.out.printf("입력: ");
+				System.out.print("입력: ");
 				back = scan.nextLine();
 				
 				if(back.equals("")) {

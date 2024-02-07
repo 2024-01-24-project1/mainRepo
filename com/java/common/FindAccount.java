@@ -27,6 +27,8 @@ public class FindAccount {
 			
 			// 사용자 입력 받기
 			String sel = "";
+			
+			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
 			if (sel.equals("1")) { 		  // 1. ID 찾기

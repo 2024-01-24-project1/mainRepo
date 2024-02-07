@@ -92,7 +92,7 @@ public class EmployeeUpdateTab {
 			
 			if(sel.equals("1")) 		updateWorkArea(ID);	// 근무지 변경
 			else if (sel.equals("2"))   updatePosition(ID);	// 직급 변경
-			else if (sel.equals("3"))	updateLevel(ID);	// 
+			else if (sel.equals("3"))	updateLevel(ID);	// 권한 변경
 			
 		} else {
 			System.out.println("없는 아이디입니다.");

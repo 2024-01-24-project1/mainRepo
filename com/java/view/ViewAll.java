@@ -1,4 +1,4 @@
-package com.java.view;
+package com.test.java.viewfolder;
 
 import java.util.Scanner;
 
@@ -1590,154 +1590,153 @@ System.out.println();
 	}
 	
 
-	public static void trainAddError() { //애매할 때 쓰는 에러 문구0
+	public static void trainAddError() { //애매할 때 쓰는 에러 문구0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   올바르지 않은 값 입니다. 다시 입력해주세요");
+		System.out.println("\t\t   올바르지 않은 값 입니다. 다시 입력해주세요");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
 	}
 	
-	public static void dayError() { // 0
+	public static void dayError() { // 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   주말,평일을 잘못 입력하셨습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 	}
-	public static void calError() { // 0
+	public static void calError() { // 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 일정입니다.");
+		System.out.println("\t\t\t      존재하지 않는 일정입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 	}
-	public static void seasonPassError() { // 0
+	public static void seasonPassError() { // 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   존재하지 않는 정기권 코드입니다.");
-		System.out.println("\t\t\t   (정기권은 영어 대문자로만 이뤄져있습니다.)");
+		System.out.println("\t\t      (정기권은 영어 대문자로만 이뤄져있습니다.)");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 	}
-	public static void noIdError() { //존재하지 않는 아이디를 입력할 시 에러 0
+	public static void noIdError() { //존재하지 않는 아이디를 입력할 시 에러 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 아이디입니다. ");
+		System.out.println("\t\t\t     존재하지 않는 아이디입니다. ");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
 	}
-	public static void stationError() { //역 이름을 잘못 작성한 경우 0
+	public static void stationError() { //역 이름을 잘못 작성한 경우 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 역입니다. ");
+		System.out.println("\t\t\t     존재하지 않는 역입니다. ");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
 	}
 	
-	public static void twiceIdError() { // 0
+	public static void twiceIdError() { // 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   중복된 아이디입니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	public static void RRNError() { // 0
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   유효하지 않은 주민등록번호입니다.");
+		System.out.println("\t\t\t        중복된 아이디입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
-	public static void rRNFormatError() { // 0
+	public static void RRNError() { // 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t    주민등록번호 형식이 틀렸습니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	public static void twiceRRNError() { // 0
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   중복된 주민등록번호입니다.");
+		System.out.println("\t\t\t  유효하지 않은 주민등록번호입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
-	public static void hoLineError() { //잘못된 호선을 집어넣을 경우0
+	public static void rRNFormatError() { // 0 2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t   주민등록번호 형식이 틀렸습니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void twiceRRNError() { // 0 2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t    중복된 주민등록번호입니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void hoLineError() { //잘못된 호선을 집어넣을 경우0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   존재하지 않는 호선 또는 역입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
-	public static void lineError() { //잘못된 호선을 집어넣을 경우0
+	public static void lineError() { //잘못된 호선을 집어넣을 경우0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 호선입니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	public static void twicePhoneNumberError() {
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   중복된 전화번호입니다.");
+		System.out.println("\t\t\t     존재하지 않는 호선입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
-	public static void noPhoneNumberError() {
+	public static void twicePhoneNumberError() { //2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t       중복된 전화번호입니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void noPhoneNumberError() { //2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   유효하지 않은 전화번호입니다..");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 	}
 	
-	public static void phoneNumberFormatError() {
+	public static void phoneNumberFormatError() { //2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 번호거나 전화번호 형식이 틀렸습니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	
-	public static void codeError() {
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   회원코드가 틀렸습니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	public static void rankNameError() { // 존재하지 않는 직급을 주었을 때 에러 0
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   존재하지 않는 직급입니다.");
+		System.out.println("\t\t  존재하지 않는 번호거나 전화번호 형식이 틀렸습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
 	
-	public static void idFormatError() {
+	public static void codeError() { //2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   아이디 형식이 틀렸습니다.");
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		
-	}
-	public static void pwFormatError() {
-		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   비밀번호 형식이 틀렸습니다.");
-		System.out.println("비밀번호는 8~15자, 대소문자,숫자,특수문자(!~*로 이루어져있습니다.)");
+		System.out.println("\t\t\t      회원코드가 틀렸습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
-	public static void nameError() { //이름을 잘못 입력한 경우 0
+	public static void rankNameError() { // 존재하지 않는 직급을 주었을 때 에러 22
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   이름 형식이 틀렸습니다.");
+		System.out.println("\t\t\t     존재하지 않는 직급입니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
 	
-	public static void rankError() { //최고 관리자가 아닐 시 (권한이 안 될 시 )0
+	public static void idFormatError() {//2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t    아이디 형식이 틀렸습니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void pwFormatError() { //2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t     비밀번호 형식이 틀렸습니다.");
+		System.out.println("\t비밀번호는 8~15자, 대소문자,숫자,특수문자(!~*로 이루어져있습니다.)");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	public static void nameError() { //이름을 잘못 입력한 경우 0 2
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		System.out.println("\t\t\t     이름 형식이 틀렸습니다.");
+		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
+		
+	}
+	
+	public static void rankError() { //최고 관리자가 아닐 시 (권한이 안 될 시 )0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		System.out.println("\t\t\t   해당 페이지 접근 권한이 없습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 		
 	}
 	
-	public static void page() { // 페이지 넘기기 라벨 0
+	public static void page() { // 페이지 넘기기 라벨 0 2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t (이전 페이지를 보고 싶으면 q, 다음 페이지를 보고 싶으면 e를 입력해주세요.)");
+		System.out.println("    (이전 페이지를 보고 싶으면 q, 다음 페이지를 보고 싶으면 e를 입력해주세요.)");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
 		
 	}
-	public static void pause() { // 일시 정지
+	public static void pause() { // 일시 정지 2
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("계속하려면 엔터를 입력하세요.");
+		System.out.println("\t\t\t   계속하려면 엔터를 입력하세요.");
 		scan.nextLine();
 	}
-	public static void noIDDataError() {
-		// TODO Auto-generated method stub
+	public static void noIDDataError() { //2
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
-		System.out.println("\t\t\t   해당 데이터를 통해 가입한 회원이 없습니다.");
+		System.out.println("\t\t    해당 데이터를 통해 가입한 회원이 없습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
 	}

@@ -11,6 +11,7 @@ import com.java.member.user.BookMark;
 import com.java.member.user.User;
 import com.java.member.user.UserVoice;
 import com.java.schedule.Schedule;
+import com.java.view.ViewAll;
 
 public final class Exit {
 
@@ -49,6 +50,7 @@ public final class Exit {
 			
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("Exit.writeBookMarkList()");
 			e.printStackTrace();
 		}
@@ -75,6 +77,7 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("분실물 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -99,6 +102,7 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("민원 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -128,6 +132,7 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("로그 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -151,6 +156,7 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("일정 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -171,6 +177,7 @@ public final class Exit {
 			return;
 		
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("정기권 코드 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -199,6 +206,7 @@ public final class Exit {
 		return;
 		
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("직원 리스트 쓰기 실패");
 			e.printStackTrace();
 		}
@@ -226,6 +234,7 @@ public final class Exit {
 			return;
 			
 		} catch (Exception e) {
+			ViewAll.errorFeelEmo();
 			System.out.println("유저 리스트 쓰기 실패");
 			e.printStackTrace();
 		}

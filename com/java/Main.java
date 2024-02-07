@@ -8,6 +8,7 @@ import com.java.common.FindAccount;
 import com.java.common.Load;
 import com.java.common.LoginLogout;
 import com.java.common.SignUp;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 

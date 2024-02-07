@@ -3,9 +3,9 @@ package com.java.member.employee;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.java.common.Data;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.view.ViewAll;
 
 public class EmployeeSearch {
 	
@@ -31,8 +31,8 @@ public class EmployeeSearch {
 			String search = "";
 			
 			ArrayList<Employee> searchlist = new ArrayList<>();
-			
-			System.out.println("특정 호선(숫자만), 이름, 직원이름");
+			ViewAll.employeeSearchNameResult();
+			System.out.println("(특정 호선(숫자만), 이름, 직원이름)");
 			System.out.print("찾기: ");
 			search = scan.nextLine();
 			
@@ -56,6 +56,7 @@ public class EmployeeSearch {
 				employeePage(searchlist);
 				
 			}else {
+				ViewAll.trainAddError();
 				System.out.println("조건에 해당하는 직원이 존재하지 않습니다.");
 			}
 			
@@ -90,9 +91,7 @@ public class EmployeeSearch {
 				String sel = "";	// 입력받는 문자열
 				
 				// View클래스 출력
-				System.out.println("======================================================");
-				System.out.println("                  직원 리스트");
-				System.out.println("======================================================");
+				ViewAll.employeeSearch();
 				
 				list.stream().skip(index * 10)
 				 			 .limit(10)

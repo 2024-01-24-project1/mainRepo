@@ -5,11 +5,17 @@ import java.util.Scanner;
 
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.view.View;
 import com.java.view.ViewAll;
-
 
 public class ScheduleSearch {
 
+	
+	
+	
+	
+	
+	
 	public static void schedulePage(List<Schedule> list) {
 			
 			// 리스트의 페이지수 계산
@@ -24,9 +30,7 @@ public class ScheduleSearch {
 				String sel = "";	// 입력받는 문자열
 				
 				// View클래스 출력
-				System.out.println("======================================================");
-				System.out.println("                  스케줄");
-				System.out.println("======================================================");
+				ViewAll.calList();
 				
 				list.stream().skip(index * 10)
 				 							 .limit(10)
@@ -50,14 +54,14 @@ public class ScheduleSearch {
 						System.out.println("페이지 범위를 벗어났습니다.");
 						System.out.println("다시 입력해주세요.");
 						index = 0;
-						ViewAll.pause();
+						View.pause();
 						
 					}
 					
 				}else {
 					System.out.println("잘못된 입력입니다.");
 					System.out.println("다시 입력해주세요.");
-					ViewAll.pause();
+					View.pause();
 				}
 				
 			}//while루프 종료

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.LoginLogout;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class EmployeeManagementTab {
@@ -17,15 +18,8 @@ public class EmployeeManagementTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             직원 관리          ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 전체 직원 정보보기");
-			System.out.println("           2. 직원 정보 수정");
-			System.out.println("           3. 안전요원관리");
-			System.out.println("           뒤로가기 엔터");
-			System.out.println("--------------------------------------");
+			ViewAll.employeeMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			

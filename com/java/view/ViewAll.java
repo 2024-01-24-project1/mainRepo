@@ -935,6 +935,14 @@ System.out.println();
 		System.out.println();
 		System.out.println("╙═══════════════════════════════════════☆══════════════════════════════════════╜");
 		
+	}public static void statisticsChaosTwoLine2() { // 혼잡도 2번째 라벨 0
+		System.out.println("╓═══════════════════════════════════════☆══════════════════════════════════════╖");
+		System.out.println();
+		System.out.println("\t\t\t      방향을 입력해주세요");
+		System.out.println("\t\t\t (외선 또는 내선 기입)");
+		System.out.println();
+		System.out.println("╙═══════════════════════════════════════☆══════════════════════════════════════╜");
+		
 	}
 	
 	public static void statisticsChaosOne() { //혼잡도 1번째 라벨 0 1

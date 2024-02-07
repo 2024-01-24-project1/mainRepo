@@ -79,7 +79,7 @@ public class BookMarkRoute extends FindWay{
 				
 				try {
 					
-					System.out.print("\t\t\t선택 할 노선: ");
+					System.out.print("\t\t\t선택 할 노선(숫자): ");
 					sel = reader.readLine();
 					index = Integer.parseInt(sel)-1;
 					
@@ -134,9 +134,11 @@ public class BookMarkRoute extends FindWay{
 			
 			String[] temp = route.split("-");
 			
-			System.out.printf("\t\t\t\t%d. %s -> %s\n", index++, temp[1],temp[2]);
+			System.out.printf("\t\t\t       %d. %s -> %s\n\n", index++, temp[1],temp[2]);
 			
 		}
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
 	}
 	
 	

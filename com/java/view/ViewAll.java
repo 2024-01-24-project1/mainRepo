@@ -623,7 +623,7 @@ System.out.println();
 	public static void favoriteView() { // 즐겨찾기 등록 0 1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t          즐겨찾기 목록");
+		System.out.println("\t\t\t        즐겨찾기 목록");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}
@@ -765,6 +765,7 @@ System.out.println();
 		System.out.println("\t\t\t\t 6.마이 페이지");
 		System.out.println("\t\t\t\t 7.로그 아웃");
 		System.out.println("\t\t\t\t 0.종료");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 	}
 	
 	public static void signupFindPw() { // PW 찾기 01 2

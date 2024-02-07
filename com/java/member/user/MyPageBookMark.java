@@ -43,7 +43,9 @@ public class MyPageBookMark extends BookMarkRoute{
 					this.userBookMark = searchMyBookMark();
 
 					if(Validation.is_ExistBookMark(this.userBookMark)) {
-
+						
+						ViewAll.favoriteView();
+						System.out.println();
 						this.printMyBookMark(this.userBookMark);
 						this.selectBookMark(this.userBookMark);
 						ViewAll.pause();

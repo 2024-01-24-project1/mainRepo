@@ -305,8 +305,8 @@ public class EmployeeUpdateTab {
 		}
 		
 		
-		System.out.println("삭제할 계정의 아이디를 입력해주세요.");
-		System.out.printf("아이디: ");
+		System.out.println("\t\t\t삭제할 계정의 아이디를 입력해주세요.");
+		System.out.printf("\t\t\t아이디: ");
 		String input = scan.nextLine();
 		final String DELETE = input;
 		
@@ -315,7 +315,7 @@ public class EmployeeUpdateTab {
 		
 		
 		if(userCheck) {
-			System.out.println("선택된 아이디는 고객 계정입니다");
+			System.out.println("\t\t\t선택된 아이디는 고객 계정입니다");
 			Data.userList.stream().filter(user -> user.getId().equals(DELETE))
 							      .forEach(user -> 
 							System.out.printf("이름: %s\r\n아이디: %s\r\n생년월일: %s\r\n전화번호: %s\r\n정기권유무: %s\r\n정기권기간: %s\r\n"
@@ -325,8 +325,8 @@ public class EmployeeUpdateTab {
 												, user.getPhone()
 												, user.getPassCheck()
 												, user.getPassExpiry()));
-			System.out.println("해당 계정을 삭제하시겠습니까?");
-			System.out.println("yes만 삭제: ");
+			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
+			System.out.println("\t\t\tyes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {
@@ -341,15 +341,15 @@ public class EmployeeUpdateTab {
 				}
 				
 			}else {
-				System.out.println("계정삭제 취소");
+				System.out.println("\t\t\t계정삭제 취소");
 			}
 			
 			
 		}else if (employeeCheck && (!Validation.is_Sudo(DELETE)) ) {
-			System.out.println("선택된 아이디는 직원 계정입니다");
+			System.out.println("\t\t\t선택된 아이디는 직원 계정입니다");
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(DELETE))
 									  .forEach(employee -> 
-							System.out.printf("이름: %s\r\n아이디: %s\r\n생년월일: %s\r\n전화번호: %s\r\n직급: %s\r\n근무지: %s호선 %s역\r\n권한: %s\r\n"
+									  System.out.printf("이름: %s\r\n아이디: %s\r\n생년월일: %s\r\n전화번호: %s\r\n직급: %s\r\n근무지: %s호선 %s역\r\n권한: %s\r\n"
 												, employee.getName()
 												, employee.getId()
 												, employee.getRegistration().substring(0, 6)
@@ -358,8 +358,8 @@ public class EmployeeUpdateTab {
 												, employee.getLine()
 												, employee.getStation()
 												, employee.getLevel()));
-			System.out.println("해당 계정을 삭제하시겠습니까?");
-			System.out.println("yes만 삭제: ");
+			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
+			System.out.println("\t\t\tyes만 삭제: ");
 			input = scan.nextLine();
 			
 			if(input.equals("yes")) {
@@ -368,7 +368,7 @@ public class EmployeeUpdateTab {
 					
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
-						System.out.println(DELETE + "계정 삭제완료");
+						System.out.println("\t\t\t" + DELETE + "계정 삭제완료");
 						ViewAll.pause();
 						break;	// employee객체 탐색 중지
 					}
@@ -377,15 +377,15 @@ public class EmployeeUpdateTab {
 				
 				
 			}else {
-				System.out.println("계정삭제 취소");
+				System.out.println("\t\t\t계정삭제 취소");
 			}
 			
 			
 		}else if (employeeCheck && (!Validation.is_Sudo(DELETE))) {
-			System.out.println("최고권한 계정은 삭제할수없습니다.");
+			System.out.println("\t\t\t최고권한 계정은 삭제할수없습니다.");
 		}
 		else {
-			System.out.println("입력하신 계정은 존재하지 않습니다.");
+			System.out.println("\t\t\t입력하신 계정은 존재하지 않습니다.");
 		}
 		
 		ViewAll.pause();

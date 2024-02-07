@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -452,54 +453,52 @@ public final class Validation {
 			return true;
 		}
 		
-		public static boolean is_busyStat(String line,  String way, String dayOfWeek, String timeStr) {
+		public static ArrayList<String> is_busyStat(String line,  String way, String dayOfWeek, String timeStr) {
+			
+			ArrayList<String> error = new ArrayList<>();
 			
 			try {
 				
 				int time = Integer.parseInt(timeStr);
 				
 				if(time<5 && time > 25) {
-					return false;
+					error.add("시간 범위 초과");
 				}
 				
 				
 			} catch (Exception e) {
 				
-				return false;
+				error.add("시간 형식 불일치");
 				
 			}
 			
-			
-			
-			if(line.contains("호선")){
-				line = line.replace("호선", "");
-			}
 				
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
 					&& !line.equals("4") && !line.equals("5") && !line.equals("6") && !line.equals("7") 
 					&& !line.equals("8") && !line.equals("9")) {
 				
-				return false;
+				error.add("호선 불일치 1~9호선");
 				
 			}
 			
 			if(!way.equals("상행") && !way.equals("하행") && !way.equals("내선") && !way.equals("외선")) {
 				
-				return false;
+				error.add("방향 입력 불일치");
 				
 			}
 			
 
 			if(!dayOfWeek.equals("평일") && !dayOfWeek.equals("토요일")) {
 				
-				return false;
+				error.add("요일(평일/주말)입력 불일치");
 				
 			}
+			error.add("오류없음");
 			
 			
 			
-			return true;
+			return error;
 			
 		}
 		public static boolean is_addTrain(String line, String trainNums, String startStation, String endStation, String time,

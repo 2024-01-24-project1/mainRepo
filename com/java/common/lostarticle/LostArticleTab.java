@@ -93,7 +93,6 @@ public class LostArticleTab {
 				
 				System.out.println("\t\t\t검색을 그만두시려면 엔터");
 				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
-				System.out.print("\t\t\t입력: ");
 				search = scan.nextLine();
 				
 				if(search.equals("")) {
@@ -177,7 +176,6 @@ public class LostArticleTab {
 			
 			System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
 			System.out.println("\t\t\t뒤로가려면 엔터를 입력하세요.");
-			System.out.print("\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

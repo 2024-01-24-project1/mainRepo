@@ -25,7 +25,7 @@ public class StatsTab {
 			
 			
 			ViewAll.statisticsMain();
-			System.out.print("선택 (번호): ");
+			System.out.print("\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
@@ -41,8 +41,8 @@ public class StatsTab {
 				break;
 			}else { // 이외의 숫자 입력 시
 				 ViewAll.errorFailEmo();
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
+				System.out.println("\t\t\t해당 섹션이 없습니다.");
+				System.out.println("\t\t\t다시 입력해주세요.");
 				ViewAll.pause();
 			}
 			
@@ -97,11 +97,11 @@ public class StatsTab {
 					}
 					
 				}else {
-					System.out.println("잘못된 입력");
+					System.out.println("\t\t\t잘못된 입력");
 				}
 				
-				System.out.println("다시입력하시려면 아무키나 눌러주세요.");
-				System.out.println("뒤로가려면 엔터");
+				System.out.println("\t\t\t다시입력하시려면 아무키나 눌러주세요.");
+				System.out.println("\t\t\t뒤로가려면 엔터");
 				
 				if(sel.equals("")) {
 					

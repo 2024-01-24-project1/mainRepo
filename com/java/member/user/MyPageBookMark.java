@@ -34,7 +34,7 @@ public class MyPageBookMark extends BookMarkRoute{
 			while(true) {
 				ViewAll.lineFavorite();
 
-				System.out.print("입력: ");
+				System.out.print("\t\t\t입력: ");
 				String sel = reader.readLine();
 
 
@@ -53,7 +53,7 @@ public class MyPageBookMark extends BookMarkRoute{
 
 					ViewAll.favoriteChange();
 
-					System.out.print("입력: ");
+					System.out.print("\t\t\t입력: ");
 					sel = reader.readLine();
 
 					if(sel.equals("1")) { // 즐겨찾기 등록
@@ -70,18 +70,18 @@ public class MyPageBookMark extends BookMarkRoute{
 
 							ViewAll.favoriteAdd();
 
-							System.out.print("호선: ");
+							System.out.print("\t\t\t호선: ");
 							line = reader.readLine();
 							
 							StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-							System.out.print("시작역: ");
+							System.out.print("\t\t\t시작역: ");
 							start = reader.readLine(); 
 
-							System.out.print("도착역: ");
+							System.out.print("\t\t\t도착역: ");
 							end = reader.readLine();
 
-							System.out.print("시간(5~24): ");
+							System.out.print("\t\t\t시간(5~24): ");
 							time = reader.readLine();
 
 							check = is_bookMark(line, start, end, time);
@@ -90,14 +90,14 @@ public class MyPageBookMark extends BookMarkRoute{
 								break;
 							}
 							else {
-								System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+								System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
 							}
 						}
 
 						calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(time));
 
 						registerBookMark(line, start, end, calendar);
-						System.out.println("즐겨찾기 등록을 완료했습니다.");
+						System.out.println("\t\t\t즐겨찾기 등록을 완료했습니다.");
 
 						ViewAll.pause();
 
@@ -149,13 +149,13 @@ public class MyPageBookMark extends BookMarkRoute{
 			
 			while(true) {
 				
-				System.out.print("선택 할 노선: ");
+				System.out.print("\t\t\t선택 할 노선: ");
 				sel = reader.readLine();
 				index = Integer.parseInt(sel)-1;
 				if(index>=userBookMark.size()) {
 					
-					System.out.println("범위 내의 숫자만 입력하세요.");
-					System.out.println("뒤로 가기를 하려면 엔터를 입력하세요.");
+					System.out.println("\t\t\t범위 내의 숫자만 입력하세요.");
+					System.out.println("\t\t\t뒤로 가기를 하려면 엔터를 입력하세요.");
 					
 				}else if(sel.equals("")) {
 					return;
@@ -172,7 +172,7 @@ public class MyPageBookMark extends BookMarkRoute{
 				if(b.getId().equals(LoginLogout.auth)) {
 					
 					b.getBookMarkList().remove(index);
-					System.out.println("즐겨찾기 삭제를 완료했습니다.");
+					System.out.println("\t\t\t즐겨찾기 삭제를 완료했습니다.");
 					ViewAll.pause();
 					
 				}

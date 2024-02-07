@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.java.common.LoginLogout;
+import com.java.station.management.StationManagement;
 
 public class ViewAll {
 	
@@ -896,7 +897,7 @@ System.out.println();
 	public static void loginTop() { //로그인 화면 상단 0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t              로그인");
+		System.out.println("\t\t\t           로그인");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 		//밑에 입력 읽어야 함 
@@ -1642,22 +1643,25 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t      원하는 기능을 선택하세요");
-		System.out.println("\t\t\t (숫자로 입력해주세요)");
+		System.out.println("\t\t\t    원하는 기능을 선택하세요");
+		System.out.println("\t\t\t      (숫자로 입력해주세요)");
 		System.out.println("\t\t\t      현재 메뉴: 역 관리");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 1. 일반 열차 추가");
-		System.out.println("\t\t\t 2. 의자 없는 열차 변경");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t     1. 일반 열차 추가");
+		System.out.println();
+		System.out.println("\t\t\t     2. 의자 없는 열차 변경");
+		System.out.println();
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 	}
 	 
 	public static void trainAddOne() { // 역관리 >  열차 추가 > 추가 할 호선 0 수정했음222222222222222222222222  
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t     일반 열차 추가");
+		System.out.printf("\t\t\t        일반 열차 추가    (예비 열차 대수 : %d)\n",StationManagement.spareTrain);
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 
@@ -1971,7 +1975,7 @@ System.out.println("╬╬═════════════╬╬═══
 			ViewAll.trainAddError();
 			System.out.println();
 			for(String log : error) {
-				System.out.printf("\t\t%d. %s\n\n",index++,log);
+				System.out.printf("  \t\t%d. %s\n\n",index++,log);
 			}
 			System.out.println();
 

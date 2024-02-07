@@ -102,7 +102,7 @@ public class EmployeeSearch {
 						 											, employee.getStation() + "역"
 						 											, employee.getPhone()));
 				// 이름, ID, 전화번호, 직급, 호선, 역이름
-				System.out.printf("\t\t\t  Page| %s / %s\r\n", index + 1, page);
+				System.out.printf("\n\t\t\t\t  Page| %s / %s\r\n", index + 1, page);
 				System.out.print("\t\t\t  엔터입력시 뒤로갑니다.");
 				System.out.print("\t\t\t  원하는 페이지: ");
 				sel = scan.nextLine();

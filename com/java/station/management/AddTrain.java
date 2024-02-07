@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import com.java.busy.BusyManagement;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.station.StationNamePage;
 import com.java.view.ViewAll;
 
 
@@ -43,44 +44,41 @@ public class AddTrain extends StationManagement {
 			while(loop) {
 				
 				ViewAll.trainAddOne();
-				System.out.print("호선: ");
+				System.out.print("\t\t\t호선           : ");
 				line = reader.readLine();
 				
-				if(line.contains("호선")){
+				if(line.contains("호선")) {
 					line = line.replace("호선", "");
 				}
 
-				ViewAll.trainAddTwo();
-				System.out.print("추가 열차수: ");        
-				trainNums = reader.readLine();
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
-				ViewAll.trainAddThree();
-				System.out.print("시작역: ");
+				System.out.print("\t\t\t시작역         : ");
 				startStation = reader.readLine();
 				
 				if(startStation.endsWith("역")) {
 					startStation = startStation.substring(0,startStation.length()-1);
 				}
 				
-				ViewAll.trainAddFour();
-				System.out.print("종료역: ");
+				System.out.print("\t\t\t종료역         : ");
 				endStation = reader.readLine();
 				
 				if(endStation.endsWith("역")) {
 					endStation = endStation.substring(0,endStation.length()-1);
 				}
 				
-				ViewAll.trainAddFive();
-				System.out.print("시간대: ");
+				System.out.print("\t\t\t시간대(5~24)   : ");
 				time = reader.readLine();
 				
-				ViewAll.trainAddSix();
-				System.out.print("요일(평일/주말): ");
+				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();
 				
 				if(dayOfWeek.equals("주말")) {
 					dayOfWeek = "토요일";
 				}
+				
+				System.out.print("\t\t\t추가 열차수    : ");        
+				trainNums = reader.readLine();
 				
 				error = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
 				
@@ -149,7 +147,6 @@ public class AddTrain extends StationManagement {
 			stationManagement.convertModifyBusy = BusyManagement.convertBusy(stationManagement.modifyBusy);
 			
 			//출력
-			ViewAll.trainAddResult();
 			printBusy(startStation, endStation, time,stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
 			
 			//혼잡도 수치 수정
@@ -160,8 +157,7 @@ public class AddTrain extends StationManagement {
 			
 			
 			LogSave.logSave(LogSave.ADDTRAIN);
-			System.out.print("계속 하려면 엔터를 입력하세요.");
-			reader.readLine();
+			ViewAll.pause();
 			
 			
 		} catch (Exception e) {

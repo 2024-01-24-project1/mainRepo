@@ -40,7 +40,6 @@ public class CurrentTimeFindWay extends FindWay {
 
 				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 
-				ViewAll.roadSearchRouteTop();
 				System.out.print("\t\t\t\t출발역: ");
 				start = reader.readLine();
 

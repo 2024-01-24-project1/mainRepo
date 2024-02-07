@@ -1470,7 +1470,7 @@ System.out.println();
 		System.out.println();
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println();
-		System.out.println("\t\t\t 1. 의자 없는 열차 추가");
+		System.out.println("\t\t\t 1. 의자 없는 열차 변경");
 		System.out.println("\t\t\t 2. 일반 열차 추가");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	}
@@ -1479,6 +1479,16 @@ System.out.println();
 		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
 		System.out.println();
 		System.out.println("\t\t\t      열차 추가 할 호선을 입력해주세요");
+		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
+		System.out.println("\t\t\t (예시: 2호선)");
+		System.out.println();
+		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
+
+	}
+	public static void changeNoChairTrain() { // 역관리 >  열차 추가 > 추가 할 호선 0
+		System.out.println("┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┉┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢┅ׄ┉֢");
+		System.out.println();
+		System.out.println("\t\t\t      열차 변경 할 호선을 입력해주세요");
 		System.out.println("\t\t\t (호선 입력 시 \"호선\"까지 포함하여 입력해주세요.)");
 		System.out.println("\t\t\t (예시: 2호선)");
 		System.out.println();
@@ -1539,6 +1549,15 @@ System.out.println();
 		System.out.println("╒◖══════════════════════════════════════════════════════════════════════════════◗╕");
 		System.out.println();
 		System.out.println("\t\t\t 열차 추가 시에 개선된 혼잡도의 결과입니다.");
+		System.out.println();
+		System.out.println("╘◖══════════════════════════════════════════════════════════════════════════════◗╛");
+
+
+	}
+	public static void changeNoChairTrainResult() { // 역 관리 열차 추가의 혼잡도 결과물  0
+		System.out.println("╒◖══════════════════════════════════════════════════════════════════════════════◗╕");
+		System.out.println();
+		System.out.println("\t\t\t 열차 변경 시에 개선된 혼잡도의 결과입니다.");
 		System.out.println();
 		System.out.println("╘◖══════════════════════════════════════════════════════════════════════════════◗╛");
 

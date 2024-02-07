@@ -162,7 +162,6 @@ public class StationManagement {
 			String sel = "";	// 입력받는 문자열
 
 			// View클래스 출력
-			ViewAll.employeeSearch();
 
 			System.out.println(start);
 			list.stream().skip(index * 5)

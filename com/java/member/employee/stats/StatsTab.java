@@ -24,7 +24,7 @@ public class StatsTab {
 			
 			
 			ViewAll.statisticsMain();
-			System.out.print("\t\t\t선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 
@@ -56,6 +56,8 @@ public class StatsTab {
 			
 		
 		ViewAll.statisticsUserMain();
+		ViewAll.chooseNum();
+		
 		sel = scan.nextLine();
 		
 		if(sel.equals("1") || sel.equals("2")) LogSave.logSave(LogSave.USERSTATSTAB);
@@ -67,7 +69,9 @@ public class StatsTab {
 			
 			while(true) {
 				ViewAll.statisticsLineTotalUser();
+				System.out.print("\t\t\t\t호선: ");
 				sel = scan.nextLine();
+				
 
 				if(Validation.is_Line(sel)) {
 					
@@ -121,6 +125,7 @@ public class StatsTab {
 			
 		
 		ViewAll.statisticsMoneyMain();
+		ViewAll.chooseNum();
 		sel = scan.nextLine();
 		
 		if(sel.equals("1") || (sel.equals("2"))) LogSave.logSave(LogSave.SALESSTATSTAB);
@@ -130,6 +135,7 @@ public class StatsTab {
 		}else if (sel.equals("2")) {
 			while(true) {
 				ViewAll.statisticsLineTotalUser();
+				System.out.print("\t\t\t\t호선: ");
 				sel = scan.nextLine();
 				
 				if(Validation.is_Line(sel)) {

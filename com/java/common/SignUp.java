@@ -17,7 +17,6 @@ public class SignUp {
 			
 			// View에서 출력
 			ViewAll.signupMain();
-			ViewAll.chooseNum();
 			String sel = ""; // 선택한 번호
 			sel = scan.nextLine();
 			

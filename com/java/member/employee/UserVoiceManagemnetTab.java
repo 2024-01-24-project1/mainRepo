@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public final class UserVoiceManagemnetTab {

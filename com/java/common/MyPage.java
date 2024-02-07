@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.java.member.employee.Employee;
 import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class MyPage {
@@ -67,7 +67,7 @@ public class MyPage {
 				ViewAll.errorFailEmo();
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			if(LoginLogout.getOut) {

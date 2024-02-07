@@ -6,7 +6,7 @@ import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.common.MyPage;
 import com.java.member.CommonFunction;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public final class UserMode extends CommonFunction{
@@ -21,7 +21,7 @@ public final class UserMode extends CommonFunction{
 			Scanner scan = new Scanner(System.in);
 			
 			// View클래스 출력
-			ViewAll.userName();
+			ViewAll.userNameHello();
 			ViewAll.userMainView();
 			
 			System.out.print("선택 (번호): ");

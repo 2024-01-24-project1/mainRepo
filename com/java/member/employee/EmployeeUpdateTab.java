@@ -10,7 +10,7 @@ import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
@@ -91,7 +91,7 @@ public class EmployeeUpdateTab {
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
-			View.pause();
+			ViewAll.pause();
 		}
 	}//End of searchEmployeeId()
 	
@@ -134,7 +134,7 @@ public class EmployeeUpdateTab {
 					if(input.equals("")) {
 						break;
 					}
-					View.pause();
+					ViewAll.pause();
 				}
 			}
 		
@@ -246,7 +246,7 @@ public class EmployeeUpdateTab {
 							System.out.println("근무지 변경 완료");
 							LogSave.logSave(LogSave.CHANGEWORKSPACE);
 							ViewAll.pause();
-							View.pause();
+							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
 							
 						}

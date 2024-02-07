@@ -2,7 +2,7 @@ package com.java.common;
 
 import java.util.Scanner;
 
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 // 아이디, 비밀번호 찾기

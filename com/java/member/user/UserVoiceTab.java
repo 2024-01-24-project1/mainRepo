@@ -4,7 +4,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class UserVoiceTab {
@@ -13,7 +13,7 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			View.userVoiceView();
+			//View.userVoiceView();
 			
 			Scanner scan = new Scanner(System.in);
 			String num = "";

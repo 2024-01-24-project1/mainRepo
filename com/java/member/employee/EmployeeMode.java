@@ -11,7 +11,7 @@ import com.java.member.employee.stats.StatsTab;
 import com.java.schedule.ScheduleTab;
 import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public final class EmployeeMode extends CommonFunction{

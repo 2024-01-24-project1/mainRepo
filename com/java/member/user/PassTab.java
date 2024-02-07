@@ -8,7 +8,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public class PassTab {
@@ -20,7 +20,7 @@ public class PassTab {
 		
 		while(true) {
 			
-			View.ticketView();
+			//View.ticketView();
 			String sel = "";
 			ViewAll.seasonPassEmo();
 			ViewAll.seasonPassMain();

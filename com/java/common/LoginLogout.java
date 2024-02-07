@@ -6,7 +6,7 @@ import com.java.member.employee.Employee;
 import com.java.member.employee.EmployeeMode;
 import com.java.member.user.User;
 import com.java.member.user.UserMode;
-import com.java.view.View;
+
 import com.java.view.ViewAll;
 
 public final class LoginLogout {
@@ -108,7 +108,7 @@ public final class LoginLogout {
 				
 					System.out.println("로그인이 완료되었습니다.");
 					System.out.println(LoginLogout.authName + "님 환영합니다.");
-					View.pause();
+					ViewAll.pause();
 					break;	// 아이디, 비밀번호 입력받기 종료
 					
 			}else {

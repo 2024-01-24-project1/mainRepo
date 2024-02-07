@@ -8,7 +8,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class PassTab {
 
@@ -19,7 +19,7 @@ public class PassTab {
 		
 		while(true) {
 			
-			View.ticketView();
+			ViewAll.ticketView();
 			String sel = "";
 			
 			System.out.println("정기권 페이지");
@@ -42,7 +42,7 @@ public class PassTab {
 				//다시입력
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 		}//while루프 종료
@@ -52,7 +52,7 @@ public class PassTab {
 	
 	public static void myTicket() { // 1. 내 정기권 확인
 		
-		View.title("나의 정기권 확인하기");
+		ViewAll.title("나의 정기권 확인하기");
 		
 		if ( LoginLogout.pass.equals("있음") ) {
 			
@@ -64,12 +64,12 @@ public class PassTab {
 			System.out.println("정기권 미보유 상태입니다.");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 	}//End of myTicket()
 	
 	public static void signPass() { // 2. 정기권 등록
 		
-		View.title("정기권 등록");
+		ViewAll.title("정기권 등록");
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -173,7 +173,7 @@ public class PassTab {
 			System.out.println("유효하지 않은 정기권입니다.");
 	
 		}
-		View.pause();
+		ViewAll.pause();
 	}//End of registramtionTicket
 	
 }//End of class

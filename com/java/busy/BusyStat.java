@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import com.java.common.Validation;
 import com.java.station.management.StationManagement;
-import com.java.view.View;
+import com.java.view.ViewAll;
 import com.java.view.ViewAll;
 
 
@@ -85,7 +85,7 @@ public class BusyStat extends StationManagement{
 			this.route = lineRoute(lines);
 			printBusy(BusyManagement.searchBusy(lines, way, dayOfWeek,this.route),lines,way,dayOfWeek,time);
 			
-			View.pause();
+			ViewAll.pause();
 			
 			
 		} catch (Exception e) {

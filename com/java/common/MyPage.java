@@ -5,7 +5,7 @@ import java.util.Scanner;
 import com.java.member.employee.Employee;
 import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class MyPage {
 	
@@ -68,7 +68,7 @@ public class MyPage {
 				//다시입력
 				System.out.println();
 				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			if(LoginLogout.getOut) {
@@ -174,7 +174,7 @@ public class MyPage {
 				System.out.println("계정삭제 취소");
 			}
 			
-			View.pause();
+			ViewAll.pause();
 		}
 		
 	}//End of myPageRemoveID()
@@ -187,7 +187,7 @@ public class MyPage {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		View.title("전화번호 변경");
+		ViewAll.title("전화번호 변경");
 		
 		String id = LoginLogout.auth;
 		String name = LoginLogout.authName;
@@ -251,7 +251,7 @@ public class MyPage {
 			
 			System.out.println("형식에 맞지않거나 이미 존재하는 전화번호입니다.");
 		}
-		View.pause();
+		ViewAll.pause();
 		
 	}// end of myPageChangeNum
 
@@ -261,7 +261,7 @@ public class MyPage {
 		boolean checkUser = false;		// 고객
 		boolean checkEmployee = false;	// 직원
 			
-		View.title("PW 변경");
+		ViewAll.title("PW 변경");
 
 
 		// 고객 계정인지 직원계정인지 검사
@@ -319,7 +319,7 @@ public class MyPage {
 			System.out.println("비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 		
 	} // end of myPageFindPW()
 

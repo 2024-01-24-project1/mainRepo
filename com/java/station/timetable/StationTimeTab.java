@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class StationTimeTab {
 	
@@ -106,16 +106,16 @@ public class StationTimeTab {
 					
 				}else if ( !Validation.is_WeekOf(weekOf)) {	// 주말,평일 잘못 입력한 경우
 					System.out.println("주말,평일을 잘못 입력하셨습니다.");
-					View.pause();
+					ViewAll.pause();
 				}
 				else {	  									// 역이름이 호선과 틀릴경우
 					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
-					View.pause();
+					ViewAll.pause();
 				}
 				
 			}else {
 				System.out.println("잘못된 호선");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 		}//while루프 종료

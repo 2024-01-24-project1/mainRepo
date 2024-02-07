@@ -680,23 +680,25 @@ System.out.println();
 		
 		
 	}
-	public static void employeeMyPage() {//직원의 마이페이지 (모름)
-		
+	public static void employeeMyPage() { //직원 마이 페이지
+		System.out.println("\t\t\t 0.회원 탈퇴");
+		System.out.println("\t\t\t 1.비밀번호 변경");
+		System.out.println("\t\t\t 2.전화번호 변경");
+		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
 	public static void userMyPage() { //고객 마이 페이지  0
-		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println("\t\t\t         마이 페이지");
-		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println();
-		System.out.println("\t\t\t 1.내 정보 보기");
-		System.out.println("\t\t\t 2.회원정보 수정");
+		System.out.println("\t\t\t 0.회원 탈퇴");
+		System.out.println("\t\t\t 1.비밀번호 변경");
+		System.out.println("\t\t\t 2.전화번호 변경");
 		System.out.println("\t\t\t 3.노선 즐겨찾기");
-		System.out.println("\t\t\t 4.회원 탈퇴");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+	}
+	
+	public static void AllMyPage() {
+		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
+		System.out.printf("\t\t\t         %-5s님의 마이 페이지\r\n", LoginLogout.authName);
+		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 	}
 	
 	public static void userMainView() { //고객 메인 메뉴 화면 0

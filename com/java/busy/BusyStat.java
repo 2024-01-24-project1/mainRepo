@@ -110,7 +110,7 @@ public class BusyStat extends StationManagement{
 		
 		for(Busy b : list) {
 			
-			System.out.printf("%s : %.1f",b.getStation(),b.getCrowded().get(Integer.parseInt(time)-5));
+			System.out.printf("%-20s : %-3.1f",b.getStation(),b.getCrowded().get(Integer.parseInt(time)-5));
 			System.out.println();
 			
 		}

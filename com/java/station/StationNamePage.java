@@ -3,6 +3,8 @@ package com.java.station;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.java.view.ViewAll;
+
 public class StationNamePage {
 
 	public static void stationNamePage(ArrayList<String> list, String line) {
@@ -18,15 +20,13 @@ public class StationNamePage {
         }
 
         while (true) {
-            System.out.println("=======================================================================");
-            System.out.printf("\t\t\t\t%s 역리스트\r\n", line);
-            System.out.println("=======================================================================");
+        	ViewAll.stationNamePageTable(line);
 
             // 현재 페이지에 해당하는 역 목록 출력
             int startIndex = currentPage * pageSize;
             int endIndex = Math.min(startIndex + pageSize, list.size());
             list.subList(startIndex, endIndex).stream().forEach(station -> {
-                System.out.printf("%-20s  \t", station);
+                System.out.printf("\t%-15s", station);
                 if (list.indexOf(station) % 3 == 2 || list.indexOf(station) == endIndex - 1) // 한 줄에 역 이름을 3개씩 출력
                     System.out.println();
             });

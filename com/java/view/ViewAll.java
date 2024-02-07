@@ -1015,6 +1015,16 @@ System.out.println();
 		
 	}
 	
+	public static void busyStatMain() { // 혼잡도 통계
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println();
+		System.out.println("\t\t\t        혼잡도 통계");
+		System.out.println();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+	}
+	
 	public static void statisticsMain() { // 통계 정보 메인 0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

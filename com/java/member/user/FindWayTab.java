@@ -1,9 +1,9 @@
-package com.java.station.management;
+package com.java.member.user;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import com.java.member.user.BookMarkRoute;
+import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
 public class FindWayTab {
@@ -19,7 +19,7 @@ public class FindWayTab {
 			while(true) {
 				
 				ViewAll.roadSearchMain();
-				System.out.print("입력:");
+				ViewAll.chooseNum();
 				String sel = reader.readLine();
 				
 				
@@ -29,8 +29,14 @@ public class FindWayTab {
 				}else if (sel.equals("2")) {
 					BookMarkRoute bookMarkRoute = new BookMarkRoute();
 					bookMarkRoute.bookMarkRouteSelMenu();
-				}else if(sel.equals("3") || sel.equals("")) {
+				}else if(sel.equals("")) {
 					break;
+				}else {
+					
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
+					ViewAll.pause();
+					
 				}
 				
 			}

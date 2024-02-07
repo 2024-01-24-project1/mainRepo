@@ -31,7 +31,8 @@ public class StatsTab {
 			System.out.println("\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 			System.out.println();
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-			System.out.print("\t\t\t선택 (번호): ");
+			ViewAll.chooseNum();
+			
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) { 			// 1. 혼잡도 통계 

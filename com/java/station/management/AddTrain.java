@@ -27,6 +27,7 @@ public class AddTrain extends StationManagement {
 		
 		try {
 			
+			ArrayList<String> error = new ArrayList<>();
 			boolean loop  = true;
 			boolean check = false;
 			String line = "";
@@ -81,19 +82,14 @@ public class AddTrain extends StationManagement {
 					dayOfWeek = "토요일";
 				}
 				
-				check = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
+				error = Validation.is_addTrain(line, trainNums, startStation, endStation, time, dayOfWeek);
 				
-				if(check) {
+				if(error.get(0).equals("오류없음")) {
 					loop = false;
 				}else {
 					
-					System.out.println("잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
-					
-					String input = reader.readLine();
-					if(input.equals("")) {
-						return;
+					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
+						return;                      //false 일 경우 뒤로가기
 					}
 					
 				}

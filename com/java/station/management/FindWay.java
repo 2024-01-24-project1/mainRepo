@@ -41,8 +41,8 @@ public class FindWay extends StationManagement {
 			
 			while(true) {
 				ViewAll.roadSearchRouteBottom();
+				ViewAll.chooseNum();
 				
-				System.out.print("입력: ");
 				String sel = reader.readLine();
 
 				if(sel.equals("1")) { //현재시간
@@ -57,6 +57,11 @@ public class FindWay extends StationManagement {
 
 				}else if(sel.equals("")) {//뒤로가기
 					break;
+					
+				}else {
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
+					ViewAll.pause();
 					
 				}
 			}

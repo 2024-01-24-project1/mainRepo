@@ -16,14 +16,7 @@ public class FindAccount {
 			
 			// View에서 출력
 			ViewAll.signupFindMain();
-			/*
-			  	1. ID 찾기
-			  	2. PW찾기
-			  	3. 뒤로가기
-			  	------------
-			  	선택(번호): 
-			 
-			 */
+
 			
 			// 사용자 입력 받기
 			String sel = "";

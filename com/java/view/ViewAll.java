@@ -797,7 +797,7 @@ System.out.println();
 	System.out.println();
 
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-	System.out.print("\t선택 (번호): ");
+	System.out.print("\t\t\t선택 (번호): ");
 	}
 	public static void signupMain() { //회원가입 메인 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1740,6 +1740,11 @@ System.out.println();
 		System.out.println("\t\t\t   해당 데이터를 통해 가입한 회원이 없습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
+	}
+	
+	public static void chooseNum() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t선택 (번호): ");
 	}
 	
 

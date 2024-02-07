@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.java.common.log.Log;
 import com.java.station.management.StationManagement;
 
 // 유효성 검사 클래스 
@@ -779,5 +780,25 @@ public final class Validation {
 			
 			
 		}
+	    
+	    public static boolean is_existLog(String id, String time){
+	    	
+	    	
+	    	
+	    	for(Log log : Data.logList) {
+	    		
+	    		if(log.getId().equals(id) && log.getTime().equals(time)) {
+	    			
+	    			return true;
+	    			
+	    		}
+	    		
+	    	}
+	    	
+	    	return false;
+	    	
+	    	
+	    }
+	    
 		
 }//End of class

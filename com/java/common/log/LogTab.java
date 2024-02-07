@@ -43,7 +43,7 @@ public class LogTab {
 			String sel = "";	// 입력받는 문자열
 			
 			// View클래스 출력
-			ViewAll.employeeSearch();
+			ViewAll.logView();
 			
 			list.stream().skip(index * 5)
 			 			 .limit(5)
@@ -67,76 +67,103 @@ public class LogTab {
 					System.out.println("\t\t\t페이지 범위를 벗어났습니다.");
 					System.out.println("\t\t\t다시 입력해주세요.");
 					index = 0;
-					
+
 				}
-				
+
 			}else {
 				System.out.println("\t\t\t잘못된 입력입니다.");
 				System.out.println("\t\t\t다시 입력해주세요.");
 			}
-			
+
 		}//while루프 종료
 	}	
 	private static void searchLog() {
 
 		try {
-			
+
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			String sel = "";
 
-			System.out.println("\t\t\t  1. 자세히 검색");
-			System.out.println("\t\t\t엔터를 입력 뒤로가기");
-			sel = reader.readLine();
 
-			if(sel.equals("1")) {
+			while(true) {
+				
+				System.out.println("\t\t\t  1. 자세히 검색");
+				System.out.println("\t\t\t엔터를 입력 뒤로가기");
+				sel = reader.readLine();
+				
+				if(sel.equals("1")) {
+					
+					String id = "";
+					String time = "";
+					boolean check = false;
+				
+					while(true) {
 
-				String id = "";
-				String time = "";
+						System.out.print("\t\t\t검색할 아이디     : ");
+						id = reader.readLine();
 
-				System.out.print("\t\t\t검색할 아이디     : ");
-				id = reader.readLine();
+						System.out.print("\t\t\t검색할 날짜(-포함): ");
+						time = reader.readLine();
 
-				System.out.print("\t\t\t검색할 날짜(-포함): ");
-				time = reader.readLine();
+						check = Validation.is_existLog(id, time);
 
+						if(check) {
+							break;
+						}else if(!check) {
 
-				System.out.printf("     날짜         \t아이디\t\t\t행동로그\n");
+							System.out.println("\t\t\t잘못된 입력입니다");
+							System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
+							System.out.println("\t\t\t뒤로가시려면 엔터입력");
+							System.out.printf("\t\t\t입력: ");
+							sel = reader.readLine();
 
-				for(Log log : Data.logList) {
+							if(sel.equals("")) {
 
-					if(log.getId().equals(id) && log.getTime().equals(time)) {
-
-						int index = 1;
-
-						System.out.printf("  %s       \t%s \n",time,id);
-
-						for(int i=0; i<log.getAction().size(); i++) {
-
-							System.out.printf("\t\t\t\t      %d. %s\n",index++,log.getAction().get(i));
+								return;
+							}
 
 						}
-
-
-
-
-
 					}
-
-
-
+					ViewAll.logView();
+					System.out.printf("     날짜         \t 아이디\t\t\t행동로그\n");
+					
+					for(Log log : Data.logList) {
+						
+						if(log.getId().equals(id) && log.getTime().equals(time)) {
+							
+							int index = 1;
+							
+							System.out.printf("  %s       \t%s \n",time,id);
+							
+							for(int i=0; i<log.getAction().size(); i++) {
+								
+								System.out.printf("\t\t\t\t      %d. %s\n",index++,log.getAction().get(i));
+								
+							}
+							System.out.println();
+							
+						}
+						
+						
+					}
+					
+					
+					
 				}
-
-
-			}else if(sel.equals("")) {
-				return;
-			}else {
-
-				System.out.println("\t\t\t해당 섹션이 없습니다.");
-				System.out.println("\t\t\t다시 입력해주세요.");
-				ViewAll.pause();
-
-
+				
+				
+				else if(sel.equals("")) {
+					return;
+				}	else {
+					
+					System.out.println("\t\t\t해당 섹션이 없습니다.");
+					System.out.println("\t\t\t다시 입력해주세요.");
+					ViewAll.pause();
+					
+					
+				}
 			}
+			
 
 
 
@@ -144,17 +171,17 @@ public class LogTab {
 
 
 
-		} catch (Exception e) {
-			System.out.println("LogTab.printLog()");
-			e.printStackTrace();
-		}
-
-
-
-
-
-
+	} catch (Exception e) {
+		System.out.println("LogTab.printLog()");
+		e.printStackTrace();
 	}
+
+
+
+
+
+
+}
 
 
 

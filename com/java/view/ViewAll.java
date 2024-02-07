@@ -1223,6 +1223,15 @@ System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 	}
 	
+	public static void logView() { //분실물 추가 , 제거  상단 부분 0 2
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println();
+		System.out.println("\t\t\t          행동 로그");
+		System.out.println();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+	}
+	
 	public static void lostarticleMain() { //전체 분실물 보기 화면 01 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

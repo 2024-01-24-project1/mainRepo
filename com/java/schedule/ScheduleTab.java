@@ -87,7 +87,7 @@ public class ScheduleTab {
 			}
 			
 			System.out.println("\t\t\t잘못된 입력입니다");
-			System.out.println("\t\t\t다시 입력하시려면 아무키나 입려하세요");
+			System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요");
 			System.out.println("\t\t\t뒤로가시려면 엔터입력");
 			System.out.printf("\t\t\t입력: ");
 			sel = scan.nextLine();

@@ -21,7 +21,7 @@ public class LostArticleSearch {
 					String sel = "";	// 입력받는 문자열
 					
 					// View클래스 출력
-					ViewAll.lostarticleList();
+					ViewAll.print("분실물");
 					
 					System.out.println("분실물\t\t\t상세내용\t\t\t잃어버린 역");
 					

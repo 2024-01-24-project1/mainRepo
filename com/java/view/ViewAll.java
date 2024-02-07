@@ -370,6 +370,14 @@ System.out.println();
 
 	}
 	
+	public static void print(String title) {
+		clear();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.printf("\t\t\t\t     %s\n", title);
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+	}
+	
 	public static void costTimeTable() { //고객 > 요금표 1
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

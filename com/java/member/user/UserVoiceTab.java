@@ -54,20 +54,20 @@ public class UserVoiceTab {
 		boolean contentCheck = (content.length() > 200 || content.length() < 2); 
 		
 		if (titleCheck) {
-			System.out.println("제목의 글자 수는 2~20자로 제한됩니다.");
+			System.out.println("\t\t\t제목의 글자 수는 2~20자로 제한됩니다.");
 		}
 		if( contentCheck) {
-			System.out.println("내용의 글자수는 2 ~ 200자로 제한됩니다.");
+			System.out.println("\t\t\t내용의 글자수는 2 ~ 200자로 제한됩니다.");
 		} 
 		
 		// 글자수를 둘다 맞춘경우
 		if( !(titleCheck || contentCheck) ) {
 			
-			System.out.println("민원이 접수되었습니다.");
+			System.out.println("\t\t\t민원이 접수되었습니다.");
 			UserVoice userVoice = new UserVoice(LoginLogout.auth, title, content);
 			Data.userVoiceList.add(userVoice);
 		}else {
-			System.out.println("다시 민원을 접수해주세요.");
+			System.out.println("\t\t\t다시 민원을 접수해주세요.");
 		}
 		ViewAll.pause();
 		

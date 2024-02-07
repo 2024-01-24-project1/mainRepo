@@ -23,9 +23,10 @@ public class StationTimeTab {
 			String sel = "";		// 입력받을 호선
 			String weekOf = "";		// 평일,주말 입력받기
 			
-			System.out.println("시간표를 그만보시려면 엔터입력");
-			System.out.println("호선을 입력해주세요");
-			System.out.print("입력(N호선): ");
+			System.out.println();
+			System.out.println("\t\t\t시간표를 그만보시려면 엔터입력");
+			System.out.println("\t\t\t호선을 입력해주세요");
+			System.out.print("\t\t\t입력(N호선): ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {
@@ -65,7 +66,7 @@ public class StationTimeTab {
 					
 			}
 				
-				System.out.println("역 이름: ");
+				System.out.print("\t\t\t역 이름: ");
 				staion = scan.nextLine();
 				
 				if (staion.endsWith("역")) {
@@ -100,6 +101,7 @@ public class StationTimeTab {
 				
 				// 평일인지 주말인지 입력받기
 				ViewAll.statisticsChaosThree();
+				System.out.printf("\t\t\t평일 / 주말: ");
 				weekOf =scan.nextLine();
 				
 				// 맞으면 해당 호선의 역 시간표 출력
@@ -113,7 +115,7 @@ public class StationTimeTab {
 					ViewAll.pause();
 				}
 				else {	  									// 역이름이 호선과 틀릴경우
-					System.out.println("잘못된 역이름 또는 호선에 맞지않는 역이름");
+					System.out.println("\t\t\t잘못된 역이름 또는 호선에 맞지않는 역이름");
 					ViewAll.hoLineError();
 					ViewAll.pause();
 				}

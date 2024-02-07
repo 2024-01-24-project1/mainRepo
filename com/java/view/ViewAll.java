@@ -560,6 +560,16 @@ System.out.println();
 
 	}
 	
+	public static void stationNamePageTable(String line) { // 
+		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+		System.out.println();
+		System.out.printf("\t\t\t         %s 역리스트\n", line);
+		System.out.println();
+		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+		
+
+	}
+	
 	public static void userResign() {//회원 탈퇴 0 1
 		System.out.println("╓════════════════════════════════ ｡･ﾟﾟ･(>д<)･ﾟﾟ･｡ ═══════════════════════════════╖");
 		System.out.println("\t\t\t           회원 탈퇴");

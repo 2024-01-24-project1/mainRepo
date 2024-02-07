@@ -142,7 +142,7 @@ public class StationTimePage {
 				for(int j = startIndexLeft; j < startIndexLeft + 5; j++) {
 					
 					if(leftSide[j] == null) {
-						System.out.print("    ");
+						System.out.print("      ");
 					}else {
 						System.out.printf("%-6s", leftSide[j]);
 					}
@@ -154,7 +154,7 @@ public class StationTimePage {
 				for(int k = startIndexRight; k < startIndexRight + 5; k++) {
 				
 					if(rightSide[k] == null) {
-						System.out.print("    ");
+						System.out.print("      ");
 					}else {
 						System.out.printf("%-6s", rightSide[k]);
 					}
@@ -165,8 +165,8 @@ public class StationTimePage {
 			}
 			
 			// 이름, ID, 전화번호, 직급, 호선, 역이름
-			System.out.println("\t\t\t입력한 시간으로부터 1시간 사이의 시간표가 출력됩니다.");
-			System.out.println("\t\t\t엔터입력시 시간표 보기 종료");
+			System.out.println("\t\t입력한 시간으로부터 1시간 사이의 시간표가 출력됩니다.");
+			System.out.println("\t\t엔터입력시 시간표 보기 종료");
 			System.out.print("\t\t\t원하는 시간: ");
 			sel = scan.nextLine();
 			
@@ -175,11 +175,11 @@ public class StationTimePage {
 			}else if ( Validation.is_OperationTime(sel)) {
 				set = sel;
 			}else if ( Validation.is_NumString(sel) && !Validation.is_OperationTime(sel)) {
-				System.out.println("\t\t\t입력하신 시간은 열차가 운행하지 않는 시간입니다.");
+				System.out.println("\t\t입력하신 시간은 열차가 운행하지 않는 시간입니다.");
 			}
 			else {
-				System.out.println("\t\t\t잘못된 입력입니다.");
-				System.out.println("\t\t\t다시 입력해주세요.");
+				System.out.println("\t\t잘못된 입력입니다.");
+				System.out.println("\t\t다시 입력해주세요.");
 			}
 			
 		}//while루프 종료

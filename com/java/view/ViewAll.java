@@ -765,12 +765,8 @@ System.out.println();
 	
 	}
 
-	public static void userName() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
-	}
-	
 	public static void userNameHello() { // 사용자 로그인 이름 띄우는 거 
-		System.out.printf("%s님 환영합니다.",LoginLogout.authName);
+		System.out.printf("\t\t\t%s님 환영합니다.\r\n",LoginLogout.authName);
 	}
 	
 		

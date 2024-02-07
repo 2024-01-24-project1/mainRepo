@@ -740,16 +740,15 @@ System.out.println();
 		System.out.printf("\t\t\t         SEOUL METRO\n");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.printf("\t\t\t\t 1.마이 페이지\n");
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t\t 2.열차 시간표");
-		System.out.println("\t\t\t\t 3.민원 접수");
-		System.out.println("\t\t\t\t 4.정기권");
-		System.out.println("\t\t\t\t 5.길 찾기");
-		System.out.println("\t\t\t\t 6.요금표");
-		System.out.println("\t\t\t\t 7.마이 페이지");
-		System.out.println("\t\t\t\t 8.로그 아웃");
+		System.out.println("\t\t\t\t 1.열차 시간표");
+		System.out.println("\t\t\t\t 2.민원 접수");
+		System.out.println("\t\t\t\t 3.정기권");
+		System.out.println("\t\t\t\t 4.길 찾기");
+		System.out.println("\t\t\t\t 5.요금표");
+		System.out.println("\t\t\t\t 6.마이 페이지");
+		System.out.println("\t\t\t\t 7.로그 아웃");
 		System.out.println("\t\t\t\t 0.종료");
 	}
 	

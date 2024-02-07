@@ -107,15 +107,13 @@ public class BusyStat extends StationManagement{
 	//혼잡도 인덱스 총 15개
 	private void printBusy(ArrayList<Busy> list, String line, String way, String dayOfWeek, String time) {
 		
-		String result = String.format("호선: %s\n"
-			     	                + "방향: %s\n"
-				                    + "요일: %s\n",line,way,dayOfWeek);
+		String result = String.format("호선: %s, 방향: %s, 요일: %s\n",line,way,dayOfWeek);
 		
 		System.out.println(result);
 		
 		for(Busy b : list) {
 			
-			System.out.printf("%s : %.1f",b.getStation(),b.getCrowded().get(Integer.parseInt(time)-5));
+			System.out.printf("%-35s  \t: %-3.1f",b.getStation()+"역",b.getCrowded().get(Integer.parseInt(time)-5));
 			System.out.println();
 			
 		}

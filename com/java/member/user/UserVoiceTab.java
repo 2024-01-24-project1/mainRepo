@@ -13,12 +13,12 @@ public class UserVoiceTab {
 		
 		while (true) {
 			
-			//View.userVoiceView();
-			
-			Scanner scan = new Scanner(System.in);
 			String num = "";
-			num = scan.nextLine();
+			Scanner scan = new Scanner(System.in);
+			
 			ViewAll.userVocMain();
+			ViewAll.chooseNum();
+			num = scan.nextLine();
 			if (num.equals("1")) { 		  // 1. 일반 민원 접수
 				complain();
 			} else if (num.equals("2")) { // 2. 분실물 목록 확인

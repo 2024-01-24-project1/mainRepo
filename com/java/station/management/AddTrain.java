@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import com.java.busy.BusyManagement;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
+import com.java.station.StationNamePage;
 import com.java.view.ViewAll;
 
 
@@ -52,6 +53,8 @@ public class AddTrain extends StationManagement {
 				ViewAll.trainAddTwo();
 				System.out.print("추가 열차수: ");        
 				trainNums = reader.readLine();
+				
+				StationNamePage.stationNamePage(StationManagement.lineRoute(line), line);
 				
 				ViewAll.trainAddThree();
 				System.out.print("시작역: ");

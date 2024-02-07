@@ -146,23 +146,23 @@ public class StationManagement {
 		
 		ArrayList<String> route = new ArrayList<>();
 		
-		if(line.equals("1")) {
+		if(line.equals("1") || line.equals("1호선")) {
 			route = Data.LINE1_STATION_NAME;
-		}else if(line.equals("2")) {
+		}else if(line.equals("2") || line.equals("2호선") ) {
 			route = Data.LINE2_STATION_NAME;
-		}else if(line.equals("3")) {
+		}else if(line.equals("3") || line.equals("3호선") ){
 			route = Data.LINE3_STATION_NAME;
-		}else if(line.equals("4")) {
+		}else if(line.equals("4") || line.equals("4호선") )  {
 			route = Data.LINE4_STATION_NAME;
-		}else if(line.equals("5")) {
+		}else if(line.equals("5") || line.equals("5호선") ) {
 			route = Data.LINE5_STATION_NAME;
-		}else if(line.equals("6")) {
+		}else if(line.equals("6") || line.equals("6호선") ) {
 			route = Data.LINE6_STATION_NAME;
-		}else if(line.equals("7")) {
+		}else if(line.equals("7") || line.equals("7호선") ) {
 			route = Data.LINE7_STATION_NAME;
-		}else if(line.equals("8")) {
-			route = Data.LINE8_STATION_NAME;
-		}else if(line.equals("9")) {
+		}else if(line.equals("8") || line.equals("8호선") ) {
+			route = Data.LINE8_STATION_NAME; 
+		}else if(line.equals("9") || line.equals("9호선") ) {
 			route = Data.LINE9_STATION_NAME;
 		}
 		

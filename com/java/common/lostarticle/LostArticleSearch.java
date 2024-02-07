@@ -26,7 +26,7 @@ public class LostArticleSearch {
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(article -> System.out.printf("%-15s%-20s%-10s\r\n"
+					 							 .forEach(article -> System.out.printf("%-15s %-20s %-10s\r\n"
 							 													, article.getArticle()
 							 													, article.getContent()
 							 													, article.getFindStation() + "역"));

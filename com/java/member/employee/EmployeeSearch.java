@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import com.java.common.Data;
 import com.java.common.Validation;
-import com.java.view.View;
 
 public class EmployeeSearch {
 	

@@ -8,7 +8,7 @@ import com.java.common.Validation;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
 	
@@ -49,7 +49,7 @@ public class EmployeeUpdateTab {
 				System.out.println();
 				System.out.println("해당 섹션이 없습니다.");
 				System.out.println("다시 입력해주세요.");
-				View.pause();
+				ViewAll.pause();
 			}
 			
 			
@@ -97,7 +97,7 @@ public class EmployeeUpdateTab {
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
-			View.pause();
+			ViewAll.pause();
 		}
 	}//End of searchEmployeeId()
 	
@@ -138,7 +138,7 @@ public class EmployeeUpdateTab {
 					if(input.equals("")) {
 						break;
 					}
-					View.pause();
+					ViewAll.pause();
 				}
 			}
 		
@@ -172,7 +172,7 @@ public class EmployeeUpdateTab {
 				break;
 			}else {
 				System.out.println("잘못된 권한");
-				View.pause();
+				ViewAll.pause();
 			}
 		}
 		
@@ -266,7 +266,7 @@ public class EmployeeUpdateTab {
 							employee.setLine(LINE);			// 호선 변경
 							employee.setStation(STATION);	// 역 변경
 							System.out.println("근무지 변경 완료");
-							View.pause();
+							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
 							
 						}
@@ -401,7 +401,7 @@ public class EmployeeUpdateTab {
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
 						System.out.println(DELETE + "계정 삭제완료");
-						View.pause();
+						ViewAll.pause();
 						break;	// employee객체 탐색 중지
 					}
 					
@@ -420,7 +420,7 @@ public class EmployeeUpdateTab {
 			System.out.println("입력하신 계정은 존재하지 않습니다.");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of deleteAccount()
 	

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.common.Validation;
-import com.java.view.View;
+import com.java.view.ViewAll;
 
 public class SafetyManTab {
 	
@@ -61,7 +61,7 @@ public class SafetyManTab {
 			} else { // 이외의 숫자 입력 시
 					System.out.println("해당 섹션이 없습니다.");
 					System.out.println("다시 입력해주세요.");
-					View.pause();
+					ViewAll.pause();
 			}
 			
 		}//while루프 종료
@@ -103,7 +103,7 @@ public class SafetyManTab {
 			System.out.println("입력한 아이디의 안전요원이 없습니다.");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of safetyManWorkAreaClear()
 	
@@ -131,7 +131,7 @@ public class SafetyManTab {
 			System.out.println("입력한 아이디의 안전요원이 없습니다.");
 		}
 		
-		View.pause();
+		ViewAll.pause();
 		
 	}//End of arrangeSafetyMan()
 	

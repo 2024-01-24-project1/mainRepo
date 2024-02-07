@@ -35,6 +35,7 @@ public class ChangeNoChairTrain extends StationManagement{
 			String endStation = "";
 			String time = "";
 			String dayOfWeek = "";
+			ArrayList<String> error = new ArrayList<>();
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
@@ -80,21 +81,16 @@ public class ChangeNoChairTrain extends StationManagement{
 					dayOfWeek = "토요일";
 				}
 				
-				check = Validation.is_changeNoChiarTrain(line, startStation, endStation, time, dayOfWeek);
+				error = Validation.is_changeNoChiarTrain(line, startStation, endStation, time, dayOfWeek);
 				
-				if(check) {
+				if(error.get(0).equals("오류없음")) {
 					
 					loop = false;
 					
 				}else {
 					
-					System.out.println("\t\t\t잘못된 입력입니다. 다시 입력하세요.");
-					System.out.println("\t\t\t뒤로 가기를 원한다면 엔터를 입력하세요.");
-					System.out.println("\t\t\t다시 진행을 원한다면 엔터제외 아무키나 입력하세요.");
-					
-					String input = reader.readLine();
-					if(input.equals("")) {
-						return;
+					if(!ViewAll.errorPrint(error)) { //true 일 경우 다시 진행
+						return;                      //false 일 경우 뒤로가기
 					}
 					
 				}

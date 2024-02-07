@@ -26,7 +26,7 @@ public final class EmployeeMode extends CommonFunction{
 		
 			//View클래스 출력
 			ViewAll.adminMainView();
-			System.out.print("\t\t\t선택 (번호): ");
+			ViewAll.chooseNum();
 			sel = scan.nextLine();
 			
 			if(sel.equals("0")) {

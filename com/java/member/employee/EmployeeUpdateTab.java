@@ -10,7 +10,6 @@ import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
-
 import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
@@ -245,7 +244,6 @@ public class EmployeeUpdateTab {
 							employee.setStation(STATION);	// 역 변경
 							System.out.println("근무지 변경 완료");
 							LogSave.logSave(LogSave.CHANGEWORKSPACE);
-							ViewAll.pause();
 							ViewAll.pause();
 							break;	// 직원객체 탐색 종료
 							

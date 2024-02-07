@@ -531,13 +531,10 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userVocMain() { //고객의 소리 메뉴  0
+	public static void userVocMain() { //고객의 소리 메뉴  2
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
 		System.out.println("\t\t\t         고객의 소리");
 		System.out.println("▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀");
-		System.out.println();
-		System.out.println();
-		System.out.println();
 		System.out.println("\t\t\t 1. 일반 민원 접수");
 		System.out.println("\t\t\t 2. 분실물 목록 확인");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
@@ -554,6 +551,16 @@ System.out.println();
 		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
 		System.out.println();
 		System.out.println("\t\t\t           열차 시간표");
+		System.out.println();
+		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
+		
+
+	}
+	
+	public static void stationNamePageTable(String line) { // 
+		System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
+		System.out.println();
+		System.out.printf("\t\t\t         %s 역리스트\n", line);
 		System.out.println();
 		System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
 		
@@ -797,7 +804,7 @@ System.out.println();
 	System.out.println();
 
 	System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-	System.out.print("\t선택 (번호): ");
+	System.out.print("\t\t\t선택 (번호): ");
 	}
 	public static void signupMain() { //회원가입 메인 0
 		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞⎛⎝(•‿•)⎠⎞▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
@@ -1731,7 +1738,11 @@ System.out.println();
 	public static void pause() { // 일시 정지 2
 		Scanner scan = new Scanner(System.in);
 
+<<<<<<< HEAD
 		System.out.println("\t\t\t   계속하려면 엔터를 입력하세요.");
+=======
+		System.out.println("\t\t\t계속하려면 엔터를 입력하세요.");
+>>>>>>> 95c3bfa8c24cf5d0c5c230d708a34a1fbf0b17f4
 		scan.nextLine();
 	}
 	public static void noIDDataError() { //2
@@ -1739,6 +1750,11 @@ System.out.println();
 		System.out.println("\t\t    해당 데이터를 통해 가입한 회원이 없습니다.");
 		System.out.println("═════════════════════════════════════•°• ⚠ •°•════════════════════════════════════");
 
+	}
+	
+	public static void chooseNum() {
+		System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
+		System.out.print("\t\t\t선택 (번호): ");
 	}
 	
 

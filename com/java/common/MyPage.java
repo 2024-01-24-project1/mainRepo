@@ -5,6 +5,7 @@ import java.util.Scanner;
 import com.java.member.employee.Employee;
 import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class MyPage {
@@ -16,9 +17,6 @@ public class MyPage {
 			String sel = "";
 			
 			Scanner scan = new Scanner(System.in);
-			
-			ViewAll.AllMyPage();
-			
 		
 			System.out.printf("이름: %s\n아이디: %s\n전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
 			
@@ -42,29 +40,22 @@ public class MyPage {
 																			  employee.getLine() + "호선"
 																			 ,employee.getStation() + "역"));
 			}
-			
-			
+			ViewAll.userMyPage();
+
 			if(mode.equals("1")) {
-				
-				ViewAll.userMyPage();
-				
-			}else if (mode.equals("2")) {
-				
-				ViewAll.employeeMyPage();
-				
+				System.out.println("4. 즐겨찾기 목록");
 			}
-			
-			
+			System.out.println("엔터입력시 뒤로가기");
 			System.out.print("입력: ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("0")) {
-				myPageRemoveID();
-			} else if(sel.equals("1")) {
+			if(sel.equals("1")) {
 				myPageChangePW();
 			} else if(sel.equals("2")) {
 				myPageChangePhone();
-			} else if(sel.equals("3") && mode.equals("1")) {
+			} else if(sel.equals("3")) {
+				myPageRemoveID();
+			} else if(sel.equals("4") && mode.equals("1")) {
 				MyPageBookMark myPageBookMark = new MyPageBookMark();
 				myPageBookMark.myPageBookMarkSelMenu();
 			} else if(sel.equals("")) {
@@ -75,9 +66,8 @@ public class MyPage {
 				//다시입력
 				ViewAll.errorFailEmo();
 				System.out.println();
-				System.out.println("해당 섹션이 없습니다.");
-				System.out.println("다시 입력해주세요.");
-				ViewAll.pause();
+				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				View.pause();
 			}
 			
 			if(LoginLogout.getOut) {

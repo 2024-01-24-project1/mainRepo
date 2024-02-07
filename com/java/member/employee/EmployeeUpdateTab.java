@@ -8,6 +8,7 @@ import com.java.common.Validation;
 import com.java.member.user.User;
 import com.java.member.user.UserSearch;
 import com.java.station.StationNamePage;
+import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class EmployeeUpdateTab {
@@ -21,16 +22,8 @@ public class EmployeeUpdateTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println("=======================================");
-			System.out.printf("             직원 정보 수정          ");
 			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
-			System.out.println("=======================================");
-			System.out.println("           1. 근무지 변경");
-			System.out.println("           2. 직급 변경");
-			System.out.println("           3. 권한 부여");
-			System.out.println("           4. 계정 삭제");
-			System.out.println("           5. 뒤로가기");
-			System.out.println("--------------------------------------");
+			ViewAll.employeeInfoChangeMain();
 			System.out.print("선택 (번호): ");
 			sel = scan.nextLine();
 			
@@ -61,9 +54,9 @@ public class EmployeeUpdateTab {
 	public static void update(String sel) {
 		
 		// View클래스에서 출력
-		if(sel.equals("1")) 		System.out.println("근무지 변경");
-		else if (sel.equals("2"))   System.out.println("직급 변경");
-		else if (sel.equals("3"))	System.out.println("권한 부여");
+		if(sel.equals("1")) 		ViewAll.employeeOfficeChangeOne();
+		else if (sel.equals("2"))   ViewAll.employeerankChangeOne();
+		else if (sel.equals("3"))	ViewAll.employeeHan();
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -71,7 +64,6 @@ public class EmployeeUpdateTab {
 		EmployeeSearch.employeePage(Data.employeeList);
 		
 		// 아이디 입력받기
-		System.out.println("직원의 아이디를 입력해주세요.");
 		System.out.print("아이디: ");
 		String input = scan.nextLine();
 		final String ID = input;
@@ -97,7 +89,7 @@ public class EmployeeUpdateTab {
 			
 		} else {
 			System.out.println("없는 아이디입니다.");
-			ViewAll.pause();
+			View.pause();
 		}
 	}//End of searchEmployeeId()
 	
@@ -109,6 +101,7 @@ public class EmployeeUpdateTab {
 			
 			while(true) {
 				String input = "";
+				ViewAll.employeerankChangeTwo();
 				System.out.println("안전요원|사원|대리|과장|부장|사장");
 				System.out.print("변경할 직급: ");
 				input = scan.nextLine();
@@ -138,7 +131,7 @@ public class EmployeeUpdateTab {
 					if(input.equals("")) {
 						break;
 					}
-					ViewAll.pause();
+					View.pause();
 				}
 			}
 		
@@ -266,7 +259,7 @@ public class EmployeeUpdateTab {
 							employee.setLine(LINE);			// 호선 변경
 							employee.setStation(STATION);	// 역 변경
 							System.out.println("근무지 변경 완료");
-							ViewAll.pause();
+							View.pause();
 							break;	// 직원객체 탐색 종료
 							
 						}
@@ -367,6 +360,7 @@ public class EmployeeUpdateTab {
 					
 					if(user.getId().equals(DELETE)) {
 						Data.userList.remove(user);
+						ViewAll.employeeDeleteResult();
 						break;
 					}
 					
@@ -400,6 +394,7 @@ public class EmployeeUpdateTab {
 					
 					if(employee.getId().equals(DELETE)) {
 						Data.employeeList.remove(employee);
+						ViewAll.employeeDeleteResult();
 						System.out.println(DELETE + "계정 삭제완료");
 						ViewAll.pause();
 						break;	// employee객체 탐색 중지

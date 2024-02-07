@@ -23,9 +23,9 @@ public class UserVoiceSearch {
 			
 			ViewAll.vocListTop();
 			userVoicePage(Data.userVoiceList);
-			System.out.println("뒤로가기 엔터");
-			System.out.println("민원의 내용을 보시려면 아무키나 입력");
-			System.out.print("입력: ");
+			System.out.println("\t\t\t뒤로가기 엔터");
+			System.out.println("\t\t민원의 내용을 보시려면 아무키나 입력");
+			System.out.print("\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("")) {

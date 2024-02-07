@@ -36,7 +36,6 @@ public class Graph {
 		}
 		
 		// 그래프 출력
-		System.out.println("---------------------");
 		for(int i = 0; i < graph.length-5; i++) {
 			
 			for(int j = 0; j < graph[0].length; j++) {
@@ -81,8 +80,8 @@ public class Graph {
 			}else {
 				front1 = " ";
 				front2 = " ";
-				back1 = (list[i]/10000) + "만원";
-				back2 = (list[i+6]/10000) + "만원";
+				back1 = (list[i]/10000) + "만";
+				back2 = (list[i+6]/10000) + "만";
 			}
 			
 			System.out.printf("\t\t%2d월: %-3s%-10s\t\t\t%2d월: %-3s%-10s\n", i+1, front1, back1, i+7, front2, back2);

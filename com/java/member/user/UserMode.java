@@ -6,7 +6,7 @@ import com.java.common.Exit;
 import com.java.common.LoginLogout;
 import com.java.common.MyPage;
 import com.java.member.CommonFunction;
-import com.java.station.management.FindWay;
+import com.java.station.management.FindWayTab;
 import com.java.view.View;
 
 public final class UserMode extends CommonFunction{
@@ -58,20 +58,7 @@ public final class UserMode extends CommonFunction{
 			} else if (sel.equals("3")) {	// 3. 정기권 현황
 				PassTab.passTab();
 			} else if (sel.equals("4")) {	// 4. 길찾기
-				
-				// 길찾기
-				System.out.println("1.경로입력, 2. 즐겨찾기, 뒤로가기 엔터");
-				sel = scan.nextLine();
-				
-				if(sel.equals("1")) {
-					FindWay findWay = new FindWay();
-					findWay.findWaySelMenu();
-				}else if (sel.equals("2")) {
-					BookMarkRoute bookMarkRoute = new BookMarkRoute();
-					bookMarkRoute.bookMarkRouteSelMenu();
-				}
-			
-				
+				FindWayTab.findWayTab();
 			} else if (sel.equals("5")) {	// 5. 요금표
 				costsTableTab();
 			} else if (sel.equals("6")) {	// 6. 마이페이지

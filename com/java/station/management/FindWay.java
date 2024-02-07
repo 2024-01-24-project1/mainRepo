@@ -11,12 +11,10 @@ import com.java.busy.Busy;
 import com.java.busy.BusyManagement;
 import com.java.common.Data;
 import com.java.common.LoginLogout;
-import com.java.common.Validation;
 import com.java.member.user.AnotherDateFindWay;
 import com.java.member.user.BookMark;
 import com.java.member.user.CurrentTimeFindWay;
 import com.java.requiredtime.RequiredTime;
-import com.java.view.View;
 import com.java.view.ViewAll;
 
 public class FindWay extends StationManagement {

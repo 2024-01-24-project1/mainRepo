@@ -12,6 +12,7 @@ import com.java.schedule.ScheduleTab;
 import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
 import com.java.view.View;
+import com.java.view.ViewAll;
 
 public final class EmployeeMode extends CommonFunction{
 
@@ -54,26 +55,7 @@ public final class EmployeeMode extends CommonFunction{
 				
 				
 			} else if (sel.equals("1")) {	// 1. 역관리
-				
-				if(LoginLogout.level.equals("5") || LoginLogout.level.equals("3")) {
-				
-					// 역관리
-					System.out.println("1. 열차 추가, 2.의자없는 열차 배치");
-					sel = scan.nextLine();
-					
-					if(sel.equals("1")) {
-						AddTrain addTrain = new AddTrain();
-						addTrain.addTrain();
-					}else if (sel.equals("2")) {
-						ChangeNoChairTrain changeNoChairTrain = new ChangeNoChairTrain();
-						changeNoChairTrain.changeNoChairTrain();
-					}
-					
-				}else {
-					System.out.println("접근 권한이 없습니다.");
-				}
-
-				
+				StationManagementTab.stationManagementTab();
 			} else if (sel.equals("2")) {	// 2 직원관리
 				if(LoginLogout.level.equals("5")) EmployeeManagementTab.employeeManagementTab();
 				else System.out.println("접근 권한이 없습니다.");

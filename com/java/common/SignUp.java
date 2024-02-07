@@ -68,19 +68,19 @@ public class SignUp {
 			}
 			
 			// ID, PW, 이름, 주민등록번호, 전화번호 입력받기
-			System.out.print("  아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
+			System.out.print("아이디 (4~12자, 영소문자+숫자, 숫자 시작 X) : ");
 			id = scan.nextLine();
 			
-			System.out.print("  비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
+			System.out.print("비밀번호 (8~15자, 대소문자+숫자+특수문자(!~*)) : ");
 			pw = scan.nextLine();
 			
-			System.out.print("  이름 (2~5자, 한글만) : ");
+			System.out.print("이름 (2~5자, 한글만) : ");
 			name = scan.nextLine();
 			
-			System.out.print("  주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
+			System.out.print("주민등록번호 (“-” 포함/미포함, 앞 6자리 뒤 7자리 숫자 입력): ");
 			registration = scan.nextLine();
 			
-			System.out.print("  전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
+			System.out.print("전화번호 (“-” 포함/미포함, 010-xxxx-xxxx 형식, 현재 회원과 동일한 전화번호는 등록 불가) : ");
 			phone = scan.nextLine();
 			
 			if(sel.equals("2")) {

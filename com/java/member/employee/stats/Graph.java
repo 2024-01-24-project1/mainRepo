@@ -57,43 +57,39 @@ public class Graph {
 		
 
 		
-		
-		for(int i=0;i<list.length/2-1;i++) {
+		for(int i=0;i<=list.length/2-1;i++) {
 			String front1 = "";
 			String front2 = "";
 			String back1 = "";
 			String back2 = "";
-			String[][] resultList=new String[6][2];
 			
 			if(list[i]>100000000000L) { 
 				front1 = (list[i]/100000000)+ "억 ";
-				front1 = (list[i+7]/100000000)+ "억 ";
-				back1 =	(list[i]%10000) + "만원";
-				back1 =	(list[i+7]%10000) + "만원";
+				front1 = (list[i+6]/100000000)+ "억 ";
+				back1 =	(list[i]%10000) + "만";
+				back1 =	(list[i+6]%10000) + "만";
 			}else if(list[i]>10000000000L) {
 				front1 = (list[i]/100000000) + "억 ";
-				front2 = (list[i+7]/100000000) + "억 ";
-				back1 = (list[i]%10000) + "만원";
-				back2 = (list[i+7]%10000) + "만원";
+				front2 = (list[i+6]/100000000) + "억 ";
+				back1 = (list[i]%10000) + "만";
+				back2 = (list[i+6]%10000) + "만";
 			}else if(list[i]>100000000) {
 				front1 = (list[i]/100000000) + "억 ";
-				front2 = (list[i+7]/100000000) + "억 ";
-				back1 = (list[i]%10000) + "만원";
-				back2 = (list[i+7]%10000) + "만원";
+				front2 = (list[i+6]/100000000) + "억 ";
+				back1 = (list[i]%10000) + "만";
+				back2 = (list[i+6]%10000) + "만";
 			}else {
 				front1 = " ";
 				front2 = " ";
 				back1 = (list[i]/10000) + "만원";
-				back2 = (list[i+7]/10000) + "만원";
+				back2 = (list[i+6]/10000) + "만원";
 			}
 			
-			System.out.printf("/t/t%d월: %-3s%-7s\t\t\t%d월: %-3s%-7s", i+1, front1, back1, i+7, front2, back2);
+			System.out.printf("\t\t%d월: %3s%-10s\t\t\t%d월: %3s%-10s\n", i+1, front1, back1, i+7, front2, back2);
+			
 		}
 			
 			
-			
-				
-		
 		View.pause();
 	}//End of drawGraph()
 	

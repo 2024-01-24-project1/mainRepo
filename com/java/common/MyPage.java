@@ -16,7 +16,7 @@ public class MyPage {
 			String sel = "";
 			
 			Scanner scan = new Scanner(System.in);
-		
+			ViewAll.userMyPage();
 			System.out.printf("\t\t이름: %s 아이디: %s 전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
 			
 			if(mode.equals("1")) {

@@ -736,7 +736,7 @@ System.out.println();
 	public static void userMyPage() { //고객 마이 페이지  0 2 
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t            마이 페이지");
+		System.out.println("\t\t\t          마이 페이지");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 //		System.out.println();
 //		System.out.println();

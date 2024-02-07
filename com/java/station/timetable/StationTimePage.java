@@ -133,7 +133,7 @@ public class StationTimePage {
 			ViewAll.trainTimeTable();
 			System.out.println("╓═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╖");
 			System.out.printf("                \t\t%-2s %-3s %-15s\r\n", weekOf, line, stationName + "역");
-			System.out.printf("             \t\t%-10s\t\t\t%-10s\r\n", up.get(0), down.get(0));
+			System.out.printf("             \t\t%-10s\t\t%-10s\r\n", up.get(0), down.get(0));
 			System.out.println("╙═════════════════════════ =͟͟͞͞=͟͟͞͞ ⊂(=͟͟͞͞=͟͟͞͞っ☉ω=͟͟͞͞☉)っ= ════════════════════════╜");
 			
 			for(int i = 0; i < 4; i++) {
@@ -146,19 +146,19 @@ public class StationTimePage {
 					if(leftSide[j] == null) {
 						System.out.print("    ");
 					}else {
-						System.out.printf("\t\t\t%-4s", leftSide[j]);
+						System.out.printf("%-4s", leftSide[j]);
 					}
 					System.out.print(" ");
 				}
 				
-				System.out.print("\t\t\t|");
+				System.out.print("| ");
 				
 				for(int k = startIndexRight; k < startIndexRight + 5; k++) {
 				
 					if(rightSide[k] == null) {
-						System.out.print("    ");
+						System.out.print("   ");
 					}else {
-						System.out.printf("\t\t\t%-4s", rightSide[k]);
+						System.out.printf("%-4s", rightSide[k]);
 					}
 					System.out.print(" ");
 				}

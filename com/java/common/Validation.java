@@ -759,7 +759,6 @@ public final class Validation {
 				error.add(String.format("%s호선에 %s역 또는 %s역이 존재하지 않습니다.", line,startStation,endStation));	
 			}
 			
-			int selTime = Integer.parseInt(time);
 			
 			try {
 				

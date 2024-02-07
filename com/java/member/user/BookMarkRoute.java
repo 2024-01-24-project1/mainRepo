@@ -118,7 +118,6 @@ public class BookMarkRoute extends FindWay{
 			
 			ViewAll.roadSearchFavoriteList();
 			this.findWay(temp[0],temp[1],temp[2],calendar);
-			ViewAll.pause();
 		} catch (Exception e) {
 			System.out.println("BookMarkRoute.selectBookMark");
 			e.printStackTrace();

@@ -632,14 +632,14 @@ System.out.println();
 	public static void favoriteChange() {//즐겨찾기 편집 0 1 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t          즐겨찾기 편집");
+		System.out.println("\t\t\t         즐겨찾기 편집");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t         1.즐겨찾기 등록");
-		System.out.println("\t\t\t         2.즐겨찾기 삭제");
-		System.out.println("\t         뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t      1.즐겨찾기 등록");
+		System.out.println("\t\t\t      2.즐겨찾기 삭제");
+		System.out.println("\t\t       뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 		
 	}
 	
@@ -658,15 +658,15 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t           노선 즐겨찾기");
+		System.out.println("\t\t\t         노선 즐겨찾기");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		System.out.println("\t\t\t    1. 즐겨찾기 목록");
-		System.out.println("\t\t\t    2. 즐겨찾기 편집");
-		System.out.println("\t      뒤로 가기를 원할 시 엔터키를 눌러주세요");		
+		System.out.println("\t\t\t      1. 즐겨찾기 목록");
+		System.out.println("\t\t\t      2. 즐겨찾기 편집");
+		System.out.println("\t\t      뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
 	public static void phoneNumChange() {//전화번호 재설정0 2
@@ -1903,7 +1903,7 @@ System.out.println("╬╬═════════════╬╬═══
 	public static void chooseNum() {
 
 		
-		//System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+//		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.print("\t\t\t\t선택 (번호): ");
 
 	}

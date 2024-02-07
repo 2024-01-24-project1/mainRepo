@@ -32,8 +32,8 @@ public class MyPageBookMark extends BookMarkRoute{
 
 
 			while(true) {
+				
 				ViewAll.lineFavorite();
-				ViewAll.pause();
 
 				String sel = reader.readLine();
 
@@ -53,6 +53,7 @@ public class MyPageBookMark extends BookMarkRoute{
 					
 					
 					while(true) {
+						
 						ViewAll.favoriteChange();
 						ViewAll.chooseNum();
 

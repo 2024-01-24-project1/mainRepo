@@ -33,13 +33,6 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		boolean loop= true;
 		
-		String t = "01029053433";
-		System.out.println(t);
-		
-		t = SignUp.formatPhoneNumber(t);
-		System.out.println(t.length());
-		System.out.println(t);
-		
 		while(loop) {
 			
 			ViewAll.realMain();

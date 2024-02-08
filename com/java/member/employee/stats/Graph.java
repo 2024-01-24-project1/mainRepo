@@ -65,9 +65,9 @@ public class Graph {
 			
 			if(list[i]>100000000000L) { 
 				front1 = (list[i]/100000000)+ "억 ";
-				front1 = (list[i+6]/100000000)+ "억 ";
+				front2 = (list[i+6]/100000000)+ "억 ";
 				back1 =	(list[i]%10000) + "만";
-				back1 =	(list[i+6]%10000) + "만";
+				back2 =	(list[i+6]%10000) + "만";
 			}else if(list[i]>10000000000L) {
 				front1 = (list[i]/100000000) + "억 ";
 				front2 = (list[i+6]/100000000) + "억 ";

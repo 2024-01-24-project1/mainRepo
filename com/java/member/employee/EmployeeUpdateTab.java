@@ -75,12 +75,12 @@ public class EmployeeUpdateTab {
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(ID))
 							          .forEach(employee -> 
-							System.out.printf("\t\t이름: %5s 아이디: 10s 생년월일: %10s\n\t전화번호: %13s 직급: %2s 담당지: %s 호선 %s역\r\n"
+							System.out.printf("\t   이름: %5s  아이디: %10s   생년월일: %8s\n\t전화번호: %13s   직급: %2s 담당지: %s 호선 %s역\r\n"
 												, employee.getName()
 												, employee.getId()
 												, employee.getRegistration().substring(0, 6)
-												, employee.getPosition()
 												, employee.getPhone()
+												, employee.getPosition()
 												, employee.getLine()
 												, employee.getStation()));
 			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

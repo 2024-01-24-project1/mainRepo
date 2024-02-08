@@ -58,7 +58,7 @@ public class Main {
 				
 				//다시입력
 				System.out.println();
-				System.out.printf("해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
+				System.out.printf("\t\t\t해당 섹션이 없습니다\r\n다시입력해주세요.\r\n");
 				ViewAll.pause();
 			}
 			
@@ -68,7 +68,7 @@ public class Main {
 		
 		//종료시 파일 덮어쓰기할 클래스
 		// View클래스에서 출력
-		System.out.println("프로그램을 종료합니다.");
+		System.out.println("\t\t\t프로그램을 종료합니다.");
 		exit.writeAll();
 		System.exit(0);
 		

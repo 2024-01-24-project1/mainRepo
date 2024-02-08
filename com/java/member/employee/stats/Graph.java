@@ -12,7 +12,7 @@ public class Graph {
 		String[] zip = new String[12];
 		
 	
-
+		ViewAll.clear();
 		
 		for(int i = 0; i < 12; i++) {
 			

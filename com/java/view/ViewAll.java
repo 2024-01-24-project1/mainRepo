@@ -1099,7 +1099,7 @@ System.out.println();
 	}
 	
 	public static void busyStat() {
-		
+		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println("\t\t\t\t1. 혼잡도 통계");

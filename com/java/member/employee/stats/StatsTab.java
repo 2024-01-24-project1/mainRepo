@@ -62,6 +62,8 @@ public class StatsTab {
 		System.out.print("\t\t\t   입력: ");
 		sel = scan.nextLine();
 		
+		ViewAll.clear();
+		
 		if(sel.equals("1")||sel.equals("2")) check = true;
 		
 		if(sel.equals("1")) {
@@ -124,7 +126,7 @@ public class StatsTab {
 		boolean check = false;
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println();
+		ViewAll.clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println("\t\t\t    1. 전체 매출 통계\n\t\t\t    2. 특정호선 매출 통계\n\t\t\t    아무키나 누르면 뒤로가기");
 		System.out.print("\t\t\t   입력: ");

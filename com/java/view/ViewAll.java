@@ -600,7 +600,7 @@ System.out.println();
 		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");		
 	}
 	
-	public static void userVocMain() { //고객의 소리 메뉴  0 2
+	public static void userVocMain() { //고객의 소리 메뉴  
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
@@ -724,7 +724,7 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t          전화번호 재설정");
+		System.out.println("\t\t\t          전화번호 변경");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 	}  
@@ -757,7 +757,7 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t            PW 재설정");
+		System.out.println("\t\t\t        비밀번호 변경");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
@@ -1968,6 +1968,7 @@ System.out.println("╬╬═════════════╬╬═══
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println("\t\t\t   해당 페이지 접근 권한이 없습니다.");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		pause();
 		
 	}
 	

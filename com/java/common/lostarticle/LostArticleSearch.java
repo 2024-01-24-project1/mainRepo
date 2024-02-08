@@ -25,7 +25,7 @@ public class LostArticleSearch {
 					// View클래스 출력
 					ViewAll.print("분실물");
 					
-					System.out.println("분실물 \t\t\t\t잃어버린 역\t\t   보관하는 역 ");
+					System.out.println("분실물 \t\t\t\t 찾은 역\t\t   보관하는 역 ");
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)

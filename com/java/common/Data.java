@@ -73,7 +73,7 @@ public final class Data {
 	public static ArrayList<Busy> busyList = new ArrayList<>();
 	
 	// 직원 가입 코드
-	public final static String EMPLOYEECODE = "DAVSGDVASDASDFR35351";	// 예시
+	public final static String EMPLOYEECODE = "SEOULMETRO";	// 예시
 	
 	
 }//End of class

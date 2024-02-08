@@ -40,16 +40,16 @@ public class Graph {
 			
 			for(int j = 0; j < graph[0].length; j++) {
 				if(j == graph[0].length) {
-					System.out.printf("%s\t", graph[i][j]);
+					System.out.printf("%s      ", graph[i][j]);
 				}else {
-					System.out.printf("%s\t", graph[i][j]);
+					System.out.printf("%s      ", graph[i][j]);
 				}
 				
 			}
 			System.out.println();
 		}
-		System.out.println("-----------------------------------------------------------------------------------------");
-		System.out.printf("1월\t2월\t3월\t4월\t5월\t6월\t7월\t8월\t9월\t10월\t11월\t12월");
+		System.out.println("---------------------------------------------------------------------------------");
+		System.out.printf("1월   2월    3월    4월    5월    6월    7월    8월    9월    10월   11월   12월");
 		System.out.println();
 		System.out.println();
 		

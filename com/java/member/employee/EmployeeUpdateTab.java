@@ -23,7 +23,6 @@ public class EmployeeUpdateTab {
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
-			System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");
 			ViewAll.employeeInfoChangeMain();
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
@@ -36,7 +35,7 @@ public class EmployeeUpdateTab {
 				update("3");
 			}else if (sel.equals("4")) {	// 4. 계정삭제
 				deleteAccount();
-			}else if (sel.equals("5")) {	// 5. 뒤로가기
+			}else if (sel.equals("")) {	// 5. 뒤로가기
 				break;
 			}else {
 				//다시입력

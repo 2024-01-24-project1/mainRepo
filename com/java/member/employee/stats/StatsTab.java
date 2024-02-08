@@ -138,6 +138,7 @@ public class StatsTab {
 			Graph.drawGraph(Stats.allSales(), ALLSALES);
 		}else if (sel.equals("2")) {
 			while(true) {
+				ViewAll.clear();
 				System.out.println("\t\t\t보고싶은 호선을 입력해주세요");
 				System.out.print("\t\t\t입력(N호선): ");
 				sel = scan.nextLine();

@@ -7,7 +7,9 @@ public class CommonFunction {
 	
 	// 역 시간표 탭
 	protected static void stationTimetableTab() {
-		
+			
+			ViewAll.clear();
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			StationTimeTab.stationTimeTab();
 
 	}//stationTimetableTab()

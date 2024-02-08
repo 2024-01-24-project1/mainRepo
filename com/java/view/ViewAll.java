@@ -1175,7 +1175,7 @@ System.out.println();
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t              전체 일정");
+		System.out.println("\t\t\t           전체 일정");
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		//일정 데이터 밑에 붙여야함

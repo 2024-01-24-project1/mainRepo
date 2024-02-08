@@ -84,6 +84,7 @@ public class Stats {
 	
 	// 전체 매출
 	public static long[] allSales() {
+		
 		long[] stats = new long[12];
 		
 		
@@ -101,8 +102,10 @@ public class Stats {
 														.mapToLong(count -> count.getCounting())
 														.sum();
 			
+			month += monthAdd;
 			month = (long)(month * 0.75 * 1400) + (long)(month * 0.10 * 800) ;
-			stats[i] = month + monthAdd;
+			
+			stats[i] = month;
 		}
 				
 		

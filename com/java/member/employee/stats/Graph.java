@@ -62,7 +62,6 @@ public class Graph {
 			String front2 = "";
 			String back1 = "";
 			String back2 = "";
-			String[][] resultList=new String[6][2];
 			
 			if(list[i]>100000000000L) { 
 				front1 = (list[i]/100000000)+ "억 ";

@@ -140,7 +140,7 @@ public final class LoginLogout {
 		LoginLogout.pass = "";
 		LoginLogout.passExpiry = "";
 		LoginLogout.phone = "";
-		System.out.println("\t\t\t로그아웃이 완료되었습니다.");
+		System.out.println("\t\t\t   로그아웃이 완료되었습니다.");
 		ViewAll.pause();
 		
 		

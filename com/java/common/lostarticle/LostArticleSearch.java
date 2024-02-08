@@ -3,6 +3,7 @@ package com.java.common.lostarticle;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
@@ -24,11 +25,11 @@ public class LostArticleSearch {
 					// View클래스 출력
 					ViewAll.print("분실물");
 					
-					System.out.println("분실물 \t\t\t\t상세내용\t\t\t잃어버린 역");
+					System.out.println("분실물 \t\t\t\t잃어버린 역\t\t   보관하는 역 ");
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(article -> System.out.printf("%-14s         \t%-12s\t\t  %-10s\r\n"
+					 							 .forEach(article -> System.out.printf("%-14s         \t%-13s\t   %-10s\r\n"
 							 													, article.getArticle()
 							 													, article.getLostStation() + "역"
 							 													, article.getFindStation() + "역"));
@@ -39,7 +40,11 @@ public class LostArticleSearch {
 					sel = scan.nextLine();
 					
 					if(sel.equals("")) {
-						LogSave.logSave(LogSave.LOSTARTICLESEARCH);
+						if(!LoginLogout.level.equals("1")) {
+							
+							LogSave.logSave(LogSave.LOSTARTICLESEARCH);
+							
+						}
 						break;
 					}else if (Validation.is_NumString(sel)) {
 						index = Integer.parseInt(sel) - 1;

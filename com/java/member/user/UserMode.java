@@ -26,7 +26,7 @@ public final class UserMode extends CommonFunction{
 			System.out.printf("\t\t\t\t선택 (번호): ");
 			sel = scan.nextLine();
 			
-			if(sel.equals("")) {			// 0. 프로그램 종료
+			if(sel.equals("0")) {			// 0. 프로그램 종료
 				
 				// 종료
 				System.out.println("\t\t\t프로그램을 종료합니다.");

@@ -817,7 +817,7 @@ System.out.println();
 		System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t\t 1.열차 시간표");
-		System.out.println("\t\t\t\t 2.민원 접수");
+		System.out.println("\t\t\t\t 2.고객의 소리");
 		System.out.println("\t\t\t\t 3.정기권");
 		System.out.println("\t\t\t\t 4.길 찾기");
 		System.out.println("\t\t\t\t 5.요금표");

@@ -357,7 +357,7 @@ public class FindWay extends StationManagement {
 		}
 		System.out.println();
 		
-		
+		System.out.println();
 		System.out.printf("\t\t\t총 소요시간: %d분\n",minute);
 		
 		String[] temp = departureTime.split(":");

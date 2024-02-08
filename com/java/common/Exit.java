@@ -3,6 +3,8 @@ package com.java.common;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.nio.charset.Charset;
+import java.util.Collections;
+import java.util.Comparator;
 
 import com.java.common.log.Log;
 import com.java.common.lostarticle.LostArticle;
@@ -109,6 +111,8 @@ public final class Exit {
 	
 	private void writeLogList() {
 		try {
+			
+			Collections.sort(Data.logList, Comparator.comparing(Log::getTime));
 			
 			BufferedWriter writer = new BufferedWriter(new FileWriter
 										(data.LOGPATH, Charset.forName("UTF-8") ) );

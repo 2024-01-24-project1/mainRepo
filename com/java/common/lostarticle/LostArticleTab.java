@@ -156,8 +156,8 @@ public class LostArticleTab {
 			}
 			
 			// 모든 조건에 걸리지 않을경우
-			if( !((article.length() > 20 || article.length() < 1) && content.length() > 20 
-					&& Validation.is_StationName(find) && Validation.is_StationName(find)) ) {
+			if( !(article.length() > 20 || article.length() < 1) && content.length() > 20 
+					&& Validation.is_StationName(find) && Validation.is_StationName(keep) ) {
 				
 				LostArticle lostArticle = new LostArticle(article, content, find, keep);
 				Data.lostArticleList.add(lostArticle);

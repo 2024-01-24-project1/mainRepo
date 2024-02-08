@@ -77,6 +77,11 @@ public class BusyStat extends StationManagement{
 				System.out.print("\t\t\t시간(5~24)     : ");
 				time = reader.readLine();
 				
+				if(time.endsWith("시")) {
+					time.subSequence(0,time.length()-1);
+				}
+				
+				
 				error = Validation.is_busyStat(line,way,dayOfWeek,time);
 				
 				if(error.get(0).equals("오류없음")) {

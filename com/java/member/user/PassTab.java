@@ -23,10 +23,15 @@ public class PassTab {
 			String sel = "";
 			
 			ViewAll.print("정기권 페이지");
+			System.out.println();
 			System.out.println("\t\t\t   1. 나의 정기권 확인하기");
-			System.out.println("\t\t\t   2.  정기권 코드 입력");
-			System.out.println("\t\t\t  뒤로가기 엔터");
-			System.out.print("\t\t\t   입력: ");
+			System.out.println();
+			System.out.println();
+			System.out.println("\t\t\t   2. 정기권 코드 입력");
+			System.out.println();
+			System.out.println("\t\t\t       뒤로가기 엔터");
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+			System.out.print("\t\t\t\t입력: ");
 			sel = scan.nextLine();
 			
 			if(sel.equals("1")) {			// 1. 나의 정기권 확인하기

@@ -29,7 +29,6 @@ public class ChangeNoChairTrain extends StationManagement{
 			
 			ArrayList<String> error = new ArrayList<>();
 			boolean loop  = true;
-			boolean check = false;
 			String line = "";
 			String startStation = "";
 			String endStation = "";
@@ -67,6 +66,10 @@ public class ChangeNoChairTrain extends StationManagement{
 				
 				System.out.print("\t\t\t시간대(5~24)   : ");
 				time = reader.readLine();
+				
+				if(time.endsWith("시")) {
+					time.subSequence(0,time.length()-1);
+				}
 				
 				System.out.print("\t\t\t요일(평일/주말): ");
 				dayOfWeek = reader.readLine();

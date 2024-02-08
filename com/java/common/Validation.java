@@ -458,6 +458,10 @@ public final class Validation {
 			
 			ArrayList<String> error = new ArrayList<>();
 			
+			if(line.equals("") || way.equals("") || timeStr.equals("") || dayOfWeek.equals("")) {
+				error.add("입력값을 받지 못한 항목이 있습니다.");
+			}
+			
 			try {
 				
 				int time = Integer.parseInt(timeStr);
@@ -519,7 +523,9 @@ public final class Validation {
 				error.add("시작역과 도착역이 같습니다.");
 				
 			}
-			
+			if(line.equals("") || startStation.equals("") || endStation.equals("") || time.equals("") || dayOfWeek.equals("")) {
+				error.add("입력값을 받지 못한 항목이 있습니다.");
+			}
 			
 			
 			//추가 열차수가 예비열차수를 넘기거나 이미 예비열차수가 0인경우
@@ -579,6 +585,10 @@ public final class Validation {
 			
 			ArrayList<String> error = new ArrayList<>();
 			
+			if(line.equals("") || startStation.equals("") || endStation.equals("") || time.equals("") || dayOfWeek.equals("")) {
+				error.add("입력값을 받지 못한 항목이 있습니다.");
+			}
+			
 			
 			//호선 입력 확인 (1~9호선)
 			if(!line.equals("1") && !line.equals("2") && !line.equals("3") 
@@ -637,6 +647,10 @@ public final class Validation {
 					&& !line.equals("8") && !line.equals("9")) {
 				error.add("입력한 호선이 올바르지 않습니다. (1~9호선)");
 
+			}
+			
+			if(line.equals("") || startStation.equals("") || endStation.equals("")) {
+				error.add("입력값을 받지 못한 항목이 있습니다.");
 			}
 			
 			

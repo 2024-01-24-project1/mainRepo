@@ -228,7 +228,7 @@ public class MyPage {
 					
 					if(user.getId().equals(LoginLogout.auth)) {
 						user.setPhone(chPhone);
-						
+						LoginLogout.phone= chPhone;
 						// user객체 탐색 종료
 						break;
 					}
@@ -243,6 +243,7 @@ public class MyPage {
 					
 					if(employee.getId().equals(LoginLogout.auth)) {
 						employee.setPhone(chPhone);
+						LoginLogout.phone= chPhone;
 						
 						LogSave.logSave(LogSave.MODIFYMYPAGE);
 						// user객체 탐색 종료

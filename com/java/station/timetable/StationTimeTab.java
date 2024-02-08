@@ -64,7 +64,7 @@ public class StationTimeTab {
 					
 			}
 				
-				System.out.println("\t\t\t역 이름: ");
+				System.out.print("\t\t\t역 이름: ");
 				staion = scan.nextLine();
 				
 				if (staion.endsWith("역")) {

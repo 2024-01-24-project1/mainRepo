@@ -24,13 +24,13 @@ public class LostArticleSearch {
 					// View클래스 출력
 					ViewAll.print("분실물");
 					
-					System.out.println("분실물\t\t\t상세내용\t\t\t잃어버린 역");
+					System.out.println("분실물 \t\t\t\t상세내용\t\t\t잃어버린 역");
 					
 					list.stream().skip(index * 10)
 					 							 .limit(10)
-					 							 .forEach(article -> System.out.printf("%-8s %-20s %-15s\r\n"
+					 							 .forEach(article -> System.out.printf("%-14s         \t%-12s\t\t  %-10s\r\n"
 							 													, article.getArticle()
-							 													, article.getContent()
+							 													, article.getLostStation() + "역"
 							 													, article.getFindStation() + "역"));
 					
 					System.out.printf("\t\t\tPage: %s / %s\r\n", index + 1, page);

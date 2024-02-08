@@ -374,7 +374,7 @@ System.out.println();
 	public static void print(String title) {
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.printf("\t\t\t\t     %s\n", title);
+		System.out.printf("\t\t\t\t    %s\n", title);
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		
 	}
@@ -580,7 +580,7 @@ System.out.println();
 	public static void userVocMain() { //고객의 소리 메뉴  0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println("\t\t\t           고객의 소리");
+		System.out.println("\t\t\t         고객의 소리");
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
 		System.out.println();

@@ -853,7 +853,7 @@ System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println("\t\t\t           개인회원 가입");
 		System.out.println(" (아이디는 4~12자 이내, 영어 소문자와 숫자만 입력 가능하며 숫자로 시작할 수 없습니다.)");
-		System.out.println(" (비밀번호는 8~15자, 영어 대소문자,숫자 그리고 특수문자(!~*)만 입력 가능합니다.");
+		System.out.println(" (비밀번호는 8~15자, 영어 대소문자,숫자 그리고 특수문자(!,~,*,@)만 입력 가능합니다.");
 		System.out.println(" (이름은 2~5글자 , 한글만 입력 가능합니다.)");
 		System.out.println(" (주민등록번호는 6자리, 7자리 총 13개의 숫자가 입력되어야 합니다.)");
 		System.out.println(" (주민등록번호 유효성 검사가 존재하므로 정확한 주민등록번호를 입력하여야 합니다.)");
@@ -1054,6 +1054,22 @@ System.out.println();
 		
 	}
 	
+	public static void busyStat() {
+		
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		System.out.println();
+		System.out.println("\t\t\t\t1. 혼잡도 통계");
+		System.out.println("\t\t\t\t2. 이용객 통계");
+		System.out.println("\t\t\t\t3. 매출 통계");
+		System.out.println("\t\t   뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println();
+		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+		
+		
+		
+		
+	}
+	
 	public static void statisticsMain() { // 통계 정보 메인 0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
@@ -1131,10 +1147,10 @@ System.out.println();
 		System.out.println();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 		System.out.println();
-		System.out.println("\t\t\t 1. 전체 일정 보기");
-		System.out.println("\t\t\t 2. 일정 추가");
-		System.out.println("\t\t\t 3. 일정 제거");
-		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
+		System.out.println("\t\t\t\t1. 전체 일정 보기");
+		System.out.println("\t\t\t\t2. 일정 추가");
+		System.out.println("\t\t\t\t3. 일정 제거");
+		System.out.println("\t\t\t뒤로 가기를 원할 시 엔터키를 눌러주세요");
 		
 	}
 	

@@ -24,14 +24,7 @@ public class StatsTab {
 			
 			
 			
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-			System.out.println();
-			System.out.println("\t\t\t 1. 혼잡도 통계");
-			System.out.println("\t\t\t 2. 이용객 통계");
-			System.out.println("\t\t\t 3. 매출 통계");
-			System.out.println("\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
-			System.out.println();
-			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
+			ViewAll.busyStat();
 			ViewAll.chooseNum();
 			
 			sel = scan.nextLine();

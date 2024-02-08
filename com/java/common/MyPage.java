@@ -278,8 +278,10 @@ public class MyPage {
 				
 		checkEmployee = Data.employeeList.stream().anyMatch(employee -> employee.getName().equals(LoginLogout.authName) 
 																	 && employee.getId().equals(LoginLogout.auth));
-									  
-		System.out.println("\t\t\t변경할 비밀번호: ");
+		
+		System.out.println("비밀번호는 8~15자, 영어 대소문자,숫자 그리고 특수문자(!,~,*,@)만 입력 가능합니다.");
+		System.out.println();
+		System.out.print("\t\t\t변경할 비밀번호: ");
 		
 		Scanner scan = new Scanner(System.in);
 		String chPw = scan.nextLine(); //변경할 PW 입력
@@ -321,11 +323,11 @@ public class MyPage {
 			}
 			
 			
-			System.out.println("변경이 완료되었습니다.");
+			System.out.println("\t\t\t변경이 완료되었습니다.");
 			
 		}else {
-			System.out.println("비밀번호의 형식이 올바르지 않습니다");
-			System.out.println("비밀번호: 8~15자, 대소문자+숫자+특수문자(!~*)");
+			System.out.println("\t\t\t비밀번호의 형식이 올바르지 않습니다");
+			System.out.println("\t\t비밀번호: 8~15자, 대소문자+숫자+특수문자(!,~,*,@)");
 		}
 		
 		ViewAll.pause();

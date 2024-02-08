@@ -1528,7 +1528,7 @@ System.out.println();
 		System.out.println();
 		System.out.println("\t\t\t 1. 근무지 변경");
 		System.out.println("\t\t\t 2. 직급 변경");
-		System.out.println("\t\t\t 3. 권한 부여");
+		System.out.println("\t\t\t 3. 권한 변경");
 		System.out.println("\t\t\t 4. 계정 삭제");
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");
 	

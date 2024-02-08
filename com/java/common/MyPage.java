@@ -18,7 +18,7 @@ public class MyPage {
 			
 			Scanner scan = new Scanner(System.in);
 			ViewAll.userMyPage();
-			System.out.printf("\t\t이름: %s 아이디: %s 전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
+			System.out.printf("\t     이름: %s  아이디: %s  전화번호: %s\n", LoginLogout.authName , LoginLogout.auth, LoginLogout.phone);
 			System.out.print("\t\t");
 			if(mode.equals("1")) {
 				
@@ -33,8 +33,8 @@ public class MyPage {
 			}else if (mode.equals("2")) {
 				
 				// 직원만 가지는 정보 출력
-				System.out.printf("\t\t\t직급: %s  ", LoginLogout.position);
-				System.out.printf("\t\t권한: LEVEL%s\n", LoginLogout.level);
+				System.out.printf("\t직급: %s  ", LoginLogout.position);
+				System.out.printf("\t권한: LEVEL%s\n", LoginLogout.level);
 				Data.employeeList.stream().filter(employee -> employee.getId().equals(LoginLogout.auth))
 										  .forEach(employee -> System.out.printf("", employee.getStation() + "역"));
 			}

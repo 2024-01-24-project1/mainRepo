@@ -20,12 +20,10 @@ public class LogTab {
 
 		logPage(logPage); // 로그 페이지 출력
 
-		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
-		System.out.println();
+
 		searchLog();
 
 		LogSave.logSave(LogSave.VIEWLOG);
-		ViewAll.pause();
 
 
 		
@@ -55,7 +53,7 @@ public class LogTab {
 					 										
 					 											
 			System.out.printf("\n\t\t\t  Page| %s / %s\r\n", index + 1, page);
-			System.out.println("\t\t\t  엔터시 리스트보기가 종료됩니다.");
+			System.out.println("\t\t\t  엔터입력시 뒤로갑니다.");
 			System.out.print("\t\t\t  원하는 페이지: ");
 			sel = scan.nextLine();
 			
@@ -88,9 +86,8 @@ public class LogTab {
 
 			while(true) {
 				
-				System.out.println("\t\t\t     1. 자세히 검색");
-				//System.out.println("\t\t\t    엔터를 입력 뒤로가기");
-				System.out.print("\t\t\t   입력 : ");
+				System.out.println("\t\t\t  1. 자세히 검색");
+				System.out.println("\t\t\t엔터를 입력 뒤로가기");
 				sel = reader.readLine();
 				
 				if(sel.equals("1")) {
@@ -142,7 +139,6 @@ public class LogTab {
 								System.out.printf("\t\t\t\t      %d. %s\n",index++,log.getAction().get(i));
 								
 							}
-							System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 							System.out.println();
 							
 						}
@@ -156,7 +152,8 @@ public class LogTab {
 				
 				
 				else if(sel.equals("")) {
-					break;
+					return;
+					
 				}	else {
 					
 					System.out.println("\t\t\t해당 섹션이 없습니다.");

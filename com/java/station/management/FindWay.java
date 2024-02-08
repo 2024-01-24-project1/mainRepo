@@ -357,15 +357,15 @@ public class FindWay extends StationManagement {
 		}
 		System.out.println();
 		
-		
-		System.out.printf("\t\t\t총 소요시간: %d분\n",minute);
+		System.out.println();
+		System.out.printf("\t\t\t 총 소요시간: %d분\n",minute);
 		
 		String[] temp = departureTime.split(":");
 		
 		int departureHour = Integer.parseInt(temp[0]);
 		int departureMinute = Integer.parseInt(temp[1]);
 		
-		System.out.printf("\t\t\t%s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);
+		System.out.printf("\t\t\t %s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);
 		
 		if((departureMinute+minute)>=60) {
 			minute = (departureMinute+minute) % 60;
@@ -380,7 +380,8 @@ public class FindWay extends StationManagement {
 		if(departureHour>=24) {
 			departureHour = departureHour % 24;
 		}
-		System.out.printf("\t\t\t도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
+		System.out.printf("\t\t\t 도착 예정 시간: %02d시 %02d분\n", departureHour,minute);
+		System.out.println();
 		
 		
 		

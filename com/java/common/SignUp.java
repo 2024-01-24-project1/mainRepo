@@ -110,7 +110,7 @@ public class SignUp {
 			
 			// 이름 형식 검사
 			if ( !Validation.is_Name(name)) {
-				System.out.println("이름 형식이 틀렸습니다.");
+				System.out.println("\t\t\t이름 형식이 틀렸습니다.");
 				
 			}
 			

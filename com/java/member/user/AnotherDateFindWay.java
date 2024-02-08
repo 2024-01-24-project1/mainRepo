@@ -49,6 +49,14 @@ public class AnotherDateFindWay extends FindWay {
 
 				System.out.print("\t\t\t\t분       : ");
 				minute = reader.readLine();
+				
+				if(hour.endsWith("시")) {
+					hour.subSequence(0,hour.length()-1);
+				}
+				if(minute.endsWith("분")) {
+					minute.substring(0,minute.length()-1);
+				}
+				
 
 				error = Validation.is_anotherDate(year,month,date,hour,minute);
 

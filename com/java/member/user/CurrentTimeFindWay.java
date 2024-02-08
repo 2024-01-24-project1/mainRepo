@@ -75,7 +75,6 @@ public class CurrentTimeFindWay extends FindWay {
 
 			findWay(line, start, end, calendar);
 
-			ViewAll.pause();
 
 			ViewAll.roadSearchRouteTimeBottom();
 			ViewAll.pause();

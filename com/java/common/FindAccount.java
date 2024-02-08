@@ -56,9 +56,9 @@ public class FindAccount {
 		Scanner scan = new Scanner(System.in);
 		
 		// 이름, 주민번호 입력받기
-		System.out.println("\t\t\t이름      : ");
+		System.out.print("\t\t\t이름      : ");
 		String name = scan.nextLine();
-		System.out.println("\t\t\t주민등록번호: ");
+		System.out.print("\t\t\t주민등록번호: ");
 		String registration = scan.nextLine();
 		System.out.println();
 		
@@ -102,11 +102,11 @@ public class FindAccount {
 		Scanner scan = new Scanner(System.in);
 
 		// 아이디, 이름, 주민번호 입력받기
-		System.out.println("\t\t\t아이디        : ");
+		System.out.print("\t\t\t아이디        : ");
 		String id = scan.nextLine();
-		System.out.println("\t\t\t이름          : ");
+		System.out.print("\t\t\t이름          : ");
 		String name = scan.nextLine();
-		System.out.println("\t\t\t주민등록번호  : ");
+		System.out.print("\t\t\t주민등록번호  : ");
 		String registration = scan.nextLine();
 		System.out.println();
 		
@@ -139,6 +139,7 @@ public class FindAccount {
 		}else {
 			ViewAll.errorHmmEmo();
 			ViewAll.noIDDataError();
+			System.out.println();
 			System.out.println("\t\t\t입력받은 이름과 아이디, 주민번호의 아이디가 없음");
 		}
 		

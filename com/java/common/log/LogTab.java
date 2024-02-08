@@ -24,7 +24,6 @@ public class LogTab {
 		searchLog();
 
 		LogSave.logSave(LogSave.VIEWLOG);
-		ViewAll.pause();
 
 
 		
@@ -154,6 +153,7 @@ public class LogTab {
 				
 				else if(sel.equals("")) {
 					return;
+					
 				}	else {
 					
 					System.out.println("\t\t\t해당 섹션이 없습니다.");

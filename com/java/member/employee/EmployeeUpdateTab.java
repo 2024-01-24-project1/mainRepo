@@ -72,9 +72,10 @@ public class EmployeeUpdateTab {
 		if(Validation.is_EmployeeId(input) && (!Validation.is_Sudo(input)) ) {
 			
 			// 직원계정의 정보를 출력
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			Data.employeeList.stream().filter(employee -> employee.getId().equals(ID))
 							          .forEach(employee -> 
-							System.out.printf("이름: %10s|아이디: %15s|생년월일: %6s|전화번호: %13s|직급: %2s|담당지: %s호선 %s역\r\n"
+							System.out.printf("\t   이름: %5s  아이디: %10s   생년월일: %8s\n\t전화번호: %13s   직급: %2s 담당지: %s 호선 %s역\r\n"
 												, employee.getName()
 												, employee.getId()
 												, employee.getRegistration().substring(0, 6)
@@ -82,6 +83,7 @@ public class EmployeeUpdateTab {
 												, employee.getPosition()
 												, employee.getLine()
 												, employee.getStation()));
+			System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");
 			
 			if(sel.equals("1")) 		updateWorkArea(ID);	// 근무지 변경
 			else if (sel.equals("2"))   updatePosition(ID);	// 직급 변경

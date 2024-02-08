@@ -34,7 +34,7 @@ public class MyPageBookMark extends BookMarkRoute{
 			while(true) {
 				
 				ViewAll.lineFavorite();
-
+				ViewAll.chooseNum();
 				String sel = reader.readLine();
 
 

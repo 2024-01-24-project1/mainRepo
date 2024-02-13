@@ -12,14 +12,22 @@ import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
+/**
+ * 직원 정보를 수정하는 클래스
+ */
 public class EmployeeUpdateTab {
 	
-	
+	/**
+	 * 직원 정보 수정 메뉴를 나타내는 메서드
+	 */
 	public static void employeeUpdate() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력
@@ -51,6 +59,10 @@ public class EmployeeUpdateTab {
 		
 	}//End of employeeUpdate()
 	
+	/**
+	 * 정보를 변경할 직원의 정보를 보여주는 메서드
+	 * @param sel 수정을 원하는 메뉴
+	 */
 	public static void update(String sel) {
 		
 		// View클래스에서 출력
@@ -65,7 +77,13 @@ public class EmployeeUpdateTab {
 		
 		// 아이디 입력받기
 		System.out.printf("\t\t\t아이디: ");
+		/**
+		 * 아이디를 저장할 변수
+		 */
 		String input = scan.nextLine();
+		/**
+		 * 아이디를 저장할 변수
+		 */
 		final String ID = input;
 		
 		// 직원계정이고 최고권한이 없는 계정만 가능
@@ -97,11 +115,18 @@ public class EmployeeUpdateTab {
 	
 	
 	// 직급 변경
+	/**
+	 * 직원의 직급을 변경하는 메서드
+	 * @param id 아이디
+	 */
 	public static void updatePosition(String id) {
 			
 			Scanner scan = new Scanner(System.in);
 			
 			while(true) {
+				/**
+				 * 입력한 값을 저장하는 변수
+				 */
 				String input = "";
 				System.out.println("\t\t\t안전요원 사원 대리 과장 부장 사장");
 				System.out.println("\t\t\t변경할 직급: ");
@@ -139,11 +164,18 @@ public class EmployeeUpdateTab {
 	}//End of updatePosition()
 	
 	// 권한 변경
+	/**
+	 * 직원 권한을 변경하는 메서드
+	 * @param id 아이디
+	 */
 	public static void updateLevel(String id) {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String input = "";
 			System.out.println("\t\t\t권한없음 -> 2 | 권한있음 -> 3 ");
 			System.out.println("\t\t\t변경할 권한: ");
@@ -174,12 +206,22 @@ public class EmployeeUpdateTab {
 	}//End of updateLevel()
 
 	// 근무지 변경
+	/**
+	 * 직원 근무지를 변경하는 메서드
+	 * @param id 아이디
+	 */
 	public static void updateWorkArea(String id) {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 일치 여부를 저장하는 변수
+			 */
 			boolean check = false;
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String input = "";
 			System.out.println("\t\t\t1호선 ~ 9호선");
 			System.out.println("\t\t\t정확히 'N호선'입력: ");
@@ -188,7 +230,9 @@ public class EmployeeUpdateTab {
 			if( Validation.is_Line(input)) {
 				
 				input = input.charAt(0) + "";
-				
+				/**
+				 * 입력한 호선을 저장하는 변수
+				 */
 				final String LINE = input;
 				
 				// 선택한 호선의 역이름들 보여주기
@@ -201,7 +245,9 @@ public class EmployeeUpdateTab {
 		            // '역'을 제거한 문자열을 반환합니다.
 		            input = input.substring(0, input.length() - 1);
 		        } 
-				
+				/**
+				 * 입력한 역 이름을 저장하는 변수
+				 */
 				final String STATION = input;
 				
 				switch (Integer.parseInt(LINE)) {
@@ -278,12 +324,22 @@ public class EmployeeUpdateTab {
 		}//while루프 종료
 		
 	}//End of updateWorkArea()
-	
+	/**
+	 * 계정삭제하는 메서드
+	 */
 	public static void deleteAccount() {
-		
+		/**
+		 * 입력한 값을 저장하는 변수
+		 */
 		String member = "";			// 직원인지 고객인지 입력받고 리스트 보여주기
 		
+		/**
+		 * 고객인지 일치 여부를 저장하는 변수
+		 */
 		boolean userCheck = false;
+		/**
+		 * 직원인지 일치 여부를 저장하는 변수
+		 */
 		boolean employeeCheck = false;
 		
 		Scanner scan = new Scanner(System.in);
@@ -312,7 +368,13 @@ public class EmployeeUpdateTab {
 		
 		System.out.println("\t\t\t삭제할 계정의 아이디를 입력해주세요.");
 		System.out.printf("\t\t\t아이디: ");
+		/**
+		 * 아이디를 저장하는 변수
+		 */
 		String input = scan.nextLine();
+		/**
+		 * 아이디를 저장하는 변수
+		 */
 		final String DELETE = input;
 		
 		userCheck = Data.userList.stream().anyMatch(user -> user.getId().equals(DELETE));

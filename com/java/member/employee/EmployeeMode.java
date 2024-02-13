@@ -12,13 +12,20 @@ import com.java.schedule.ScheduleTab;
 import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
 import com.java.view.ViewAll;
-
+/**
+ * 로그인후 관리자페이지를 나타내는 클래스
+ */
 public final class EmployeeMode extends CommonFunction{
 
+	/**
+	 * 관리자 페이지를 출력하는 메서드
+	 */
 	public static void employeeTab() {
 		
 		while(true) {
-			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			Scanner scan = new Scanner(System.in);

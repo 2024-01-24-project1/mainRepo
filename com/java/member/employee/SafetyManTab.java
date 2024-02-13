@@ -9,16 +9,31 @@ import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
+/**
+ * 안전요원 관리 메뉴를 나타내는 클래스
+ */
 public class SafetyManTab {
 	
+	/**
+	 * 안전요원 관리 메뉴를 나타내는 메서드
+	 */
 	protected static void safetyManTab() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
+			/**
+			 * 안전요원 목록을 저장하는 ArrayList
+			 */
 			ArrayList<Employee> safetyList = new ArrayList<>();
+			/**
+			 * 안전요원 중 미배치 안전요원만 저장하는 ArrayList
+			 */
 			ArrayList<Employee> noAreaSafetyList = new ArrayList<>();
 			
 			for(Employee employee : Data.employeeList) {
@@ -69,8 +84,14 @@ public class SafetyManTab {
 		
 	}//End of satetyManTab()
 
+	/**
+	 * 안전요원 부서 해제 시키는 메서드
+	 * @param safetyList 안전요원 목록
+	 */
 	private static void safetyManWorkAreaClear(ArrayList<Employee> safetyList) {
-		
+		/**
+		 * 입력한 값을 저장하는 변수
+		 */
 		String input = "";
 		
 		Scanner scan = new Scanner(System.in);
@@ -107,9 +128,14 @@ public class SafetyManTab {
 		ViewAll.pause();
 		
 	}//End of safetyManWorkAreaClear()
-	
+	/**
+	 * 안전요원 근무지 배치하는 메서드
+	 * @param list 안전요원 목록
+	 */
 	private static void arrangeSafetyMan(ArrayList<Employee> list) {
-		
+		/**
+		 * 입력한 값을 저장하는 변수
+		 */
 		String input = "";
 		
 		Scanner scan = new Scanner(System.in);

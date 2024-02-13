@@ -9,16 +9,30 @@ import com.java.common.log.LogSave;
 import com.java.member.user.UserVoice;
 import com.java.view.ViewAll;
 
+/**
+ * 고객의 소리 검색하는 클래스
+ */
 public class UserVoiceSearch {
 	
+	/**
+	 * 고객의 소리 목록 출력하는 메서드
+	 */
 	protected static void userVoiceAll() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
-			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
+			/**
+			 * 아이디를 저장하는 변수
+			 */
 			String id = "";
+			/**
+			 * 제목을 저장하는 변수
+			 */
 			String title = "";
 			
 			userVoicePage(Data.userVoiceList);
@@ -69,11 +83,20 @@ public class UserVoiceSearch {
 		}//while루프 종료
 		
 	}//End of userVoiceAll()
-	
+	/**
+	 * 고객의 소리를 페이지로 나눠서 출력하는 메서드
+	 * @param list 고객의 소리 목록
+	 */
 	public static void userVoicePage(ArrayList<UserVoice> list) {
 		// 리스트의 페이지수 계산
+		/**
+		 * 페이지 수를 나타내는 변수
+		 */
 		int page = (int)(Math.ceil((double)list.size() / 10));
 		
+		/**
+		 * 현재 보고있는 페이지를 나타내는 변수
+		 */
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
 		
 		Scanner scan = new Scanner(System.in);

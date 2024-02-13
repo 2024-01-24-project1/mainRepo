@@ -6,14 +6,22 @@ import com.java.common.Data;
 import com.java.common.LoginLogout;
 import com.java.view.ViewAll;
 
+/**
+ * 직원관리 메뉴를 나타내는 클래스
+ */
 public class EmployeeManagementTab {
 
-	
+	/**
+	 * 직원관리 메뉴를 나타내는 메서드
+	 */
 	protected static void employeeManagementTab() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 메서드
+			 */
 			String sel = ""; // 선택한 번호
 			
 			// View클래스 출력

@@ -6,14 +6,23 @@ import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
 import com.java.view.ViewAll;
 
+/**
+ * 고객의 소리 관리하는 메뉴 나타내는 클래스
+ */
 public final class UserVoiceManagemnetTab {
 
+	/**
+	 * 고객의 소리 관리하는 메뉴 나타내는 메서드
+	 */
 	protected static void userVoiceManagementTab() {
 		
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			//System.out.println(LoginLogout.position + " " + LoginLogout.auth + "님");

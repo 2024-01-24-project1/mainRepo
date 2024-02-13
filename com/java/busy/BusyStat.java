@@ -170,7 +170,10 @@ public class BusyStat extends StationManagement{
 		Scanner scan = new Scanner(System.in);
 
 		while(true) {
-
+			
+			/**
+			 * 사용자가 입력한 값을 저장하는 변수
+			 */
 			String sel = "";	// 입력받는 문자열
 
 			// View클래스 출력

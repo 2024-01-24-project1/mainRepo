@@ -14,11 +14,20 @@ import com.java.member.user.User;
 import com.java.member.user.UserVoice;
 import com.java.schedule.Schedule;
 
+/**
+ * 파일 쓰기를 하는 클래스
+ */
 public final class Exit {
 
+	/**
+	 * 경로가 저장되어 있는 Data 인스턴스
+	 */
 	Data data = new Data();
 	
 	// 모든 csv파일 쓰기
+	/**
+	 * 모든 파일을 쓰는 역할을 하는 메서드
+	 */
 	public void writeAll() {
 		writeUserList();
 		writeEmployeeList();
@@ -31,6 +40,9 @@ public final class Exit {
 		
 	}
 	
+	/**
+	 * 북마크 정보를 파일에 쓰는 메서드
+	 */
 	private void writeBookMarkList() {
 		
 		try {
@@ -59,6 +71,9 @@ public final class Exit {
 		
 	}
 
+	/**
+	 * 분실물 정보를 파일에 쓰는 메서드
+	 */
 	private void writeLostArticleList() {
 		try {
 			
@@ -82,7 +97,10 @@ public final class Exit {
 		}
 		
 	}//End of writeLostArticleList()
-
+	
+	/**
+	 * 민원 정보를 파일에 쓰는 메서드
+	 */
 	private void writeUserVoiceList() {
 		try {
 			
@@ -109,6 +127,9 @@ public final class Exit {
 	}//End of writeUserVoiceList()
 	
 	
+	/**
+	 * 행동 로그 정보를 파일에 쓰는 메서드
+	 */
 	private void writeLogList() {
 		try {
 			
@@ -138,6 +159,9 @@ public final class Exit {
 	}//End of writeCalendarList()
 	
 	
+	/**
+	 * 일정 정보를 파일에 쓰는 메서드
+	 */
 	private void writeScheduleList() {
 		try {
 			
@@ -160,6 +184,9 @@ public final class Exit {
 		}
 	}//End of writeScheduleList()
 
+	/**
+	 * 정기권 정보를 파일에 쓰는 메서드
+	 */
 	private void writePassList() {
 		try {
 			
@@ -180,6 +207,9 @@ public final class Exit {
 		}
 	}//End of writePassList()
 
+	/**
+	 * 직원 정보를 파일에 쓰는 메서드
+	 */
 	private void writeEmployeeList() {
 		try {
 		
@@ -208,6 +238,9 @@ public final class Exit {
 		}
 	}//End of writeEmployeeList()
 
+	/**
+	 * 고객 정보를 파일에 쓰는 메서드
+	 */
 	private void writeUserList() {
 		
 		try {

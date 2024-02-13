@@ -10,32 +10,70 @@ import com.java.common.log.LogSave;
 import com.java.station.StationNamePage;
 import com.java.view.ViewAll;
 
-
+/**
+ * 역 관리중 해당 호선에 열차를 추가하는 클래스
+ */
 public class AddTrain extends StationManagement {
 	
 	private StationManagement stationManagement;
 	
+	/**
+	 * 열차 추가 클래스의 생성자
+	 */
 	public AddTrain() {
 		
 		this.stationManagement = new StationManagement();
 		
 	}
 	
-	//해당호선의 혼잡도를 가져오는 메서드 구현해야함
-	
+	/**
+	 * 입력값을 받아 열차를 추가하는 메서드
+	 */
 	public void addTrain() {
+		
+		// 입력값 > 호선, 추가열차수, 시작역,종료역, 시간대, 요일(평일/주말)
+		
+					//하는일 : 상행인지 하행인지 확인
+					//         입력받은 호선 역 이름 가져오기
+					//         각각 역의 시간표데이터 가져오기
+					//         시간표데이터에서 시간만 추출하기
+					//         시간표 시간을 참고해서 시간 데이터 가져오기 
+					// 		   시간을 이용해서 열차 대수 새기
+					//         특정 호선, 시간대의 혼잡도를 가져오기
 		
 		
 		try {
-			
+			/**
+			 * 에러 문구를 저장하는 ArrayList
+			 */
 			ArrayList<String> error = new ArrayList<>();
+			/**
+			 * while문을 제어하는 변수
+			 */
 			boolean loop  = true;
-			boolean check = false;
+			/**
+			 * 호선을 저장하는 변수
+			 */
 			String line = "";
+			/**
+			 * 열차 수를 저장하는 변수
+			 */
 			String trainNums = "";
+			/**
+			 * 시작역을 저장하는 변수
+			 */
 			String startStation = "";
+			/**
+			 * 도착역을 저장하는 변수
+			 */
 			String endStation = "";
+			/**
+			 * 시간대를 저장하는 변수
+			 */
 			String time = "";
+			/**
+			 * 요일을 저장하는 변수
+			 */
 			String dayOfWeek = "";
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -97,20 +135,6 @@ public class AddTrain extends StationManagement {
 				}
 				
 			}
-			
-			
-			
-			
-			// 입력값 > 호선, 추가열차수, 시작역,종료역, 시간대, 요일(평일/주말)
-			
-			//하는일 : 상행인지 하행인지 확인
-			//         입력받은 호선 역 이름 가져오기
-			//         각각 역의 시간표데이터 가져오기
-			//         시간표데이터에서 시간만 추출하기
-			//         시간표 시간을 참고해서 시간 데이터 가져오기 
-			// 		   시간을 이용해서 열차 대수 새기
-			//         특정 호선, 시간대의 혼잡도를 가져오기
-			
 			
 			stationManagement.way = findLineWay(line, startStation, endStation);
 			
@@ -176,12 +200,15 @@ public class AddTrain extends StationManagement {
 
 	/**
 	 * 해당 시간(time)의 혼잡도를 열차를 추가할 경우 바뀐 혼잡도를 반환하는 메서드
-	 * @param time 원하는 시간대
+	 * @param time 시간대(05~24)
 	 * @param trainsNum 추가할 열차 수
 	 * @return 해당 시간의 변경된 혼잡도 ArrayList<Double> modifyBusy
 	 */
 	public ArrayList<Double> calcBusy(String time, String trainsNum) {
-
+		
+		/**
+		 * 수정된 혼잡도를 저장하는 ArrayList
+		 */
 		ArrayList<Double> modifyBusy = new ArrayList<>();
 
 
@@ -195,11 +222,14 @@ public class AddTrain extends StationManagement {
 			//역 이름이 일치하면 혼잡도 가져오기
 
 			//10 * 혼잡도(104) / 11
-			double avg = 0;
+			/**
+			 * 수정된 혼잡도 수치를 저장하는 변수
+			 */
+			double busyValues = 0;
 
-			avg = (stationManagement.specificHourTrainCount.get(i) * (stationManagement.busyList.get(i).getCrowded().get(Integer.parseInt(time)-5))) / (Integer.parseInt(trainsNum)+stationManagement.specificHourTrainCount.get(i));
+			busyValues = (stationManagement.specificHourTrainCount.get(i) * (stationManagement.busyList.get(i).getCrowded().get(Integer.parseInt(time)-5))) / (Integer.parseInt(trainsNum)+stationManagement.specificHourTrainCount.get(i));
 			stationManagement.specificHourBusy.add((stationManagement.busyList.get(i).getCrowded().get((Integer.parseInt(time))-5)));
-			modifyBusy.add(avg);
+			modifyBusy.add(busyValues);
 
 
 

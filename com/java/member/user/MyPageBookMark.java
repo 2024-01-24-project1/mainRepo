@@ -40,14 +40,14 @@ public class MyPageBookMark extends BookMarkRoute{
 
 				if(sel.equals("1")) { //즐겨찾기 목록
 
-					this.userBookMark = searchMyBookMark();
+					bookMarkRoute.userBookMark = searchMyBookMark();
 
-					if(Validation.is_ExistBookMark(this.userBookMark)) {
+					if(Validation.is_ExistBookMark(bookMarkRoute.userBookMark)) {
 						
 						ViewAll.favoriteView();
 						System.out.println();
-						this.printMyBookMark(this.userBookMark);
-						this.selectBookMark(this.userBookMark);
+						this.printMyBookMark(bookMarkRoute.userBookMark);
+						this.selectBookMark(bookMarkRoute.userBookMark);
 						ViewAll.pause();
 					}
 
@@ -69,9 +69,9 @@ public class MyPageBookMark extends BookMarkRoute{
 
 							ViewAll.favoriteDelete();
 							this.userBookMark = searchMyBookMark();
-							this.printMyBookMark(this.userBookMark);
+							this.printMyBookMark(bookMarkRoute.userBookMark);
 
-							if(Validation.is_ExistBookMark(this.userBookMark)) {
+							if(Validation.is_ExistBookMark(bookMarkRoute.userBookMark)) {
 								
 								deleteBookMark();
 

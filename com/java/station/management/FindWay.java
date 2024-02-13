@@ -19,19 +19,26 @@ import com.java.requiredtime.RequiredTime;
 import com.java.view.ViewAll;
 import com.java.view.ViewAll;
 
+/**
+ * 길찾기 하는 클래스
+ */
 public class FindWay extends StationManagement {
 	
 
 	private StationManagement stationManagement;
 	 
-	
+	/**
+	 * 길찾기 클래스 생성자
+	 */
 	public FindWay() {
 		
 		this.stationManagement = new StationManagement();
 		
 	}
 	
-	
+	/**
+	 * 길찾기 시 현재시간과 특정날짜 보기 메뉴 선택하는 메서드
+	 */
 	public void findWaySelMenu() {
 		
 		
@@ -81,8 +88,15 @@ public class FindWay extends StationManagement {
 
 
 
-
+	/**
+	 * 입력 받은 값들로 길찾기 하는 메서드
+	 * @param line 호선(1~9)
+	 * @param startStation 시작역
+	 * @param endStation 도착역
+	 * @param calendar 날짜가 저장되어 있는 캘린더
+	 */
 	protected void findWay(String line, String startStation, String endStation, Calendar calendar) {
+		
 		
 		stationManagement.route = new ArrayList<>();
 		ArrayList<RequiredTime> requiredTime = new ArrayList<>();   //보고싶은 경로의 소요시간

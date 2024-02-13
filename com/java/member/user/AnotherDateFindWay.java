@@ -60,7 +60,7 @@ public class AnotherDateFindWay extends FindWay {
 
 				error = Validation.is_anotherDate(year,month,date,hour,minute);
 
-				if(error.get(0).equals("\t\t\t오류없음")) {
+				if(error.get(0).equals("오류없음")) {
 
 					break;
 

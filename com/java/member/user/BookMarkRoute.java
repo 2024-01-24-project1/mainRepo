@@ -13,15 +13,27 @@ import com.java.common.Validation;
 import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
+/**
+ * 즐겨찾기 목록으로 길찾기를 하는 메서드
+ */
 public class BookMarkRoute extends FindWay{
 	
+	/**
+	 * 현재 로그인한 고객의 id에 저장된 즐겨찾기 목록을 저장하는 ArrayList
+	 */
 	protected List<String> userBookMark = new ArrayList<>();
 	
+	/**
+	 * 고객이 즐겨찾기 목록중 경로를 선택하는 메서드
+	 */
 	public void bookMarkRouteSelMenu() {
 		
 		
 		try {
 			
+			/**
+			 * 고객이 즐겨찾기 목록이 있는지 true false를 저장하는 변수
+			 */
 			boolean check = true;
 			
 			ViewAll.roadSearchFavoriteList();
@@ -48,6 +60,10 @@ public class BookMarkRoute extends FindWay{
 		
 	}
 
+	/**
+	 * 고객아이디에 저장된 즐겨찾기 노선을 List로 반환하는 메서드
+	 * @return 즐겨찾기 노선 List<String>
+	 */
 	protected List<String> searchMyBookMark() {
 		
 		userBookMark = Data.bookMarkList.stream()
@@ -59,20 +75,43 @@ public class BookMarkRoute extends FindWay{
 	
 	/**
 	 * 즐겨찾기 목록을 보고 해당 즐겨찾기 노선으로 길찾기 하는 메서드
-	 * @param userBookMark
+	 * @param userBookMark 즐겨찾기 노선
 	 */
 	protected void selectBookMark(List<String> userBookMark) {
 		
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			
+			/**
+			 * 현재시간을 저장하는 Calendar 변수
+			 */
 			Calendar calendar = Calendar.getInstance();
+			/**
+			 * 사용자가 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
-			int year = 0;
+			/**
+			 * 즐겨찾기 노선의 번호를 저장하는 변수
+			 */
 			int index = 0;
+			/**
+			 * 년도를 저장하는 변수
+			 */
+			int year = 0;
+			/**
+			 * 월을 저장하는 변수
+			 */
 			int month = 0;
+			/**
+			 * 일을 저장하는 변수
+			 */
 			int date = 0;
+			/**
+			 * 시간을 저장하는 변수
+			 */
 			int hour = 0;
+			/**
+			 * 분을 저장하는 변수
+			 */
 			int minute = 0;
 			
 			while(true) {
@@ -103,7 +142,9 @@ public class BookMarkRoute extends FindWay{
 				}
 				
 			}
-			
+			/**
+			 * 즐겨찾기 목록을 분리해서 저장하는 배열
+			 */
 			String[] temp = userBookMark.get(index).split("-");
 			year = Integer.parseInt(temp[3]);
 			month = Integer.parseInt(temp[4])-1;
@@ -126,9 +167,16 @@ public class BookMarkRoute extends FindWay{
 		}
 		
 	}
-
+	
+	/**
+	 * 고객의 즐겨찾기 목록에 있는 경로를 출력하는 메서드
+	 * @param userBookMark 고객의 즐겨찾기 목록
+	 */
 	protected void printMyBookMark(List<String> userBookMark) {
 		
+		/**
+		 * 즐겨찾기 목록의 번호를 저장하는 변수
+		 */
 		int index = 1;
 		
 		

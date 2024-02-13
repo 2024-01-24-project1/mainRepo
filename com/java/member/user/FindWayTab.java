@@ -6,8 +6,14 @@ import java.io.InputStreamReader;
 import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
+/**
+ * 길찾기 메뉴의 목록을 나타내는 클래스
+ */
 public class FindWayTab {
 	
+	/**
+	 * 길찾기 메뉴의 목록을 나타내는 메서드
+	 */
 	public static void findWayTab() {
 		
 		
@@ -20,6 +26,9 @@ public class FindWayTab {
 				
 				ViewAll.roadSearchMain();
 				ViewAll.chooseNum();
+				/**
+				 * 사용자의 입력값을 저장하는 변수
+				 */
 				String sel = reader.readLine();
 				
 				

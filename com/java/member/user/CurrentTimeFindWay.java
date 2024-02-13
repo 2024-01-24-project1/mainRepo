@@ -11,20 +11,43 @@ import com.java.station.management.FindWay;
 import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
+/**
+ * 현재시간을 기준으로 길찾기를 하는 메서드
+ */
 public class CurrentTimeFindWay extends FindWay {
 
-
+	/**
+	 * 입력값을 기준으로 길찾기를 하는 메서드
+	 */
 	public void currentTimeFindWay() {
 
 
 		try {
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+			
+			/**
+			 * 에러 문구를 저장하는 메서드
+			 */
 			ArrayList<String> error = new ArrayList<>();
+			/**
+			 * 사용자가 입력하는 값을 저장하는 변수
+			 */
 			String sel = "";
+			/**
+			 * 호선을 저장하는 변수
+			 */
 			String line = "";
+			/**
+			 * 시작역을 저장하는 변수
+			 */
 			String start = "";
+			/**
+			 * 도착역을 저장하는 변수
+			 */
 			String end = "";
+			/**
+			 * 날짜를 저장하는 Calendar 변수
+			 */
 			Calendar calendar = Calendar.getInstance();
 
 			while(true) {

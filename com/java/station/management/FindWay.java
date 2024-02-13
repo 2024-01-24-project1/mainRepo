@@ -24,7 +24,9 @@ import com.java.view.ViewAll;
  */
 public class FindWay extends StationManagement {
 	
-
+	/**
+	 * 부모 클래스인 StationManagement의 인스턴스
+	 */
 	private StationManagement stationManagement;
 	 
 	/**
@@ -97,12 +99,29 @@ public class FindWay extends StationManagement {
 	 */
 	protected void findWay(String line, String startStation, String endStation, Calendar calendar) {
 		
-		
-//		stationManagement.route = new ArrayList<>();
+		/**
+		 * 경로 초기화
+		 */
+		stationManagement.route = new ArrayList<>();
+		/**
+		 * 해당 경로의 소요시간을 저장한 ArrayList
+		 */
 		ArrayList<RequiredTime> requiredTime = new ArrayList<>();   //보고싶은 경로의 소요시간
+		/**
+		 * 누적 분 저장하는 변수
+		 */
 		int minute = 0;
+		/**
+		 * 시간 계산할때 사용하는 LocalTime 변수
+		 */
 		LocalTime localTime = LocalTime.of(0, 0, 0);  				//시간 누적 localTime
+		/**
+		 * 현재 시간과 가장 가깡누 열차 시간을 저장하는 변수
+		 */
 		String departureTime = "";
+		/**
+		 * 요일을 저장하는 변수
+		 */
 		String dayOfWeek ="";                 						//요일(평일/주말)
 		
 		
@@ -174,9 +193,23 @@ public class FindWay extends StationManagement {
 	}
 	
 	//열차 출발 시간 구하는 메서드
+	/**
+	 * 캘린더에 저장된 시간을 기준으로 제일 빠른 열차 출발 시간을 찾는 메서드
+	 * 
+	 * @param line 호선(1~9)
+	 * @param startStation 출발역
+	 * @param dayOfWeek 요일(평일/주말)
+	 * @param calendar 시간이 저장된 캘린더
+	 * @return 캘리더 시간을 기준으로 제일 빠른 열차 시간 00:00 String time
+	 */
 	private String departureTrainTime(String line, String startStation,String dayOfWeek ,Calendar calendar) {
-		
+		/**
+		 * 캘린더에 저장된 시간을 저장하는 변수
+		 */
 		int hour = calendar.get(Calendar.HOUR_OF_DAY);
+		/**
+		 * 캘린더에 저장된 분을 저장하는 변수
+		 */
 		int minute = calendar.get(Calendar.MINUTE);
 		
 		
@@ -257,8 +290,13 @@ public class FindWay extends StationManagement {
 	 */
 	private int downwardLine(String startStation, String endStation,
 			ArrayList<RequiredTime> requiredTime, LocalTime localTime) {
-		
+		/**
+		 * while문을 제어하는 변수
+		 */
 		boolean loop = false;
+		/**
+		 * 누적 분을 저장하는 변수
+		 */
 		int minute;
 		
 		for(int i=0; i<requiredTime.size(); i++) {
@@ -308,7 +346,13 @@ public class FindWay extends StationManagement {
 	private int upwardLine(String startStation, String endStation,
 			ArrayList<RequiredTime> requiredTime, LocalTime localTime) {
 		
+		/**
+		 * while문을 제어하는 변수
+		 */
 		boolean loop = false;
+		/**
+		 * 누적 분을 저장하는 변수
+		 */
 		int minute;
 		
 		for(int i=requiredTime.size()-1; i>=0; i--) {
@@ -375,9 +419,18 @@ public class FindWay extends StationManagement {
 		System.out.println();
 		System.out.printf("\t\t\t 총 소요시간: %d분\n",minute);
 		
+		/**
+		 * 시간을 시와 분으로 나누는 배열
+		 */
 		String[] temp = departureTime.split(":");
 		
+		/**
+		 * 시간표에서 시간을 저장하는 변수
+		 */
 		int departureHour = Integer.parseInt(temp[0]);
+		/**
+		 * 시간표에서 분을 저장하는 변수
+		 */
 		int departureMinute = Integer.parseInt(temp[1]);
 		
 		System.out.printf("\t\t\t %s역 열차 출발 시간: %02d:%02d\n",stationManagement.route.get(0),departureHour,departureMinute);

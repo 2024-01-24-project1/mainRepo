@@ -14,6 +14,9 @@ import com.java.view.ViewAll;
  */
 public class ChangeNoChairTrain extends StationManagement{
 	
+	/**
+	 * 부모 클래스인 StationManagement의 인스턴스
+	 */
 	private StationManagement stationManagement;
 	
 	/**

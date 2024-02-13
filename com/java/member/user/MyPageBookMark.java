@@ -13,17 +13,28 @@ import com.java.station.StationNamePage;
 import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
+/**
+ * 고객 마이페이지의 북마크를 나타내는 클래스
+ */
 public class MyPageBookMark extends BookMarkRoute{
 	
+	/**
+	 * 부모클래스인 BookMarkRoute의 인스턴스
+	 */
 	private BookMarkRoute bookMarkRoute;
 
+	/**
+	 * 마이페이지 북마크 클래스의 생성자
+	 */
 	public MyPageBookMark() {
 
 		this.bookMarkRoute = new BookMarkRoute();
 
 	}
 
-
+	/**
+	 * 마이페이지 북마크에서 메뉴를 선택하는 메서드
+	 */
 	public void myPageBookMarkSelMenu() {
 
 		try {
@@ -35,6 +46,9 @@ public class MyPageBookMark extends BookMarkRoute{
 				
 				ViewAll.lineFavorite();
 				ViewAll.chooseNum();
+				/**
+				 * 사용자의 입력값을 저장하는 변수
+				 */
 				String sel = reader.readLine();
 
 
@@ -117,6 +131,9 @@ public class MyPageBookMark extends BookMarkRoute{
 	}
 
 
+	/**
+	 * 북마크를 추가하는 메서드
+	 */
 	private void addBookMark()  {
 		
 		
@@ -124,11 +141,29 @@ public class MyPageBookMark extends BookMarkRoute{
 		try {
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			/**
+			 * 에러 문구를 저장하는 ArrayList
+			 */
 			ArrayList<String> error = new ArrayList<>();
+			/**
+			 * 시간을 저장하는 Calendar 변수
+			 */
 			Calendar calendar = Calendar.getInstance();
+			/**
+			 * 호선을 저장하는 변수
+			 */
 			String line = "";
+			/**
+			 * 시작역을 저장하는 변수
+			 */
 			String start = "";
+			/**
+			 * 도착역을 저장하는 변수
+			 */
 			String end = "";
+			/**
+			 * 시간대를 저장하는 변수
+			 */
 			String time = "";
 
 			
@@ -192,7 +227,9 @@ public class MyPageBookMark extends BookMarkRoute{
 
 	}
 	
-	
+	/**
+	 * 북마크를 제거하는 메서드
+	 */
 	private void deleteBookMark() {
 		
 		
@@ -200,7 +237,13 @@ public class MyPageBookMark extends BookMarkRoute{
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
+			/**
+			 * 사용자가 입력한 값을 저장하는 변수
+			 */
 			String sel = ""	;
+			/**
+			 * 사용자가 제거할 즐겨찾기 목록의 번호를 저장하는 변수
+			 */
 			int index = 0;
 			
 			while(true) {

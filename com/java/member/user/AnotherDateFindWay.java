@@ -11,8 +11,14 @@ import com.java.station.management.FindWay;
 import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
+/**
+ * 다른날짜를 기준으로 길찾기를 하는 클래스
+ */
 public class AnotherDateFindWay extends FindWay {
 	
+	/**
+	 * 입력값을 기준으로 길찾기를 하는 메서드
+	 */
 	public void anotherDateFindWay() {
 		
 		
@@ -21,16 +27,46 @@ public class AnotherDateFindWay extends FindWay {
 			
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 			
+			/**
+			 * 에러 문구를 저장하는 ArrayList
+			 */
 			ArrayList<String> error = new ArrayList<>();
 			
+			/**
+			 * 년도를 저장하는 변수
+			 */
 			String year = "";
+			/**
+			 * 월을 저장하는 변수
+			 */
 			String month = "";
+			/**
+			 * 일을 저장하는 변수
+			 */
 			String date = "";
+			/**
+			 * 시를 저장하는 변수
+			 */
 			String hour = "";
+			/**
+			 * 분을 저장하는 변수
+			 */
 			String minute = "";
+			/**
+			 * 분을 저장하는 변수
+			 */
 			String line = "";
+			/**
+			 * 출발역을 저장하는 변수
+			 */
 			String start = "";
+			/**
+			 * 도착역을 저장하는 변수
+			 */
 			String end = "";
+			/**
+			 * 입력받은 날짜를 저장할 Calendar 변수
+			 */
 			Calendar calendar = Calendar.getInstance();
 
 			while(true) {

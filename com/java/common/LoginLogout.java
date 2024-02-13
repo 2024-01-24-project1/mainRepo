@@ -8,19 +8,48 @@ import com.java.member.user.User;
 import com.java.member.user.UserMode;
 import com.java.view.ViewAll;
 
+/**
+ * 로그인한 계정의 정보를 저장하는 클래스
+ */
 public final class LoginLogout {
 	
+	/**
+	 * 로그인한 계정의 아이디를 저장하는 멤버 변수
+	 */
 	public static String auth = "";		  // 인증 티켓
+	/**
+	 * 로그인한 계정의 이름을 저장하는 멤버 변수
+	 */
 	public static String authName = "";	  // 로그인중인 이름	
+	/**
+	 * 로그인한 계정의 직원 권한을 저장하는 멤버 변수
+	 */
 	public static String level = ""; 	  // 직원 권한 확인
+	/**
+	 * 로그인한 계정의 직원 직급을 저장하는 멤버 변수
+	 */
 	public static String position = "";	  // 직급
+	/**
+	 * 로그인한 계정의 정기권 유무를 저장하는 멤버 변수
+	 */
 	public static String pass = "";		  // 정기권 유무
+	/**
+	 * 로그인한 계정의 정기권 기간을 저장하는 멤버 변수
+	 */
 	public static String passExpiry = ""; // 정기권 기간
+	/**
+	 * 로그인한 계정의 전화번호를 저장하는 멤버 변수
+	 */
 	public static String phone = ""; 	  // 전화번호
 	
+	/**
+	 * 계정 탈퇴시 메인화면으로 나가게 하기 위한 변수
+	 */
 	public static boolean getOut = false; // 계정 탈퇴시 메인화면으로 쫒아냄
 	
-	
+	/**
+	 * 로그인시 고객화면과 관리자 화면으로 나눠주는 메서드
+	 */
 	public void loginMode() {
 			
 			login();
@@ -39,7 +68,9 @@ public final class LoginLogout {
 			
 	}//End of loginMode()
 	
-	
+	/**
+	 * 아이디와 비밀번호를 입력받아 로그인하는 메서드
+	 */
 	private void login() {
 		
 		Scanner scan = new Scanner(System.in);
@@ -47,15 +78,26 @@ public final class LoginLogout {
 		// View클래스 출력
 		
 		while(true) {
-			
+			/**
+			 * 고객 아이디인지 검사결과를 저장하는 변수
+			 */
 			boolean checkUser = false;
+			/**
+			 * 직원 아이디인지 검사결과를 저장하는 변수
+			 */
 			boolean checkEmployee = false;
 			
 			ViewAll.loginTop();
 			
 			System.out.print("\t\t\t아이디  : ");
+			/**
+			 * ID를 저장하는 변수
+			 */
 			String id = scan.nextLine();
 			System.out.print("\t\t\t비밀번호: ");
+			/**
+			 * PW를 저장하는 변수
+			 */
 			String pw = scan.nextLine();
 			
 			// 고객인지 직원인지 검사
@@ -109,6 +151,9 @@ public final class LoginLogout {
 					break;	// 아이디, 비밀번호 입력받기 종료
 					
 			}else {
+				/**
+				 * 입력 값을 저장하는 변수
+				 */
 				String back = "";
 				
 				ViewAll.errorQuestionEmo();
@@ -131,6 +176,9 @@ public final class LoginLogout {
 	}//End of login()
 
 	// 로그아웃
+	/**
+	 * 로그아웃하는 메서드
+	 */
 	public static void logout() {
 		
 		// 모든 LoginLogout초기화

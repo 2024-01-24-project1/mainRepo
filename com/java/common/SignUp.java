@@ -8,8 +8,14 @@ import com.java.view.ViewAll;
 import com.java.member.employee.Employee;
 
 // 회원가입
+/**
+ * 회원가입을 하는 클래스
+ */
 public class SignUp {
 
+	/**
+	 * 회원가입 초기화면을 출력하는 메서드
+	 */
 	public static void signUp() { // 회원가입 초기 화면
 		
 		Scanner scan = new Scanner(System.in);
@@ -20,6 +26,9 @@ public class SignUp {
 			ViewAll.signupMain();
 			ViewAll.chooseNum();
 			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			sel = scan.nextLine();
 			
@@ -46,16 +55,37 @@ public class SignUp {
 		
 	}//End of SignUp
 
+	/**
+	 * 일반 고객 회원가입하는 메서드
+	 * @param sel=1 일반회원
+	 */
 	private static void commonSignUp(String sel) {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		/**
+		 * ID를 저장하는 변수
+		 */
 		String id = "";
+		/**
+		 * PW를 저장하는 변수
+		 */
 		String pw = "";
+		/**
+		 * 이름을 저장하는 변수
+		 */
 		String name = "";
+		/**
+		 * 주민등록번호를 저장하는 변수
+		 */
 		String registration = "";
+		/**
+		 * 휴대폰 번호를 저장하는 변수
+		 */
 		String phone = "";
-		
+		/**
+		 * 직원 코드를 저장하는 변수
+		 */
 		String code = "";
 
 		while (true) {
@@ -170,6 +200,9 @@ public class SignUp {
 					&& Validation.is_Phone(phone) && Validation.is_PhoneFormat(phone)
 					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration) ) {
 				
+				/**
+				 * 고객의 정보가 들어있는 User 인스턴스
+				 */
 				User user = new User(name, id, pw, registration, phone); // 입력값 저장
 				Data.userList.add(user);
 				
@@ -187,6 +220,9 @@ public class SignUp {
 					&& Validation.is_Code(code)
 					&& !Validation.is_Duplication_Id(id) && !Validation.is_Duplication_Phone(phone) && !Validation.is_Duplication_RRN(registration) ) {
 				
+				/**
+				 * 직원의 정보가 들어있는 Employee 인스턴스
+				 */
 				Employee employee = new Employee(name, id, pw, registration, phone); // 입력값 저장
 				Data.employeeList.add(employee);
 				
@@ -197,7 +233,9 @@ public class SignUp {
 				break;
 				
 			}else {
-				
+				/**
+				 * 입력한 값을 저장하는 변수
+				 */
 				String back = "";
 				
 				System.out.println("\t\t\t다시 입력하시려면 아무키나 입력하세요.");
@@ -216,7 +254,15 @@ public class SignUp {
 		
 	}//End of commonSignUp()
 	
+	/**
+	 * 휴대폰 번호의 형식을 010-xxxx-xxxx로 변환하는 메서드
+	 * @param phoneNumber 휴대폰 번호
+	 * @return 형식을 맞춘 휴대폰 번호 String
+	 */
 	public static String formatPhoneNumber(String phoneNumber) {
+		/**
+		 * 매개변수로 받은 형식에서 -을 빼고 저장한 변수
+		 */
 		String cleanedNumber = phoneNumber.replaceAll("[^0-9-]", "");
 
 	    // 숫자와 "-"가 12자리인 경우에만 변환 수행 (첫 번째 "-" 제외)
@@ -229,8 +275,16 @@ public class SignUp {
 	    }
 	}
 	
+	/**
+	 * 주민등록번호의 형식을 000000-0000000으로 변환하는 메서드
+	 * @param rrn 주민등록번호
+	 * @return 형식을 맞춘 주민등록번호 String
+	 */
 	public static String formatRRN(String rrn) {
 		 // 입력된 주민등록번호에서 "-"를 모두 제거하고 숫자만 남김
+		/**
+		 * 매개변수로 받은 형식에서 -을 빼고 저장한 변수
+		 */
         String cleanedNumber = rrn.replaceAll("[^0-9]", "");
         
         // 문자열의 길이가 13인 경우에만 "-"를 삽입하여 리턴

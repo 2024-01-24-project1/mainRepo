@@ -5,8 +5,14 @@ import java.util.Scanner;
 import com.java.view.ViewAll;
 
 // 아이디, 비밀번호 찾기
+/**
+ * 아이디 비밀번호 찾기를 하는 클래스
+ */
 public class FindAccount {
 	
+	/**
+	 * 아이디 비밀번호 찾기를 하는 메뉴를 나타내는 메서드
+	 */
 	public static void findAccount() {
 		
 		Scanner scan = new Scanner(System.in);
@@ -16,6 +22,9 @@ public class FindAccount {
 			ViewAll.signupFindMain();
 			
 			// 사용자 입력 받기
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
 			ViewAll.chooseNum();
 			sel = scan.nextLine();
@@ -44,21 +53,36 @@ public class FindAccount {
 	}//End of findAccount()
 	
 	//ID 찾기
+	/**
+	 * ID 찾기를 하는 메서드
+	 */
 	public static void findId() {
 		
 		// View에서 출력
 		ViewAll.signupFindId();
 		
 		// 입력받은 이름과 주민번호가 존재하는지
+		/**
+		 * 입력받은 고객의 이름과 주민번호가 일치결과를 저장하는 변수
+		 */
 		boolean checkUser = false;		// 고객
+		/**
+		 * 입력받은 직원의 이름과 주민번호가 일치결과를 저장하는 변수
+		 */
 		boolean checkEmployee = false;	// 직원
 		
 		Scanner scan = new Scanner(System.in);
 		
 		// 이름, 주민번호 입력받기
 		System.out.print("\t\t\t이름      : ");
+		/**
+		 * 이름을 저장하는 변수
+		 */
 		String name = scan.nextLine();
 		System.out.print("\t\t\t주민등록번호: ");
+		/**
+		 * 주민등록번호를 저장하는 변수
+		 */
 		String registration = scan.nextLine();
 		System.out.println();
 		
@@ -91,10 +115,19 @@ public class FindAccount {
 	
 	
 	// PW 찾기
+	/**
+	 * PW를 찾는 메서드
+	 */
 	public static void findPw() {
 		
 		// 입력받은 이름, 아이디, 주민번호가 존재하는지
+		/**
+		 * 입력받은 고객의 이름과 주민번호가 일치결과를 저장하는 변수
+		 */
 		boolean checkUser = false;		// 고객
+		/**
+		 * 입력받은 직원의 이름과 주민번호가 일치결과를 저장하는 변수
+		 */
 		boolean checkEmployee = false;	// 직원
 		
 		ViewAll.signupFindPw();
@@ -103,10 +136,19 @@ public class FindAccount {
 
 		// 아이디, 이름, 주민번호 입력받기
 		System.out.print("\t\t\t아이디        : ");
+		/**
+		 * ID를 저장하는 변수
+		 */
 		String id = scan.nextLine();
 		System.out.print("\t\t\t이름          : ");
+		/**
+		 * 이름을 저장하는 변수
+		 */
 		String name = scan.nextLine();
 		System.out.print("\t\t\t주민등록번호  : ");
+		/**
+		 * 주민등록번호를 저장하는 변수
+		 */
 		String registration = scan.nextLine();
 		System.out.println();
 		

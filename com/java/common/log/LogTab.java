@@ -10,11 +10,19 @@ import com.java.common.Validation;
 import com.java.member.employee.Employee;
 import com.java.view.ViewAll;
 
+/**
+ * 행동 로그 메뉴를 나타내는 클래스
+ */
 public class LogTab {
 
+	/**
+	 * 행동 로그를 출력하는 메서드
+	 */
 	public static void printLog() {
 
-		
+		/**
+		 * 행동 로그를 저장하는 ArrayList
+		 */
 		ArrayList<Log> logPage = new ArrayList<>();
 		logPage = Data.logList;
 
@@ -28,17 +36,30 @@ public class LogTab {
 
 		
 	}
+	/**
+	 * 행동로그를 페이지로 나눠서 출력하는 메서드
+	 * @param list 행동로그 저장된 ArrayList
+	 */
 	public static void logPage(ArrayList<Log> list) {
 		
 		// 리스트의 페이지수 계산
+		/**
+		 * 페이지 수를 나타내는 변수
+		 */
 		int page = (int)(Math.ceil((double)list.size() / 5));
 		
+		/**
+		 * 현재 보고있는 페이지를 나타내는 변수
+		 */
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
 			
+			/**
+			 * 입력받은 값을 저장하는 변수
+			 */
 			String sel = "";	// 입력받는 문자열
 			
 			// View클래스 출력
@@ -76,11 +97,17 @@ public class LogTab {
 
 		}//while루프 종료
 	}	
+	/**
+	 * 행동 로그를 검색하는 메서드
+	 */
 	private static void searchLog() {
 
 		try {
 
 			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
 
 
@@ -91,9 +118,17 @@ public class LogTab {
 				sel = reader.readLine();
 				
 				if(sel.equals("1")) {
-					
+					/**
+					 * 직원 id를 저장하는 변수
+					 */
 					String id = "";
+					/**
+					 * 시간을 저장하는 변수
+					 */
 					String time = "";
+					/**
+					 * 행동로그가 있는지 확인하는 변수
+					 */
 					boolean check = false;
 				
 					while(true) {
@@ -130,6 +165,9 @@ public class LogTab {
 						
 						if(log.getId().equals(id) && log.getTime().equals(time)) {
 							
+							/**
+							 * 행동 로그 번호를 알려주는 인덱스 변수
+							 */
 							int index = 1;
 							
 							System.out.printf("  %s       \t%s \n",time,id);

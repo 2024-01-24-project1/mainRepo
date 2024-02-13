@@ -138,10 +138,18 @@ public class BusyStat extends StationManagement{
 	 */
 	private void printBusy(ArrayList<Busy> list, String line, String way, String dayOfWeek, String time) {
 		
+		/**
+		 * 혼잡도 통계 출력문이 저장되는 ArrayList
+		 */
 		ArrayList<String> busyStatPage = new ArrayList<>();
 		
-		
+		/**
+		 * 혼잡도 통계 제목 출력문을 저장하는 변수
+		 */
 		String title = String.format("\t\t\t호선: %s, 방향: %s, 요일: %s\n",line,way,dayOfWeek);
+		/**
+		 * 각각의 혼잡도 통계를 저장하는 변수
+		 */
 		String page = "";
 		
 		for(Busy b : list) {
@@ -156,15 +164,21 @@ public class BusyStat extends StationManagement{
 	}
 	
 	/**
-	 *  혼잡도 통계를 페이지를 나눠서 출력하는 메서드
+	 *  혼잡도 통계를 페이지로 나눠서 출력하는 메서드
 	 *  5개씩 나눠서 출력함
 	 * @param list 출력문구가 들어있는 ArrayList
 	 * @param title 호선과 방향과 요일이 적혀있는 출력문
 	 */
 	public static void busyStatPage(ArrayList<String> list, String title) {
 		// 리스트의 페이지수 계산
+		/**
+		 * 페이지 수를 나타내는 변수
+		 */
 		int page = (int)(Math.ceil((double)list.size() / 5));
 
+		/**
+		 * 현재 보고있는 페이지를 나타내는 변수
+		 */
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
 
 		Scanner scan = new Scanner(System.in);

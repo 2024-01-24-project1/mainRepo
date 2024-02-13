@@ -8,12 +8,21 @@ import com.java.member.user.MyPageBookMark;
 import com.java.member.user.User;
 import com.java.view.ViewAll;
 
+/**
+ * 마이페이지를 나타내는 클래스
+ */
 public class MyPage {
 	
+	/**
+	 * 마이페이지 목록을 매개변수에 따라 고객페이지 또는 관리자페이지로 나눠서 출력하는 메서드
+	 * @param mode 고객=1 관리자=2
+	 */
 	public static void myPageList(String mode) {
 		
 		while(true) {
-			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
 			
 			Scanner scan = new Scanner(System.in);
@@ -90,14 +99,26 @@ public class MyPage {
 		
 	}//End of myPage()
 
-
+	
+	/**
+	 * 마이페이지에서 회원탈퇴를 하는 메서드
+	 */
 	private static void myPageRemoveID() {
 		
+		/**
+		 * 고객 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean userCheck = false;
+		/**
+		 * 직원 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean employeeCheck = false;
 		
 		Scanner scan = new Scanner(System.in);
 
+		/**
+		 * 삭제할 아이디를 저장하는 변수
+		 */
 		final String DELETE = LoginLogout.auth;
 		
 		userCheck = Data.userList.stream().anyMatch(user -> user.getId().equals(DELETE));
@@ -187,20 +208,32 @@ public class MyPage {
 	}//End of myPageRemoveID()
 
 
+	/**
+	 * 마이페이지에서 휴대폰 번호를 변경하는 메서드
+	 */
 	private static void myPageChangePhone() {
-		
+		/**
+		 * 고객의 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean checkUser = false;		// 고객
+		/**
+		 * 직원의 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean checkEmployee = false;	// 직원
 		
 		Scanner scan = new Scanner(System.in);
 		
 		ViewAll.phoneNumChange();
 		
+		/**
+		 * 로그인한 아이디를 저장하는 변수
+		 */
 		String id = LoginLogout.auth;
+		/**
+		 * 로그인한 계정의 이름을 저장하는 변수
+		 */
 		String name = LoginLogout.authName;
-		String phone = LoginLogout.phone;
 		
-
 		
 		checkUser = Data.userList.stream().anyMatch(user -> user.getName().equals(name) 
 				 													&& user.getId().equals(id));
@@ -210,6 +243,9 @@ public class MyPage {
 		
 		System.out.print("\t\t\t변경할 전화번호: ");
 		
+		/**
+		 * 변경할 전화번호를 저장하는 변수
+		 */
 		String chPhone = scan.nextLine(); //변경할 전화번호 입력
 		
 		// 전화번호 형식이면 010-XXXX-XXXX형식으로 변환
@@ -264,10 +300,19 @@ public class MyPage {
 		
 	}// end of myPageChangeNum
 
+	/**
+	 * 마이페이지에서 비밀번호를 변경하는 메서드
+	 */
 	public static void myPageChangePW(){
 
 
+		/**
+		 * 고객의 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean checkUser = false;		// 고객
+		/**
+		 * 직원의 아이디인지 확인 결과를 저장하는 변수
+		 */
 		boolean checkEmployee = false;	// 직원
 			
 		ViewAll.pwChange();
@@ -285,6 +330,9 @@ public class MyPage {
 		System.out.print("\t\t\t변경할 비밀번호: ");
 		
 		Scanner scan = new Scanner(System.in);
+		/**
+		 * 변경할 PW를 저장할 변수
+		 */
 		String chPw = scan.nextLine(); //변경할 PW 입력
 		
 		// 비밀번호가 다음의 조건을 만족하면

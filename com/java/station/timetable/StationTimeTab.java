@@ -7,19 +7,35 @@ import com.java.common.Validation;
 import com.java.station.StationNamePage;
 import com.java.view.ViewAll;
 
+/**
+ * 시간표 메뉴 나타내는 클래스
+ */
 public class StationTimeTab {
 	
 	
-	
+	/**
+	 * 시간표 메뉴 출력하는 메서드
+	 */
 	public static void stationTimeTab() {
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
-			
+			/**
+			 * 일치 여부 저장하는 변수
+			 */
 			boolean check = false;	// 호선을 제대로 입력했는지
 			
+			/**
+			 * 역 이름 저장하는 변수
+			 */
 			String staion = "";		// 입력받을 역 이름
+			/**
+			 * 호선 저장하는 변수
+			 */
 			String sel = "";		// 입력받을 호선
+			/**
+			 * 요일 저장하는 변수
+			 */
 			String weekOf = "";		// 평일,주말 입력받기
 			
 			System.out.println("\t\t\t시간표를 그만보시려면 엔터입력");
@@ -38,7 +54,13 @@ public class StationTimeTab {
 			// 제대로된 호선을 입력받으면 해당 호선의 역 이름들을 출력
 			if(Validation.is_Line(sel)) {
 				
+				/**
+				 * 호선 저장하는 변수
+				 */
 				final String LINE = sel;
+				/**
+				 * 호선 int로 파싱해서 저장하는 변수
+				 */
 				int line = Integer.parseInt(sel.charAt(0) + "");
 				
 				switch (line) {
@@ -71,7 +93,9 @@ public class StationTimeTab {
 		            // '역'을 제거한 문자열을 반환합니다.
 		            staion =  staion.substring(0, staion.length() - 1);
 		        }
-				
+				/**
+				 * 역 이름 저장하는 변수
+				 */
 				final String STATION = staion;
 				
 				switch (line) {

@@ -11,25 +11,46 @@ import com.java.common.SignUp;
 import com.java.view.ViewAll;
 
 
-
+/**
+ * 초기 화면을 나타내는 클래스
+ */
 public class Main {
 	
+	/**
+	 * 프로그램 진입점인 메인메서드
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
+		/**
+		 * 파일 읽기 역할을 하는 Load 인스턴스
+		 */
 		Load load = new Load();
+		/**
+		 * 파일 쓰기 역할을 하는 Exit 인스턴스
+		 */
 		Exit exit = new Exit();
 		
+		/**
+		 * 로그인 정보를 저장할 LoginLogout 인스턴스
+		 */
 		LoginLogout loginlogout = new LoginLogout();
 		
 		// 데이터 로드
 		load.loadAll();
 		
 		Scanner sc = new Scanner(System.in);
+		/**
+		 * while문 제어하는 변수
+		 */
 		boolean loop= true;
 		
 		while(loop) {
 			
 			ViewAll.realMain();
+			/**
+			 * 입력받은 값을 저장하는 변수
+			 */
 			String sel = ""; 
 			sel = sc.nextLine();
 			

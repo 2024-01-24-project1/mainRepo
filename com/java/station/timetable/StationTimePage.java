@@ -6,15 +6,33 @@ import java.util.Scanner;
 import com.java.common.Data;
 import com.java.common.Validation;
 
+/**
+ * 역 시간표를 페이지로 출력하는 클래스
+ */
 public class StationTimePage {
 
+	/**
+	 * 역 시간표를 페이지로 나눠 출력하는 메서드
+	 * @param line 호선(1~9)
+	 * @param stationName 역이름
+	 * @param weekOf 요일(평일/주말)
+	 */
 	public static void stationTimePage(String line, String stationName, String weekOf) {
 		
 		Scanner scan = new Scanner(System.in);
 		
+		/**
+		 * 시간 초기값 저장하는 변수
+		 */
 		String set = "5";	// 보고싶은 시간표의 시간 입력받기
 		
+		/**
+		 * 상행선 시간표 저장하는 ArrayList
+		 */
 		ArrayList<String> up = new ArrayList<String>();
+		/**
+		 * 하행선 시간표 저장하는 ArrayList
+		 */
 		ArrayList<String> down = new ArrayList<String>();
 		
 		
@@ -105,10 +123,22 @@ public class StationTimePage {
 		
 		while(true) {
 			
+			/**
+			 * 시간 저장하는 변수
+			 */
 			final String SETTIME = set;
+			/**
+			 * 입력한 값 저장하는 변수
+			 */
 			String sel = "";
 			
+			/**
+			 * 상행선 시간표 저장하는 배열
+			 */
 			String[] leftSide = new String[20];
+			/**
+			 * 하행선 시간표 저장하는 배열
+			 */
 			String[] rightSide = new String[20];
 			
 			String[] left = up.stream()
@@ -136,7 +166,13 @@ public class StationTimePage {
 			
 			for(int i = 0; i < 4; i++) {
 				
+				/**
+				 *  상행성 시간표 배열 시작 인덱스 저장하는 변수
+				 */
 				int startIndexLeft = i * 5; // 왼쪽 배열 시작 인덱스
+				/**
+				 *  하행선 시간표 배열 시작 인덱스 저장하는 변수
+				 */
 			    int startIndexRight = i * 5; // 오른쪽 배열 시작 인덱스
 				
 				for(int j = startIndexLeft; j < startIndexLeft + 5; j++) {

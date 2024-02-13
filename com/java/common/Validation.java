@@ -490,7 +490,15 @@ public final class Validation {
 	}
 
 	// 배정된 근무지가 없으면 true, 있으면 false
+	/**
+	 * 근무지를 확인하는 메서드
+	 * @param input 근무지
+	 * @return 배정된 근무지가 없으면 true, 있으면 false
+	 */
 	public static boolean is_WorkArea(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.employeeList.stream().anyMatch(employee -> employee.getId().equals(input)
@@ -501,7 +509,15 @@ public final class Validation {
 
 	// 입력받은 문자열이 민원의 제목인지 확인
 	// 맞으면 true, 아니면 false
+	/**
+	 * 입력받은 문자열이 민원의 제목인지 확인하는 메서드
+	 * @param input 제목
+	 * @return 맞으면 true, 아니면 false
+	 */
 	public static boolean is_UserVoiceTitle(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.userVoiceList.stream().anyMatch(title -> title.getTitle().equals(input));
@@ -512,7 +528,15 @@ public final class Validation {
 
 	//입력받은 문자열이 분실물의 이름인지 확인
 	// 맞으면 true, 아니면 false
+	/**
+	 * 입력받은 문자열이 분실물의 이름인지 확인
+	 * @param input 분실물
+	 * @return 맞으면 true, 아니면 false
+	 */
 	public static boolean is_LostArticle(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().equals(input));
@@ -522,7 +546,17 @@ public final class Validation {
 
 	// 입력받은 날짜와 스케줄이 존재하는지
 	// 맞으면 true, 아니면 false
+	/**
+	 * 입력받은 날짜와 스케줄이 존재하는지 확인하는 메서드
+	 * @param date 날짜
+	 * @param content 스케줄내용
+	 * @param station 역 이름
+	 * @return 맞으면 true, 아니면 false
+	 */
 	public static boolean is_ScheduleSame(String date, String content, String station) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.scheduleList.stream().anyMatch(schedule -> 
@@ -535,14 +569,31 @@ public final class Validation {
 
 	// YYYY-MM-DD의 형식을 검사
 	// 맞으면 true, 아니면 false
+	/**
+	 * 날짜 형식을 검사하는 메서드
+	 * @param date 날짜
+	 * @return 맞으면 true, 아니면 false
+	 */
 	public static boolean is_Date(String date) {
 		try {
 			// 날짜를 파싱하여 LocalDate 객체로 변환
+			/**
+			 * 받은 매개변수를 날짜로 파싱한 LocalDate 인스턴스
+			 */
 			LocalDate parsedDate = LocalDate.parse(date);
 
 			// 날짜의 각 구성 요소를 가져옴
+			/**
+			 * 년도 저장한 변수
+			 */
 			int year = parsedDate.getYear();
+			/**
+			 * 월 저장한 변수
+			 */
 			int month = parsedDate.getMonthValue();
+			/**
+			 * 일 저장한 변수
+			 */
 			int day = parsedDate.getDayOfMonth();
 
 			// 년도가 윤년인지 확인
@@ -572,7 +623,15 @@ public final class Validation {
 
 	// 이미 존재하는 아이디인지 체크하는 메서드
 	// 있으면 true, 없으면 false
+	/**
+	 * 이미 존재하는 아이디인지 체크하는 메서드
+	 * @param input 아이디
+	 * @return 있으면 true, 없으면 false
+	 */
 	public static boolean is_Duplication_Id(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.userList.stream().anyMatch(user -> user.getId().equals(input)) 
@@ -583,7 +642,15 @@ public final class Validation {
 
 	// 이미 존재하는 주민등록번호인지 체크하는 메서드
 	// 있으면 true, 없으면 false
+	/**
+	 * 이미 존재하는 주민등록번호인지 체크하는 메서드
+	 * @param input 주민등록번호
+	 * @return 있으면 true, 없으면 false
+	 */
 	public static boolean is_Duplication_RRN(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.userList.stream().anyMatch(user -> user.getRegistration().equals(input)) 
@@ -594,7 +661,15 @@ public final class Validation {
 
 	// 이미 존재하는 전화번호인지 체크하는 메서드
 	// 있으면 true, 없으면 false
+	/**
+	 * 전화번호 중복검사를 하는 메서드
+	 * @param input 전화번호
+	 * @return 있으면 true, 없으면 false
+	 */
 	public static boolean is_Duplication_Phone(String input) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.userList.stream().anyMatch(user -> user.getPhone().equals(input)) 
@@ -606,7 +681,16 @@ public final class Validation {
 	// 분실물의 이름과 보관역을 받아서 
 	// 존재하는 분실물인지 체크하는 메서드
 	// 있으면 true, 없으면 false
+	/**
+	 * 분실물이 존재하는지 확인하는 메서드
+	 * @param lostArticle 분실물
+	 * @param station 역 이름
+	 * @return 있으면 true, 없으면 false
+	 */
 	public static boolean is_Duplication_LostArticle(String lostArticle, String station) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.lostArticleList.stream().anyMatch(article -> article.getArticle().equals(lostArticle) 
@@ -618,7 +702,16 @@ public final class Validation {
 	// 분실물의 이름과 보관역을 받아서 
 	// 존재하는 분실물인지 체크하는 메서드
 	// 있으면 true, 없으면 false
+	/**
+	 * 민원 아이디와 제목을 받아서 존재하는 민원인지 확인하는 메서드
+	 * @param id 아이디
+	 * @param title 제목
+	 * @return 있으면 true, 없으면 false
+	 */
 	public static boolean is_Duplication_UserVoice(String id, String title) {
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 
 		check = Data.userVoiceList.stream().anyMatch(voice -> voice.getId().equals(id) 
@@ -627,6 +720,11 @@ public final class Validation {
 		return check;
 	}
 
+	/**
+	 * 북마크가 존재하는지 확인하는 메서드
+	 * @param userBookMark 북마크 리스트
+	 * @return 존재하면 true 없으면 false
+	 */
 	public static boolean is_ExistBookMark(List<String> userBookMark) {
 
 		if(userBookMark.size()==0) {
@@ -637,8 +735,19 @@ public final class Validation {
 		return true;
 	}
 
+	/**
+	 * 혼잡도 통계 유효성검사 하는 메서드
+	 * @param line 호선
+	 * @param way 방향(상행/하행 or 외선/내선)
+	 * @param dayOfWeek 요일(평일/주말)
+	 * @param timeStr 시간(05~24)
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_busyStat(String line,  String way, String dayOfWeek, String timeStr) {
 
+		/**
+		 * 에러 문구를 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 		if(line.equals("") || way.equals("") || timeStr.equals("") || dayOfWeek.equals("")) {
@@ -647,6 +756,9 @@ public final class Validation {
 
 		try {
 
+			/**
+			 * 시간을 int값으로 파싱해서 저장한 변수
+			 */
 			int time = Integer.parseInt(timeStr);
 
 			if(time<5 && time > 25) {
@@ -689,9 +801,22 @@ public final class Validation {
 		return error;
 
 	}
+	/**
+	 * 역관리 중 열차 추가 유효성 검사하는 메서드
+	 * @param line 호선(1~9)
+	 * @param trainNums 추가 열차수
+	 * @param startStation 시작역
+	 * @param endStation 도착역
+	 * @param time 시간(05~24)
+	 * @param dayOfWeek 요일(평일/주말)
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_addTrain(String line, String trainNums, String startStation, String endStation, String time,
 			String dayOfWeek) {
 
+		/**
+		 * 에러 문구를 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 		//호선 입력 확인 (1~9호선)
@@ -763,9 +888,21 @@ public final class Validation {
 
 	}
 
+	/**
+	 * 역 관리중 의자없는열차 변경 유효성 검사하는 메서드
+	 * @param line 호선(1~9)
+	 * @param startStation 시작역
+	 * @param endStation 도착역
+	 * @param time 시간대(05~24)
+	 * @param dayOfWeek 요일(평일/주말)
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_changeNoChiarTrain(String line, String startStation, String endStation, String time,
 			String dayOfWeek) {
 
+		/**
+		 * 에러 문구 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 		if(line.equals("") || startStation.equals("") || endStation.equals("") || time.equals("") || dayOfWeek.equals("")) {
@@ -819,8 +956,18 @@ public final class Validation {
 
 	}
 
+	/**
+	 * 현재시간 길찾기 유효성검사 하는 메서드
+	 * @param line 호선(1~9)
+	 * @param startStation 시작역
+	 * @param endStation 도착역
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_currentTime(String line, String startStation, String endStation) {
 
+		/**
+		 * 에러 문구 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 
@@ -856,16 +1003,43 @@ public final class Validation {
 
 	}
 
+	/**
+	 * 다른날짜 길찾기 유효성검사 하는 메서드
+	 * @param yearStr 년도
+	 * @param monthStr 월
+	 * @param dateStr 일
+	 * @param hourStr 시간
+	 * @param minuteStr 분
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_anotherDate(String yearStr, String monthStr, String dateStr, String hourStr, String minuteStr) {
 
+		/**
+		 * 에러 문구 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 		try {
 
+			/**
+			 * 년도를 int로 파싱해서 저장한 변수
+			 */
 			int year = Integer.parseInt(yearStr);
+			/**
+			 * 월을 int로 파싱해서 저장한 변수
+			 */
 			int month = Integer.parseInt(monthStr);
+			/**
+			 * 일을 int로 파싱해서 저장한 변수
+			 */
 			int day = Integer.parseInt(dateStr);
+			/**
+			 * 시간을 int로 파싱해서 저장한 변수
+			 */
 			int hour = Integer.parseInt(hourStr);
+			/**
+			 * 분을 int로 파싱해서 저장한 변수
+			 */
 			int minute = Integer.parseInt(minuteStr);
 
 
@@ -877,6 +1051,9 @@ public final class Validation {
 				error.add("시간 또는 분 형식이 올바르지 않음"); // 시간 또는 분이 유효하지 않음
 			}
 
+			/**
+			 * 해당월의 마지막 일 수를 저장한 변수
+			 */
 			int daysInMonth = getDaysInMonth(year, month);
 			if(day > daysInMonth) {
 				error.add(String.format("입력하신 %d월에는 %d일이 없습니다.",month, day));
@@ -895,6 +1072,12 @@ public final class Validation {
 
 	}
 
+	/**
+	 * 해당 년도 해당월의 마지막 일이 며칠인지 리턴하는 메서드
+	 * @param year 년도
+	 * @param month 월
+	 * @return 해당월의 마지막 일 잘못된 값은 -1 리턴
+	 */
 	public static int getDaysInMonth(int year, int month) {
 		switch (month) {
 		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
@@ -908,12 +1091,22 @@ public final class Validation {
 		}
 	}
 
+	/**
+	 * 윤년인지 확인하는 메서드
+	 * @param year 년도
+	 * @return 윤년이면 true 아니면 false
+	 */
 	public static boolean isLeapYear(int year) {
 		return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 	}
 
 	// 입력받은 문자열이 평일,주말인지 확인하는 메서드
 	// 평일,주말 입력이면 true, 아니면 false
+	/**
+	 * 입력받은 문자열이 평일, 주말인지 확인하는 메서드
+	 * @param input 요일
+	 * @return 평일,주말 입력이면 true, 아니면 false
+	 */
 	public static boolean is_WeekOf(String input) {
 
 		if(input.equals("평일") || input.equals("주말")) {
@@ -926,9 +1119,17 @@ public final class Validation {
 
 	// 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
 	// 맞으면 true, 아니면 false
+	/**
+	 * 입력받은 문자열이 열차 운행시간인 5 ~ 24인지 확인하는 메서드
+	 * @param input 시간대
+	 * @return 맞으면 true, 아니면 false
+	 */
 	public static boolean is_OperationTime(String input) {
 
 		try {
+			/**
+			 * 시간을 int로 파싱해서 저장하는 변수
+			 */
 			int number = Integer.parseInt(input);
 			return number >= 5 && number <= 24;
 		} catch (NumberFormatException e) {
@@ -937,8 +1138,19 @@ public final class Validation {
 		}
 	}
 
+	/**
+	 * 북마크 저장할때 유효성 검사하는 메서드
+	 * @param line 호선(1~9)
+	 * @param startStation 시작역
+	 * @param endStation 도착역
+	 * @param time 시간대(05~24)
+	 * @return error list 오류가 없다면 1번 인덱스에 오류없음 저장
+	 */
 	public static ArrayList<String> is_bookMark(String line, String startStation, String endStation, String time) {
 
+		/**
+		 * 에러 문구 저장하는 ArrayList
+		 */
 		ArrayList<String> error = new ArrayList<>();
 
 		//호선 입력 확인 (1~9호선)
@@ -978,6 +1190,12 @@ public final class Validation {
 
 	}
 
+	/**
+	 * 행동 로그가 존재하는지 확인하는 메서드
+	 * @param id ID
+	 * @param time 시간
+	 * @return 행동 로그 있으면 true 없으면 false
+	 */
 	public static boolean is_existLog(String id, String time){
 
 

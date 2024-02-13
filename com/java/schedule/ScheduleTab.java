@@ -8,13 +8,22 @@ import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
+/**
+ * 일정 메뉴를 나타내는 클래스
+ */
 public class ScheduleTab {
 	
+	/**
+	 * 일정 메뉴를 나타내는 메서드
+	 */
 	public static void scheduleTab() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			
@@ -42,17 +51,30 @@ public class ScheduleTab {
 		}//while루프 종료
 		
 	}//End of scheduleTab()
-	
+	/**
+	 * 일정을 추가하는 메서드
+	 */
 	public static void addSchedule() {
 		
 		Scanner scan = new Scanner(System.in);
 		 
 		while(true) {
-			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
 			
+			/**
+			 * 일정의 날짜를 저장하는 변수
+			 */
 			String date = "";
+			/**
+			 * 역 이름을 저장하는 변수
+			 */
 			String station = "";
+			/**
+			 * 일정 내용을 저장하는 변수
+			 */
 			String content = "";
 		
 			System.out.println("\t\t\t추가할 스케줄을 입력해주세요.");
@@ -72,6 +94,9 @@ public class ScheduleTab {
 			
 			if( !Validation.is_ScheduleSame(date, content, station) && Validation.is_StationName(station) && Validation.is_Date(date)) {
 						
+				/**
+				 * 일정 정보가 저장되어 있는 Schedule 인스턴스
+				 */
 				Schedule sch = new Schedule(date, station, content);
 				Data.scheduleList.add(sch);
 				
@@ -101,15 +126,29 @@ public class ScheduleTab {
 		}//while루프 종료
 		
 	}//End of addSchedule
-	
+	/**
+	 * 일정을 제거하는 메서드
+	 */
 	public static void removeSchedule() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
+			/**
+			 * 일정 날짜를 저장하는 변수
+			 */
 			String date = "";
+			/**
+			 * 일정 내용을 저장하는 변수
+			 */
 			String content = "";
+			/**
+			 * 역 이름을 저장하는 변수
+			 */
 			String station = "";
 		
 			ScheduleSearch.schedulePage(Data.scheduleList);

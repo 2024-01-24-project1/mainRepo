@@ -15,28 +15,43 @@ import com.java.view.ViewAll;
 /**
  * 혼잡도 통계를 나타내는 클래스
  */
-
-//입력은 호선, 방향 ,평일/주말 입력받아야함
-
 public class BusyStat extends StationManagement{
 	
 	private StationManagement stationManagement;
 	
+	/**
+	 * 혼잡도 통계 생성자
+	 */
 	public BusyStat() {
 		
 		this.stationManagement = new StationManagement();
 		
 	} 
 	
+	/**
+	 * 혼잡도 통계를 얻기 위해 입력값을 받는 메서드
+	 */
 	public void busyStat() {
 		
 		
 		try {
 			
 			ArrayList<String> error = new ArrayList<>();
+			/**
+			 * 호선(1~9)
+			 */
 			String line = "";
+			/**
+			 *  방향(상행/하행 or 외선/내선)
+			 */
 			String way = "";
+			/**
+			 *  요일(평일/주말)
+			 */
 			String dayOfWeek = "";
+			/**
+			 *  시간대(05~24)
+			 */
 			String time = "";
 			
 			
@@ -114,6 +129,15 @@ public class BusyStat extends StationManagement{
 	
 	//time은 -5하면 됨.
 	//혼잡도 인덱스 총 15개
+	
+	/**
+	 * 혼잡도 통계를 출력을 위해 출력문한개씩 ArrayList에 저장하는 메서드
+	 * @param list 혼잡도 수치
+	 * @param line 호선(1~9)
+	 * @param way 방향(상행/하행 or 외선/내선)
+	 * @param dayOfWeek 요일(평일/주말)
+	 * @param time 시간대(05~24)
+	 */
 	private void printBusy(ArrayList<Busy> list, String line, String way, String dayOfWeek, String time) {
 		
 		ArrayList<String> busyStatPage = new ArrayList<>();
@@ -133,6 +157,12 @@ public class BusyStat extends StationManagement{
 		
 	}
 	
+	/**
+	 *  혼잡도 통계를 페이지를 나눠서 출력하는 메서드
+	 *  5개씩 나눠서 출력함
+	 * @param list 출력문구가 들어있는 ArrayList
+	 * @param title 호선과 방향과 요일이 적혀있는 출력문
+	 */
 	public static void busyStatPage(ArrayList<String> list, String title) {
 		// 리스트의 페이지수 계산
 		int page = (int)(Math.ceil((double)list.size() / 5));

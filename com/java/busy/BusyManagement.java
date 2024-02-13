@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import com.java.common.Data;
 
 /**
- * 혼잡도 수정 or 검색된 호선/시간대의 혼잡도를 보내는 역할
+ *  특정 조건의 혼잡도를 검색하고 혼잡도 수치를 수정하는 클래스
  */
 public final class BusyManagement {
 	
@@ -34,6 +34,16 @@ public final class BusyManagement {
 		
 	}
 	
+	/**
+	 * 수정한 혼잡도를 혼잡도가 저장된 ArrayList에 저장하는 메서드
+	 * 
+	 * @param line 호선
+	 * @param way  방향(상행,외선 / 하행,내선)
+	 * @param time 시간대(5~24)
+	 * @param dayOfWeek  요일(평일/주말)
+	 * @param modifyBusy 수정한 혼잡도 ArrayList
+	 * @param route 선택한 호선의 경로 ArrayList
+	 */
 	public static void modifyBusyValue(String line, boolean way, String time, String dayOfWeek, ArrayList<Double> modifyBusy, ArrayList<String> route) {
 		
 		String temp ="";
@@ -69,7 +79,7 @@ public final class BusyManagement {
 	
 	/**
 	 * 혼잡도 수치인 숫자를 한글로 변환해주는 메서드
-	 * 매우혼잡  130이상
+	 *  매우혼잡  130이상
 		혼잡      110이상 ~ 130미만
 		다소 혼잡 80이상 ~ 110미만
 		보통      60이상 ~ 80미만
@@ -99,8 +109,6 @@ public final class BusyManagement {
 		}
 		return convertBusy;
 	}
-	
-	//해당 호선의 혼잡도를 가져오기
 	
 	
 	

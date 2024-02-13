@@ -114,7 +114,7 @@ public class ChangeNoChairTrain extends StationManagement{
 			
 			
 			
-			printBusy(startStation, endStation, time, stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
+			printBusy(startStation, endStation, stationManagement.specificHourBusy, stationManagement.modifyBusy, stationManagement.convertBusy, stationManagement.convertModifyBusy, stationManagement.way, stationManagement.route);
 			
 			//혼잡도 수치 조정
 			BusyManagement.modifyBusyValue(line,stationManagement.way,time,dayOfWeek,stationManagement.modifyBusy, stationManagement.route);

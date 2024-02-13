@@ -8,14 +8,20 @@ import com.java.common.MyPage;
 import com.java.member.CommonFunction;
 import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
-
+/**
+ * 로그인 이후 고객 페이지를 나타내는 클래스
+ */
 public final class UserMode extends CommonFunction{
 	
-		
+	/**
+	 * 고객 페이지를 나타내는 메서드	
+	 */
 	public static void userTab() {
 		
 		while(true) { 
-			
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			Scanner scan = new Scanner(System.in);

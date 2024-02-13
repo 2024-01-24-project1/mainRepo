@@ -6,8 +6,14 @@ import com.java.common.LoginLogout;
 import com.java.common.lostarticle.LostArticleTab;
 import com.java.view.ViewAll;
 
+/**
+ * 고객의 소리 메뉴를 나타내는 클래스
+ */
 public class UserVoiceTab {
 	
+	/**
+	 * 고객의 소리 메뉴를 나타내는 메서드
+	 */
 	public static void userVoice() {
 		
 		while (true) {
@@ -16,17 +22,20 @@ public class UserVoiceTab {
 			ViewAll.chooseNum();
 			
 			Scanner scan = new Scanner(System.in);
-			String num = "";
-			num = scan.nextLine();
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
+			String sel = "";
+			sel = scan.nextLine();
 
-			if (num.equals("1")) { 		  // 1. 일반 민원 접수
+			if (sel.equals("1")) { 		  // 1. 일반 민원 접수
 				complain();
-			} else if (num.equals("2")) { // 2. 분실물 목록 확인
+			} else if (sel.equals("2")) { // 2. 분실물 목록 확인
 				LostArticleTab.lostArticleAll();
-			} else if(num.equals("3")) {  // 3. 분실물 검색 
+			} else if(sel.equals("3")) {  // 3. 분실물 검색 
 				LostArticleTab.lostArticleSearch();
 			}
-			else if (num.equals("")) {    // 4. 뒤로가기
+			else if (sel.equals("")) {    // 4. 뒤로가기
 				break;
 				
 			} else { // 이외의 숫자 입력 시
@@ -38,11 +47,20 @@ public class UserVoiceTab {
 		}
 	}//End of userVoice()
 	
+	/**
+	 * 고객이 민원 접수하는 메서드
+	 */
 	private static void complain() { // 1. 일반 민원 접수
 		
 		Scanner scan = new Scanner(System.in);
 		
+		/**
+		 * 민원 제목을 저장하는 변수
+		 */
 		String title = "";
+		/**
+		 * 민원 내용을 저장하는 변수
+		 */
 		String content = "";
 		
 		ViewAll.userVoc();
@@ -51,7 +69,13 @@ public class UserVoiceTab {
 		System.out.print("\t\t\t내용: ");
 		content = scan.nextLine();
 		
+		/**
+		 * 제목의 유효성검사 결과를 저장하는 변수
+		 */
 		boolean titleCheck = (title.length() > 20 || title.length() < 2);
+		/**
+		 * 내용의 유효성검사 결과를 저장하는 변수
+		 */
 		boolean contentCheck = (content.length() > 200 || content.length() < 2); 
 		
 		if (titleCheck) {

@@ -6,14 +6,25 @@ import java.util.Scanner;
 import com.java.common.Validation;
 import com.java.view.ViewAll;
 
+/**
+ * 고객 리스트를 보여주는 클래스
+ */
 public class UserSearch {
 
-	
+	/**
+	 * 고객 리스트를 페이지로 나눠서 출력하는 메서드
+	 * @param list 고객 목록
+	 */
 	public static void userPage(ArrayList<User> list) {
 		
 		// 리스트의 페이지수 계산
+		/**
+		 * 페이지 수를 나타내는 변수
+		 */
 		int page = (int)(Math.ceil((double)list.size() / 10));
-		
+		/**
+		 * 현재 보고있는 페이지를 나타내는 변수
+		 */
 		int index = 0;		// 문자로 입력받은 숫자를 int로 변환
 		
 		Scanner scan = new Scanner(System.in);

@@ -10,8 +10,14 @@ import com.java.common.LoginLogout;
 import com.java.common.Validation;
 import com.java.view.ViewAll;
 
+/**
+ * 정기권 메뉴를 나타내는 클래스
+ */
 public class PassTab {
 
+	/**
+	 * 정기권 메뉴를 나타내는 메서드
+	 */
 	public static void passTab() {
 		
 		
@@ -20,6 +26,9 @@ public class PassTab {
 		while(true) {
 			
 			//ViewAll.ticketView();
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = "";
 			
 			ViewAll.print("정기권 페이지");
@@ -55,6 +64,9 @@ public class PassTab {
 		
 	}//End of passTab
 	
+	/**
+	 * 고객의 정기권을 확인하는 메서드
+	 */
 	public static void myTicket() { // 1. 내 정기권 확인
 		
 		//ViewAll.title("나의 정기권 확인하기");
@@ -72,6 +84,9 @@ public class PassTab {
 		ViewAll.pause();
 	}//End of myTicket()
 	
+	/**
+	 * 정기권을 등록하는 메서드
+	 */
 	public static void signPass() { // 2. 정기권 등록
 		
 		//ViewAll.title("정기권 등록");
@@ -80,17 +95,35 @@ public class PassTab {
 		
 		System.out.println();
 		System.out.print("\t\t\t코드: ");
+		/**
+		 * 입력한 정기권 코드 값을 저장하는 변수
+		 */
 		String ticketCode = scan.nextLine();
 		System.out.println();
 		
 		if ( Validation.is_Pass(ticketCode) && LoginLogout.pass.equals("없음")) { 	   // 새로운 정기권 등록
 			
+			/**
+			 * 만료일 형식 지정을 위한 SimpleDateFormat 객체
+			 */
 			SimpleDateFormat expiry = new SimpleDateFormat("yyyyMMdd");
+			/**
+			 * 현재 날짜를 가져오기 위한 Calendar 객체
+			 */
 			Calendar cal = Calendar.getInstance();
+			/**
+			 * 현재 날짜를 Date 객체로 변환한 변수
+			 */
 			Date date = cal.getTime();
+			/**
+			 * 정기권 시작일을 문자열 형식으로 저장한 변수
+			 */
 			String start = expiry.format(date);		// 정기권 시작일
 			cal.add(Calendar.DATE, 30);
 			date = cal.getTime();
+			/**
+			 * 정기권 종료일을 계산하여 문자열 형식으로 저장한 변수
+			 */
 			String end = expiry.format(date);		// 정기권 종료일
 			
 			// 유저의 정기권 여부와 기간 추가
@@ -125,11 +158,21 @@ public class PassTab {
 			String extend = "";
 			
 			try {
-				
+				/**
+				 * 만료일 형식 지정을 위한 SimpleDateFormat 객체
+				 */
 				SimpleDateFormat expiry = new SimpleDateFormat("yyyyMMdd");
+				/**
+				 * 정기권 종료일을 저장하는 변수
+				 */
 				String end = LoginLogout.passExpiry.substring(9);		// 정기권 종료일
+				/**
+				 * 정기권 종료일을 Date 객체로 변환한 변수
+				 */
 				Date temp = expiry.parse(end);							// 문자열을 날짜로
-				
+				/**
+				 * 현재 날짜를 가져오기 위한 Calendar 객체
+				 */
 				Calendar cal = Calendar.getInstance();
 				cal.setTime(temp);										// 정기권 종료일 캘린더에 세팅
 				cal.add(Calendar.DATE, 30);								// 30일 연장

@@ -2,14 +2,28 @@ package com.java.member.employee.stats;
 
 import com.java.view.ViewAll;
 
+/**
+ * 통계 정보를 그래프로 출력하는 클래스
+ */
 public class Graph {
 	
-	// 12칸짜리 통계와 통계의 단위를 받아서 그래프를 출력하는 메서드 
+	// 12칸짜리 통계와 통계의 단위를 받아서 그래프를 출력하는 메서드
+	/**
+	 * 12칸짜리 통계와 통계의 단위를 받아서 그래프를 출력하는 메서드
+	 * @param list 1월부터 12월까지의 값이 담긴 배열
+	 * @param unit 평균내기 위해 나누는 값
+	 */
 	public static void drawGraph(long[] list, long unit ) {
 		// list는 1월부터 12월까지의 값이 담긴 배열
+		
+		/**
+		 * 출력할 모양이 담기는 배열
+		 */
 		String[][] graph = new String[15][12];		// 출력할 모양이 담기는 배열
+		/**
+		 * unit으로 나눈 1월부터 12월까지의 값이 담긴 배열
+		 */
 		long[] parted = new long[12];// unit으로 나눈 1월부터 12월까지의 값이 담긴 배열
-		String[] zip = new String[12];
 		
 	
 		ViewAll.clear();

@@ -7,19 +7,33 @@ import com.java.common.Validation;
 import com.java.common.log.LogSave;
 import com.java.view.ViewAll;
 
+/**
+ * 통계 메뉴 나타내는 클래스
+ */
 public class StatsTab {
 	
+	/**
+	 * 매출 통계 평균 구하기 위해 나누는 값
+	 */
 	final static long ALLSALES = 13000000000L;
 	
+	/**
+	 * 이용객 통계 평균 구하기 위해 나누는 값
+	 */
 	final static long ALLPASSENGER = 10000000L;
 	
 	
-	
+	/**
+	 * 통계 메뉴를 나타내는 메서드
+	 */
 	public static void statsTab() {
 		
 		Scanner scan = new Scanner(System.in);
 		
 		while(true) {
+			/**
+			 * 입력한 값을 저장하는 변수
+			 */
 			String sel = ""; // 선택한 번호
 			
 			
@@ -50,10 +64,19 @@ public class StatsTab {
 		
 	}//End of statsTab()
 	
+	/**
+	 * 이용객 통계 메뉴를 나타내는 메서드
+	 */
 	public static void userStatsTab() {
+		/**
+		 * 입력한 값을 저장하는 변수
+		 */
 		String sel = "";
 		
 		Scanner scan = new Scanner(System.in);
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;	
 		
 		ViewAll.clear();
@@ -121,8 +144,17 @@ public class StatsTab {
 		
 	}//End of userStatsTab()
 	
+	/**
+	 * 매출 통계 메뉴를 나타내는 메서드
+	 */
 	public static void salesStatsTab() {
+		/**
+		 * 입력한 값을 저장하는 변수
+		 */
 		String sel = "";
+		/**
+		 * 일치 여부를 저장하는 변수
+		 */
 		boolean check = false;
 		Scanner scan = new Scanner(System.in);
 		

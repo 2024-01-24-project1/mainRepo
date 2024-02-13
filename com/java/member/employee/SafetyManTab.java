@@ -11,7 +11,7 @@ import com.java.view.ViewAll;
 
 public class SafetyManTab {
 	
-	protected static void satetyManTab() {
+	protected static void safetyManTab() {
 		
 		Scanner scan = new Scanner(System.in);
 		

@@ -38,7 +38,7 @@ public class EmployeeManagementTab {
 					}
 					
 			} else if (sel.equals("3")) {	// 3. 안전요원 관리
-				SafetyManTab.satetyManTab();
+				SafetyManTab.safetyManTab();
 			} else if (sel.equals("")) {	// 4. 뒤로가기
 				
 				// 직원관리 종료

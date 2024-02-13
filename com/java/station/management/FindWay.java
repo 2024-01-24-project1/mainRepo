@@ -98,7 +98,7 @@ public class FindWay extends StationManagement {
 	protected void findWay(String line, String startStation, String endStation, Calendar calendar) {
 		
 		
-		stationManagement.route = new ArrayList<>();
+//		stationManagement.route = new ArrayList<>();
 		ArrayList<RequiredTime> requiredTime = new ArrayList<>();   //보고싶은 경로의 소요시간
 		int minute = 0;
 		LocalTime localTime = LocalTime.of(0, 0, 0);  				//시간 누적 localTime

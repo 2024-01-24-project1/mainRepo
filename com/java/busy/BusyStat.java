@@ -17,15 +17,13 @@ import com.java.view.ViewAll;
  */
 public class BusyStat extends StationManagement{
 	
-	private StationManagement stationManagement;
 	
 	/**
 	 * 혼잡도 통계 생성자
 	 */
 	public BusyStat() {
-		
-		this.stationManagement = new StationManagement();
-		
+		super();
+		this.route = new ArrayList<>();
 	} 
 	
 	/**

@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 import com.java.view.ViewAll;
 
+/**
+ * 호선을 입력받아 해당 역의 이름을 페이지로 나눠 출력하는 메서드
+ */
 public class StationNamePage {
 
 	public static void stationNamePage(ArrayList<String> list, String line) {
@@ -20,10 +23,18 @@ public class StationNamePage {
 			return;
 		}
 		
-		
+		/**
+		 * 한 페이지에 보여줄 역의 개수를 저장하는 변수
+		 */
 		int pageSize = 6; // 한 페이지에 보여줄 역의 개수
+		/**
+		 * 전체 페이지 수를 저장하는 변수
+		 */
         int totalPages = (int) Math.ceil((double) list.size() / pageSize); // 전체 페이지 수
 
+        /**
+         * 현재 페이지 번호를 저장하는 변수
+         */
         int currentPage = 0; // 현재 페이지 번호
         Scanner scanner = new Scanner(System.in);
         
@@ -38,7 +49,13 @@ public class StationNamePage {
         	ViewAll.stationNamePageTable(line);
 
             // 현재 페이지에 해당하는 역 목록 출력
+        	/**
+        	 * 첫 페이지의 인덱스를 저장하는 변수
+        	 */
             int startIndex = currentPage * pageSize;
+            /**
+             * 마지막 페이지의 인덱스를 저장하는 변수
+             */
             int endIndex = Math.min(startIndex + pageSize, list.size());
             list.subList(startIndex, endIndex).stream().forEach(station -> {
                 System.out.printf("%-18s     \t", station);

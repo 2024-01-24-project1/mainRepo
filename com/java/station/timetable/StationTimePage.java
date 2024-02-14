@@ -10,6 +10,12 @@ import com.java.common.Validation;
  * 역 시간표를 페이지로 출력하는 클래스
  */
 public class StationTimePage {
+	
+	/**
+	 * StationTimePage클래스의 기본 생성자
+	 */
+	public StationTimePage() {
+	}
 
 	/**
 	 * 역 시간표를 페이지로 나눠 출력하는 메서드

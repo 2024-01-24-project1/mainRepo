@@ -6,6 +6,13 @@ import java.util.ArrayList;
  * 즐겨찾기 정보를 저장하는 클래스
  */
 public class BookMark {
+
+	/**
+	 * BookMark클래스의 기본 생성자
+	 */
+	public BookMark() {
+	}
+	
 	/**
 	 * 즐겨찾기한 id를 저장하는 멤버 변수
 	 */

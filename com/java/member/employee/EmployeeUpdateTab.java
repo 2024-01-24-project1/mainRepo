@@ -16,6 +16,13 @@ import com.java.view.ViewAll;
  * 직원 정보를 수정하는 클래스
  */
 public class EmployeeUpdateTab {
+
+	
+	/**
+	 * EmployeeUpdateTab클래스의 기본 생성자
+	 */
+	public EmployeeUpdateTab() {
+	}
 	
 	/**
 	 * 직원 정보 수정 메뉴를 나타내는 메서드

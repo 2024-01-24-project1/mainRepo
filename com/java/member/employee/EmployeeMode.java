@@ -18,6 +18,12 @@ import com.java.view.ViewAll;
 public final class EmployeeMode extends CommonFunction{
 
 	/**
+	 * EmployeeMode클래스의 기본 생성자
+	 */
+	public EmployeeMode() {
+	}
+
+	/**
 	 * 관리자 페이지를 출력하는 메서드
 	 */
 	public static void employeeTab() {

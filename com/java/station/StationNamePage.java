@@ -9,6 +9,12 @@ import com.java.view.ViewAll;
  * 호선을 입력받아 해당 역의 이름을 페이지로 나눠 출력하는 클래스
  */
 public class StationNamePage {
+
+	/**
+	 * StationNamePage클래스의 기본 생성자
+	 */
+	public StationNamePage() {
+	}
 	
 	
 	/**

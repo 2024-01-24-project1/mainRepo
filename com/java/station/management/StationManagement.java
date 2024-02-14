@@ -18,6 +18,12 @@ import com.java.view.ViewAll;
  *  혼잡도를 이용한 길찾기, 역관리에 공통으로 사용하는 멤버들을 공용으로 사용하기 위해 상속하는 클래스
  */
 public class StationManagement {
+
+	/**
+	 * StationManagement클래스의 기본 생성자
+	 */
+	public StationManagement() {
+	}
 	
 	/**
 	 * 방향을 boolean으로 표현한 변수 상행/외선 true 하행/내선 false

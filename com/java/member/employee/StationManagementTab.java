@@ -14,6 +14,12 @@ import com.java.view.ViewAll;
 public class StationManagementTab {
 	
 	/**
+	 * StationManagementTab클래스의 기본 생성자
+	 */
+	public StationManagementTab() {
+	}
+	
+	/**
 	 * 역 관리 메뉴 나타내는 메서드
 	 */
 	public static void stationManagementTab() {

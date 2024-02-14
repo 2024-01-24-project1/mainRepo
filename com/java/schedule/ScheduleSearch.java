@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
  */
 public class ScheduleSearch {
 
+	/**
+	 * ScheduleSearch클래스의 기본 생성자
+	 */
+	public ScheduleSearch() {
+	}
+
 	
 	/**
 	 * 일정을 페이지로 나눠 출력하는 메서드

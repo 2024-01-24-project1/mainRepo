@@ -5,6 +5,12 @@ package com.java.common.lostarticle;
  * 분실물 정보를 저장하는 클래스
  */
 public final class LostArticle {
+
+	/**
+	 * LostArticle클래스의 기본 생성자
+	 */
+	public LostArticle() {
+	}
 	
 	/**
 	 * 분실물 이름을 저장하는 멤버 변수

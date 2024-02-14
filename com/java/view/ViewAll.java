@@ -11,6 +11,12 @@ import com.java.station.management.StationManagement;
  * 출력문을 담당하는 클래스
  */
 public class ViewAll {
+
+	/**
+	 * ViewAll클래스의 기본 생성자
+	 */
+	public ViewAll() {
+	}
 	
 	/**
 	 * 콘솔 화면에서 화면을 넘기기 위해 사용하는 메서드

@@ -25,6 +25,11 @@ import com.java.station.timetable.StationTime;
  */
 public final class Load {
 	/**
+	 * Load 클래스의 기본 생성자
+	 */
+	public Load() {
+	}
+	/**
 	 * 파일 경로가 저장된 Data 인스턴스
 	 */
 	Data data = new Data();

@@ -20,6 +20,12 @@ import com.java.schedule.Schedule;
 public final class Exit {
 
 	/**
+	 * Exit 클래스의 기본 생성자
+	 */
+	public Exit() {
+	}
+
+	/**
 	 * 경로가 저장되어 있는 Data 인스턴스
 	 */
 	Data data = new Data();

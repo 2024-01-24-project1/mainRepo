@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
 public class UserSearch {
 
 	/**
+	 * UserSearch클래스의 기본 생성자
+	 */
+	public UserSearch() {
+	}
+
+	/**
 	 * 고객 리스트를 페이지로 나눠서 출력하는 메서드
 	 * @param list 고객 목록
 	 */

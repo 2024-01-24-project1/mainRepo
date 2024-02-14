@@ -11,6 +11,12 @@ import com.java.view.ViewAll;
  * 통계 메뉴 나타내는 클래스
  */
 public class StatsTab {
+
+	/**
+	 * StatsTab클래스의 기본 생성자
+	 */
+	public StatsTab() {
+	}
 	
 	/**
 	 * 매출 통계 평균 구하기 위해 나누는 값

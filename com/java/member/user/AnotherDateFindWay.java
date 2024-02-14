@@ -15,6 +15,12 @@ import com.java.view.ViewAll;
  * 다른날짜를 기준으로 길찾기를 하는 클래스
  */
 public class AnotherDateFindWay extends FindWay {
+
+	/**
+	 * AnotherDateFindWay클래스의 기본 생성자
+	 */
+	public AnotherDateFindWay() {
+	}
 	
 	/**
 	 * 입력값을 기준으로 길찾기를 하는 메서드

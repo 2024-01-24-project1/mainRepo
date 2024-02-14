@@ -15,6 +15,12 @@ import com.java.view.ViewAll;
 public class SafetyManTab {
 	
 	/**
+	 * SafetyManTab클래스의 기본 생성자
+	 */
+	public SafetyManTab() {
+	}
+	
+	/**
 	 * 안전요원 관리 메뉴를 나타내는 메서드
 	 */
 	protected static void safetyManTab() {

@@ -12,6 +12,12 @@ import com.java.member.employee.Employee;
  * 회원가입을 하는 클래스
  */
 public class SignUp {
+	
+	/**
+	 * Singup클래스의 기본 생성자
+	 */
+	public SignUp() {
+	}
 
 	/**
 	 * 회원가입 초기화면을 출력하는 메서드

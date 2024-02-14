@@ -11,6 +11,13 @@ import com.java.view.ViewAll;
  */
 public class FindWayTab {
 	
+
+	/**
+	 * FindWayTab클래스의 기본 생성자
+	 */
+	public FindWayTab() {
+	}
+	
 	/**
 	 * 길찾기 메뉴의 목록을 나타내는 메서드
 	 */

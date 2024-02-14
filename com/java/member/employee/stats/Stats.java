@@ -6,6 +6,12 @@ import com.java.common.Data;
  * 통계정보를 나타내는 클래스
  */
 public class Stats {
+
+	/**
+	 * Stats클래스의 기본 생성자
+	 */
+	public Stats() {
+	}
 	
 	/**
 	 * 날짜 정보가 들어있는 배열

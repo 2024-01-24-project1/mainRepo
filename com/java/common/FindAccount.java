@@ -9,6 +9,12 @@ import com.java.view.ViewAll;
  * 아이디 비밀번호 찾기를 하는 클래스
  */
 public class FindAccount {
+	/**
+	 * FindAccount 클래스의 기본 생성자
+	 */
+	public FindAccount() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	/**
 	 * 아이디 비밀번호 찾기를 하는 메뉴를 나타내는 메서드

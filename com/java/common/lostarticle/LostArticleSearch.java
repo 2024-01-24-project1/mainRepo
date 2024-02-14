@@ -12,6 +12,11 @@ import com.java.view.ViewAll;
  * 분실물 정보를 검색하는 클래스
  */
 public class LostArticleSearch {
+	/**
+	 * LostArticleSearch클래스의 기본 생성자
+	 */
+	public LostArticleSearch() {
+	}
 	
 	/**
 	 * 분실물 정보를 페이지로 출력하는 메서드

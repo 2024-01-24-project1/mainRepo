@@ -15,6 +15,12 @@ import com.java.view.ViewAll;
 public class UserVoiceSearch {
 	
 	/**
+	 * UserVoiceSearch클래스의 기본 생성자
+	 */
+	public UserVoiceSearch() {
+	}
+	
+	/**
 	 * 고객의 소리 목록 출력하는 메서드
 	 */
 	protected static void userVoiceAll() {

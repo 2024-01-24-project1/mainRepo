@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
  * 직원 정보를 검색하는 클래스
  */
 public class EmployeeSearch {
+	
+	/**
+	 * EmployeeSearch클래스의 기본 생성자
+	 */
+	public EmployeeSearch() {
+	}
 	/**
 	 * 전체 직원 목록을 전부 보여주는 메서드
 	 * @param list 직원 목록

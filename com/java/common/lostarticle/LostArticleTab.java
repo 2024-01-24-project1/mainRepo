@@ -14,6 +14,12 @@ import com.java.view.ViewAll;
 public class LostArticleTab {
 	
 	/**
+	 * LostArticleTab클래스의 기본 생성자
+	 */
+	public LostArticleTab() {
+	}
+	
+	/**
 	 * 분실물 메뉴를 나타내는 메서드
 	 */
 	public static void lostArticleTab() {

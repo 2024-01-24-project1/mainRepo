@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
  * 로그인 이후 고객 페이지를 나타내는 클래스
  */
 public final class UserMode extends CommonFunction{
+
+	/**
+	 * UserMode클래스의 기본 생성자
+	 */
+	public UserMode() {
+	}
 	
 	/**
 	 * 고객 페이지를 나타내는 메서드	

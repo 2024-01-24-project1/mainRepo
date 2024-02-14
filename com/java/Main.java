@@ -17,8 +17,14 @@ import com.java.view.ViewAll;
 public class Main {
 	
 	/**
+	 * Main클래스 기본 생성자
+	 */
+	public Main() {
+	}
+	
+	/**
 	 * 프로그램 진입점인 메인메서드
-	 * @param args
+	 * @param args 메인 내용
 	 */
 	public static void main(String[] args) {
 		

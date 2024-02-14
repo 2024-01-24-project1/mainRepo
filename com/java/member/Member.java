@@ -7,6 +7,13 @@ package com.java.member;
  */
 public class Member {
 
+	
+	/**
+	 * Member클래스의 기본 생성자
+	 */
+	public Member() {
+	}
+
 	/**
 	 * 이름을 저장하는 멤버 변수
 	 */

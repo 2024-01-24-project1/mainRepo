@@ -11,6 +11,12 @@ import com.java.view.ViewAll;
  * 시간표 메뉴 나타내는 클래스
  */
 public class StationTimeTab {
+
+	/**
+	 * StationTimePage클래스의 기본 생성자
+	 */
+	public StationTimeTab() {
+	}
 	
 	
 	/**

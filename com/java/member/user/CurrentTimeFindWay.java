@@ -16,6 +16,13 @@ import com.java.view.ViewAll;
  */
 public class CurrentTimeFindWay extends FindWay {
 
+	
+	/**
+	 * CurrentTimeFindWay클래스의 기본 생성자
+	 */
+	public CurrentTimeFindWay() {
+	}
+
 	/**
 	 * 입력값을 기준으로 길찾기를 하는 메서드
 	 */

@@ -13,6 +13,13 @@ import com.java.member.employee.Employee;
 public class LogSave {
 	
 	/**
+	 * LogSave클래스의 기본 생성자
+	 */
+	public LogSave() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	/**
 	 * 행동로그 항목을 저장한 배열
 	 */
 	private static final String[] LOGLIST = {

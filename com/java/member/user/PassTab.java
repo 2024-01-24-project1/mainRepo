@@ -15,6 +15,13 @@ import com.java.view.ViewAll;
  */
 public class PassTab {
 
+	
+	/**
+	 * PassTab클래스의 기본 생성자
+	 */
+	public PassTab() {
+	}
+
 	/**
 	 * 정기권 메뉴를 나타내는 메서드
 	 */

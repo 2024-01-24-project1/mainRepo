@@ -18,6 +18,13 @@ import com.java.view.ViewAll;
  */
 public class BookMarkRoute extends FindWay{
 	
+	
+	/**
+	 * BookMarkRoute클래스의 기본 생성자
+	 */
+	public BookMarkRoute() {
+	}
+	
 	/**
 	 * 현재 로그인한 고객의 id에 저장된 즐겨찾기 목록을 저장하는 ArrayList
 	 */

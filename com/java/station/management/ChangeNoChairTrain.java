@@ -20,7 +20,7 @@ public class ChangeNoChairTrain extends StationManagement{
 	private StationManagement stationManagement;
 	
 	/**
-	 * 의자 없는 열자 클래스 생성자
+	 * ChangeNoChairTrain클래스 생성자
 	 */
 	public ChangeNoChairTrain() {
 		

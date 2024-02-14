@@ -10,6 +10,12 @@ import com.java.view.ViewAll;
  * 고객의 소리 관리하는 메뉴 나타내는 클래스
  */
 public final class UserVoiceManagemnetTab {
+	
+	/**
+	 * UserVoiceManagemnetTab클래스의 기본 생성자
+	 */
+	public UserVoiceManagemnetTab() {
+	}
 
 	/**
 	 * 고객의 소리 관리하는 메뉴 나타내는 메서드

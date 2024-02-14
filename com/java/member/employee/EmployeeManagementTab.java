@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
 public class EmployeeManagementTab {
 
 	/**
+	 * EmployeeManagementTab클래스의 기본 생성자
+	 */
+	public EmployeeManagementTab() {
+	}
+	
+	/**
 	 * 직원관리 메뉴를 나타내는 메서드
 	 */
 	protected static void employeeManagementTab() {

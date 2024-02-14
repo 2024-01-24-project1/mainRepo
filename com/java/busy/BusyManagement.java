@@ -11,12 +11,18 @@ import com.java.common.Data;
  *  특정 조건의 혼잡도를 검색하고 혼잡도 수치를 수정하는 클래스
  */
 public final class BusyManagement {
+	/**
+	 * BusyManagement의 기본 생성자
+	 */
+	public BusyManagement() {
+	}
 	
 	/**
 	 * 입력받은 호선, 방향, 요일(평일/주말)을 필터링한 ArrayList를 반환함
 	 * @param line 호선
 	 * @param way 방향(상행,외선 / 하행,내선)
 	 * @param dayOfWeek 요일(평일/주말)
+	 * @param route 경로
 	 * @return 입력받은 값만 포함되어 있는 혼잡도 정보 목록 ArrayList of Busy 
 	 */
 	public static ArrayList<Busy> searchBusy(String line, String way, String dayOfWeek, ArrayList<String> route) {

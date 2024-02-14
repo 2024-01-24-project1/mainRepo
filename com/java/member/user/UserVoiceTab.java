@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
 public class UserVoiceTab {
 	
 	/**
+	 * UserVoiceTab클래스의 기본 생성자
+	 */
+	public UserVoiceTab() {
+	}
+	
+	/**
 	 * 고객의 소리 메뉴를 나타내는 메서드
 	 */
 	public static void userVoice() {

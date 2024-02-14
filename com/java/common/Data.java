@@ -21,6 +21,12 @@ import com.java.station.timetable.StationTime;
  */
 public final class Data {
 	
+	/**
+	 *  Data 클래스의 기본 생성자
+	 */
+	public Data() {
+	}
+	
 	// 경로
 	/**
 	 * 정기권의 정보가 저장되어 있는 파일의 경로를 저장한 변수

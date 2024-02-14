@@ -13,6 +13,13 @@ import com.java.view.ViewAll;
  */
 public class ScheduleTab {
 	
+
+	/**
+	 * ScheduleTab클래스의 기본 생성자
+	 */
+	public ScheduleTab() {
+	}
+	
 	/**
 	 * 일정 메뉴를 나타내는 메서드
 	 */

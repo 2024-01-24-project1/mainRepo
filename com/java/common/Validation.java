@@ -19,6 +19,12 @@ import com.java.station.management.StationManagement;
  */
 public final class Validation {
 
+	/**
+	 * Validation클래스의 기본 생성자
+	 */
+	public Validation() {
+	}
+
 	// id 유효성 검사
 	// 형식이 맞으면 true, 아니면 false
 	/**

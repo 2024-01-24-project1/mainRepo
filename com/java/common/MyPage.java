@@ -12,6 +12,11 @@ import com.java.view.ViewAll;
  * 마이페이지를 나타내는 클래스
  */
 public class MyPage {
+	/**
+	 * MyPage클래스의 기본 생성자
+	 */
+	public MyPage() {
+	}
 	
 	/**
 	 * 마이페이지 목록을 매개변수에 따라 고객페이지 또는 관리자페이지로 나눠서 출력하는 메서드

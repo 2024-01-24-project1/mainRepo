@@ -16,6 +16,12 @@ import com.java.view.ViewAll;
 public class LogTab {
 
 	/**
+	 * LogTab클래스의 기본 생성자
+	 */
+	public LogTab() {
+	}
+
+	/**
 	 * 행동 로그를 출력하는 메서드
 	 */
 	public static void printLog() {

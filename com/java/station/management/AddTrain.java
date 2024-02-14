@@ -21,7 +21,7 @@ public class AddTrain extends StationManagement {
 	private StationManagement stationManagement;
 	
 	/**
-	 * 열차 추가 클래스의 생성자
+	 * AddTrain클래스의 생성자
 	 */
 	public AddTrain() {
 		

@@ -12,6 +12,12 @@ import com.java.view.ViewAll;
  * 로그인한 계정의 정보를 저장하는 클래스
  */
 public final class LoginLogout {
+
+	/**
+	 * LoginLogout클래스의 기본생성자
+	 */
+	public LoginLogout() {
+	}
 	
 	/**
 	 * 로그인한 계정의 아이디를 저장하는 멤버 변수

@@ -7,6 +7,12 @@ import com.java.view.ViewAll;
  */
 public class Graph {
 	
+	/**
+	 * Graph클래스의 기본 생성자
+	 */
+	public Graph() {
+	}
+	
 	// 12칸짜리 통계와 통계의 단위를 받아서 그래프를 출력하는 메서드
 	/**
 	 * 12칸짜리 통계와 통계의 단위를 받아서 그래프를 출력하는 메서드

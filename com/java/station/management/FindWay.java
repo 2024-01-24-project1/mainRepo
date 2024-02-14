@@ -30,7 +30,7 @@ public class FindWay extends StationManagement {
 	private StationManagement stationManagement;
 	 
 	/**
-	 * 길찾기 클래스 생성자
+	 * FindWay클래스 생성자
 	 */
 	public FindWay() {
 		

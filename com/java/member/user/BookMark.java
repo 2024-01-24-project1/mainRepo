@@ -17,7 +17,7 @@ public class BookMark {
 	
 	/**
 	 * 즐겨찾기 노선 클래스의 생성자
-	 * @param id
+	 * @param id 고객의 아이디
 	 */
 	public BookMark(String id) {
 		this.id = id;
@@ -25,14 +25,14 @@ public class BookMark {
 	
 	/**
 	 * 고객의 id를 리턴하는 메서드
-	 * @return 고객의 id String id
+	 * @return 고객의 아이디
 	 */
 	public String getId() {
 		return id;
 	}
 	/**
 	 * 고객의 즐겨찾기 목록을 리턴하는 메서드
-	 * @return 고객의 즐겨찾기 목록 ArrayList<String>
+	 * @return 고객의 즐겨찾기 목록 ArrayList of String
 	 */
 	public ArrayList<String> getBookMarkList() {
 		return bookMarkList;

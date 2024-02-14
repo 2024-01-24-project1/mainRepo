@@ -17,7 +17,7 @@ public final class BusyManagement {
 	 * @param line 호선
 	 * @param way 방향(상행,외선 / 하행,내선)
 	 * @param dayOfWeek 요일(평일/주말)
-	 * @return ArrayList<Busy> 입력받은 값만 포함되어 있는 list
+	 * @return 입력받은 값만 포함되어 있는 혼잡도 정보 목록 ArrayList of Busy 
 	 */
 	public static ArrayList<Busy> searchBusy(String line, String way, String dayOfWeek, ArrayList<String> route) {
 		
@@ -41,8 +41,8 @@ public final class BusyManagement {
 	 * @param way  방향(상행,외선 / 하행,내선)
 	 * @param time 시간대(5~24)
 	 * @param dayOfWeek  요일(평일/주말)
-	 * @param modifyBusy 수정한 혼잡도 ArrayList
-	 * @param route 선택한 호선의 경로 ArrayList
+	 * @param modifyBusy 수정한 혼잡도
+	 * @param route 선택한 호선의 경로 
 	 */
 	public static void modifyBusyValue(String line, boolean way, String time, String dayOfWeek, ArrayList<Double> modifyBusy, ArrayList<String> route) {
 		
@@ -77,14 +77,17 @@ public final class BusyManagement {
 		
 	}
 	
+	
 	/**
 	 * 혼잡도 수치인 숫자를 한글로 변환해주는 메서드
-	 *  매우혼잡  130이상
-		혼잡      110이상 ~ 130미만
-		다소 혼잡 80이상 ~ 110미만
-		보통      60이상 ~ 80미만
-		다소한산  30이상 ~ 60미만
-		여유로움  30미만
+	 * 매우혼잡  130이상
+	 * 혼잡      110이상 ~ 130미만
+	 * 다소 혼잡 80이상 ~ 110미만
+	 * 보통      60이상 ~ 80미만
+	 * 다소한산  30이상 ~ 60미만
+	 * 여유로움  30미만
+	 * @param list 혼잡도 수치 
+	 * @return 한글로 변환한 혼잡도 수치
 	 */
 	public static ArrayList<String> convertBusy(ArrayList<Double> list) {
 		

@@ -165,7 +165,7 @@ public class ChangeNoChairTrain extends StationManagement{
 	/**
 	 * 해당 시간(time)의 혼잡도를 의자 없는 열차로 변경할 경우 바뀐 혼잡도를 반환하는 메서드
 	 * @param time 시간대(05~24)
-	 * @return 해당 시간의 변경된 혼잡도 ArrayList<Double> modifyBusy
+	 * @return 해당 시간의 변경된 혼잡도 ArrayList of Double
 	 */
 	public ArrayList<Double> calcBusy(String time) {
 		

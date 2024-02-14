@@ -205,7 +205,7 @@ public class AddTrain extends StationManagement {
 	 * 해당 시간(time)의 혼잡도를 열차를 추가할 경우 바뀐 혼잡도를 반환하는 메서드
 	 * @param time 시간대(05~24)
 	 * @param trainsNum 추가할 열차 수
-	 * @return 해당 시간의 변경된 혼잡도 ArrayList<Double> modifyBusy
+	 * @return 해당 시간의 변경된 혼잡도 ArrayList of Double modifyBusy
 	 */
 	public ArrayList<Double> calcBusy(String time, String trainsNum) {
 		

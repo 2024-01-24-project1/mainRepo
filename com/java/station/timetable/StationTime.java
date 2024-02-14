@@ -88,7 +88,7 @@ public final class StationTime {
 	}
 	/**
 	 * 주말 하행선 시간표를 리턴하는 메서드
-	 * @return
+	 * @return 주말 하행선 시간표
 	 */
 	public ArrayList<String> getDownHoliday() {
 		return downHoliday;

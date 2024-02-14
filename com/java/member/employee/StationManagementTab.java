@@ -8,9 +8,14 @@ import com.java.station.management.AddTrain;
 import com.java.station.management.ChangeNoChairTrain;
 import com.java.view.ViewAll;
 
+/**
+ * 역 관리 메뉴 나타내는 클래스
+ */
 public class StationManagementTab {
 	
-	
+	/**
+	 * 역 관리 메뉴 나타내는 메서드
+	 */
 	public static void stationManagementTab() {
 		
 		

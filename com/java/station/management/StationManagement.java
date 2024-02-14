@@ -272,7 +272,7 @@ public class StationManagement {
 	 * Data상 1번인덱스부터 마지막 인덱스 까지의 순서가 상행선 2호선은 외선
 	 * 마지막 인덱스부터 1번 인덱스까지 방향이 하행선, 내선
 	 * @param line 호선(1~9)
-	 * @return 선택한 호선의 전체 경로 ArrayList<String> route
+	 * @return 선택한 호선의 전체 경로 ArrayList of String
 	 */
 	public static ArrayList<String> lineRoute(String line) {
 		
@@ -350,7 +350,7 @@ public class StationManagement {
 	 * @param station 역 이름
 	 * @param way 방향(상행/외선 true or 하행/내선 false)
 	 * @param dayOfWeek 요일(평일/주말)
-	 * @return station의 시간표 (방향은 boolean way에 따라 상행 하행 나뉨) ArrayList<String> stationTimeTable 
+	 * @return station의 시간표 (방향은 boolean way에 따라 상행 하행 나뉨) ArrayList of String stationTimeTable 
 	 */
 	protected ArrayList<String> findStationTime(String line, String station, boolean way, String dayOfWeek) {
 		
@@ -407,7 +407,7 @@ public class StationManagement {
 	/** 해당역의 시간표 ArrayList를 받아서 그 방향의 시간대만 추출해서 새로운 ArrayList로 반환하는 메서드
 	 * 
 	 * @param stationTimeTable 시작역의 시간표가 들어있는 ArrayList
-	 * @return 해당 역의 시간만 추출후 리턴 ArrayList<String> onlyTime
+	 * @return 해당 역의 시간만 추출후 리턴 ArrayList of String onlyTime
 	 */
 	protected ArrayList<String> timeExtraction(ArrayList<String> stationTimeTable) {
 		

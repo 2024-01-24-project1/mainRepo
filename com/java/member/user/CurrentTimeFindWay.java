@@ -12,7 +12,7 @@ import com.java.station.management.StationManagement;
 import com.java.view.ViewAll;
 
 /**
- * 현재시간을 기준으로 길찾기를 하는 메서드
+ * 현재시간을 기준으로 길찾기를 하는 클래스
  */
 public class CurrentTimeFindWay extends FindWay {
 

@@ -48,7 +48,7 @@ public final class Log {
 	}
 	/**
 	 * 행동 로그를 리턴하는 메서드
-	 * @return 행동로그 ArrayList<String>
+	 * @return 행동로그 ArrayList of String
 	 */
 	public ArrayList<String> getAction() {
 		return action;

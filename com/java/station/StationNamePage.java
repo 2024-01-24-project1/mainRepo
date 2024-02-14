@@ -6,10 +6,16 @@ import java.util.Scanner;
 import com.java.view.ViewAll;
 
 /**
- * 호선을 입력받아 해당 역의 이름을 페이지로 나눠 출력하는 메서드
+ * 호선을 입력받아 해당 역의 이름을 페이지로 나눠 출력하는 클래스
  */
 public class StationNamePage {
-
+	
+	
+	/**
+	 * 호선을 입력받아 해당 역의 이름을 페이지로 나눠 출력하는 메서드
+	 * @param list 역 리스트
+	 * @param line 호선
+	 */
 	public static void stationNamePage(ArrayList<String> list, String line) {
 		
 		line = line.replace("호선","");

@@ -1037,7 +1037,9 @@ System.out.println();
 		System.out.println("\t\t\t 뒤로 가기를 원할 시 엔터키를 눌러주세요");	}
 	
 	
-	 
+	/**
+	 * 로그인 화면 상단 출력문 메서드 
+	 */
 	public static void loginTop() { //로그인 화면 상단 0 2
 		clear();
 		System.out.println("╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬═════════════╬╬");

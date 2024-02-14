@@ -23,10 +23,10 @@ public final class PassengerCounting {
 	
 	/**
 	 * 역 이용객 수를 저장하는 객체 생성자
-	 * @param data
-	 * @param line
-	 * @param station
-	 * @param counting
+	 * @param data 날짜
+	 * @param line 호선
+	 * @param station 역 이름
+	 * @param counting 이용객 수
 	 */
 	public PassengerCounting(String data, String line, String station, long counting) {
 		this.date = data;

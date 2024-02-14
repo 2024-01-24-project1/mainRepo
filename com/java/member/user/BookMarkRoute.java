@@ -14,7 +14,7 @@ import com.java.station.management.FindWay;
 import com.java.view.ViewAll;
 
 /**
- * 즐겨찾기 목록으로 길찾기를 하는 메서드
+ * 즐겨찾기 목록으로 길찾기를 하는 클래스
  */
 public class BookMarkRoute extends FindWay{
 	

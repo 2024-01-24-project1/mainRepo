@@ -14,7 +14,7 @@ import com.java.view.ViewAll;
 public class EmployeeSearch {
 	/**
 	 * 전체 직원 목록을 전부 보여주는 메서드
-	 * @param list
+	 * @param list 직원 목록
 	 */
 	public static void employeeAll(ArrayList<Employee> list) {
 		

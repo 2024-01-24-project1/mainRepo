@@ -105,7 +105,7 @@ public class Graph {
 				back2 = (list[i+6]/10000) + "만";
 			}
 			
-			System.out.printf("\t%-2d월: %-3s%-7s\t%-2d월: %-3s%-7s\n", i+1, front1, back1, i+7, front2, back2);
+			System.out.printf("\t\t%-2d월: %-3s%-7s\t%-2d월: %-3s%-7s\n", i+1, front1, back1, i+7, front2, back2);
 		}
 			
 			

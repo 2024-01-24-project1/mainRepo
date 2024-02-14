@@ -154,7 +154,7 @@ public class BusyStat extends StationManagement{
 		
 		for(Busy b : list) {
 			
-			page = String.format("\t%-40s     \t: %-3.1f\n",b.getStation()+"역",b.getCrowded().get(Integer.parseInt(time)-5));
+			page = String.format("\t%-40s      \t: %-3.1f\n",b.getStation()+"역",b.getCrowded().get(Integer.parseInt(time)-5));
 			busyStatPage.add(page);
 		}
 		

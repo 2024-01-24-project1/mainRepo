@@ -134,7 +134,7 @@ public class MyPage {
 			
 			Data.userList.stream().filter(user -> user.getId().equals(DELETE))
 							      .forEach(user -> 
-							      System.out.printf("\t\t\t이름: %s\r\n\t\t\t아이디: %s\r\n\t\t\t생년월일: %s\r\n전화번호: %s\r\n\t\t\t정기권유무: %s\r\n\t\t\t정기권기간: %s\r\n"
+							      System.out.printf("\t\t\t이름: %s\r\n\t\t\t아이디: %s\r\n\t\t\t생년월일: %s\r\n\t\t\t전화번호: %s\r\n\t\t\t정기권유무: %s\r\n\t\t\t정기권기간: %s\r\n"
 												, user.getName()
 												, user.getId()
 												, user.getRegistration().substring(0, 6)
@@ -142,7 +142,7 @@ public class MyPage {
 												, user.getPassCheck()
 												, user.getPassExpiry()));
 			System.out.println("\t\t\t해당 계정을 삭제하시겠습니까?");
-			System.out.println("\t\t\tyes만 삭제: ");
+			System.out.print("\t\t\tyes만 삭제: ");
 			
 			String input = scan.nextLine();
 			

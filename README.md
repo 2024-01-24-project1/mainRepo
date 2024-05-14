@@ -3,7 +3,13 @@
 
 # 💻 Java Console Project
 
+---
 
+## 📝 요약
+
+실제 지하철을 이용하며 사용자의 관점과 이용자의 관점 모두 고려하게 되었고 이미 운영 중인 서비스에 추가적으로 아이디어를 더해 기능을 추가한 프로젝트입니다.
+
+---
 <div align="center">
   👍 Skill  <br/>
 <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white" />

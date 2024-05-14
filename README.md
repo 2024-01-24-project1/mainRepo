@@ -43,6 +43,35 @@
 ## :telescope: IDE <br/>
   <img src="https://img.shields.io/badge/eclipseide-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white">   <br/> 
   <br/>
+
+
+## 🗄 Document <br/>
+![기획서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/01.%20%EA%B8%B0%ED%9A%8D%EC%84%9C/_1%EC%A1%B0_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf)
+
+![요구분석서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%20%EC%9A%94%EA%B5%AC%EB%B6%84%EC%84%9D%EC%84%9C/_1%EC%A1%B0_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%9A%94%EA%B5%AC%EB%B6%84%EC%84%9D%EC%84%9C.pdf)
+
+![순서도](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EC%88%9C%EC%84%9C%EB%8F%84/_1%EC%A1%B0_%EC%88%9C%EC%84%9C%EB%8F%84.pdf)
+
+![화면설계서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/04.%20%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C/_1%EC%A1%B0_%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C.pdf)
+
+![기능명세서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/05.%20%EA%B8%B0%EB%8A%A5%EB%AA%85%EC%84%B8%EC%84%9C/_1%EC%A1%B0_SeoulMetro_%EA%B8%B0%EB%8A%A5%EB%AA%85%EC%84%B8%EC%84%9C.pdf)
+
+![데이터](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/06.%20%EB%8D%B0%EC%9D%B4%ED%84%B0/1%EC%A1%B0_SeoulMetro_ERD.pdf)
+
+![소스](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/07.%20%EC%86%8C%EC%8A%A4/_1%EC%A1%B0_%EC%86%8C%EC%8A%A4%ED%8C%8C%EC%9D%BC.zip)
+
+![발표](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/08.%20%EB%B0%9C%ED%91%9C/_1%EC%A1%B0_SeoulMetro%EB%B0%9C%ED%91%9C.pdf)
+
+![화면캡처](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/09.%20%ED%99%94%EB%A9%B4%EC%BA%A1%EC%B3%90/_1%EC%A1%B0_%ED%99%94%EB%A9%B4%EC%BA%A1%EC%B2%98.pdf)
+
+
+![개발문서](https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/10.%20%EA%B0%9C%EB%B0%9C%EB%AC%B8%EC%84%9C)
+
+![요약본](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/11.%20%EC%9A%94%EC%95%BD%EB%B3%B8/1%EC%A1%B0_%EC%9A%94%EC%95%BD%EB%B3%B8.pdf)
+
+
+
+  
   😀 Member: <br/>
 
 |이름|깃허브 주소|비고|

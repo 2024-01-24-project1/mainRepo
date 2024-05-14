@@ -7,12 +7,13 @@
   <br/>
   😀 Member: <br/>
 
-
-  https://github.com/Kijun0708 <br/>
-  https://github.com/Kwak-98 <br/>
-  https://github.com/kwonboryong <br/>
-  https://github.com/sol2ee <br/>
-  https://github.com/untitlednamenull <br/>
-  https://github.com/juniel1299 <br/>
+|이름|깃허브 주소|비고|
+|------|---|---|
+|김은솔|https://github.com/sol2ee|테스트3|
+|곽지현|https://github.com/Kwak-98|테스트3|
+|권보령|https://github.com/kwonboryong|테스트3|
+|박기준|https://github.com/Kijun0708|테스트3|
+|송준호|https://github.com/SXNGJUNHX|테스트3|
+|장원준|https://github.com/juniel1299|테스트3|
 	</div>
 	

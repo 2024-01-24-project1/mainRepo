@@ -14,6 +14,4 @@
 |권보령|https://github.com/kwonboryong|테스트3|
 |박기준|https://github.com/Kijun0708|테스트3|
 |송준호|https://github.com/SXNGJUNHX|테스트3|
-|장원준|https://github.com/juniel1299|테스트3|
-	</div>
-	
+|장원준|https://github.com/juniel1299|테스트3|        

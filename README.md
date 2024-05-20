@@ -2,7 +2,8 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F2024-01-24-project1%2FmainRepo%2Fhit-counter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) <br/>
 
 # 💻 Java Console Project
-
+프로젝트 기간 : 2024년 1월 29일 ~ 2024년 2월 8일 (총 11일)
+프로젝트 총 인원 : 6명
 ---
 
 ## 📝 요약
@@ -46,39 +47,32 @@
 
 
 ## 🗄 Document <br/>
-![기획서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/01.%20%EA%B8%B0%ED%9A%8D%EC%84%9C/_1%EC%A1%B0_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf)
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/01.%20%EA%B8%B0%ED%9A%8D%EC%84%9C">1. 기획서 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%20%EC%9A%94%EA%B5%AC%EB%B6%84%EC%84%9D%EC%84%9C">2. 요구분석서 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EC%88%9C%EC%84%9C%EB%8F%84">3. 순서도 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/04.%20%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C">4. 화면설계서 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/05.%20%EA%B8%B0%EB%8A%A5%EB%AA%85%EC%84%B8%EC%84%9C">5. 기능명세서 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/06.%20%EB%8D%B0%EC%9D%B4%ED%84%B0">6. 데이터 </a> </div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/07.%20%EC%86%8C%EC%8A%A4" >7. 소스 </a></div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/08.%20%EB%B0%9C%ED%91%9C">8. PPT 및 시연영상 </a></div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/09.%20%ED%99%94%EB%A9%B4%EC%BA%A1%EC%B3%90">9. 화면캡쳐 </a></div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/10.%20%EA%B0%9C%EB%B0%9C%EB%AC%B8%EC%84%9C">10. 개발문서 </a></div>
+<div> <a href="https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/11.%20%EC%9A%94%EC%95%BD%EB%B3%B8">11. 요약본 </a></div>
 
-![요구분석서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%20%EC%9A%94%EA%B5%AC%EB%B6%84%EC%84%9D%EC%84%9C/_1%EC%A1%B0_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_%EC%9A%94%EA%B5%AC%EB%B6%84%EC%84%9D%EC%84%9C.pdf)
-
-![순서도](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/03.%20%EC%88%9C%EC%84%9C%EB%8F%84/_1%EC%A1%B0_%EC%88%9C%EC%84%9C%EB%8F%84.pdf)
-
-![화면설계서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/04.%20%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C/_1%EC%A1%B0_%ED%99%94%EB%A9%B4%EC%84%A4%EA%B3%84%EC%84%9C.pdf)
-
-![기능명세서](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/05.%20%EA%B8%B0%EB%8A%A5%EB%AA%85%EC%84%B8%EC%84%9C/_1%EC%A1%B0_SeoulMetro_%EA%B8%B0%EB%8A%A5%EB%AA%85%EC%84%B8%EC%84%9C.pdf)
-
-![데이터](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/06.%20%EB%8D%B0%EC%9D%B4%ED%84%B0/1%EC%A1%B0_SeoulMetro_ERD.pdf)
-
-![소스](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/07.%20%EC%86%8C%EC%8A%A4/_1%EC%A1%B0_%EC%86%8C%EC%8A%A4%ED%8C%8C%EC%9D%BC.zip)
-
-![발표](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/08.%20%EB%B0%9C%ED%91%9C/_1%EC%A1%B0_SeoulMetro%EB%B0%9C%ED%91%9C.pdf)
-
-![화면캡처](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/09.%20%ED%99%94%EB%A9%B4%EC%BA%A1%EC%B3%90/_1%EC%A1%B0_%ED%99%94%EB%A9%B4%EC%BA%A1%EC%B2%98.pdf)
-
-
-![개발문서](https://github.com/juniel1299/javaConsoleProject/tree/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/10.%20%EA%B0%9C%EB%B0%9C%EB%AC%B8%EC%84%9C)
-
-![요약본](https://github.com/juniel1299/javaConsoleProject/blob/main/SeoulMetro_1%EC%A1%B0_%EC%BD%98%EC%86%94%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/11.%20%EC%9A%94%EC%95%BD%EB%B3%B8/1%EC%A1%B0_%EC%9A%94%EC%95%BD%EB%B3%B8.pdf)
 
 
 
   
-  😀 Member: <br/>
+## 😀  해당 프로젝트 참가 멤버
 
-|이름|깃허브 주소|비고|
-|------|---|---|
-|김은솔|https://github.com/sol2ee|테스트3|
-|곽지현|https://github.com/Kwak-98|테스트3|
-|권보령|https://github.com/kwonboryong|테스트3|
-|박기준|https://github.com/Kijun0708|테스트3|
-|송준호|https://github.com/SXNGJUNHX|테스트3|
-|장원준|https://github.com/juniel1299|테스트3|        
+## Team
+|<img src="https://avatars.githubusercontent.com/u/155609506?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/64453121?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/152785122?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/157680931?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/156043182?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/62318700?v=4" width="150" height="150"/>|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|[@sol2ee](https://github.com/sol2ee)|[@Kwak-98](https://github.com/Kwak-98)|Bo_Ryong<br/>[@kwonboryong](https://github.com/kwonboryong)|[@Kijun0708](https://github.com/Kijun0708)|SXNGJUNHX<br/>[@SXNGJUNHX](https://github.com/SXNGJUNHX)|juniel1299<br/>[@juniel1299](https://github.com/juniel1299)|
+|김은솔|곽지현|권보령|박기준|송준호|장원준|
+|이용객 통계|PM|회원가|길 찾기|마이 페이지|화면 출력|
+|매출 통계|데이터 로드|로그인|열차 배치|분실물 관리|민원 관리|
+|정기권|데이터 가공|로그아웃|혼잡도 통계|-|스케줄 관리|
+|PPT 제작|DB 설계|PPT 제작|행동 로그|-|-|
+|-|열차 시간표|-|-|-|-|
+|-|직원 관리|-|-|-|-|

@@ -65,7 +65,6 @@
   
 ## 😀  해당 프로젝트 참가 멤버
 
-## Team
 |<img src="https://avatars.githubusercontent.com/u/155609506?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/64453121?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/152785122?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/157680931?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/156043182?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/62318700?v=4" width="150" height="150"/>|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |[@sol2ee](https://github.com/sol2ee)|[@Kwak-98](https://github.com/Kwak-98)|Bo_Ryong<br/>[@kwonboryong](https://github.com/kwonboryong)|[@Kijun0708](https://github.com/Kijun0708)|SXNGJUNHX<br/>[@SXNGJUNHX](https://github.com/SXNGJUNHX)|juniel1299<br/>[@juniel1299](https://github.com/juniel1299)|

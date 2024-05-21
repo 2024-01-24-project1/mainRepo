@@ -2,7 +2,7 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F2024-01-24-project1%2FmainRepo%2Fhit-counter&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) <br/>
 
 # 💻 Java Console Project
-프로젝트 기간 : 2024년 1월 29일 ~ 2024년 2월 8일 (총 11일)
+프로젝트 기간 : 2024년 1월 29일 ~ 2024년 2월 8일 (총 11일)  
 프로젝트 총 인원 : 6명
 ---
 
